@@ -17,7 +17,7 @@ export interface VisualMapping {presetId:string; fallback:boolean; reason:string
 export function mapVisual(scientificName:string|null, archetype=''):VisualMapping {
   const n=scientificName?.toLowerCase()??'';
   const exact:Record<string,string>={'pseudotsuga menziesii':'douglas','picea abies':'spruce','pinus sylvestris':'pine','quercus robur':'oak','vachellia tortilis':'acacia','acacia tortilis':'acacia'};
-  if(exact[n])return {presetId:exact[n],fallback:false,reason:'Species design preset; dimensions are artistic, not measured traits.'};
+  if(Object.hasOwn(exact,n))return {presetId:exact[n],fallback:false,reason:'Species design preset; dimensions are artistic, not measured traits.'};
   const presetId=/acacia|vachellia|senegalia|umbrella|savanna/i.test(n+' '+archetype)?'acacia':/^pinus /.test(n)?'pine':/picea|abies|pseudotsuga|larix|conifer|needle/i.test(n+' '+archetype)?'spruce':'oak';
   return {presetId,fallback:true,reason:`Visual archetype fallback (${presets[presetId].architecture}); not a species-specific reconstruction.`};
 }

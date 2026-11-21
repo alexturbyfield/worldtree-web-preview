@@ -65,5 +65,5 @@ test('a preset does not introduce species absent from the regional catalog',()=>
 test('direct scene links round-trip environmental constraints and individual revisions',()=>{
   const q=parseSceneQuery(new URLSearchParams('lat=47.6062&lon=-122.3321&habitat=wetland&seed=trees&density=24&r=7:2,1:3&moisture=wet&elevation=40&conditional=1'));
   assert.deepEqual(parseSceneQuery(new URLSearchParams(sceneQuery(q))),q);
-  for(const bad of ['','lat=&lon=0','lat=NaN&lon=0','lat=91&lon=0','lat=0&lon=181','lat=0&lon=0&density=41','lat=0&lon=0&density=1.5','lat=0&lon=0&habitat=bogus','lat=0&lon=0&r=40:1','lat=0&lon=0&moisture=no','lat=0&lon=0&elevation=NaN'])assert.throws(()=>parseSceneQuery(new URLSearchParams(bad)));
+  for(const bad of ['','lat=&lon=0','lat=NaN&lon=0','lat=91&lon=0','lat=0&lon=181','lat=0&lon=0&density=61','lat=0&lon=0&density=1.5','lat=0&lon=0&habitat=bogus','lat=0&lon=0&r=60:1','lat=0&lon=0&moisture=no','lat=0&lon=0&elevation=NaN'])assert.throws(()=>parseSceneQuery(new URLSearchParams(bad)));
 });

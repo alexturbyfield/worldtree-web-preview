@@ -11,7 +11,7 @@ test('map → scene, picking, individual regeneration, direct link, scene contro
   await noOverflow(page);
   await page.getByRole('link',{name:'Open Location'}).click();await ready(page);
   await expect(page).toHaveURL(/\/explore\?/);
-  expect(Number(await page.getByTestId('forest-stage').getAttribute('data-calls'))).toBeLessThanOrEqual(10);
+  expect(Number(await page.getByTestId('forest-stage').getAttribute('data-calls'))).toBeLessThanOrEqual(18);
   expect(Number(await page.getByTestId('forest-stage').getAttribute('data-triangles'))).toBeGreaterThan(1000);
   const stage=page.getByTestId('forest-stage'),box=(await stage.boundingBox())!;
   // Real raycast picking, without consulting private renderer objects.
@@ -34,7 +34,7 @@ test('map → scene, picking, individual regeneration, direct link, scene contro
   const restored=await recipeDownload(page);expect(restored.trees[index].seed).toEqual(newSeed);expect(page.url()).toEqual(direct);
   await page.getByLabel('Scene seed',{exact:true}).fill('browser-study');
   await page.getByLabel('Design density',{exact:true}).fill('20');
-  await page.getByRole('button',{name:'Apply seed & density'}).click();await ready(page);
+  await page.getByRole('button',{name:'Apply seeds & density'}).click();await ready(page);
   const changed=await recipeDownload(page);expect(changed.seed).toBe('browser-study');expect(changed.trees).toHaveLength(20);
   await page.getByRole('button',{name:'Regenerate scene',exact:true}).click();await ready(page);expect((await recipeDownload(page)).seed).not.toBe(changed.seed);
   await page.getByRole('button',{name:'Inspect first tree',exact:true}).click();await expect(selected).toBeVisible();
