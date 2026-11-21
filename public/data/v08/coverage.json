@@ -1,19 +1,19 @@
 {
   "version": "0.8.0",
   "taxa": 400,
-  "documentedNativeAreas": 336,
+  "documentedNativeAreas": 338,
   "terrestrialEcoregions": 846,
   "rockAndIceFeatures": 1,
   "verifiedSpeciesEcoregions": 0,
-  "regionalAtAuditPoint": 445,
-  "biomeFallbackAtAuditPoint": 401,
+  "regionalAtAuditPoint": 471,
+  "biomeFallbackAtAuditPoint": 375,
   "insufficientAtAuditPoint": 0,
   "treelessAtAuditPoint": 51,
   "auditMethod": "Natural forest mode at one unsimplified-source interior point per ecoregion. These counts are point samples, not continuous species coverage or verified ecoregion associations.",
   "modes": {
     "forest": {
-      "regionalAtAuditPoint": 445,
-      "fallbackAtAuditPoint": 401,
+      "regionalAtAuditPoint": 471,
+      "fallbackAtAuditPoint": 375,
       "insufficientAtAuditPoint": 0
     },
     "urban": {
@@ -586,9 +586,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 13,
           "provisional": 0
         },
         "urban": {
@@ -959,7 +959,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 19,
+          "candidates": 20,
           "provisional": 4
         },
         "urban": {
@@ -1065,7 +1065,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 6,
+          "candidates": 7,
           "provisional": 0
         },
         "urban": {
@@ -1383,7 +1383,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 21,
+          "candidates": 22,
           "provisional": 0
         },
         "urban": {
@@ -1913,7 +1913,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 19,
+          "candidates": 20,
           "provisional": 0
         },
         "urban": {
@@ -2761,7 +2761,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 20,
+          "candidates": 21,
           "provisional": 0
         },
         "urban": {
@@ -3291,7 +3291,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 17,
+          "candidates": 18,
           "provisional": 0
         },
         "urban": {
@@ -3397,7 +3397,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 8,
+          "candidates": 9,
           "provisional": 0
         },
         "urban": {
@@ -4616,7 +4616,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 10,
+          "candidates": 11,
           "provisional": 0
         },
         "urban": {
@@ -5146,7 +5146,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 13,
+          "candidates": 14,
           "provisional": 0
         },
         "urban": {
@@ -5623,7 +5623,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 12,
+          "candidates": 13,
           "provisional": 0
         },
         "urban": {
@@ -5729,7 +5729,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 10,
+          "candidates": 11,
           "provisional": 0
         },
         "urban": {
@@ -5994,7 +5994,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 10,
+          "candidates": 11,
           "provisional": 0
         },
         "urban": {
@@ -6100,7 +6100,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 10,
+          "candidates": 11,
           "provisional": 4
         },
         "urban": {
@@ -6524,7 +6524,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 16,
+          "candidates": 17,
           "provisional": 0
         },
         "urban": {
@@ -7105,9 +7105,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 10,
           "provisional": 0
         },
         "urban": {
@@ -7319,7 +7319,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 8,
+          "candidates": 9,
           "provisional": 0
         },
         "urban": {
@@ -9325,9 +9325,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 13,
           "provisional": 0
         },
         "urban": {
@@ -9484,9 +9484,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 13,
           "provisional": 0
         },
         "urban": {
@@ -9910,7 +9910,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 10,
+          "candidates": 11,
           "provisional": 0
         },
         "urban": {
@@ -10705,7 +10705,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 17,
+          "candidates": 18,
           "provisional": 0
         },
         "urban": {
@@ -11394,7 +11394,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 5,
+          "candidates": 6,
           "provisional": 0
         },
         "urban": {
@@ -11551,9 +11551,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 9,
           "provisional": 0
         },
         "urban": {
@@ -11659,7 +11659,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 16,
+          "candidates": 17,
           "provisional": 0
         },
         "urban": {
@@ -11869,9 +11869,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 8,
           "provisional": 0
         },
         "urban": {
@@ -11922,9 +11922,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 8,
           "provisional": 0
         },
         "urban": {
@@ -12984,7 +12984,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 10,
+          "candidates": 11,
           "provisional": 0
         },
         "urban": {
@@ -13249,7 +13249,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 10,
+          "candidates": 11,
           "provisional": 4
         },
         "urban": {
@@ -13726,7 +13726,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 16,
+          "candidates": 17,
           "provisional": 0
         },
         "urban": {
@@ -17277,7 +17277,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 17,
+          "candidates": 18,
           "provisional": 4
         },
         "urban": {
@@ -17330,7 +17330,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 17,
+          "candidates": 18,
           "provisional": 4
         },
         "urban": {
@@ -17381,9 +17381,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 1,
           "provisional": 0
         },
         "urban": {
@@ -17436,7 +17436,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 19,
+          "candidates": 20,
           "provisional": 0
         },
         "urban": {
@@ -17699,9 +17699,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 13,
           "provisional": 0
         },
         "urban": {
@@ -18231,7 +18231,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 22,
+          "candidates": 23,
           "provisional": 0
         },
         "urban": {
@@ -19024,9 +19024,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 2,
           "provisional": 0
         },
         "urban": {
@@ -19077,9 +19077,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 2,
           "provisional": 0
         },
         "urban": {
@@ -22993,9 +22993,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 4,
           "provisional": 0
         },
         "urban": {
@@ -23152,9 +23152,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 10,
           "provisional": 0
         },
         "urban": {
@@ -24000,9 +24000,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 8,
           "provisional": 0
         },
         "urban": {
@@ -26223,9 +26223,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 3,
           "provisional": 0
         },
         "urban": {
@@ -26437,7 +26437,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 17,
+          "candidates": 18,
           "provisional": 0
         },
         "urban": {
@@ -26596,7 +26596,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 16,
+          "candidates": 17,
           "provisional": 0
         },
         "urban": {
@@ -26806,9 +26806,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 4,
           "provisional": 0
         },
         "urban": {
@@ -27656,7 +27656,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 17,
+          "candidates": 18,
           "provisional": 0
         },
         "urban": {
@@ -28446,9 +28446,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 6,
           "provisional": 0
         },
         "urban": {
@@ -29137,7 +29137,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 10,
+          "candidates": 11,
           "provisional": 0
         },
         "urban": {
@@ -30144,7 +30144,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 19,
+          "candidates": 20,
           "provisional": 0
         },
         "urban": {
@@ -30568,7 +30568,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 20,
+          "candidates": 21,
           "provisional": 0
         },
         "urban": {
@@ -31732,9 +31732,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 3,
           "provisional": 0
         },
         "urban": {
@@ -32155,7 +32155,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 5,
+          "candidates": 6,
           "provisional": 0
         },
         "urban": {
@@ -32365,9 +32365,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 7,
           "provisional": 0
         },
         "urban": {
@@ -32420,7 +32420,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 7,
+          "candidates": 8,
           "provisional": 0
         },
         "urban": {
@@ -35117,7 +35117,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 17,
+          "candidates": 18,
           "provisional": 4
         },
         "urban": {
@@ -35382,7 +35382,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 21,
+          "candidates": 22,
           "provisional": 0
         },
         "urban": {
@@ -35801,9 +35801,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 10,
           "provisional": 0
         },
         "urban": {
@@ -36651,7 +36651,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 8,
+          "candidates": 9,
           "provisional": 4
         },
         "urban": {
@@ -39455,9 +39455,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 7,
           "provisional": 0
         },
         "urban": {
@@ -39987,7 +39987,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 22,
+          "candidates": 23,
           "provisional": 0
         },
         "urban": {
@@ -40250,9 +40250,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 9,
           "provisional": 0
         },
         "urban": {
@@ -40936,9 +40936,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 4,
           "provisional": 0
         },
         "urban": {
@@ -41095,9 +41095,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 8,
           "provisional": 0
         },
         "urban": {
@@ -41362,7 +41362,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 12,
+          "candidates": 13,
           "provisional": 0
         },
         "urban": {
@@ -41945,7 +41945,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 7,
+          "candidates": 8,
           "provisional": 0
         },
         "urban": {
@@ -42740,7 +42740,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 10,
+          "candidates": 11,
           "provisional": 0
         },
         "urban": {
@@ -43215,9 +43215,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 19,
           "provisional": 0
         },
         "urban": {
@@ -43586,9 +43586,9 @@
       },
       "modes": {
         "forest": {
-          "level": "biome_realm_fallback",
-          "status": "growth_form_fallback",
-          "candidates": 0,
+          "level": "documented_regional_range",
+          "status": "species_candidates",
+          "candidates": 4,
           "provisional": 0
         },
         "urban": {
@@ -44483,7 +44483,7 @@
         "forest": {
           "level": "documented_regional_range",
           "status": "species_candidates",
-          "candidates": 10,
+          "candidates": 11,
           "provisional": 0
         },
         "urban": {
@@ -44892,5 +44892,5 @@
   ],
   "botanicalBoundaryGapsAtAuditPoint": 15,
   "openVegetationAtAuditPoint": 279,
-  "forestClimateOrCatalogFallbackAtAuditPoint": 71
+  "forestClimateOrCatalogFallbackAtAuditPoint": 45
 }

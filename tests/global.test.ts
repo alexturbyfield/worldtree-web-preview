@@ -75,7 +75,7 @@ test('moisture, elevation, coastal and seasonal filters do not silently pass unk
 });
 test('verified species/ecoregion association outranks broad native ranges only with a real evidence field',()=>{
  const c=context(47.6062,-122.3321),fixture={taxonId:taxa[0].id,ecoregionId:c.geography!.ECO_ID,habitats:['forest'] as const,verified:true,evidenceUrls:['https://example.test/fixture-only']};
- const verifiedAssociations=[{...fixture,habitats:[...fixture.habitats]}];const p=resolveVegetation({...c,verifiedAssociations});assert.equal(p.evidenceLevel,'verified_ecoregion');assert.equal(p.species[0].id,taxa[0].id);
+ const verifiedAssociations=[{...fixture,habitats:[...fixture.habitats]}];const p=resolveVegetation({...c,verifiedAssociations});assert.equal(p.evidenceLevel,'verified_ecoregion');assert.equal(p.species[0].id,taxa[0].id);assert.equal(p.species[0].confidence,'verified');assert.ok(p.species[0].ecoregionVerified);assert.ok(p.species[0].sources.includes('https://example.test/fixture-only'));
  for(const record of [{...verifiedAssociations[0],verified:false},{...verifiedAssociations[0],evidenceUrls:[]}])assert.equal(resolveVegetation({...c,verifiedAssociations:[record]}).evidenceLevel,'documented_regional_range');
  const filtered=resolveVegetation({...c,verifiedAssociations,environment:{...defaultEnvironment,elevationM:3000}});assert.equal(filtered.species.length,0);assert.ok(filtered.environment.unvalidated.includes('elevation'));
 });
@@ -83,4 +83,9 @@ test('species search finds accepted scientific, preserved common and reconciled 
  assert.ok(searchTaxa('Douglas-fir').some(t=>t.scientificName==='Pseudotsuga menziesii'));
  assert.ok(searchTaxa('Adansonia grandidieri').some(t=>t.scientificName==='Adansonia grandidieri'));
  assert.ok(searchTaxa('Shorea leprosula').length>0);assert.deepEqual(searchTaxa('no such botanical taxon xyz'),[]);
+});
+test('source temperate climate includes native boreal larches and Iceland birch without implying current forest cover',()=>{
+ const yakutsk=resolveVegetation(context(62.04,129.73));assert.equal(yakutsk.evidenceLevel,'documented_regional_range');assert.ok(yakutsk.species.length>0);
+ const iceland=resolveVegetation(context(64.96,-18.46));assert.equal(iceland.evidenceLevel,'documented_regional_range');assert.ok(iceland.species.some(t=>t.genus==='Betula'));assert.ok(iceland.growthForms.some(f=>/birch/i.test(f.name)));assert.ok(iceland.species.every(t=>t.nativeAreaCodes.includes('ICE')));
+ const reykjavik=resolveVegetation(context(64.15,-21.94));assert.equal(reykjavik.evidenceLevel,'biome_realm_fallback');assert.equal(reykjavik.botanicalArea,null);assert.ok(reykjavik.growthForms.some(f=>/birch/i.test(f.name))); // Coarse botanical coastline misses the city: no nearest-area substitution.
 });

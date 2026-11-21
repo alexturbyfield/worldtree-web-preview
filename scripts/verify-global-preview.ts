@@ -5,6 +5,7 @@ import vm from 'node:vm';
 import {resolveVegetation,exportProfile} from '../src/lib/vegetation';
 import type {BotanicalArea,Taxon} from '../src/lib/global-types';
 import type {EcoProperties} from '../src/lib/geography';
+async function main(){
 const origin=new URL(process.argv[2]).origin;
 async function get(path:string){const r=await fetch(origin+path);assert.equal(r.status,200,path);assert.equal(new URL(r.url).origin,origin,'No authentication redirect');return r;}
 const html=await (await get('/')).text();assert.match(html,/0\.8/);assert.match(html,/width=device-width/);console.log('Public v0.8 HTML and mobile viewport metadata: passed');
@@ -24,3 +25,6 @@ await self.onmessage!({data:{id:++id,lat:25,lon:-140}});assert.equal(messages.at
 assert.equal(manifest.coverage.verifiedSpeciesEcoregions,0);assert.equal(manifest.coverage.regionalAtAuditPoint+manifest.coverage.biomeFallbackAtAuditPoint+manifest.coverage.insufficientAtAuditPoint,846);
 console.log('Live coverage:',JSON.stringify({taxa:400,verified:0,regionalAtAuditPoint:manifest.coverage.regionalAtAuditPoint,fallbackAtAuditPoint:manifest.coverage.biomeFallbackAtAuditPoint}));
 console.log('Global live data/worker smoke tests passed. This is not a rendered browser/touch-layout test.');
+
+}
+main().catch(error=>{console.error(error);process.exitCode=1;});

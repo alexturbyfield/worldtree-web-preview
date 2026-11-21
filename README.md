@@ -6,11 +6,11 @@ Repository: https://github.com/alexturbyfield/worldtree-web-preview (private). E
 
 ## Actual coverage
 
-- **400** distinct accepted WCVP tree taxa; native-country records represent **336** botanical countries. This is a coverage sample, not an exhaustive flora or a list of dominant species.
+- **400** distinct accepted WCVP tree taxa; native-country records represent **338** botanical countries. This is a coverage sample, not an exhaustive flora or a list of dominant species.
 - **846** RESOLVE terrestrial ecoregions across 14 biomes and eight realms, plus the source's Rock and Ice feature.
 - **0** verified species-to-ecoregion associations. The supported hierarchy exists, but no unverified relationships are relabelled as verified.
-- Natural forest mode, sampled at **one unsimplified-source interior point per ecoregion**: **445** points yield documented regional native-range candidates; **401** yield biome/realm growth-form fallbacks. These counts do not assert complete coverage of those polygons.
-- Of those fallback points, 51 have predominantly treeless tundra context, 279 have open vegetation context, and 71 have a forest-context climate/catalog gap. Fifteen audit points have no matching coarse botanical-country polygon; they still receive ecological fallbacks.
+- Natural forest mode, sampled at **one unsimplified-source interior point per ecoregion**: **471** points yield documented regional native-range candidates; **375** yield biome/realm growth-form fallbacks. These counts do not assert complete coverage of those polygons.
+- Of those fallback points, 51 have predominantly treeless tundra context, 279 have open vegetation context, and 45 have a forest-context climate/catalog gap. Fifteen audit points have no matching coarse botanical-country polygon; they still receive ecological fallbacks.
 - Wetland, coastal, alpine, grassland and urban modes use conditional growth forms unless explicit habitat evidence exists. Native-country records are not used to invent street-tree inventories or wetland species associations.
 - All **18 original profiles, 62 original taxa and 71 original habitat associations** are preserved unchanged. All 62 original names link to accepted WCVP taxa, including synonym changes. Original planting/locality associations remain explicitly provisional, in a secondary collapsible panel.
 
@@ -19,7 +19,7 @@ Download the complete sampled audit from `/data/v08/coverage.json`; compact coun
 ## Selection and confidence
 
 1. Verified species/ecoregion/habitat associations with explicit evidence URLs.
-2. WCVP documented native botanical-country association, intersected with the actual selected coordinate's WGSRPD country. Broad WCVP climate descriptions are compared conservatively to the RESOLVE biome. This comparison is a design inference, not species-specific habitat validation.
+2. WCVP documented native botanical-country association, intersected with the actual selected coordinate's WGSRPD country. Broad WCVP climate descriptions are compared conservatively to the RESOLVE biome. This comparison is a design inference, not species-specific habitat validation. WCVP’s broad “temperate” category includes several boreal larches and birches; their documented native countries remain mandatory.
 3. Biome + biogeographic realm growth-form fallback. No local species presence is asserted.
 4. Explicit insufficient-data response for unclassified coordinates, ocean, inland water, unknown biomes, or missing geographic data.
 

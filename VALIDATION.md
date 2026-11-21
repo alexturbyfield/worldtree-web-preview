@@ -1,6 +1,6 @@
 # WorldTree v0.8 validation
 
-- 80 automated TypeScript tests passed, including original catalog parity, the generated geographic worker, 19 representative global coordinate cases, every biome/realm, native-range boundaries, cross-continent exclusions, treeless/open contexts, six habitats, deterministic exports, missing data, taxonomy homonyms and unvalidated environmental filters.
+- 81 automated TypeScript tests passed, including original catalog parity, the generated geographic worker, 19 representative global coordinate cases, every biome/realm, native-range boundaries, cross-continent exclusions, treeless/open contexts, six habitats, deterministic exports, missing data, taxonomy homonyms and unvalidated environmental filters.
 - All 15 original Python tests passed unchanged.
 - ESLint and TypeScript checks passed.
 - Next.js production build and static export passed.
@@ -9,7 +9,7 @@
 
 ## Coverage measured by the checked-in audit
 
-400 accepted sourced taxa; 336 native botanical countries represented; 846 terrestrial ecoregions plus Rock and Ice. Verified species/ecoregion joins: **0**. At one accurate interior test point per ecoregion in natural forest mode: **445** documented regional range candidate pools and **401** biome/realm fallback profiles. The 401 include 51 predominantly treeless tundra contexts, 279 open-vegetation contexts, and 71 forest-climate/catalog fallback contexts. Fifteen botanical boundary gaps at audit points fall back safely. No point-sample statistic claims full polygon or actual forest coverage.
+400 accepted sourced taxa; 338 native botanical countries represented; 846 terrestrial ecoregions plus Rock and Ice. Verified species/ecoregion joins: **0**. At one accurate interior test point per ecoregion in natural forest mode: **471** documented regional range candidate pools and **375** biome/realm fallback profiles. The 375 include 51 predominantly treeless tundra contexts, 279 open-vegetation contexts, and 45 forest-climate/catalog fallback contexts. Fifteen botanical boundary gaps at audit points fall back safely. No point-sample statistic claims full polygon or actual forest coverage.
 
 Urban, grassland, wetland, coastal and alpine modes use ecological growth-form fallbacks across all 846 sampled ecoregions. Local planting examples remain explicitly provisional; source native ranges are not treated as planted-tree evidence. All 62 original taxon names resolve to accepted WCVP names without modifying the original associations.
 

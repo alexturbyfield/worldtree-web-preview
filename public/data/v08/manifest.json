@@ -1,29 +1,29 @@
 {
   "version": "0.8.0",
   "files": {
-    "taxa.json": "474fcf26c26f1c1537fdbb77b17e059e9053958cc86d5ebe7986f76e5ede37af",
-    "coverage.json": "a7daf6620903843f0d7e01798543a0111f78af7e8a2fb3c1c802090bdeb17069",
-    "coverage-summary.json": "8bb816f61dae56489117bc7d356fe423f37cb3fc893722f7cd6e9b6b60576599",
-    "ecoregions.geojson": "9c9b0fe493ef0b953b1f5154683d832b54f79df4871c51ecd275e434f3274a5a",
+    "taxa.json": "00e9761abf8e64de29c153083673af11e785eb84057946a4595a5c1c414044fc",
+    "coverage.json": "8dfffe15a4924def5fa747dea01226121269617167bc50e701f10ee13b0aab5c",
+    "coverage-summary.json": "60be674a00a046169ec42b25980cede1b4c02e6711d66e6d0af308d0a45169ea",
+    "ecoregions.geojson": "387f75a1711d16827e50b88ca52f6c61e4edfbf907977f7139dece4638e40d19",
     "botanical-countries.geojson": "e73c551e7239bf5d68f19b576763295b9e0542256fee6701c30f23f78b508944",
-    "provenance.json": "a09e5f4b30e12db31850d5ba0eb609a328c25b0e7b44f30589e5152f7734bcc3"
+    "provenance.json": "e25ebd3043d979eff398600bd8892e63b543e4ba0bc30ed63150ee3dbccda60c"
   },
   "coverage": {
     "version": "0.8.0",
     "taxa": 400,
-    "documentedNativeAreas": 336,
+    "documentedNativeAreas": 338,
     "terrestrialEcoregions": 846,
     "rockAndIceFeatures": 1,
     "verifiedSpeciesEcoregions": 0,
-    "regionalAtAuditPoint": 445,
-    "biomeFallbackAtAuditPoint": 401,
+    "regionalAtAuditPoint": 471,
+    "biomeFallbackAtAuditPoint": 375,
     "insufficientAtAuditPoint": 0,
     "treelessAtAuditPoint": 51,
     "auditMethod": "Natural forest mode at one unsimplified-source interior point per ecoregion. These counts are point samples, not continuous species coverage or verified ecoregion associations.",
     "modes": {
       "forest": {
-        "regionalAtAuditPoint": 445,
-        "fallbackAtAuditPoint": 401,
+        "regionalAtAuditPoint": 471,
+        "fallbackAtAuditPoint": 375,
         "insufficientAtAuditPoint": 0
       },
       "urban": {
@@ -54,6 +54,6 @@
     },
     "botanicalBoundaryGapsAtAuditPoint": 15,
     "openVegetationAtAuditPoint": 279,
-    "forestClimateOrCatalogFallbackAtAuditPoint": 71
+    "forestClimateOrCatalogFallbackAtAuditPoint": 45
   }
 }
