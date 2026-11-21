@@ -1,0 +1,2585 @@
+[
+  {
+    "code": "",
+    "name": "",
+    "region": "",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": ""
+  },
+  {
+    "code": "ABT",
+    "name": "Alberta",
+    "region": "Western Canada",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "71"
+  },
+  {
+    "code": "AFG",
+    "name": "Afghanistan",
+    "region": "Western Asia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "34"
+  },
+  {
+    "code": "AGE",
+    "name": "Argentina Northeast",
+    "region": "Southern South America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "85"
+  },
+  {
+    "code": "AGS",
+    "name": "Argentina South",
+    "region": "Southern South America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "85"
+  },
+  {
+    "code": "AGW",
+    "name": "Argentina Northwest",
+    "region": "Southern South America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "85"
+  },
+  {
+    "code": "ALA",
+    "name": "Alabama",
+    "region": "Southeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "78"
+  },
+  {
+    "code": "ALB",
+    "name": "Albania",
+    "region": "Southeastern Europe",
+    "continent": "EUROPE",
+    "regionCode": "13"
+  },
+  {
+    "code": "ALD",
+    "name": "Aldabra",
+    "region": "Western Indian Ocean",
+    "continent": "AFRICA",
+    "regionCode": "29"
+  },
+  {
+    "code": "ALG",
+    "name": "Algeria",
+    "region": "Northern Africa",
+    "continent": "AFRICA",
+    "regionCode": "20"
+  },
+  {
+    "code": "ALT",
+    "name": "Altay",
+    "region": "Siberia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "30"
+  },
+  {
+    "code": "ALU",
+    "name": "Aleutian Is.",
+    "region": "Subarctic America",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "70"
+  },
+  {
+    "code": "AMU",
+    "name": "Amur",
+    "region": "Russian Far East",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "31"
+  },
+  {
+    "code": "AND",
+    "name": "Andaman Is.",
+    "region": "Indo-China",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "41"
+  },
+  {
+    "code": "ANG",
+    "name": "Angola",
+    "region": "South Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "26"
+  },
+  {
+    "code": "ANT",
+    "name": "Antarctica",
+    "region": "Antarctic Continent",
+    "continent": "ANTARCTICA",
+    "regionCode": "91"
+  },
+  {
+    "code": "ARI",
+    "name": "Arizona",
+    "region": "Southwestern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "76"
+  },
+  {
+    "code": "ARK",
+    "name": "Arkansas",
+    "region": "Southeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "78"
+  },
+  {
+    "code": "ARU",
+    "name": "Aruba",
+    "region": "Caribbean",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "81"
+  },
+  {
+    "code": "ASC",
+    "name": "Ascension",
+    "region": "Middle Atlantic Ocean",
+    "continent": "AFRICA",
+    "regionCode": "28"
+  },
+  {
+    "code": "ASK",
+    "name": "Alaska",
+    "region": "Subarctic America",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "70"
+  },
+  {
+    "code": "ASP",
+    "name": "Amsterdam-St.Paul Is.",
+    "region": "Subantarctic Islands",
+    "continent": "ANTARCTICA",
+    "regionCode": "90"
+  },
+  {
+    "code": "ASS",
+    "name": "Assam",
+    "region": "Indian Subcontinent",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "40"
+  },
+  {
+    "code": "ATP",
+    "name": "Antipodean Is.",
+    "region": "New Zealand",
+    "continent": "AUSTRALASIA",
+    "regionCode": "51"
+  },
+  {
+    "code": "AUT",
+    "name": "Austria",
+    "region": "Middle Europe",
+    "continent": "EUROPE",
+    "regionCode": "11"
+  },
+  {
+    "code": "AZO",
+    "name": "Azores",
+    "region": "Macaronesia",
+    "continent": "AFRICA",
+    "regionCode": "21"
+  },
+  {
+    "code": "BAH",
+    "name": "Bahamas",
+    "region": "Caribbean",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "81"
+  },
+  {
+    "code": "BAL",
+    "name": "Baleares",
+    "region": "Southwestern Europe",
+    "continent": "EUROPE",
+    "regionCode": "12"
+  },
+  {
+    "code": "BAN",
+    "name": "Bangladesh",
+    "region": "Indian Subcontinent",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "40"
+  },
+  {
+    "code": "BEN",
+    "name": "Benin",
+    "region": "West Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "22"
+  },
+  {
+    "code": "BER",
+    "name": "Bermuda",
+    "region": "Caribbean",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "81"
+  },
+  {
+    "code": "BGM",
+    "name": "Belgium",
+    "region": "Middle Europe",
+    "continent": "EUROPE",
+    "regionCode": "11"
+  },
+  {
+    "code": "BIS",
+    "name": "Bismarck Archipelago",
+    "region": "Papuasia",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "43"
+  },
+  {
+    "code": "BKN",
+    "name": "Burkina",
+    "region": "West Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "22"
+  },
+  {
+    "code": "BLR",
+    "name": "Belarus",
+    "region": "Eastern Europe",
+    "continent": "EUROPE",
+    "regionCode": "14"
+  },
+  {
+    "code": "BLT",
+    "name": "Baltic States",
+    "region": "Eastern Europe",
+    "continent": "EUROPE",
+    "regionCode": "14"
+  },
+  {
+    "code": "BLZ",
+    "name": "Belize",
+    "region": "Central America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "80"
+  },
+  {
+    "code": "BOL",
+    "name": "Bolivia",
+    "region": "Western South America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "83"
+  },
+  {
+    "code": "BOR",
+    "name": "Borneo",
+    "region": "Malesia",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "42"
+  },
+  {
+    "code": "BOT",
+    "name": "Botswana",
+    "region": "Southern Africa",
+    "continent": "AFRICA",
+    "regionCode": "27"
+  },
+  {
+    "code": "BRC",
+    "name": "British Columbia",
+    "region": "Western Canada",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "71"
+  },
+  {
+    "code": "BRY",
+    "name": "Buryatiya",
+    "region": "Siberia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "30"
+  },
+  {
+    "code": "BUL",
+    "name": "Bulgaria",
+    "region": "Southeastern Europe",
+    "continent": "EUROPE",
+    "regionCode": "13"
+  },
+  {
+    "code": "BUR",
+    "name": "Burundi",
+    "region": "West-Central Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "23"
+  },
+  {
+    "code": "BZC",
+    "name": "Brazil West-Central",
+    "region": "Brazil",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "84"
+  },
+  {
+    "code": "BZE",
+    "name": "Brazil Northeast",
+    "region": "Brazil",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "84"
+  },
+  {
+    "code": "BZL",
+    "name": "Brazil Southeast",
+    "region": "Brazil",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "84"
+  },
+  {
+    "code": "BZN",
+    "name": "Brazil North",
+    "region": "Brazil",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "84"
+  },
+  {
+    "code": "BZS",
+    "name": "Brazil South",
+    "region": "Brazil",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "84"
+  },
+  {
+    "code": "CAB",
+    "name": "Cabinda",
+    "region": "West-Central Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "23"
+  },
+  {
+    "code": "CAF",
+    "name": "Central African Republic",
+    "region": "West-Central Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "23"
+  },
+  {
+    "code": "CAL",
+    "name": "California",
+    "region": "Southwestern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "76"
+  },
+  {
+    "code": "CAY",
+    "name": "Cayman Is.",
+    "region": "Caribbean",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "81"
+  },
+  {
+    "code": "CBD",
+    "name": "Cambodia",
+    "region": "Indo-China",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "41"
+  },
+  {
+    "code": "CGS",
+    "name": "Chagos Archipelago",
+    "region": "Western Indian Ocean",
+    "continent": "AFRICA",
+    "regionCode": "29"
+  },
+  {
+    "code": "CHA",
+    "name": "Chad",
+    "region": "Northeast Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "24"
+  },
+  {
+    "code": "CHC",
+    "name": "China South-Central",
+    "region": "China",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "36"
+  },
+  {
+    "code": "CHH",
+    "name": "Hainan",
+    "region": "China",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "36"
+  },
+  {
+    "code": "CHI",
+    "name": "Inner Mongolia",
+    "region": "China",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "36"
+  },
+  {
+    "code": "CHM",
+    "name": "Manchuria",
+    "region": "China",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "36"
+  },
+  {
+    "code": "CHN",
+    "name": "China North-Central",
+    "region": "China",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "36"
+  },
+  {
+    "code": "CHQ",
+    "name": "Qinghai",
+    "region": "China",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "36"
+  },
+  {
+    "code": "CHS",
+    "name": "China Southeast",
+    "region": "China",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "36"
+  },
+  {
+    "code": "CHT",
+    "name": "Tibet",
+    "region": "China",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "36"
+  },
+  {
+    "code": "CHX",
+    "name": "Xinjiang",
+    "region": "China",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "36"
+  },
+  {
+    "code": "CKI",
+    "name": "Cocos (Keeling) Is.",
+    "region": "Malesia",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "42"
+  },
+  {
+    "code": "CLC",
+    "name": "Chile Central",
+    "region": "Southern South America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "85"
+  },
+  {
+    "code": "CLM",
+    "name": "Colombia",
+    "region": "Western South America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "83"
+  },
+  {
+    "code": "CLN",
+    "name": "Chile North",
+    "region": "Southern South America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "85"
+  },
+  {
+    "code": "CLS",
+    "name": "Chile South",
+    "region": "Southern South America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "85"
+  },
+  {
+    "code": "CMN",
+    "name": "Cameroon",
+    "region": "West-Central Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "23"
+  },
+  {
+    "code": "CNT",
+    "name": "Connecticut",
+    "region": "Northeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "75"
+  },
+  {
+    "code": "CNY",
+    "name": "Canary Is.",
+    "region": "Macaronesia",
+    "continent": "AFRICA",
+    "regionCode": "21"
+  },
+  {
+    "code": "COL",
+    "name": "Colorado",
+    "region": "Northwestern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "73"
+  },
+  {
+    "code": "COM",
+    "name": "Comoros",
+    "region": "Western Indian Ocean",
+    "continent": "AFRICA",
+    "regionCode": "29"
+  },
+  {
+    "code": "CON",
+    "name": "Congo",
+    "region": "West-Central Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "23"
+  },
+  {
+    "code": "COO",
+    "name": "Cook Is.",
+    "region": "South-Central Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "61"
+  },
+  {
+    "code": "COR",
+    "name": "Corse",
+    "region": "Southwestern Europe",
+    "continent": "EUROPE",
+    "regionCode": "12"
+  },
+  {
+    "code": "COS",
+    "name": "Costa Rica",
+    "region": "Central America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "80"
+  },
+  {
+    "code": "CPI",
+    "name": "Central American Pacific Is.",
+    "region": "Central America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "80"
+  },
+  {
+    "code": "CPP",
+    "name": "Cape Provinces",
+    "region": "Southern Africa",
+    "continent": "AFRICA",
+    "regionCode": "27"
+  },
+  {
+    "code": "CPV",
+    "name": "Caprivi Strip",
+    "region": "Southern Africa",
+    "continent": "AFRICA",
+    "regionCode": "27"
+  },
+  {
+    "code": "CRL",
+    "name": "Caroline Is.",
+    "region": "Northwestern Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "62"
+  },
+  {
+    "code": "CRZ",
+    "name": "Crozet Is.",
+    "region": "Subantarctic Islands",
+    "continent": "ANTARCTICA",
+    "regionCode": "90"
+  },
+  {
+    "code": "CTA",
+    "name": "Chita",
+    "region": "Siberia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "30"
+  },
+  {
+    "code": "CTM",
+    "name": "Chatham Is.",
+    "region": "New Zealand",
+    "continent": "AUSTRALASIA",
+    "regionCode": "51"
+  },
+  {
+    "code": "CUB",
+    "name": "Cuba",
+    "region": "Caribbean",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "81"
+  },
+  {
+    "code": "CVI",
+    "name": "Cape Verde",
+    "region": "Macaronesia",
+    "continent": "AFRICA",
+    "regionCode": "21"
+  },
+  {
+    "code": "CYP",
+    "name": "Cyprus",
+    "region": "Western Asia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "34"
+  },
+  {
+    "code": "CZE",
+    "name": "Czechia-Slovakia",
+    "region": "Middle Europe",
+    "continent": "EUROPE",
+    "regionCode": "11"
+  },
+  {
+    "code": "DEL",
+    "name": "Delaware",
+    "region": "Southeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "78"
+  },
+  {
+    "code": "DEN",
+    "name": "Denmark",
+    "region": "Northern Europe",
+    "continent": "EUROPE",
+    "regionCode": "10"
+  },
+  {
+    "code": "DJI",
+    "name": "Djibouti",
+    "region": "Northeast Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "24"
+  },
+  {
+    "code": "DOM",
+    "name": "Dominican Republic",
+    "region": "Caribbean",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "81"
+  },
+  {
+    "code": "DSV",
+    "name": "Desventurados Is.",
+    "region": "Southern South America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "85"
+  },
+  {
+    "code": "EAI",
+    "name": "East Aegean Is.",
+    "region": "Western Asia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "34"
+  },
+  {
+    "code": "EAS",
+    "name": "Easter Is.",
+    "region": "South-Central Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "61"
+  },
+  {
+    "code": "ECU",
+    "name": "Ecuador",
+    "region": "Western South America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "83"
+  },
+  {
+    "code": "EGY",
+    "name": "Egypt",
+    "region": "Northern Africa",
+    "continent": "AFRICA",
+    "regionCode": "20"
+  },
+  {
+    "code": "EHM",
+    "name": "East Himalaya",
+    "region": "Indian Subcontinent",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "40"
+  },
+  {
+    "code": "ELS",
+    "name": "El Salvador",
+    "region": "Central America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "80"
+  },
+  {
+    "code": "EQG",
+    "name": "Equatorial Guinea",
+    "region": "West-Central Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "23"
+  },
+  {
+    "code": "ERI",
+    "name": "Eritrea",
+    "region": "Northeast Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "24"
+  },
+  {
+    "code": "ETH",
+    "name": "Ethiopia",
+    "region": "Northeast Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "24"
+  },
+  {
+    "code": "FAL",
+    "name": "Falkland Is.",
+    "region": "Subantarctic Islands",
+    "continent": "ANTARCTICA",
+    "regionCode": "90"
+  },
+  {
+    "code": "FIJ",
+    "name": "Fiji",
+    "region": "Southwestern Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "60"
+  },
+  {
+    "code": "FIN",
+    "name": "Finland",
+    "region": "Northern Europe",
+    "continent": "EUROPE",
+    "regionCode": "10"
+  },
+  {
+    "code": "FLA",
+    "name": "Florida",
+    "region": "Southeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "78"
+  },
+  {
+    "code": "FOR",
+    "name": "Føroyar",
+    "region": "Northern Europe",
+    "continent": "EUROPE",
+    "regionCode": "10"
+  },
+  {
+    "code": "FRA",
+    "name": "France",
+    "region": "Southwestern Europe",
+    "continent": "EUROPE",
+    "regionCode": "12"
+  },
+  {
+    "code": "FRG",
+    "name": "French Guiana",
+    "region": "Northern South America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "82"
+  },
+  {
+    "code": "GAB",
+    "name": "Gabon",
+    "region": "West-Central Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "23"
+  },
+  {
+    "code": "GAL",
+    "name": "Galápagos",
+    "region": "Western South America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "83"
+  },
+  {
+    "code": "GAM",
+    "name": "Gambia",
+    "region": "West Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "22"
+  },
+  {
+    "code": "GEO",
+    "name": "Georgia",
+    "region": "Southeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "78"
+  },
+  {
+    "code": "GER",
+    "name": "Germany",
+    "region": "Middle Europe",
+    "continent": "EUROPE",
+    "regionCode": "11"
+  },
+  {
+    "code": "GGI",
+    "name": "Gulf of Guinea Is.",
+    "region": "West-Central Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "23"
+  },
+  {
+    "code": "GHA",
+    "name": "Ghana",
+    "region": "West Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "22"
+  },
+  {
+    "code": "GIL",
+    "name": "Gilbert Is.",
+    "region": "Southwestern Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "60"
+  },
+  {
+    "code": "GNB",
+    "name": "Guinea-Bissau",
+    "region": "West Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "22"
+  },
+  {
+    "code": "GNL",
+    "name": "Greenland",
+    "region": "Subarctic America",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "70"
+  },
+  {
+    "code": "GRB",
+    "name": "Great Britain",
+    "region": "Northern Europe",
+    "continent": "EUROPE",
+    "regionCode": "10"
+  },
+  {
+    "code": "GRC",
+    "name": "Greece",
+    "region": "Southeastern Europe",
+    "continent": "EUROPE",
+    "regionCode": "13"
+  },
+  {
+    "code": "GST",
+    "name": "Gulf States",
+    "region": "Arabian Peninsula",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "35"
+  },
+  {
+    "code": "GUA",
+    "name": "Guatemala",
+    "region": "Central America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "80"
+  },
+  {
+    "code": "GUI",
+    "name": "Guinea",
+    "region": "West Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "22"
+  },
+  {
+    "code": "GUY",
+    "name": "Guyana",
+    "region": "Northern South America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "82"
+  },
+  {
+    "code": "HAI",
+    "name": "Haiti",
+    "region": "Caribbean",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "81"
+  },
+  {
+    "code": "HAW",
+    "name": "Hawaii",
+    "region": "North-Central Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "63"
+  },
+  {
+    "code": "HBI",
+    "name": "Howland-Baker Is.",
+    "region": "Southwestern Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "60"
+  },
+  {
+    "code": "HMD",
+    "name": "Heard-McDonald Is.",
+    "region": "Subantarctic Islands",
+    "continent": "ANTARCTICA",
+    "regionCode": "90"
+  },
+  {
+    "code": "HON",
+    "name": "Honduras",
+    "region": "Central America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "80"
+  },
+  {
+    "code": "HUN",
+    "name": "Hungary",
+    "region": "Middle Europe",
+    "continent": "EUROPE",
+    "regionCode": "11"
+  },
+  {
+    "code": "ICE",
+    "name": "Iceland",
+    "region": "Northern Europe",
+    "continent": "EUROPE",
+    "regionCode": "10"
+  },
+  {
+    "code": "IDA",
+    "name": "Idaho",
+    "region": "Northwestern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "73"
+  },
+  {
+    "code": "ILL",
+    "name": "Illinois",
+    "region": "North-Central U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "74"
+  },
+  {
+    "code": "IND",
+    "name": "India",
+    "region": "Indian Subcontinent",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "40"
+  },
+  {
+    "code": "INI",
+    "name": "Indiana",
+    "region": "Northeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "75"
+  },
+  {
+    "code": "IOW",
+    "name": "Iowa",
+    "region": "North-Central U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "74"
+  },
+  {
+    "code": "IRE",
+    "name": "Ireland",
+    "region": "Northern Europe",
+    "continent": "EUROPE",
+    "regionCode": "10"
+  },
+  {
+    "code": "IRK",
+    "name": "Irkutsk",
+    "region": "Siberia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "30"
+  },
+  {
+    "code": "IRN",
+    "name": "Iran",
+    "region": "Western Asia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "34"
+  },
+  {
+    "code": "IRQ",
+    "name": "Iraq",
+    "region": "Western Asia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "34"
+  },
+  {
+    "code": "ITA",
+    "name": "Italy",
+    "region": "Southeastern Europe",
+    "continent": "EUROPE",
+    "regionCode": "13"
+  },
+  {
+    "code": "IVO",
+    "name": "Ivory Coast",
+    "region": "West Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "22"
+  },
+  {
+    "code": "JAM",
+    "name": "Jamaica",
+    "region": "Caribbean",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "81"
+  },
+  {
+    "code": "JAP",
+    "name": "Japan",
+    "region": "Eastern Asia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "38"
+  },
+  {
+    "code": "JAW",
+    "name": "Jawa",
+    "region": "Malesia",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "42"
+  },
+  {
+    "code": "JNF",
+    "name": "Juan Fernández Is.",
+    "region": "Southern South America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "85"
+  },
+  {
+    "code": "KAM",
+    "name": "Kamchatka",
+    "region": "Russian Far East",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "31"
+  },
+  {
+    "code": "KAN",
+    "name": "Kansas",
+    "region": "North-Central U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "74"
+  },
+  {
+    "code": "KAZ",
+    "name": "Kazakhstan",
+    "region": "Central Asia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "32"
+  },
+  {
+    "code": "KEG",
+    "name": "Kerguelen",
+    "region": "Subantarctic Islands",
+    "continent": "ANTARCTICA",
+    "regionCode": "90"
+  },
+  {
+    "code": "KEN",
+    "name": "Kenya",
+    "region": "East Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "25"
+  },
+  {
+    "code": "KER",
+    "name": "Kermadec Is.",
+    "region": "New Zealand",
+    "continent": "AUSTRALASIA",
+    "regionCode": "51"
+  },
+  {
+    "code": "KGZ",
+    "name": "Kirgizstan",
+    "region": "Central Asia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "32"
+  },
+  {
+    "code": "KHA",
+    "name": "Khabarovsk",
+    "region": "Russian Far East",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "31"
+  },
+  {
+    "code": "KOR",
+    "name": "Korea",
+    "region": "Eastern Asia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "38"
+  },
+  {
+    "code": "KRA",
+    "name": "Krasnoyarsk",
+    "region": "Siberia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "30"
+  },
+  {
+    "code": "KRI",
+    "name": "Kriti",
+    "region": "Southeastern Europe",
+    "continent": "EUROPE",
+    "regionCode": "13"
+  },
+  {
+    "code": "KRY",
+    "name": "Krym",
+    "region": "Eastern Europe",
+    "continent": "EUROPE",
+    "regionCode": "14"
+  },
+  {
+    "code": "KTY",
+    "name": "Kentucky",
+    "region": "Southeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "78"
+  },
+  {
+    "code": "KUR",
+    "name": "Kuril Is.",
+    "region": "Russian Far East",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "31"
+  },
+  {
+    "code": "KUW",
+    "name": "Kuwait",
+    "region": "Arabian Peninsula",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "35"
+  },
+  {
+    "code": "KZN",
+    "name": "Kazan-retto",
+    "region": "Eastern Asia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "38"
+  },
+  {
+    "code": "LAB",
+    "name": "Labrador",
+    "region": "Eastern Canada",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "72"
+  },
+  {
+    "code": "LAO",
+    "name": "Laos",
+    "region": "Indo-China",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "41"
+  },
+  {
+    "code": "LBR",
+    "name": "Liberia",
+    "region": "West Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "22"
+  },
+  {
+    "code": "LBS",
+    "name": "Lebanon-Syria",
+    "region": "Western Asia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "34"
+  },
+  {
+    "code": "LBY",
+    "name": "Libya",
+    "region": "Northern Africa",
+    "continent": "AFRICA",
+    "regionCode": "20"
+  },
+  {
+    "code": "LDV",
+    "name": "Laccadive Is.",
+    "region": "Indian Subcontinent",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "40"
+  },
+  {
+    "code": "LEE",
+    "name": "Leeward Is.",
+    "region": "Caribbean",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "81"
+  },
+  {
+    "code": "LES",
+    "name": "Lesotho",
+    "region": "Southern Africa",
+    "continent": "AFRICA",
+    "regionCode": "27"
+  },
+  {
+    "code": "LIN",
+    "name": "Line Is.",
+    "region": "South-Central Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "61"
+  },
+  {
+    "code": "LOU",
+    "name": "Louisiana",
+    "region": "Southeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "78"
+  },
+  {
+    "code": "LSI",
+    "name": "Lesser Sunda Is.",
+    "region": "Malesia",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "42"
+  },
+  {
+    "code": "MAG",
+    "name": "Magadan",
+    "region": "Russian Far East",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "31"
+  },
+  {
+    "code": "MAI",
+    "name": "Maine",
+    "region": "Northeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "75"
+  },
+  {
+    "code": "MAN",
+    "name": "Manitoba",
+    "region": "Western Canada",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "71"
+  },
+  {
+    "code": "MAQ",
+    "name": "Macquarie Is.",
+    "region": "Subantarctic Islands",
+    "continent": "ANTARCTICA",
+    "regionCode": "90"
+  },
+  {
+    "code": "MAS",
+    "name": "Massachusetts",
+    "region": "Northeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "75"
+  },
+  {
+    "code": "MAU",
+    "name": "Mauritius",
+    "region": "Western Indian Ocean",
+    "continent": "AFRICA",
+    "regionCode": "29"
+  },
+  {
+    "code": "MCI",
+    "name": "Mozambique Channel Is.",
+    "region": "Western Indian Ocean",
+    "continent": "AFRICA",
+    "regionCode": "29"
+  },
+  {
+    "code": "MCS",
+    "name": "Marcus I.",
+    "region": "Northwestern Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "62"
+  },
+  {
+    "code": "MDG",
+    "name": "Madagascar",
+    "region": "Western Indian Ocean",
+    "continent": "AFRICA",
+    "regionCode": "29"
+  },
+  {
+    "code": "MDR",
+    "name": "Madeira",
+    "region": "Macaronesia",
+    "continent": "AFRICA",
+    "regionCode": "21"
+  },
+  {
+    "code": "MDV",
+    "name": "Maldives",
+    "region": "Indian Subcontinent",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "40"
+  },
+  {
+    "code": "MIC",
+    "name": "Michigan",
+    "region": "Northeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "75"
+  },
+  {
+    "code": "MIN",
+    "name": "Minnesota",
+    "region": "North-Central U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "74"
+  },
+  {
+    "code": "MLI",
+    "name": "Mali",
+    "region": "West Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "22"
+  },
+  {
+    "code": "MLW",
+    "name": "Malawi",
+    "region": "South Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "26"
+  },
+  {
+    "code": "MLY",
+    "name": "Malaya",
+    "region": "Malesia",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "42"
+  },
+  {
+    "code": "MNT",
+    "name": "Montana",
+    "region": "Northwestern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "73"
+  },
+  {
+    "code": "MOL",
+    "name": "Maluku",
+    "region": "Malesia",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "42"
+  },
+  {
+    "code": "MON",
+    "name": "Mongolia",
+    "region": "Mongolia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "37"
+  },
+  {
+    "code": "MOR",
+    "name": "Morocco",
+    "region": "Northern Africa",
+    "continent": "AFRICA",
+    "regionCode": "20"
+  },
+  {
+    "code": "MOZ",
+    "name": "Mozambique",
+    "region": "South Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "26"
+  },
+  {
+    "code": "MPE",
+    "name": "Marion-Prince Edward Is.",
+    "region": "Subantarctic Islands",
+    "continent": "ANTARCTICA",
+    "regionCode": "90"
+  },
+  {
+    "code": "MRN",
+    "name": "Marianas",
+    "region": "Northwestern Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "62"
+  },
+  {
+    "code": "MRQ",
+    "name": "Marquesas",
+    "region": "South-Central Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "61"
+  },
+  {
+    "code": "MRS",
+    "name": "Marshall Is.",
+    "region": "Northwestern Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "62"
+  },
+  {
+    "code": "MRY",
+    "name": "Maryland",
+    "region": "Southeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "78"
+  },
+  {
+    "code": "MSI",
+    "name": "Mississippi",
+    "region": "Southeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "78"
+  },
+  {
+    "code": "MSO",
+    "name": "Missouri",
+    "region": "North-Central U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "74"
+  },
+  {
+    "code": "MTN",
+    "name": "Mauritania",
+    "region": "West Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "22"
+  },
+  {
+    "code": "MXC",
+    "name": "Mexico Central",
+    "region": "Mexico",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "79"
+  },
+  {
+    "code": "MXE",
+    "name": "Mexico Northeast",
+    "region": "Mexico",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "79"
+  },
+  {
+    "code": "MXG",
+    "name": "Mexico Gulf",
+    "region": "Mexico",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "79"
+  },
+  {
+    "code": "MXI",
+    "name": "Mexican Pacific Is.",
+    "region": "Mexico",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "79"
+  },
+  {
+    "code": "MXN",
+    "name": "Mexico Northwest",
+    "region": "Mexico",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "79"
+  },
+  {
+    "code": "MXS",
+    "name": "Mexico Southwest",
+    "region": "Mexico",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "79"
+  },
+  {
+    "code": "MXT",
+    "name": "Mexico Southeast",
+    "region": "Mexico",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "79"
+  },
+  {
+    "code": "MYA",
+    "name": "Myanmar",
+    "region": "Indo-China",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "41"
+  },
+  {
+    "code": "NAM",
+    "name": "Namibia",
+    "region": "Southern Africa",
+    "continent": "AFRICA",
+    "regionCode": "27"
+  },
+  {
+    "code": "NAT",
+    "name": "KwaZulu-Natal",
+    "region": "Southern Africa",
+    "continent": "AFRICA",
+    "regionCode": "27"
+  },
+  {
+    "code": "NBR",
+    "name": "New Brunswick",
+    "region": "Eastern Canada",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "72"
+  },
+  {
+    "code": "NCA",
+    "name": "North Carolina",
+    "region": "Southeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "78"
+  },
+  {
+    "code": "NCB",
+    "name": "Nicobar Is.",
+    "region": "Indo-China",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "41"
+  },
+  {
+    "code": "NCS",
+    "name": "North Caucasus",
+    "region": "Caucasus",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "33"
+  },
+  {
+    "code": "NDA",
+    "name": "North Dakota",
+    "region": "North-Central U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "74"
+  },
+  {
+    "code": "NEB",
+    "name": "Nebraska",
+    "region": "North-Central U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "74"
+  },
+  {
+    "code": "NEP",
+    "name": "Nepal",
+    "region": "Indian Subcontinent",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "40"
+  },
+  {
+    "code": "NET",
+    "name": "Netherlands",
+    "region": "Middle Europe",
+    "continent": "EUROPE",
+    "regionCode": "11"
+  },
+  {
+    "code": "NEV",
+    "name": "Nevada",
+    "region": "Southwestern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "76"
+  },
+  {
+    "code": "NFK",
+    "name": "Norfolk Is.",
+    "region": "Australia",
+    "continent": "AUSTRALASIA",
+    "regionCode": "50"
+  },
+  {
+    "code": "NFL",
+    "name": "Newfoundland",
+    "region": "Eastern Canada",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "72"
+  },
+  {
+    "code": "NGA",
+    "name": "Nigeria",
+    "region": "West Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "22"
+  },
+  {
+    "code": "NGR",
+    "name": "Niger",
+    "region": "West Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "22"
+  },
+  {
+    "code": "NIC",
+    "name": "Nicaragua",
+    "region": "Central America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "80"
+  },
+  {
+    "code": "NLA",
+    "name": "Netherlands Antilles",
+    "region": "Caribbean",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "81"
+  },
+  {
+    "code": "NNS",
+    "name": "Nansei-shoto",
+    "region": "Eastern Asia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "38"
+  },
+  {
+    "code": "NOR",
+    "name": "Norway",
+    "region": "Northern Europe",
+    "continent": "EUROPE",
+    "regionCode": "10"
+  },
+  {
+    "code": "NRU",
+    "name": "Nauru",
+    "region": "Southwestern Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "60"
+  },
+  {
+    "code": "NSC",
+    "name": "Nova Scotia",
+    "region": "Eastern Canada",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "72"
+  },
+  {
+    "code": "NSW",
+    "name": "New South Wales",
+    "region": "Australia",
+    "continent": "AUSTRALASIA",
+    "regionCode": "50"
+  },
+  {
+    "code": "NTA",
+    "name": "Northern Territory",
+    "region": "Australia",
+    "continent": "AUSTRALASIA",
+    "regionCode": "50"
+  },
+  {
+    "code": "NUE",
+    "name": "Niue",
+    "region": "Southwestern Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "60"
+  },
+  {
+    "code": "NUN",
+    "name": "Nunavut",
+    "region": "Subarctic America",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "70"
+  },
+  {
+    "code": "NWC",
+    "name": "New Caledonia",
+    "region": "Southwestern Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "60"
+  },
+  {
+    "code": "NWG",
+    "name": "New Guinea",
+    "region": "Papuasia",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "43"
+  },
+  {
+    "code": "NWH",
+    "name": "New Hampshire",
+    "region": "Northeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "75"
+  },
+  {
+    "code": "NWJ",
+    "name": "New Jersey",
+    "region": "Northeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "75"
+  },
+  {
+    "code": "NWM",
+    "name": "New Mexico",
+    "region": "South-Central U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "77"
+  },
+  {
+    "code": "NWT",
+    "name": "Northwest Territories",
+    "region": "Subarctic America",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "70"
+  },
+  {
+    "code": "NWY",
+    "name": "New York",
+    "region": "Northeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "75"
+  },
+  {
+    "code": "NZN",
+    "name": "New Zealand North",
+    "region": "New Zealand",
+    "continent": "AUSTRALASIA",
+    "regionCode": "51"
+  },
+  {
+    "code": "NZS",
+    "name": "New Zealand South",
+    "region": "New Zealand",
+    "continent": "AUSTRALASIA",
+    "regionCode": "51"
+  },
+  {
+    "code": "OFS",
+    "name": "Free State",
+    "region": "Southern Africa",
+    "continent": "AFRICA",
+    "regionCode": "27"
+  },
+  {
+    "code": "OGA",
+    "name": "Ogasawara-shoto",
+    "region": "Eastern Asia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "38"
+  },
+  {
+    "code": "OHI",
+    "name": "Ohio",
+    "region": "Northeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "75"
+  },
+  {
+    "code": "OKL",
+    "name": "Oklahoma",
+    "region": "North-Central U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "74"
+  },
+  {
+    "code": "OMA",
+    "name": "Oman",
+    "region": "Arabian Peninsula",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "35"
+  },
+  {
+    "code": "ONT",
+    "name": "Ontario",
+    "region": "Eastern Canada",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "72"
+  },
+  {
+    "code": "ORE",
+    "name": "Oregon",
+    "region": "Northwestern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "73"
+  },
+  {
+    "code": "PAK",
+    "name": "Pakistan",
+    "region": "Indian Subcontinent",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "40"
+  },
+  {
+    "code": "PAL",
+    "name": "Palestine",
+    "region": "Western Asia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "34"
+  },
+  {
+    "code": "PAN",
+    "name": "Panamá",
+    "region": "Central America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "80"
+  },
+  {
+    "code": "PAR",
+    "name": "Paraguay",
+    "region": "Southern South America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "85"
+  },
+  {
+    "code": "PEI",
+    "name": "Prince Edward I.",
+    "region": "Eastern Canada",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "72"
+  },
+  {
+    "code": "PEN",
+    "name": "Pennsylvania",
+    "region": "Northeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "75"
+  },
+  {
+    "code": "PER",
+    "name": "Peru",
+    "region": "Western South America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "83"
+  },
+  {
+    "code": "PHI",
+    "name": "Philippines",
+    "region": "Malesia",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "42"
+  },
+  {
+    "code": "PHX",
+    "name": "Phoenix Is.",
+    "region": "Southwestern Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "60"
+  },
+  {
+    "code": "PIT",
+    "name": "Pitcairn Is.",
+    "region": "South-Central Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "61"
+  },
+  {
+    "code": "POL",
+    "name": "Poland",
+    "region": "Middle Europe",
+    "continent": "EUROPE",
+    "regionCode": "11"
+  },
+  {
+    "code": "POR",
+    "name": "Portugal",
+    "region": "Southwestern Europe",
+    "continent": "EUROPE",
+    "regionCode": "12"
+  },
+  {
+    "code": "PRM",
+    "name": "Primorye",
+    "region": "Russian Far East",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "31"
+  },
+  {
+    "code": "PUE",
+    "name": "Puerto Rico",
+    "region": "Caribbean",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "81"
+  },
+  {
+    "code": "QLD",
+    "name": "Queensland",
+    "region": "Australia",
+    "continent": "AUSTRALASIA",
+    "regionCode": "50"
+  },
+  {
+    "code": "QUE",
+    "name": "Québec",
+    "region": "Eastern Canada",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "72"
+  },
+  {
+    "code": "REU",
+    "name": "Réunion",
+    "region": "Western Indian Ocean",
+    "continent": "AFRICA",
+    "regionCode": "29"
+  },
+  {
+    "code": "RHO",
+    "name": "Rhode I.",
+    "region": "Northeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "75"
+  },
+  {
+    "code": "ROD",
+    "name": "Rodrigues",
+    "region": "Western Indian Ocean",
+    "continent": "AFRICA",
+    "regionCode": "29"
+  },
+  {
+    "code": "ROM",
+    "name": "Romania",
+    "region": "Southeastern Europe",
+    "continent": "EUROPE",
+    "regionCode": "13"
+  },
+  {
+    "code": "RUC",
+    "name": "Central European Russia",
+    "region": "Eastern Europe",
+    "continent": "EUROPE",
+    "regionCode": "14"
+  },
+  {
+    "code": "RUE",
+    "name": "East European Russia",
+    "region": "Eastern Europe",
+    "continent": "EUROPE",
+    "regionCode": "14"
+  },
+  {
+    "code": "RUN",
+    "name": "North European Russia",
+    "region": "Eastern Europe",
+    "continent": "EUROPE",
+    "regionCode": "14"
+  },
+  {
+    "code": "RUS",
+    "name": "South European Russia",
+    "region": "Eastern Europe",
+    "continent": "EUROPE",
+    "regionCode": "14"
+  },
+  {
+    "code": "RUW",
+    "name": "Northwest European Russia",
+    "region": "Eastern Europe",
+    "continent": "EUROPE",
+    "regionCode": "14"
+  },
+  {
+    "code": "RWA",
+    "name": "Rwanda",
+    "region": "West-Central Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "23"
+  },
+  {
+    "code": "SAK",
+    "name": "Sakhalin",
+    "region": "Russian Far East",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "31"
+  },
+  {
+    "code": "SAM",
+    "name": "Samoa",
+    "region": "Southwestern Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "60"
+  },
+  {
+    "code": "SAR",
+    "name": "Sardegna",
+    "region": "Southwestern Europe",
+    "continent": "EUROPE",
+    "regionCode": "12"
+  },
+  {
+    "code": "SAS",
+    "name": "Saskatchewan",
+    "region": "Western Canada",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "71"
+  },
+  {
+    "code": "SAU",
+    "name": "Saudi Arabia",
+    "region": "Arabian Peninsula",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "35"
+  },
+  {
+    "code": "SCA",
+    "name": "South Carolina",
+    "region": "Southeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "78"
+  },
+  {
+    "code": "SCI",
+    "name": "Society Is.",
+    "region": "South-Central Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "61"
+  },
+  {
+    "code": "SCS",
+    "name": "South China Sea",
+    "region": "Indo-China",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "41"
+  },
+  {
+    "code": "SCZ",
+    "name": "Santa Cruz Is.",
+    "region": "Southwestern Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "60"
+  },
+  {
+    "code": "SDA",
+    "name": "South Dakota",
+    "region": "North-Central U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "74"
+  },
+  {
+    "code": "SEL",
+    "name": "Selvagens",
+    "region": "Macaronesia",
+    "continent": "AFRICA",
+    "regionCode": "21"
+  },
+  {
+    "code": "SEN",
+    "name": "Senegal",
+    "region": "West Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "22"
+  },
+  {
+    "code": "SEY",
+    "name": "Seychelles",
+    "region": "Western Indian Ocean",
+    "continent": "AFRICA",
+    "regionCode": "29"
+  },
+  {
+    "code": "SGE",
+    "name": "South Georgia",
+    "region": "Subantarctic Islands",
+    "continent": "ANTARCTICA",
+    "regionCode": "90"
+  },
+  {
+    "code": "SIC",
+    "name": "Sicilia",
+    "region": "Southeastern Europe",
+    "continent": "EUROPE",
+    "regionCode": "13"
+  },
+  {
+    "code": "SIE",
+    "name": "Sierra Leone",
+    "region": "West Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "22"
+  },
+  {
+    "code": "SIN",
+    "name": "Sinai",
+    "region": "Western Asia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "34"
+  },
+  {
+    "code": "SOA",
+    "name": "South Australia",
+    "region": "Australia",
+    "continent": "AUSTRALASIA",
+    "regionCode": "50"
+  },
+  {
+    "code": "SOC",
+    "name": "Socotra",
+    "region": "Northeast Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "24"
+  },
+  {
+    "code": "SOL",
+    "name": "Solomon Is.",
+    "region": "Papuasia",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "43"
+  },
+  {
+    "code": "SOM",
+    "name": "Somalia",
+    "region": "Northeast Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "24"
+  },
+  {
+    "code": "SPA",
+    "name": "Spain",
+    "region": "Southwestern Europe",
+    "continent": "EUROPE",
+    "regionCode": "12"
+  },
+  {
+    "code": "SRL",
+    "name": "Sri Lanka",
+    "region": "Indian Subcontinent",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "40"
+  },
+  {
+    "code": "SSA",
+    "name": "South Sandwich Is.",
+    "region": "Subantarctic Islands",
+    "continent": "ANTARCTICA",
+    "regionCode": "90"
+  },
+  {
+    "code": "STH",
+    "name": "St.Helena",
+    "region": "Middle Atlantic Ocean",
+    "continent": "AFRICA",
+    "regionCode": "28"
+  },
+  {
+    "code": "SUD",
+    "name": "Sudan-South Sudan",
+    "region": "Northeast Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "24"
+  },
+  {
+    "code": "SUL",
+    "name": "Sulawesi",
+    "region": "Malesia",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "42"
+  },
+  {
+    "code": "SUM",
+    "name": "Sumatera",
+    "region": "Malesia",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "42"
+  },
+  {
+    "code": "SUR",
+    "name": "Suriname",
+    "region": "Northern South America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "82"
+  },
+  {
+    "code": "SVA",
+    "name": "Svalbard",
+    "region": "Northern Europe",
+    "continent": "EUROPE",
+    "regionCode": "10"
+  },
+  {
+    "code": "SWC",
+    "name": "Southwest Caribbean",
+    "region": "Caribbean",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "81"
+  },
+  {
+    "code": "SWE",
+    "name": "Sweden",
+    "region": "Northern Europe",
+    "continent": "EUROPE",
+    "regionCode": "10"
+  },
+  {
+    "code": "SWI",
+    "name": "Switzerland",
+    "region": "Middle Europe",
+    "continent": "EUROPE",
+    "regionCode": "11"
+  },
+  {
+    "code": "SWZ",
+    "name": "Eswatini",
+    "region": "Southern Africa",
+    "continent": "AFRICA",
+    "regionCode": "27"
+  },
+  {
+    "code": "TAI",
+    "name": "Taiwan",
+    "region": "Eastern Asia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "38"
+  },
+  {
+    "code": "TAN",
+    "name": "Tanzania",
+    "region": "East Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "25"
+  },
+  {
+    "code": "TAS",
+    "name": "Tasmania",
+    "region": "Australia",
+    "continent": "AUSTRALASIA",
+    "regionCode": "50"
+  },
+  {
+    "code": "TCI",
+    "name": "Turks-Caicos Is.",
+    "region": "Caribbean",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "81"
+  },
+  {
+    "code": "TCS",
+    "name": "Transcaucasus",
+    "region": "Caucasus",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "33"
+  },
+  {
+    "code": "TDC",
+    "name": "Tristan da Cunha",
+    "region": "Subantarctic Islands",
+    "continent": "ANTARCTICA",
+    "regionCode": "90"
+  },
+  {
+    "code": "TEN",
+    "name": "Tennessee",
+    "region": "Southeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "78"
+  },
+  {
+    "code": "TEX",
+    "name": "Texas",
+    "region": "South-Central U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "77"
+  },
+  {
+    "code": "THA",
+    "name": "Thailand",
+    "region": "Indo-China",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "41"
+  },
+  {
+    "code": "TKM",
+    "name": "Turkmenistan",
+    "region": "Central Asia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "32"
+  },
+  {
+    "code": "TOG",
+    "name": "Togo",
+    "region": "West Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "22"
+  },
+  {
+    "code": "TOK",
+    "name": "Tokelau-Manihiki",
+    "region": "Southwestern Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "60"
+  },
+  {
+    "code": "TON",
+    "name": "Tonga",
+    "region": "Southwestern Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "60"
+  },
+  {
+    "code": "TRT",
+    "name": "Trinidad-Tobago",
+    "region": "Caribbean",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "81"
+  },
+  {
+    "code": "TUA",
+    "name": "Tuamotu",
+    "region": "South-Central Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "61"
+  },
+  {
+    "code": "TUB",
+    "name": "Tubuai Is.",
+    "region": "South-Central Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "61"
+  },
+  {
+    "code": "TUE",
+    "name": "Türkiye-in-Europe",
+    "region": "Southeastern Europe",
+    "continent": "EUROPE",
+    "regionCode": "13"
+  },
+  {
+    "code": "TUN",
+    "name": "Tunisia",
+    "region": "Northern Africa",
+    "continent": "AFRICA",
+    "regionCode": "20"
+  },
+  {
+    "code": "TUR",
+    "name": "Türkiye",
+    "region": "Western Asia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "34"
+  },
+  {
+    "code": "TUV",
+    "name": "Tuvalu",
+    "region": "Southwestern Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "60"
+  },
+  {
+    "code": "TVA",
+    "name": "Tuva",
+    "region": "Siberia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "30"
+  },
+  {
+    "code": "TVL",
+    "name": "Northern Provinces",
+    "region": "Southern Africa",
+    "continent": "AFRICA",
+    "regionCode": "27"
+  },
+  {
+    "code": "TZK",
+    "name": "Tadzhikistan",
+    "region": "Central Asia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "32"
+  },
+  {
+    "code": "UGA",
+    "name": "Uganda",
+    "region": "East Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "25"
+  },
+  {
+    "code": "UKR",
+    "name": "Ukraine",
+    "region": "Eastern Europe",
+    "continent": "EUROPE",
+    "regionCode": "14"
+  },
+  {
+    "code": "URU",
+    "name": "Uruguay",
+    "region": "Southern South America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "85"
+  },
+  {
+    "code": "UTA",
+    "name": "Utah",
+    "region": "Southwestern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "76"
+  },
+  {
+    "code": "UZB",
+    "name": "Uzbekistan",
+    "region": "Central Asia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "32"
+  },
+  {
+    "code": "VAN",
+    "name": "Vanuatu",
+    "region": "Southwestern Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "60"
+  },
+  {
+    "code": "VEN",
+    "name": "Venezuela",
+    "region": "Northern South America",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "82"
+  },
+  {
+    "code": "VER",
+    "name": "Vermont",
+    "region": "Northeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "75"
+  },
+  {
+    "code": "VIC",
+    "name": "Victoria",
+    "region": "Australia",
+    "continent": "AUSTRALASIA",
+    "regionCode": "50"
+  },
+  {
+    "code": "VIE",
+    "name": "Vietnam",
+    "region": "Indo-China",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "41"
+  },
+  {
+    "code": "VNA",
+    "name": "Venezuelan Antilles",
+    "region": "Caribbean",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "81"
+  },
+  {
+    "code": "VRG",
+    "name": "Virginia",
+    "region": "Southeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "78"
+  },
+  {
+    "code": "WAK",
+    "name": "Wake I.",
+    "region": "Northwestern Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "62"
+  },
+  {
+    "code": "WAL",
+    "name": "Wallis-Futuna Is.",
+    "region": "Southwestern Pacific",
+    "continent": "PACIFIC",
+    "regionCode": "60"
+  },
+  {
+    "code": "WAS",
+    "name": "Washington",
+    "region": "Northwestern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "73"
+  },
+  {
+    "code": "WAU",
+    "name": "Western Australia",
+    "region": "Australia",
+    "continent": "AUSTRALASIA",
+    "regionCode": "50"
+  },
+  {
+    "code": "WDC",
+    "name": "District of Columbia",
+    "region": "Southeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "78"
+  },
+  {
+    "code": "WHM",
+    "name": "West Himalaya",
+    "region": "Indian Subcontinent",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "40"
+  },
+  {
+    "code": "WIN",
+    "name": "Windward Is.",
+    "region": "Caribbean",
+    "continent": "SOUTHERN AMERICA",
+    "regionCode": "81"
+  },
+  {
+    "code": "WIS",
+    "name": "Wisconsin",
+    "region": "North-Central U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "74"
+  },
+  {
+    "code": "WSA",
+    "name": "Western Sahara",
+    "region": "Northern Africa",
+    "continent": "AFRICA",
+    "regionCode": "20"
+  },
+  {
+    "code": "WSB",
+    "name": "West Siberia",
+    "region": "Siberia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "30"
+  },
+  {
+    "code": "WVA",
+    "name": "West Virginia",
+    "region": "Northeastern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "75"
+  },
+  {
+    "code": "WYO",
+    "name": "Wyoming",
+    "region": "Northwestern U.S.A.",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "73"
+  },
+  {
+    "code": "XMS",
+    "name": "Christmas I.",
+    "region": "Malesia",
+    "continent": "ASIA-TROPICAL",
+    "regionCode": "42"
+  },
+  {
+    "code": "YAK",
+    "name": "Yakutiya",
+    "region": "Siberia",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "30"
+  },
+  {
+    "code": "YEM",
+    "name": "Yemen",
+    "region": "Arabian Peninsula",
+    "continent": "ASIA-TEMPERATE",
+    "regionCode": "35"
+  },
+  {
+    "code": "YUG",
+    "name": "NW. Balkan Pen.",
+    "region": "Southeastern Europe",
+    "continent": "EUROPE",
+    "regionCode": "13"
+  },
+  {
+    "code": "YUK",
+    "name": "Yukon",
+    "region": "Subarctic America",
+    "continent": "NORTHERN AMERICA",
+    "regionCode": "70"
+  },
+  {
+    "code": "ZAI",
+    "name": "DR Congo",
+    "region": "West-Central Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "23"
+  },
+  {
+    "code": "ZAM",
+    "name": "Zambia",
+    "region": "South Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "26"
+  },
+  {
+    "code": "ZIM",
+    "name": "Zimbabwe",
+    "region": "South Tropical Africa",
+    "continent": "AFRICA",
+    "regionCode": "26"
+  }
+]

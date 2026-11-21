@@ -1,0 +1,59 @@
+{
+  "version": "0.8.0",
+  "files": {
+    "taxa.json": "474fcf26c26f1c1537fdbb77b17e059e9053958cc86d5ebe7986f76e5ede37af",
+    "coverage.json": "a7daf6620903843f0d7e01798543a0111f78af7e8a2fb3c1c802090bdeb17069",
+    "coverage-summary.json": "8bb816f61dae56489117bc7d356fe423f37cb3fc893722f7cd6e9b6b60576599",
+    "ecoregions.geojson": "9c9b0fe493ef0b953b1f5154683d832b54f79df4871c51ecd275e434f3274a5a",
+    "botanical-countries.geojson": "e73c551e7239bf5d68f19b576763295b9e0542256fee6701c30f23f78b508944",
+    "provenance.json": "a09e5f4b30e12db31850d5ba0eb609a328c25b0e7b44f30589e5152f7734bcc3"
+  },
+  "coverage": {
+    "version": "0.8.0",
+    "taxa": 400,
+    "documentedNativeAreas": 336,
+    "terrestrialEcoregions": 846,
+    "rockAndIceFeatures": 1,
+    "verifiedSpeciesEcoregions": 0,
+    "regionalAtAuditPoint": 445,
+    "biomeFallbackAtAuditPoint": 401,
+    "insufficientAtAuditPoint": 0,
+    "treelessAtAuditPoint": 51,
+    "auditMethod": "Natural forest mode at one unsimplified-source interior point per ecoregion. These counts are point samples, not continuous species coverage or verified ecoregion associations.",
+    "modes": {
+      "forest": {
+        "regionalAtAuditPoint": 445,
+        "fallbackAtAuditPoint": 401,
+        "insufficientAtAuditPoint": 0
+      },
+      "urban": {
+        "regionalAtAuditPoint": 0,
+        "fallbackAtAuditPoint": 846,
+        "insufficientAtAuditPoint": 0
+      },
+      "grassland": {
+        "regionalAtAuditPoint": 0,
+        "fallbackAtAuditPoint": 846,
+        "insufficientAtAuditPoint": 0
+      },
+      "wetland": {
+        "regionalAtAuditPoint": 0,
+        "fallbackAtAuditPoint": 846,
+        "insufficientAtAuditPoint": 0
+      },
+      "coastal": {
+        "regionalAtAuditPoint": 0,
+        "fallbackAtAuditPoint": 846,
+        "insufficientAtAuditPoint": 0
+      },
+      "alpine": {
+        "regionalAtAuditPoint": 0,
+        "fallbackAtAuditPoint": 846,
+        "insufficientAtAuditPoint": 0
+      }
+    },
+    "botanicalBoundaryGapsAtAuditPoint": 15,
+    "openVegetationAtAuditPoint": 279,
+    "forestClimateOrCatalogFallbackAtAuditPoint": 71
+  }
+}

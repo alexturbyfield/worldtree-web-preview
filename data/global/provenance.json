@@ -1,0 +1,48 @@
+{
+  "version": "0.8.0",
+  "taxa": 400,
+  "sourceRelease": "WCVP 16, extracted 2026-06-04",
+  "retrieved": "2026-11-21",
+  "sources": [
+    {
+      "id": "wcvp-16",
+      "name": "World Checklist of Vascular Plants v16",
+      "url": "https://sftp.kew.org/pub/data-repositories/WCVP/wcvp.zip",
+      "sha256": "d32ea2b3a85e489b14e83bcc9eae7274532e1d113753f7be290d4b2dfde573fa",
+      "license": "CC-BY-3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "licenseEvidence": "README_WCVP.xlsx in the actual source archive states CC BY 3.0; the GBIF Darwin Core distribution advertises CC BY 4.0. This import uses the archive license.",
+      "citation": "Govaerts R (ed.). 2026. WCVP: World Checklist of Vascular Plants. Royal Botanic Gardens, Kew. https://doi.org/10.34885/egs6-cp24",
+      "modifications": "Accepted tree species subset; native/extant/non-doubtful country records only; normalized names and identifiers; procedural archetypes not botanical evidence."
+    },
+    {
+      "id": "wgsrpd-2001",
+      "name": "TDWG WGSRPD Level 3 botanical countries",
+      "url": "https://raw.githubusercontent.com/tdwg/wgsrpd/f68afd99aa94adadaa3e0328e4aadda75ecc4215/geojson/level3.geojson",
+      "sha256": "c172bcf6aba20e19477adc60aebf0023068f0175dca8480f0760b090dcf64840",
+      "license": "CC-BY-4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "licenseEvidence": "TDWG platform terms https://www.tdwg.org/about/terms-of-use/",
+      "citation": "Brummitt, R.K. (2001). World Geographical Scheme for Recording Plant Distributions, Edition 2. TDWG / Hunt Institute.",
+      "modifications": "Source geometry retained; bounding boxes added. These old coarse botanical boundaries can differ from RESOLVE coastlines."
+    }
+  ],
+  "selection": "Priority original and distinctive taxa, followed by deterministic round-robin across botanical regions with genus diversity; not abundance, dominance, or an exhaustive flora.",
+  "missingTraits": [
+    "leaf habit",
+    "mature height",
+    "species-specific ecological roles",
+    "local habitat validation",
+    "verified species/ecoregion associations"
+  ],
+  "legacyTaxa": 62,
+  "legacyResolved": 62,
+  "files": {
+    "taxa.json": "474fcf26c26f1c1537fdbb77b17e059e9053958cc86d5ebe7986f76e5ede37af",
+    "areas.json": "f763b3c2c38c39a37826507c663f3190ea6ecbd6092608fdb0df103cdf8a4ad3",
+    "legacy-links.json": "a3dac8f1ff50e1548c88effc0e9476ed7941fa76893532c8b32be55fbab6d2f2",
+    "ecoregion-associations.json": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "ecoregions.json": "cb995c1401a92983cb116522fdbfceaea60805a648023d56244f9c6e92699cf1"
+  },
+  "botanicalGeometrySha256": "e73c551e7239bf5d68f19b576763295b9e0542256fee6701c30f23f78b508944"
+}

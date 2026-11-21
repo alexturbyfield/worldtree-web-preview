@@ -1,6 +1,6 @@
 {
   "name": "worldtree",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "private": true,
   "scripts": {
     "dev": "next dev --hostname 0.0.0.0",
@@ -14,7 +14,9 @@
     "prebuild": "npm run build:worker",
     "predev": "npm run build:worker",
     "preview:local": "node scripts/preview.mjs",
-    "pretest": "npm run build:worker"
+    "pretest": "npm run build:worker",
+    "data:global": "python scripts/import_global_catalog.py && tsx scripts/audit-coverage.ts",
+    "coverage": "tsx scripts/audit-coverage.ts"
   },
   "dependencies": {
     "@turf/boolean-point-in-polygon": "^7.3.0",

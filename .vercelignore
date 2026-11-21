@@ -2,6 +2,7 @@
 .git
 node_modules
 data/raw
+data/sources
 data/Ecoregions2017.zip
 prototype
 tests

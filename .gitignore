@@ -5,6 +5,7 @@ out/
 .codex-attachments/
 data/Ecoregions2017.zip
 data/raw/
+data/sources/
 __pycache__/
 *.pyc
 *.sqlite

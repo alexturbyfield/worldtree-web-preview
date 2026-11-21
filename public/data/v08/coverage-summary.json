@@ -1,0 +1,48 @@
+{
+  "version": "0.8.0",
+  "taxa": 400,
+  "documentedNativeAreas": 336,
+  "terrestrialEcoregions": 846,
+  "rockAndIceFeatures": 1,
+  "verifiedSpeciesEcoregions": 0,
+  "regionalAtAuditPoint": 445,
+  "biomeFallbackAtAuditPoint": 401,
+  "insufficientAtAuditPoint": 0,
+  "treelessAtAuditPoint": 51,
+  "auditMethod": "Natural forest mode at one unsimplified-source interior point per ecoregion. These counts are point samples, not continuous species coverage or verified ecoregion associations.",
+  "modes": {
+    "forest": {
+      "regionalAtAuditPoint": 445,
+      "fallbackAtAuditPoint": 401,
+      "insufficientAtAuditPoint": 0
+    },
+    "urban": {
+      "regionalAtAuditPoint": 0,
+      "fallbackAtAuditPoint": 846,
+      "insufficientAtAuditPoint": 0
+    },
+    "grassland": {
+      "regionalAtAuditPoint": 0,
+      "fallbackAtAuditPoint": 846,
+      "insufficientAtAuditPoint": 0
+    },
+    "wetland": {
+      "regionalAtAuditPoint": 0,
+      "fallbackAtAuditPoint": 846,
+      "insufficientAtAuditPoint": 0
+    },
+    "coastal": {
+      "regionalAtAuditPoint": 0,
+      "fallbackAtAuditPoint": 846,
+      "insufficientAtAuditPoint": 0
+    },
+    "alpine": {
+      "regionalAtAuditPoint": 0,
+      "fallbackAtAuditPoint": 846,
+      "insufficientAtAuditPoint": 0
+    }
+  },
+  "botanicalBoundaryGapsAtAuditPoint": 15,
+  "openVegetationAtAuditPoint": 279,
+  "forestClimateOrCatalogFallbackAtAuditPoint": 71
+}
