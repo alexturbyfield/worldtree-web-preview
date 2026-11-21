@@ -1,16 +1,17 @@
 import type {VegetationProfile,VegetationHabitat} from '../global-types';
 import {mapVisual, type VisualMapping} from './presets';
 import {type TreeModel, type Point} from './tree';
-import {generateFoliageCards,type FoliageCard} from './foliage-cards';
+import type {FoliageCard} from './foliage-cards';
+import {generateCanopy,defaultCanopy,type Canopy} from './canopy';
 import {hashSeed,randomSource} from './random';
 import {generatePainterlyTree,defaultArt,type ArtControls,type RenderMode} from './painterly';
 export interface SceneSpecies {
   id:string;scientificName:string|null;commonName:string;confidence:string;
   evidenceLevel:string;origin:string;sources:string[];visual:VisualMapping;
 }
-export interface SceneTree {id:string;index:number;species:SceneSpecies;seed:string;appearanceSeed?:string;revision:number;position:Point;rotation:number;model:TreeModel;foliageCards?:FoliageCard[]}
+export interface SceneTree {id:string;index:number;species:SceneSpecies;seed:string;appearanceSeed?:string;revision:number;position:Point;rotation:number;model:TreeModel;foliageCards?:FoliageCard[];canopy?:Canopy}
 export interface SceneRecipe {
-  schemaVersion:'1.1.0';location:VegetationProfile['location']|null;ecoregion:VegetationProfile['geography'];
+  schemaVersion:'0.1.0';location:VegetationProfile['location']|null;ecoregion:VegetationProfile['geography'];
   habitat:VegetationHabitat;seed:string;environment:VegetationProfile['environment'];
   evidenceLevel:VegetationProfile['evidenceLevel'];ecologicalStatus:VegetationProfile['status'];
   requestedTreeCount:number;trees:SceneTree[];palette:SceneSpecies[];conditionalStudy:boolean;
@@ -22,9 +23,9 @@ export function terrainHeight(x:number,z:number,seed:string){
   const phase=(hashSeed(seed)%6283)/1000;
   return Math.sin(x*.055+phase)*1.1+Math.cos(z*.073-phase)*.8+Math.sin((x+z)*.12+phase)*.25;
 }
-export function createSceneRecipe(profile:VegetationProfile,{seed=profile.seed,density=36,revisions={},conditional=false,structureSeed='grove-1',appearanceSeed='pigment-1',renderMode='painterly',stylization=defaultArt.stylization,foliageDensity=defaultArt.foliageDensity,asymmetry=defaultArt.asymmetry,foliageDetail=.65,wind=true}:{seed?:string;density?:number;revisions?:Record<number,number>;conditional?:boolean;structureSeed?:string;appearanceSeed?:string;renderMode?:RenderMode;stylization?:number;foliageDensity?:number;asymmetry?:number;foliageDetail?:number;wind?:boolean}={}):SceneRecipe {
+export function createSceneRecipe(profile:VegetationProfile,{seed=profile.seed,density=36,revisions={},conditional=false,structureSeed='grove-1',appearanceSeed='pigment-1',renderMode='painterly',stylization=defaultArt.stylization,foliageDensity=defaultArt.foliageDensity,asymmetry=defaultArt.asymmetry,foliageDetail=.65,wind=true,fluffiness=defaultCanopy.fluffiness,clumpOverlap=defaultCanopy.clumpOverlap,surfaceLeafDetail=defaultCanopy.surfaceLeafDetail,branchExposure=defaultCanopy.branchExposure}:{seed?:string;density?:number;revisions?:Record<number,number>;conditional?:boolean;structureSeed?:string;appearanceSeed?:string;renderMode?:RenderMode;stylization?:number;foliageDensity?:number;asymmetry?:number;foliageDetail?:number;wind?:boolean;fluffiness?:number;clumpOverlap?:number;surfaceLeafDetail?:number;branchExposure?:number}={}):SceneRecipe {
   if(!Number.isInteger(density)||density<0||density>60)throw new Error('Scene density must be an integer from 0 to 60.');
-  const art={stylization,foliageDensity,asymmetry,foliageDetail};
+  const art={stylization,foliageDensity,asymmetry,foliageDetail,fluffiness,clumpOverlap,surfaceLeafDetail,branchExposure};
   if(!['painterly','performance','diagram'].includes(renderMode)||Object.values(art).some(v=>!Number.isFinite(v)||v<0||v>1))throw new Error('Invalid renderer or art controls.');
   const palette:SceneSpecies[]=profile.species.map(t=>({id:t.id,scientificName:t.scientificName,commonName:t.commonNames[0]??t.scientificName,confidence:t.confidence,evidenceLevel:profile.evidenceLevel,origin:profile.evidenceLevel==='verified_ecoregion'?'Evidence-linked ecoregion candidate':'Documented native botanical country; local presence unverified',sources:t.sources,visual:mapVisual(t.scientificName,t.assetArchetype)}));
   const blocked=profile.status==='insufficient_data'||profile.status==='naturally_treeless'||profile.environment.unvalidated.length>0;
@@ -45,7 +46,8 @@ export function createSceneRecipe(profile:VegetationProfile,{seed=profile.seed,d
     const pigmentSeed=String(hashSeed(`${appearanceSeed}|${species.id}|${index}`));
     p[1]=terrainHeight(p[0],p[2],seed);
     const model=generatePainterlyTree({presetId:species.visual.presetId,structuralSeed:individualSeed,appearanceSeed:pigmentSeed,...art});
-    return {id:`tree-${index}`,index,species,seed:individualSeed,appearanceSeed:pigmentSeed,revision,position:p,rotation:randomSource(seed+'|rotation|'+index)()*Math.PI*2,model,foliageCards:renderMode==='diagram'?[]:generateFoliageCards(model,foliageDetail)};
+    const canopy=renderMode==='diagram'?undefined:generateCanopy(model,{fluffiness,clumpOverlap,surfaceLeafDetail,branchExposure});
+    return {id:`tree-${index}`,index,species,seed:individualSeed,appearanceSeed:pigmentSeed,revision,position:p,rotation:randomSource(seed+'|rotation|'+index)()*Math.PI*2,model:canopy?{...model,dimensions:canopy.dimensions}:model,canopy,foliageCards:canopy?.surfaceCards??[]};
   }):[];
-  return {schemaVersion:'1.1.0',wind,renderMode,structureSeed,appearanceSeed,art,purpose:'ecological_scene',location:profile.location,ecoregion:profile.geography,habitat:profile.habitat,seed,environment:profile.environment,evidenceLevel:profile.evidenceLevel,ecologicalStatus:profile.status,requestedTreeCount:density,trees,palette,conditionalStudy:conditional,terrain:{widthMeters:100,depthMeters:100,source:'Synthetic seeded terrain; not a digital elevation model.'},distribution:'Seeded stratified design spacing and equal palette cycling; not ecological abundance or spawn probability.',message:trees.length?profile.description:profile.title+'. '+profile.description,limitations:[...profile.limitations,'All tree shapes, height and crown dimensions are art-directed procedural design values, not measured or sourced botanical traits.','Only three architectures are implemented; palms, mangrove roots and other specialist forms use labelled visual fallbacks.','Density, placement and synthetic terrain are design controls, not inferred current forest cover.'],sources:profile.sources};
+  return {schemaVersion:'0.1.0',wind,renderMode,structureSeed,appearanceSeed,art,purpose:'ecological_scene',location:profile.location,ecoregion:profile.geography,habitat:profile.habitat,seed,environment:profile.environment,evidenceLevel:profile.evidenceLevel,ecologicalStatus:profile.status,requestedTreeCount:density,trees,palette,conditionalStudy:conditional,terrain:{widthMeters:100,depthMeters:100,source:'Synthetic seeded terrain; not a digital elevation model.'},distribution:'Seeded stratified design spacing and equal palette cycling; not ecological abundance or spawn probability.',message:trees.length?profile.description:profile.title+'. '+profile.description,limitations:[...profile.limitations,'All tree shapes, height and crown dimensions are art-directed procedural design values, not measured or sourced botanical traits.','Only three architectures are implemented; palms, mangrove roots and other specialist forms use labelled visual fallbacks.','Density, placement and synthetic terrain are design controls, not inferred current forest cover.'],sources:profile.sources};
 }
