@@ -8,7 +8,7 @@ import type {EcoProperties} from '../src/lib/geography';
 async function main(){
 const origin=new URL(process.argv[2]).origin;
 async function get(path:string){const r=await fetch(origin+path);assert.equal(r.status,200,path);assert.equal(new URL(r.url).origin,origin,'No authentication redirect');return r;}
-const html=await (await get('/')).text();assert.match(html,/1\.0/);assert.match(html,/width=device-width/);console.log('Public v1.0 HTML and mobile viewport metadata: passed');
+const html=await (await get('/')).text();assert.match(html,/1\.1/);assert.match(html,/width=device-width/);console.log('Public v1.1 HTML and mobile viewport metadata: passed');
 const manifest=await (await get('/data/v08/manifest.json')).json();assert.equal(manifest.version,'0.8.0');
 assert.deepEqual(manifest,JSON.parse(readFileSync('public/data/v08/manifest.json','utf8')),'Remote release data matches the checked-in manifest');
 for(const [file,hash] of Object.entries(manifest.files)){const bytes=Buffer.from(await (await get('/data/v08/'+file)).arrayBuffer());assert.equal(createHash('sha256').update(bytes).digest('hex'),hash,file);}

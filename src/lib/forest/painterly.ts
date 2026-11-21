@@ -3,8 +3,8 @@ import {presets} from './presets';
 import {hashSeed, randomSource} from './random';
 import type {Cluster, Point, Segment, TreeModel} from './tree';
 
-export type RenderMode = 'painterly' | 'diagram';
-export interface ArtControls {stylization:number;foliageDensity:number;asymmetry:number}
+export type RenderMode = 'painterly' | 'performance' | 'diagram';
+export interface ArtControls {stylization:number;foliageDensity:number;asymmetry:number;foliageDetail?:number}
 export const defaultArt:ArtControls={stylization:.7,foliageDensity:.8,asymmetry:.55};
 export interface PainterlyOptions extends Partial<ArtControls> {presetId:string;structuralSeed:string;appearanceSeed:string}
 export interface PaintedCluster extends Cluster {rotation:Point;color:string;card:boolean;variant:number}
