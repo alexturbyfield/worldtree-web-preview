@@ -2,7 +2,7 @@ import source from '../../data/global/taxa.json';
 import bindings from '../../data/global/ecoregion-associations.json';
 import {recommend,validateCoordinates} from './catalog';
 import {biomeNames,type EcoProperties} from './geography';
-import type {BotanicalArea,EcoregionAssociation,EnvironmentFilters,Taxon,VegetationHabitat,VegetationProfile} from './global-types';
+import type {BotanicalArea,EcoregionAssociation,EnvironmentFilters,Taxon,TreeSpecies,VegetationHabitat,VegetationProfile} from './global-types';
 export const taxa=source as Taxon[];
 export const associations=bindings as EcoregionAssociation[];
 export const defaultEnvironment:EnvironmentFilters={moisture:'any',elevationM:null,coastal:'any',seasonality:'any'};
@@ -64,4 +64,10 @@ export function resolveVegetation({lat,lon,geography,botanicalArea=null,habitat=
   return result;
 }
 export function searchTaxa(query:string,source=taxa){const q=query.trim().toLocaleLowerCase();return q?source.filter(t=>[t.scientificName,...t.commonNames,...t.synonyms].some(n=>n.toLocaleLowerCase().includes(q))):source;}
-export function exportProfile(profile:VegetationProfile){return JSON.stringify(profile,null,2)+'\n';}
+export function exportProfile(profile:VegetationProfile){
+  const species:TreeSpecies[]=profile.species.map(({heightMeters,...taxon})=>{
+    const knownHeight=heightMeters??taxon.matureHeightM;
+    return knownHeight===null||knownHeight===undefined?taxon:{...taxon,heightMeters:knownHeight};
+  });
+  return JSON.stringify({...profile,species},null,2)+'\n';
+}

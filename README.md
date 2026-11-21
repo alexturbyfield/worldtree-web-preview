@@ -29,6 +29,8 @@ The **six habitat modes** are Natural forest, Urban / planted, Grassland & savan
 
 Seeds deterministically shuffle the eligible palette and select up to 12 taxa. There are **no abundance percentages, ecological spawn probabilities, or invented weights**. Exported JSON preserves the seed, coordinates, geographic evidence, requested/unknown environmental metadata, species, asset archetypes, growth forms, evidence level, source URLs and limitations. `nativeRegions` uses TDWG Level-3 codes; `ecoregionIds`, `biomeIds` and species-level `habitats` stay empty where unsourced. Leaf habit/evergreen and mature height remain unknown. Archetypes are labelled as procedural design choices, not measured traits.
 
+The game export's optional `heightMeters: [min, max]` field is emitted only when a range is supplied. A supplied canonical `heightMeters` takes precedence; otherwise a non-null legacy `matureHeightM` range is also exposed under the canonical name. The legacy field and all other metadata remain available for compatibility. All 400 current records have unknown heights, so their exports omit `heightMeters` and retain `matureHeightM: null`. Exporting never fills in traits, changes confidence, or mutates the source profile.
+
 ## Interface
 
 Pan and zoom the real map; tap a coordinate; search 37 named places or arbitrary `latitude, longitude` pairs. Seattle, Atlanta and Tokyo shortcuts remain. Global presets include Manaus, Kinshasa, Antananarivo, Cairo, Berlin, Yakutsk, Mumbai, Borneo, Perth, Auckland, Reykjavík, Pacific/Caribbean islands, Sahara and Arctic tundra. This is local preset/coordinate search, not worldwide street-address geocoding.

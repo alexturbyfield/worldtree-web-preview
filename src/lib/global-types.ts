@@ -10,6 +10,8 @@ export interface Taxon {
   ipniId: string | null; powoId: string; commonNames: string[]; commonNameEvidence: string; synonyms: string[];
   nativeRange: string; nativeAreaCodes: string[]; growthForm: string; climate: string;
   leafHabit: string | null; matureHeightM: [number,number] | null; role: string; archetype: string;
+  /** Canonical game-export height range; omitted when not sourced. */
+  heightMeters?: [number,number];
   archetypeEvidence: string; sourceId: string; evidenceUrl: string; taxonomyConfidence: string;
   rangeConfidence: string; ecoregionVerified: boolean; habitatVerified: boolean;
   taxonId:string; nativeRegions:string[]; ecoregionIds:string[]; biomeIds:number[]; habitats:string[];
