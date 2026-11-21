@@ -1,6 +1,6 @@
 {
   "name": "worldtree",
-  "version": "0.8.0",
+  "version": "0.9.0",
   "private": true,
   "scripts": {
     "dev": "next dev --hostname 0.0.0.0",
@@ -16,20 +16,24 @@
     "preview:local": "node scripts/preview.mjs",
     "pretest": "npm run build:worker",
     "data:global": "python scripts/import_global_catalog.py && tsx scripts/audit-coverage.ts",
-    "coverage": "tsx scripts/audit-coverage.ts"
+    "coverage": "tsx scripts/audit-coverage.ts",
+    "test:browser": "playwright test"
   },
   "dependencies": {
     "@turf/boolean-point-in-polygon": "^7.3.0",
     "maplibre-gl": "6.19.0",
     "next": "16.4.6",
     "react": "19.2.0",
-    "react-dom": "19.2.0"
+    "react-dom": "19.2.0",
+    "three": "^0.187.0"
   },
   "devDependencies": {
+    "@playwright/test": "^1.65.1",
     "@types/geojson": "^7946.0.16",
     "@types/node": "^24",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "@types/three": "^0.187.0",
     "esbuild": "^0.25.12",
     "eslint": "^9",
     "eslint-config-next": "16.4.6",
