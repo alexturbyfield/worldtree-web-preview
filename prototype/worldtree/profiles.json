@@ -1,0 +1,43 @@
+{
+  "schema_version": "0.1.0",
+  "status": "illustrative_not_ecologically_validated",
+  "regions": {
+    "pnw_lowland_example": {
+      "label": "Pacific Northwest lowland example",
+      "habitats": {
+        "forest": [
+          {"id":"pseudotsuga_menziesii","common_name":"Douglas-fir","scientific_name":"Pseudotsuga menziesii","archetype":"tall_conifer","origin":"native","weight":35,"confidence":"illustrative"},
+          {"id":"tsuga_heterophylla","common_name":"Western hemlock","scientific_name":"Tsuga heterophylla","archetype":"drooping_conifer","origin":"native","weight":30,"confidence":"illustrative"},
+          {"id":"thuja_plicata","common_name":"Western redcedar","scientific_name":"Thuja plicata","archetype":"scale_foliage_conifer","origin":"native","weight":20,"confidence":"illustrative"},
+          {"id":"acer_macrophyllum","common_name":"Bigleaf maple","scientific_name":"Acer macrophyllum","archetype":"broadleaf_deciduous","origin":"native","weight":15,"confidence":"illustrative"}
+        ],
+        "urban": [
+          {"id":"acer_macrophyllum","common_name":"Bigleaf maple","scientific_name":"Acer macrophyllum","archetype":"broadleaf_deciduous","origin":"native","weight":35,"confidence":"illustrative"},
+          {"id":"prunus_serrulata","common_name":"Japanese flowering cherry","scientific_name":"Prunus serrulata","archetype":"flowering_ornamental","origin":"planted","weight":35,"confidence":"illustrative"},
+          {"id":"pseudotsuga_menziesii","common_name":"Douglas-fir","scientific_name":"Pseudotsuga menziesii","archetype":"tall_conifer","origin":"native","weight":30,"confidence":"illustrative"}
+        ]
+      }
+    },
+    "atlanta_piedmont_example": {
+      "label": "Atlanta Piedmont example",
+      "habitats": {
+        "forest": [
+          {"id":"pinus_taeda","common_name":"Loblolly pine","scientific_name":"Pinus taeda","archetype":"southern_pine","origin":"native","weight":35,"confidence":"illustrative"},
+          {"id":"liquidambar_styraciflua","common_name":"Sweetgum","scientific_name":"Liquidambar styraciflua","archetype":"broadleaf_deciduous","origin":"native","weight":25,"confidence":"illustrative"},
+          {"id":"liriodendron_tulipifera","common_name":"Tulip poplar","scientific_name":"Liriodendron tulipifera","archetype":"tall_broadleaf","origin":"native","weight":20,"confidence":"illustrative"},
+          {"id":"quercus_falcata","common_name":"Southern red oak","scientific_name":"Quercus falcata","archetype":"oak","origin":"native","weight":20,"confidence":"illustrative"}
+        ]
+      }
+    },
+    "tokyo_kanto_example": {
+      "label": "Tokyo Kanto example",
+      "habitats": {
+        "urban": [
+          {"id":"ginkgo_biloba","common_name":"Ginkgo","scientific_name":"Ginkgo biloba","archetype":"fan_leaf_deciduous","origin":"planted","weight":35,"confidence":"illustrative"},
+          {"id":"zelkova_serrata","common_name":"Japanese zelkova","scientific_name":"Zelkova serrata","archetype":"vase_broadleaf","origin":"native_planted","weight":30,"confidence":"illustrative"},
+          {"id":"prunus_serrulata","common_name":"Japanese flowering cherry","scientific_name":"Prunus serrulata","archetype":"flowering_ornamental","origin":"planted","weight":35,"confidence":"illustrative"}
+        ]
+      }
+    }
+  }
+}

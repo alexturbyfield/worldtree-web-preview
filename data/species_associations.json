@@ -1,0 +1,1053 @@
+{
+  "schema_version": "0.6.0",
+  "description": "Worldwide distributed provisional seed regions. These are NOT verified ecoregion associations, native-range polygons, or abundance estimates. Individual taxon references and accepted taxon IDs remain pending.",
+  "locality_profiles": [
+    {
+      "id": "seattle_lowland_seed",
+      "name": "Seattle area lowlands (candidate pool)",
+      "bounds": {
+        "south": 47.3,
+        "north": 47.9,
+        "west": -122.6,
+        "east": -121.9
+      },
+      "sources": [
+        {
+          "name": "USDA PLANTS Database",
+          "url": "https://plants.usda.gov/"
+        },
+        {
+          "name": "Washington Native Plant Society",
+          "url": "https://www.wnps.org/"
+        }
+      ],
+      "habitats": {
+        "forest": [
+          {
+            "id": "pseudotsuga_menziesii",
+            "common_name": "Douglas-fir",
+            "scientific_name": "Pseudotsuga menziesii",
+            "archetype": "tall_conifer",
+            "origin": "native",
+            "role": "characteristic",
+            "confidence": "regional_candidate"
+          },
+          {
+            "id": "tsuga_heterophylla",
+            "common_name": "Western hemlock",
+            "scientific_name": "Tsuga heterophylla",
+            "archetype": "drooping_conifer",
+            "origin": "native",
+            "role": "characteristic",
+            "confidence": "regional_candidate"
+          },
+          {
+            "id": "thuja_plicata",
+            "common_name": "Western redcedar",
+            "scientific_name": "Thuja plicata",
+            "archetype": "scale_foliage_conifer",
+            "origin": "native",
+            "role": "characteristic",
+            "confidence": "regional_candidate"
+          },
+          {
+            "id": "acer_macrophyllum",
+            "common_name": "Bigleaf maple",
+            "scientific_name": "Acer macrophyllum",
+            "archetype": "broadleaf_deciduous",
+            "origin": "native",
+            "role": "local_flavor",
+            "confidence": "regional_candidate"
+          }
+        ],
+        "urban": [
+          {
+            "id": "acer_macrophyllum",
+            "common_name": "Bigleaf maple",
+            "scientific_name": "Acer macrophyllum",
+            "archetype": "broadleaf_deciduous",
+            "origin": "native_planted",
+            "role": "local_flavor",
+            "confidence": "regional_candidate"
+          },
+          {
+            "id": "prunus_serrulata",
+            "common_name": "Japanese flowering cherry",
+            "scientific_name": "Prunus serrulata",
+            "archetype": "flowering_ornamental",
+            "origin": "planted",
+            "role": "ornamental",
+            "confidence": "regional_candidate"
+          }
+        ]
+      }
+    },
+    {
+      "id": "atlanta_piedmont_seed",
+      "name": "Atlanta Piedmont (candidate pool)",
+      "bounds": {
+        "south": 33.5,
+        "north": 34.0,
+        "west": -84.7,
+        "east": -84.1
+      },
+      "sources": [
+        {
+          "name": "USDA PLANTS Database",
+          "url": "https://plants.usda.gov/"
+        },
+        {
+          "name": "Georgia Native Plant Society",
+          "url": "https://gnps.org/"
+        }
+      ],
+      "habitats": {
+        "forest": [
+          {
+            "id": "pinus_taeda",
+            "common_name": "Loblolly pine",
+            "scientific_name": "Pinus taeda",
+            "archetype": "southern_pine",
+            "origin": "native",
+            "role": "characteristic",
+            "confidence": "regional_candidate"
+          },
+          {
+            "id": "liquidambar_styraciflua",
+            "common_name": "Sweetgum",
+            "scientific_name": "Liquidambar styraciflua",
+            "archetype": "broadleaf_deciduous",
+            "origin": "native",
+            "role": "characteristic",
+            "confidence": "regional_candidate"
+          },
+          {
+            "id": "liriodendron_tulipifera",
+            "common_name": "Tulip poplar",
+            "scientific_name": "Liriodendron tulipifera",
+            "archetype": "tall_broadleaf",
+            "origin": "native",
+            "role": "characteristic",
+            "confidence": "regional_candidate"
+          },
+          {
+            "id": "quercus_falcata",
+            "common_name": "Southern red oak",
+            "scientific_name": "Quercus falcata",
+            "archetype": "oak",
+            "origin": "native",
+            "role": "local_flavor",
+            "confidence": "regional_candidate"
+          }
+        ],
+        "urban": [
+          {
+            "id": "magnolia_grandiflora",
+            "common_name": "Southern magnolia",
+            "scientific_name": "Magnolia grandiflora",
+            "archetype": "broadleaf_evergreen",
+            "origin": "native_planted",
+            "role": "ornamental",
+            "confidence": "regional_candidate"
+          },
+          {
+            "id": "lagerstroemia_indica",
+            "common_name": "Crape myrtle",
+            "scientific_name": "Lagerstroemia indica",
+            "archetype": "flowering_ornamental",
+            "origin": "planted",
+            "role": "ornamental",
+            "confidence": "regional_candidate"
+          }
+        ]
+      }
+    },
+    {
+      "id": "tokyo_kanto_seed",
+      "name": "Tokyo urban landscape (candidate pool)",
+      "bounds": {
+        "south": 35.45,
+        "north": 35.9,
+        "west": 139.4,
+        "east": 139.95
+      },
+      "sources": [
+        {
+          "name": "Plants of the World Online, Kew",
+          "url": "https://powo.science.kew.org/"
+        },
+        {
+          "name": "GBIF species occurrence explorer",
+          "url": "https://www.gbif.org/"
+        }
+      ],
+      "habitats": {
+        "urban": [
+          {
+            "id": "ginkgo_biloba",
+            "common_name": "Ginkgo",
+            "scientific_name": "Ginkgo biloba",
+            "archetype": "fan_leaf_deciduous",
+            "origin": "planted",
+            "role": "street_tree",
+            "confidence": "regional_candidate"
+          },
+          {
+            "id": "zelkova_serrata",
+            "common_name": "Japanese zelkova",
+            "scientific_name": "Zelkova serrata",
+            "archetype": "vase_broadleaf",
+            "origin": "native_planted",
+            "role": "street_tree",
+            "confidence": "regional_candidate"
+          },
+          {
+            "id": "prunus_serrulata",
+            "common_name": "Japanese flowering cherry",
+            "scientific_name": "Prunus serrulata",
+            "archetype": "flowering_ornamental",
+            "origin": "planted",
+            "role": "ornamental",
+            "confidence": "regional_candidate"
+          }
+        ],
+        "forest": [
+          {
+            "id": "cryptomeria_japonica",
+            "common_name": "Japanese cedar",
+            "scientific_name": "Cryptomeria japonica",
+            "archetype": "tall_conifer",
+            "origin": "native_planted",
+            "role": "characteristic",
+            "confidence": "regional_candidate"
+          },
+          {
+            "id": "chamaecyparis_obtusa",
+            "common_name": "Japanese cypress",
+            "scientific_name": "Chamaecyparis obtusa",
+            "archetype": "scale_foliage_conifer",
+            "origin": "native_planted",
+            "role": "characteristic",
+            "confidence": "regional_candidate"
+          }
+        ]
+      }
+    },
+    {
+      "id": "vancouver_island_seed",
+      "name": "Vancouver Island coastal forests (candidate pool)",
+      "bounds": {
+        "south": 48.3,
+        "north": 50.7,
+        "west": -128.5,
+        "east": -123.0
+      },
+      "sources": [
+        {
+          "name": "Plants of the World Online (taxonomic reference; individual entries not checked)",
+          "url": "https://powo.science.kew.org/"
+        }
+      ],
+      "habitats": {
+        "forest": [
+          {
+            "id": "pseudotsuga_menziesii",
+            "common_name": "Douglas-fir",
+            "scientific_name": "Pseudotsuga menziesii",
+            "archetype": "tall_conifer",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "tsuga_heterophylla",
+            "common_name": "Western hemlock",
+            "scientific_name": "Tsuga heterophylla",
+            "archetype": "drooping_conifer",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "thuja_plicata",
+            "common_name": "Western redcedar",
+            "scientific_name": "Thuja plicata",
+            "archetype": "scale_foliage_conifer",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "picea_sitchensis",
+            "common_name": "Sitka spruce",
+            "scientific_name": "Picea sitchensis",
+            "archetype": "tall_conifer",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          }
+        ]
+      },
+      "evidence_status": "requires_species_level_verification",
+      "ecological_warning": "Rectangular region and unverified presence; do not use as a precise range map."
+    },
+    {
+      "id": "scandinavia_south_seed",
+      "name": "Southern Scandinavian mixed forest (candidate pool)",
+      "bounds": {
+        "south": 55.5,
+        "north": 60.0,
+        "west": 10.0,
+        "east": 18.0
+      },
+      "sources": [
+        {
+          "name": "Plants of the World Online (taxonomic reference; individual entries not checked)",
+          "url": "https://powo.science.kew.org/"
+        }
+      ],
+      "habitats": {
+        "forest": [
+          {
+            "id": "picea_abies",
+            "common_name": "Norway spruce",
+            "scientific_name": "Picea abies",
+            "archetype": "tall_conifer",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "pinus_sylvestris",
+            "common_name": "Scots pine",
+            "scientific_name": "Pinus sylvestris",
+            "archetype": "pine",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "betula_pendula",
+            "common_name": "Silver birch",
+            "scientific_name": "Betula pendula",
+            "archetype": "broadleaf_deciduous",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "quercus_robur",
+            "common_name": "Pedunculate oak",
+            "scientific_name": "Quercus robur",
+            "archetype": "oak",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          }
+        ]
+      },
+      "evidence_status": "requires_species_level_verification",
+      "ecological_warning": "Rectangular region and unverified presence; do not use as a precise range map."
+    },
+    {
+      "id": "british_lowlands_seed",
+      "name": "British Isles lowland woodland (candidate pool)",
+      "bounds": {
+        "south": 50.0,
+        "north": 55.0,
+        "west": -5.5,
+        "east": 1.5
+      },
+      "sources": [
+        {
+          "name": "Plants of the World Online (taxonomic reference; individual entries not checked)",
+          "url": "https://powo.science.kew.org/"
+        }
+      ],
+      "habitats": {
+        "forest": [
+          {
+            "id": "quercus_robur",
+            "common_name": "Pedunculate oak",
+            "scientific_name": "Quercus robur",
+            "archetype": "oak",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "fagus_sylvatica",
+            "common_name": "European beech",
+            "scientific_name": "Fagus sylvatica",
+            "archetype": "broadleaf_deciduous",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "betula_pendula",
+            "common_name": "Silver birch",
+            "scientific_name": "Betula pendula",
+            "archetype": "broadleaf_deciduous",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "fraxinus_excelsior",
+            "common_name": "European ash",
+            "scientific_name": "Fraxinus excelsior",
+            "archetype": "broadleaf_deciduous",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          }
+        ]
+      },
+      "evidence_status": "requires_species_level_verification",
+      "ecological_warning": "Rectangular region and unverified presence; do not use as a precise range map."
+    },
+    {
+      "id": "mediterranean_iberia_seed",
+      "name": "Western Mediterranean woodland (candidate pool)",
+      "bounds": {
+        "south": 36.0,
+        "north": 41.0,
+        "west": -8.5,
+        "east": -1.0
+      },
+      "sources": [
+        {
+          "name": "Plants of the World Online (taxonomic reference; individual entries not checked)",
+          "url": "https://powo.science.kew.org/"
+        }
+      ],
+      "habitats": {
+        "forest": [
+          {
+            "id": "quercus_suber",
+            "common_name": "Cork oak",
+            "scientific_name": "Quercus suber",
+            "archetype": "oak",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "quercus_ilex",
+            "common_name": "Holm oak",
+            "scientific_name": "Quercus ilex",
+            "archetype": "oak",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "pinus_pinea",
+            "common_name": "Stone pine",
+            "scientific_name": "Pinus pinea",
+            "archetype": "pine",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "pinus_halepensis",
+            "common_name": "Aleppo pine",
+            "scientific_name": "Pinus halepensis",
+            "archetype": "pine",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          }
+        ]
+      },
+      "evidence_status": "requires_species_level_verification",
+      "ecological_warning": "Rectangular region and unverified presence; do not use as a precise range map."
+    },
+    {
+      "id": "alps_montane_seed",
+      "name": "Alpine montane forests (candidate pool)",
+      "bounds": {
+        "south": 45.5,
+        "north": 47.5,
+        "west": 7.0,
+        "east": 13.0
+      },
+      "sources": [
+        {
+          "name": "Plants of the World Online (taxonomic reference; individual entries not checked)",
+          "url": "https://powo.science.kew.org/"
+        }
+      ],
+      "habitats": {
+        "forest": [
+          {
+            "id": "picea_abies",
+            "common_name": "Norway spruce",
+            "scientific_name": "Picea abies",
+            "archetype": "tall_conifer",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "larix_decidua",
+            "common_name": "European larch",
+            "scientific_name": "Larix decidua",
+            "archetype": "deciduous_conifer",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "abies_alba",
+            "common_name": "Silver fir",
+            "scientific_name": "Abies alba",
+            "archetype": "tall_conifer",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "fagus_sylvatica",
+            "common_name": "European beech",
+            "scientific_name": "Fagus sylvatica",
+            "archetype": "broadleaf_deciduous",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          }
+        ]
+      },
+      "evidence_status": "requires_species_level_verification",
+      "ecological_warning": "Rectangular region and unverified presence; do not use as a precise range map."
+    },
+    {
+      "id": "amazon_west_seed",
+      "name": "Western Amazon lowland forest (candidate pool)",
+      "bounds": {
+        "south": -5.0,
+        "north": 0.0,
+        "west": -75.0,
+        "east": -68.0
+      },
+      "sources": [
+        {
+          "name": "Plants of the World Online (taxonomic reference; individual entries not checked)",
+          "url": "https://powo.science.kew.org/"
+        }
+      ],
+      "habitats": {
+        "forest": [
+          {
+            "id": "ceiba_pentandra",
+            "common_name": "Kapok",
+            "scientific_name": "Ceiba pentandra",
+            "archetype": "emergent_broadleaf",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "bertholletia_excelsa",
+            "common_name": "Brazil nut",
+            "scientific_name": "Bertholletia excelsa",
+            "archetype": "emergent_broadleaf",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "hevea_brasiliensis",
+            "common_name": "Rubber tree",
+            "scientific_name": "Hevea brasiliensis",
+            "archetype": "broadleaf_evergreen",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "euterpe_precatoria",
+            "common_name": "Forest açaí palm",
+            "scientific_name": "Euterpe precatoria",
+            "archetype": "palm",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          }
+        ]
+      },
+      "evidence_status": "requires_species_level_verification",
+      "ecological_warning": "Rectangular region and unverified presence; do not use as a precise range map."
+    },
+    {
+      "id": "congo_basin_seed",
+      "name": "Central Congo Basin rainforest (candidate pool)",
+      "bounds": {
+        "south": -2.5,
+        "north": 2.5,
+        "west": 17.0,
+        "east": 23.0
+      },
+      "sources": [
+        {
+          "name": "Plants of the World Online (taxonomic reference; individual entries not checked)",
+          "url": "https://powo.science.kew.org/"
+        }
+      ],
+      "habitats": {
+        "forest": [
+          {
+            "id": "gilbertiodendron_dewevrei",
+            "common_name": "Gilbertiodendron",
+            "scientific_name": "Gilbertiodendron dewevrei",
+            "archetype": "broadleaf_evergreen",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "entandrophragma_cylindricum",
+            "common_name": "Sapele",
+            "scientific_name": "Entandrophragma cylindricum",
+            "archetype": "emergent_broadleaf",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "milicia_excelsa",
+            "common_name": "Iroko",
+            "scientific_name": "Milicia excelsa",
+            "archetype": "emergent_broadleaf",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          }
+        ]
+      },
+      "evidence_status": "requires_species_level_verification",
+      "ecological_warning": "Rectangular region and unverified presence; do not use as a precise range map."
+    },
+    {
+      "id": "east_african_savanna_seed",
+      "name": "East African savanna (candidate pool)",
+      "bounds": {
+        "south": -4.0,
+        "north": 0.0,
+        "west": 34.0,
+        "east": 38.0
+      },
+      "sources": [
+        {
+          "name": "Plants of the World Online (taxonomic reference; individual entries not checked)",
+          "url": "https://powo.science.kew.org/"
+        }
+      ],
+      "habitats": {
+        "forest": [
+          {
+            "id": "vachellia_tortilis",
+            "common_name": "Umbrella thorn",
+            "scientific_name": "Vachellia tortilis",
+            "archetype": "savanna_acacia",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "senegalia_senegal",
+            "common_name": "Gum arabic tree",
+            "scientific_name": "Senegalia senegal",
+            "archetype": "savanna_acacia",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "adansonia_digitata",
+            "common_name": "African baobab",
+            "scientific_name": "Adansonia digitata",
+            "archetype": "baobab",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          }
+        ]
+      },
+      "evidence_status": "requires_species_level_verification",
+      "ecological_warning": "Rectangular region and unverified presence; do not use as a precise range map."
+    },
+    {
+      "id": "south_african_bushveld_seed",
+      "name": "Southern African bushveld (candidate pool)",
+      "bounds": {
+        "south": -26.0,
+        "north": -22.0,
+        "west": 26.0,
+        "east": 31.0
+      },
+      "sources": [
+        {
+          "name": "Plants of the World Online (taxonomic reference; individual entries not checked)",
+          "url": "https://powo.science.kew.org/"
+        }
+      ],
+      "habitats": {
+        "forest": [
+          {
+            "id": "colophospermum_mopane",
+            "common_name": "Mopane",
+            "scientific_name": "Colophospermum mopane",
+            "archetype": "savanna_broadleaf",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "sclerocarya_birrea",
+            "common_name": "Marula",
+            "scientific_name": "Sclerocarya birrea",
+            "archetype": "savanna_broadleaf",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "vachellia_erioloba",
+            "common_name": "Camel thorn",
+            "scientific_name": "Vachellia erioloba",
+            "archetype": "savanna_acacia",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          }
+        ]
+      },
+      "evidence_status": "requires_species_level_verification",
+      "ecological_warning": "Rectangular region and unverified presence; do not use as a precise range map."
+    },
+    {
+      "id": "india_western_ghats_seed",
+      "name": "Western Ghats moist forest (candidate pool)",
+      "bounds": {
+        "south": 10.0,
+        "north": 14.0,
+        "west": 75.0,
+        "east": 77.0
+      },
+      "sources": [
+        {
+          "name": "Plants of the World Online (taxonomic reference; individual entries not checked)",
+          "url": "https://powo.science.kew.org/"
+        }
+      ],
+      "habitats": {
+        "forest": [
+          {
+            "id": "dipterocarpus_indicus",
+            "common_name": "Indian dipterocarp",
+            "scientific_name": "Dipterocarpus indicus",
+            "archetype": "emergent_broadleaf",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "vateria_indica",
+            "common_name": "White dammar",
+            "scientific_name": "Vateria indica",
+            "archetype": "emergent_broadleaf",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "artocarpus_hirsutus",
+            "common_name": "Wild jack",
+            "scientific_name": "Artocarpus hirsutus",
+            "archetype": "broadleaf_evergreen",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          }
+        ]
+      },
+      "evidence_status": "requires_species_level_verification",
+      "ecological_warning": "Rectangular region and unverified presence; do not use as a precise range map."
+    },
+    {
+      "id": "borneo_lowland_seed",
+      "name": "Borneo lowland rainforest (candidate pool)",
+      "bounds": {
+        "south": 0.0,
+        "north": 4.0,
+        "west": 112.0,
+        "east": 117.0
+      },
+      "sources": [
+        {
+          "name": "Plants of the World Online (taxonomic reference; individual entries not checked)",
+          "url": "https://powo.science.kew.org/"
+        }
+      ],
+      "habitats": {
+        "forest": [
+          {
+            "id": "shorea_leprosula",
+            "common_name": "Red meranti",
+            "scientific_name": "Shorea leprosula",
+            "archetype": "dipterocarp",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "dryobalanops_aromatica",
+            "common_name": "Borneo camphor",
+            "scientific_name": "Dryobalanops aromatica",
+            "archetype": "dipterocarp",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "koompassia_excelsa",
+            "common_name": "Tualang",
+            "scientific_name": "Koompassia excelsa",
+            "archetype": "emergent_broadleaf",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          }
+        ]
+      },
+      "evidence_status": "requires_species_level_verification",
+      "ecological_warning": "Rectangular region and unverified presence; do not use as a precise range map."
+    },
+    {
+      "id": "australia_east_seed",
+      "name": "Eastern Australian eucalypt forest (candidate pool)",
+      "bounds": {
+        "south": -35.0,
+        "north": -30.0,
+        "west": 149.0,
+        "east": 153.0
+      },
+      "sources": [
+        {
+          "name": "Plants of the World Online (taxonomic reference; individual entries not checked)",
+          "url": "https://powo.science.kew.org/"
+        }
+      ],
+      "habitats": {
+        "forest": [
+          {
+            "id": "eucalyptus_pilularis",
+            "common_name": "Blackbutt",
+            "scientific_name": "Eucalyptus pilularis",
+            "archetype": "eucalypt",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "eucalyptus_saligna",
+            "common_name": "Sydney blue gum",
+            "scientific_name": "Eucalyptus saligna",
+            "archetype": "eucalypt",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "corymbia_maculata",
+            "common_name": "Spotted gum",
+            "scientific_name": "Corymbia maculata",
+            "archetype": "eucalypt",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "angophora_costata",
+            "common_name": "Smooth-barked apple",
+            "scientific_name": "Angophora costata",
+            "archetype": "eucalypt",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          }
+        ]
+      },
+      "evidence_status": "requires_species_level_verification",
+      "ecological_warning": "Rectangular region and unverified presence; do not use as a precise range map."
+    },
+    {
+      "id": "new_zealand_north_seed",
+      "name": "New Zealand North Island native forest (candidate pool)",
+      "bounds": {
+        "south": -39.0,
+        "north": -35.0,
+        "west": 174.0,
+        "east": 178.0
+      },
+      "sources": [
+        {
+          "name": "Plants of the World Online (taxonomic reference; individual entries not checked)",
+          "url": "https://powo.science.kew.org/"
+        }
+      ],
+      "habitats": {
+        "forest": [
+          {
+            "id": "agathis_australis",
+            "common_name": "Kauri",
+            "scientific_name": "Agathis australis",
+            "archetype": "southern_conifer",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "dacrydium_cupressinum",
+            "common_name": "Rimu",
+            "scientific_name": "Dacrydium cupressinum",
+            "archetype": "southern_conifer",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "beilschmiedia_tawa",
+            "common_name": "Tawa",
+            "scientific_name": "Beilschmiedia tawa",
+            "archetype": "broadleaf_evergreen",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "metrosideros_excelsa",
+            "common_name": "Pōhutukawa",
+            "scientific_name": "Metrosideros excelsa",
+            "archetype": "flowering_broadleaf",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          }
+        ]
+      },
+      "evidence_status": "requires_species_level_verification",
+      "ecological_warning": "Rectangular region and unverified presence; do not use as a precise range map."
+    },
+    {
+      "id": "patagonia_andes_seed",
+      "name": "Patagonian Andean forests (candidate pool)",
+      "bounds": {
+        "south": -43.0,
+        "north": -39.0,
+        "west": -73.0,
+        "east": -70.0
+      },
+      "sources": [
+        {
+          "name": "Plants of the World Online (taxonomic reference; individual entries not checked)",
+          "url": "https://powo.science.kew.org/"
+        }
+      ],
+      "habitats": {
+        "forest": [
+          {
+            "id": "nothofagus_pumilio",
+            "common_name": "Lenga",
+            "scientific_name": "Nothofagus pumilio",
+            "archetype": "southern_beech",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "nothofagus_dombeyi",
+            "common_name": "Coihue",
+            "scientific_name": "Nothofagus dombeyi",
+            "archetype": "southern_beech",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "austrocedrus_chilensis",
+            "common_name": "Patagonian cypress",
+            "scientific_name": "Austrocedrus chilensis",
+            "archetype": "southern_conifer",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          }
+        ]
+      },
+      "evidence_status": "requires_species_level_verification",
+      "ecological_warning": "Rectangular region and unverified presence; do not use as a precise range map."
+    },
+    {
+      "id": "northeast_us_seed",
+      "name": "Northeastern US mixed forest (candidate pool)",
+      "bounds": {
+        "south": 41.0,
+        "north": 45.0,
+        "west": -75.0,
+        "east": -69.0
+      },
+      "sources": [
+        {
+          "name": "Plants of the World Online (taxonomic reference; individual entries not checked)",
+          "url": "https://powo.science.kew.org/"
+        }
+      ],
+      "habitats": {
+        "forest": [
+          {
+            "id": "acer_saccharum",
+            "common_name": "Sugar maple",
+            "scientific_name": "Acer saccharum",
+            "archetype": "broadleaf_deciduous",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "fagus_grandifolia",
+            "common_name": "American beech",
+            "scientific_name": "Fagus grandifolia",
+            "archetype": "broadleaf_deciduous",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "tsuga_canadensis",
+            "common_name": "Eastern hemlock",
+            "scientific_name": "Tsuga canadensis",
+            "archetype": "drooping_conifer",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          },
+          {
+            "id": "pinus_strobus",
+            "common_name": "Eastern white pine",
+            "scientific_name": "Pinus strobus",
+            "archetype": "pine",
+            "origin": "native_candidate",
+            "role": "regional_candidate",
+            "confidence": "unverified_seed"
+          }
+        ]
+      },
+      "evidence_status": "requires_species_level_verification",
+      "ecological_warning": "Rectangular region and unverified presence; do not use as a precise range map."
+    }
+  ]
+}

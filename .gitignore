@@ -1,0 +1,16 @@
+node_modules/
+.next/
+out/
+.vercel/
+.codex-attachments/
+data/Ecoregions2017.zip
+data/raw/
+__pycache__/
+*.pyc
+*.sqlite
+test-results/
+playwright-report/
+.env*
+*.tsbuildinfo
+public/geo-worker.js
+public/maplibre-worker.mjs

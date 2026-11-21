@@ -1,0 +1,9 @@
+.codex-attachments
+.git
+node_modules
+data/raw
+data/Ecoregions2017.zip
+prototype
+tests
+test-results
+playwright-report
