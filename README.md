@@ -60,7 +60,7 @@ npx vercel login
 npx vercel deploy --yes --environment preview
 ```
 
-Vercel should detect Next.js, run `npm run build`, and serve the static export. Never upload `.codex-attachments`, local credentials, the source archive, or `data/raw`. Both ignore files exclude these. A public phone-accessible preview requires Vercel preview authentication protection to be disabled for this project. No production deployment is needed.
+Vercel should detect Next.js, run `npm run build`, and serve the static export. Never upload `.codex-attachments`, local credentials, the source archive, or `data/raw`. Both ignore files exclude these. A public phone-accessible preview requires Vercel preview authentication protection to be disabled for this project. WorldTree itself must remain a Preview deployment.
 
 **First-deployment constraint observed with Vercel CLI 66.6.0:** an empty project's first deployment is forced to Production. An explicit `--environment preview` is refused with `first_deployment_production`. Do not override this with `--prod` for WorldTree. Deployment is pending user approval for an empty, data-free Production baseline followed by the actual WorldTree Preview. The newly created `worldtree-web-preview` Vercel project currently has no deployments; preview authentication protection was disabled as requested for public phone access. No WorldTree production deployment has been made.
 
