@@ -13,7 +13,8 @@
     "build:worker": "esbuild src/lib/geo.worker.ts --bundle --format=iife --platform=browser --target=es2020 --minify --outfile=public/geo-worker.js && node scripts/copy-map-worker.mjs",
     "prebuild": "npm run build:worker",
     "predev": "npm run build:worker",
-    "preview:local": "python -m http.server 3001 --directory out"
+    "preview:local": "node scripts/preview.mjs",
+    "pretest": "npm run build:worker"
   },
   "dependencies": {
     "@turf/boolean-point-in-polygon": "^7.3.0",
