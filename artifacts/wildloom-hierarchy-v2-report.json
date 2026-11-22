@@ -1,0 +1,190 @@
+{
+  "files": [
+    "src/lib/studio/hierarchy.ts",
+    "src/lib/studio/species-v1.ts",
+    "src/lib/forest/tree.ts",
+    "src/lib/forest/paint-assets.ts",
+    "tests/hierarchy.test.ts"
+  ],
+  "preservedSpecies": 16,
+  "rows": [
+    {
+      "id": "red-mangrove",
+      "name": "Rhizophora mangle",
+      "parameters": {
+        "growth": {
+          "persistence": 0.55,
+          "phototropism": 0.12,
+          "gravitropism": 0.06,
+          "curvature": 0.12,
+          "tertiaryFrequency": 0.4
+        },
+        "roots": {
+          "kind": "prop",
+          "count": 10,
+          "reach": 2.8,
+          "height": 3.3
+        }
+      },
+      "before": {
+        "segments": 540,
+        "woodTriangles": 27360,
+        "foliagePatches": 936,
+        "totalTriangles": 34848,
+        "drawCalls": 2
+      },
+      "after": {
+        "segments": 718,
+        "woodTriangles": 13120,
+        "foliagePatches": 918,
+        "totalTriangles": 20464,
+        "drawCalls": 2
+      }
+    },
+    {
+      "id": "stilt-mangrove",
+      "name": "Rhizophora stylosa",
+      "parameters": {
+        "growth": {
+          "persistence": 0.65,
+          "phototropism": 0.2,
+          "gravitropism": 0.03,
+          "curvature": 0.07,
+          "tertiaryFrequency": 0.28
+        },
+        "roots": {
+          "kind": "prop",
+          "count": 12,
+          "reach": 2.3,
+          "height": 4
+        }
+      },
+      "before": {
+        "segments": 580,
+        "woodTriangles": 28128,
+        "foliagePatches": 1008,
+        "totalTriangles": 36192,
+        "drawCalls": 2
+      },
+      "after": {
+        "segments": 756,
+        "woodTriangles": 13474,
+        "foliagePatches": 1008,
+        "totalTriangles": 21538,
+        "drawCalls": 2
+      }
+    },
+    {
+      "id": "cacao",
+      "name": "Theobroma cacao",
+      "parameters": {
+        "growth": {
+          "persistence": 0.38,
+          "phototropism": 0.05,
+          "gravitropism": 0.12,
+          "curvature": 0.1,
+          "tertiaryFrequency": 0.4,
+          "jorquetteHeight": 0.29
+        }
+      },
+      "before": {
+        "segments": 255,
+        "woodTriangles": 13104,
+        "foliagePatches": 576,
+        "totalTriangles": 17712,
+        "drawCalls": 2
+      },
+      "after": {
+        "segments": 365,
+        "woodTriangles": 7224,
+        "foliagePatches": 540,
+        "totalTriangles": 11544,
+        "drawCalls": 2
+      }
+    },
+    {
+      "id": "rubber",
+      "name": "Hevea brasiliensis",
+      "parameters": {
+        "growth": {
+          "persistence": 0.64,
+          "phototropism": 0.2,
+          "gravitropism": 0.025,
+          "curvature": 0.12,
+          "tertiaryFrequency": 0.45
+        }
+      },
+      "before": {
+        "segments": 440,
+        "woodTriangles": 21408,
+        "foliagePatches": 1080,
+        "totalTriangles": 30048,
+        "drawCalls": 2
+      },
+      "after": {
+        "segments": 560,
+        "woodTriangles": 10234,
+        "foliagePatches": 1080,
+        "totalTriangles": 18874,
+        "drawCalls": 2
+      }
+    }
+  ],
+  "tests": {
+    "typecheck": "passed",
+    "hierarchy": "6 passed: attachment continuity/taper/seeds/grounding for four species, explicit upright continuation, and nonzero substrate",
+    "fullSuite": "189 passed, 8 failed; full run exposed existing catalog-count, generic-preset/mapping assumptions, and scene-placement assertion allocation failure. Full log copied separately.",
+    "fullLog": "wildloom-hierarchy-v2-test-log.txt",
+    "fullSuiteFailures": [
+      "Two tests still require 400 catalog entries (actual 402).",
+      "Four generic-tree tests assume foliage/branch complexity incompatible with existing specialized/preserved presets.",
+      "One mapping test expects old fallback behavior.",
+      "One scene-placement independence assertion raises Array buffer allocation failed while comparing mismatched existing stand assignments."
+    ]
+  },
+  "bugsCorrected": [
+    "Child paths now attach to rendered parent centerlines and radius, rather than an unrelated cylinder or off-polyline curve sample.",
+    "Adjacent rings share tangent frames; interpolated frames repair sub-ring tearing.",
+    "Multi-leader joins taper to outgoing leader radii; terminal shoots taper to fine points.",
+    "Roots sample valid lower woody zones and reach an exact substrate plane using quadratic arches.",
+    "Cacao leader terminates at jorquette unless explicit coherent upright continuation is enabled."
+  ],
+  "limitations": [
+    "Branch junctions use overlapping connected tubes, not a watertight boolean-union mesh.",
+    "Branches and roots remain low polygon; very close views can reveal faceting.",
+    "Substrate is a configurable local plane, not terrain or tidal simulation.",
+    "Tertiary twigs can be subpixel in normal-distance screenshots.",
+    "No physical Android GPU/frame-time benchmark was performed."
+  ],
+  "parametersAdded": [
+    "GrowthHierarchy.persistence",
+    "phototropism",
+    "gravitropism",
+    "curvature",
+    "tertiaryFrequency",
+    "jorquetteHeight",
+    "uprightContinuation",
+    "roots.substrateY",
+    "roots.branching"
+  ],
+  "profileChanges": {
+    "red-mangrove": "Broad root spread, multi-height lower-wood attachment, lower persistence and modest phototropism.",
+    "stilt-mangrove": "Narrower crown/root footprint, upright leader, denser stilt network and stronger persistence/phototropism. Artistic proportions, not a universal rule.",
+    "cacao": "Jorquette at 0.29 of design height; no upright continuation by default.",
+    "rubber": "Higher crown split (0.52 of design height), varied secondary systems and stronger inherited upward growth."
+  },
+  "performanceSummary": {
+    "beforeTriangles": 118800,
+    "afterTriangles": 72420,
+    "reductionPercent": 39.0,
+    "drawCallsPerTree": 2,
+    "method": "Static detailed geometry counts at seed 29; no physical-device/GPU frame-time measurement. More skeleton metadata and paths; adaptive ring sides reduce triangle count. Ring frames cached per segment during mesh build."
+  },
+  "diagnostics": [
+    "wildloom-hierarchy-v2-before-after.png",
+    "wildloom-hierarchy-v2-skeletons.png",
+    "wildloom-hierarchy-v2-orders.png",
+    "wildloom-hierarchy-v2-root-contacts.png",
+    "wildloom-hierarchy-v2-jorquette.png"
+  ]
+}

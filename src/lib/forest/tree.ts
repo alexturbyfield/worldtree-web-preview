@@ -2,7 +2,7 @@ import {Vector3, Quaternion, BufferGeometry, Float32BufferAttribute} from 'three
 import {randomSource} from './random';
 import {presets, type GrowthPreset} from './presets';
 export type Point = [number,number,number];
-export interface Segment {a:Point;b:Point;r0:number;r1:number;depth:number;color?:string}
+export interface Segment {a:Point;b:Point;r0:number;r1:number;depth:number;color?:string;pathId?:number;parentPathId?:number;role?:'wood'|'root';tangentA?:Point;tangentB?:Point;capStart?:boolean;capEnd?:boolean}
 export interface Cluster {position:Point;scale:Point;tint:number}
 export interface TreeModel {
   seed:string;presetId:string;segments:Segment[];foliage:Cluster[];
