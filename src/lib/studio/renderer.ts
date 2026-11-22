@@ -9,9 +9,10 @@ import type {Point} from '../forest/tree';
 const vertex=/*glsl*/`
 uniform float woodland;uniform float sage;
 attribute vec4 tileRect;attribute vec3 color;attribute float interior;
-varying vec2 atlasUv;varying vec3 paintLight;varying float canopyValue;varying float sunFacing;varying vec3 pigment;varying float leafRim;varying float depthShade;
+varying vec2 atlasUv;varying vec3 paintLight;varying float canopyValue;varying float sunFacing;varying vec3 pigment;varying float leafRim;varying float depthShade;varying vec3 canopyWorld;
 void main(){
   atlasUv=tileRect.xy+uv*tileRect.zw;
+  canopyWorld=(modelMatrix*vec4(position,1.)).xyz;
   vec3 N=normalize((vec4(normalize(normalMatrix*normal),0.)*viewMatrix).xyz);
   vec3 key=normalize(mix(vec3(-.6,.85,.55),vec3(-.6,.85,.55),sage));
   float sunlight=max(0.,dot(N,key));
@@ -25,8 +26,8 @@ void main(){
   gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);
 }`;
 const fragment=/*glsl*/`
-uniform sampler2D foliageMap;uniform float metric;uniform float silhouette;uniform float woodland;uniform float sage;uniform vec3 shadowPigment;uniform vec3 midPigment;uniform vec3 highPigment;
-varying vec2 atlasUv;varying vec3 paintLight;varying float canopyValue;varying float sunFacing;varying vec3 pigment;varying float leafRim;varying float depthShade;
+uniform sampler2D foliageMap;uniform float metric;uniform float silhouette;uniform float woodland;uniform float sage;uniform vec3 shadowPigment;uniform vec3 midPigment;uniform vec3 highPigment;uniform vec3 crownMin;uniform vec3 crownMax;uniform float gradientStrength;uniform float rimStrength;
+varying vec2 atlasUv;varying vec3 paintLight;varying float canopyValue;varying float sunFacing;varying vec3 pigment;varying float leafRim;varying float depthShade;varying vec3 canopyWorld;
 void main(){
   vec4 leaf=texture2D(foliageMap,atlasUv);
   if(metric<1.5&&leaf.a<.34)discard;
@@ -40,18 +41,36 @@ void main(){
     float value=clamp(canopyValue+(sqrt(max(ink,0.))-.45)*.22,0.,1.);
     float body=sage>.5?smoothstep(.28,.76,value+(depthShade-.82)*.5):smoothstep(.22,.65,value);
     shaded=mix(shadowPigment,midPigment,body);
-    // Golden accent overlay disabled; diffuse green form shading remains.
+    // One world-space ramp for the whole crown; leaf pigment and shading remain intact.
     shaded*=mix(vec3(1.),pigment*1.85,.22);
 
     shaded*=mix(.68+.62*sqrt(max(ink,0.)),.76+.48*sqrt(max(ink,0.)),sage);
+    float h=clamp((canopyWorld.y-crownMin.y)/max(.01,crownMax.y-crownMin.y),0.,1.);
+    vec3 tint=mix(vec3(.65,.82,.94),vec3(1.12,1.08,.92),smoothstep(.1,.95,h));
+    shaded*=mix(vec3(1.),tint,gradientStrength);
+    vec3 relative=(canopyWorld-(crownMin+crownMax)*.5)/max((crownMax-crownMin)*.5,vec3(.01));
+    vec3 toEye=normalize(cameraPosition-canopyWorld);
+    float silhouette=pow(1.-abs(dot(normalize(relative+vec3(.0001)),toEye)),2.);
+    float broken=smoothstep(-.35,.65,sin(dot(canopyWorld,vec3(5.7,2.1,3.9)))*.6+sin(dot(canopyWorld,vec3(-3.2,6.1,4.3)))*.4);
+    float rim=smoothstep(.5,.92,h)*silhouette*sunFacing*(.2+.8*broken);
+    shaded=mix(shaded,highPigment,rimStrength*rim*.6);
   }
   gl_FragColor=vec4(shaded,1.);
   #include <tonemapping_fragment>
   #include <colorspace_fragment>
 }`;
 /** Connected rings share the same tangent at each joint, avoiding open wedge seams. */
-function oakWood(segments:import('../forest/tree').Segment[],taperPower=1.3){
+function oakWood(segments:import('../forest/tree').Segment[],taperPower=1.3,seed='29'){
   const positions:number[]=[],normals:number[]=[],uvs:number[]=[],colors:number[]=[],sides=16,up=new THREE.Vector3(0,1,0);
+  const roots=randomSource(seed+'|subtle-oak-buttresses'),count=3+Math.floor(roots()*3),phase=roots()*Math.PI*2;
+  const lobes=Array.from({length:count},(_,i)=>({angle:phase+i*Math.PI*2/count+(roots()-.5)*.28,width:.4+roots()*.17,strength:.22+roots()*.2}));
+  const trunk=segments.filter(s=>s.depth===0),baseY=trunk[0]?.a[1]??0,baseRadius=trunk[0]?.r0??0;
+  const flareHeight=((trunk.at(-1)?.b[1]??baseY)-baseY)*.22;
+  const baseFlare=(angle:number,height:number)=>{
+    const t=Math.max(0,Math.min(1,(height-baseY)/Math.max(.01,flareHeight))),fade=1-t*t*(3-2*t);
+    let lobe=.06;for(const root of lobes){const d=Math.atan2(Math.sin(angle-root.angle),Math.cos(angle-root.angle));lobe+=root.strength*Math.exp(-d*d/(root.width*root.width));}
+    return baseRadius*lobe*fade;
+  };
   const same=(a:Point,b:Point)=>a.every((v,i)=>Math.abs(v-b[i])<1e-6);
   const direction=(s:typeof segments[number])=>new THREE.Vector3(...s.b).sub(new THREE.Vector3(...s.a)).normalize();
   segments.forEach((segment,index)=>{
@@ -63,12 +82,14 @@ function oakWood(segments:import('../forest/tree').Segment[],taperPower=1.3){
       // Continuous, faster taper at the fork; clean trunk base, slender tips.
       const root=segments[first].r0*(segment.depth===1?.76:1),terminal=segments[last].r1*.45;
       const taper=terminal+(root-terminal)*Math.pow(1-t,segment.depth===0?taperPower:1.65);
-      const flare=0;
+      const rooted=segment.depth===0&&segments[first].a[1]<=baseY+.001,flare=rooted?baseFlare(angle,center[1]):0;
       const ridge=1+.085*Math.sin(angle*4+center[1]*1.4)+.035*Math.sin(angle*7-center[1]*2);
       const radius=(taper+flare)*ridge;
-      const normal=new THREE.Vector3(Math.cos(angle),0,Math.sin(angle)).applyQuaternion(new THREE.Quaternion().setFromUnitVectors(up,tip?end:start));
-      const point=normal.clone().multiplyScalar(radius).add(new THREE.Vector3(...center));positions.push(...point.toArray());normals.push(...normal.toArray());uvs.push(side/sides,center[1]*.19);
-      const color=new THREE.Color('#997455').lerp(new THREE.Color('#e2bb89'),Math.max(0,normal.y*.2-normal.x*.22+.22));colors.push(color.r,color.g,color.b);
+      const frame=new THREE.Quaternion().setFromUnitVectors(up,tip?end:start),radial=new THREE.Vector3(Math.cos(angle),0,Math.sin(angle));
+      const point=radial.clone().multiplyScalar(radius).applyQuaternion(frame).add(new THREE.Vector3(...center));
+      const da=rooted?(baseFlare(angle+.002,center[1])-baseFlare(angle-.002,center[1]))/.004:0,dy=rooted?(baseFlare(angle,center[1]+.002)-baseFlare(angle,center[1]-.002))/.004:0;
+      const normal=new THREE.Vector3(radius*Math.cos(angle)+da*Math.sin(angle),-radius*dy,radius*Math.sin(angle)-da*Math.cos(angle)).normalize().applyQuaternion(frame);positions.push(...point.toArray());normals.push(...normal.toArray());uvs.push(side/sides,center[1]*.19);
+      const color=new THREE.Color('#715c49').lerp(new THREE.Color('#a18b6b'),Math.max(0,normal.y*.16-normal.x*.14+.14)).lerp(new THREE.Color('#46483d'),Math.max(0,-normal.y)*.23);colors.push(color.r,color.g,color.b);
     };
     for(let side=0;side<sides;side++){vertex(0,side);vertex(1,side);vertex(0,side+1);vertex(1,side);vertex(1,side+1);vertex(0,side+1);}
   });
@@ -102,10 +123,10 @@ export function mountStudio(host:HTMLDivElement,q:StudioSettings,onReady:(m:Stud
   const kinds=q.view==='all'?studioKinds:[q.view],studies=kinds.map(kind=>createStudioStudy(kind,q)),spacing=q.mode==='trees'?8:7.5,positions=kinds.map((_,i)=>(i-(kinds.length-1)/2)*spacing);
   const texture=new THREE.CanvasTexture(studioAtlas(q,mobile));texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=2;
   const pigments={sage:['#294135','#6e9462','#d9c976'],woodland:['#254c45','#3e6c37','#b8b15c'],sunlit:['#2c5147','#507639','#c4b45b'],cool:['#264e4c','#3d6950','#a2ab68']}[q.palette??'woodland'];
-  const material=new THREE.ShaderMaterial({uniforms:{sage:{value:q.palette==='sage'?1:0},woodland:{value:q.unified&&q.view==='broadleaf'?1:0},shadowPigment:{value:new THREE.Color(pigments[0])},midPigment:{value:new THREE.Color(pigments[1])},highPigment:{value:new THREE.Color(pigments[2])},foliageMap:{value:texture},metric:{value:0},silhouette:{value:0}},vertexShader:vertex,fragmentShader:fragment,side:THREE.DoubleSide,depthWrite:true,transparent:false});
-  const geometry=studioGeometry(studies,positions),foliage=new THREE.Mesh(geometry,material);scene.add(foliage);
+  const material=new THREE.ShaderMaterial({uniforms:{crownMin:{value:new THREE.Vector3()},crownMax:{value:new THREE.Vector3(1,1,1)},gradientStrength:{value:q.crownGradient??.45},rimStrength:{value:q.crownRim??.4},sage:{value:q.palette==='sage'?1:0},woodland:{value:q.unified&&q.view==='broadleaf'?1:0},shadowPigment:{value:new THREE.Color(pigments[0])},midPigment:{value:new THREE.Color(pigments[1])},highPigment:{value:new THREE.Color(pigments[2])},foliageMap:{value:texture},metric:{value:0},silhouette:{value:0}},vertexShader:vertex,fragmentShader:fragment,side:THREE.DoubleSide,depthWrite:true,transparent:false});
+  const geometry=studioGeometry(studies,positions);material.uniforms.crownMin.value.copy(geometry.boundingBox!.min);material.uniforms.crownMax.value.copy(geometry.boundingBox!.max);const foliage=new THREE.Mesh(geometry,material);scene.add(foliage);
   const scaled=studies.map((s,i)=>({model:{...s.model,segments:s.segments.map(segment=>({...segment,a:segment.a.map((v,k)=>v*s.scale+s.offset[k]) as Point,b:segment.b.map((v,k)=>v*s.scale+s.offset[k]) as Point,r0:segment.r0*s.scale,r1:segment.r1*s.scale}))},position:[positions[i],0,0] as Point,rotation:0}));
-  const bark=q.unified&&q.view==='broadleaf'?oakBark():brushTexture('bark'),wood=new THREE.Mesh<THREE.BufferGeometry,THREE.Material>(q.unified&&q.view==='broadleaf'?oakWood(scaled[0].model.segments,oakGrowthForms[q.oakGrowth??'spreading'].taper):paintedWoodGeometry(scaled,false,mobile).geometry,new THREE.MeshStandardMaterial({color:'#ffffff',map:bark,bumpMap:q.unified&&q.view==='broadleaf'?bark:null,bumpScale:.012,vertexColors:true,roughness:1}));wood.visible=q.mode!=='leaf';scene.add(wood);
+  const bark=q.unified&&q.view==='broadleaf'?oakBark():brushTexture('bark'),wood=new THREE.Mesh<THREE.BufferGeometry,THREE.Material>(q.unified&&q.view==='broadleaf'?oakWood(scaled[0].model.segments,oakGrowthForms[q.oakGrowth??'spreading'].taper,q.structure):paintedWoodGeometry(scaled,false,mobile).geometry,new THREE.MeshStandardMaterial({color:'#ffffff',map:bark,bumpMap:q.unified&&q.view==='broadleaf'?bark:null,bumpScale:.012,vertexColors:true,roughness:1}));wood.visible=q.mode!=='leaf';scene.add(wood);
   const paintedWood=wood.material,silhouetteWood=new THREE.MeshBasicMaterial({color:'#060908',toneMapped:false});
   scene.add(new THREE.HemisphereLight('#d9e9ef','#667658',2));const sun=new THREE.DirectionalLight('#fff0d8',2.5);sun.position.set(-8,12,10);scene.add(sun);
   const bounds=geometry.boundingBox!.clone();if(q.mode!=='leaf')bounds.union(new THREE.Box3().setFromObject(wood));const center=bounds.getCenter(new THREE.Vector3()),size=bounds.getSize(new THREE.Vector3());
