@@ -3,7 +3,7 @@ import {defaultArt,generatePainterlyTree,type ArtControls,type RenderMode} from 
 import {generateCanopy,defaultCanopy} from './canopy';
 import type {SceneRecipe,SceneTree} from './recipe';
 export interface LabQuery extends ArtControls {presetId:string;structuralSeed:string;appearanceSeed:string;renderMode:RenderMode;debug:'none'|'wireframe'|'skeleton'|'cards';wind?:boolean}
-export const labSpecies:Record<string,string>={douglas:'Pseudotsuga menziesii',spruce:'Picea abies',pine:'Pinus sylvestris',oak:'Quercus robur',acacia:'Vachellia tortilis',ponderosa:'Pinus ponderosa',cedar:'Thuja plicata',birch:'Betula papyrifera',maple:'Acer macrophyllum',aspen:'Populus tremuloides',willow:'Salix babylonica','douglas-v1':'Pseudotsuga menziesii'};
+export const labSpecies:Record<string,string>={douglas:'Pseudotsuga menziesii',spruce:'Picea abies',pine:'Pinus sylvestris',oak:'Quercus robur',acacia:'Vachellia tortilis',ponderosa:'Pinus ponderosa',cedar:'Thuja plicata',birch:'Betula papyrifera','silver-birch':'Betula pendula',ash:'Fraxinus excelsior',maple:'Acer macrophyllum',aspen:'Populus tremuloides',willow:'Salix babylonica','douglas-v1':'Pseudotsuga menziesii'};
 export function parseLabQuery(p:Pick<URLSearchParams,'get'>):LabQuery {
   const presetId=p.get('species')??'oak',renderMode=p.get('mode')??'painterly',debug=p.get('debug')??'none';
   if(!Object.hasOwn(presets,presetId)||!['painterly','performance','diagram'].includes(renderMode)||!['none','wireframe','skeleton','cards'].includes(debug))throw new Error('Unknown laboratory preset or display mode.');

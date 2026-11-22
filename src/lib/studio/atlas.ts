@@ -26,12 +26,12 @@ function drawOakLeafSpray(ctx:CanvasRenderingContext2D,q:StudioSettings){
 function drawLibrarySpray(ctx:CanvasRenderingContext2D,q:StudioSettings){
   const species=batchSpecies[q.presetId!],rand=randomSource(q.structure+'|library-atlas|'+q.presetId),paint=randomSource(q.appearance+'|library-atlas|'+q.presetId);
   ctx.strokeStyle='#627254';ctx.lineWidth=.008;ctx.beginPath();ctx.moveTo(.5,.91);ctx.quadraticCurveTo(.45,.5,.52,.1);ctx.stroke();
-  const count=species.conifer?7:species.form==='willow'?13:7;
+  const count=species.conifer?7:species.form==='willow'?13:species.form==='silver-birch'?7:species.form==='ash'?9:7;
   for(let i=0;i<count;i++){
-    const t=(i+.7)/(count+1),side=i%2?1:-1,x=.5+side*(species.conifer?.12:.17)*(1-t*.25),y=.84-t*.64;
+    const t=(i+.7)/(count+1),side=i%2?1:-1,terminal=species.form==='ash'&&i===count-1,x=terminal?.5:.5+side*(species.conifer?.12:species.form==='ash'?.15:.17)*(1-t*.25),y=species.form==='ash'?(terminal?.13:.82-Math.floor(i/2)*.16):.84-t*.64;
     ctx.beginPath();ctx.moveTo(.5,y+.07);ctx.quadraticCurveTo(.5+side*.08,y+.03,x,y);ctx.strokeStyle='#6e8058';ctx.lineWidth=.006;ctx.stroke();
-    ctx.save();ctx.translate(x,y);ctx.rotate(species.form==='willow'?1.05+side*.3:side>0?-.5-rand()*.4:Math.PI+.4+rand()*.4);
-    const length=(species.conifer?.31:species.form==='maple'?.23:species.form==='willow'?.25:.19)*(.85+rand()*.25),width=length*(species.form==='willow'?.16:species.form==='maple'?1.05:species.form==='aspen'?.92:species.conifer?.65:.62);
+    ctx.save();ctx.translate(x,y);ctx.rotate(terminal?-Math.PI/2:species.form==='willow'?1.05+side*.3:side>0?-.5-rand()*.4:Math.PI+.4+rand()*.4);
+    const length=(species.conifer?.31:species.form==='maple'?.23:species.form==='willow'?.25:species.form==='silver-birch'?.18:species.form==='ash'?.23:.19)*(.85+rand()*.25),width=length*(species.form==='willow'?.16:species.form==='maple'?1.05:species.form==='aspen'?.92:species.form==='ash'?.38:species.form==='silver-birch'?.83:species.conifer?.65:.62);
     const leaf=new Path2D();
     if(species.form==='maple'){
       const points=[[0,0],[.1,-.2],[.18,-.17],[.15,-.52],[.36,-.36],[.44,-.7],[.57,-.38],[1,0],[.6,.35],[.47,.63],[.37,.35],[.17,.5],[.2,.18],[.08,.16]];
@@ -40,7 +40,7 @@ function drawLibrarySpray(ctx:CanvasRenderingContext2D,q:StudioSettings){
       leaf.moveTo(0,0);leaf.bezierCurveTo(length*.22,-width*.8,length*.8,-width*.4,length,0);leaf.bezierCurveTo(length*.7,width*.6,length*.15,width*.55,0,0);
     }else{
       leaf.moveTo(0,0);for(let side=0;side<2;side++)for(let k=0;k<=28;k++){const t=side?1-k/28:k/28;
-        const contour=species.form==='aspen'?Math.sqrt(Math.max(0,1-Math.pow((t-.5)*2,2))):Math.pow(Math.sin(Math.PI*t),.7)*(1-t*.25);
+        const contour=species.form==='silver-birch'?(t<.34?t/.34:(1-t)/.66):species.form==='aspen'?Math.sqrt(Math.max(0,1-Math.pow((t-.5)*2,2))):Math.pow(Math.sin(Math.PI*t),.7)*(1-t*.25);
         const lobes=species.conifer?(.76+.24*Math.cos(t*Math.PI*(species.form==='cedar'?8:14))):(.92+.08*Math.cos(t*Math.PI*24));leaf.lineTo(t*length,(side?1:-1)*contour*width*.5*lobes);
       }leaf.closePath();
     }

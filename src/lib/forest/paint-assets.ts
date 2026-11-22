@@ -53,16 +53,22 @@ export function paintedWoodGeometry(trees:{model:TreeModel;position:Point;rotati
     const pigment=new THREE.Color(paint.palette?.bark??'#96745f'),shade=new THREE.Color('#6e6a74'),warm=new THREE.Color('#c8a077');
     for(const segment of model.segments){
       if(far&&segment.depth>1)continue;
-      const a=new THREE.Vector3(...segment.a),b=new THREE.Vector3(...segment.b);q.setFromUnitVectors(up,b.clone().sub(a).normalize());
+      const a=new THREE.Vector3(...segment.a),b=new THREE.Vector3(...segment.b),subdivisions=model.presetId==='silver-birch'&&segment.depth===0?4:1;let from=0,to=1;q.setFromUnitVectors(up,b.clone().sub(a).normalize());
       const vertex=(end:number,side:number)=>{
-        const radius=end?segment.r1:segment.r0,center=end?b:a,angle=side/sides*Math.PI*2;
+        const fraction=end?to:from,radius=subdivisions>1?segment.r0+(segment.r1-segment.r0)*fraction:end?segment.r1:segment.r0,center=subdivisions>1?a.clone().lerp(b,fraction):end?b:a,angle=side/sides*Math.PI*2;
         const n=new THREE.Vector3(Math.cos(angle),0,Math.sin(angle)).applyQuaternion(q),v=n.clone().multiplyScalar(radius).add(center);
         positions.push(v.x*cosine-v.z*sine+position[0],v.y+position[1],v.x*sine+v.z*cosine+position[2]);
         normals.push(n.x*cosine-n.z*sine,n.y,n.x*sine+n.z*cosine);uvs.push(side/sides,center.y*.23);
         const t=Math.max(0,Math.min(1,center.y/model.parameters.height));
-        const c=pigment.clone().lerp(warm,t*.35).lerp(shade,(1-Math.sin(angle+1))*.12);colors.push(c.r,c.g,c.b);
+        const c=pigment.clone().lerp(warm,t*.35).lerp(shade,(1-Math.sin(angle+1))*.12);if(model.presetId==='silver-birch'){
+          // Small broken lenticel/scar patches on the existing white bark; no added meshes.
+          const marking=Math.sin(Math.floor(center.y*4.5)*13.7+Math.floor(angle*3)*2.3)>.76&&Math.cos(angle*1.7+center.y)>.05;
+          if(segment.depth>1)c.lerp(new THREE.Color('#797767'),.75);
+          else if(marking)c.lerp(new THREE.Color('#1c211d'),.95);
+        }
+        colors.push(c.r,c.g,c.b);
       };
-      for(let i=0;i<sides;i++){vertex(0,i);vertex(1,i);vertex(0,i+1);vertex(1,i);vertex(1,i+1);vertex(0,i+1);}
+      for(let step=0;step<subdivisions;step++){from=step/subdivisions;to=(step+1)/subdivisions;for(let i=0;i<sides;i++){vertex(0,i);vertex(1,i);vertex(0,i+1);vertex(1,i);vertex(1,i+1);vertex(0,i+1);}}
     }
     faces.push({end:positions.length/9,treeIndex});
   });
