@@ -2,12 +2,14 @@
 import { useEffect, useRef, useState } from 'react';
 import * as maplibregl from 'maplibre-gl';
 import type { Map as MapType } from 'maplibre-gl';
+import GroundLayers,{type GroundLayer} from './GroundLayers';
 import { biomeColors } from '@/lib/geography';
 import { catalog, places, type Place } from '@/lib/catalog';
 
 export default function WorldMap({ selected, onSelect, overlay, coverage, streets }: {selected:Place;onSelect:(p:Place)=>void;overlay:boolean;coverage:boolean;streets:boolean}) {
   const root=useRef<HTMLDivElement>(null), map=useRef<MapType|null>(null), marker=useRef<maplibregl.Marker|null>(null);
   const callback=useRef(onSelect);
+  const [groundLayer,setGroundLayer]=useState<GroundLayer>('trees');
   const [ready,setReady]=useState(false), [error,setError]=useState('');
   useEffect(()=>{callback.current=onSelect;},[onSelect]);
   useEffect(()=>{
@@ -19,7 +21,7 @@ export default function WorldMap({ selected, onSelect, overlay, coverage, street
     } catch {queueMicrotask(()=>setError('Your browser could not start the interactive map. Use the location search and presets to inspect trees.'));return;}
     map.current=m;
     m.addControl(new maplibregl.NavigationControl({showCompass:false}),'top-right');
-    m.addControl(new maplibregl.AttributionControl({compact:true,customAttribution:'<a href="https://www.naturalearthdata.com/about/terms-of-use/">Natural Earth</a> · <a href="https://doi.org/10.1093/biosci/bix014">RESOLVE 2017</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>'}),'bottom-right');
+    m.addControl(new maplibregl.AttributionControl({compact:true,customAttribution:'<a href="https://www.naturalearthdata.com/about/terms-of-use/">Natural Earth</a> · ESA WorldCover 2021 / modified Copernicus Sentinel data (2021), WorldCover consortium · ISRIC SoilGrids (CC BY 4.0) · <a href="https://doi.org/10.1093/biosci/bix014">RESOLVE 2017</a> · <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>'}),'bottom-right');
     m.on('load',()=>setReady(true));
     m.on('error',e=>{ if (e.error?.message?.includes('ecoregions.geojson')) setError('Ecoregion overlay could not load. Coordinate lookup is available independently.'); });
     m.on('click',e=>callback.current({name:'Selected location',lat:Math.max(-90,Math.min(90,e.lngLat.lat)),lon:((e.lngLat.lng+180)%360+360)%360-180}));
@@ -29,6 +31,6 @@ export default function WorldMap({ selected, onSelect, overlay, coverage, street
     return ()=>{observer.disconnect();m.remove();map.current=null;};
   },[]);
   useEffect(()=>{if(!map.current)return;marker.current?.setLngLat([selected.lon,selected.lat]);map.current.flyTo({center:[selected.lon,Math.max(-85,Math.min(85,selected.lat))],zoom:Math.max(map.current.getZoom(),4.7),duration:850,essential:false});},[selected]);
-  useEffect(()=>{if(!ready||!map.current)return;for(const id of ['ecoregions','boundaries'])map.current.setLayoutProperty(id,'visibility',overlay||coverage?'visible':'none');map.current.setPaintProperty('ecoregions','fill-color',coverage?['match',['get','coverageEvidence'],'verified_ecoregion','#184b3a','documented_regional_range','#4c8865','biome_realm_fallback','#d6b767','#a5acaf']:['match',['get','BIOME_NUM'],...Object.entries(biomeColors).flatMap(([k,v])=>[Number(k),v]),'#d8ded9'] as unknown as maplibregl.ExpressionSpecification);map.current.setLayoutProperty('coverage','visibility',coverage?'visible':'none');map.current.setLayoutProperty('streets','visibility',streets?'visible':'none');},[overlay,coverage,streets,ready]);
-  return <div className="map-wrap"><div className="map-canvas" ref={root} aria-label="Interactive world map. Tap to inspect a location."/><div className="map-caption"><span className="live-dot"/> {coverage?'EVIDENCE · AUDIT POINTS':overlay?'ECOREGIONS · RESOLVE 2017':'GEOGRAPHIC EXPLORER'}</div><button className="world-button" onClick={()=>map.current?.flyTo({center:[5,20],zoom:0.8,duration:900})} aria-label="Show whole world">◎ <span>World view</span></button><div className="map-hint">Tap anywhere to explore · drag to pan · pinch to zoom</div>{error&&<div className="map-error" role="alert">{error}</div>}</div>;
+  useEffect(()=>{if(!ready||!map.current)return;for(const id of ['ecoregions','boundaries'])map.current.setLayoutProperty(id,'visibility',groundLayer==='trees'&&(overlay||coverage)?'visible':'none');map.current.setPaintProperty('ecoregions','fill-color',coverage?['match',['get','coverageEvidence'],'verified_ecoregion','#184b3a','documented_regional_range','#4c8865','biome_realm_fallback','#d6b767','#a5acaf']:['match',['get','BIOME_NUM'],...Object.entries(biomeColors).flatMap(([k,v])=>[Number(k),v]),'#d8ded9'] as unknown as maplibregl.ExpressionSpecification);map.current.setLayoutProperty('coverage','visibility',coverage&&groundLayer==='trees'?'visible':'none');map.current.setLayoutProperty('streets','visibility',streets?'visible':'none');},[overlay,coverage,streets,ready,groundLayer]);
+  return <><div className="map-wrap"><div className="map-canvas" ref={root} aria-label="Interactive world map. Tap to inspect a location."/><div className="map-caption"><span className="live-dot"/> {groundLayer!=='trees'?'GROUND · SEATTLE DEMO':coverage?'EVIDENCE · AUDIT POINTS':overlay?'ECOREGIONS · RESOLVE 2017':'GEOGRAPHIC EXPLORER'}</div><button className="world-button" onClick={()=>map.current?.flyTo({center:[5,20],zoom:0.8,duration:900})} aria-label="Show whole world">◎ <span>World view</span></button><div className="map-hint">Tap anywhere to explore · drag to pan · pinch to zoom</div>{error&&<div className="map-error" role="alert">{error}</div>}</div>{ready&&map.current&&<GroundLayers map={map.current} selected={selected} layer={groundLayer} onLayer={setGroundLayer}/>}</>;
 }
