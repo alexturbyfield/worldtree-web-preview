@@ -2,17 +2,37 @@ import {randomSource} from '../forest/random';
 import type {StudioSettings} from './groups';
 export const studioAtlasLabels=['Oval leaf fan','Lanceolate fan','Layered broadleaf','Small leaf spray','Blossom cloud','Cupped petals','Hanging blossoms','Small flower spray','Fir bough','Drooping fir spray','Needle branchlet','Fine needle fan'];
 const cache=new Map<string,HTMLCanvasElement>();
+/** Sparse oak sprig study: nine lobed leaves on connected, unequal twig forks. */
+function drawOakLeafSpray(ctx:CanvasRenderingContext2D,q:StudioSettings){
+  const shape=randomSource(q.structure+'|oak-spray-study'),paint=randomSource(q.appearance+'|oak-spray-study');
+  const twig=(points:number[])=>{ctx.beginPath();ctx.moveTo(points[0],points[1]);ctx.bezierCurveTo(points[2],points[3],points[4],points[5],points[6],points[7]);ctx.strokeStyle='#77845a';ctx.lineWidth=.009;ctx.stroke();ctx.strokeStyle='rgba(202,204,137,.55)';ctx.lineWidth=.003;ctx.stroke();};
+  twig([.5,.9,.47,.68,.54,.4,.49,.13]);twig([.49,.7,.43,.58,.35,.49,.27,.29]);twig([.5,.56,.61,.54,.68,.44,.73,.28]);twig([.49,.73,.6,.74,.7,.68,.78,.56]);
+  const leaves=[ [.45,.72,-2.8,.24],[.57,.72,-.25,.24],[.37,.5,-2.8,.23],[.27,.29,-1.9,.2],[.48,.46,-2.1,.23],[.51,.23,-1.48,.18],[.62,.49,-.9,.24],[.73,.28,-1.15,.19],[.74,.61,-.8,.19] ];
+  for(const [x,y,angle,length] of leaves){
+    const l=length*(.94+shape()*.12),w=l*.48,c=(paint()-.5)*16;
+    ctx.save();ctx.translate(x,y);ctx.rotate(angle+(shape()-.5)*.15);ctx.scale(l,w);
+    ctx.beginPath();ctx.moveTo(-.065,0);ctx.lineTo(.07,0);ctx.strokeStyle='#87965e';ctx.lineWidth=.026;ctx.stroke();
+    const leaf=new Path2D();leaf.moveTo(0,0);
+    leaf.bezierCurveTo(.08,-.08,.05,-.28,.18,-.22);leaf.bezierCurveTo(.22,-.5,.4,-.52,.39,-.22);leaf.bezierCurveTo(.48,-.55,.62,-.48,.55,-.18);leaf.bezierCurveTo(.68,-.43,.81,-.34,.72,-.12);leaf.bezierCurveTo(.83,-.25,.91,-.14,1,0);
+    leaf.bezierCurveTo(.91,.16,.84,.27,.73,.12);leaf.bezierCurveTo(.81,.35,.66,.45,.56,.19);leaf.bezierCurveTo(.63,.5,.47,.55,.4,.23);leaf.bezierCurveTo(.42,.52,.22,.49,.18,.22);leaf.bezierCurveTo(.06,.29,.08,.08,0,0);leaf.closePath();
+    const gradient=ctx.createLinearGradient(.15,-.5,.65,.48);gradient.addColorStop(0,`rgb(${157+c},${188+c},${99+c})`);gradient.addColorStop(.45,`rgb(${99+c},${153+c},${79+c})`);gradient.addColorStop(1,`rgb(${53+c},${104+c},${76+c})`);ctx.fillStyle=gradient;ctx.fill(leaf);
+    ctx.save();ctx.clip(leaf);ctx.strokeStyle='rgba(221,222,151,.55)';ctx.lineWidth=.016;ctx.beginPath();ctx.moveTo(.02,0);ctx.quadraticCurveTo(.5,-.025,.94,0);ctx.stroke();
+    for(const t of [.24,.44,.64,.8])for(const sign of [-1,1]){ctx.strokeStyle=sign<0?'rgba(225,224,158,.32)':'rgba(31,78,57,.3)';ctx.lineWidth=.009;ctx.beginPath();ctx.moveTo(t-.07,0);ctx.quadraticCurveTo(t+.02,sign*.1,t+.07,sign*.3);ctx.stroke();}ctx.restore();
+    ctx.strokeStyle='rgba(206,218,137,.4)';ctx.lineWidth=.012;ctx.stroke(leaf);ctx.restore();
+  }
+}
 export function studioAtlas(q:StudioSettings,mobile=false){
-  const tile=mobile?128:256,key=JSON.stringify([q.appearance,q.detail,q.colorVariation,tile,q.unified,q.leafScale]);const old=cache.get(key);if(old)return old;
+  const oakStudy=q.unified&&q.view==='broadleaf'&&q.mode==='groups',tile=mobile?128:256,key=JSON.stringify([q.appearance,q.detail,q.colorVariation,tile,q.unified,q.leafScale,oakStudy,oakStudy?q.structure:'']);const old=cache.get(key);if(old)return old;
   const canvas=document.createElement('canvas');canvas.width=tile*4;canvas.height=tile*3;const ctx=canvas.getContext('2d')!;
   for(let index=0;index<12;index++){
     const kind=Math.floor(index/4),shape=randomSource('studio-atlas-morphology-'+index),paint=randomSource(q.appearance+'|atlas-'+index),variation=q.colorVariation;
     ctx.save();ctx.translate(index%4*tile,Math.floor(index/4)*tile);ctx.scale(tile,tile);ctx.beginPath();ctx.rect(.035,.035,.93,.93);ctx.clip();ctx.lineCap='round';
-    if(kind===0){
-      const count=q.unified&&index===0?1:42+Math.round(q.detail*24);for(let j=0;j<count;j++){
-        const a=j*2.399+index*.6,rad=count===1?0:.34*Math.sqrt((j+.5)/count),x=.5+Math.cos(a)*rad,y=.5+Math.sin(a)*rad,l=count===1?.68:(.12+shape()*.075)*(q.leafScale??1),w=l*(index===1?.3:.48),angle=a+(shape()-.5)*2;
-        ctx.save();ctx.translate(x,y);ctx.rotate(angle);const path=new Path2D();path.moveTo(-l*.5,0);path.bezierCurveTo(-l*.2,-w*.7,l*.25,-w*.45,l*.55,0);path.bezierCurveTo(l*.2,w*.55,-l*.2,w*.65,-l*.5,0);
-        const c=(paint()-.5)*variation*22,gradient=ctx.createLinearGradient(-l*.3,-w,l*.2,w);gradient.addColorStop(0,`rgb(${191+c},${211+c},${131+c})`);gradient.addColorStop(.42,`rgb(${127+c},${169+c},${105+c})`);gradient.addColorStop(1,`rgb(${65+c},${114+c},${83+c})`);ctx.fillStyle=gradient;ctx.fill(path);ctx.clip(path);
+    if(oakStudy&&index===0){drawOakLeafSpray(ctx,q);}
+    else if(kind===0){
+      const count=q.unified&&index===0?1:(q.unified?100:42)+Math.round(q.detail*24);for(let j=0;j<count;j++){
+        const a=j*2.399+index*.6,rad=count===1?0:.34*Math.sqrt((j+.5)/count)*(q.unified?.84+.14*Math.sin(a*3+index)+shape()*.15:1),x=.5+Math.cos(a)*rad,y=.5+Math.sin(a)*rad,l=count===1?.68:(q.unified?.075+shape()*.04:.12+shape()*.075)*(q.leafScale??1),w=l*(q.unified?.7:index===1?.3:.48),angle=a+(shape()-.5)*2;
+        ctx.save();ctx.translate(x,y);ctx.rotate(angle);const path=new Path2D();if(q.unified){path.moveTo(-l*.5,0);for(let side=0;side<2;side++)for(let k=0;k<=20;k++){const t=side?1-k/20:k/20,edge=Math.sin(t*Math.PI)*w*.5*(.8+.2*Math.cos(t*Math.PI*8));path.lineTo((t-.5)*l,(side?1:-1)*edge);}path.closePath();}else{path.moveTo(-l*.5,0);path.bezierCurveTo(-l*.2,-w*.7,l*.25,-w*.45,l*.55,0);path.bezierCurveTo(l*.2,w*.55,-l*.2,w*.65,-l*.5,0);}
+        const c=(paint()-.5)*variation*22,gradient=ctx.createLinearGradient(-l*.3,-w,l*.2,w);gradient.addColorStop(0,`rgb(${(q.unified?156:191)+c},${211+c},${(q.unified?101:131)+c})`);gradient.addColorStop(.42,`rgb(${(q.unified?91:127)+c},${169+c},${(q.unified?83:105)+c})`);gradient.addColorStop(1,`rgb(${65+c},${114+c},${83+c})`);ctx.fillStyle=gradient;ctx.fill(path);ctx.clip(path);
         ctx.strokeStyle='rgba(217,229,169,.40)';ctx.lineWidth=.002;ctx.beginPath();ctx.moveTo(-l*.4,0);ctx.quadraticCurveTo(0,-w*.05,l*.4,0);ctx.stroke();if(q.detail>.35){ctx.strokeStyle='rgba(44,91,70,.25)';ctx.lineWidth=.0015;for(let v=0;v<3;v++){const t=-l*.2+v*l*.18;ctx.beginPath();ctx.moveTo(t,0);ctx.lineTo(t+l*.1,-w*.3);ctx.stroke();}}ctx.restore();
       }
     }else if(kind===1){
