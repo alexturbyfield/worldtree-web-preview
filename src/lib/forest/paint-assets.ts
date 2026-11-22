@@ -1,3 +1,4 @@
+import {batchSpecies} from '../studio/species-v1';
 import * as THREE from 'three';
 import {randomSource} from './random';
 import type {Point,TreeModel} from './tree';
@@ -47,16 +48,21 @@ export function crownGeometry(needle:boolean,variant:number,far:boolean,mobile:b
 /** Smooth ring normals, longitudinal brush UVs and warm/cool bark vertex pigment. */
 export function paintedWoodGeometry(trees:{model:TreeModel;position:Point;rotation:number}[],far:boolean,mobile:boolean){
   const positions:number[]=[],normals:number[]=[],uvs:number[]=[],colors:number[]=[],faces:{end:number;treeIndex:number}[]=[];
-  const sides=far?4:mobile?5:7,up=new THREE.Vector3(0,1,0),q=new THREE.Quaternion();
+  const baseSides=far?4:mobile?5:7,up=new THREE.Vector3(0,1,0),q=new THREE.Quaternion();
   trees.forEach(({model,position,rotation},treeIndex)=>{
     const cosine=Math.cos(rotation),sine=Math.sin(rotation),paint=model as PaintedTree;
+    const design=batchSpecies[model.presetId],emergent=design?.emergent,sides=emergent?(far?12:24):baseSides,unit=emergent?(model.segments[0]?.r0??design.trunk)/design.trunk:1,baseY=model.segments[0]?.a[1]??0;
+    const rootRand=randomSource(model.seed+'|integrated-buttresses|'+model.presetId),phase=rootRand()*Math.PI*2;
+    const buttresses=emergent?Array.from({length:emergent.buttressCount},(_,i)=>({angle:phase+i*Math.PI*2/emergent.buttressCount+(rootRand()-.5)*.22,width:.17+rootRand()*.08,strength:.78+rootRand()*.3})):[];
+    const flare=(angle:number,y:number)=>{if(!emergent)return 0;const t=Math.max(0,Math.min(1,(y-baseY)/(emergent.buttressHeight*unit)));let sum=0;for(const root of buttresses){const d=Math.atan2(Math.sin(angle-root.angle),Math.cos(angle-root.angle));sum+=root.strength*Math.exp(-d*d/(root.width*root.width));}return emergent.buttressReach*unit*Math.pow(1-t,2)*sum;};
     const pigment=new THREE.Color(paint.palette?.bark??'#96745f'),shade=new THREE.Color('#6e6a74'),warm=new THREE.Color('#c8a077');
     for(const segment of model.segments){
       if(far&&segment.depth>1)continue;
-      const a=new THREE.Vector3(...segment.a),b=new THREE.Vector3(...segment.b),subdivisions=model.presetId==='silver-birch'&&segment.depth===0?4:1;let from=0,to=1;q.setFromUnitVectors(up,b.clone().sub(a).normalize());
+      const a=new THREE.Vector3(...segment.a),b=new THREE.Vector3(...segment.b),subdivisions=segment.depth===0&&(model.presetId==='silver-birch'||emergent&&segment.a[1]-baseY<emergent.buttressHeight*unit)?4:1;let from=0,to=1;q.setFromUnitVectors(up,b.clone().sub(a).normalize());
       const vertex=(end:number,side:number)=>{
         const fraction=end?to:from,radius=subdivisions>1?segment.r0+(segment.r1-segment.r0)*fraction:end?segment.r1:segment.r0,center=subdivisions>1?a.clone().lerp(b,fraction):end?b:a,angle=side/sides*Math.PI*2;
-        const n=new THREE.Vector3(Math.cos(angle),0,Math.sin(angle)).applyQuaternion(q),v=n.clone().multiplyScalar(radius).add(center);
+        const rooted=!!emergent&&segment.depth===0,rootRadius=radius+(rooted?flare(angle,center.y):0),da=rooted?(flare(angle+.002,center.y)-flare(angle-.002,center.y))/.004:0,dy=rooted?(flare(angle,center.y+.002)-flare(angle,center.y-.002))/.004:0;
+        const radial=new THREE.Vector3(Math.cos(angle),0,Math.sin(angle)),n=rooted?new THREE.Vector3(rootRadius*Math.cos(angle)+da*Math.sin(angle),-rootRadius*dy,rootRadius*Math.sin(angle)-da*Math.cos(angle)).normalize().applyQuaternion(q):radial.clone().applyQuaternion(q),v=radial.multiplyScalar(rootRadius).applyQuaternion(q).add(center);
         positions.push(v.x*cosine-v.z*sine+position[0],v.y+position[1],v.x*sine+v.z*cosine+position[2]);
         normals.push(n.x*cosine-n.z*sine,n.y,n.x*sine+n.z*cosine);uvs.push(side/sides,center.y*.23);
         const t=Math.max(0,Math.min(1,center.y/model.parameters.height));

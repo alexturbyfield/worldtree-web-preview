@@ -22,10 +22,28 @@ function drawOakLeafSpray(ctx:CanvasRenderingContext2D,q:StudioSettings){
     ctx.strokeStyle='rgba(206,218,137,.4)';ctx.lineWidth=.012;ctx.stroke(leaf);ctx.restore();
   }
 }
+/** Tropical sprays share the existing alpha atlas and Sage paint, with distinct leaf architecture. */
+function drawEmergentSpray(ctx:CanvasRenderingContext2D,q:StudioSettings){
+  const id=q.presetId!,rand=randomSource(q.structure+'|emergent-spray|'+id),paint=randomSource(q.appearance+'|emergent-paint|'+id),palmate=id==='kapok',pinnate=id==='mahogany',count=palmate?7:pinnate?7:5;
+  ctx.strokeStyle='#687750';ctx.lineWidth=.009;ctx.beginPath();ctx.moveTo(.5,.92);ctx.quadraticCurveTo(.48,.57,.5,palmate?.58:.12);ctx.stroke();
+  for(let i=0;i<count;i++){
+    const side=i%2?1:-1,terminal=pinnate&&i===count-1,t=(i+.7)/(count+1),x=palmate?.5:terminal?.5:.5+side*.15,y=palmate?.64:pinnate?(terminal?.14:.8-Math.floor(i/2)*.2):.85-t*.68;
+    const angle=palmate?-Math.PI/2+(i-3)*.37+(rand()-.5)*.07:terminal?-Math.PI/2:side>0?-.52-rand()*.2:Math.PI+.52+rand()*.2;
+    const length=(palmate?.37:pinnate?.24:.29)*(.88+rand()*.2),width=length*(palmate?.27:pinnate?.62:id==='dipterocarp-alatus'?.39:.65);
+    ctx.beginPath();ctx.moveTo(.5,y+.055);ctx.lineTo(x,y);ctx.strokeStyle='#72805a';ctx.lineWidth=.007;ctx.stroke();
+    ctx.save();ctx.translate(x,y);ctx.rotate(angle);const leaf=new Path2D();leaf.moveTo(0,0);
+    leaf.bezierCurveTo(length*.22,-width*.6,length*.7,-width*.55,length*.91,-width*.08);leaf.lineTo(length,0);leaf.bezierCurveTo(length*.69,width*.5,length*.2,width*.62,0,0);leaf.closePath();
+    const c=(paint()-.5)*14,g=ctx.createLinearGradient(0,-width,length*.2,width);g.addColorStop(0,`rgb(${160+c},${183+c},${113+c})`);g.addColorStop(.5,`rgb(${100+c},${147+c},${91+c})`);g.addColorStop(1,`rgb(${55+c},${101+c},${80+c})`);ctx.fillStyle=g;ctx.fill(leaf);
+    ctx.save();ctx.clip(leaf);ctx.strokeStyle='rgba(212,218,155,.44)';ctx.lineWidth=.003;ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(length*.94,0);ctx.stroke();
+    for(const t of [.25,.43,.61,.77])for(const sign of [-1,1]){ctx.strokeStyle='rgba(196,209,148,.2)';ctx.lineWidth=.0015;ctx.beginPath();ctx.moveTo(length*(t-.08),0);ctx.quadraticCurveTo(length*t,width*sign*.15,length*(t+.07),width*sign*.38);ctx.stroke();}
+    ctx.restore();ctx.restore();
+  }
+}
 /** Reuses the atlas pipeline; silhouette shapes are V1 species design studies. */
 function drawLibrarySpray(ctx:CanvasRenderingContext2D,q:StudioSettings){
   const species=batchSpecies[q.presetId!],rand=randomSource(q.structure+'|library-atlas|'+q.presetId),paint=randomSource(q.appearance+'|library-atlas|'+q.presetId);
   ctx.strokeStyle='#627254';ctx.lineWidth=.008;ctx.beginPath();ctx.moveTo(.5,.91);ctx.quadraticCurveTo(.45,.5,.52,.1);ctx.stroke();
+  if(species.emergent){drawEmergentSpray(ctx,q);return;}
   const count=species.conifer?7:species.form==='willow'?13:species.form==='silver-birch'?7:species.form==='ash'?9:7;
   for(let i=0;i<count;i++){
     const t=(i+.7)/(count+1),side=i%2?1:-1,terminal=species.form==='ash'&&i===count-1,x=terminal?.5:.5+side*(species.conifer?.12:species.form==='ash'?.15:.17)*(1-t*.25),y=species.form==='ash'?(terminal?.13:.82-Math.floor(i/2)*.16):.84-t*.64;

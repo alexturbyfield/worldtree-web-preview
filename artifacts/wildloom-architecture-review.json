@@ -1,0 +1,280 @@
+{
+  "method": "Seed 29, appearance garden, Painterly Sage. Static detailed geometry counts, shared existing material/atlas; no frame-time or overdraw benchmark. Baseline uses the prior Batch 2B profile values with new optional architecture controls disabled.",
+  "checks": "Existing eight library species unchanged; repeated generation identical; changing appearance leaves skeleton and foliage geometry unchanged.",
+  "results": [
+    {
+      "id": "mahogany",
+      "profile": {
+        "name": "Bigleaf mahogany",
+        "scientificName": "Swietenia macrophylla",
+        "height": 31,
+        "radius": 9.5,
+        "trunk": 0.83,
+        "base": 0.5,
+        "branches": 9,
+        "form": "emergent",
+        "bark": "#806753",
+        "conifer": false,
+        "emergent": {
+          "leaderTop": 0.92,
+          "rise": 0.35,
+          "secondaryRise": 0.4,
+          "forks": 4,
+          "clusterSize": 2.05,
+          "trunkTaper": 0.6,
+          "limb": 0.38,
+          "buttressCount": 4,
+          "buttressHeight": 2.2,
+          "buttressReach": 1.15,
+          "architecture": {
+            "radiusProfile": [
+              0.75,
+              1.05,
+              0.22
+            ],
+            "initiationBias": 1.05,
+            "dominance": 0.23,
+            "curvature": 0.15,
+            "apicalBias": 0.5,
+            "fanAngle": 1.1,
+            "occupancy": 0.95,
+            "leafInterval": [
+              0.12,
+              0.97
+            ]
+          }
+        }
+      },
+      "before": {
+        "foliagePatches": 1251,
+        "groups": 139,
+        "triangles": 32856,
+        "drawCalls": 2,
+        "generatedHeightMeters": 28.50553143104228
+      },
+      "after": {
+        "foliagePatches": 1251,
+        "groups": 139,
+        "triangles": 32856,
+        "drawCalls": 2,
+        "generatedHeightMeters": 31.036251879157536
+      }
+    },
+    {
+      "id": "dipterocarp-alatus",
+      "profile": {
+        "name": "Dipterocarpus alatus",
+        "scientificName": "Dipterocarpus alatus",
+        "height": 42,
+        "radius": 7,
+        "trunk": 1.02,
+        "base": 0.54,
+        "branches": 8,
+        "form": "emergent",
+        "bark": "#8b7c65",
+        "conifer": false,
+        "emergent": {
+          "leaderTop": 0.98,
+          "rise": 0.84,
+          "secondaryRise": 0.8,
+          "forks": 4,
+          "clusterSize": 2.1,
+          "trunkTaper": 0.55,
+          "limb": 0.33,
+          "buttressCount": 4,
+          "buttressHeight": 3.2,
+          "buttressReach": 1.55,
+          "architecture": {
+            "radiusProfile": [
+              0.43,
+              0.92,
+              0.14
+            ],
+            "initiationBias": 0.85,
+            "dominance": 0.13,
+            "curvature": 0.055,
+            "apicalBias": 0.46,
+            "fanAngle": 0.65,
+            "occupancy": 0.98,
+            "leafInterval": [
+              0.15,
+              0.98
+            ]
+          }
+        }
+      },
+      "before": {
+        "foliagePatches": 1116,
+        "groups": 124,
+        "triangles": 29376,
+        "drawCalls": 2,
+        "generatedHeightMeters": 41.30993601597528
+      },
+      "after": {
+        "foliagePatches": 1116,
+        "groups": 124,
+        "triangles": 29376,
+        "drawCalls": 2,
+        "generatedHeightMeters": 41.10167227216567
+      }
+    },
+    {
+      "id": "dipterocarp-grandiflorus",
+      "profile": {
+        "name": "Dipterocarpus grandiflorus",
+        "scientificName": "Dipterocarpus grandiflorus",
+        "height": 38,
+        "radius": 11,
+        "trunk": 1.1,
+        "base": 0.53,
+        "branches": 9,
+        "form": "emergent",
+        "bark": "#776c5b",
+        "conifer": false,
+        "emergent": {
+          "leaderTop": 0.9,
+          "rise": 0.3,
+          "secondaryRise": 0.28,
+          "forks": 4,
+          "clusterSize": 2.5,
+          "trunkTaper": 0.57,
+          "limb": 0.44,
+          "buttressCount": 5,
+          "buttressHeight": 4.2,
+          "buttressReach": 2.8,
+          "architecture": {
+            "radiusProfile": [
+              1.06,
+              0.95,
+              0.26
+            ],
+            "initiationBias": 1.35,
+            "dominance": 0.36,
+            "curvature": 0.19,
+            "apicalBias": 0.22,
+            "fanAngle": 1.25,
+            "occupancy": 0.85,
+            "leafInterval": [
+              0.14,
+              0.97
+            ]
+          }
+        }
+      },
+      "before": {
+        "foliagePatches": 1251,
+        "groups": 139,
+        "triangles": 33000,
+        "drawCalls": 2,
+        "generatedHeightMeters": 35.2557257088928
+      },
+      "after": {
+        "foliagePatches": 1206,
+        "groups": 134,
+        "triangles": 32640,
+        "drawCalls": 2,
+        "generatedHeightMeters": 35.68429170252017
+      }
+    },
+    {
+      "id": "kapok",
+      "profile": {
+        "name": "Kapok",
+        "scientificName": "Ceiba pentandra",
+        "height": 45,
+        "radius": 14,
+        "trunk": 1.85,
+        "base": 0.64,
+        "branches": 7,
+        "form": "emergent",
+        "bark": "#7c8069",
+        "conifer": false,
+        "emergent": {
+          "leaderTop": 0.88,
+          "rise": 0.17,
+          "secondaryRise": 0.08,
+          "forks": 4,
+          "clusterSize": 3,
+          "trunkTaper": 0.48,
+          "limb": 0.5,
+          "buttressCount": 5,
+          "buttressHeight": 7,
+          "buttressReach": 5,
+          "architecture": {
+            "radiusProfile": [
+              1.12,
+              0.98,
+              0.18
+            ],
+            "initiationBias": 1.8,
+            "dominance": 0.52,
+            "curvature": 0.29,
+            "apicalBias": 0.08,
+            "fanAngle": 1.12,
+            "occupancy": 0.77,
+            "leafInterval": [
+              0.28,
+              0.98
+            ]
+          }
+        }
+      },
+      "before": {
+        "foliagePatches": 981,
+        "groups": 109,
+        "triangles": 26040,
+        "drawCalls": 2,
+        "generatedHeightMeters": 40.66055504810216
+      },
+      "after": {
+        "foliagePatches": 918,
+        "groups": 102,
+        "triangles": 25680,
+        "drawCalls": 2,
+        "generatedHeightMeters": 42.780134089062535
+      }
+    }
+  ],
+  "capture": {
+    "errors": [],
+    "common": {
+      "min": [
+        -6.0962748527526855,
+        -0.034659676253795624,
+        -9.442107200622559
+      ],
+      "max": [
+        11.27622127532959,
+        21.508607864379883,
+        9.042895317077637
+      ]
+    },
+    "ground": {
+      "calls": 9,
+      "triangles": 120554,
+      "roots": [
+        {
+          "id": "mahogany",
+          "x": 332.80312400211784,
+          "y": 878.8939159705195
+        },
+        {
+          "id": "dipterocarp-alatus",
+          "x": 709.9806365246989,
+          "y": 880.7377539107069
+        },
+        {
+          "id": "dipterocarp-grandiflorus",
+          "x": 1097.9093139678573,
+          "y": 882.6341490822341
+        },
+        {
+          "id": "kapok",
+          "x": 1623.237708720847,
+          "y": 885.2022248374006
+        }
+      ]
+    },
+    "sharedGroundImage": "wildloom-architecture-shared-ground.png"
+  }
+}
