@@ -7,12 +7,12 @@ export type OakGrowth='spreading'|'upright'|'ancient'|'young';
 // Growth rules in metres/radians, shared by all oak forms (not crown transforms).
 export interface OakGrowthProfile {height:number;leader:number;initiation:number;primaries:number;inclination:number;lateral:number;secondary:number;tertiary:number;apical:number;droop:number;age:number;trunk:number;limb:number;occupancy:number;foliage:number;taper:number}
 export const oakGrowthForms:Record<OakGrowth,OakGrowthProfile>={
-  spreading:{height:10.5,leader:.67,initiation:.23,primaries:9,inclination:.12,lateral:6.8,secondary:3,tertiary:2,apical:.22,droop:.65,age:.3,trunk:1.05,limb:.7,occupancy:.5,foliage:1.18,taper:1.3},
+  spreading:{height:12.5,leader:.76,initiation:.21,primaries:10,inclination:.24,lateral:6.8,secondary:3,tertiary:2,apical:.45,droop:.65,age:.3,trunk:1.05,limb:.7,occupancy:.5,foliage:1.18,taper:1.3},
   upright:{height:13,leader:.94,initiation:.3,primaries:11,inclination:.88,lateral:3.4,secondary:3,tertiary:2,apical:.92,droop:.03,age:.1,trunk:.73,limb:.28,occupancy:.38,foliage:.91,taper:1.18},
   ancient:{height:9.5,leader:.56,initiation:.16,primaries:7,inclination:.2,lateral:6.2,secondary:3,tertiary:2,apical:.12,droop:.75,age:1,trunk:1.6,limb:1.02,occupancy:.68,foliage:1.05,taper:1.02},
   young:{height:8.5,leader:.95,initiation:.38,primaries:6,inclination:.78,lateral:2.25,secondary:2,tertiary:2,apical:.95,droop:0,age:0,trunk:.31,limb:.135,occupancy:.4,foliage:.72,taper:1.55}
 };
-export interface StudioSettings {size:number;density:number;overlap:number;detail:number;colorVariation:number;structure:string;appearance:string;view:StudioKind|'all';mode:'leaf'|'groups'|'trees';unified?:boolean;leafScale?:number;asymmetry?:number;shape?:number;roundness?:number;branchSpread?:number;edgeBreakup?:number;palette?:'woodland'|'sunlit'|'cool';oakGrowth?:OakGrowth}
+export interface StudioSettings {size:number;density:number;overlap:number;detail:number;colorVariation:number;structure:string;appearance:string;view:StudioKind|'all';mode:'leaf'|'groups'|'trees';unified?:boolean;leafScale?:number;asymmetry?:number;shape?:number;roundness?:number;branchSpread?:number;edgeBreakup?:number;palette?:'woodland'|'sunlit'|'cool'|'sage';oakGrowth?:OakGrowth}
 export const studioDefaults:StudioSettings={size:1,density:.76,overlap:.72,detail:.75,colorVariation:.65,structure:'29',appearance:'garden',view:'all',mode:'groups'};
 export const studioKinds:StudioKind[]=['broadleaf','flower','conifer'];
 export interface FoliageGroup {branchId?:number;parentBranchId?:number;zone?:OakFoliageZone;id:number;anchor:Point;center:Point;radii:Point;branchIndex:number;axis:Point}
@@ -26,6 +26,8 @@ export function parseStudio(p:Pick<URLSearchParams,'get'>):StudioSettings{
 export function studioQuery(q:StudioSettings){return new URLSearchParams(Object.entries(q).map(([k,v])=>[k,String(v)])).toString();}
 function nearest(p:Point,segments:Segment[],allowTrunk=false){let distance=Infinity,index=0,point:Point=segments[0].b;const v=new Vector3(...p);
   segments.forEach((s,i)=>{if(!s.depth&&!allowTrunk)return;const a=new Vector3(...s.a),d=new Vector3(...s.b).sub(a),t=Math.max(0,Math.min(1,v.clone().sub(a).dot(d)/d.lengthSq())),candidate=a.addScaledVector(d,t),dist=v.distanceToSquared(candidate);if(dist<distance){distance=dist;index=i;point=candidate.toArray() as Point;}});return {index,point};}
+/** Fuller lower-middle crown with a long, narrowing upper half. Peak at h=.364. */
+function uprightCrownProfile(h:number){h=Math.max(0,Math.min(1,h));return Math.pow(h,.6)*Math.pow(1-h,1.05)/.339;}
 type OakFoliageZone='transition'|'leaf-bearing';
 interface OakBranchPath {id:number;parentId:number;curve:CatmullRomCurve3;depth:number;first:number;steps:number;leafSize?:number}
 type OakGuide=PaintedTree['foliage'][number]&{branchId:number;parentBranchId:number;branchIndex:number;axis:Point;zone:OakFoliageZone;footprint:number};
@@ -44,7 +46,12 @@ function attachOakCoverage(paths:OakBranchPath[],q:StudioSettings):OakGuide[]{
   const guides:OakGuide[]=[],cells=new Map<string,number[]>(),cellSize=2;
   const children=new Map<number,OakBranchPath[]>();for(const path of paths){const list=children.get(path.parentId)??[];list.push(path);children.set(path.parentId,list);}
   const emit=(path:OakBranchPath,u:number,size:number,zone:OakFoliageZone)=>{
-    const point=path.curve.getPointAt(u),footprint=oakVisibleFootprint(size,q),cell=point.toArray().map(n=>Math.floor(n/cellSize));
+    const point=path.curve.getPointAt(u);
+    if(q.oakGrowth==='upright'){
+      const upright=oakGrowthForms.upright,top=paths[0].curve.getPoint(1).y/(upright.leader+.1*upright.apical),h=Math.max(0,Math.min(1,(point.y/top-.3)/.84));
+      size*=.3+.7*uprightCrownProfile(h);
+    }
+    const footprint=oakVisibleFootprint(size,q),cell=point.toArray().map(n=>Math.floor(n/cellSize));
     // Nearby related shoots share junction coverage, rather than stacking duplicate clusters.
     for(let x=-1;x<=1;x++)for(let y=-1;y<=1;y++)for(let z=-1;z<=1;z++){
       for(const index of cells.get([cell[0]+x,cell[1]+y,cell[2]+z].join(','))??[]){const other=guides[index];
@@ -85,20 +92,22 @@ function attachOakCoverage(paths:OakBranchPath[],q:StudioSettings):OakGuide[]{
 function referenceOak(base:PaintedTree,asymmetry:number,form:OakGrowth,q:StudioSettings):CoveredOak{
   const rand=randomSource(base.seed+'|oak-growth-v2'),g=oakGrowthForms[form],segments:Segment[]=[],paths:OakBranchPath[]=[],pathByCurve=new Map<CatmullRomCurve3,OakBranchPath>();
   const height=g.height*(.94+rand()*.12),phase=rand()*Math.PI*2,lean=(rand()-.5)*height*(.025+g.age*.12);
-  const leader=new CatmullRomCurve3([[0,0,0],[lean*.15+g.age*g.age*.28,height*.23,.03],[lean*.65-g.age*g.age*.3,height*g.leader*.65,g.age*.35],[lean,height*(g.leader+.1*g.apical),0]].map(p=>new Vector3(...p)));
+  const leader=new CatmullRomCurve3([[0,0,0],[lean*.15+g.age*g.age*.28+(form==='spreading'?.32:0),height*.23,.03],[lean*.65-g.age*g.age*.3-(form==='spreading'?.18:0),height*g.leader*.65,g.age*.35],[lean,height*(g.leader+.1*g.apical),0]].map(p=>new Vector3(...p)));
   const grow=(curve:CatmullRomCurve3,r0:number,r1:number,depth:number,parentId=-1)=>{const steps=depth===0?24:depth===1?18:8,path:OakBranchPath={id:paths.length,parentId,curve,depth,first:segments.length,steps};paths.push(path);pathByCurve.set(curve,path);for(let i=0;i<steps;i++){const t=i/steps,u=(i+1)/steps;segments.push({a:curve.getPoint(t).toArray() as Point,b:curve.getPoint(u).toArray() as Point,r0:r1+(r0-r1)*Math.pow(1-t,1.2),r1:r1+(r0-r1)*Math.pow(1-u,1.2),depth});}return path;};
   const branch=(start:Vector3,angle:number,length:number,rise:number,sag:number,twist:number)=>{
     const forward=new Vector3(Math.cos(angle),0,Math.sin(angle)),side=new Vector3(-forward.z,0,forward.x);
     // Upright shoots compete inside an oval light envelope, widest at mid-crown.
     // Restrict extension at initiation and near the apex instead of widening the crown top.
-    if(form==='upright'){
-      const h=Math.max(0,Math.min(1,((start.y+rise-sag)/height-.27)/.85));
-      const budget=.25+2.8*Math.pow(Math.sin(Math.PI*h),.75);
-      length=Math.min(length,Math.max(.12,budget-Math.hypot(start.x-lean,start.z)*.6));
-    }
     const end=start.clone().addScaledVector(forward,length).add(new Vector3(0,rise-sag,0));
     const a=start.clone().addScaledVector(forward,length*.24).add(new Vector3(0,Math.max(.2,rise*.36)+length*.13,0));
     const b=start.clone().addScaledVector(forward,length*.67).add(new Vector3(0,rise*.8+length*.13,0)).addScaledVector(side,twist);
+    if(form==='upright'){
+      // Each ascending shoot grows toward the available oval crown radius at its height.
+      // Reserve space for leaves, not just wood; constrain control points as well as tips.
+      const constrain=(p:Vector3)=>{const h=Math.max(0,Math.min(1,(p.y/height-.3)/.84)),radius=Math.max(.07,3.65*uprightCrownProfile(h)-.72),axisX=lean*Math.min(1,p.y/(height*1.03));
+        const radial=new Vector3(p.x-axisX,0,p.z);if(radial.length()>radius){radial.setLength(radius);p.x=axisX+radial.x;p.z=radial.z;}return p;};
+      constrain(end);a.copy(start).lerp(end,.27);a.y+=.12;b.copy(start).lerp(end,.7);b.y+=.13;constrain(a);constrain(b);
+    }
     return new CatmullRomCurve3([start,a,b,end]);
   };
   // Existing call sites now designate living leaf-bearing paths, not single terminal points.
@@ -110,8 +119,8 @@ function referenceOak(base:PaintedTree,asymmetry:number,form:OakGrowth,q:StudioS
     const level=i/(count-1),start=leader.getPoint(g.initiation/g.leader+(1-g.initiation/g.leader)*level*.92);
     const angle=phase+i*2.399+(rand()-.5)*(.22+g.age*.5);
     const extension=(1-level*(.42+.22*g.apical))*(.88+rand()*.24)*(i===dominant?1.22:1)*(1+(rand()-.5)*g.age*.45);
-    const length=g.lateral*extension*(form==='upright'?Math.pow(Math.sin(Math.PI*(.08+level*.84)),.65):1),rise=Math.min(length*Math.tan(g.inclination)*(1-level*.25),g.apical>.8?Math.max(.1,(height*.88-start.y)*.7):Infinity),sag=g.droop*length*(.18+rand()*.16)*(1-level*.5);
-    const primary=branch(start,angle,length,rise,sag,(rand()-.5)*g.age*length*.7);
+    const length=g.lateral*extension*(form==='upright'?.85+.25*Math.sin(Math.PI*level):1),rise=Math.min(length*Math.tan(g.inclination)*(1-level*.25),g.apical>.8?Math.max(.1,(height*.88-start.y)*.7):Infinity),sag=g.droop*length*(.18+rand()*.16)*(1-level*.5);
+    const primary=branch(start,angle,length,rise,sag*(form==='spreading'?.45:1),(rand()-.5)*g.age*length*.7);
     const radius=g.limb*(1-level*.48)*(i===dominant?1.15:1);
     const primaryPath=grow(primary,radius,radius*.32,1,leaderPath.id);
     // Leader-dominant oaks retain finer inner shoots, filling the crown along living wood.
@@ -122,14 +131,14 @@ function referenceOak(base:PaintedTree,asymmetry:number,form:OakGrowth,q:StudioS
     for(let j=0;j<g.secondary;j++){
       const t=(g.occupancy*.65)+j/(Math.max(1,g.secondary-1))*(.94-g.occupancy*.65),origin=primary.getPoint(t),side=j%2?-1:1;
       const secondaryAngle=angle+side*(.35+rand()*.55),secondaryLength=(1.45+rand()*.65)*(1-level*(.3+g.apical*.35))*(form==='young'?.65:1);
-      const secondary=branch(origin,secondaryAngle,secondaryLength,Math.min(secondaryLength*(.52+g.apical*.65),g.apical>.8?Math.max(.15,height*.94-origin.y):Infinity),g.droop*.16,(rand()-.5)*g.age*.8);
+      const secondary=branch(origin,secondaryAngle,secondaryLength,Math.min(secondaryLength*(form==='spreading'?.95-level*.16:.52+g.apical*.65),g.apical>.8?Math.max(.15,height*.94-origin.y):Infinity),g.droop*.16,(rand()-.5)*g.age*.8);
       const secondaryPath=grow(secondary,radius*.4,radius*.07,2,primaryPath.id);
       // Senescent sectors retain bare twigs instead of shifting unrelated foliage.
       const reduced=g.age>.8&&(i+1)%4===0;
       for(let k=0;k<g.tertiary;k++){
         const twigStart=secondary.getPoint(.52+k*.35),twigAngle=secondaryAngle+(k?-.65:.65);
         const twigLength=(.65+rand()*.4)*(1-level*g.apical*.3)*(form==='young'?.7:1);
-        const twig=branch(twigStart,twigAngle,twigLength,Math.min(twigLength*(.28+g.apical*.55),g.apical>.8?Math.max(.12,height-twigStart.y):Infinity),g.droop*.12,(rand()-.5)*g.age*.25);
+        const twig=branch(twigStart,twigAngle,twigLength,Math.min(twigLength*(form==='spreading'?.6:.28+g.apical*.55),g.apical>.8?Math.max(.12,height-twigStart.y):Infinity),g.droop*.12,(rand()-.5)*g.age*.25);
         grow(twig,radius*.09,radius*.018,3,secondaryPath.id);
         if(!reduced||k===0&&j===0)leafTip(twig,g.foliage*(.88+rand()*.2));
       }
@@ -146,7 +155,7 @@ function referenceOak(base:PaintedTree,asymmetry:number,form:OakGrowth,q:StudioS
 }
 /** Isolated nine-patch study; never called by the full-tree path. */
 function volumetricClusterStudy(group:FoliageGroup,q:StudioSettings):StudioFrond[]{
-  const structure=randomSource(q.structure+'|nine-patch-study'),paint=randomSource(q.appearance+'|nine-patch-study');
+  const structure=randomSource(q.structure+'|nine-patch-study'+(q.mode==='trees'?'|'+group.id:'')),paint=randomSource(q.appearance+'|nine-patch-study'+(q.mode==='trees'?'|'+group.id:''));
   const forward=new Vector3(...group.axis).normalize();
   const side=new Vector3().crossVectors(forward,Math.abs(forward.y)>.95?new Vector3(0,0,1):new Vector3(0,1,0)).normalize();
   const lift=new Vector3().crossVectors(side,forward).normalize(),center=new Vector3(...group.anchor);
@@ -160,10 +169,10 @@ function volumetricClusterStudy(group:FoliageGroup,q:StudioSettings):StudioFrond
     const angle=angles[i]+(structure()-.5)*.15;
     const facing=lift.clone().multiplyScalar(Math.cos(angle)).addScaledVector(side,Math.sin(angle)).addScaledVector(forward,[-.85,.35,1.4,-.45,1.1,.15,-1.2,.65,.1][i]).normalize();
     const inPlane=forward.clone().addScaledVector(facing,-forward.dot(facing)).normalize(),right=new Vector3().crossVectors(inPlane,facing).normalize();
-    const rotation=new Quaternion().setFromRotationMatrix(new Matrix4().makeBasis(right,inPlane,facing));
+    const rotation=new Quaternion().setFromRotationMatrix(new Matrix4().makeBasis(right,inPlane,facing));if(q.mode==='trees')rotation.multiply(new Quaternion().setFromAxisAngle(new Vector3(0,0,1),[0,1.1,-.7,2.1,-1.6,.5,-2.2,1.5,-.3][i]+(structure()-.5)*.25));
     const normal=lift.clone().multiplyScalar(depth*.8).addScaledVector(side,across*.8).addScaledVector(facing,.5).addScaledVector(forward,.12).normalize();
     const tint=new Color('#c6c8bc').offsetHSL((paint()-.5)*.025,0,(paint()-.5)*.05);
-    return {position:position.toArray() as Point,rotation:rotation.toArray(),width:radius*(1.43+structure()*.16),length:radius*(1.5+structure()*.16),curve:.16,droop:0,tile:1+Math.floor(structure()*3),color:'#'+tint.getHexString(),normal:normal.toArray() as Point,interior:.88,groupId:group.id};
+    return {position:position.toArray() as Point,rotation:rotation.toArray(),width:radius*(1.43+structure()*.16),length:radius*((q.mode==='trees'&&(q.oakGrowth??'spreading')==='spreading'?1.25:1.5)+structure()*.16),curve:.16,droop:0,tile:q.mode==='trees'&&q.palette==='sage'?0:1+Math.floor(structure()*3),color:'#'+tint.getHexString(),normal:normal.toArray() as Point,interior:q.mode==='trees'?.68+Math.min(.28,Math.hypot(across,depth)*.65):.88,groupId:group.id};
   });
 }
 /** New branch-attached foliage only. Existing trunks, branches and presets are read without mutation. */
@@ -179,10 +188,10 @@ export function createStudioStudy(kind:StudioKind,q:StudioSettings):StudioStudy{
   // Broadleaf anchors include the actual recursive branch tips; conifer guides follow its existing horizontal tiers.
   const all=q.unified&&kind==='broadleaf'?candidates:candidates.filter((_,i)=>conifer?i%3!==2:i%2===0);
   const chosen=q.mode==='groups'&&q.unified&&kind==='broadleaf'?[all.find(g=>g.branchId===2)??all[0]]:q.mode!=='trees'?[all[Math.floor(all.length*.43)]]:all;
-  const groups=chosen.map(g=>({...g,radii:g.radii.map((r,i)=>r*(q.unified&&i===1?.7+(q.shape??.5)*.6:1)) as Point}));
+  const groups=chosen.map(g=>({...g,radii:g.radii.map((r,i)=>r*(q.unified&&i===1?.7+(q.shape??.5)*.6:1)*(q.unified&&kind==='broadleaf'&&q.mode==='trees'&&q.palette==='sage'&&(q.oakGrowth??'spreading')==='spreading'?(model.segments[g.branchIndex].depth===2?1.34:.86):1)) as Point}));
   const fronds:StudioFrond[]=[];
   for(const group of groups){
-    if(q.unified&&kind==='broadleaf'&&q.mode==='groups'){fronds.push(...volumetricClusterStudy(group,q));continue;}
+    if(q.unified&&kind==='broadleaf'&&(q.mode==='groups'||q.mode==='trees'&&q.palette==='sage')){fronds.push(...volumetricClusterStudy(group,q));continue;}
     if(q.unified&&kind==='broadleaf'&&q.mode!=='leaf'){
       // Three curved twig ribbons replace the radial rings. Overlapping patches taper
       // along each ribbon, with a smaller subordinate fork at its outer end.

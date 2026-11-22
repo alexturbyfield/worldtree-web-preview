@@ -7,25 +7,26 @@ import {brushTexture,paintedWoodGeometry} from '../forest/paint-assets';
 import {randomSource} from '../forest/random';
 import type {Point} from '../forest/tree';
 const vertex=/*glsl*/`
-uniform float woodland;
+uniform float woodland;uniform float sage;
 attribute vec4 tileRect;attribute vec3 color;attribute float interior;
-varying vec2 atlasUv;varying vec3 paintLight;varying float canopyValue;varying float sunFacing;varying vec3 pigment;varying float leafRim;
+varying vec2 atlasUv;varying vec3 paintLight;varying float canopyValue;varying float sunFacing;varying vec3 pigment;varying float leafRim;varying float depthShade;
 void main(){
   atlasUv=tileRect.xy+uv*tileRect.zw;
   vec3 N=normalize((vec4(normalize(normalMatrix*normal),0.)*viewMatrix).xyz);
-  float sunlight=max(0.,dot(N,normalize(vec3(-.6,.85,.55))));
+  vec3 key=normalize(mix(vec3(-.6,.85,.55),vec3(-.6,.85,.55),sage));
+  float sunlight=max(0.,dot(N,key));
   vec3 fill=mix(vec3(.035,.13,.12),vec3(.58,.74,.57),N.y*.5+.5);
-  sunFacing=smoothstep(.35,.98,dot(N,normalize(vec3(-.6,.85,.55))));
+  sunFacing=smoothstep(.35,.98,dot(N,key));
   vec3 V=normalize(cameraPosition-(modelMatrix*vec4(position,1.)).xyz);
   leafRim=pow(1.-abs(dot(N,V)),2.);
-  pigment=color;
+  pigment=color;depthShade=interior;
   canopyValue=.27+.1*(N.y*.5+.5)+.2*sunFacing+.04*interior+(color.g-.55)*.18;
   paintLight=color*(fill+vec3(1.,.91,.73)*sunlight*.85)*interior;
   gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);
 }`;
 const fragment=/*glsl*/`
-uniform sampler2D foliageMap;uniform float metric;uniform float silhouette;uniform float woodland;uniform vec3 shadowPigment;uniform vec3 midPigment;uniform vec3 highPigment;
-varying vec2 atlasUv;varying vec3 paintLight;varying float canopyValue;varying float sunFacing;varying vec3 pigment;varying float leafRim;
+uniform sampler2D foliageMap;uniform float metric;uniform float silhouette;uniform float woodland;uniform float sage;uniform vec3 shadowPigment;uniform vec3 midPigment;uniform vec3 highPigment;
+varying vec2 atlasUv;varying vec3 paintLight;varying float canopyValue;varying float sunFacing;varying vec3 pigment;varying float leafRim;varying float depthShade;
 void main(){
   vec4 leaf=texture2D(foliageMap,atlasUv);
   if(metric<1.5&&leaf.a<.34)discard;
@@ -37,13 +38,12 @@ void main(){
     // Broad warm key + cool fill use transferred normals, without black underside bands.
     float ink=dot(leaf.rgb,vec3(.2126,.7152,.0722));
     float value=clamp(canopyValue+(sqrt(max(ink,0.))-.45)*.22,0.,1.);
-    shaded=mix(shadowPigment,midPigment,smoothstep(.22,.65,value));
-    float leafEdge=1.-smoothstep(.45,.95,leaf.a);
-    float gold=sunFacing*(.035+.22*leafEdge+.13*leafRim)*smoothstep(.12,.62,ink);
-    shaded=mix(shaded,highPigment,gold);
+    float body=sage>.5?smoothstep(.28,.76,value+(depthShade-.82)*.5):smoothstep(.22,.65,value);
+    shaded=mix(shadowPigment,midPigment,body);
+    // Golden accent overlay disabled; diffuse green form shading remains.
     shaded*=mix(vec3(1.),pigment*1.85,.22);
 
-    shaded*=.68+.62*sqrt(max(ink,0.));
+    shaded*=mix(.68+.62*sqrt(max(ink,0.)),.76+.48*sqrt(max(ink,0.)),sage);
   }
   gl_FragColor=vec4(shaded,1.);
   #include <tonemapping_fragment>
@@ -101,11 +101,11 @@ export function mountStudio(host:HTMLDivElement,q:StudioSettings,onReady:(m:Stud
   const camera=new THREE.PerspectiveCamera(38,host.clientWidth/host.clientHeight,.05,160),controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.minDistance=2;controls.maxDistance=80;controls.maxPolarAngle=Math.PI*.87;
   const kinds=q.view==='all'?studioKinds:[q.view],studies=kinds.map(kind=>createStudioStudy(kind,q)),spacing=q.mode==='trees'?8:7.5,positions=kinds.map((_,i)=>(i-(kinds.length-1)/2)*spacing);
   const texture=new THREE.CanvasTexture(studioAtlas(q,mobile));texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=2;
-  const pigments={woodland:['#254c45','#3e6c37','#b8b15c'],sunlit:['#2c5147','#507639','#c4b45b'],cool:['#264e4c','#3d6950','#a2ab68']}[q.palette??'woodland'];
-  const material=new THREE.ShaderMaterial({uniforms:{woodland:{value:q.unified&&q.view==='broadleaf'?1:0},shadowPigment:{value:new THREE.Color(pigments[0])},midPigment:{value:new THREE.Color(pigments[1])},highPigment:{value:new THREE.Color(pigments[2])},foliageMap:{value:texture},metric:{value:0},silhouette:{value:0}},vertexShader:vertex,fragmentShader:fragment,side:THREE.DoubleSide,depthWrite:true,transparent:false});
+  const pigments={sage:['#294135','#6e9462','#d9c976'],woodland:['#254c45','#3e6c37','#b8b15c'],sunlit:['#2c5147','#507639','#c4b45b'],cool:['#264e4c','#3d6950','#a2ab68']}[q.palette??'woodland'];
+  const material=new THREE.ShaderMaterial({uniforms:{sage:{value:q.palette==='sage'?1:0},woodland:{value:q.unified&&q.view==='broadleaf'?1:0},shadowPigment:{value:new THREE.Color(pigments[0])},midPigment:{value:new THREE.Color(pigments[1])},highPigment:{value:new THREE.Color(pigments[2])},foliageMap:{value:texture},metric:{value:0},silhouette:{value:0}},vertexShader:vertex,fragmentShader:fragment,side:THREE.DoubleSide,depthWrite:true,transparent:false});
   const geometry=studioGeometry(studies,positions),foliage=new THREE.Mesh(geometry,material);scene.add(foliage);
   const scaled=studies.map((s,i)=>({model:{...s.model,segments:s.segments.map(segment=>({...segment,a:segment.a.map((v,k)=>v*s.scale+s.offset[k]) as Point,b:segment.b.map((v,k)=>v*s.scale+s.offset[k]) as Point,r0:segment.r0*s.scale,r1:segment.r1*s.scale}))},position:[positions[i],0,0] as Point,rotation:0}));
-  const bark=q.unified&&q.view==='broadleaf'?oakBark():brushTexture('bark'),wood=new THREE.Mesh<THREE.BufferGeometry,THREE.Material>(q.unified&&q.view==='broadleaf'?oakWood(scaled[0].model.segments,oakGrowthForms[q.oakGrowth??'spreading'].taper):paintedWoodGeometry(scaled,false,mobile).geometry,new THREE.MeshStandardMaterial({map:bark,bumpMap:q.unified&&q.view==='broadleaf'?bark:null,bumpScale:.012,vertexColors:true,roughness:1}));wood.visible=q.mode!=='leaf';scene.add(wood);
+  const bark=q.unified&&q.view==='broadleaf'?oakBark():brushTexture('bark'),wood=new THREE.Mesh<THREE.BufferGeometry,THREE.Material>(q.unified&&q.view==='broadleaf'?oakWood(scaled[0].model.segments,oakGrowthForms[q.oakGrowth??'spreading'].taper):paintedWoodGeometry(scaled,false,mobile).geometry,new THREE.MeshStandardMaterial({color:'#ffffff',map:bark,bumpMap:q.unified&&q.view==='broadleaf'?bark:null,bumpScale:.012,vertexColors:true,roughness:1}));wood.visible=q.mode!=='leaf';scene.add(wood);
   const paintedWood=wood.material,silhouetteWood=new THREE.MeshBasicMaterial({color:'#060908',toneMapped:false});
   scene.add(new THREE.HemisphereLight('#d9e9ef','#667658',2));const sun=new THREE.DirectionalLight('#fff0d8',2.5);sun.position.set(-8,12,10);scene.add(sun);
   const bounds=geometry.boundingBox!.clone();if(q.mode!=='leaf')bounds.union(new THREE.Box3().setFromObject(wood));const center=bounds.getCenter(new THREE.Vector3()),size=bounds.getSize(new THREE.Vector3());

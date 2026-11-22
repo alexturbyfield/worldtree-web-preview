@@ -9,7 +9,7 @@ function drawOakLeafSpray(ctx:CanvasRenderingContext2D,q:StudioSettings){
   twig([.5,.9,.47,.68,.54,.4,.49,.13]);twig([.49,.7,.43,.58,.35,.49,.27,.29]);twig([.5,.56,.61,.54,.68,.44,.73,.28]);twig([.49,.73,.6,.74,.7,.68,.78,.56]);
   const leaves=[ [.45,.72,-2.8,.24],[.57,.72,-.25,.24],[.37,.5,-2.8,.23],[.27,.29,-1.9,.2],[.48,.46,-2.1,.23],[.51,.23,-1.48,.18],[.62,.49,-.9,.24],[.73,.28,-1.15,.19],[.74,.61,-.8,.19] ];
   for(const [x,y,angle,length] of leaves){
-    const l=length*(.94+shape()*.12),w=l*.48,c=(paint()-.5)*16;
+    const l=length*(.94+shape()*.12),w=l*(q.palette==='sage'?.66:.48),c=(paint()-.5)*16;
     ctx.save();ctx.translate(x,y);ctx.rotate(angle+(shape()-.5)*.15);ctx.scale(l,w);
     ctx.beginPath();ctx.moveTo(-.065,0);ctx.lineTo(.07,0);ctx.strokeStyle='#87965e';ctx.lineWidth=.026;ctx.stroke();
     const leaf=new Path2D();leaf.moveTo(0,0);
@@ -22,7 +22,7 @@ function drawOakLeafSpray(ctx:CanvasRenderingContext2D,q:StudioSettings){
   }
 }
 export function studioAtlas(q:StudioSettings,mobile=false){
-  const oakStudy=q.unified&&q.view==='broadleaf'&&q.mode==='groups',tile=mobile?128:256,key=JSON.stringify([q.appearance,q.detail,q.colorVariation,tile,q.unified,q.leafScale,oakStudy,oakStudy?q.structure:'']);const old=cache.get(key);if(old)return old;
+  const oakStudy=q.unified&&q.view==='broadleaf'&&(q.mode==='groups'||q.mode==='trees'&&q.palette==='sage'),tile=mobile?128:256,key=JSON.stringify([q.appearance,q.detail,q.colorVariation,tile,q.unified,q.leafScale,oakStudy,oakStudy?q.structure:'']);const old=cache.get(key);if(old)return old;
   const canvas=document.createElement('canvas');canvas.width=tile*4;canvas.height=tile*3;const ctx=canvas.getContext('2d')!;
   for(let index=0;index<12;index++){
     const kind=Math.floor(index/4),shape=randomSource('studio-atlas-morphology-'+index),paint=randomSource(q.appearance+'|atlas-'+index),variation=q.colorVariation;
