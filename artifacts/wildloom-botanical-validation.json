@@ -1,0 +1,56 @@
+{
+  "checks": "Unrelated existing species unchanged; repeated seeds identical; appearance seeds preserve stem and foliage geometry; registry links verified; finite leaf vertices.",
+  "rows": [
+    {
+      "id": "cecropia",
+      "taxonId": "wcvp:2707099",
+      "height": 15.873581108724109,
+      "foliageSurfaces": 24,
+      "leafTriangles": 192,
+      "woodySegments": 340,
+      "architecture": "palmate"
+    },
+    {
+      "id": "pandanus",
+      "taxonId": "wcvp:285436",
+      "height": 6.360412543708191,
+      "foliageSurfaces": 120,
+      "leafTriangles": 2880,
+      "woodySegments": 140,
+      "architecture": "rosette"
+    },
+    {
+      "id": "acai",
+      "taxonId": "wcvp:83104",
+      "height": 27.4089870260315,
+      "foliageSurfaces": 15,
+      "leafTriangles": 360,
+      "woodySegments": 40,
+      "architecture": "palm"
+    },
+    {
+      "id": "dipterocarp-alatus",
+      "taxonId": "wcvp:2772115",
+      "height": 41.934422024751605,
+      "foliageSurfaces": 1116,
+      "leafTriangles": 8928,
+      "woodySegments": 420,
+      "architecture": "emergent"
+    }
+  ],
+  "checkpoint": "2551404",
+  "referencePhotographs": {
+    "Cecropia peltata": "https://www.gbif.org/es/species/2984476",
+    "Pandanus tectorius": "https://vocus.cc/article/67ab29f9fd8978000117b760",
+    "Euterpe precatoria": "https://www.iyarina.org/plants/euterpe-precatoria",
+    "Dipterocarpus alatus": "https://identify.plantnet.org/sat/k-world-flora/species/Dipterocarpus%20alatus%20Roxb.%20ex%20G.Don/data"
+  },
+  "referenceUse": "Photographs inspected as shape references only. No external photos embedded in application or delivered comparison sheets.",
+  "comparison": "Before and after use the same frozen camera, scale, seed 29, appearance garden and light rig. Close-ups are separately framed for crown inspection.",
+  "limitations": [
+    "Pale Cecropia underside variants are assigned to tilted leaves; not face-dependent material shading.",
+    "Stylized atlas cards remain visible close up; botanical identification and field measurements are not claimed."
+  ],
+  "performance": "Leaf counts stable or lower: Cecropia 32 to 24; Pandanus 120; Euterpe 15; alatus 1116. Curved leaf strips use 21 vertices rather than 9. Shared-ground capture: 9 draw calls, 40090 triangles. No GPU timing benchmark.",
+  "browser": []
+}

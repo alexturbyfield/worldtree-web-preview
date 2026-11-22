@@ -40,16 +40,16 @@ function drawEmergentSpray(ctx:CanvasRenderingContext2D,q:StudioSettings){
   }
 }
 /** Palmate blades, strap leaves and pinnate palm fronds use the same cutout atlas. */
-function drawSpecialFoliage(ctx:CanvasRenderingContext2D,q:StudioSettings){
+function drawSpecialFoliage(ctx:CanvasRenderingContext2D,q:StudioSettings,underside=false){
  const form=batchSpecies[q.presetId!].form,paint=randomSource(q.appearance+'|special-foliage|'+form),shape=randomSource(q.structure+'|special-foliage-shape|'+form),c=(paint()-.5)*12;
- const gradient=ctx.createLinearGradient(.2,.1,.7,.9);gradient.addColorStop(0,`rgb(${165+c},${188+c},${122+c})`);gradient.addColorStop(.48,`rgb(${100+c},${150+c},${91+c})`);gradient.addColorStop(1,`rgb(${52+c},${100+c},${79+c})`);ctx.fillStyle=gradient;
+ const gradient=ctx.createLinearGradient(.2,.1,.7,.9);gradient.addColorStop(0,`rgb(${(underside?196:165)+c},${(underside?207:188)+c},${(underside?178:122)+c})`);gradient.addColorStop(.48,`rgb(${(underside?156:100)+c},${(underside?179:150)+c},${(underside?151:91)+c})`);gradient.addColorStop(1,`rgb(${(underside?113:52)+c},${(underside?143:100)+c},${(underside?122:79)+c})`);ctx.fillStyle=underside?'#b8c9ad':gradient;
  if(form==='palmate'){
-  const shape=randomSource(q.structure+'|palmate-lobes'),leaf=new Path2D();for(let i=0;i<=144;i++){const a=i/144*Math.PI*2-Math.PI/2,r=.17+.27*Math.pow((1+Math.cos((a+Math.PI/2)*9))/2,.6),x=.5+Math.cos(a)*r,y=.5+Math.sin(a)*r*(.94+shape()*.025);if(i)leaf.lineTo(x,y);else leaf.moveTo(x,y);}leaf.closePath();ctx.fill(leaf);ctx.save();ctx.clip(leaf);ctx.strokeStyle='rgba(210,224,167,.62)';ctx.lineWidth=.007;for(let i=0;i<9;i++){const a=i/9*Math.PI*2-Math.PI/2;ctx.beginPath();ctx.moveTo(.5,.5);ctx.lineTo(.5+Math.cos(a)*.41,.5+Math.sin(a)*.41);ctx.stroke();}ctx.restore();
+  const shape=randomSource(q.structure+'|palmate-lobes'),leaf=new Path2D();for(let i=0;i<=144;i++){const a=i/144*Math.PI*2-Math.PI/2,r=.17+.27*Math.pow((1+Math.cos((a+Math.PI/2)*8))/2,.28),x=.5+Math.cos(a)*r,y=.5+Math.sin(a)*r*(.94+shape()*.025);if(i)leaf.lineTo(x,y);else leaf.moveTo(x,y);}leaf.closePath();ctx.fill(leaf);ctx.save();ctx.clip(leaf);ctx.strokeStyle='rgba(210,224,167,.62)';ctx.lineWidth=.007;for(let i=0;i<8;i++){const a=i/8*Math.PI*2-Math.PI/2;ctx.beginPath();ctx.moveTo(.5,.5);ctx.lineTo(.5+Math.cos(a)*.41,.5+Math.sin(a)*.41);ctx.stroke();}ctx.restore();
  }else if(form==='rosette'){
-  const leaf=new Path2D();leaf.moveTo(.5,.96);leaf.bezierCurveTo(.27,.66,.37,.27,.5,.035);leaf.bezierCurveTo(.63,.28,.73,.67,.5,.96);leaf.closePath();ctx.fill(leaf);ctx.strokeStyle='rgba(210,224,155,.65)';ctx.lineWidth=.012;ctx.beginPath();ctx.moveTo(.5,.93);ctx.quadraticCurveTo(.51,.55,.5,.07);ctx.stroke();
+  const leaf=new Path2D();leaf.moveTo(.5,.96);leaf.bezierCurveTo(.19,.66,.29,.27,.5,.035);leaf.bezierCurveTo(.71,.28,.81,.67,.5,.96);leaf.closePath();ctx.fill(leaf);ctx.strokeStyle='rgba(210,224,155,.65)';ctx.lineWidth=.012;ctx.beginPath();ctx.moveTo(.5,.93);ctx.quadraticCurveTo(.51,.55,.5,.07);ctx.stroke();
  }else{
   ctx.strokeStyle='#a1b574';ctx.lineWidth=.012;ctx.beginPath();ctx.moveTo(.5,.96);ctx.quadraticCurveTo(.47,.5,.5,.045);ctx.stroke();
-  for(let i=0;i<18;i++)for(const sign of [-1,1]){const t=(i+1)/20,y=.91-t*.84,span=.36*Math.pow(Math.sin(t*Math.PI),.62),tipX=.5+sign*span,tipY=y-.1-.035*shape();const leaf=new Path2D();leaf.moveTo(.5,y);leaf.bezierCurveTo(.5+sign*span*.4,y-.01,tipX,tipY+.02,tipX,tipY);leaf.bezierCurveTo(.5+sign*span*.6,y-.065,.5,y-.025,.5,y);leaf.closePath();ctx.fill(leaf);}
+  for(let i=0;i<18;i++)for(const sign of [-1,1]){const t=(i+1)/20,y=.91-t*.84,span=.36*Math.pow(Math.sin(t*Math.PI),.62),tipX=.5+sign*span,tipY=y-.1-.035*shape();const leaf=new Path2D();leaf.moveTo(.5,y);leaf.bezierCurveTo(.5+sign*span*.4,y+.014,tipX,tipY+.025,tipX,tipY);leaf.bezierCurveTo(.5+sign*span*.6,y-.078,.5,y-.038,.5,y);leaf.closePath();ctx.fill(leaf);}
  }
 }
 /** Reuses the atlas pipeline; silhouette shapes are V1 species design studies. */
@@ -86,7 +86,8 @@ export function studioAtlas(q:StudioSettings,mobile=false){
   for(let index=0;index<12;index++){
     const kind=Math.floor(index/4),shape=randomSource('studio-atlas-morphology-'+index),paint=randomSource(q.appearance+'|atlas-'+index),variation=q.colorVariation;
     ctx.save();ctx.translate(index%4*tile,Math.floor(index/4)*tile);ctx.scale(tile,tile);ctx.beginPath();ctx.rect(.035,.035,.93,.93);ctx.clip();ctx.lineCap='round';
-    if(library&&index===0){drawLibrarySpray(ctx,q);}
+    if(library&&batchSpecies[q.presetId!].form==='palmate'&&index===1){drawSpecialFoliage(ctx,q,true);}
+    else if(library&&index===0){drawLibrarySpray(ctx,q);}
     else if(oakStudy&&index===0){drawOakLeafSpray(ctx,q);}
     else if(kind===0){
       const count=q.unified&&index===0?1:(q.unified?100:42)+Math.round(q.detail*24);for(let j=0;j<count;j++){
