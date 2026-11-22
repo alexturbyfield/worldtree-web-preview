@@ -1,6 +1,7 @@
 import {Color,Quaternion,Vector3,CatmullRomCurve3,Matrix4} from 'three';
 import {generatePainterlyTree,type PaintedTree} from '../forest/painterly';
 import {randomSource} from '../forest/random';
+import {batchSpecies,speciesV1Study} from './species-v1';
 import type {Point,Segment} from '../forest/tree';
 export type StudioKind='broadleaf'|'flower'|'conifer';
 export type OakGrowth='spreading'|'upright'|'ancient'|'young';
@@ -12,7 +13,7 @@ export const oakGrowthForms:Record<OakGrowth,OakGrowthProfile>={
   ancient:{height:9.5,leader:.56,initiation:.16,primaries:7,inclination:.2,lateral:6.2,secondary:3,tertiary:2,apical:.12,droop:.75,age:1,trunk:1.6,limb:1.02,occupancy:.68,foliage:1.05,taper:1.02},
   young:{height:8.5,leader:.95,initiation:.38,primaries:6,inclination:.78,lateral:2.25,secondary:2,tertiary:2,apical:.95,droop:0,age:0,trunk:.31,limb:.135,occupancy:.4,foliage:.72,taper:1.55}
 };
-export interface StudioSettings {size:number;density:number;overlap:number;detail:number;colorVariation:number;structure:string;appearance:string;view:StudioKind|'all';mode:'leaf'|'groups'|'trees';unified?:boolean;leafScale?:number;asymmetry?:number;shape?:number;roundness?:number;branchSpread?:number;edgeBreakup?:number;palette?:'woodland'|'sunlit'|'cool'|'sage';oakGrowth?:OakGrowth;crownGradient?:number;crownRim?:number;evergreenStudy?:boolean}
+export interface StudioSettings {size:number;density:number;overlap:number;detail:number;colorVariation:number;structure:string;appearance:string;view:StudioKind|'all';mode:'leaf'|'groups'|'trees';unified?:boolean;leafScale?:number;asymmetry?:number;shape?:number;roundness?:number;branchSpread?:number;edgeBreakup?:number;palette?:'woodland'|'sunlit'|'cool'|'sage';oakGrowth?:OakGrowth;crownGradient?:number;crownRim?:number;evergreenStudy?:boolean;presetId?:string}
 export const studioDefaults:StudioSettings={size:1,density:.76,overlap:.72,detail:.75,colorVariation:.65,structure:'29',appearance:'garden',view:'all',mode:'groups'};
 export const studioKinds:StudioKind[]=['broadleaf','flower','conifer'];
 export interface FoliageGroup {branchId?:number;parentBranchId?:number;zone?:OakFoliageZone;id:number;anchor:Point;center:Point;radii:Point;branchIndex:number;axis:Point}
@@ -216,6 +217,7 @@ function evergreenBoughStudy(base:PaintedTree,q:StudioSettings):StudioStudy{
 }
 /** New branch-attached foliage only. Existing trunks, branches and presets are read without mutation. */
 export function createStudioStudy(kind:StudioKind,q:StudioSettings):StudioStudy{
+  if(q.presetId&&batchSpecies[q.presetId])return speciesV1Study(q.presetId,q,volumetricClusterStudy);
   const original=generatePainterlyTree({presetId:kind==='conifer'?'douglas':'oak',structuralSeed:q.structure,appearanceSeed:q.appearance,foliageDensity:1,asymmetry:.72}),rand=randomSource(q.structure+'|studio-groups|'+kind),paint=randomSource(q.appearance+'|studio-paint|'+kind),conifer=kind==='conifer',model=q.unified&&kind==='broadleaf'?referenceOak(original,q.asymmetry??.7,q.oakGrowth??'spreading',q):original;
   if(conifer&&q.evergreenStudy&&q.mode==='trees')return evergreenBoughStudy(original,q);
   const candidates=model.foliage.map((f,i)=>{

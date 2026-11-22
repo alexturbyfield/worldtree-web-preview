@@ -1,4 +1,5 @@
 import {randomSource} from '../forest/random';
+import {batchSpecies} from './species-v1';
 import type {StudioSettings} from './groups';
 export const studioAtlasLabels=['Oval leaf fan','Lanceolate fan','Layered broadleaf','Small leaf spray','Blossom cloud','Cupped petals','Hanging blossoms','Small flower spray','Fir bough','Drooping fir spray','Needle branchlet','Fine needle fan'];
 const cache=new Map<string,HTMLCanvasElement>();
@@ -21,13 +22,40 @@ function drawOakLeafSpray(ctx:CanvasRenderingContext2D,q:StudioSettings){
     ctx.strokeStyle='rgba(206,218,137,.4)';ctx.lineWidth=.012;ctx.stroke(leaf);ctx.restore();
   }
 }
+/** Reuses the atlas pipeline; silhouette shapes are V1 species design studies. */
+function drawLibrarySpray(ctx:CanvasRenderingContext2D,q:StudioSettings){
+  const species=batchSpecies[q.presetId!],rand=randomSource(q.structure+'|library-atlas|'+q.presetId),paint=randomSource(q.appearance+'|library-atlas|'+q.presetId);
+  ctx.strokeStyle='#627254';ctx.lineWidth=.008;ctx.beginPath();ctx.moveTo(.5,.91);ctx.quadraticCurveTo(.45,.5,.52,.1);ctx.stroke();
+  const count=species.conifer?7:species.form==='willow'?13:7;
+  for(let i=0;i<count;i++){
+    const t=(i+.7)/(count+1),side=i%2?1:-1,x=.5+side*(species.conifer?.12:.17)*(1-t*.25),y=.84-t*.64;
+    ctx.beginPath();ctx.moveTo(.5,y+.07);ctx.quadraticCurveTo(.5+side*.08,y+.03,x,y);ctx.strokeStyle='#6e8058';ctx.lineWidth=.006;ctx.stroke();
+    ctx.save();ctx.translate(x,y);ctx.rotate(species.form==='willow'?1.05+side*.3:side>0?-.5-rand()*.4:Math.PI+.4+rand()*.4);
+    const length=(species.conifer?.31:species.form==='maple'?.23:species.form==='willow'?.25:.19)*(.85+rand()*.25),width=length*(species.form==='willow'?.16:species.form==='maple'?1.05:species.form==='aspen'?.92:species.conifer?.65:.62);
+    const leaf=new Path2D();
+    if(species.form==='maple'){
+      const points=[[0,0],[.1,-.2],[.18,-.17],[.15,-.52],[.36,-.36],[.44,-.7],[.57,-.38],[1,0],[.6,.35],[.47,.63],[.37,.35],[.17,.5],[.2,.18],[.08,.16]];
+      points.forEach(([a,b],j)=>j?leaf.lineTo(a*length,b*width):leaf.moveTo(a*length,b*width));leaf.closePath();
+    }else if(species.form==='willow'){
+      leaf.moveTo(0,0);leaf.bezierCurveTo(length*.22,-width*.8,length*.8,-width*.4,length,0);leaf.bezierCurveTo(length*.7,width*.6,length*.15,width*.55,0,0);
+    }else{
+      leaf.moveTo(0,0);for(let side=0;side<2;side++)for(let k=0;k<=28;k++){const t=side?1-k/28:k/28;
+        const contour=species.form==='aspen'?Math.sqrt(Math.max(0,1-Math.pow((t-.5)*2,2))):Math.pow(Math.sin(Math.PI*t),.7)*(1-t*.25);
+        const lobes=species.conifer?(.76+.24*Math.cos(t*Math.PI*(species.form==='cedar'?8:14))):(.92+.08*Math.cos(t*Math.PI*24));leaf.lineTo(t*length,(side?1:-1)*contour*width*.5*lobes);
+      }leaf.closePath();
+    }
+    const c=(paint()-.5)*15,g=ctx.createLinearGradient(0,-width,length*.3,width);g.addColorStop(0,`rgb(${162+c},${188+c},${120+c})`);g.addColorStop(.45,`rgb(${100+c},${150+c},${91+c})`);g.addColorStop(1,`rgb(${52+c},${102+c},${79+c})`);ctx.fillStyle=g;ctx.fill(leaf);ctx.save();ctx.clip(leaf);ctx.strokeStyle='rgba(214,220,157,.42)';ctx.lineWidth=.002;ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(length*.9,0);ctx.stroke();ctx.restore();ctx.restore();
+  }
+}
 export function studioAtlas(q:StudioSettings,mobile=false){
-  const oakStudy=q.unified&&q.view==='broadleaf'&&(q.mode==='groups'||q.mode==='trees'&&q.palette==='sage'),tile=mobile?128:256,key=JSON.stringify([q.appearance,q.detail,q.colorVariation,tile,q.unified,q.leafScale,oakStudy,oakStudy?q.structure:'']);const old=cache.get(key);if(old)return old;
+  const library=!!q.presetId&&!!batchSpecies[q.presetId];
+  const oakStudy=q.unified&&q.view==='broadleaf'&&(q.mode==='groups'||q.mode==='trees'&&q.palette==='sage'),tile=mobile?128:256,key=JSON.stringify([q.appearance,q.detail,q.colorVariation,tile,q.unified,q.leafScale,oakStudy,oakStudy?q.structure:'',library?q.presetId:'',library?q.structure:'']);const old=cache.get(key);if(old)return old;
   const canvas=document.createElement('canvas');canvas.width=tile*4;canvas.height=tile*3;const ctx=canvas.getContext('2d')!;
   for(let index=0;index<12;index++){
     const kind=Math.floor(index/4),shape=randomSource('studio-atlas-morphology-'+index),paint=randomSource(q.appearance+'|atlas-'+index),variation=q.colorVariation;
     ctx.save();ctx.translate(index%4*tile,Math.floor(index/4)*tile);ctx.scale(tile,tile);ctx.beginPath();ctx.rect(.035,.035,.93,.93);ctx.clip();ctx.lineCap='round';
-    if(oakStudy&&index===0){drawOakLeafSpray(ctx,q);}
+    if(library&&index===0){drawLibrarySpray(ctx,q);}
+    else if(oakStudy&&index===0){drawOakLeafSpray(ctx,q);}
     else if(kind===0){
       const count=q.unified&&index===0?1:(q.unified?100:42)+Math.round(q.detail*24);for(let j=0;j<count;j++){
         const a=j*2.399+index*.6,rad=count===1?0:.34*Math.sqrt((j+.5)/count)*(q.unified?.84+.14*Math.sin(a*3+index)+shape()*.15:1),x=.5+Math.cos(a)*rad,y=.5+Math.sin(a)*rad,l=count===1?.68:(q.unified?.075+shape()*.04:.12+shape()*.075)*(q.leafScale??1),w=l*(q.unified?.7:index===1?.3:.48),angle=a+(shape()-.5)*2;
