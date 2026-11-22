@@ -12,7 +12,7 @@ export const oakGrowthForms:Record<OakGrowth,OakGrowthProfile>={
   ancient:{height:9.5,leader:.56,initiation:.16,primaries:7,inclination:.2,lateral:6.2,secondary:3,tertiary:2,apical:.12,droop:.75,age:1,trunk:1.6,limb:1.02,occupancy:.68,foliage:1.05,taper:1.02},
   young:{height:8.5,leader:.95,initiation:.38,primaries:6,inclination:.78,lateral:2.25,secondary:2,tertiary:2,apical:.95,droop:0,age:0,trunk:.31,limb:.135,occupancy:.4,foliage:.72,taper:1.55}
 };
-export interface StudioSettings {size:number;density:number;overlap:number;detail:number;colorVariation:number;structure:string;appearance:string;view:StudioKind|'all';mode:'leaf'|'groups'|'trees';unified?:boolean;leafScale?:number;asymmetry?:number;shape?:number;roundness?:number;branchSpread?:number;edgeBreakup?:number;palette?:'woodland'|'sunlit'|'cool'|'sage';oakGrowth?:OakGrowth;crownGradient?:number;crownRim?:number}
+export interface StudioSettings {size:number;density:number;overlap:number;detail:number;colorVariation:number;structure:string;appearance:string;view:StudioKind|'all';mode:'leaf'|'groups'|'trees';unified?:boolean;leafScale?:number;asymmetry?:number;shape?:number;roundness?:number;branchSpread?:number;edgeBreakup?:number;palette?:'woodland'|'sunlit'|'cool'|'sage';oakGrowth?:OakGrowth;crownGradient?:number;crownRim?:number;evergreenStudy?:boolean}
 export const studioDefaults:StudioSettings={size:1,density:.76,overlap:.72,detail:.75,colorVariation:.65,structure:'29',appearance:'garden',view:'all',mode:'groups'};
 export const studioKinds:StudioKind[]=['broadleaf','flower','conifer'];
 export interface FoliageGroup {branchId?:number;parentBranchId?:number;zone?:OakFoliageZone;id:number;anchor:Point;center:Point;radii:Point;branchIndex:number;axis:Point}
@@ -175,9 +175,49 @@ function volumetricClusterStudy(group:FoliageGroup,q:StudioSettings):StudioFrond
     return {position:position.toArray() as Point,rotation:rotation.toArray(),width:radius*(1.43+structure()*.16),length:radius*((q.mode==='trees'&&(q.oakGrowth??'spreading')==='spreading'?1.25:1.5)+structure()*.16),curve:.16,droop:0,tile:q.mode==='trees'&&q.palette==='sage'?0:1+Math.floor(structure()*3),color:'#'+tint.getHexString(),normal:normal.toArray() as Point,interior:q.mode==='trees'?.68+Math.min(.28,Math.hypot(across,depth)*.65):.88,groupId:group.id};
   });
 }
+/** Isolated Douglas-fir bough study. Default species generation never enters this path. */
+function evergreenBoughStudy(base:PaintedTree,q:StudioSettings):StudioStudy{
+  const rand=randomSource(q.structure+'|fir-bough-study'),paint=randomSource(q.appearance+'|fir-bough-pigment'),h=base.parameters.height,r=base.parameters.crownRadius,trunkR=base.parameters.trunkRadius;
+  const segments:Segment[]=[],groups:FoliageGroup[]=[],fronds:StudioFrond[]=[],phase=rand()*Math.PI*2,lean=(rand()-.5)*h*.045;
+  const leader=new CatmullRomCurve3([[0,0,0],[lean*.35,h*.35,.1],[lean*.8,h*.7,-.18],[lean,h,.05]].map(p=>new Vector3(...p)));
+  const wood=(curve:CatmullRomCurve3,radius:number,depth:number)=>{const first=segments.length,steps=depth?8:24;for(let i=0;i<steps;i++){const t=i/steps,u=(i+1)/steps;segments.push({a:curve.getPoint(t).toArray() as Point,b:curve.getPoint(u).toArray() as Point,r0:radius*Math.pow(1-t*.96,1.1),r1:radius*Math.pow(1-u*.96,1.1),depth});}return first;};
+  const bough=(curve:CatmullRomCurve3,first:number,width:number)=>{
+    const id=groups.length,length=curve.getLength();groups.push({id,anchor:curve.getPoint(.4).toArray() as Point,center:curve.getPoint(.55).toArray() as Point,radii:[length,width,width*.65],branchIndex:first,axis:curve.getTangent(.5).toArray() as Point});
+    for(let part=0;part<3;part++)for(let face=0;face<3;face++){
+      const t=.12+part*.25,point=curve.getPointAt(t),forward=curve.getTangentAt(t).normalize(),right=new Vector3().crossVectors(forward,new Vector3(0,1,0)).normalize(),up=new Vector3().crossVectors(right,forward).normalize();
+      const roll=[-.65,.3,1.25][face]+(rand()-.5)*.25,normal=up.clone().multiplyScalar(Math.cos(roll)).addScaledVector(right,Math.sin(roll)).normalize();
+      const across=new Vector3().crossVectors(forward,normal).normalize(),rotation=new Quaternion().setFromRotationMatrix(new Matrix4().makeBasis(across,forward,normal));
+      point.addScaledVector(up,(face-1)*width*.24).addScaledVector(right,(face-1)*width*.12);
+      const tint=new Color('#b9c9b7').offsetHSL((paint()-.5)*.025,0,(paint()-.5)*.07);
+      fronds.push({position:point.toArray() as Point,rotation:rotation.toArray(),width:width*(1-part*.2)*(.93+rand()*.12),length:length*(.55-part*.08),curve:.18,droop:.08,tile:8+Math.floor(rand()*4),color:'#'+tint.getHexString(),normal:normal.toArray() as Point,interior:face===1?.7:.9,groupId:id});
+    }
+  };
+  wood(leader,trunkR,0);
+  const shoots=39;
+  for(let i=0;i<shoots;i++){
+    const f=i/(shoots-1),t=.18+f*.77+(rand()-.5)*.022,angle=phase+i*2.399+(rand()-.5)*.75;
+    const missing=(i===7||i===18||i===24);if(missing)continue;
+    const start=leader.getPointAt(t),length=r*1.32*Math.pow(1-f,.55)*Math.pow(Math.sin(Math.PI*(.14+f*.8)),.48)*(.95+rand()*.45)*(1+Math.sin(angle+phase)*.22)+.18;
+    const outward=new Vector3(Math.cos(angle),0,Math.sin(angle)),side=new Vector3(-outward.z,0,outward.x),end=start.clone().addScaledVector(outward,length);end.y-=length*(.18+rand()*.17);
+    const near=start.clone().addScaledVector(outward,length*.25);near.y+=length*.12;
+    const middle=start.clone().addScaledVector(outward,length*.65).addScaledVector(side,(rand()-.5)*length*.2);middle.y-=length*.04;
+    const primary=new CatmullRomCurve3([start,near,middle,end]),first=wood(primary,trunkR*.27*(1-f*.7),1);bough(primary,first,Math.max(.3,length*.94));
+    for(let j=0;j<3;j++){
+      const attach=.3+j*.22,origin=primary.getPointAt(attach),a=angle+(j%2?-1:1)*(.45+rand()*.35),span=length*(.4+rand()*.13)*(1-j*.13),tip=origin.clone().add(new Vector3(Math.cos(a)*span,-span*.36,Math.sin(a)*span));
+      const shoulder=origin.clone().lerp(tip,.5);shoulder.y+=span*.16;const secondary=new CatmullRomCurve3([origin,shoulder,tip]),first=wood(secondary,trunkR*.085*(1-f*.75),2);bough(secondary,first,Math.max(.2,span*.95));
+    }
+  }
+  for(let i=0;i<4;i++){
+    const t=.91+i*.023,start=leader.getPointAt(t),a=phase+i*2.399,span=r*(.28-i*.055),end=start.clone().add(new Vector3(Math.cos(a)*span,-span*.18,Math.sin(a)*span));
+    const middle=start.clone().lerp(end,.5);middle.y+=span*.12;const tip=new CatmullRomCurve3([start,middle,end]),first=wood(tip,trunkR*.06,2);bough(tip,first,Math.max(.2,span*.95));
+  }
+  const model={...base,segments,foliage:[],parameters:{...base.parameters,whorls:0,droop:.3},palette:{...base.palette,shadow:'#173f3c',body:'#4f7d66',light:'#9db69a'}};
+  return {kind:'conifer',model,groups,fronds,segments,scale:6.8/base.dimensions.height,offset:[0,0,0]};
+}
 /** New branch-attached foliage only. Existing trunks, branches and presets are read without mutation. */
 export function createStudioStudy(kind:StudioKind,q:StudioSettings):StudioStudy{
   const original=generatePainterlyTree({presetId:kind==='conifer'?'douglas':'oak',structuralSeed:q.structure,appearanceSeed:q.appearance,foliageDensity:1,asymmetry:.72}),rand=randomSource(q.structure+'|studio-groups|'+kind),paint=randomSource(q.appearance+'|studio-paint|'+kind),conifer=kind==='conifer',model=q.unified&&kind==='broadleaf'?referenceOak(original,q.asymmetry??.7,q.oakGrowth??'spreading',q):original;
+  if(conifer&&q.evergreenStudy&&q.mode==='trees')return evergreenBoughStudy(original,q);
   const candidates=model.foliage.map((f,i)=>{
     const owned=q.unified&&kind==='broadleaf'?f as OakGuide:undefined;
     const attachment=owned?{index:owned.branchIndex,point:owned.position}:nearest(f.position,model.segments,conifer&&f.position[1]>model.parameters.height*.94),branch=model.segments[attachment.index];
