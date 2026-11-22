@@ -1,0 +1,228 @@
+{
+  "checkpoint": "f7d383a",
+  "species": [
+    "avicennia",
+    "red-mangrove",
+    "stilt-mangrove",
+    "cacao",
+    "rubber"
+  ],
+  "settings": {
+    "structuralSeed": "29",
+    "appearanceSeed": "garden",
+    "palette": "sage"
+  },
+  "matchedIndividualViews": {
+    "avicennia": {
+      "position": [
+        1.9318370754283534,
+        2.994089418129311,
+        10.50588854713727
+      ],
+      "quaternion": [
+        -0.05915274060681727,
+        0.059574105746672455,
+        0.003536478619087677,
+        0.9964634326066178
+      ]
+    },
+    "red-mangrove": {
+      "position": [
+        2.0666811753857264,
+        3.9316793055135135,
+        12.240702908525975
+      ],
+      "quaternion": [
+        -0.059152740606817265,
+        0.059574105746672434,
+        0.0035364786190876752,
+        0.9964634326066178
+      ]
+    },
+    "stilt-mangrove": {
+      "position": [
+        2.147449473842995,
+        5.733815265346334,
+        13.724985436474423
+      ],
+      "quaternion": [
+        -0.05915274060681728,
+        0.059574105746672455,
+        0.003536478619087677,
+        0.9964634326066178
+      ]
+    },
+    "cacao": {
+      "position": [
+        1.0037311360287346,
+        2.066157829766241,
+        8.092714585403336
+      ],
+      "quaternion": [
+        -0.05915274060681727,
+        0.059574105746672455,
+        0.003536478619087677,
+        0.9964634326066178
+      ]
+    },
+    "rubber": {
+      "position": [
+        2.5256496700392037,
+        7.785968426142718,
+        19.080981480368205
+      ],
+      "quaternion": [
+        -0.05915274060681727,
+        0.059574105746672455,
+        0.0035364786190876765,
+        0.9964634326066178
+      ]
+    }
+  },
+  "before": {
+    "errors": [],
+    "common": {
+      "min": [
+        -4.000483512878418,
+        -0.01598440110683441,
+        -3.6879751682281494
+      ],
+      "max": [
+        4.768612384796143,
+        10.167793273925781,
+        4.065788269042969
+      ]
+    },
+    "ground": {
+      "view": {
+        "position": [
+          21.89456219451509,
+          9.796108390540452,
+          35.898749521627785
+        ],
+        "quaternion": [
+          -0.059670661624651324,
+          0.007486003543517615,
+          0.00044750479145613803,
+          0.9981899476711256
+        ],
+        "offsets": [
+          1.9091321229934692,
+          11.232399106025696,
+          21.00259816646576,
+          29.793365001678467,
+          38.766265869140625
+        ]
+      },
+      "calls": 11,
+      "triangles": 113126,
+      "roots": [
+        {
+          "id": "avicennia",
+          "x": 262.9027584944321,
+          "y": 783.091112170521
+        },
+        {
+          "id": "red-mangrove",
+          "x": 662.5876403101074,
+          "y": 784.6864327911807
+        },
+        {
+          "id": "stilt-mangrove",
+          "x": 1084.6667726129474,
+          "y": 786.3711388532512
+        },
+        {
+          "id": "cacao",
+          "x": 1467.2948344731396,
+          "y": 787.8983780982174
+        },
+        {
+          "id": "rubber",
+          "x": 1860.6767244196687,
+          "y": 789.4685406672266
+        }
+      ]
+    }
+  },
+  "after": {
+    "errors": [],
+    "common": {
+      "min": [
+        -4.000483512878418,
+        -0.012917738407850266,
+        -3.6879751682281494
+      ],
+      "max": [
+        4.768612384796143,
+        10.167793273925781,
+        4.065788269042969
+      ]
+    },
+    "ground": {
+      "view": {
+        "position": [
+          21.89456219451509,
+          9.796108390540452,
+          35.898749521627785
+        ],
+        "quaternion": [
+          -0.059670661624651324,
+          0.007486003543517615,
+          0.00044750479145613803,
+          0.9981899476711256
+        ],
+        "offsets": [
+          1.9091321229934692,
+          11.232399106025696,
+          21.00259816646576,
+          29.793365001678467,
+          38.766265869140625
+        ]
+      },
+      "calls": 11,
+      "triangles": 113126,
+      "roots": [
+        {
+          "id": "avicennia",
+          "x": 262.9027584944321,
+          "y": 783.091112170521
+        },
+        {
+          "id": "red-mangrove",
+          "x": 662.5876403101074,
+          "y": 784.6864327911807
+        },
+        {
+          "id": "stilt-mangrove",
+          "x": 1084.6667726129474,
+          "y": 786.3711388532512
+        },
+        {
+          "id": "cacao",
+          "x": 1467.2948344731396,
+          "y": 787.8983780982174
+        },
+        {
+          "id": "rubber",
+          "x": 1860.6767244196687,
+          "y": 789.4685406672266
+        }
+      ]
+    }
+  },
+  "checks": {
+    "typecheck": "passed",
+    "existingHierarchyTests": "6 passed",
+    "unrelatedSpecies": "17 Batch species unchanged including Avicennia and Hevea; mangle crown structure and guides unchanged; oak/Douglas-fir untouched"
+  },
+  "measurementNote": "Renderer counters from the shared five-tree diagnostic capture, not a frame-rate benchmark.",
+  "scope": "Selective Stylosa and cacao profiles plus opt-in major root thickness hierarchy for both Rhizophora; renderer, shaders, lighting and protected crowns unchanged; stopped after one comparison.",
+  "visualReview": {
+    "stylosa": "Lower trunk cleared and foliage elevated, but upper fan/T tendency remains; not fully resolved.",
+    "cacao": "Visible short trunk and pods, greater overlapping crown depth; upper limbs still make a cupped outline rather than fully irregular layers.",
+    "roots": "Six major roots requested for mangle, five for stylosa; finer roots reduced. Existing HierarchyBuilder.add caps root radius at 55% of local parent radius, limiting the visual gain. Major roots are still too fine at shared world scale.",
+    "protected": "Avicennia and Hevea generated structures identical against V3; mangle woody crown and foliage guides identical."
+  },
+  "stoppingCondition": "Stopped after one comparison, including unresolved visual criteria; no automatic second iteration."
+}
