@@ -21,11 +21,13 @@ export const presets: Record<string, GrowthPreset> = {
   'douglas-v1':{id:'douglas-v1',name:'Douglas-fir chunky V1',architecture:'central-leader-conifer',height:[19,28],crownRadius:[3.3,4.5],crownBase:.18,trunkRadius:.43,taper:.94,whorls:0,branches:5,recursion:2,spread:.8,droop:.3,leafColor:'#4f7d66'},
 
 };
-export interface VisualMapping {presetId:string; fallback:boolean; reason:string}
+export interface VisualMapping {presetId:string; rendererPresetId?:string; fallback:boolean; reason:string}
 export function mapVisual(scientificName:string|null, archetype=''):VisualMapping {
   const n=scientificName?.toLowerCase()??'';
-  const exact:Record<string,string>={'pseudotsuga menziesii':'douglas','picea abies':'spruce','pinus sylvestris':'pine','quercus robur':'oak','vachellia tortilis':'acacia','acacia tortilis':'acacia'};
+  const exact:Record<string,string>={'pseudotsuga menziesii':'douglas-v1','pinus ponderosa':'ponderosa','thuja plicata':'cedar','betula papyrifera':'birch','acer macrophyllum':'maple','populus tremuloides':'aspen','salix babylonica':'willow','picea abies':'spruce','pinus sylvestris':'pine','quercus robur':'oak','vachellia tortilis':'acacia','acacia tortilis':'acacia'};
   if(Object.hasOwn(exact,n))return {presetId:exact[n],fallback:false,reason:'Species design preset; dimensions are artistic, not measured traits.'};
   const presetId=/acacia|vachellia|senegalia|umbrella|savanna/i.test(n+' '+archetype)?'acacia':/^pinus /.test(n)?'pine':/picea|abies|pseudotsuga|larix|conifer|needle/i.test(n+' '+archetype)?'spruce':'oak';
+  // Keep the stable archetype ID for existing seeds; select the approved visual separately.
+  if(presetId==='spruce')return {presetId,rendererPresetId:'douglas-v1',fallback:true,reason:'Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction.'};
   return {presetId,fallback:true,reason:`Visual archetype fallback (${presets[presetId].architecture}); not a species-specific reconstruction.`};
 }

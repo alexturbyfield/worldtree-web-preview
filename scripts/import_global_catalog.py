@@ -63,6 +63,8 @@ while len(selected)<400:
             selected.add(choice);seen_genera.add(eligible[choice]['genus']);progress=True
         if len(selected)==400: break
     if not progress:break
+# Add the missing Batch 1 taxa without replacing any of the original 400 records.
+selected.update(k for k,r in eligible.items() if r['taxon_name'] in {'Populus tremuloides','Salix babylonica'})
 taxa=[]
 for k in sorted(selected,key=lambda k:eligible[k]['taxon_name']):
     r=eligible[k]; old=[original[n] for n,key in aliases.items() if key==k and n in original]

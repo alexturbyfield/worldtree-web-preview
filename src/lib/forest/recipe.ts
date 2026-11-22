@@ -1,3 +1,5 @@
+import {sceneLibraryStudy} from './library';
+import type {StudioStudy} from '../studio/groups';
 import type {VegetationProfile,VegetationHabitat} from '../global-types';
 import {mapVisual, type VisualMapping} from './presets';
 import {type TreeModel, type Point} from './tree';
@@ -9,7 +11,7 @@ export interface SceneSpecies {
   id:string;scientificName:string|null;commonName:string;confidence:string;
   evidenceLevel:string;origin:string;sources:string[];visual:VisualMapping;
 }
-export interface SceneTree {id:string;index:number;species:SceneSpecies;seed:string;appearanceSeed?:string;revision:number;position:Point;rotation:number;model:TreeModel;foliageCards?:FoliageCard[];canopy?:Canopy}
+export interface SceneTree {id:string;index:number;species:SceneSpecies;seed:string;appearanceSeed?:string;revision:number;position:Point;rotation:number;model:TreeModel;foliageCards?:FoliageCard[];canopy?:Canopy;studio?:StudioStudy;sizeScale?:number}
 export interface SceneRecipe {
   schemaVersion:'0.1.0';location:VegetationProfile['location']|null;ecoregion:VegetationProfile['geography'];
   habitat:VegetationHabitat;seed:string;environment:VegetationProfile['environment'];
@@ -40,14 +42,19 @@ export function createSceneRecipe(profile:VegetationProfile,{seed=profile.seed,d
   const rand=randomSource(seed+'|placement'),cells=Array.from({length:64},(_,i)=>i);
   for(let i=cells.length-1;i>0;i--){const j=Math.floor(rand()*(i+1));[cells[i],cells[j]]=[cells[j],cells[i]];}
   const positions=cells.map(i=>[(i%8-3.5)*11+rand()*3-1.5,0,(Math.floor(i/8)-3.5)*11+rand()*3-1.5] as Point);
+  // Local patches use only the resolver-approved palette. These are design groupings, not abundance.
+  const patchRand=randomSource(seed+'|stand-patches');
+  const patches=Array.from({length:Math.max(5,palette.length*2)},(_,i)=>({x:(patchRand()-.5)*88,z:(patchRand()-.5)*88,species:palette[i%palette.length]}));
   const trees:SceneTree[]=palette.length?positions.slice(0,density).map((p,index)=>{
-    const species=palette[index%palette.length],revision=revisions[index]??0;
+    const species=patches.reduce((best,patch)=>Math.hypot(patch.x-p[0],patch.z-p[2])<Math.hypot(best.x-p[0],best.z-p[2])?patch:best,patches[0]).species,revision=revisions[index]??0;
     const individualSeed=String(hashSeed(`${structureSeed}|${species.visual.presetId}|individual|${index}|${revision}`));
     const pigmentSeed=String(hashSeed(`${appearanceSeed}|${species.id}|${index}`));
     p[1]=terrainHeight(p[0],p[2],seed);
-    const model=generatePainterlyTree({presetId:species.visual.presetId,structuralSeed:individualSeed,appearanceSeed:pigmentSeed,...art});
-    const canopy=renderMode==='diagram'?undefined:generateCanopy(model,{fluffiness,clumpOverlap,surfaceLeafDetail,branchExposure});
-    return {id:`tree-${index}`,index,species,seed:individualSeed,appearanceSeed:pigmentSeed,revision,position:p,rotation:randomSource(seed+'|rotation|'+index)()*Math.PI*2,model:canopy?{...model,dimensions:canopy.dimensions}:model,canopy,foliageCards:canopy?.surfaceCards??[]};
+    const sizeScale=.68+randomSource(structureSeed+'|size|'+index)()*.42;
+    const studio=renderMode==='diagram'?undefined:sceneLibraryStudy(species.visual.rendererPresetId??species.visual.presetId,individualSeed,pigmentSeed,sizeScale,art);
+    const model=studio?.model??generatePainterlyTree({presetId:species.visual.presetId==='douglas-v1'?'douglas':species.visual.presetId,structuralSeed:individualSeed,appearanceSeed:pigmentSeed,...art});
+    const canopy=renderMode==='diagram'||studio?undefined:generateCanopy(model,{fluffiness,clumpOverlap,surfaceLeafDetail,branchExposure});
+    return {id:`tree-${index}`,index,species,seed:individualSeed,appearanceSeed:pigmentSeed,revision,position:p,studio,sizeScale:studio?sizeScale:1,rotation:randomSource(seed+'|rotation|'+index)()*Math.PI*2,model:canopy?{...model,dimensions:canopy.dimensions}:model,canopy,foliageCards:canopy?.surfaceCards??[]};
   }):[];
-  return {schemaVersion:'0.1.0',wind,renderMode,structureSeed,appearanceSeed,art,purpose:'ecological_scene',location:profile.location,ecoregion:profile.geography,habitat:profile.habitat,seed,environment:profile.environment,evidenceLevel:profile.evidenceLevel,ecologicalStatus:profile.status,requestedTreeCount:density,trees,palette,conditionalStudy:conditional,terrain:{widthMeters:100,depthMeters:100,source:'Synthetic seeded terrain; not a digital elevation model.'},distribution:'Seeded stratified design spacing and equal palette cycling; not ecological abundance or spawn probability.',message:trees.length?profile.description:profile.title+'. '+profile.description,limitations:[...profile.limitations,'All tree shapes, height and crown dimensions are art-directed procedural design values, not measured or sourced botanical traits.','Only three architectures are implemented; palms, mangrove roots and other specialist forms use labelled visual fallbacks.','Density, placement and synthetic terrain are design controls, not inferred current forest cover.'],sources:profile.sources};
+  return {schemaVersion:'0.1.0',wind,renderMode,structureSeed,appearanceSeed,art,purpose:'ecological_scene',location:profile.location,ecoregion:profile.geography,habitat:profile.habitat,seed,environment:profile.environment,evidenceLevel:profile.evidenceLevel,ecologicalStatus:profile.status,requestedTreeCount:density,trees,palette,conditionalStudy:conditional,terrain:{widthMeters:100,depthMeters:100,source:'Synthetic seeded terrain; not a digital elevation model.'},distribution:'Seeded stratified spacing with nearest-patch mixed stands from the eligible palette; not ecological abundance or spawn probability.',message:trees.length?profile.description:profile.title+'. '+profile.description,limitations:[...profile.limitations,'All tree shapes, height and crown dimensions are art-directed procedural design values, not measured or sourced botanical traits.','Approved Atelier species designs are used where available; unsupported species retain labelled visual archetype fallbacks. Size variation is artistic, not inferred tree age.','Density, placement and synthetic terrain are design controls, not inferred current forest cover.'],sources:profile.sources};
 }

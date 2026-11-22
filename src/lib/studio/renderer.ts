@@ -8,7 +8,7 @@ import {brushTexture,paintedWoodGeometry} from '../forest/paint-assets';
 import {randomSource} from '../forest/random';
 import type {Point} from '../forest/tree';
 const vertex=/*glsl*/`
-uniform float woodland;uniform float sage;
+uniform float woodland;uniform float sage;uniform float windTime;uniform float windAmplitude;
 attribute vec4 tileRect;attribute vec3 color;attribute float interior;
 varying vec2 atlasUv;varying vec3 paintLight;varying float canopyValue;varying float sunFacing;varying vec3 pigment;varying float leafRim;varying float depthShade;varying vec3 canopyWorld;
 void main(){
@@ -24,7 +24,9 @@ void main(){
   pigment=color;depthShade=interior;
   canopyValue=.27+.1*(N.y*.5+.5)+.2*sunFacing+.04*interior+(color.g-.55)*.18;
   paintLight=color*(fill+vec3(1.,.91,.73)*sunlight*.85)*interior;
-  gl_Position=projectionMatrix*modelViewMatrix*vec4(position,1.);
+  vec3 displaced=position;
+  displaced.x+=sin(canopyWorld.y*1.3+canopyWorld.x*.21+windTime*1.7)*windAmplitude*smoothstep(.05,.95,uv.y);
+  gl_Position=projectionMatrix*modelViewMatrix*vec4(displaced,1.);
 }`;
 const fragment=/*glsl*/`
 uniform sampler2D foliageMap;uniform float metric;uniform float silhouette;uniform float woodland;uniform float sage;uniform vec3 shadowPigment;uniform vec3 midPigment;uniform vec3 highPigment;uniform vec3 crownMin;uniform vec3 crownMax;uniform float gradientStrength;uniform float rimStrength;
@@ -113,6 +115,14 @@ function oakBark(){
   for(const k of knots){for(let ring=5;ring>=1;ring--){const r=k.r*ring/5;ctx.beginPath();ctx.ellipse(k.x,k.y,r*.48,r*1.6,-.2,0,Math.PI*2);ctx.strokeStyle=ring%2?'rgba(89,44,24,.6)':'rgba(255,221,163,.66)';ctx.lineWidth=ring%2?3:2;ctx.stroke();}}
   const texture=new THREE.CanvasTexture(canvas);texture.colorSpace=THREE.SRGBColorSpace;texture.wrapS=texture.wrapT=THREE.RepeatWrapping;return texture;
 }
+/** Shared Atelier paint pipeline; callers own and dispose its texture and material. */
+export function studioFoliageMaterial(q:StudioSettings,mobile=false){
+  const texture=new THREE.CanvasTexture(studioAtlas(q,mobile));texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=2;
+  const library=!!q.presetId&&!!batchSpecies[q.presetId];
+  const pigments=q.evergreenStudy&&q.view==='conifer'?['#163c37','#647f65','#a5b697']:{sage:['#294135','#6e9462','#d9c976'],woodland:['#254c45','#3e6c37','#b8b15c'],sunlit:['#2c5147','#507639','#c4b45b'],cool:['#264e4c','#3d6950','#a2ab68']}[q.palette??'woodland'];
+  const material=new THREE.ShaderMaterial({uniforms:{windTime:{value:0},windAmplitude:{value:0},crownMin:{value:new THREE.Vector3()},crownMax:{value:new THREE.Vector3(1,1,1)},gradientStrength:{value:q.crownGradient??.45},rimStrength:{value:q.crownRim??.4},sage:{value:q.palette==='sage'||q.evergreenStudy&&q.view==='conifer'?1:0},woodland:{value:q.unified&&q.view==='broadleaf'||q.evergreenStudy&&q.view==='conifer'||library?1:0},shadowPigment:{value:new THREE.Color(pigments[0])},midPigment:{value:new THREE.Color(pigments[1])},highPigment:{value:new THREE.Color(pigments[2])},foliageMap:{value:texture},metric:{value:0},silhouette:{value:0}},vertexShader:vertex,fragmentShader:fragment,side:THREE.DoubleSide,depthWrite:true,transparent:false});
+  return material;
+}
 export interface FillReport {width:number;height:number;meanLayers:number;meanQuadLayers:number;alphaRejectedFraction:number;coverageFraction:number;peakLayers:number;saturatedPixels:number;quadPeakLayers:number;quadSaturatedPixels:number;method:string;heatmap:string}
 export interface StudioMetrics {settingsKey:string;calls:number;triangles:number;surfaces:number;groups:number;buildMs:number;renderer:string;pixelRatio:number;viewport:string;fps?:number;medianFrameMs?:number;p95FrameMs?:number;meanCpuMs?:number;fill?:FillReport}
 export function mountStudio(host:HTMLDivElement,q:StudioSettings,onReady:(m:StudioMetrics)=>void,onError:(m:string)=>void,previousView?:{position:Point;target:Point}){
@@ -122,10 +132,8 @@ export function mountStudio(host:HTMLDivElement,q:StudioSettings,onReady:(m:Stud
   const scene=new THREE.Scene();scene.background=new THREE.Color('#e2e8e1');
   const camera=new THREE.PerspectiveCamera(38,host.clientWidth/host.clientHeight,.05,160),controls=new OrbitControls(camera,renderer.domElement);controls.enableDamping=true;controls.minDistance=2;controls.maxDistance=80;controls.maxPolarAngle=Math.PI*.87;
   const kinds=q.view==='all'?studioKinds:[q.view],studies=kinds.map(kind=>createStudioStudy(kind,q)),spacing=q.mode==='trees'?8:7.5,positions=kinds.map((_,i)=>(i-(kinds.length-1)/2)*spacing);
-  const texture=new THREE.CanvasTexture(studioAtlas(q,mobile));texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=2;
-  const library=!!q.presetId&&!!batchSpecies[q.presetId],originalOak=q.unified&&q.view==='broadleaf'&&(!q.presetId||q.presetId==='oak');
-  const pigments=q.evergreenStudy&&q.view==='conifer'?['#163c37','#647f65','#a5b697']:{sage:['#294135','#6e9462','#d9c976'],woodland:['#254c45','#3e6c37','#b8b15c'],sunlit:['#2c5147','#507639','#c4b45b'],cool:['#264e4c','#3d6950','#a2ab68']}[q.palette??'woodland'];
-  const material=new THREE.ShaderMaterial({uniforms:{crownMin:{value:new THREE.Vector3()},crownMax:{value:new THREE.Vector3(1,1,1)},gradientStrength:{value:q.crownGradient??.45},rimStrength:{value:q.crownRim??.4},sage:{value:q.palette==='sage'||q.evergreenStudy&&q.view==='conifer'?1:0},woodland:{value:q.unified&&q.view==='broadleaf'||q.evergreenStudy&&q.view==='conifer'||library?1:0},shadowPigment:{value:new THREE.Color(pigments[0])},midPigment:{value:new THREE.Color(pigments[1])},highPigment:{value:new THREE.Color(pigments[2])},foliageMap:{value:texture},metric:{value:0},silhouette:{value:0}},vertexShader:vertex,fragmentShader:fragment,side:THREE.DoubleSide,depthWrite:true,transparent:false});
+  const material=studioFoliageMaterial(q,mobile),texture=material.uniforms.foliageMap.value as THREE.Texture;
+  const originalOak=q.unified&&q.view==='broadleaf'&&(!q.presetId||q.presetId==='oak');
   const geometry=studioGeometry(studies,positions);material.uniforms.crownMin.value.copy(geometry.boundingBox!.min);material.uniforms.crownMax.value.copy(geometry.boundingBox!.max);const foliage=new THREE.Mesh(geometry,material);scene.add(foliage);
   const scaled=studies.map((s,i)=>({model:{...s.model,segments:s.segments.map(segment=>({...segment,a:segment.a.map((v,k)=>v*s.scale+s.offset[k]) as Point,b:segment.b.map((v,k)=>v*s.scale+s.offset[k]) as Point,r0:segment.r0*s.scale,r1:segment.r1*s.scale}))},position:[positions[i],0,0] as Point,rotation:0}));
   const bark=originalOak?oakBark():brushTexture('bark'),wood=new THREE.Mesh<THREE.BufferGeometry,THREE.Material>(originalOak?oakWood(scaled[0].model.segments,oakGrowthForms[q.oakGrowth??'spreading'].taper,q.structure):paintedWoodGeometry(scaled,false,mobile).geometry,new THREE.MeshStandardMaterial({color:'#ffffff',map:bark,bumpMap:originalOak?bark:null,bumpScale:.012,vertexColors:true,roughness:1}));wood.visible=q.mode!=='leaf';scene.add(wood);

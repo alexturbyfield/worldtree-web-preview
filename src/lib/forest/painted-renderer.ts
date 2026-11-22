@@ -1,9 +1,10 @@
+import {libraryFoliageBatch,libraryPickClumps} from './library';
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import type {SceneRecipe} from './recipe';
 import {terrainHeight} from './recipe';
 import {brushTexture,paintedWoodGeometry} from './paint-assets';
-import {generateCanopy} from './canopy';
+import {generateCanopy,defaultCanopy} from './canopy';
 import {generateCanopyBillboards,transformCanopyNormal} from './canopy-billboards';
 import {batchCanopyBillboards,canopyBillboardMaterial,installCanopyShader} from './canopy-billboard-material';
 import type {PaintedTree} from './painterly';
@@ -49,20 +50,28 @@ export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick
   const pickables:THREE.Object3D[]=[],lods:THREE.Group[]=[],cardCounts:number[]=[];
   const debugSkeleton=options.debug==='skeleton';
   const foliageResources:ReturnType<typeof canopyBillboardMaterial>[]=[];
-  const canopies=recipe.trees.map(t=>t.canopy??generateCanopy(t.model as PaintedTree)),clumpCounts:number[]=[];
-  const allCards=recipe.trees.flatMap((t,i)=>generateCanopyBillboards(canopies[i].clumps,t.model.presetId,t.seed,t.appearanceSeed??recipe.appearanceSeed,false,performanceMode,canopies[i].controls.surfaceLeafDetail).map(card=>({t,card})));
+  const canopies=recipe.trees.map(t=>t.studio?{controls:defaultCanopy,clumps:libraryPickClumps(t.studio),coarseClumps:libraryPickClumps(t.studio)}:t.canopy??generateCanopy(t.model as PaintedTree)),clumpCounts:number[]=[];
+  const libraryResources:ReturnType<typeof libraryFoliageBatch>[]=[],libraryMaterials=new Map<string,THREE.ShaderMaterial>();
+  const libraryGroups=new Map<string,typeof recipe.trees>();
+  for(const tree of recipe.trees)if(tree.studio){const id=tree.studio.model.presetId,list=libraryGroups.get(id)??[];list.push(tree);libraryGroups.set(id,list);}
+  const allCards=recipe.trees.flatMap((t,i)=>t.studio?[]:generateCanopyBillboards(canopies[i].clumps,t.model.presetId,t.seed,t.appearanceSeed??recipe.appearanceSeed,false,performanceMode,canopies[i].controls.surfaceLeafDetail).map(card=>({t,card})));
   if(debugSkeleton){
     const points:number[]=[];for(const t of recipe.trees)for(const segment of t.model.segments)for(const p of [segment.a,segment.b])points.push(p[0]+t.position[0],p[1]+t.position[1],p[2]+t.position[2]);
     const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.Float32BufferAttribute(points,3));scene.add(new THREE.LineSegments(geometry,new THREE.LineBasicMaterial({color:'#375c48'})));
   }else for(const far of [false,true]){
     const group=new THREE.Group();lods.push(group);scene.add(group);if(!recipe.trees.length){cardCounts.push(0);clumpCounts.push(0);continue;}
-    const {geometry,faces}=paintedWoodGeometry(recipe.trees.map((t,i)=>({model:{...t.model,segments:t.model.segments.filter(segment=>segment.depth===0||(t.model.presetId==='acacia'&&segment.depth<=2)||(segment.depth===1&&canopies[i].controls.branchExposure>.28)||(segment.depth>1&&canopies[i].controls.branchExposure>.7))},position:t.position,rotation:t.rotation})),far,mobile);
+    const {geometry,faces}=paintedWoodGeometry(recipe.trees.map((t,i)=>({model:{...t.model,segments:t.model.segments.filter(segment=>segment.depth===0||(t.studio&&segment.depth<=2)||(t.model.presetId==='acacia'&&segment.depth<=2)||(segment.depth===1&&canopies[i].controls.branchExposure>.28)||(segment.depth>1&&canopies[i].controls.branchExposure>.7))},position:t.position,rotation:t.rotation})),far,mobile);
     const wood=new THREE.Mesh(geometry,woodMaterial);wood.castShadow=true;wood.userData.faces=faces;group.add(wood);pickables.push(wood);
+    let libraryCards=0;
+    for(const [id,trees] of libraryGroups){
+      const resource=libraryFoliageBatch(trees,id,recipe.appearanceSeed,mobile,far||performanceMode,options.debug==='wireframe',libraryMaterials.get(id));
+      libraryMaterials.set(id,resource.mesh.material);libraryResources.push(resource);resource.mesh.userData.foliageBillboards=true;group.add(resource.mesh);libraryCards+=resource.cards;
+    }
     // The ellipsoids remain data only. Final Painterly/Performance contain NO solid canopy meshes.
     clumpCounts.push(0);
     const resource=canopyBillboardMaterial(recipe.appearanceSeed,performanceMode||mobile,options.debug==='wireframe',foliageResources[0],far);foliageResources.push(resource);
-    const data=far?recipe.trees.flatMap((t,i)=>generateCanopyBillboards(canopies[i].coarseClumps,t.model.presetId,t.seed,t.appearanceSeed??recipe.appearanceSeed,true,performanceMode,canopies[i].controls.surfaceLeafDetail).map(card=>({t,card}))):allCards;
-    const cards=data.map(d=>d.card);cardCounts.push(cards.length);if(!cards.length)continue;
+    const data=far?recipe.trees.flatMap((t,i)=>t.studio?[]:generateCanopyBillboards(canopies[i].coarseClumps,t.model.presetId,t.seed,t.appearanceSeed??recipe.appearanceSeed,true,performanceMode,canopies[i].controls.surfaceLeafDetail).map(card=>({t,card}))):allCards;
+    const cards=data.map(d=>d.card);cardCounts.push(cards.length+libraryCards);if(!cards.length)continue;
     const world=new THREE.Matrix4();
     const worldCards=data.map(({t,card})=>{
       const scaffold=(far?canopies[t.index].coarseClumps:canopies[t.index].clumps)[card.scaffoldId],c=Math.cos(t.rotation),sn=Math.sin(t.rotation),offset=new THREE.Vector3(...card.position).sub(new THREE.Vector3(...scaffold.position)).applyAxisAngle(new THREE.Vector3(0,1,0),t.rotation);
@@ -79,7 +88,7 @@ export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick
   }
   const ring=new THREE.Mesh(new THREE.RingGeometry(.95,1.22,32),new THREE.MeshBasicMaterial({color:'#ffdb8b',side:THREE.DoubleSide,depthTest:false}));ring.rotation.x=-Math.PI/2;ring.visible=false;ring.renderOrder=10;scene.add(ring);
   let dirty=true,frame=0,stopped=false,lastReport=0,lastFar=false,frameCount=0,lastWindFrame=0;
-  const windEnabled=(recipe.wind??true)&&allCards.length>0&&!debugSkeleton&&!matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const windEnabled=(recipe.wind??true)&&(allCards.length>0||libraryGroups.size>0)&&!debugSkeleton&&!matchMedia('(prefers-reduced-motion: reduce)').matches;
   const buildMs=performance.now()-start;
   let measurement:{start:number;previous:number;intervals:number[];cpu:number[];resolve:(r:BenchmarkResult|null)=>void}|null=null;
   renderer.debug.onShaderError=()=>{stopped=true;measurement?.resolve(null);measurement=null;onError('The painterly material could not compile on this graphics driver. Use the Diagram renderer to try the original simpler material.');};
@@ -116,6 +125,7 @@ export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick
   function animate(){
     if(stopped)return;frame=requestAnimationFrame(animate);controls.update();const elapsed=performance.now();const windDue=windEnabled&&elapsed-lastWindFrame>(mobile?50:33);if(!dirty&&!measurement&&!windDue)return;dirty=false;lastWindFrame=elapsed;
     foliageResources.forEach(r=>{r.time.value=(elapsed-start)/1000;r.amplitude.value=windEnabled?.045:0;});
+    libraryMaterials.forEach(m=>{m.uniforms.windTime.value=(elapsed-start)/1000;m.uniforms.windAmplitude.value=windEnabled?.045:0;});
     const far=!lab&&camera.position.distanceTo(controls.target)>(mobile?76:125);lods.forEach((g,i)=>g.visible=far?i===1:i===0);
     if(far!==lastFar){renderer.shadowMap.needsUpdate=true;lastFar=far;}
     const now=performance.now(),renderStart=now;renderer.render(scene,camera);if(stopped)return;const cpu=performance.now()-renderStart;frameCount++;
@@ -147,7 +157,7 @@ export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick
       renderer.domElement.removeEventListener('pointerdown',pointerDown);renderer.domElement.removeEventListener('pointerup',pointerUp);renderer.domElement.removeEventListener('pointercancel',pointerCancel);renderer.domElement.removeEventListener('webglcontextlost',lost);
       const geometries=new Set<THREE.BufferGeometry>(),allMaterials=new Set<THREE.Material>([woodMaterial,...foliageResources.map(r=>r.material)]);
       scene.traverse(o=>{if(o instanceof THREE.Mesh||o instanceof THREE.LineSegments){geometries.add(o.geometry);(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>allMaterials.add(m));}if(o instanceof THREE.InstancedMesh)o.dispose();});
-      geometries.forEach(g=>g.dispose());allMaterials.forEach(m=>m.dispose());new Set([bark,...foliageResources.map(r=>r.texture)]).forEach(t=>t.dispose());sun.shadow.dispose();renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove();
+      geometries.forEach(g=>g.dispose());allMaterials.forEach(m=>m.dispose());new Set([bark,...foliageResources.map(r=>r.texture),...libraryResources.map(r=>r.texture)]).forEach(t=>t.dispose());sun.shadow.dispose();renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove();
     },
   };
 }
