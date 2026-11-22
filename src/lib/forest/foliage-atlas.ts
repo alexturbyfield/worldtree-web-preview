@@ -5,6 +5,7 @@ type P=[number,number];
 export interface AtlasLeaf {root:P;length:number;width:number;angle:number;lobed:boolean;needle:boolean}
 export interface AtlasTile {kind:FoliageKind;label:string;leaves:AtlasLeaf[];stems:P[][]}
 export const ATLAS_LABELS=['Douglas-fir flat spray','Pine paired needles','Spruce branchlet','Oak leaf cluster','Individual leaf','Douglas-fir variant','Oak cluster variant','Acacia leaflets'];
+export const CANOPY_ATLAS_LABELS=ATLAS_LABELS.map((label,index)=>index===4?'Dense oval-leaf cluster':label);
 const kinds:FoliageKind[]=['douglas','pine','spruce','broadleaf','leaf','douglas','broadleaf','acacia'];
 const point=(root:P,a:number,length:number):P=>[root[0]+Math.cos(a)*length,root[1]+Math.sin(a)*length];
 /** Morphology is independent of pigment. Unit coordinates, no DOM or random globals. */
@@ -57,16 +58,38 @@ export function atlasLayout(seed='worldtree-botanical-v11'):AtlasTile[]{
     return {kind,label:ATLAS_LABELS[index],leaves,stems};
   });
 }
+/** Dense multi-leaf tiles for scaffold canopies; legacy branch-card atlas is preserved. */
+export function canopyAtlasLayout():AtlasTile[]{
+  return atlasLayout().map((tile,index)=>{
+    const rand=randomSource('wildloom-dense-atlas-'+index),leaves:AtlasLeaf[]=[],stems:P[][]=[];
+    if(['douglas','spruce','pine','acacia'].includes(tile.kind)){
+      for(let j=0;j<8;j++){
+        const angle=j*2.399+index*.3,scale=.52+rand()*.12,cx=.5+Math.cos(angle)*.18,cy=.5+Math.sin(angle)*.18;
+        const transform=([x,y]:P):P=>[cx+((x-.5)*Math.cos(angle)-(y-.5)*Math.sin(angle))*scale,cy+((x-.5)*Math.sin(angle)+(y-.5)*Math.cos(angle))*scale];
+        for(const l of tile.leaves)leaves.push({...l,root:transform(l.root),angle:l.angle+angle,length:l.length*scale,width:l.width*scale*(tile.kind==='douglas'?1.9:tile.kind==='spruce'?1.6:1.8)});
+        stems.push(...tile.stems.map(stem=>stem.map(transform)));
+      }
+    }else{
+      const dense=index===4,count=dense?72:56;
+      for(let j=0;j<count;j++){
+        const a=j*2.399+index,rad=.32*Math.sqrt((j+.5)/count),length=(dense?.16:.23)*(.82+rand()*.35),width=length*(dense?.65:.7),angle=a+(rand()-.5)*1.6;
+        const center:P=[.5+Math.cos(a)*rad,.5+Math.sin(a)*rad];
+        leaves.push({root:[center[0]-Math.cos(angle)*length*.5,center[1]-Math.sin(angle)*length*.5],length,width,angle,lobed:!dense,needle:false});
+      }
+    }
+    return {kind:tile.kind,label:index===4?'Dense oval-leaf cluster':tile.label,leaves,stems};
+  });
+}
 export interface FoliageAtlas {canvas:HTMLCanvasElement;alpha:Uint8Array;tileSize:number;width:number;height:number;tiles:AtlasTile[];appearanceSeed:string;mipmaps?:HTMLCanvasElement[]}
 const cache=new Map<string,FoliageAtlas>();
 export function atlasCacheStats(){return {entries:cache.size,capacity:4};}
 /** Canvas rasterization is browser-only; cached across renderer and preview mounts. */
-export function getFoliageAtlas(appearanceSeed:string,tileSize=256):FoliageAtlas {
+export function getFoliageAtlas(appearanceSeed:string,tileSize=256,clusters=false):FoliageAtlas {
   if(tileSize!==256&&tileSize!==512)throw new Error('Atlas tiles must be 256 or 512 pixels.');
-  const key=appearanceSeed+'|'+tileSize,cached=cache.get(key);if(cached){cache.delete(key);cache.set(key,cached);return cached;}
+  const key=appearanceSeed+'|'+tileSize+'|'+clusters,cached=cache.get(key);if(cached){cache.delete(key);cache.set(key,cached);return cached;}
   const canvas=document.createElement('canvas');canvas.width=tileSize*4;canvas.height=tileSize*2;
   const ctx=canvas.getContext('2d',{willReadFrequently:true});if(!ctx)throw new Error('Canvas 2D is needed to paint the foliage atlas.');
-  const tiles=atlasLayout(),paint=randomSource(appearanceSeed+'|atlas-pigment-v11');
+  const tiles=clusters?canopyAtlasLayout():atlasLayout(),paint=randomSource(appearanceSeed+'|atlas-pigment-v11');
   tiles.forEach((tile,index)=>{
     ctx.save();ctx.translate(index%4*tileSize,Math.floor(index/4)*tileSize);ctx.scale(tileSize,tileSize);ctx.beginPath();ctx.rect(.025,.025,.95,.95);ctx.clip();
     ctx.lineCap='round';ctx.lineJoin='round';
