@@ -1,3 +1,41 @@
+# Wildloom · Foliage Studio prototype
+
+The separate **`/studio`** route compares broadleaf foliage, decorative blossoms and Douglas-fir sprays. It is a reference-driven prototype for **user visual approval**. The Forest Explorer, map, existing Tree Atelier, ecological selection and all files under `src/lib/forest/` remain unchanged from commit `ed6f49a4b12d9808116881c4559d38d932b5be20`. No production deployment or forest integration is part of this prototype release.
+
+The three supplied images guide soft layered crowns, irregular botanical silhouettes, cool dark interiors, warm outer highlights, pink blossom clouds and horizontal drooping fir boughs. They remain private; no reference pixels are copied into the repository or deployment. [Reference comparison and remaining gaps](public/showcase/foliage-studio/reference-comparison.json) records the actual match and limitations. The prototype does not reproduce the references' scenery, atmospheric lighting or bark. Some patch repetition remains; the fir is coarser and more regular than the supplied example. The decorative blossom study uses the existing broadleaf skeleton and makes no species/flowering-phenology claim.
+
+A reusable seeded Canvas pipeline paints **12 alpha-masked atlas tiles**: four oval/lanceolate leaf fans, four five-petal blossom clusters and four feathered fir branchlets. Transparent backgrounds, internal gradients, leaf veins, petal centers and needle detail are generated locally. Four cached atlas canvases are retained; one texture/material is shared across all foliage in a comparison. Structural seeds affect branches and foliage placement; appearance seeds change pigment without moving geometry or altering atlas alpha. Detail controls texture morphology; density controls surfaces. All five sliders and both seeds are encoded in shareable URLs.
+
+The existing custom trunk/branch generator is imported without changes. New foliage groups project their anchors onto real source branch segments. Broadleaf and blossom groups overlap three staggered layers of irregular curved patches. Fir groups follow each branch's direction, using shorter overlapping branchlets and world-down droop along the original horizontal tiers. Each open surface has a 3 × 3 grid (eight triangles), with painterly envelope normals and darker inner layers. There are no closed foliage volumes, downloaded meshes, images or third-party tree generators. Foliage and wood are each batched into one draw call. Geometry is generated only when settings change; camera movement does not rebuild it. GPU resources are disposed when the study changes.
+
+The studio provides group comparisons and full branch/tree studies, orbit and zoom, cluster size/density, overlap, silhouette detail, pigment variation, independent seeds, atlas PNG download, JSON study export and live frame/fill measurements. Camera framing survives pigment/control changes; **Frame studies** resets it. Mobile initially selects one kind for readable inspection. Explicit comparison links remain supported. Unavailable WebGL and malformed URLs have accessible errors. The forest renderer is not imported into the new studio renderer or modified by it.
+
+Screenshots: [three groups](public/showcase/foliage-studio/comparison-groups.png), [three tree silhouettes](public/showcase/foliage-studio/comparison-trees.png), [broadleaf](public/showcase/foliage-studio/broadleaf-group.png), [blossoms](public/showcase/foliage-studio/blossom-group.png), [fir spray](public/showcase/foliage-studio/fir-spray.png), [mobile fir tree](public/showcase/foliage-studio/mobile-fir-tree.png), [transparent atlas](public/showcase/foliage-studio/foliage-atlas.png). Structural seeds 17, 29 and 86 are captured for each group type.
+
+## Studio frame time and fill
+
+The **Measure frame time & overdraw** button runs a five-second continuous orbit with the canvas in view. Browser frame intervals supply FPS/median/p95; CPU submission is not GPU timing. A separate 160-pixel-wide depth-disabled additive pass counts alpha-covered foliage layers, then a second pass counts unmasked surface coverage. It reports potential alpha overdraw, rejected surface area, peak and capped pixels, plus a heatmap. This is a sampled geometric coverage estimate, **not a hardware fragment-invocation counter**. Readback is excluded from orbit timings. Values depend on view; counts cap at 255 and the UI identifies capped measurements. Default recorded cases have no saturated alpha or unmasked samples.
+
+Sequential Chromium 159 / SwiftShader results; mobile is 390 × 844 touch emulation, not a physical Android benchmark. Studio software pixel ratios are 1 desktop / 0.85 mobile. Hardware caps are 1.5 / 1.25. Tree comparisons are much more expensive than isolated groups even though both use two draws.
+
+| Measured case | FPS | p95 frame ms | Potential alpha layers / filled pixel | Draws | Triangles |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| comparison-groups | 56.2 | 32.2 | 4.34 | 2 | 798 |
+| comparison-trees | 11.3 | 91.0 | 17.51 | 2 | 43,164 |
+| broadleaf-group | 58.1 | 28.7 | 4.90 | 2 | 234 |
+| blossom-group | 59.1 | 28.7 | 3.98 | 2 | 234 |
+| fir-spray | 56.1 | 32.8 | 1.75 | 2 | 330 |
+| mobile-broadleaf | 59.9 | 17.7 | 4.61 | 2 | 222 |
+| mobile-blossom | 59.7 | 24.2 | 3.49 | 2 | 222 |
+| mobile-fir | 59.9 | 18.0 | 1.75 | 2 | 318 |
+| mobile-fir-tree | 29.7 | 39.5 | 4.05 | 2 | 26,504 |
+
+[Full measurements](public/showcase/foliage-studio/performance.json) include actual renderer, resolution, scene build time, peak layers and estimated alpha rejection. [Three-tree overdraw heatmap](public/showcase/foliage-studio/comparison-trees-overdraw.png). Dense tree mode remains slow on software rendering; physical Android/GPU performance is unmeasured. This is not a claim that the approach is ready for a populated forest. Visual approval and further scene-scale profiling are required before any integration.
+
+Reproduce with `npm run build`, `npm run preview:local`, then `node scripts/profile-studio.mjs [origin]`. Unit validation covers seeded buffers, branch attachment, independent pigment, size/density/overlap, zero density and preservation of source skeletons. Browser validation covers desktop and 390 × 844 touch controls, actual canvas orbit, all studio controls, atlas alpha, JSON/direct links, frame/fill measurements, invalid links and WebGL failure. The existing application regression suite remains intact.
+
+---
+
 # Wildloom · Transferred-normal leaf canopies
 
 Painterly and Performance now render **overlapping alpha-cutout multi-leaf billboards**. The existing `CanopyClump` centers, radii, rotations, structural seeds, species and hierarchy are retained exactly as invisible ellipsoid scaffolds. No solid canopy geometry is constructed in these two renderers. Diagram preserves its existing debug renderer. Terrain, UI layout, tree placement and camera framing are unchanged; the existing atlas preview now displays the new cluster tiles.
