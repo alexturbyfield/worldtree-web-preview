@@ -3,7 +3,7 @@ import {generatePainterlyTree,type PaintedTree} from '../forest/painterly';
 import {randomSource} from '../forest/random';
 import type {Point,Segment} from '../forest/tree';
 export type StudioKind='broadleaf'|'flower'|'conifer';
-export interface StudioSettings {size:number;density:number;overlap:number;detail:number;colorVariation:number;structure:string;appearance:string;view:StudioKind|'all';mode:'groups'|'trees'}
+export interface StudioSettings {size:number;density:number;overlap:number;detail:number;colorVariation:number;structure:string;appearance:string;view:StudioKind|'all';mode:'leaf'|'groups'|'trees';unified?:boolean;leafScale?:number;asymmetry?:number;shape?:number}
 export const studioDefaults:StudioSettings={size:1,density:.76,overlap:.72,detail:.75,colorVariation:.65,structure:'29',appearance:'garden',view:'all',mode:'groups'};
 export const studioKinds:StudioKind[]=['broadleaf','flower','conifer'];
 export interface FoliageGroup {id:number;anchor:Point;center:Point;radii:Point;branchIndex:number;axis:Point}
@@ -23,14 +23,14 @@ export function createStudioStudy(kind:StudioKind,q:StudioSettings):StudioStudy{
   const candidates=model.foliage.map((f,i)=>{const attachment=nearest(f.position,model.segments,conifer&&f.position[1]>model.parameters.height*.94),branch=model.segments[attachment.index];return {id:i,anchor:attachment.point,center:f.position,radii:f.scale.map(n=>n*q.size*(conifer?1.15:1.28)) as Point,branchIndex:attachment.index,axis:new Vector3(...branch.b).sub(new Vector3(...branch.a)).normalize().toArray() as Point};});
   // Broadleaf anchors include the actual recursive branch tips; conifer guides follow its existing horizontal tiers.
   const all=candidates.filter((_,i)=>conifer?i%3!==2:i%2===0);
-  const chosen=q.mode==='groups'?[all[Math.floor(all.length*.43)]]:all;
-  const groups=chosen.map(g=>({...g,radii:[...g.radii] as Point}));
+  const chosen=q.mode!=='trees'?[all[Math.floor(all.length*.43)]]:all;
+  const groups=chosen.map(g=>({...g,radii:g.radii.map((r,i)=>r*(q.unified&&i===1?.7+(q.shape??.5)*.6:1)) as Point}));
   const fronds:StudioFrond[]=[];
   for(const group of groups){
     const layers=conifer?3:3,spokes=conifer?Math.round(2+q.density*2):Math.round(4+q.density*5),phase=rand()*6.283;
     for(let layer=0;layer<layers;layer++)for(let j=0;j<spokes;j++){
-      if(q.density===0)continue;
-      const a=conifer?Math.atan2(group.axis[2],group.axis[0])+(j/Math.max(1,spokes-1)-.5)*1.4+layer*.12:phase+j/spokes*Math.PI*2+layer*.63+(rand()-.5)*.3,rad=(conifer?.12:.5)*(1-layer*.15)*(conifer?1:.8+rand()*.4),r=group.radii;
+      if(q.density===0&&q.mode!=='leaf')continue;
+      const a=conifer?Math.atan2(group.axis[2],group.axis[0])+(j/Math.max(1,spokes-1)-.5)*1.4*(.6+.6*(q.asymmetry??.7))+layer*.12:phase+j/spokes*Math.PI*2+layer*.63+(rand()-.5)*.3*(q.asymmetry??1),rad=(conifer?.12:.5)*(1-layer*.15)*(conifer?1:.8+rand()*.4),r=group.radii;
       const position:Point=[group.anchor[0]+Math.cos(a)*r[0]*rad,group.anchor[1]+r[1]*(conifer?layer*.18-.18:[-.22,.18,.5][layer]+(rand()-.5)*.18),group.anchor[2]+Math.sin(a)*r[2]*rad];
       const direction=conifer?new Vector3(Math.cos(a)*(group.axis[1]>.9?.2:1),group.axis[1]>.9?.9:-.12-layer*.04-.35*Math.pow(group.anchor[1]/model.parameters.height,2),Math.sin(a)*(group.axis[1]>.9?.2:1)):new Vector3(Math.cos(a)*.85,-.35+layer*.7,Math.sin(a)*.85);direction.normalize();
       const rotation=new Quaternion().setFromUnitVectors(new Vector3(0,conifer?1:0,conifer?0:1),direction).multiply(new Quaternion().setFromAxisAngle(new Vector3(0,conifer?1:0,conifer?0:1),(rand()-.5)*(conifer?1.2:.65)));
@@ -41,11 +41,12 @@ export function createStudioStudy(kind:StudioKind,q:StudioSettings):StudioStudy{
         const t=conifer?part*.29:0,p=new Vector3(...position).addScaledVector(direction,length*t);if(conifer)p.y-=length*t*t*.32;
         const shortLength=conifer?length*.48:length,shortWidth=conifer?Math.max(width*.88,shortLength*.68)*(1-part*.11):width;
         const turn=conifer?rotation.clone().multiply(new Quaternion().setFromAxisAngle(new Vector3(0,1,0),(rand()-.5)*.3)):rotation;
-        fronds.push({position:p.toArray() as Point,rotation:turn.toArray(),width:shortWidth,length:shortLength,curve:conifer?.14:.18,droop:conifer?.24:.06,tile:studioKinds.indexOf(kind)*4+Math.floor(rand()*4),color:'#'+tint.getHexString(),normal:new Vector3(Math.cos(a)*.75,-.4+layer*.65,Math.sin(a)*.75).normalize().toArray() as Point,interior:.48+layer*.26,groupId:group.id});
+        fronds.push({position:p.toArray() as Point,rotation:turn.toArray(),width:shortWidth,length:shortLength,curve:conifer?.14:.18,droop:conifer?.24:.06,tile:studioKinds.indexOf(kind)*4+(q.unified?1+Math.floor(rand()*3):Math.floor(rand()*4)),color:'#'+tint.getHexString(),normal:new Vector3(Math.cos(a)*.75,-.4+layer*.65,Math.sin(a)*.75).normalize().toArray() as Point,interior:.48+layer*.26,groupId:group.id});
       }
     }
   }
-  const source=groups[0],scale=q.mode==='groups'?2.2*q.size/Math.max(...source.radii):6.8/model.dimensions.height,offset:Point=q.mode==='groups'?source.anchor.map(n=>-n*scale) as Point:[0,0,0];
-  let first=source.branchIndex,last=first;const same=(a:Point,b:Point)=>a.every((n,i)=>Math.abs(n-b[i])<1e-7);while(first>0&&model.segments[first-1].depth===model.segments[first].depth&&same(model.segments[first-1].b,model.segments[first].a))first--;while(last+1<model.segments.length&&model.segments[last+1].depth===model.segments[last].depth&&same(model.segments[last].b,model.segments[last+1].a))last++;const segments=q.mode==='groups'?model.segments.slice(first,last+1):model.segments;
+  if(q.mode==='leaf'){const first=fronds[0];fronds.splice(0,fronds.length,{...first,position:[...groups[0].anchor],rotation:[0,0,0,1],width:2.5*(q.leafScale??1),length:2.5*(q.leafScale??1),curve:.07,droop:0,tile:conifer?8:0});}
+  const source=groups[0],scale=q.mode!=='trees'?2.2*q.size/Math.max(...source.radii):6.8/model.dimensions.height,offset:Point=q.mode!=='trees'?source.anchor.map(n=>-n*scale) as Point:[0,0,0];
+  let first=source.branchIndex,last=first;const same=(a:Point,b:Point)=>a.every((n,i)=>Math.abs(n-b[i])<1e-7);while(first>0&&model.segments[first-1].depth===model.segments[first].depth&&same(model.segments[first-1].b,model.segments[first].a))first--;while(last+1<model.segments.length&&model.segments[last+1].depth===model.segments[last].depth&&same(model.segments[last].b,model.segments[last+1].a))last++;const segments=q.mode==='leaf'?[]:q.mode==='groups'?model.segments.slice(first,last+1):model.segments;
   return {kind,model,groups,fronds,segments,scale,offset};
 }

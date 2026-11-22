@@ -1,5 +1,5 @@
 'use client';
-import {useEffect,useMemo,useState} from 'react';
+import {useEffect,useMemo,useState,useRef} from 'react';
 import {useSearchParams} from 'next/navigation';
 import Link from 'next/link';
 import dynamic from 'next/dynamic';
@@ -8,18 +8,20 @@ import {presets} from '@/lib/forest/presets';
 import {hashSeed} from '@/lib/forest/random';
 import {treeCacheStats,type PaintedTree} from '@/lib/forest/painterly';
 import FoliageAtlas from './FoliageAtlas';
+import {studioDefaults,type StudioSettings} from '@/lib/studio/groups';
+import type {mountStudio,StudioMetrics} from '@/lib/studio/renderer';
 import type {RenderStats} from '@/lib/forest/render-types';
 const ForestCanvas=dynamic(()=>import('./ForestCanvas'),{ssr:false,loading:()=> <div className="forest-stage forest-loading">Preparing the painterly atelier…</div>});
 export default function TreeLaboratory(){
   const params=useSearchParams(),parsed=useMemo(()=>{try{return {value:parseLabQuery(params),error:''};}catch(e){return {value:null,error:(e as Error).message};}},[params]);
   if(!parsed.value)return <main className="forest-invalid"><Link href="/lab">Reset laboratory</Link><p role="alert">{parsed.error}</p></main>;
-  return <LaboratorySession initial={parsed.value}/>;
+  return params.get('editor')==='previous'?<LaboratorySession initial={parsed.value}/>:<UnifiedAtelier initial={parsed.value}/>;
 }
 function LaboratorySession({initial}:{initial:LabQuery}){
   useEffect(()=>{if(process.env.NODE_ENV==='production'&&'serviceWorker' in navigator)navigator.serviceWorker.register('/sw.js').then(()=>navigator.serviceWorker.ready).then(reg=>reg.active?.postMessage({type:'CACHE_ASSETS',urls:performance.getEntriesByType('resource').map(r=>r.name)})).catch(()=>{});},[]);
   const [draft,setDraft]=useState(initial),[query,setQuery]=useState(initial),[stats,setStats]=useState<RenderStats|null>(null),[notice,setNotice]=useState('');
   // Scrubbing a slider updates at most once after a short pause, never per frame.
-  useEffect(()=>{const timer=setTimeout(()=>{setQuery(draft);window.history.replaceState(null,'',`/lab?${labQuery(draft)}`);setNotice('');},200);return()=>clearTimeout(timer);},[draft]);
+  useEffect(()=>{const timer=setTimeout(()=>{setQuery(draft);window.history.replaceState(null,'',`/lab?editor=previous&${labQuery(draft)}`);setNotice('');},200);return()=>clearTimeout(timer);},[draft]);
   const recipe=useMemo(()=>createLabRecipe(query),[query]),tree=recipe.trees[0],painted=tree.model as PaintedTree,palette=tree.canopy?.palette??painted.palette;
   const skeletonHash=useMemo(()=>String(hashSeed(JSON.stringify(tree.model.segments))),[tree.model]);
   const change=(patch:Partial<LabQuery>)=>setDraft(q=>({...q,...patch}));
@@ -47,4 +49,25 @@ function LaboratorySession({initial}:{initial:LabQuery}){
       <button onClick={download}>Download tree recipe · JSON</button>{notice&&<p role="status">{notice}</p>}<p className="atelier-license">Custom procedural geometry · <a href="/third-party/three-LICENSE.txt">Three.js MIT</a></p>
     </aside></div>
   </main>;
+}
+
+function UnifiedAtelier({initial}:{initial:LabQuery}){
+  const [draft,setDraft]=useState<StudioSettings>({...studioDefaults,unified:true,view:initial.presetId==='douglas'?'conifer':'broadleaf',mode:'trees',structure:initial.structuralSeed,appearance:initial.appearanceSeed,leafScale:1,asymmetry:.7,shape:.5});
+  const [live,setLive]=useState(draft),[metrics,setMetrics]=useState<StudioMetrics|null>(null),[error,setError]=useState('');
+  const host=useRef<HTMLDivElement>(null),runtime=useRef<ReturnType<typeof mountStudio>|null>(null),saved=useRef<ReturnType<ReturnType<typeof mountStudio>['view']>|undefined>(undefined),lastMode=useRef(draft.mode);
+  useEffect(()=>{const timer=setTimeout(()=>setLive(draft),220);return()=>clearTimeout(timer);},[draft]);
+  useEffect(()=>{let active=true;import('@/lib/studio/renderer').then(({mountStudio})=>{if(!active)return;try{runtime.current=mountStudio(host.current!,live,m=>{if(active){setMetrics(m);setError('');}},m=>{if(active)setError(m);},lastMode.current===live.mode?saved.current:undefined);lastMode.current=live.mode;}catch{if(active)setError('WebGL could not start. Use the previous Atelier fallback.');}});return()=>{active=false;saved.current=runtime.current?.view();runtime.current?.dispose();runtime.current=null;};},[live]);
+  const update=(patch:Partial<StudioSettings>)=>setDraft(q=>({...q,...patch}));
+  const fields=live.mode==='leaf'?[['leafScale','Leaf scale',.5,1.5],['detail','Leaf detail',0,1],['colorVariation','Pigment variation',0,1]]:live.mode==='groups'?[['size','Cluster size',.5,1.8],['shape','Cluster shape · rounded / tall',0,1],['density','Fullness',0,1],['overlap','Overlap',0,1],['leafScale','Leaf scale',.5,1.5],['asymmetry','Organic asymmetry',0,1]]:[['size','Cluster size',.5,1.8],['density','Crown fullness',0,1],['overlap','Cluster overlap',0,1],['leafScale','Leaf scale',.5,1.5],['asymmetry','Organic asymmetry',0,1]];
+  return <main className="forest-app atelier-app"><header className="forest-header"><Link href="/" className="forest-back">← Explore the world</Link><span className="forest-brand">Wildloom <span>TREE ATELIER</span></span><Link href="/lab?editor=previous">Previous renderer ↗</Link></header>
+    <div className="forest-layout atelier-layout"><section className="forest-view atelier-view"><div className="forest-stage" data-testid="unified-stage" data-state={error?'error':metrics?.settingsKey===JSON.stringify(live)?'ready':'loading'}><div className="forest-canvas-host" ref={host}/><div className="forest-stage-label">{live.mode==='leaf'?'LEAF / NEEDLE SPRAY':live.mode==='groups'?'FOLIAGE CLUSTER / BRANCH':'COMPLETE TREE'}</div><div className="forest-stage-foot" style={{position:'absolute',bottom:15,left:20,fontSize:12}}>Drag to orbit · pinch / scroll to zoom</div>{error&&<div className="forest-render-error" role="alert">{error}</div>}</div>
+    <div className="atelier-specimen"><div><span className="eyebrow">LEAF → CLUSTER → BRANCH → CROWN → TREE</span><h1>{live.view==='conifer'?'Douglas-fir':'Oak'}</h1><p>Structure {live.structure} · appearance {live.appearance}</p></div></div><p className="atelier-footnote">One seeded hierarchy. Leaf and cluster changes propagate into the crown; branch structure keeps its seed. Artistic growth values.</p></section>
+    <aside className="forest-sidebar atelier-sidebar"><div className="eyebrow">UNIFIED TREE EDITOR</div><h2>Grow from the leaf.</h2>
+    <label>Species preset<select aria-label="Unified species" value={draft.view} onChange={e=>{saved.current=undefined;update({view:e.target.value as StudioSettings['view']});}}><option value="broadleaf">Oak</option><option value="conifer">Douglas-fir</option></select></label>
+    <label>Preview mode<select aria-label="Preview mode" value={draft.mode} onChange={e=>update({mode:e.target.value as StudioSettings['mode']})}><option value="leaf">Leaf</option><option value="groups">Cluster / Branch</option><option value="trees">Full Tree</option></select></label>
+    <label>Structural seed<input aria-label="Structural seed" value={draft.structure} maxLength={64} onChange={e=>update({structure:e.target.value})}/></label><label>Appearance seed<input aria-label="Appearance seed" value={draft.appearance} maxLength={64} onChange={e=>update({appearance:e.target.value})}/></label>
+    <div className="atelier-button-pair"><button onClick={()=>update({structure:String(hashSeed(draft.structure+'|next'))})}>Regenerate tree</button><button onClick={()=>update({appearance:String(hashSeed(draft.appearance+'|next'))})}>New pigments</button></div>
+    {fields.map(([key,label,min,max])=><label key={key}>{label}<output>{Number(draft[key as keyof StudioSettings]).toFixed(2)}</output><input aria-label={String(label)} type="range" min={Number(min)} max={Number(max)} step="0.01" value={Number(draft[key as keyof StudioSettings])} onChange={e=>update({[key]:Number(e.target.value)})}/></label>)}
+    <p>Cluster parameters stay active when switching preview modes. Rounded leaf fans and tiered conifer sprays attach to the existing branches.</p><button onClick={()=>runtime.current?.fit()}>Frame tree</button><details open className="atelier-metrics"><summary>Geometry</summary><dl><dt>Draw calls</dt><dd>{metrics?.calls??'—'}</dd><dt>Triangles</dt><dd>{metrics?.triangles??'—'}</dd><dt>Leaf-cluster surfaces</dt><dd>{metrics?.surfaces??'—'}</dd></dl></details><p className="atelier-license">Prototype limited to oak and Douglas-fir. Forest Explorer is unchanged.</p>
+    </aside></div></main>;
 }
