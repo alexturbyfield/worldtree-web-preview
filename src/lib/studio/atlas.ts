@@ -52,10 +52,20 @@ function drawSpecialFoliage(ctx:CanvasRenderingContext2D,q:StudioSettings,unders
   for(let i=0;i<18;i++)for(const sign of [-1,1]){const t=(i+1)/20,y=.91-t*.84,span=.36*Math.pow(Math.sin(t*Math.PI),.62),tipX=.5+sign*span,tipY=y-.1-.035*shape();const leaf=new Path2D();leaf.moveTo(.5,y);leaf.bezierCurveTo(.5+sign*span*.4,y+.014,tipX,tipY+.025,tipX,tipY);leaf.bezierCurveTo(.5+sign*span*.6,y-.078,.5,y-.038,.5,y);leaf.closePath();ctx.fill(leaf);}
  }
 }
+/** V1 leaf arrangements for the next coverage-priority models; shared cutout material. */
+function drawPrioritySpray(ctx:CanvasRenderingContext2D,q:StudioSettings){
+ const shape=batchSpecies[q.presetId!].leafShape,rand=randomSource(q.structure+'|priority-leaf'),paint=randomSource(q.appearance+'|priority-pigment');
+ ctx.strokeStyle='#778257';ctx.lineWidth=.008;ctx.beginPath();ctx.moveTo(.5,.93);ctx.lineTo(.5,.15);ctx.stroke();
+ const leaves: number[][]=[];
+ if(shape==='trifoliate'){for(const y of [.66,.33])for(let j=0;j<3;j++)leaves.push([.5,y,-Math.PI/2+(j-1)*.9,.25,.52]);}
+ else for(let i=0;i<5;i++){const side=i%2?1:-1;leaves.push([.5+side*.09,.8-i*.14,side>0?-.6:Math.PI+.6,shape==='small-oval'?.2:shape==='large-entire'?.29:.25,shape==='small-oval'?.78:.62]);}
+ for(const [x,y,angle,length,width] of leaves){ctx.save();ctx.translate(x,y);ctx.rotate(angle+(rand()-.5)*.12);const l=length*(.94+rand()*.12),w=l*width,leaf=new Path2D();leaf.moveTo(0,0);leaf.bezierCurveTo(l*.2,-w*.63,l*.8,-w*.6,l,0);leaf.bezierCurveTo(l*.75,w*.55,l*.2,w*.63,0,0);leaf.closePath();const c=(paint()-.5)*12,g=ctx.createLinearGradient(0,-w,l*.3,w);g.addColorStop(0,`rgb(${158+c},${184+c},${119+c})`);g.addColorStop(.5,`rgb(${96+c},${143+c},${91+c})`);g.addColorStop(1,`rgb(${53+c},${100+c},${79+c})`);ctx.fillStyle=g;ctx.fill(leaf);ctx.strokeStyle='rgba(212,221,166,.45)';ctx.lineWidth=.003;ctx.beginPath();ctx.moveTo(0,0);ctx.lineTo(l*.94,0);ctx.stroke();ctx.restore();}
+}
 /** Reuses the atlas pipeline; silhouette shapes are V1 species design studies. */
 function drawLibrarySpray(ctx:CanvasRenderingContext2D,q:StudioSettings){
   const species=batchSpecies[q.presetId!],rand=randomSource(q.structure+'|library-atlas|'+q.presetId),paint=randomSource(q.appearance+'|library-atlas|'+q.presetId);
   if(['palmate','rosette','palm'].includes(species.form)){drawSpecialFoliage(ctx,q);return;}
+  if(species.leafShape){drawPrioritySpray(ctx,q);return;}
   ctx.strokeStyle='#627254';ctx.lineWidth=.008;ctx.beginPath();ctx.moveTo(.5,.91);ctx.quadraticCurveTo(.45,.5,.52,.1);ctx.stroke();
   if(species.emergent){drawEmergentSpray(ctx,q);return;}
   const count=species.conifer?7:species.form==='willow'?13:species.form==='silver-birch'?7:species.form==='ash'?9:7;
