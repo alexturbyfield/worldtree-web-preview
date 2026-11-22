@@ -1,0 +1,83 @@
+{
+  "checks": "Unrelated existing species unchanged; repeated seeds identical; appearance seeds preserve stem and foliage geometry; registry links verified; finite leaf vertices.",
+  "rows": [
+    {
+      "id": "cecropia",
+      "taxonId": "wcvp:2707099",
+      "height": 14.526792999715237,
+      "foliageSurfaces": 32,
+      "leafTriangles": 256,
+      "woodySegments": 420,
+      "architecture": "palmate"
+    },
+    {
+      "id": "pandanus",
+      "taxonId": "wcvp:285436",
+      "height": 5.178757838804888,
+      "foliageSurfaces": 120,
+      "leafTriangles": 960,
+      "woodySegments": 140,
+      "architecture": "rosette"
+    },
+    {
+      "id": "acai",
+      "taxonId": "wcvp:83104",
+      "height": 27.4089870260315,
+      "foliageSurfaces": 15,
+      "leafTriangles": 120,
+      "woodySegments": 40,
+      "architecture": "palm"
+    },
+    {
+      "id": "dipterocarp-alatus",
+      "taxonId": "wcvp:2772115",
+      "height": 43.83482756191708,
+      "foliageSurfaces": 1116,
+      "leafTriangles": 8928,
+      "woodySegments": 420,
+      "architecture": "emergent"
+    }
+  ],
+  "capture": {
+    "errors": [],
+    "common": {
+      "min": [
+        -3.5080254077911377,
+        -0.019911598414182663,
+        -4.32460880279541
+      ],
+      "max": [
+        5.897998332977295,
+        21.360023498535156,
+        5.027186393737793
+      ]
+    },
+    "ground": {
+      "calls": 9,
+      "triangles": 39114,
+      "roots": [
+        {
+          "id": "cecropia",
+          "x": 512.4730351740473,
+          "y": 983.8079661665519
+        },
+        {
+          "id": "pandanus",
+          "x": 836.6983172733246,
+          "y": 985.7091824816483
+        },
+        {
+          "id": "acai",
+          "x": 1136.7212690554597,
+          "y": 987.468479372805
+        },
+        {
+          "id": "dipterocarp-alatus",
+          "x": 1517.774040494473,
+          "y": 989.7029249449758
+        }
+      ]
+    },
+    "sharedGroundImage": "wildloom-batch-2c-shared-ground.png"
+  }
+}

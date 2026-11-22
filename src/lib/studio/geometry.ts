@@ -12,6 +12,11 @@ export function studioGeometry(studies:StudioStudy[],positions:number[]){
     for(const {u,t} of leafGrid){
       const across=(u-.5)*f.width;
       v.set(across,(study.kind==='conifer'?t:t-.5)*f.length,Math.sin(u*Math.PI)*Math.sin(t*Math.PI)*f.curve*f.width).applyQuaternion(q);if(study.kind==='conifer')v.y-=t*t*f.droop*f.length;v.add(new Vector3(...f.position));
+      if(f.spine){
+        // Optional quadratic leaf midrib: same nine vertices, alpha atlas, normals and batching.
+        const [a,b,c]=f.spine,one=1-t,side=new Vector3(across,0,0).applyQuaternion(q);
+        v.set(one*one*a[0]+2*one*t*b[0]+t*t*c[0],one*one*a[1]+2*one*t*b[1]+t*t*c[1],one*one*a[2]+2*one*t*b[2]+t*t*c[2]).add(side);
+      }
       v.multiplyScalar(study.scale).add(new Vector3(...study.offset));v.x+=positions[i];p.push(...v.toArray());uv.push(u,study.kind==='conifer'?1-t:t);
       normal.set(f.normal[0]+(u-.5)*.38,f.normal[1]+Math.sin(t*Math.PI)*.35,f.normal[2]+(t-.5)*.25).normalize();n.push(...normal.toArray());
       rect.push((f.tile%4)/4,1-(Math.floor(f.tile/4)+1)/3,1/4,1/3);colors.push(tint.r,tint.g,tint.b);shade.push(f.interior);

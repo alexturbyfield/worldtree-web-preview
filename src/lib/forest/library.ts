@@ -35,7 +35,7 @@ export function libraryFoliageBatch(trees:SceneTree[],presetId:string,appearance
   for(const tree of trees){
     const study=tree.studio!;
     // Stable group thinning keeps crossed patches together. Performance/far changes no seeds.
-    const fronds=far?study.fronds.filter(f=>f.groupId%2===0):study.fronds;
+    const fronds=far?study.fronds.filter(f=>f.essential||f.groupId%2===0):study.fronds;
     const geometry=studioGeometry([{...study,fronds}],[0]);
     const matrix=new THREE.Matrix4().makeRotationY(-tree.rotation);matrix.setPosition(...tree.position);geometry.applyMatrix4(matrix);parts.push(geometry);counts.push(fronds.length);
   }

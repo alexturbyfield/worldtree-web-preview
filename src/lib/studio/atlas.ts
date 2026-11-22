@@ -39,9 +39,23 @@ function drawEmergentSpray(ctx:CanvasRenderingContext2D,q:StudioSettings){
     ctx.restore();ctx.restore();
   }
 }
+/** Palmate blades, strap leaves and pinnate palm fronds use the same cutout atlas. */
+function drawSpecialFoliage(ctx:CanvasRenderingContext2D,q:StudioSettings){
+ const form=batchSpecies[q.presetId!].form,paint=randomSource(q.appearance+'|special-foliage|'+form),shape=randomSource(q.structure+'|special-foliage-shape|'+form),c=(paint()-.5)*12;
+ const gradient=ctx.createLinearGradient(.2,.1,.7,.9);gradient.addColorStop(0,`rgb(${165+c},${188+c},${122+c})`);gradient.addColorStop(.48,`rgb(${100+c},${150+c},${91+c})`);gradient.addColorStop(1,`rgb(${52+c},${100+c},${79+c})`);ctx.fillStyle=gradient;
+ if(form==='palmate'){
+  const shape=randomSource(q.structure+'|palmate-lobes'),leaf=new Path2D();for(let i=0;i<=144;i++){const a=i/144*Math.PI*2-Math.PI/2,r=.17+.27*Math.pow((1+Math.cos((a+Math.PI/2)*9))/2,.6),x=.5+Math.cos(a)*r,y=.5+Math.sin(a)*r*(.94+shape()*.025);if(i)leaf.lineTo(x,y);else leaf.moveTo(x,y);}leaf.closePath();ctx.fill(leaf);ctx.save();ctx.clip(leaf);ctx.strokeStyle='rgba(210,224,167,.62)';ctx.lineWidth=.007;for(let i=0;i<9;i++){const a=i/9*Math.PI*2-Math.PI/2;ctx.beginPath();ctx.moveTo(.5,.5);ctx.lineTo(.5+Math.cos(a)*.41,.5+Math.sin(a)*.41);ctx.stroke();}ctx.restore();
+ }else if(form==='rosette'){
+  const leaf=new Path2D();leaf.moveTo(.5,.96);leaf.bezierCurveTo(.27,.66,.37,.27,.5,.035);leaf.bezierCurveTo(.63,.28,.73,.67,.5,.96);leaf.closePath();ctx.fill(leaf);ctx.strokeStyle='rgba(210,224,155,.65)';ctx.lineWidth=.012;ctx.beginPath();ctx.moveTo(.5,.93);ctx.quadraticCurveTo(.51,.55,.5,.07);ctx.stroke();
+ }else{
+  ctx.strokeStyle='#a1b574';ctx.lineWidth=.012;ctx.beginPath();ctx.moveTo(.5,.96);ctx.quadraticCurveTo(.47,.5,.5,.045);ctx.stroke();
+  for(let i=0;i<18;i++)for(const sign of [-1,1]){const t=(i+1)/20,y=.91-t*.84,span=.36*Math.pow(Math.sin(t*Math.PI),.62),tipX=.5+sign*span,tipY=y-.1-.035*shape();const leaf=new Path2D();leaf.moveTo(.5,y);leaf.bezierCurveTo(.5+sign*span*.4,y-.01,tipX,tipY+.02,tipX,tipY);leaf.bezierCurveTo(.5+sign*span*.6,y-.065,.5,y-.025,.5,y);leaf.closePath();ctx.fill(leaf);}
+ }
+}
 /** Reuses the atlas pipeline; silhouette shapes are V1 species design studies. */
 function drawLibrarySpray(ctx:CanvasRenderingContext2D,q:StudioSettings){
   const species=batchSpecies[q.presetId!],rand=randomSource(q.structure+'|library-atlas|'+q.presetId),paint=randomSource(q.appearance+'|library-atlas|'+q.presetId);
+  if(['palmate','rosette','palm'].includes(species.form)){drawSpecialFoliage(ctx,q);return;}
   ctx.strokeStyle='#627254';ctx.lineWidth=.008;ctx.beginPath();ctx.moveTo(.5,.91);ctx.quadraticCurveTo(.45,.5,.52,.1);ctx.stroke();
   if(species.emergent){drawEmergentSpray(ctx,q);return;}
   const count=species.conifer?7:species.form==='willow'?13:species.form==='silver-birch'?7:species.form==='ash'?9:7;

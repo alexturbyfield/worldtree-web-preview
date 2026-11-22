@@ -1,4 +1,4 @@
-import {CatmullRomCurve3,Vector3} from 'three';
+import {CatmullRomCurve3,Vector3,Quaternion,Color} from 'three';
 import {randomSource} from '../forest/random';
 import type {Point,Segment} from '../forest/tree';
 import type {PaintedTree} from '../forest/painterly';
@@ -6,11 +6,14 @@ import type {StudioSettings,StudioStudy,FoliageGroup,StudioFrond} from './groups
 /** Growth constraints, not closed crown meshes or species-specific generators. */
 export interface CrownArchitecture {radiusProfile:[number,number,number];initiationBias:number;dominance:number;curvature:number;apicalBias:number;fanAngle:number;occupancy:number;leafInterval:[number,number]}
 export interface EmergentGrowth {architecture?:CrownArchitecture;leaderTop:number;rise:number;secondaryRise:number;forks:number;clusterSize:number;trunkTaper:number;limb:number;buttressCount:number;buttressHeight:number;buttressReach:number}
-export interface SpeciesDesign {name:string;scientificName:string;height:number;radius:number;trunk:number;base:number;branches:number;form:'pine'|'cedar'|'birch'|'maple'|'aspen'|'willow'|'silver-birch'|'ash'|'emergent';bark:string;conifer:boolean;emergent?:EmergentGrowth}
+export interface SpeciesDesign {name:string;scientificName:string;height:number;radius:number;trunk:number;base:number;branches:number;form:'pine'|'cedar'|'birch'|'maple'|'aspen'|'willow'|'silver-birch'|'ash'|'emergent'|'palmate'|'rosette'|'palm';bark:string;conifer:boolean;emergent?:EmergentGrowth}
 /** Visual design presets only: no geographic presence or measured botanical dimensions implied. */
 export const batchSpecies:Record<string,SpeciesDesign>={
+ cecropia:{name:'Cecropia',scientificName:'Cecropia peltata',height:14,radius:4,trunk:.2,base:.62,branches:8,form:'palmate',bark:'#9b9d84',conifer:false},
+ pandanus:{name:'Screw pine',scientificName:'Pandanus tectorius',height:5.5,radius:2.5,trunk:.29,base:.3,branches:4,form:'rosette',bark:'#918473',conifer:false},
+ acai:{name:'Forest acai palm',scientificName:'Euterpe precatoria',height:24,radius:4.2,trunk:.15,base:.93,branches:0,form:'palm',bark:'#949582',conifer:false},
  mahogany:{name:'Bigleaf mahogany',scientificName:'Swietenia macrophylla',height:31,radius:9.5,trunk:.83,base:.5,branches:9,form:'emergent',bark:'#806753',conifer:false,emergent:{leaderTop:.92,rise:.35,secondaryRise:.4,forks:4,clusterSize:2.05,trunkTaper:.6,limb:.38,buttressCount:4,buttressHeight:2.2,buttressReach:1.15,architecture:{radiusProfile:[.75,1.05,.22],initiationBias:1.05,dominance:.23,curvature:.15,apicalBias:.5,fanAngle:1.1,occupancy:.95,leafInterval:[.12,.97]}}},
- 'dipterocarp-alatus':{name:'Dipterocarpus alatus',scientificName:'Dipterocarpus alatus',height:42,radius:7,trunk:1.02,base:.54,branches:8,form:'emergent',bark:'#8b7c65',conifer:false,emergent:{leaderTop:.98,rise:.84,secondaryRise:.8,forks:4,clusterSize:2.1,trunkTaper:.55,limb:.33,buttressCount:4,buttressHeight:3.2,buttressReach:1.55,architecture:{radiusProfile:[.43,.92,.14],initiationBias:.85,dominance:.13,curvature:.055,apicalBias:.46,fanAngle:.65,occupancy:.98,leafInterval:[.15,.98]}}},
+ 'dipterocarp-alatus':{name:'Dipterocarpus alatus',scientificName:'Dipterocarpus alatus',height:42,radius:8.8,trunk:1.02,base:.62,branches:8,form:'emergent',bark:'#8b7c65',conifer:false,emergent:{leaderTop:.98,rise:.72,secondaryRise:.65,forks:4,clusterSize:2.1,trunkTaper:.55,limb:.33,buttressCount:4,buttressHeight:3.2,buttressReach:1.55,architecture:{radiusProfile:[.65,1.06,.45],initiationBias:.85,dominance:.2,curvature:.08,apicalBias:.35,fanAngle:1.08,occupancy:.94,leafInterval:[.15,.98]}}},
  'dipterocarp-grandiflorus':{name:'Dipterocarpus grandiflorus',scientificName:'Dipterocarpus grandiflorus',height:38,radius:11,trunk:1.1,base:.53,branches:9,form:'emergent',bark:'#776c5b',conifer:false,emergent:{leaderTop:.9,rise:.3,secondaryRise:.28,forks:4,clusterSize:2.5,trunkTaper:.57,limb:.44,buttressCount:5,buttressHeight:4.2,buttressReach:2.8,architecture:{radiusProfile:[1.06,.95,.26],initiationBias:1.35,dominance:.36,curvature:.19,apicalBias:.22,fanAngle:1.25,occupancy:.85,leafInterval:[.14,.97]}}},
  kapok:{name:'Kapok',scientificName:'Ceiba pentandra',height:45,radius:14,trunk:1.85,base:.64,branches:7,form:'emergent',bark:'#7c8069',conifer:false,emergent:{leaderTop:.88,rise:.17,secondaryRise:.08,forks:4,clusterSize:3,trunkTaper:.48,limb:.5,buttressCount:5,buttressHeight:7,buttressReach:5,architecture:{radiusProfile:[1.12,.98,.18],initiationBias:1.8,dominance:.52,curvature:.29,apicalBias:.08,fanAngle:1.12,occupancy:.77,leafInterval:[.28,.98]}}},
  ponderosa:{name:'Ponderosa pine',scientificName:'Pinus ponderosa',height:23,radius:4.5,trunk:.54,base:.55,branches:8,form:'pine',bark:'#b17c49',conifer:true},
@@ -27,7 +30,7 @@ export function speciesV1Study(id:string,q:StudioSettings,patches:(g:FoliageGrou
  // Smooth radius constraint affects branch growth; foliage is never clipped against a shell.
  const crownRadius=(f:number)=>{if(!architecture)return 1;const u=f<.5?f*2:(f-.5)*2,k=f<.5?0:1,t=u*u*(3-2*u);return architecture.radiusProfile[k]*(1-t)+architecture.radiusProfile[k+1]*t;};
  const segments:Segment[]=[],groups:FoliageGroup[]=[],fronds:StudioFrond[]=[],stems=p.form==='birch'?3:1;
- const line=(points:Vector3[],radius:number,depth:number)=>{const curve=new CatmullRomCurve3(points),first=segments.length,steps=depth===0?20:10;for(let i=0;i<steps;i++){const t=i/steps,u=(i+1)/steps;segments.push({a:curve.getPoint(t).toArray() as Point,b:curve.getPoint(u).toArray() as Point,r0:radius*Math.pow(1-t*(depth===0&&emergent?emergent.trunkTaper:.92),1.1),r1:radius*Math.pow(1-u*(depth===0&&emergent?emergent.trunkTaper:.92),1.1),depth});}return {curve,first,steps};};
+ const line=(points:Vector3[],radius:number,depth:number,taper=depth===0&&emergent?emergent.trunkTaper:.92)=>{const curve=new CatmullRomCurve3(points),first=segments.length,steps=depth===0?20:10;for(let i=0;i<steps;i++){const t=i/steps,u=(i+1)/steps;segments.push({a:curve.getPoint(t).toArray() as Point,b:curve.getPoint(u).toArray() as Point,r0:radius*Math.pow(1-t*taper,1.1),r1:radius*Math.pow(1-u*taper,1.1),depth});}return {curve,first,steps};};
  const leafy=(path:ReturnType<typeof line>,samples:number,size:number,start=.28,end=.94)=>{for(let j=0;j<samples;j++){// Omit only some inner guides; every living branch retains its terminal spray.
  if(architecture&&j>0&&j<samples-1&&randomSource(q.structure+'|crown-opening|'+path.first+'|'+j)()>architecture.occupancy)continue;
  const t=start+(end-start)*(samples===1?.5:j/(samples-1)),center=path.curve.getPointAt(t),index=path.first+Math.min(path.steps-1,Math.floor(path.curve.getUtoTmapping(t,0)*path.steps));const group:FoliageGroup={id:groups.length,anchor:center.toArray() as Point,center:center.toArray() as Point,radii:[size,size*.78,size*.94],branchIndex:index,axis:path.curve.getTangentAt(t).toArray() as Point};groups.push(group);for(const f of patches(group,{...q,palette:'sage'})){
@@ -36,7 +39,39 @@ export function speciesV1Study(id:string,q:StudioSettings,patches:(g:FoliageGrou
    if(p.form==='willow'){f.width*=.67;f.length*=1.25;}if(p.form==='cedar'){f.width*=.84;f.length*=1.18;}if(p.form==='pine'){f.width*=1.14;f.length*=.83;}
    fronds.push(f);
  }}};
- for(let stem=0;stem<stems;stem++){
+ // Unusual growth forms reuse the same stem curves, atlas cards, material and batch.
+ const paint=randomSource(q.appearance+'|special-pigment|'+id);
+ const guide=(center:Vector3,size:number,branchIndex:number,axis:Vector3)=>{const g:FoliageGroup={id:groups.length,anchor:center.toArray() as Point,center:center.toArray() as Point,radii:[size,size*.45,size],axis:axis.toArray() as Point,branchIndex};groups.push(g);return g.id;};
+ const tint=()=>{const c=new Color('#7c9c70').offsetHSL((paint()-.5)*.035,(paint()-.5)*.07,(paint()-.5)*.07);return '#'+c.getHexString();};
+ const ribbon=(base:Vector3,middle:Vector3,tip:Vector3,width:number,groupId:number)=>{
+  const across=new Vector3(-(tip.z-base.z),0,tip.x-base.x).normalize(),normal=across.clone().cross(tip.clone().sub(base)).normalize();if(normal.y<0)normal.negate();
+  const rotation=new Quaternion().setFromUnitVectors(new Vector3(1,0,0),across);
+  fronds.push({position:base.toArray() as Point,rotation:rotation.toArray(),width,length:base.distanceTo(tip),curve:.06,droop:0,tile:0,color:tint(),normal:normal.toArray() as Point,interior:.92,groupId,essential:true,spine:[base.toArray() as Point,middle.toArray() as Point,tip.toArray() as Point]});
+ };
+ if(p.form==='palmate'){
+  const leader=line([new Vector3(),new Vector3(.1,h*.5,-.08),new Vector3(.25,h,0)],p.trunk,0,.48);
+  for(let i=0;i<8;i++){
+   const tier=Math.floor(i/3),angle=phase+i*Math.PI*2/3+tier*.48+(rand()-.5)*.12,start=leader.curve.getPointAt(.63+tier*.135),length=r*(1-tier*.18)*(.85+rand()*.2),dir=new Vector3(Math.cos(angle),0,Math.sin(angle)),end=start.clone().addScaledVector(dir,length);end.y+=length*.24;
+   const branch=line([start,start.clone().lerp(end,.5).add(new Vector3(0,.35,0)),end],p.trunk*.3,1,.82);
+   for(let j=0;j<4;j++){
+    const a=angle+(j-1.5)*.72,origin=branch.curve.getPointAt(.65+j*.1),leafCenter=origin.clone().add(new Vector3(Math.cos(a)*.7,.35+rand()*.25,Math.sin(a)*.7));line([origin,origin.clone().lerp(leafCenter,.55),leafCenter],.023,2,.7);
+    const normal=new Vector3(Math.cos(a)*.35,.85,Math.sin(a)*.35).normalize(),g=guide(leafCenter,.8,branch.first,new Vector3(Math.cos(a),.1,Math.sin(a))),rotation=new Quaternion().setFromUnitVectors(new Vector3(0,0,1),normal);
+    fronds.push({position:leafCenter.toArray() as Point,rotation:rotation.toArray(),width:1.7*(.85+rand()*.25),length:1.7*(.85+rand()*.25),curve:.13,droop:0,tile:0,color:tint(),normal:normal.toArray() as Point,interior:.95,groupId:g,essential:true});
+   }
+  }
+ }else if(p.form==='rosette'){
+  const leader=line([new Vector3(0,.3,0),new Vector3(.12,h*.25,0),new Vector3(.3,h*.62,-.1)],p.trunk,0,.55),terminals:{point:Vector3;branch:number}[]=[];
+  for(let i=0;i<4;i++){const a=phase+i*2.399,from=leader.curve.getPointAt(.48+i*.12),tip=new Vector3(Math.cos(a)*r*(.55+rand()*.2),h*(.74+rand()*.26),Math.sin(a)*r*.65),fork=line([from,from.clone().lerp(tip,.5).add(new Vector3(0,-.3,0)),tip],p.trunk*.57,1,.62);terminals.push({point:tip,branch:fork.first});}
+  // Prop roots meet the stem above ground and splay to individual ground contacts in the same wood batch.
+  for(let i=0;i<8;i++){const a=phase+i*Math.PI/4+(rand()-.5)*.2,from=leader.curve.getPointAt(.32+rand()*.22),foot=new Vector3(Math.cos(a)*(1.5+rand()*.45),.02,Math.sin(a)*(1.5+rand()*.45));line([from,from.clone().lerp(foot,.55).add(new Vector3(Math.cos(a)*.15,-.12,Math.sin(a)*.15)),foot],.12+rand()*.035,1,.46);}
+  for(const terminal of terminals){const g=guide(terminal.point,2,terminal.branch,new Vector3(0,1,0));for(let j=0;j<30;j++){const a=phase+j*2.399,length=2.1+rand()*.8,base=terminal.point.clone(),dir=new Vector3(Math.cos(a),0,Math.sin(a)),rise=.25+(j%4)*.2,tip=base.clone().addScaledVector(dir,length);tip.y-=.65+rand()*.75;const mid=base.clone().addScaledVector(dir,length*.52);mid.y+=rise;ribbon(base,mid,tip,.6+rand()*.18,g);}}
+ }else if(p.form==='palm'){
+  const top=new Vector3(.35,h,0);line([new Vector3(),new Vector3(.1,h*.5,-.1),top],p.trunk,0,.16);
+  const shaft=line([new Vector3(.32,h*.925,0),new Vector3(.34,h*.98,0),new Vector3(.36,h*1.035,0)],p.trunk*1.27,0,.18);for(let i=shaft.first;i<segments.length;i++)segments[i].color='#6f9664';
+  const base=new Vector3(.36,h*1.035,0),g=guide(base,r,shaft.first,new Vector3(0,1,0));
+  for(let i=0;i<15;i++){const a=phase+i*2.399+(rand()-.5)*.15,age=(i%5)/4,length=r*(.7+age*.3+rand()*.15),dir=new Vector3(Math.cos(a),0,Math.sin(a)),tip=base.clone().addScaledVector(dir,length);tip.y+=1.6-age*5;const mid=base.clone().addScaledVector(dir,length*.48);mid.y+=1.6+(1-age)*1.6+rand()*.3;ribbon(base.clone(),mid,tip,1.2+rand()*.35,g);}
+ }
+ else for(let stem=0;stem<stems;stem++){
   const a=phase+stem*2.399,lean=stems>1?1.5:p.form==='silver-birch'?.6+rand()*.35:.15+rand()*.25,stemH=h*(stems>1?.86+rand()*.14:1),leaderTop=emergent?emergent.leaderTop:p.form==='pine'?.91:p.form==='maple'?.65:p.form==='ash'?.61:p.form==='willow'?.55:1;
   const root=new Vector3(Math.cos(a)*stem*.13,0,Math.sin(a)*stem*.13),top=new Vector3(Math.cos(a)*lean,stemH*leaderTop,Math.sin(a)*lean);
   const middle=root.clone().lerp(top,.55);middle.x+=.18;const leader=line([root,middle,top],p.trunk*(stems>1?.8:1),0);
@@ -79,6 +114,12 @@ export function speciesV1Study(id:string,q:StudioSettings,patches:(g:FoliageGrou
   else if(p.form==='cedar')leafy(leader,3,.55,.83,.98);
  }
  const max=new Vector3(),min=new Vector3();for(const s of segments)for(const a of [s.a,s.b]){max.max(new Vector3(...a));min.min(new Vector3(...a));}
- const model:PaintedTree={kind:'painterly',seed:q.structure,appearanceSeed:q.appearance,presetId:id,segments,foliage:[],art:{stylization:.7,foliageDensity:q.density,asymmetry:q.asymmetry??.7},palette:{name:'Painterly Sage',shadow:'#294135',body:'#6e9462',light:'#d9c976',bark:p.bark},parameters:{height:max.y,crownRadius:r,crownBase:p.base,trunkRadius:p.trunk,taper:.94,recursion:2,whorls:0,spread:1,droop:p.form==='willow'?.8:.15},dimensions:{height:max.y+1.4,crownWidth:max.x-min.x+2.8,crownDepth:max.z-min.z+2.8}};
+ const specialShape=['palmate','rosette','palm'].includes(p.form);
+ if(specialShape)for(const f of fronds){
+  const include=(v:Vector3)=>{max.max(v);min.min(v);};
+  if(f.spine){for(let i=0;i<=8;i++){const t=i/8,u=1-t,[a,b,c]=f.spine,v=new Vector3(u*u*a[0]+2*u*t*b[0]+t*t*c[0],u*u*a[1]+2*u*t*b[1]+t*t*c[1],u*u*a[2]+2*u*t*b[2]+t*t*c[2]);include(v.clone().add(new Vector3(f.width*.5,0,f.width*.5)));include(v.clone().sub(new Vector3(f.width*.5,0,f.width*.5)));}}
+  else{const rotation=new Quaternion(...f.rotation),x=new Vector3(f.width*.5,0,0).applyQuaternion(rotation),y=new Vector3(0,f.length*.5,0).applyQuaternion(rotation);for(const a of [-1,1])for(const b of [-1,1])include(new Vector3(...f.position).addScaledVector(x,a).addScaledVector(y,b));}
+ }
+ const model:PaintedTree={kind:'painterly',seed:q.structure,appearanceSeed:q.appearance,presetId:id,segments,foliage:[],art:{stylization:.7,foliageDensity:q.density,asymmetry:q.asymmetry??.7},palette:{name:'Painterly Sage',shadow:'#294135',body:'#6e9462',light:'#d9c976',bark:p.bark},parameters:{height:max.y,crownRadius:r,crownBase:p.base,trunkRadius:p.trunk,taper:.94,recursion:2,whorls:0,spread:1,droop:p.form==='willow'?.8:.15},dimensions:{height:max.y+(specialShape?0:1.4),crownWidth:max.x-min.x+(specialShape?0:2.8),crownDepth:max.z-min.z+(specialShape?0:2.8)}};
  return {kind:'broadleaf',model,groups,fronds,segments,scale:.48,offset:[0,0,0]};
 }

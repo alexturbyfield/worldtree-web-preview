@@ -66,7 +66,7 @@ export function paintedWoodGeometry(trees:{model:TreeModel;position:Point;rotati
         positions.push(v.x*cosine-v.z*sine+position[0],v.y+position[1],v.x*sine+v.z*cosine+position[2]);
         normals.push(n.x*cosine-n.z*sine,n.y,n.x*sine+n.z*cosine);uvs.push(side/sides,center.y*.23);
         const t=Math.max(0,Math.min(1,center.y/model.parameters.height));
-        const c=pigment.clone().lerp(warm,t*.35).lerp(shade,(1-Math.sin(angle+1))*.12);if(model.presetId==='silver-birch'){
+        const c=(segment.color?new THREE.Color(segment.color):pigment.clone()).lerp(warm,t*.35).lerp(shade,(1-Math.sin(angle+1))*.12);if(model.presetId==='silver-birch'){
           // Small broken lenticel/scar patches on the existing white bark; no added meshes.
           const marking=Math.sin(Math.floor(center.y*4.5)*13.7+Math.floor(angle*3)*2.3)>.76&&Math.cos(angle*1.7+center.y)>.05;
           if(segment.depth>1)c.lerp(new THREE.Color('#797767'),.75);

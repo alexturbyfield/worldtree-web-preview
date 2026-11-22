@@ -1,4 +1,4 @@
-export type Architecture = 'central-leader-conifer' | 'spreading-broadleaf' | 'umbrella-canopy';
+export type Architecture = 'central-leader-conifer' | 'spreading-broadleaf' | 'umbrella-canopy' | 'tiered-palmate' | 'terminal-rosette' | 'radial-palm';
 export interface GrowthPreset {
   id: string; name: string; architecture: Architecture;
   height: [number, number]; crownRadius: [number, number]; crownBase: number;
@@ -14,6 +14,9 @@ export const presets: Record<string, GrowthPreset> = {
   acacia: {id:'acacia',name:'Acacia',architecture:'umbrella-canopy',height:[7,12],crownRadius:[5.5,7],crownBase:.48,trunkRadius:.33,taper:.88,whorls:3,branches:5,recursion:3,spread:1.3,droop:-.06,leafColor:'#84924f'},
   ponderosa:{id:'ponderosa',name:'Ponderosa pine',architecture:'central-leader-conifer',height:[20,26],crownRadius:[4,5],crownBase:.55,trunkRadius:.54,taper:.94,whorls:8,branches:3,recursion:2,spread:1,droop:.1,leafColor:'#5f7958'},
   cedar:{id:'cedar',name:'Western red cedar',architecture:'central-leader-conifer',height:[19,25],crownRadius:[3.5,4.5],crownBase:.15,trunkRadius:.6,taper:.95,whorls:12,branches:4,recursion:2,spread:1,droop:.4,leafColor:'#557a60'},
+  cecropia:{id:'cecropia',name:'Cecropia',architecture:'tiered-palmate',height:[13.02,14.98],crownRadius:[3.60,4.40],crownBase:0.62,trunkRadius:0.2,taper:.3,whorls:3,branches:3,recursion:2,spread:1,droop:.4,leafColor:'#75956c'},
+  pandanus:{id:'pandanus',name:'Screw pine',architecture:'terminal-rosette',height:[5.12,5.89],crownRadius:[2.25,2.75],crownBase:0.3,trunkRadius:0.29,taper:.3,whorls:3,branches:3,recursion:2,spread:1,droop:.4,leafColor:'#75956c'},
+  acai:{id:'acai',name:'Forest acai palm',architecture:'radial-palm',height:[22.32,25.68],crownRadius:[3.78,4.62],crownBase:0.93,trunkRadius:0.15,taper:.3,whorls:3,branches:3,recursion:2,spread:1,droop:.4,leafColor:'#75956c'},
   'mahogany':{id:'mahogany',name:'Bigleaf mahogany',architecture:'spreading-broadleaf',height:[28.83,33.17],crownRadius:[7.20,8.80],crownBase:0.48,trunkRadius:0.83,taper:.6,whorls:5,branches:5,recursion:3,spread:1,droop:.05,leafColor:'#708e60'},
   'dipterocarp-alatus':{id:'dipterocarp-alatus',name:'Dipterocarpus alatus',architecture:'spreading-broadleaf',height:[39.06,44.94],crownRadius:[6.75,8.25],crownBase:0.62,trunkRadius:1.02,taper:.6,whorls:5,branches:5,recursion:3,spread:1,droop:.05,leafColor:'#708e60'},
   'dipterocarp-grandiflorus':{id:'dipterocarp-grandiflorus',name:'Dipterocarpus grandiflorus',architecture:'spreading-broadleaf',height:[35.34,40.66],crownRadius:[8.28,10.12],crownBase:0.54,trunkRadius:1.1,taper:.6,whorls:5,branches:5,recursion:3,spread:1,droop:.05,leafColor:'#708e60'},
@@ -30,7 +33,7 @@ export const presets: Record<string, GrowthPreset> = {
 export interface VisualMapping {presetId:string; rendererPresetId?:string; fallback:boolean; reason:string}
 export function mapVisual(scientificName:string|null, archetype=''):VisualMapping {
   const n=scientificName?.toLowerCase()??'';
-  const exact:Record<string,string>={'pseudotsuga menziesii':'douglas-v1','pinus ponderosa':'ponderosa','thuja plicata':'cedar','betula papyrifera':'birch','betula pendula':'silver-birch','fraxinus excelsior':'ash','swietenia macrophylla':'mahogany','dipterocarpus alatus':'dipterocarp-alatus','dipterocarpus grandiflorus':'dipterocarp-grandiflorus','ceiba pentandra':'kapok','acer macrophyllum':'maple','populus tremuloides':'aspen','salix babylonica':'willow','picea abies':'spruce','pinus sylvestris':'pine','quercus robur':'oak','vachellia tortilis':'acacia','acacia tortilis':'acacia'};
+  const exact:Record<string,string>={'pseudotsuga menziesii':'douglas-v1','pinus ponderosa':'ponderosa','thuja plicata':'cedar','betula papyrifera':'birch','betula pendula':'silver-birch','fraxinus excelsior':'ash','swietenia macrophylla':'mahogany','dipterocarpus alatus':'dipterocarp-alatus','dipterocarpus grandiflorus':'dipterocarp-grandiflorus','ceiba pentandra':'kapok','cecropia peltata':'cecropia','pandanus tectorius':'pandanus','euterpe precatoria':'acai','acer macrophyllum':'maple','populus tremuloides':'aspen','salix babylonica':'willow','picea abies':'spruce','pinus sylvestris':'pine','quercus robur':'oak','vachellia tortilis':'acacia','acacia tortilis':'acacia'};
   if(Object.hasOwn(exact,n))return {presetId:exact[n],fallback:false,reason:'Species design preset; dimensions are artistic, not measured traits.'};
   const presetId=/acacia|vachellia|senegalia|umbrella|savanna/i.test(n+' '+archetype)?'acacia':/^pinus /.test(n)?'pine':/picea|abies|pseudotsuga|larix|conifer|needle/i.test(n+' '+archetype)?'spruce':'oak';
   // Keep the stable archetype ID for existing seeds; select the approved visual separately.
