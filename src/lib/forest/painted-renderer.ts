@@ -1,3 +1,5 @@
+import {installTreeAttention,sceneAttention,pugetCompositionProfile,resolveEncounterComposition,type EnvironmentOptions} from './environment-foundations';
+import {dressEncounter,encounterCamera,type EncounterRecipe} from './encounter';
 import {libraryFoliageBatch,libraryPickClumps} from './library';
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
@@ -10,7 +12,7 @@ import {batchCanopyBillboards,canopyBillboardMaterial,installCanopyShader} from 
 import type {PaintedTree} from './painterly';
 import type {BenchmarkResult,CameraView,RenderOptions,RenderStats} from './render-types';
 
-export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick:(index:number|null)=>void,onStats:(stats:RenderStats)=>void,onError:(message:string)=>void,view?:CameraView,options:RenderOptions={}) {
+export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick:(index:number|null)=>void,onStats:(stats:RenderStats)=>void,onError:(message:string)=>void,view?:CameraView,options:RenderOptions&{environment?:false|EnvironmentOptions}={}) {
   const start=performance.now(),lab=!!options.lab,coarse=matchMedia('(pointer: coarse)').matches||host.clientWidth<600;
   const renderer=new THREE.WebGLRenderer({antialias:false,powerPreference:'low-power'});
   const gl=renderer.getContext(),debugInfo=gl.getExtension('WEBGL_debug_renderer_info');
@@ -29,6 +31,7 @@ export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick
   camera.position.set(...(lab?[treeHeight*1.05,treeHeight*.65,treeHeight*1.5]:[58,39,70]) as [number,number,number]);
   controls.target.set(0,lab?treeHeight*.43:9,0);controls.enableDamping=true;controls.dampingFactor=.1;controls.minDistance=lab?.8:12;controls.maxDistance=lab?90:175;controls.maxPolarAngle=Math.PI*.49;controls.minPolarAngle=.08;
   controls.touches.ONE=THREE.TOUCH.ROTATE;controls.touches.TWO=THREE.TOUCH.DOLLY_PAN;
+  view??=encounterCamera(recipe as EncounterRecipe);
   if(view){camera.position.set(...view.position);controls.target.set(...view.target);}
   scene.add(new THREE.HemisphereLight('#e7f3ff','#b8c5a3',2.3));
   const fill=new THREE.DirectionalLight('#bed4e6',.95);fill.position.set(30,18,-35);scene.add(fill);
@@ -46,7 +49,37 @@ export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick
     const ground=new THREE.Mesh(geometry,new THREE.MeshStandardMaterial({vertexColors:true,roughness:1}));ground.receiveShadow=true;scene.add(ground);
     const edge=new THREE.Mesh(new THREE.BoxGeometry(100,3,100),new THREE.MeshStandardMaterial({color:ice?'#aab7b1':'#7a7154',roughness:1}));edge.position.y=-3;scene.add(edge);
   }
+  const foundations=!!(recipe as EncounterRecipe).encounter&&options.environment!==false;
+  const compositionMode=new URLSearchParams(location.search).get('composition')??'C';
+  const anchored=foundations&&(recipe as EncounterRecipe).encounter?.camera==='human';
+  if(anchored&&compositionMode!=='A'&&options.environment!==false&&options.environment?.composition!==false){
+    camera.aspect=host.clientWidth/Math.max(1,host.clientHeight);camera.updateProjectionMatrix();controls.update();camera.updateMatrixWorld();
+    const profile=options.environment?.composition||pugetCompositionProfile(recipe.seed);
+    if(new URLSearchParams(location.search).get('foregroundTrees')!=='legacy'){
+      const forward=camera.getWorldDirection(new THREE.Vector3()).setY(0).normalize(),minimum=profile.framing.treeClearance??18;
+      const excluded:number[]=[];
+      const trees=recipe.trees.filter(tree=>{const center=new THREE.Vector3(...tree.position).sub(camera.position),crownReach=Math.max(tree.model.dimensions.crownWidth,tree.model.dimensions.crownDepth)*.5;const keep=center.dot(forward)-crownReach>=minimum;if(!keep)excluded.push(tree.index);return keep;});
+      // Render-only exclusion: never mutate the canonical recipe or relocate an individual.
+      recipe={...recipe,trees};scene.userData.foregroundTreeRule={minimumCrownDistance:minimum,excluded,visible:trees.map(t=>t.index)};
+    }
+    scene.userData.composition=resolveEncounterComposition(recipe,camera,profile);scene.userData.compositionMode=compositionMode;
+  }
+  const disposeEncounter=dressEncounter(scene,recipe as EncounterRecipe,mobile,foundations);
+  if(scene.userData.environmentArt){sun.color.set('#ffe1a4');sun.intensity=4.1;fill.color.set('#779cb9');fill.intensity=.42;scene.children.forEach(o=>{if(o instanceof THREE.HemisphereLight)o.intensity=1.15;});scene.fog=new THREE.Fog('#c5d9cc',76,175);}
+  const lighting=new URLSearchParams(location.search).get('lighting')??'final';
+  const directLighting=foundations&&lighting!=='baseline';
+  if(directLighting){sun.position.set(-36,38,22);sun.color.set('#ffe0a8');sun.intensity=4.8;fill.intensity=.18;scene.children.forEach(o=>{if(o instanceof THREE.HemisphereLight){o.color.set('#a3c4df');o.groundColor.set('#52726a');o.intensity=.75;}});}
+  const composition=scene.userData.composition as ReturnType<typeof resolveEncounterComposition>|undefined;
+  if(composition&&compositionMode==='C'){
+    const light=composition.profile.light;sun.position.set(...light.position);sun.color.set(light.color);sun.intensity=light.intensity;sun.shadow.radius=light.shadowSoftness;sun.shadow.intensity=light.shadowStrength;
+    if(scene.userData.groundCompositionLighting){sun.shadow.intensity=Math.min(light.shadowStrength,.72);scene.children.forEach(o=>{if(o instanceof THREE.HemisphereLight){o.intensity=Math.max(light.ambientIntensity,.85);o.groundColor.set('#6c8f75');}});}
+    scene.children.forEach(o=>{if(o instanceof THREE.HemisphereLight){o.color.set(light.ambientColor);o.intensity=scene.userData.groundCompositionLighting?Math.max(light.ambientIntensity,.85):light.ambientIntensity;}});
+  }
+  const attention={...sceneAttention(recipe,options.environment||{}),sun:directLighting?sun:undefined,composition:compositionMode==='C'?composition:undefined};
+  const gradedMaterials=new Set<THREE.Material>();
+  const grade=(material:THREE.Material,kind:'library'|'billboards'|'wood',deciduous=false)=>{if(foundations&&!gradedMaterials.has(material)){installTreeAttention(material,kind,{...attention,deciduous});gradedMaterials.add(material);}};
   const bark=brushTexture('bark'),woodMaterial=new THREE.MeshStandardMaterial({map:bark,vertexColors:true,roughness:1,wireframe:options.debug==='wireframe'});
+  grade(woodMaterial,'wood');
   const pickables:THREE.Object3D[]=[],lods:THREE.Group[]=[],cardCounts:number[]=[];
   const debugSkeleton=options.debug==='skeleton';
   const foliageResources:ReturnType<typeof canopyBillboardMaterial>[]=[];
@@ -61,20 +94,28 @@ export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick
   }else for(const far of [false,true]){
     const group=new THREE.Group();lods.push(group);scene.add(group);if(!recipe.trees.length){cardCounts.push(0);clumpCounts.push(0);continue;}
     const {geometry,faces}=paintedWoodGeometry(recipe.trees.map((t,i)=>({model:{...t.model,segments:t.model.segments.filter(segment=>segment.depth===0||(t.studio&&segment.depth<=2)||(t.model.presetId==='acacia'&&segment.depth<=2)||(segment.depth===1&&canopies[i].controls.branchExposure>.28)||(segment.depth>1&&canopies[i].controls.branchExposure>.7))},position:t.position,rotation:t.rotation})),far,mobile);
+    faces.forEach(face=>{face.treeIndex=recipe.trees[face.treeIndex].index;});
     const wood=new THREE.Mesh(geometry,woodMaterial);wood.castShadow=true;wood.userData.faces=faces;group.add(wood);pickables.push(wood);
     let libraryCards=0;
     for(const [id,trees] of libraryGroups){
       const resource=libraryFoliageBatch(trees,id,recipe.appearanceSeed,mobile,far||performanceMode,options.debug==='wireframe',libraryMaterials.get(id));
+      grade(resource.mesh.material,'library',!/(douglas|pine|spruce|cedar|ponderosa)/.test(id));
+      if(directLighting){
+        const depth=new THREE.MeshDepthMaterial({depthPacking:THREE.RGBADepthPacking,map:resource.texture,alphaTest:.34,side:THREE.DoubleSide});
+        depth.onBeforeCompile=shader=>{shader.uniforms.shadowAtlas={value:resource.texture};shader.vertexShader='attribute vec4 tileRect;varying vec2 shadowAtlasUv;\n'+shader.vertexShader;shader.vertexShader=shader.vertexShader.replace('#include <uv_vertex>','#include <uv_vertex>\nshadowAtlasUv=tileRect.xy+uv*tileRect.zw;');shader.fragmentShader='uniform sampler2D shadowAtlas;varying vec2 shadowAtlasUv;\n'+shader.fragmentShader;shader.fragmentShader=shader.fragmentShader.replace('void main() {','void main() { if(texture2D(shadowAtlas,shadowAtlasUv).a<.34)discard;');};
+        depth.customProgramCacheKey=()=> 'wildloom-canopy-shadow-v1';resource.mesh.customDepthMaterial=depth;resource.mesh.castShadow=true;
+      }
       libraryMaterials.set(id,resource.mesh.material);libraryResources.push(resource);resource.mesh.userData.foliageBillboards=true;group.add(resource.mesh);libraryCards+=resource.cards;
     }
     // The ellipsoids remain data only. Final Painterly/Performance contain NO solid canopy meshes.
     clumpCounts.push(0);
     const resource=canopyBillboardMaterial(recipe.appearanceSeed,performanceMode||mobile,options.debug==='wireframe',foliageResources[0],far);foliageResources.push(resource);
+    grade(resource.material,'billboards');
     const data=far?recipe.trees.flatMap((t,i)=>t.studio?[]:generateCanopyBillboards(canopies[i].coarseClumps,t.model.presetId,t.seed,t.appearanceSeed??recipe.appearanceSeed,true,performanceMode,canopies[i].controls.surfaceLeafDetail).map(card=>({t,card}))):allCards;
     const cards=data.map(d=>d.card);cardCounts.push(cards.length+libraryCards);if(!cards.length)continue;
     const world=new THREE.Matrix4();
     const worldCards=data.map(({t,card})=>{
-      const scaffold=(far?canopies[t.index].coarseClumps:canopies[t.index].clumps)[card.scaffoldId],c=Math.cos(t.rotation),sn=Math.sin(t.rotation),offset=new THREE.Vector3(...card.position).sub(new THREE.Vector3(...scaffold.position)).applyAxisAngle(new THREE.Vector3(0,1,0),t.rotation);
+      const scaffold=(far?canopies[recipe.trees.indexOf(t)].coarseClumps:canopies[recipe.trees.indexOf(t)].clumps)[card.scaffoldId],c=Math.cos(t.rotation),sn=Math.sin(t.rotation),offset=new THREE.Vector3(...card.position).sub(new THREE.Vector3(...scaffold.position)).applyAxisAngle(new THREE.Vector3(0,1,0),t.rotation);
       const position:typeof card.position=[scaffold.position[0]*c-scaffold.position[2]*sn+t.position[0]+offset.x,scaffold.position[1]+t.position[1]+offset.y,scaffold.position[0]*sn+scaffold.position[2]*c+t.position[2]+offset.z];
       const rotation=new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,1,0),t.rotation).multiply(new THREE.Quaternion(...card.rotation));world.makeRotationY(t.rotation);
       return {...card,position,rotation:rotation.toArray(),normal:transformCanopyNormal(card.normal,world)};
@@ -122,7 +163,9 @@ export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick
   };
   const lost=(e:Event)=>{e.preventDefault();measurement?.resolve(null);measurement=null;stopped=true;onError('The WebGL context was lost. Reload to restore the scene; its seeds and ecological recipe are preserved.');};
   renderer.domElement.addEventListener('pointerdown',pointerDown);renderer.domElement.addEventListener('pointerup',pointerUp);renderer.domElement.addEventListener('pointercancel',pointerCancel);renderer.domElement.addEventListener('webglcontextlost',lost);
+  let lastArtRevision=-1;
   function animate(){
+    if(lastArtRevision!==(scene.userData.artRevision??0)){lastArtRevision=scene.userData.artRevision??0;dirty=true;}
     if(stopped)return;frame=requestAnimationFrame(animate);controls.update();const elapsed=performance.now();const windDue=windEnabled&&elapsed-lastWindFrame>(mobile?50:33);if(!dirty&&!measurement&&!windDue)return;dirty=false;lastWindFrame=elapsed;
     foliageResources.forEach(r=>{r.time.value=(elapsed-start)/1000;r.amplitude.value=windEnabled?.045:0;});
     libraryMaterials.forEach(m=>{m.uniforms.windTime.value=(elapsed-start)/1000;m.uniforms.windAmplitude.value=windEnabled?.045:0;});
@@ -153,10 +196,10 @@ export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick
     focus(index:number){const t=recipe.trees.find(t=>t.index===index);if(!t)return;controls.target.set(t.position[0],t.position[1]+t.model.dimensions.height*.45,t.position[2]);camera.position.set(t.position[0]+16,t.position[1]+t.model.dimensions.height*.7,t.position[2]+24);controls.update();dirty=true;},
     benchmark():Promise<BenchmarkResult|null>{if(stopped||measurement)return Promise.resolve(null);return new Promise(resolve=>{measurement={start:performance.now(),previous:0,intervals:[],cpu:[],resolve};controls.autoRotate=true;controls.autoRotateSpeed=2;dirty=true;});},
     dispose(){
-      stopped=true;measurement?.resolve(null);cancelAnimationFrame(frame);observer.disconnect();controls.dispose();
+      disposeEncounter();stopped=true;measurement?.resolve(null);cancelAnimationFrame(frame);observer.disconnect();controls.dispose();
       renderer.domElement.removeEventListener('pointerdown',pointerDown);renderer.domElement.removeEventListener('pointerup',pointerUp);renderer.domElement.removeEventListener('pointercancel',pointerCancel);renderer.domElement.removeEventListener('webglcontextlost',lost);
       const geometries=new Set<THREE.BufferGeometry>(),allMaterials=new Set<THREE.Material>([woodMaterial,...foliageResources.map(r=>r.material)]);
-      scene.traverse(o=>{if(o instanceof THREE.Mesh||o instanceof THREE.LineSegments){geometries.add(o.geometry);(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>allMaterials.add(m));}if(o instanceof THREE.InstancedMesh)o.dispose();});
+      scene.traverse(o=>{if(o instanceof THREE.Mesh||o instanceof THREE.LineSegments){geometries.add(o.geometry);if(o instanceof THREE.Mesh&&o.customDepthMaterial)allMaterials.add(o.customDepthMaterial);(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>allMaterials.add(m));}if(o instanceof THREE.InstancedMesh)o.dispose();});
       geometries.forEach(g=>g.dispose());allMaterials.forEach(m=>m.dispose());new Set([bark,...foliageResources.map(r=>r.texture),...libraryResources.map(r=>r.texture)]).forEach(t=>t.dispose());sun.shadow.dispose();renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove();
     },
   };

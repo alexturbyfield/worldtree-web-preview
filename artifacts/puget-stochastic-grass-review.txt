@@ -1,0 +1,7 @@
+Stochastic grass tiling
+Source change: src/lib/forest/environment-foundations.ts only.
+Preserves the accepted texture generator and palette. World X/Z coordinates form a triangular lattice. Each lattice vertex hashes scene seed and cell identity into an offset and quarter-turn rotation. Three samples blend with cubed, normalized barycentric weights; shared vertices give continuous transitions between triangles. Sharpened blending limits loss of painted detail.
+textureGrad uses unmodified world-UV derivatives transformed by each tile rotation. This prevents random offsets/discrete cell changes from selecting incorrect mip levels. Existing mipmaps and anisotropic filtering remain enabled. Hashes are deterministic per world cell, with no time or camera input; last-bit procedural hash variation between GPU implementations is possible.
+Three grass fetches replace one; no new draw calls, textures, mesh buffers, instances, scenery, light changes or render targets. GPU cost was not benchmarked. Browser rendering remains 18 calls / 560785 triangles in both matched captures. Geometry fingerprint, sky hash, camera, exposure, physical shadow strength, vignette, illumination and ground instance data match. Shader/page errors absent. TypeScript passed.
+Comparison: puget-stochastic-grass-comparison.png; native scene crop: puget-stochastic-grass-close.png.
+Default stochastic for the rich C landscape. Existing Puget URL plus &grassTiling=repeat restores repeating sampling; &grassTiling=stochastic enables the correction. No deployment.

@@ -1,0 +1,44 @@
+Wildloom — focused painterly illumination pass
+
+Review: puget-illumination-AB.png (before left / after right), individual A/B PNGs,
+puget-illumination-debug.png, and combined comparison/debug sheet puget-illumination-comparison.png.
+A disables only the new illumination and matches the preceding screenshot byte-for-byte: True.
+Changed src/lib/forest/environment-foundations.ts; added scripts/studies/capture-illumination.cjs.
+Baseline source: artifacts/illumination-baseline-source/environment-foundations.ts.txt.
+
+EncounterCompositionProfile accepts optional PainterlyIllumination in illumination.
+Default controls: enabled true; focalStrength .9; optional focalCenter world X/Z (defaults to projected
+clearing center shifted 5m into the middle ground); focalWidth [19,20]; softness .8; warmth .5;
+irregularity .35; patchCount 3 (bounded to 4); patchStrength .38; crownStrength .5.
+Pass a custom profile through mountPaintedForest(..., {environment:{composition:profile}}).
+
+The illumination field is independent of GroundCompositionLighting: its strength/shape/patches can change
+without altering the dark vignette. It uses a captured world basis, seeded region placement and broad,
+domain-warped feathering. Three overlapping regions add soft light/shade variation, without a screen-space
+spotlight, texture replacement, bloom, scenery, new assets or global exposure adjustment.
+The warm multiplier preserves underlying painterly detail. Foreground protection fades out added illumination
+before the near foreground, retaining existing cool green shade and the readable bounce floor.
+The same field covers terrain, instanced grass cards, short grass geometry and small ground vegetation.
+
+Only existing compositionally selected trees receive new crown accents. Their shader masks combine selected
+crown volume, actual sun-facing normals, upper/exterior height and background quieting. Lower/interior foliage
+keeps its existing deep-green shading. crownStrength controls the accents. This is an art-directed light-response
+multiplier, not a new physical light or emissive glow. The directional sun, shadow map, shadow strength .72,
+exposure 1.12 and ground vignette are unchanged. Tree placement/model buffers, 18m foreground exclusion,
+species/population data, sky, clouds, camera, textures, UI and inspection behavior are preserved.
+
+Validation: TypeScript and whitespace checks pass; capture error arrays are empty.
+Camera arrays, tree position-buffer fingerprints and sky hashes match across before/after/debug.
+Instance arrays and vignette settings match before/after. Targeted checks confirm deterministic illumination,
+independent adjustment from the vignette and stable captured world coordinates after camera movement.
+All captures: 17 draw calls / 575981 submitted triangles on desktop Chromium ANGLE SwiftShader, pixel ratio .65.
+No added draw calls, texture allocations or render targets. Physical mobile/GPU time unmeasured.
+
+Preview: http://localhost:3001/explore?lat=47.6062&lon=-122.3321&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human&illumination=on
+Use illumination=off for before or illumination=debug for the temporary field view. Default is on.
+Debug: gold = added light, teal = protected/unlit field, purple = negative shade contribution. Negative patches
+may reduce positive illumination without turning purple where the net field remains lit.
+Orbit normally to inspect world anchoring. Re-mounting re-resolves the anchored composition.
+Reproduce: node scripts/studies/capture-illumination.cjs
+Caveat: the fields are stylized illumination regions, not simulated cloud/canopy scattering.
+Stopped after the first comparison for review. No deployment or unrelated refactor.

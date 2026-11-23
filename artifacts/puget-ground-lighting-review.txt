@@ -1,0 +1,43 @@
+Wildloom Ground Composition Lighting — review
+
+Deliverables: puget-ground-lighting-AB.png (A left, B right), puget-ground-lighting-debug.png,
+plus individual A/B PNGs and a combined comparison/debug sheet in puget-ground-lighting-comparison.png.
+A is the previous full composition profile; byte-identical to the preceding C screenshot: True.
+B uses the same tree/understory placements, textures, species, sky, camera and exposure.
+Source changed: src/lib/forest/environment-foundations.ts and src/lib/forest/painted-renderer.ts.
+Capture: scripts/studies/capture-ground-lighting.cjs. Baseline source copies: ground-lighting-baseline-source/.
+
+GroundCompositionLighting is an optional groundLighting field on EncounterCompositionProfile.
+Controls: foregroundDarkness .34, sideFraming .30, focalCenter optional world X/Z (defaults to the projected
+clearing center), focalWidth [23,29] world-space scale, transitionSoftness .8, warmth .2, irregularity .3.
+Use a customized profile via mountPaintedForest(..., {environment:{composition:profile}}).
+The field uses a fixed world basis captured from the encounter composition, broad smooth transitions and
+seeded low-frequency sine warping. It does not reference tree positions, shadow maps, view matrices or time.
+Foreground and side weights combine smoothly; the broad warm opening is not a circular spotlight.
+
+The same GLSL field is applied to terrain, crossed/single-card grass instances, short grass geometry and
+existing small ground vegetation. It modulates light after material shading, preserving texture/vertex pigment
+detail. The field has a bounded darkening weight and a pigment-relative green bounce floor, avoiding nearly
+black meadow shadows. No new textures/assets/geometry, full-screen filter or postprocessing pass.
+The debug query overrides surface lighting with false color: teal = framing shade, yellow = opening.
+Tree crowns and sky remain normally shaded in that view. Debug is temporary and adds no UI.
+
+Physical shadows remain separate: real alpha-masked tree shadow maps are unchanged, while B caps shadow
+intensity at .48 (A .90), raises hemisphere fill from .75 to at least .95 and uses cool green ground fill
+#6c8f75. Tree shadow silhouettes and directional sunlight remain visible; no trees were moved to drive the field.
+Existing broad cloud transmission stays separate and unchanged.
+
+Validation: deterministic field output; changing tree positions does not change the field; camera motion after
+resolution does not move the captured field; foreground-darkness control changes the field without mutating defaults.
+A/B/debug camera arrays, tree position-buffer fingerprints and sky bitmap hashes match exactly.
+All browser/shader error arrays are empty. TypeScript passes; git diff whitespace check passes.
+All views: 17 draw calls / 713359 submitted triangles; instancing and instance counts unchanged.
+Desktop Chromium / ANGLE SwiftShader at pixel ratio .65; physical mobile/GPU timing not measured.
+
+Preview B: http://localhost:3001/explore?lat=47.6062&lon=-122.3321&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human&composition=C&groundLighting=B
+Change groundLighting=B to A for baseline or debug for the temporary field visualization. B is the default.
+Orbit normally to inspect the world-anchored field; do not switch to the original procedural inspection scene,
+which intentionally bypasses anchored encounter composition. Re-mounting re-resolves the composition basis.
+Reproduce: node scripts/studies/capture-ground-lighting.cjs
+Caveat: painterly illumination is intentionally art-directed, not a physical canopy-light simulation.
+Stopped after comparison/debug review. No deployment, commit or broader work.

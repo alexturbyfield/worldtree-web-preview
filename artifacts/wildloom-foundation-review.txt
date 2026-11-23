@@ -1,0 +1,64 @@
+Wildloom environment foundation pass — review
+
+Deliverables (in artifacts/):
+  wildloom-foundation-ground-3x3.png — continuous 3×3 repeat; zero opposite-edge RGB error.
+  wildloom-foundation-grass-study.png — four atlas variants and nine sampled instanced tufts.
+  wildloom-foundation-tree-hierarchy.png — identical maple and Douglas-fir specimens at three treatment depths.
+  wildloom-foundation-integrated-puget.png — unchanged Puget encounter camera/composition.
+  wildloom-foundation-inspection.png — preserved elevated camera; shared foliage/wood atmosphere.
+  wildloom-foundation-tree-focal-weight-1.png — optional focal weight demonstrated on the background specimen.
+  wildloom-foundation-report.json — measured counters, timing, preservation checks and reproduction details.
+  Raw tile, atlas and individual comparison PNGs are retained beside these sheets.
+
+Implementation:
+  src/lib/forest/environment-foundations.ts (new) — reusable periodic ground, independent world masks,
+    grass atlas/instancing/LOD, shader color hierarchy and optional spatial focal weight.
+  src/lib/forest/encounter.ts — installs foundations while retaining previous dressing as a fallback;
+    preserves old random stream for existing sky, shrubs and rocks.
+  src/lib/forest/painted-renderer.ts — connects the foundation hook and grades shared tree materials.
+  scripts/studies/environment-foundations.ts and capture-environment-foundations.cjs — reproducible review captures.
+  No dependencies, species, UI, tree generators, leaf atlas designs, terrain geometry or scene placement were added/changed.
+
+Ground: 256×256 base-color tile, repeating every 7 m; periodic broad pigment washes.
+  Soil and vegetation fields are separate seeded world-space functions. Large regions do not come from the tile.
+Grass: padded 512×128 atlas, four variants; deterministic scale, yaw, lean, tint and clumped acceptance.
+  Elliptical clearing reserves the encounter center with only 2.5% residual acceptance before other masks.
+  Near: two crossed cards / 4 triangles per tuft, fades at 32–46 m.
+  Far: ~30% stable single-card subset / 2 triangles per tuft, fades in at 30–44 m and out at 68–88 m.
+  Both batches are submitted; vertex culling and alpha masking remove distant surfaces on the GPU.
+Trees: species pigments remain inputs; smooth world-space ramps add deep foreground greens/selective warmth,
+  modest midground contrast/saturation reduction, and cooler/narrower background color.
+  Atmosphere matches Three.js fog depth and output color space; the grading axis stays fixed between cameras.
+  Optional API: mountPaintedForest(..., {environment:{focal:{treeIndex:0,weight:0.8}}}).
+  Fallback API: mountPaintedForest(..., {environment:false}). Baseline and Diagram rendering are unchanged.
+
+Performance (seed 29):
+                            Near instances  Far instances  Grass calls  Submitted grass triangles
+  Desktop                   4,576           1,384          2            21,072
+  Mobile / software subset  2,695             812          2            12,404
+  Counts include distance-culled instances; these are submitted triangle costs, not fragment/overdraw measurements.
+  Grass: alphaTest 0.38, depth writes enabled, no alpha blending, no cast shadows.
+  Two added textures occupy approximately 0.67 MiB RGBA including mipmaps (not a measured GPU allocation).
+  Integrated encounter: 16 calls / 695,474 submitted triangles.
+  Inspection: 16 calls / 296,246 submitted triangles.
+  Compared with the previous recorded encounter pass: +1 scene call and +2,804 submitted triangles.
+  Measured on desktop Chromium / ANGLE SwiftShader, software economy quality, 1260×790 CSS px,
+  pixel ratio 0.65, existing shadows enabled (1024×1024). No physical phone/GPU timing was taken.
+  5-second continuous orbit: 2.70 fps, median 368.5 ms, p95 390.2 ms;
+  mean CPU render submission 0.75 ms. This does not meet a 30 fps target in software.
+
+Validation: npm run typecheck passed. Capture assertions passed with no page/shader console errors.
+  Existing encounter tree/model/species/seed/palette/placement/terrain data match the preceding saved recipe.
+  Existing rock transforms/geometry, shrub transforms and sky bitmap match the retained fallback.
+  Grass transforms, tile and atlas are deterministic. Identical-tree comparisons retain the same seeds and geometry.
+
+Preview:
+  npm run dev -- --port 3001
+  http://localhost:3001/explore?lat=47.6062&lon=-122.3321&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human
+  Change camera=human to camera=inspection for the elevated view.
+  Reproduce all studies: node scripts/studies/capture-environment-foundations.cjs
+
+Caveats: this is a foundation pass, not completed reference-level composition or mobile optimization.
+  The existing terrain box still intersects the synthetic terrain as a tan patch; terrain geometry was preserved.
+  Grass silhouettes remain graphic and can show crossed-card roots close up; they do not receive tree shadows.
+  A focal ellipsoid can affect adjacent overlapping crowns. No deployment, commit or push was performed.

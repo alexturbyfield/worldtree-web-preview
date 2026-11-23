@@ -1,0 +1,335 @@
+{
+  "preview": "http://localhost:3001/explore?lat=47.6062&lon=-122.3321&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human",
+  "views": [
+    {
+      "view": "human",
+      "calls": 16,
+      "triangles": 695474,
+      "environment": {
+        "groundTile": "256 × 256",
+        "grassAtlas": "512 × 128",
+        "instances": [
+          {
+            "name": "foundation-grass-near",
+            "count": 2695,
+            "triangles": 10780
+          },
+          {
+            "name": "foundation-grass-far",
+            "count": 812,
+            "triangles": 1624
+          }
+        ],
+        "grassDrawCalls": 2,
+        "grassAlphaTest": 0.38,
+        "grassCastsShadows": false,
+        "grassDistance": "Crossed cards fade 32–46 m; 30% single-card subset fades in 30–44 m, out 68–88 m.",
+        "clearing": "Elliptical reserved area; 2.5% residual acceptance before soil and vegetation masks."
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "pixelRatio": 0.65,
+      "shadows": true,
+      "shadowSizes": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "camera": [
+        0.01045391827706954,
+        7.707058230656985,
+        34.282255793480886
+      ],
+      "target": [
+        -0.0369933974896546,
+        -0.03141075907812839,
+        -0.9988217322206744
+      ],
+      "viewport": [
+        1260,
+        790
+      ],
+      "benchmark": {
+        "durationMs": 5185.600000023842,
+        "frames": 14,
+        "fps": 2.6997840172662046,
+        "medianFrameMs": 368.5,
+        "p95FrameMs": 390.1999999284744,
+        "meanRenderCpuMs": 0.7466666618982951,
+        "calls": 16,
+        "triangles": 695474,
+        "quality": "software economy",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "viewport": "1260 × 790",
+        "pixelRatio": 0.65,
+        "foliageCards": 54315,
+        "foliageMasses": 0,
+        "method": "5 second continuous orbit; browser frame intervals and CPU render submission time. Not a GPU timer or physical-device benchmark."
+      },
+      "errors": []
+    },
+    {
+      "view": "inspection",
+      "calls": 16,
+      "triangles": 296246,
+      "environment": {
+        "groundTile": "256 × 256",
+        "grassAtlas": "512 × 128",
+        "instances": [
+          {
+            "name": "foundation-grass-near",
+            "count": 2695,
+            "triangles": 10780
+          },
+          {
+            "name": "foundation-grass-far",
+            "count": 812,
+            "triangles": 1624
+          }
+        ],
+        "grassDrawCalls": 2,
+        "grassAlphaTest": 0.38,
+        "grassCastsShadows": false,
+        "grassDistance": "Crossed cards fade 32–46 m; 30% single-card subset fades in 30–44 m, out 68–88 m.",
+        "clearing": "Elliptical reserved area; 2.5% residual acceptance before soil and vegetation masks."
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "pixelRatio": 0.65,
+      "shadows": true,
+      "shadowSizes": [
+        [
+          1024,
+          1024
+        ]
+      ],
+      "camera": [
+        57.99999999999999,
+        39.00000000000001,
+        70
+      ],
+      "target": [
+        -0.6058783768999656,
+        -0.3133853673620512,
+        -0.731232523844786
+      ],
+      "viewport": [
+        1260,
+        790
+      ],
+      "errors": []
+    }
+  ],
+  "checks": {
+    "existingEncounterRecipeUnchanged": true,
+    "dressingCompositionPreserved": true,
+    "grassTransformsDeterministic": true,
+    "fallbackDressingRendered": true,
+    "ground": {
+      "edgeError": 0,
+      "deterministicTile": true,
+      "deterministicAtlas": true,
+      "worldMasks": [
+        {
+          "soil": 1,
+          "vegetation": 0.030000000000000027,
+          "open": 0
+        },
+        {
+          "soil": 0,
+          "vegetation": 0.3462155601153318,
+          "open": 0
+        },
+        {
+          "soil": 0,
+          "vegetation": 0,
+          "open": 0.954468852407028
+        },
+        {
+          "soil": 0,
+          "vegetation": 0,
+          "open": 1
+        }
+      ]
+    },
+    "identicalTreeGeometryAndSeeds": true,
+    "studyErrors": []
+  },
+  "studies": [
+    {
+      "kind": "grass-desktop",
+      "calls": 2,
+      "triangles": 2084,
+      "environment": {
+        "groundTile": "256 × 256",
+        "grassAtlas": "512 × 128",
+        "instances": [
+          {
+            "name": "foundation-grass-near",
+            "count": 4576,
+            "triangles": 18304
+          },
+          {
+            "name": "foundation-grass-far",
+            "count": 1384,
+            "triangles": 2768
+          }
+        ],
+        "grassDrawCalls": 2,
+        "grassAlphaTest": 0.38,
+        "grassCastsShadows": false,
+        "grassDistance": "Crossed cards fade 32–46 m; 30% single-card subset fades in 30–44 m, out 68–88 m.",
+        "clearing": "Elliptical reserved area; 2.5% residual acceptance before soil and vegetation masks."
+      },
+      "scatterCounters": {
+        "calls": 3,
+        "triangles": 23120
+      },
+      "diagnostic": "Nine sampled tuft transforms arranged for card inspection; scatter counters measured before re-positioning."
+    },
+    {
+      "kind": "grass-mobile-density",
+      "calls": 2,
+      "triangles": 2084,
+      "environment": {
+        "groundTile": "256 × 256",
+        "grassAtlas": "512 × 128",
+        "instances": [
+          {
+            "name": "foundation-grass-near",
+            "count": 2695,
+            "triangles": 10780
+          },
+          {
+            "name": "foundation-grass-far",
+            "count": 812,
+            "triangles": 1624
+          }
+        ],
+        "grassDrawCalls": 2,
+        "grassAlphaTest": 0.38,
+        "grassCastsShadows": false,
+        "grassDistance": "Crossed cards fade 32–46 m; 30% single-card subset fades in 30–44 m, out 68–88 m.",
+        "clearing": "Elliptical reserved area; 2.5% residual acceptance before soil and vegetation masks."
+      },
+      "scatterCounters": {
+        "calls": 3,
+        "triangles": 14452
+      },
+      "diagnostic": "Nine sampled tuft transforms arranged for card inspection; scatter counters measured before re-positioning."
+    },
+    {
+      "kind": "identical-tree",
+      "calls": 2,
+      "triangles": 9944,
+      "identity": {
+        "presetId": "maple",
+        "structure": "2435018868",
+        "appearance": "682976635",
+        "segments": 340,
+        "fronds": 648
+      },
+      "depth": 8,
+      "focalWeight": 0
+    },
+    {
+      "kind": "identical-tree",
+      "calls": 2,
+      "triangles": 9944,
+      "identity": {
+        "presetId": "maple",
+        "structure": "2435018868",
+        "appearance": "682976635",
+        "segments": 340,
+        "fronds": 648
+      },
+      "depth": 43,
+      "focalWeight": 0
+    },
+    {
+      "kind": "identical-tree",
+      "calls": 2,
+      "triangles": 9944,
+      "identity": {
+        "presetId": "maple",
+        "structure": "2435018868",
+        "appearance": "682976635",
+        "segments": 340,
+        "fronds": 648
+      },
+      "depth": 88,
+      "focalWeight": 0
+    },
+    {
+      "kind": "identical-tree",
+      "calls": 2,
+      "triangles": 27568,
+      "identity": {
+        "presetId": "douglas-v1",
+        "structure": "539426913",
+        "appearance": "1419864776",
+        "segments": 1208,
+        "fronds": 1332
+      },
+      "depth": 8,
+      "focalWeight": 0
+    },
+    {
+      "kind": "identical-tree",
+      "calls": 2,
+      "triangles": 27568,
+      "identity": {
+        "presetId": "douglas-v1",
+        "structure": "539426913",
+        "appearance": "1419864776",
+        "segments": 1208,
+        "fronds": 1332
+      },
+      "depth": 43,
+      "focalWeight": 0
+    },
+    {
+      "kind": "identical-tree",
+      "calls": 2,
+      "triangles": 27568,
+      "identity": {
+        "presetId": "douglas-v1",
+        "structure": "539426913",
+        "appearance": "1419864776",
+        "segments": 1208,
+        "fronds": 1332
+      },
+      "depth": 88,
+      "focalWeight": 0
+    },
+    {
+      "kind": "focal-weight",
+      "calls": 2,
+      "triangles": 27568,
+      "identity": {
+        "presetId": "douglas-v1",
+        "structure": "539426913",
+        "appearance": "1419864776",
+        "segments": 1208,
+        "fronds": 1332
+      },
+      "depth": 88,
+      "focalWeight": 1
+    }
+  ],
+  "caveats": [
+    "Desktop Chromium / SwiftShader software rasterizer; not a physical mobile GPU benchmark.",
+    "Grass uses alpha masking, no cast shadows; renderer counters include submitted instances even when shader distance-culling removes them.",
+    "Focal emphasis is a soft world-space ellipsoid; overlapping crowns can share some emphasis.",
+    "No generators, species selection, structural/appearance/scene seeds, leaf atlases, terrain heights, composition or cameras were changed."
+  ],
+  "implementation": {
+    "source": [
+      "src/lib/forest/environment-foundations.ts",
+      "src/lib/forest/encounter.ts",
+      "src/lib/forest/painted-renderer.ts"
+    ],
+    "fallback": "mountPaintedForest(..., {environment:false}) restores the previous encounter dressing and tree colors. Baseline and Diagram are unchanged.",
+    "focal": "mountPaintedForest(..., {environment:{focal:{treeIndex:0,weight:0.8}}})",
+    "reproduce": "npm run dev -- --port 3001; node scripts/studies/capture-environment-foundations.cjs"
+  }
+}

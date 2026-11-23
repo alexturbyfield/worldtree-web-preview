@@ -1,0 +1,6 @@
+Foreground framing / left forest continuation
+Changed src/lib/forest/encounter.ts only.
+Added eight boulders in two asymmetric foreground clusters through the existing rock batch. Added 26 unnamed frond clumps using one instanced mesh/material, with deterministic rotation and scale; terrain-relative roots stay grounded. Middle encounter space remains open. These are artistic vegetation shapes, not species records.
+Seven backdrop tree instances extend left to x=-96m at z=-48..-56m, reusing existing eligible species and approved studio geometry with seeded rotation. No species, model, seed or placement of the original trees is changed. Copies are backdrop design instances, not measured population or separate botanical observations. Off-ground-patch tree bases remain a limitation when exploring far beyond the anchored framing.
+Validation: TypeScript passed; deterministic composition/model reuse check passed. Browser/shader errors absent. Camera, exposure, sky fingerprint, shadow strength, vignette and illumination match before/after. Rendering 18 ->19 draw calls; 567313 ->675089 submitted triangles. Added tree copies account for most geometry cost. No physical Android/GPU benchmark.
+Compare puget-corner-framing-comparison.png. Preview current Puget encounter with cornerFraming=on (default); cornerFraming=off preserves the prior view. No deployment.

@@ -1,0 +1,8 @@
+Built-in imagegen used, with the user-supplied landscape as an art-direction reference.
+Saved asset: public/assets/puget-v1/mountain-painted-v1.webp (1254 x 1254; 141892 bytes).
+Original generated image: C:/Users/aturb/.codex/generated_images/01a1ff00-8245-7951-883c-eebc9a83e476/exec-05f61356-c141-47db-a1a2-6f1c38c22820.png
+
+Prompt:
+Use case: stylized-concept. Create a reusable painterly mountain surface texture guided by the reference's blue-green slopes, rocky faces and atmospheric depth. Mountain face fills the entire canvas: no sky, clouds, skyline silhouette, mountain cutout, horizon, foreground trees, grass, flowers, UI or text. Broad natural geological striations and overlapping brushwork, restrained contrast for a distant backdrop. Avoid perfect triangular mountain imagery, geometric facets, noisy fine detail, photographic rock, black crevices and neon green. Top-to-bottom geology variation, soft upper-left illumination, blue-green atmospheric harmony. Use on existing mountain meshes, not as a fake application screenshot.
+
+Integration: one shared sRGB texture across the existing three ridge meshes, with independent depth-dependent colour blending. Isotropic world-to-UV scale preserves painted stroke proportions; horizontal mirrored wrapping avoids compressed full-width projection. Texture mipmaps and linear filtering enabled. Sky, grass, trees, illumination and physical shadows unchanged. No deployment.

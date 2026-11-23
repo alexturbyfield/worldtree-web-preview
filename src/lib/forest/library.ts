@@ -1,3 +1,4 @@
+import {randomSource} from './random';
 import * as THREE from 'three';
 import {createStudioStudy,studioDefaults,type StudioStudy,type StudioSettings} from '../studio/groups';
 import {batchSpecies} from '../studio/species-v1';
@@ -37,6 +38,12 @@ export function libraryFoliageBatch(trees:SceneTree[],presetId:string,appearance
     // Stable group thinning keeps crossed patches together. Performance/far changes no seeds.
     const fronds=far?study.fronds.filter(f=>f.essential||f.groupId%2===0):study.fronds;
     const geometry=studioGeometry([{...study,fronds}],[0]);
+    // Colour metadata only: positions, normals, card layout and source seeds stay intact.
+    const rand=randomSource(tree.seed+'|encounter-pigment'),hue=(rand()-.5)*.22,saturation=.92+rand()*.3,value=.86+rand()*.22;
+    const accent=[0,5,12].includes(tree.index)?1:0,vertices=geometry.getAttribute('position').count;
+    const pigments=new Float32Array(vertices*4),crown=new Float32Array(vertices*2);
+    for(let i=0;i<vertices;i++){pigments.set([hue,saturation,value,accent],i*4);crown.set([tree.position[1],tree.position[1]+tree.model.dimensions.height],i*2);}
+    geometry.setAttribute('treePigment',new THREE.BufferAttribute(pigments,4));geometry.setAttribute('treeCrown',new THREE.BufferAttribute(crown,2));
     const matrix=new THREE.Matrix4().makeRotationY(-tree.rotation);matrix.setPosition(...tree.position);geometry.applyMatrix4(matrix);parts.push(geometry);counts.push(fronds.length);
   }
   const geometry=new THREE.BufferGeometry();let vertexOffset=0,indexOffset=0;
