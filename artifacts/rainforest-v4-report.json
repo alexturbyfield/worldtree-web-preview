@@ -1,0 +1,420 @@
+{
+  "views": [
+    {
+      "version": "v3",
+      "originalCamera": [
+        0.01505488815939593,
+        10.116934086272849,
+        29.526921085578856
+      ],
+      "human": {
+        "camera": [
+          0,
+          0.12526649405650203,
+          29
+        ],
+        "calls": 19,
+        "triangles": 596624
+      },
+      "elevated": {
+        "camera": [
+          50,
+          46,
+          60
+        ],
+        "calls": 19,
+        "triangles": 596624
+      },
+      "profile": {
+        "id": "amazon",
+        "version": "v3",
+        "profile": {
+          "id": "amazon",
+          "name": "Amazon tropical rainforest",
+          "match": {
+            "biomes": [
+              1
+            ],
+            "realm": "Neotropic"
+          },
+          "distribution": {
+            "pattern": "layered",
+            "maxTrees": 38,
+            "allowedDesigns": [
+              "mahogany",
+              "rubber",
+              "kapok",
+              "acai",
+              "cecropia",
+              "cacao"
+            ],
+            "roles": {
+              "mahogany": "canopy",
+              "rubber": "canopy",
+              "kapok": "canopy",
+              "acai": "palm",
+              "cecropia": "understory",
+              "cacao": "understory"
+            },
+            "weights": {
+              "canopy": 0.6,
+              "palm": 0.2,
+              "understory": 0.2
+            }
+          },
+          "ground": {
+            "texture": "/assets/puget-v1/forest-floor.png",
+            "palette": [
+              "#273c2b",
+              "#3d5734",
+              "#577446",
+              "#84964e"
+            ],
+            "soil": "#6f5135",
+            "exposedSoil": 0.65,
+            "tileMeters": 8
+          },
+          "vegetation": {
+            "grass": 480,
+            "shrubs": 140,
+            "understory": 160,
+            "height": 1.5,
+            "bladeWidth": 0.13,
+            "palette": [
+              "#254d38",
+              "#78a350"
+            ]
+          },
+          "landscape": {
+            "kind": "enclosed",
+            "color": "#4b7566"
+          },
+          "sky": {
+            "asset": "/assets/puget-v1/sky-matte-v1.webp",
+            "haze": "#829f8a",
+            "near": 23,
+            "far": 115,
+            "tint": "#bcd6cb"
+          },
+          "light": {
+            "position": [
+              -25,
+              52,
+              12
+            ],
+            "sun": "#ffe3a8",
+            "intensity": 3.1,
+            "ambient": "#92b8b0",
+            "fill": 0.8,
+            "shadowColor": "#315645"
+          },
+          "composition": {
+            "opening": [
+              7,
+              11
+            ],
+            "enclosure": 0.92,
+            "foreground": 7,
+            "midground": 13,
+            "camera": {
+              "position": [
+                0,
+                2.8,
+                29
+              ],
+              "target": [
+                -1,
+                9,
+                -6
+              ]
+            },
+            "focalStrength": 0.85,
+            "edgeShade": 0.4
+          }
+        },
+        "treeCount": 36
+      },
+      "treeTriangles": 261984,
+      "treeMeshes": 10,
+      "pixelRatio": 0.65,
+      "shadows": true,
+      "foliageAlpha": "atlas alpha mask 0.34",
+      "viewport": [
+        819,
+        513
+      ],
+      "species": {
+        "Swietenia macrophylla": 12,
+        "Hevea brasiliensis": 4,
+        "Cecropia peltata": 5,
+        "Euterpe precatoria": 3,
+        "Theobroma cacao": 12
+      },
+      "strata": {
+        "emergent": 2,
+        "main-canopy": 14,
+        "subcanopy": 8,
+        "understory": 12
+      },
+      "trees": 36,
+      "heightRange": [
+        3.1685652586486954,
+        35.612853166177416
+      ],
+      "errors": []
+    },
+    {
+      "version": "v4",
+      "originalCamera": [
+        6.661338147750939e-16,
+        0.1252664940564987,
+        29
+      ],
+      "human": {
+        "camera": [
+          0,
+          0.12526649405650203,
+          29
+        ],
+        "calls": 17,
+        "triangles": 1297518
+      },
+      "elevated": {
+        "camera": [
+          50,
+          45.99999999999999,
+          60
+        ],
+        "calls": 17,
+        "triangles": 436850
+      },
+      "profile": {
+        "id": "amazon",
+        "version": "v4",
+        "profile": {
+          "id": "amazon",
+          "name": "Amazon tropical rainforest",
+          "match": {
+            "biomes": [
+              1
+            ],
+            "realm": "Neotropic"
+          },
+          "distribution": {
+            "pattern": "layered",
+            "maxTrees": 64,
+            "allowedDesigns": [
+              "mahogany",
+              "rubber",
+              "kapok",
+              "acai",
+              "cecropia",
+              "cacao"
+            ],
+            "roles": {
+              "mahogany": "canopy",
+              "rubber": "canopy",
+              "kapok": "canopy",
+              "acai": "palm",
+              "cecropia": "understory",
+              "cacao": "understory"
+            },
+            "weights": {
+              "canopy": 0.6,
+              "palm": 0.2,
+              "understory": 0.2
+            }
+          },
+          "ground": {
+            "texture": "/assets/puget-v1/forest-floor.png",
+            "palette": [
+              "#302b20",
+              "#403a26",
+              "#3c4930",
+              "#777047"
+            ],
+            "soil": "#69472e",
+            "exposedSoil": 0.55,
+            "tileMeters": 5
+          },
+          "vegetation": {
+            "grass": 0,
+            "shrubs": 160,
+            "understory": 360,
+            "height": 1.5,
+            "bladeWidth": 0.13,
+            "palette": [
+              "#254d38",
+              "#78a350"
+            ]
+          },
+          "landscape": {
+            "kind": "enclosed",
+            "color": "#4b7566"
+          },
+          "sky": {
+            "asset": "/assets/puget-v1/sky-matte-v1.webp",
+            "haze": "#284a3a",
+            "near": 65,
+            "far": 150,
+            "tint": "#bcd6cb"
+          },
+          "light": {
+            "position": [
+              -28,
+              48,
+              18
+            ],
+            "sun": "#ffe3a8",
+            "intensity": 3.8,
+            "ambient": "#81aaa0",
+            "fill": 0.42,
+            "shadowColor": "#284c3b"
+          },
+          "composition": {
+            "opening": [
+              7,
+              11
+            ],
+            "enclosure": 0.92,
+            "foreground": 7,
+            "midground": 13,
+            "camera": {
+              "position": [
+                0,
+                2.8,
+                29
+              ],
+              "target": [
+                -1,
+                9,
+                -6
+              ]
+            },
+            "focalStrength": 0.85,
+            "edgeShade": 0.4
+          }
+        },
+        "treeCount": 64
+      },
+      "rainforest": {
+        "understory": [
+          {
+            "name": "seedlings",
+            "instances": 180,
+            "triangles": 10080
+          },
+          {
+            "name": "ferns",
+            "instances": 150,
+            "triangles": 45000
+          },
+          {
+            "name": "palms",
+            "instances": 90,
+            "triangles": 38160
+          },
+          {
+            "name": "shrubs",
+            "instances": 120,
+            "triangles": 17280
+          },
+          {
+            "name": "lianas",
+            "instances": 72,
+            "triangles": 10368
+          },
+          {
+            "name": "epiphytes",
+            "instances": 100,
+            "triangles": 5600
+          }
+        ],
+        "canopyPlacement": "deterministic greedy crown-footprint occupancy; source foliage density unchanged",
+        "limitations": [
+          "Unnamed procedural life-form dressing, not measured occurrence or dedicated botanical assets.",
+          "Shafts are soft planar hints, not volumetric scattering."
+        ]
+      },
+      "treeTriangles": 588648,
+      "treeMeshes": 10,
+      "pixelRatio": 0.65,
+      "shadows": true,
+      "foliageAlpha": "atlas alpha mask 0.34",
+      "viewport": [
+        819,
+        513
+      ],
+      "species": {
+        "Swietenia macrophylla": 25,
+        "Hevea brasiliensis": 7,
+        "Euterpe precatoria": 4,
+        "Cecropia peltata": 8,
+        "Theobroma cacao": 20
+      },
+      "strata": {
+        "main-canopy": 28,
+        "emergent": 4,
+        "subcanopy": 12,
+        "understory": 20
+      },
+      "trees": 64,
+      "heightRange": [
+        2.8674198643999174,
+        53.40606731707295
+      ],
+      "errors": [],
+      "elevatedDetailedDiagnostic": {
+        "camera": [
+          50,
+          46,
+          60
+        ],
+        "calls": 17,
+        "triangles": 1297518
+      }
+    }
+  ],
+  "cameraNote": "V3 camera was clamped to ~10m. Its original camera image is preserved separately; matched V3/V4 use 1.7m above terrain with the original target.",
+  "method": "Chromium ANGLE SwiftShader, renderer counters; not physical mobile FPS.",
+  "preservationChecks": {
+    "deterministic": true,
+    "inputImmutable": true,
+    "eligiblePaletteUnchanged": true,
+    "individualSeedsReused": true,
+    "noTreesOnMissingData": true,
+    "centralTrunksExcluded": true,
+    "treeCount": 64,
+    "strata": {
+      "main-canopy": 28,
+      "emergent": 4,
+      "subcanopy": 12,
+      "understory": 20
+    },
+    "pugetByteIdentical": true,
+    "v3NativeCameraByteIdentical": true
+  },
+  "liveInspection": {
+    "camera": [
+      50,
+      45.99999999999999,
+      60
+    ],
+    "quaternion": [
+      -0.19544735831258234,
+      0.30110846801456165,
+      0.06319870481254487,
+      0.9312034924379169
+    ],
+    "target": [
+      -0.5360824742268042,
+      -0.4020618556701031,
+      -0.7422680412371135
+    ],
+    "width": 819,
+    "height": 513,
+    "calls": 17,
+    "triangles": 436850,
+    "pixelRatio": 0.65
+  }
+}

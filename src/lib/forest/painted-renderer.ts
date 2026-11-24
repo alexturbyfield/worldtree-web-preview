@@ -1,3 +1,6 @@
+import {rainforestV5,installRainforestDepthResponse} from './rainforest-depth';
+import {rainforestV4} from './composition-archetype';
+import {biomeCompositionProfile,biomeVisualProfile,composeBiomeEncounter,type BiomeRecipe} from './biome-visual';
 import {installTreeAttention,sceneAttention,pugetCompositionProfile,resolveEncounterComposition,type EnvironmentOptions} from './environment-foundations';
 import {dressEncounter,encounterCamera,type EncounterRecipe} from './encounter';
 import {libraryFoliageBatch,libraryPickClumps} from './library';
@@ -13,6 +16,10 @@ import type {PaintedTree} from './painterly';
 import type {BenchmarkResult,CameraView,RenderOptions,RenderStats} from './render-types';
 
 export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick:(index:number|null)=>void,onStats:(stats:RenderStats)=>void,onError:(message:string)=>void,view?:CameraView,options:RenderOptions&{environment?:false|EnvironmentOptions}={}) {
+  const biome=biomeVisualProfile(recipe);
+  if(biome?.id==='amazon'&&rainforestV4()&&new URLSearchParams(location.search).get('camera')==='inspection'&&!(recipe as BiomeRecipe).encounter){
+    const inspection=composeBiomeEncounter(recipe,biome);recipe={...inspection,encounter:{...inspection.encounter!,camera:'inspection'}} as BiomeRecipe;
+  }
   const start=performance.now(),lab=!!options.lab,coarse=matchMedia('(pointer: coarse)').matches||host.clientWidth<600;
   const renderer=new THREE.WebGLRenderer({antialias:false,powerPreference:'low-power'});
   const gl=renderer.getContext(),debugInfo=gl.getExtension('WEBGL_debug_renderer_info');
@@ -31,8 +38,12 @@ export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick
   camera.position.set(...(lab?[treeHeight*1.05,treeHeight*.65,treeHeight*1.5]:[58,39,70]) as [number,number,number]);
   controls.target.set(0,lab?treeHeight*.43:9,0);controls.enableDamping=true;controls.dampingFactor=.1;controls.minDistance=lab?.8:12;controls.maxDistance=lab?90:175;controls.maxPolarAngle=Math.PI*.49;controls.minPolarAngle=.08;
   controls.touches.ONE=THREE.TOUCH.ROTATE;controls.touches.TWO=THREE.TOUCH.DOLLY_PAN;
-  view??=encounterCamera(recipe as EncounterRecipe);
+  view??=(recipe as BiomeRecipe).biomeVisualId==='amazon'&&rainforestV4()&&(recipe as BiomeRecipe).encounter?.camera==='inspection'?{position:[50,46,60],target:[-2,7,-12]}:encounterCamera(recipe as EncounterRecipe);
   if(view){camera.position.set(...view.position);controls.target.set(...view.target);}
+  // Amazon-only: V3's maxPolarAngle forced its upward-looking human camera to ~10 m.
+  if((recipe as BiomeRecipe).biomeVisualId==='amazon'&&rainforestV4()&&(recipe as BiomeRecipe).encounter?.camera==='human'){
+    controls.maxPolarAngle=Math.PI*.65;camera.position.set(0,terrainHeight(0,29,recipe.seed)+1.7,29);controls.target.set(-1,9,-6);
+  }
   scene.add(new THREE.HemisphereLight('#e7f3ff','#b8c5a3',2.3));
   const fill=new THREE.DirectionalLight('#bed4e6',.95);fill.position.set(30,18,-35);scene.add(fill);
   const sun=new THREE.DirectionalLight('#ffedc2',3.2);sun.position.set(-28,46,24);sun.castShadow=true;
@@ -54,7 +65,7 @@ export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick
   const anchored=foundations&&(recipe as EncounterRecipe).encounter?.camera==='human';
   if(anchored&&compositionMode!=='A'&&options.environment!==false&&options.environment?.composition!==false){
     camera.aspect=host.clientWidth/Math.max(1,host.clientHeight);camera.updateProjectionMatrix();controls.update();camera.updateMatrixWorld();
-    const profile=options.environment?.composition||pugetCompositionProfile(recipe.seed);
+    const profile=options.environment?.composition||biomeCompositionProfile(recipe);
     if(new URLSearchParams(location.search).get('foregroundTrees')!=='legacy'){
       const forward=camera.getWorldDirection(new THREE.Vector3()).setY(0).normalize(),minimum=profile.framing.treeClearance??18;
       const excluded:number[]=[];
@@ -73,11 +84,11 @@ export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick
   if(composition&&compositionMode==='C'){
     const light=composition.profile.light;sun.position.set(...light.position);sun.color.set(light.color);sun.intensity=light.intensity;sun.shadow.radius=light.shadowSoftness;sun.shadow.intensity=light.shadowStrength;
     if(scene.userData.groundCompositionLighting){sun.shadow.intensity=Math.min(light.shadowStrength,.72);scene.children.forEach(o=>{if(o instanceof THREE.HemisphereLight){o.intensity=Math.max(light.ambientIntensity,.85);o.groundColor.set('#6c8f75');}});}
-    scene.children.forEach(o=>{if(o instanceof THREE.HemisphereLight){o.color.set(light.ambientColor);o.intensity=scene.userData.groundCompositionLighting?Math.max(light.ambientIntensity,.85):light.ambientIntensity;}});
+    scene.children.forEach(o=>{if(o instanceof THREE.HemisphereLight){o.color.set(light.ambientColor);o.intensity=scene.userData.groundCompositionLighting?Math.max(light.ambientIntensity,.85):light.ambientIntensity;if(scene.userData.biomeVisual)o.groundColor.set(scene.userData.biomeVisual.profile.light.shadowColor);}});
   }
   const attention={...sceneAttention(recipe,options.environment||{}),sun:directLighting?sun:undefined,composition:compositionMode==='C'?composition:undefined};
   const gradedMaterials=new Set<THREE.Material>();
-  const grade=(material:THREE.Material,kind:'library'|'billboards'|'wood',deciduous=false)=>{if(foundations&&!gradedMaterials.has(material)){installTreeAttention(material,kind,{...attention,deciduous});gradedMaterials.add(material);}};
+  const grade=(material:THREE.Material,kind:'library'|'billboards'|'wood',deciduous=false)=>{if(foundations&&!gradedMaterials.has(material)){installTreeAttention(material,kind,{...attention,deciduous});if(biomeVisualProfile(recipe)?.id==='amazon'&&rainforestV4()&&rainforestV5())installRainforestDepthResponse(material,kind);gradedMaterials.add(material);}};
   const bark=brushTexture('bark'),woodMaterial=new THREE.MeshStandardMaterial({map:bark,vertexColors:true,roughness:1,wireframe:options.debug==='wireframe'});
   grade(woodMaterial,'wood');
   const pickables:THREE.Object3D[]=[],lods:THREE.Group[]=[],cardCounts:number[]=[];

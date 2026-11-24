@@ -1,0 +1,15 @@
+{
+  "deterministic": true,
+  "inputImmutable": true,
+  "eligiblePaletteUnchanged": true,
+  "individualSeedsReused": true,
+  "noTreesOnMissingData": true,
+  "centralTrunksExcluded": true,
+  "treeCount": 64,
+  "strata": {
+    "main-canopy": 28,
+    "emergent": 4,
+    "subcanopy": 12,
+    "understory": 20
+  }
+}

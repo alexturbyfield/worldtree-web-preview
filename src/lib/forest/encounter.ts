@@ -1,3 +1,4 @@
+import {biomeVisualProfile,composeBiomeEncounter,dressBiome} from './biome-visual';
 import {landscapeMode,mountainRidges} from './landscape-detail';
 import {mountEnvironmentGround} from './environment-foundations';
 import * as T from 'three';
@@ -7,6 +8,8 @@ import type {CameraView} from './render-types';
 export type EncounterRecipe=SceneRecipe&{encounter?:{version:'puget-encounter-v1';camera:'human'|'inspection';reserved:{x:number;z:number;radiusX:number;radiusZ:number}}};
 /** Composition only. Never chooses species, generates tree geometry or alters ecological evidence. */
 export function composeEncounter(recipe:SceneRecipe,camera:'human'|'inspection'='human'):EncounterRecipe{
+ const visual=biomeVisualProfile(recipe);
+ if(visual&&visual.id!=='puget'&&camera!=='inspection')return composeBiomeEncounter(recipe,visual);
  if(recipe.ecoregion?.ECO_ID!==364||camera==='inspection')return recipe;
  const framing=typeof location==='undefined'||new URLSearchParams(location.search).get('cornerFraming')!=='off';
  const r=randomSource(recipe.seed+'|encounter-v1'),n=recipe.trees.length;
@@ -26,11 +29,13 @@ export function composeEncounter(recipe:SceneRecipe,camera:'human'|'inspection'=
 }
 export function encounterCamera(recipe:EncounterRecipe):CameraView|undefined{
  if(!recipe.encounter)return;
+ const visual=biomeVisualProfile(recipe);if(visual&&visual.id!=='puget')return visual.composition.camera;
  return recipe.encounter.camera==='inspection'?{position:[58,39,70],target:[0,9,0]}:{position:[0,terrainHeight(0,34,recipe.seed)+1.7,34],target:[-2,6,-20]};
 }
 /** A few shared batches, no per-frame geometry generation. Existing renderer owns mesh disposal. */
 export function dressEncounter(scene:T.Scene,recipe:EncounterRecipe,mobile=false,foundations=true){
  if(!recipe.encounter)return ()=>{};
+ const visual=biomeVisualProfile(recipe);if(visual&&visual.id!=='puget')return dressBiome(scene,recipe,visual);
  const rand=randomSource(recipe.seed+'|encounter-dressing'),textures:T.Texture[]=[];
  const canvas=(w:number,h:number)=>{const c=document.createElement('canvas');c.width=w;c.height=h;return c;};
  const ground=scene.children.find(o=>o instanceof T.Mesh&&o.geometry.type==='PlaneGeometry') as T.Mesh<T.PlaneGeometry,T.MeshStandardMaterial>|undefined;
