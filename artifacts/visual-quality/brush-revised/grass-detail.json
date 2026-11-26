@@ -1,0 +1,39 @@
+{
+  "camera": {
+    "position": [
+      7.482183837890625,
+      -0.8539077758789062,
+      32.7462345123291
+    ],
+    "quaternion": [
+      -0.07324875649975775,
+      0.24376917134472237,
+      0.01846729922917052,
+      0.9668868442751338
+    ]
+  },
+  "batches": [
+    {
+      "count": 2400,
+      "trianglesPerInstance": 16,
+      "alphaTest": 0.24,
+      "transparent": false,
+      "castShadow": false,
+      "receiveShadow": true
+    },
+    {
+      "count": 500,
+      "trianglesPerInstance": 32,
+      "alphaTest": 0.24,
+      "transparent": false,
+      "castShadow": false,
+      "receiveShadow": true
+    }
+  ],
+  "calls": 11,
+  "triangles": 88922,
+  "overdraw": {
+    "hardwareMeasured": false,
+    "alphaCoverage": "Alpha handling is recorded per batch; no hardware overdraw measurement."
+  }
+}

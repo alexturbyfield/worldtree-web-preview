@@ -1,0 +1,90 @@
+[
+  {
+    "mode": "silhouette",
+    "camera": {
+      "position": [
+        1.8024281496182084,
+        8.556025065782187,
+        24.967794265365228
+      ],
+      "quaternion": [
+        -0.05284681290081083,
+        0.2893420632249108,
+        0.0160007274781464,
+        0.9556319173903457
+      ]
+    },
+    "calls": 2,
+    "triangles": 43884
+  },
+  {
+    "mode": "branches",
+    "camera": {
+      "position": [
+        1.8024281496182084,
+        8.556025065782187,
+        24.967794265365228
+      ],
+      "quaternion": [
+        -0.05284681290081083,
+        0.2893420632249108,
+        0.0160007274781464,
+        0.9556319173903457
+      ]
+    },
+    "calls": 1,
+    "triangles": 11244
+  },
+  {
+    "mode": "foliage-detail",
+    "camera": {
+      "position": [
+        -9.197571850381792,
+        8.056025065782187,
+        10.967794265365228
+      ],
+      "quaternion": [
+        -0.02296637466828221,
+        0.24439910661145287,
+        0.0057902268035063785,
+        0.9693854215923015
+      ]
+    },
+    "calls": 2,
+    "triangles": 43884
+  },
+  {
+    "mode": "secondary",
+    "camera": {
+      "position": [
+        -40.19757185038179,
+        9.556025065782187,
+        15.967794265365228
+      ],
+      "quaternion": [
+        -0.06797718866508039,
+        -0.44592014470676017,
+        -0.03398859433254019,
+        0.8918402894135206
+      ]
+    },
+    "calls": 2,
+    "triangles": 43884
+  },
+  {
+    "mode": "overdraw",
+    "width": 320,
+    "height": 180,
+    "meanAlphaLayersPerOccupiedPixel": 4.031908831908832,
+    "meanQuadLayersPerScreenPixel": 0.4789236111111111,
+    "alphaRejectedFraction": 0.7434930761980715,
+    "coverage": 0.03046875,
+    "peakLayers": 17,
+    "saturatedPixels": 0,
+    "texture": {
+      "width": 512,
+      "height": 384
+    },
+    "method": "Depth-disabled additive raster proxy, alpha-tested versus whole spray surfaces. 8-bit counts cap at255; not hardware fragment counters or normal depth-tested cost."
+  }
+]

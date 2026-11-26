@@ -1,0 +1,42 @@
+{
+  "date": "2026-11-25T17:18:34.036Z",
+  "worldSeeds": [
+    "29",
+    "41",
+    "73"
+  ],
+  "treeCandidateSeed": "171073434",
+  "treeAppearanceSeed": "3394320064",
+  "candidateProfiles": "visual-lab/acacia-architectures.json",
+  "renderSettings": "artifacts/visual-quality/plains-final-A-29/report.json",
+  "sourceHashes": {
+    "src/lib/forest/savanna-recipe.ts": "25f650748527f2b10c2dbdfd4b9e25affecc30ca4e8f1d9f7d1ce653fb83102f",
+    "src/lib/forest/tree-experiment.ts": "5c404ba5a983e915302d845133ad1ff9e78a529b9fbe13cc03eb701bce387e46",
+    "src/lib/forest/painted-renderer.ts": "d1e48f2d138bf9f1cf7e08b32360f4e83b94720a998c1b043ee5eaaae53f6a5b",
+    "src/lib/forest/library.ts": "1af36883cd5baa7e1bb2c48189a8801021c2680824a9b0ea1ee48539d8e16988",
+    "src/lib/studio/growth-profile.ts": "c13cbef05f1478c854e78461104ab61921636cde8b72a24cf87fb9dff81b589e",
+    "src/lib/studio/hierarchy.ts": "d2f1678d99d1c9c1444b58ec52c6f57645a57d2b11d5c62ec6c0f235594f4bb9",
+    "src/lib/studio/species-v1.ts": "a0b090aeffd85b3f018129e6ad4d676372dc6f280b9b43e85a0d0e5efdad7876",
+    "src/lib/studio/groups.ts": "d655c862f807d94f0c73311f9be8dbdfdea138e2d7303d6c73e3c371e753ccd2",
+    "visual-lab/acacia-architectures.json": "4dbf78c52dbbcc913a05d2d9acb891fab34e7a1dd7cac4fae1f1c4fafed2919b",
+    "scripts/studies/visual-quality.cjs": "edee3bf98801e3f9ca5e8f1d18d55c8fc82bf2dd1585ca8c90ec4c7b1170439d"
+  },
+  "stages": [
+    "landscape",
+    "physical grass",
+    "three tree architectures",
+    "shared correction",
+    "A inner shoots"
+  ],
+  "preferred": "A provisional",
+  "humanReview": null,
+  "review": "artifacts/golden-plains-trees/final-review.json",
+  "negativeExamples": [
+    "tree-r1-A",
+    "tree-r1-B",
+    "tree-r1-C",
+    "tree-r2-C",
+    "plains-stage2-r-plains"
+  ],
+  "modelTrainingOccurred": false
+}

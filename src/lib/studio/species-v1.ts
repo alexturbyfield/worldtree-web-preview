@@ -1,4 +1,5 @@
 import {HierarchyBuilder,type GrowthHierarchy,type Attachment} from './hierarchy';
+import {growthProfileStudy,type TreeGrowthProfile} from './growth-profile';
 import {CatmullRomCurve3,Vector3,Quaternion,Color} from 'three';
 import {randomSource} from '../forest/random';
 import type {Point,Segment} from '../forest/tree';
@@ -7,7 +8,7 @@ import type {StudioSettings,StudioStudy,FoliageGroup,StudioFrond} from './groups
 /** Growth constraints, not closed crown meshes or species-specific generators. */
 export interface CrownArchitecture {radiusProfile:[number,number,number];initiationBias:number;dominance:number;curvature:number;apicalBias:number;fanAngle:number;occupancy:number;leafInterval:[number,number]}
 export interface EmergentGrowth {architecture?:CrownArchitecture;leaderTop:number;rise:number;secondaryRise:number;forks:number;clusterSize:number;trunkTaper:number;limb:number;buttressCount:number;buttressHeight:number;buttressReach:number}
-export interface SpeciesDesign {name:string;scientificName:string;height:number;radius:number;trunk:number;base:number;branches:number;form:'pine'|'cedar'|'birch'|'maple'|'aspen'|'willow'|'silver-birch'|'ash'|'emergent'|'palmate'|'rosette'|'palm';bark:string;conifer:boolean;hierarchy?:GrowthHierarchy;branching?:{leaders:number;forkHeight:number;leaderSpread:number;secondaryStart:number;crownLean?:number;levels?:number[];pods?:number};leafShape?:'small-oval'|'leathery'|'large-entire'|'trifoliate';roots?:{kind:'pencil'|'prop';count:number;reach:number;height:number;substrateY?:number;structuralCount?:number;branching?:number};emergent?:EmergentGrowth}
+export interface SpeciesDesign {visualGrammar?:TreeGrowthProfile;name:string;scientificName:string;height:number;radius:number;trunk:number;base:number;branches:number;form:'pine'|'cedar'|'birch'|'maple'|'aspen'|'willow'|'silver-birch'|'ash'|'emergent'|'palmate'|'rosette'|'palm';bark:string;conifer:boolean;hierarchy?:GrowthHierarchy;branching?:{leaders:number;forkHeight:number;leaderSpread:number;secondaryStart:number;crownLean?:number;levels?:number[];pods?:number};leafShape?:'small-oval'|'leathery'|'large-entire'|'trifoliate';roots?:{kind:'pencil'|'prop';count:number;reach:number;height:number;substrateY?:number;structuralCount?:number;branching?:number};emergent?:EmergentGrowth}
 /** Visual design presets only: no geographic presence or measured botanical dimensions implied. */
 export const batchSpecies:Record<string,SpeciesDesign>={
  'avicennia':{branching:{leaders:3,forkHeight:.17,leaderSpread:2.4,secondaryStart:.18,crownLean:.22},name:'Grey mangrove',scientificName:'Avicennia marina',height:8,radius:5.2,trunk:0.32,base:0.12,branches:8,form:'emergent',bark:'#959581',conifer:false,leafShape:'small-oval',roots:{"kind":"pencil","count":18,"reach":3.6,"height":0.6},emergent:{leaderTop:0.63,rise:0.14,secondaryRise:0.2,forks:3,clusterSize:1.1,trunkTaper:.63,limb:.4,buttressCount:0,buttressHeight:1,buttressReach:0,architecture:{radiusProfile:[.9,1,.4],initiationBias:1.15,dominance:.33,curvature:.24,apicalBias:.3,fanAngle:1.1,occupancy:.94,leafInterval:[.15,.98]}}},
@@ -31,7 +32,8 @@ export const batchSpecies:Record<string,SpeciesDesign>={
  aspen:{name:'Quaking aspen',scientificName:'Populus tremuloides',height:17,radius:2.7,trunk:.29,base:.36,branches:10,form:'aspen',bark:'#bdc9b6',conifer:false},
  willow:{name:'Weeping willow',scientificName:'Salix babylonica',height:12,radius:5,trunk:.64,base:.28,branches:7,form:'willow',bark:'#82745e',conifer:false}
 };
-export function speciesV1Study(id:string,q:StudioSettings,patches:(g:FoliageGroup,q:StudioSettings)=>StudioFrond[]):StudioStudy{
+export function speciesV1Study(id:string,q:StudioSettings,patches:(g:FoliageGroup,q:StudioSettings)=>StudioFrond[],override?:SpeciesDesign):StudioStudy{
+ if(override?.visualGrammar)return growthProfileStudy(id,override.visualGrammar,q);
  const p=batchSpecies[id],rand=randomSource(q.structure+'|species-v1|'+id),h=p.height*(.93+rand()*.14),r=p.radius*(.9+rand()*.2),phase=rand()*Math.PI*2,emergent=p.emergent,architecture=emergent?.architecture,branching=p.branching;
  // Smooth radius constraint affects branch growth; foliage is never clipped against a shell.
  const crownRadius=(f:number)=>{if(!architecture)return 1;const u=f<.5?f*2:(f-.5)*2,k=f<.5?0:1,t=u*u*(3-2*u);return architecture.radiusProfile[k]*(1-t)+architecture.radiusProfile[k+1]*t;};

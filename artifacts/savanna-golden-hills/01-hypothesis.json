@@ -1,0 +1,11 @@
+{
+ "id":"golden-hills-foreground-1","actor":"agent","status":"proposed",
+ "userFeedback":{"source":"current user message","assessment":"This is close; colors better, needs vibrancy, stronger foreground, more rolling golden hills/cool shadows","approvalScope":"Partial positive feedback on direction and colors, not full-scene approval"},
+ "references":["savanna-composition","savanna-grass","savanna-light","savanna-geology"],
+ "observations":["Concept foreground has asymmetric weight and overlap, not equally smooth pale boulders.","Golden convex land masses and cool shadowed bowls create broad lively value/color variation.","Distant illustrated hills are layered and geologically articulated, unlike the old uniform band."],
+ "inferredTechnique":"A projected-scale-constrained asymmetric foreground plan; more saturated shared ground/grass pigment with irregular rolling cool shadow fields; illustrated distant ridge ring joined to a low-cost 3D terrain apron.",
+ "declaredTargets":["opt-in savanna ground/grass palette and density envelope","added rock geometry/material and dressing","existing distant-hill visibility","added distant illustrated ring and terrain continuation"],
+ "protected":["old r-full recipe baseline","default savanna","Puget","rainforest","primary tree generation/positions","sky","camera","ecological and world-map data"],
+ "evaluation":"Compare old recipe/new ground/new grass/full composition at fixed seed29 eye-height hero and inspection; inspect thumbnails and native detail, then seeds41/73 and protected defaults. Preserve rejected versions. Up to three focused correction cycles; no automatic production adoption.",
+ "mobileConstraint":"Keep batching; reduce global grass count to offset stronger edge dressing and inexpensive distant meshes. Measure actual calls/triangles rather than claiming fewer instances guarantees savings."
+}

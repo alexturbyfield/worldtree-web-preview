@@ -1,0 +1,37 @@
+[
+  {
+    "view": "rainforest-hero",
+    "pixelIdentical": true,
+    "changedPixels": 0,
+    "lower110RowsChanged": 0,
+    "expected": "Unrelated biome must remain identical"
+  },
+  {
+    "view": "rainforest-inspection",
+    "pixelIdentical": true,
+    "changedPixels": 0,
+    "lower110RowsChanged": 0,
+    "expected": "Unrelated biome must remain identical"
+  },
+  {
+    "view": "savanna-hero",
+    "pixelIdentical": true,
+    "changedPixels": 0,
+    "lower110RowsChanged": 0,
+    "expected": "Unrelated biome must remain identical"
+  },
+  {
+    "view": "savanna-inspection",
+    "pixelIdentical": true,
+    "changedPixels": 0,
+    "lower110RowsChanged": 0,
+    "expected": "Unrelated biome must remain identical"
+  },
+  {
+    "view": "puget-hero",
+    "pixelIdentical": false,
+    "changedPixels": 38906,
+    "lower110RowsChanged": 10042,
+    "expected": "Authorized same-species foliage update; scene identity preserved"
+  }
+]

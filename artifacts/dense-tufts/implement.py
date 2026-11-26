@@ -1,0 +1,12 @@
+from pathlib import Path
+p=Path('src/lib/forest/savanna-recipe.ts');s=p.read_text()
+s=s.replace("const tuft=id.startsWith('r-fidelity-tuft-')?id.slice(-1):undefined,", "const dense=id==='r-fidelity-tuft-c-dense',tuft=dense?'c':id.startsWith('r-fidelity-tuft-')?id.slice(-1):undefined,")
+s=s.replace('material,tuft?850:', 'material,dense?4000:tuft?850:')
+s=s.replace("const open=Math.exp(-((x-2)**2/529+(z-2)**2/841))", "if(dense){for(let trial=0;trial<24;trial++){x=(r()-.5)*98;z=-48+r()*92;const patch=.52+.26*Math.sin(x*.15+z*.09+Math.sin(z*.1))+.18*Math.sin(z*.21-x*.06),opening=Math.exp(-x*x/36-(z-17)**2/160);if(r()<patch*(1.-opening*.85))break;}}const open=Math.exp(-((x-2)**2/529+(z-2)**2/841))")
+s=s.replace("edgeMat,tuft==='c'?150:", "edgeMat,dense?850:tuft==='c'?150:")
+s=s.replace("o.position.set(x,terrainHeight(x,z,recipe.seed)-.04,z);", "if(dense){for(let trial=0;trial<36;trial++){x=(r()-.5)*30;z=10+r()*26;const opening=Math.exp(-((x+.5)**2/22+(z-25)**2/130)),patch=.55+.27*Math.sin(x*.26+z*.14+Math.sin(z*.17))+.16*Math.sin(z*.33-x*.13);if(r()<patch*(1.-opening*.96))break;}}o.position.set(x,terrainHeight(x,z,recipe.seed)-.04,z);")
+s=s.replace("o.scale.set(.85+r()*.4,p.grassHeight*(tuft==='c'?.35+r()*.55:", "o.scale.set(.85+r()*.4,p.grassHeight*(dense?(.34+r()*.55)*(1.-.55*T.MathUtils.smoothstep(Math.hypot(x,z-34),15,38)):tuft==='c'?.35+r()*.55:")
+s=s.replace("frameInstances:tuft==='c'?150:", "frameInstances:dense?850:tuft==='c'?150:")
+s=s.replace("tuftProfile:tuft?tuftProfile(tuft):undefined", "tuftProfile:tuft?tuftProfile(tuft):undefined,...(dense?{densityTreatment:'irregular-swaths-open-encounter',midInstances:4000,nearInstances:850}:{} )")
+s=s.replace("'r-fidelity-tuft-c'].includes(id)", "'r-fidelity-tuft-c','r-fidelity-tuft-c-dense'].includes(id)")
+p.write_text(s)

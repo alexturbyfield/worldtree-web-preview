@@ -36,7 +36,7 @@ export function libraryFoliageBatch(trees:SceneTree[],presetId:string,appearance
   for(const tree of trees){
     const study=tree.studio!;
     // Stable group thinning keeps crossed patches together. Performance/far changes no seeds.
-    const fronds=far?study.fronds.filter(f=>f.essential||f.groupId%2===0):study.fronds;
+    const fronds=far?study.fronds.filter(f=>f.essential||f.groupId%(study.lod?.groupStride??2)===0):study.fronds;
     const geometry=studioGeometry([{...study,fronds}],[0]);
     // Colour metadata only: positions, normals, card layout and source seeds stay intact.
     const rand=randomSource(tree.seed+'|encounter-pigment'),hue=(rand()-.5)*.22,saturation=.92+rand()*.3,value=.86+rand()*.22;

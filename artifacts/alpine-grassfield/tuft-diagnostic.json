@@ -1,0 +1,25 @@
+{
+  "hasAlphaDefine": true,
+  "alphaUniform": 0.23999999463558197,
+  "uniformKeys": [
+    "meadowDetail",
+    "meadowAtlas"
+  ],
+  "atlasSource": "http://localhost:3001/assets/savanna-brush/painted-tufts-v1.webp",
+  "atlasSize": [
+    1254,
+    1254
+  ],
+  "alphaTest": 0.24,
+  "fragment": "float dist=distance(cameraPosition,fieldWorld);float detailFade=1.-smoothstep(30.,160.,dist);float ink=dot(texture2D(meadowDetail,fieldWorld.xz/6.).rgb,vec3(.2126,.7152,.0722));vec3 base=meadowPigment(fieldWorld.xz)*mix(1.,clamp(ink/.22,.78,1.25),.48*detailFade);diffuseColor.rgb=base;vec4 painted=texture2D(meadowAtlas,fieldAtlasUv);float h=smoothstep(.06,.30,fieldHeight);float stroke=clamp(dot(painted.rgb,vec3(.2126,.7152,.0722))/.43,.72,1.30);diffuseColor.rgb=base*mix(1.,stroke,.35*h);diffuseColor.rgb=mix(diffuseColor.rgb,fieldSun,smoothstep(.25,.9,fieldHeight)*.13);\n#ifdef USE_ALPHAMAP\n\tdiffuseColor.a *= texture2D( alphaMap, vAlphaMapUv ).g;\n#endif\n\tfloat border=smoothstep(0.,.025,fieldUv.x)*smoothstep(0.,.025,1.-fieldUv.x)*smoothstep(0.,.025,1.-fieldUv.y);diffuseColor.a*=painted.a*border*(1.-smoothstep(35.,90.,dist));\n#ifdef USE_ALPHATEST\n\t#ifdef ALPHA_TO_COVERAGE\n\tdiffuseColor.a = smoothstep( alphaTest, alphaTest + fwidth( diffuseColor.a ), diffuseColor.a );\n\tif ( diffuseColor.a == 0.0 ) discard;\n\t#else\n\tif ( diffuseColor.a < alphaTest ) discard;\n\t#endif\n#endif\n#ifdef USE_ALPHAHASH\n\tif ( diffuseColor.a < getAlphaHashThreshold( vPosition ) ) discard;\n#endif\nfloat roughnessFactor = roughness;\n#ifdef USE_ROUGHNESSMAP\n\tvec4 texelRoughness = texture2D( roughnessMap, vRoughnessMapUv );\n\troughnessFactor *= texelRoughness.g;\n#endif\nfloat metalnessFactor = metalness;\n#ifdef USE_METALNESSMAP\n\tvec4 texelMetalness = texture2D( metalnessMap, vMetalnessMapUv );\n\tmetalnessFactor *= texelMetalness.b;\n#endif\nfloat faceDirection = gl_FrontFacing ? 1.0 : - 1.0;\n#ifdef FLAT_SHADED\n\tvec3 fdx = dFdx( vViewPosition );\n\tvec3 fdy = dFdy( vViewPosition );\n\tvec3 normal = normalize( cross( fdx, fdy ) );\n#else\n\tvec3 normal = normalize( vNormal );\n\t#ifdef DOUBLE_SIDED\n\t\tnormal *= faceDirection;\n\t#endif\n#endif\n#if defined( USE_NORMALMAP_TANGENTSPACE ) || defined( USE_CLEARCOAT_NORMALMAP ) || defined( USE_ANISOTROPY )\n\t#ifdef USE_TANGENT\n\t\tmat3 tbn = mat3( normalize( vTangent ), normalize( vBitangent ), normal );\n\t#else\n\t\tmat3 tbn = getTangentFrame( - vViewPosition, normal,\n\t\t#if defined( USE_NORMALMAP )\n\t\t\tvNormalMapUv\n\t\t#elif defined( USE_CLEARCOAT_NORMALMAP )\n\t\t\tvClearcoatNormalMapUv\n\t\t#else\n\t\t\tvUv\n\t\t#endif\n\t\t);\n\t#endif\n\t#ifdef DOUBLE_SIDED\n\t\ttbn[0] *= faceDirection;\n\t\ttbn[1] *= faceDirection;\n\t#endif\n#endif\n#ifdef USE_CLEARCOAT_NORMALMAP\n\t#ifdef USE_TANGENT\n\t\tmat3 tbn2 = mat3( normalize( vTangent ), normalize( vBitangent ), normal );\n\t#else\n\t\tmat3 tbn2 = getTangentFrame( - vViewP",
+  "defines": "#version 300 es\n#define varying in\nlayout(location = 0) out highp vec4 pc_fragColor;\n#define gl_FragColor pc_fragColor\n#define gl_FragDepthEXT gl_FragDepth\n#define texture2D texture\n#define textureCube texture\n#define texture2DProj textureProj\n#define texture2DLodEXT textureLod\n#define texture2DProjLodEXT textureProjLod\n#define textureCubeLodEXT textureLod\n#define texture2DGradEXT textureGrad\n#define texture2DProjGradEXT textureProjGrad\n#define textureCubeGradEXT textureGrad\nprecision highp float;\n\tprecision highp int;\n\tprecision highp sampler2D;\n\tprecision highp samplerCube;\n\tprecision highp sampler3D;\n\tprecision highp sampler2DArray;\n\tprecision highp sampler2DShadow;\n\tprecision highp samplerCubeShadow;\n\tprecision highp sampler2DArrayShadow;\n\tprecision highp isampler2D;\n\tprecision highp i",
+  "attributes": [
+    "position",
+    "uv",
+    "seedPart",
+    "normal",
+    "brushTile",
+    "meadowRootNormal"
+  ],
+  "atlasUniform": true
+}

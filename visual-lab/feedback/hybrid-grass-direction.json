@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-25",
+  "actor": "human",
+  "input": "explicit conversation",
+  "feedback": "Brush is closer, but has vertical card bands and mismatched ground contact. Try shorter brush grass filling the ground with sparse taller individual reeds.",
+  "scope": "Representation preference and defect report; not approval of new hybrid",
+  "evidence": "artifacts/brush-grass/comparison.png",
+  "experiment": "artifacts/hybrid-grass/record.json",
+  "finalVisualApproval": false
+}

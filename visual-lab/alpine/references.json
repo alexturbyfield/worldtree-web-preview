@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "references": [
+    {
+      "id": "alpine-01",
+      "biome": "alpine",
+      "category": "Layered conifer valley",
+      "path": ".codex-attachments/4ca8dfce-aa39-4297-bc5a-c5f95b6c16d6/b9a9e714-fa36-43e7-a95b-f484096614c9/1000011063.jpg",
+      "source": "User supplied",
+      "license": "Rights not verified; private reference analysis only; no redistribution inferred",
+      "observations": "Dark side forests enclose a luminous valley; a narrow stream leads through the meadow; sharp remote snow ridges sit above soft atmospheric shoulders.",
+      "threeKeyRelationships": [
+        "Strong dark-to-light frame/opening relationship",
+        "Vertical conifer rhythm contrasts horizontal valley strata",
+        "Stream connects near stones to distant opening"
+      ],
+      "positive": [
+        "Strong dark-to-light frame/opening relationship",
+        "Vertical conifer rhythm contrasts horizontal valley strata",
+        "Stream connects near stones to distant opening"
+      ],
+      "avoid": [
+        "Exact layout copying",
+        "Uniform flowers/trees",
+        "Detached rock props",
+        "Faceted noise hills",
+        "Fog obscuring foreground"
+      ]
+    },
+    {
+      "id": "alpine-02",
+      "biome": "alpine",
+      "category": "Open illustrated glacial basin",
+      "path": ".codex-attachments/4ca8dfce-aa39-4297-bc5a-c5f95b6c16d6/361e6841-84a2-424e-b9b5-8a9fdec05fca/1000011059.jpg",
+      "source": "User supplied",
+      "license": "Rights not verified; private reference analysis only; no redistribution inferred",
+      "observations": "Large sloping meadow planes converge toward angular mountain ridges; a winding channel stitches scales; pink flower ribbons occupy selected foreground patches.",
+      "threeKeyRelationships": [
+        "Coarse geology dominates, meadow texture supports it",
+        "Foreground rocks repeat far ridge angles at smaller scale",
+        "Flowers are clustered lateral accents beside a quiet opening"
+      ],
+      "positive": [
+        "Coarse geology dominates, meadow texture supports it",
+        "Foreground rocks repeat far ridge angles at smaller scale",
+        "Flowers are clustered lateral accents beside a quiet opening"
+      ],
+      "avoid": [
+        "Exact layout copying",
+        "Uniform flowers/trees",
+        "Detached rock props",
+        "Faceted noise hills",
+        "Fog obscuring foreground"
+      ]
+    },
+    {
+      "id": "alpine-03",
+      "biome": "alpine",
+      "category": "Low meadow/stream study",
+      "path": ".codex-attachments/4ca8dfce-aa39-4297-bc5a-c5f95b6c16d6/db9aa956-e1d1-4a7d-9c16-d18f14373e6f/1000011053.jpg",
+      "source": "User supplied",
+      "license": "Rights not verified; private reference analysis only; no redistribution inferred",
+      "observations": "Human-height grasses are lush but subordinate to a bright valley ribbon; rounded grass hummocks contrast angular exposed stone; cool shaded foreground controls the warm opening.",
+      "threeKeyRelationships": [
+        "Broad warm/cool value organization precedes fine foliage",
+        "Water and denser vegetation share drainage",
+        "Soft vegetation-to-soil transitions preserve physical weight"
+      ],
+      "positive": [
+        "Broad warm/cool value organization precedes fine foliage",
+        "Water and denser vegetation share drainage",
+        "Soft vegetation-to-soil transitions preserve physical weight"
+      ],
+      "avoid": [
+        "Exact layout copying",
+        "Uniform flowers/trees",
+        "Detached rock props",
+        "Faceted noise hills",
+        "Fog obscuring foreground"
+      ]
+    },
+    {
+      "id": "alpine-04",
+      "biome": "alpine",
+      "category": "Rocky shoulder looking down-valley",
+      "path": ".codex-attachments/4ca8dfce-aa39-4297-bc5a-c5f95b6c16d6/20986ec8-3ba6-4032-875d-193190a4a468/1000011055.jpg",
+      "source": "User supplied",
+      "license": "Rights not verified; private reference analysis only; no redistribution inferred",
+      "observations": "Embedded angular foreground rocks frame a long descending basin; rock faces and scree share a geological orientation; flowers concentrate around sheltered foreground stone.",
+      "threeKeyRelationships": [
+        "Geology and dressing share structure rather than unrelated props",
+        "Near/middle/far repeated landform rhythm changes detail scale",
+        "Asymmetric heavy near forms protect a distant opening"
+      ],
+      "positive": [
+        "Geology and dressing share structure rather than unrelated props",
+        "Near/middle/far repeated landform rhythm changes detail scale",
+        "Asymmetric heavy near forms protect a distant opening"
+      ],
+      "avoid": [
+        "Exact layout copying",
+        "Uniform flowers/trees",
+        "Detached rock props",
+        "Faceted noise hills",
+        "Fog obscuring foreground"
+      ]
+    },
+    {
+      "id": "alpine-05",
+      "biome": "alpine",
+      "category": "Soft illustrated treeline garden",
+      "path": ".codex-attachments/4ca8dfce-aa39-4297-bc5a-c5f95b6c16d6/630b121e-c4e4-47a5-9517-6cbfe65d51ae/1000011045.jpg",
+      "source": "User supplied",
+      "license": "Rights not verified; private reference analysis only; no redistribution inferred",
+      "observations": "Conifers gather on both slopes with a broad meadow corridor between them; grouped flower colors fill near edges; several blue ridges progressively quiet the distance.",
+      "threeKeyRelationships": [
+        "Conifer groups frame negative space without a continuous wall",
+        "Large foliage masses carry flower color, not scattered dots",
+        "Successive cool ridges separate foreground vegetation from horizon"
+      ],
+      "positive": [
+        "Conifer groups frame negative space without a continuous wall",
+        "Large foliage masses carry flower color, not scattered dots",
+        "Successive cool ridges separate foreground vegetation from horizon"
+      ],
+      "avoid": [
+        "Exact layout copying",
+        "Uniform flowers/trees",
+        "Detached rock props",
+        "Faceted noise hills",
+        "Fog obscuring foreground"
+      ]
+    }
+  ]
+}

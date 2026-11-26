@@ -1,0 +1,395 @@
+{
+  "schemaVersion": 1,
+  "domain": "Procedural Tree Visual Grammar",
+  "architectureCatalog": "visual-lab/acacia-architectures.json",
+  "engine": "SpeciesDesign.visualGrammar -> shared HierarchyBuilder -> existing StudioStudy/geometry/material/LOD",
+  "rules": [
+    {
+      "id": "TC1",
+      "principle": "Species architecture determines the crown silhouette.",
+      "referenceEvidence": [
+        {
+          "source": "artifacts/golden-plains-trees/01-reference-observations.json",
+          "observation": "Mature reference umbrella crown is broad/low, carried by outward-reaching scaffolds."
+        }
+      ],
+      "implementationHypothesis": "Grow profile-driven scaffold/secondary/terminal paths into a crown envelope instead of flattening a finished generic tree.",
+      "renderEvidence": [
+        "artifacts/golden-plains-trees/candidate-heroes.png",
+        "artifacts/visual-quality/plains-final-A-29/tree-silhouette.png"
+      ],
+      "result": "A is recognizably umbrella-like; B/C are structurally different but less successful for this target.",
+      "knownLimitations": "No species-wide or all-age botanical validation; current profiles are idealized visual studies.",
+      "constraints": {
+        "universalPrinciple": "Architecture-first principle universal; flattened umbrella is species-specific.",
+        "species": [
+          "umbrella-acacia visual study"
+        ],
+        "biome": [
+          "savanna"
+        ],
+        "otherBiomes": "Untested; do not apply numerical profiles automatically"
+      },
+      "status": "experimentally-supported",
+      "humanApproval": null
+    },
+    {
+      "id": "TC2",
+      "principle": "Foliage must belong to living branch paths.",
+      "referenceEvidence": [
+        {
+          "source": "artifacts/golden-plains-trees/01-reference-observations.json",
+          "observation": "Reference lobes are visibly supported by distal wood and open inner forks."
+        }
+      ],
+      "implementationHypothesis": "Store parent path IDs and sample leaf guides on owned wood segments.",
+      "renderEvidence": [
+        "artifacts/visual-quality/plains-final-A-29/tree-branches.png",
+        "artifacts/visual-quality/plains-final-A-29/tree-foliage-detail.png"
+      ],
+      "result": "Attachment tests verify owned guides lie on wood; branch-only diagnostic explains canopy support.",
+      "knownLimitations": "Data attachment does not automatically make wood thick enough or visible at every LOD.",
+      "constraints": {
+        "universalPrinciple": "Path ownership generalizes; allocation of living zones is species-specific.",
+        "species": [
+          "umbrella-acacia visual study"
+        ],
+        "biome": [
+          "savanna"
+        ],
+        "otherBiomes": "Untested; do not apply numerical profiles automatically"
+      },
+      "status": "experimentally-supported",
+      "humanApproval": null
+    },
+    {
+      "id": "TC3",
+      "principle": "Taper and junction radii must support the apparent load.",
+      "referenceEvidence": [
+        {
+          "source": "artifacts/golden-plains-trees/01-reference-observations.json",
+          "observation": "Stout tapered trunk/forks transition into smaller secondary/terminal wood."
+        }
+      ],
+      "implementationHypothesis": "Opt-in child attachment ratio and retained tip radius; explicit flare/taper and parent tangent inheritance.",
+      "renderEvidence": [
+        "artifacts/visual-quality/tree-r1-A/tree-branches.png",
+        "artifacts/visual-quality/plains-final-A-29/tree-branches.png"
+      ],
+      "result": "Shared correction makes scaffold more readable than thin initial paths.",
+      "knownLimitations": "Multiple mechanisms changed together; .82/.24 are not universal optimal constants or biomechanical rules.",
+      "constraints": {
+        "universalPrinciple": "Continuity/taper principles universal; radius relationships need species/age calibration.",
+        "species": [
+          "umbrella-acacia visual study"
+        ],
+        "biome": [
+          "savanna"
+        ],
+        "otherBiomes": "Untested; do not apply numerical profiles automatically"
+      },
+      "status": "experimentally-supported",
+      "humanApproval": null
+    },
+    {
+      "id": "TC4",
+      "principle": "Canopy coverage follows branch hierarchy, including inner living connectors.",
+      "referenceEvidence": [
+        {
+          "source": "artifacts/golden-plains-trees/01-reference-observations.json",
+          "observation": "Reference canopy contains connected lobes with windows rather than floating terminal pads."
+        }
+      ],
+      "implementationHypothesis": "Outer-secondary guides plus upward inner branch-owned shoots, retaining irregular gaps.",
+      "renderEvidence": [
+        "artifacts/golden-plains-trees/diagnostics-A.png",
+        "artifacts/golden-plains-trees/seed-checks.png"
+      ],
+      "result": "A is more connected than terminal-only R1; inner shoots reduce its large center opening.",
+      "knownLimitations": "Some ring-like/regular gaps remain visible in elevated view and cast shadow.",
+      "constraints": {
+        "universalPrinciple": "Branch-led coverage generalizes; location and amount are species/age-specific.",
+        "species": [
+          "umbrella-acacia visual study"
+        ],
+        "biome": [
+          "savanna"
+        ],
+        "otherBiomes": "Untested; do not apply numerical profiles automatically"
+      },
+      "status": "experimentally-supported",
+      "humanApproval": null
+    },
+    {
+      "id": "TC5",
+      "principle": "Negative space needs its own artistic evaluation.",
+      "referenceEvidence": [
+        {
+          "source": "artifacts/golden-plains-trees/01-reference-observations.json",
+          "observation": "Reference windows clarify scaffolds without fragmenting the crown."
+        }
+      ],
+      "implementationHypothesis": "Evaluate silhouette, overhead continuity and branch views together rather than maximizing emptiness.",
+      "renderEvidence": [
+        "artifacts/visual-quality/tree-r2-B/tree-silhouette.png",
+        "artifacts/visual-quality/tree-r2-C/tree-silhouette.png",
+        "artifacts/golden-plains-trees/diagnostics-A.png"
+      ],
+      "result": "B exposes wood but fragments; C still looks like isolated tiers; A is the strongest compromise.",
+      "knownLimitations": "No universal gap distribution has been demonstrated.",
+      "constraints": {
+        "universalPrinciple": "Negative-space hierarchy universal; patterns differ across species and exposure.",
+        "species": [
+          "umbrella-acacia visual study"
+        ],
+        "biome": [
+          "savanna"
+        ],
+        "otherBiomes": "Untested; do not apply numerical profiles automatically"
+      },
+      "status": "proposed",
+      "humanApproval": null
+    },
+    {
+      "id": "TC6",
+      "principle": "Foliage is a hierarchy of oriented sprays, not universal spheres.",
+      "referenceEvidence": [
+        {
+          "source": "artifacts/golden-plains-trees/01-reference-observations.json",
+          "observation": "Irregular connected foliage surfaces support crown-scale masses and selective edge detail."
+        }
+      ],
+      "implementationHypothesis": "Branch-aligned curved upper/side sprays using existing atlas/geometry pipeline.",
+      "renderEvidence": [
+        "artifacts/visual-quality/tree-r1-A/savanna-hero.png",
+        "artifacts/visual-quality/plains-final-A-29/tree-foliage-detail.png",
+        "artifacts/visual-quality/tree-r2-C/tree-foliage-detail.png"
+      ],
+      "result": "Varied spray orientation adds volume compared with first horizontal pads; C remains weak.",
+      "knownLimitations": "Generic broadleaf atlas is not a dedicated acacia compound-leaf asset; some surfaces still look flat.",
+      "constraints": {
+        "universalPrinciple": "Orientation/attachment hierarchy reusable; spray geometry and atlas must remain species-driven.",
+        "species": [
+          "umbrella-acacia visual study"
+        ],
+        "biome": [
+          "savanna"
+        ],
+        "otherBiomes": "Untested; do not apply numerical profiles automatically"
+      },
+      "status": "experimentally-supported",
+      "humanApproval": null
+    },
+    {
+      "id": "TC7",
+      "principle": "Use crown-scale warm/cool value organization instead of one tree tint.",
+      "referenceEvidence": [
+        {
+          "source": "artifacts/golden-plains-trees/01-reference-observations.json",
+          "observation": "Warm upper/exterior accents sit above cooler green interiors; secondary trees remain quieter."
+        }
+      ],
+      "implementationHypothesis": "Shared declarative body/shadow/highlight pigments and crown ramp with oriented normals/sun-facing accents.",
+      "renderEvidence": [
+        "artifacts/visual-quality/plains-final-A-29/tree-foliage-detail.png",
+        "artifacts/visual-quality/plains-final-A-29/tree-secondary.png",
+        "artifacts/golden-plains-trees/before-after.png"
+      ],
+      "result": "Hero avoids uniform bright green and has selected warm surfaces with readable inner wood.",
+      "knownLimitations": "Existing painted key plus actual sun-attention response is not a full leaf BRDF or true leaf-to-leaf self-shadow solution.",
+      "constraints": {
+        "universalPrinciple": "Crown value hierarchy generalizes; pigments/species identity must be calibrated.",
+        "species": [
+          "umbrella-acacia visual study"
+        ],
+        "biome": [
+          "savanna"
+        ],
+        "otherBiomes": "Untested; do not apply numerical profiles automatically"
+      },
+      "status": "experimentally-supported",
+      "humanApproval": null
+    },
+    {
+      "id": "TC8",
+      "principle": "Age and environmental variation must preserve species identity.",
+      "referenceEvidence": [
+        {
+          "source": "artifacts/golden-plains-trees/01-reference-observations.json",
+          "observation": "Specimens vary in lean, exposure and lobe hierarchy while retaining recognizable umbrella structure."
+        }
+      ],
+      "implementationHypothesis": "Declarative maturity/wind/phototropism inputs and independent structural/appearance seeds.",
+      "renderEvidence": [
+        "artifacts/golden-plains-trees/seed-checks.png"
+      ],
+      "result": "Mature A retains identity across three seeds; technical tests confirm maturity/wind alter descriptors.",
+      "knownLimitations": "Young specimens and environment-response art were not rendered/approved; biological growth over time is not simulated.",
+      "constraints": {
+        "universalPrinciple": "Variation constraints reusable; species/age envelopes remain unvalidated.",
+        "species": [
+          "umbrella-acacia visual study"
+        ],
+        "biome": [
+          "savanna"
+        ],
+        "otherBiomes": "Untested; do not apply numerical profiles automatically"
+      },
+      "status": "proposed",
+      "humanApproval": null
+    },
+    {
+      "id": "TC9",
+      "principle": "Distant representation must retain crown identity while suppressing interior detail.",
+      "referenceEvidence": [
+        {
+          "source": "artifacts/golden-plains-trees/01-reference-observations.json",
+          "observation": "Distant trees read as quieter silhouettes instead of equally sharp sprays."
+        }
+      ],
+      "implementationHypothesis": "Existing library retains essential sprays and deterministically thins groups via profile LOD stride.",
+      "renderEvidence": [
+        "artifacts/golden-plains-trees/before-after.png"
+      ],
+      "result": "Existing LOD path is reused; no separate species renderer introduced.",
+      "knownLimitations": "Extreme-distance silhouette/transition quality was not separately validated in this pass.",
+      "constraints": {
+        "universalPrinciple": "LOD continuity universal; actual thinning thresholds depend on crown/atlas.",
+        "species": [
+          "umbrella-acacia visual study"
+        ],
+        "biome": [
+          "savanna"
+        ],
+        "otherBiomes": "Untested; do not apply numerical profiles automatically"
+      },
+      "status": "proposed",
+      "humanApproval": null
+    },
+    {
+      "id": "NT1",
+      "principle": "Terminal-only horizontal pads are sufficient for a coherent umbrella crown.",
+      "referenceEvidence": [
+        {
+          "source": "artifacts/golden-plains-trees/01-reference-observations.json",
+          "observation": "The target has connected dimensional foliage and supported interior transitions."
+        }
+      ],
+      "implementationHypothesis": "Rejected R1: only terminal coverage with mostly horizontal sprays.",
+      "renderEvidence": [
+        "artifacts/visual-quality/tree-r1-A/savanna-hero.png",
+        "artifacts/visual-quality/tree-r2-C/tree-foliage-detail.png"
+      ],
+      "result": "Rendered as flat islands; combining an envelope name with flat terminal pads is insufficient.",
+      "knownLimitations": "Reject this implementation for this target, not all tiered or sparse tree architectures.",
+      "constraints": {
+        "universalPrinciple": "Avoid turning this negative example into a ban on ecologically appropriate open crowns.",
+        "species": [
+          "umbrella-acacia visual study"
+        ],
+        "biome": [
+          "savanna"
+        ],
+        "otherBiomes": "Untested; do not apply numerical profiles automatically"
+      },
+      "status": "rejected",
+      "humanApproval": null
+    },
+    {
+      "id": "TC-C2-volume",
+      "principle": "Connect crown lobes through rising branch hierarchies while retaining fork windows.",
+      "referenceEvidence": [
+        {
+          "source": "artifacts/c-fidelity/01-reference-observations.json",
+          "observation": "The concept connects raised crown lobes above an open fork; warm upper planes sit above cool green interior volumes."
+        }
+      ],
+      "implementationHypothesis": "Keep the C trunk and nominal height/radius; add inner shoots and rising secondary/tertiary support with inclined, vertically staggered sprays.",
+      "renderEvidence": [
+        "artifacts/c-fidelity/tree-diagnostics.png",
+        "artifacts/c-fidelity/comparison.png",
+        "artifacts/c-fidelity/seed-checks.png"
+      ],
+      "result": "C2 creates a coherent raised umbrella across seeds29/41/73. Seed29 dimensions increase from9.73m to11.07m while width remains about20m; fork profile is unchanged.",
+      "knownLimitations": "Some small twigs remain too thin to read; leaf edges are noisy and interior values are still too dark. Increased guide count contributes to fullness; this is not isolated evidence for volume alone.",
+      "constraints": {
+        "universalPrinciple": "Test relationships, not copied numeric defaults.",
+        "species": [
+          "mature umbrella-acacia visual study"
+        ],
+        "biome": [
+          "savanna"
+        ],
+        "otherBiomes": "Not tested; preserve Puget and rainforest defaults"
+      },
+      "status": "experimentally-supported",
+      "humanApproval": null,
+      "humanFeedback": {
+        "record": "visual-lab/feedback/sparse-crown-tall-tufts.json",
+        "decision": "prefer sparse C; do not promote C2 fullness",
+        "note": "Prior automated observation is preserved as experimental evidence, not human approval."
+      }
+    },
+    {
+      "id": "TC-C2-light",
+      "principle": "Separate upper, interior and underside value groups within one crown.",
+      "referenceEvidence": [
+        {
+          "source": "artifacts/c-fidelity/01-reference-observations.json",
+          "observation": "The concept connects raised crown lobes above an open fork; warm upper planes sit above cool green interior volumes."
+        }
+      ],
+      "implementationHypothesis": "Species pigments, inclined branch-owned sprays, actual directional-light response and height/orientation-dependent warm treatment.",
+      "renderEvidence": [
+        "artifacts/visual-quality/c-fidelity-retained-29/tree-foliage-detail.png"
+      ],
+      "result": "Upper highlights and cool interiors are visible, but upper surfaces remain too dark versus the concept.",
+      "knownLimitations": "Palette is savanna-specific. No full visual approval; the new crown shader is not a universal foliage prescription.",
+      "constraints": {
+        "universalPrinciple": "Test relationships, not copied numeric defaults.",
+        "species": [
+          "mature umbrella-acacia visual study"
+        ],
+        "biome": [
+          "savanna"
+        ],
+        "otherBiomes": "Not tested; preserve Puget and rainforest defaults"
+      },
+      "status": "proposed",
+      "humanApproval": null
+    },
+    {
+      "id": "CF-bough-mass-and-needle-edge",
+      "principle": "Use branch-owned bough masses for crown organization and needle silhouettes for edge identity.",
+      "referenceEvidence": [
+        {
+          "source": "User alpine concept1000011045.jpg",
+          "observation": "Conifer tiers are coherent and irregular, with fine edge detail subordinate to larger masses."
+        }
+      ],
+      "implementationHypothesis": "Curved overlapping needle sprays attached to existing branch paths can replace cone cores and detached tiny fragments.",
+      "renderEvidence": [
+        "artifacts/conifer-flower-study/comparison.png",
+        "artifacts/conifer-flower-study/puget-comparison.png"
+      ],
+      "result": "Better than baseline in alpine and shared-model Puget; waxy volume alternative rejected.",
+      "knownLimitations": "Chunky close boughs; 4.87-layer depth-disabled near-foliage overlap proxy; no device approval.",
+      "constraints": {
+        "species": [
+          "douglas-v1 and existing explicit visual fallbacks to it"
+        ],
+        "biome": [
+          "alpine",
+          "Puget"
+        ],
+        "universalPrinciple": "Branch ownership/mass-edge hierarchy transferable; this numeric spray design is not universal."
+      },
+      "status": "experimentally-supported",
+      "humanApproval": null
+    }
+  ],
+  "latestHumanDirection": {
+    "record": "visual-lab/feedback/sparse-crown-tall-tufts.json",
+    "scope": "User prefers original sparse C over fuller C2; this supersedes the agent preference for C2 fullness. Final grass scene remains unapproved."
+  }
+}

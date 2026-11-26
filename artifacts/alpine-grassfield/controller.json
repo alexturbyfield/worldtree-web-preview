@@ -1,0 +1,8 @@
+{
+  "session": "user-authorized-alpine-grassfield",
+  "maxArtisticRounds": 3,
+  "usedArtisticRounds": 3,
+  "status": "stopped-for-review",
+  "reason": "Visual direction promising; major performance failure remains after focused technical diagnostics. No promotion, no budget reset.",
+  "humanApproval": null
+}

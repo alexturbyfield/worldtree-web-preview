@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "savanna-representation-checkpoint",
+  "date": "2026-11-25T04:06:48.656Z",
+  "worldSeed": "29",
+  "rounds": [
+    "S-r1",
+    "S-r2"
+  ],
+  "images": {
+    "comparison": "artifacts/savanna-representation-study/checkpoint.png",
+    "inspection": "artifacts/savanna-representation-study/inspection.png",
+    "thumbnails": "artifacts/savanna-representation-study/thumbnails.png"
+  },
+  "references": [
+    "savanna-composition",
+    "savanna-grass",
+    "savanna-light"
+  ],
+  "agentRecommendation": {
+    "decision": "reject-all",
+    "futureDirection": "hybrid with a replacement connected-swath representation",
+    "currentCandidateApproved": false
+  },
+  "humanReview": null,
+  "question": "Which direction should guide the next study: A painterly masses, B ground-led grassland, C hybrid, or reject all three?",
+  "stop": "One revision per technique completed; two all-rejected rounds; awaiting human art direction.",
+  "asset": {
+    "path": "public/assets/savanna-study/grass-swaths-v1.webp",
+    "sha256": "be4686c9787f4ebaa7f9bfe4391e16395fa3dc83a884591e99f3b54b3fc63220"
+  },
+  "modelTrainingOccurred": false
+}

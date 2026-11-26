@@ -1,0 +1,18 @@
+{
+  "version": "alpine-grassfield-baked-experimental-1",
+  "frozenAt": "2026-11-25T23:37:40.344895+00:00",
+  "sourceHashes": {
+    "src/lib/forest/alpine-adapter.ts": "7d090b8d3780c134c6ab72bdf996b623451d239ed57103c1400c38ccc816f3b5",
+    "src/lib/forest/alpine-recipe.ts": "a25851ef6d8cb4c6ddd230d20d5f6d1068dd9717c85e1938949055670c60593b",
+    "src/lib/forest/alpine-meadow.ts": "24f44f5b2dfa961eb57f533cec3bae687d17c9a503f87fb6c779fadb00cb180c",
+    "src/lib/forest/savanna-recipe.ts": "48c241b268d041363a626a3b6e031a1596e4942f261a9982b966b325487ec9e4",
+    "public/assets/alpine-meadow/meadow-ground-v1.png": "dda7595d93a385c227c03430b9338dcc7c3998fec539c5edd44dab16d3b47ed0",
+    "public/assets/alpine-meadow/regional-flowers-v1.png": "64ae16a63f0c871313699a546a17ba993254cbfed84b897ba92d7f53dcba14fa",
+    "public/assets/savanna-brush/painted-tufts-v1.webp": "b3be409e178c1a59036aa3b2ec29756a147ab8c403455883a4a975d7c0949a55"
+  },
+  "status": "rejected-for-promotion-major-performance-regression",
+  "priorHoldout": "9973 evaluated on pre-performance shader version; revealed and never treated as unseen again.",
+  "reservedFinalHoldout": "10007",
+  "finalHoldoutGenerated": false,
+  "reason": "No final candidate accepted; do not spend another holdout on a technically rejected representation."
+}

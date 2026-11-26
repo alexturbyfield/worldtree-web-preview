@@ -1,0 +1,10 @@
+[
+  {
+    "view": "hero",
+    "unchangedFallbackPixels": true
+  },
+  {
+    "view": "inspection",
+    "unchangedFallbackPixels": true
+  }
+]

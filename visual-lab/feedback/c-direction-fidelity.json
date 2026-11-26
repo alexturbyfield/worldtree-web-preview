@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-25",
+  "actor": "human",
+  "input": "explicit conversation",
+  "decision": "preferred-structural-direction",
+  "candidate": "C",
+  "evidence": "artifacts/visual-quality/tree-r2-C",
+  "reason": "Forked Layered Crown is the preferred architectural direction; canopy needs more volume, connectivity and luminosity.",
+  "finalVisualApproval": false,
+  "training": {
+    "modelTrained": false,
+    "rightsVerified": false
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "camera": {
+    "position": [
+      7.643857860565186,
+      -0.8536270380020141,
+      33.09729156494141
+    ],
+    "quaternion": [
+      -0.07324875649975775,
+      0.24376917134472237,
+      0.01846729922917052,
+      0.9668868442751338
+    ]
+  },
+  "batches": [
+    {
+      "count": 850,
+      "trianglesPerInstance": 48,
+      "alphaTest": 0,
+      "transparent": false,
+      "castShadow": false,
+      "receiveShadow": true
+    },
+    {
+      "count": 240,
+      "trianglesPerInstance": 352,
+      "alphaTest": 0,
+      "transparent": false,
+      "castShadow": false,
+      "receiveShadow": true
+    }
+  ],
+  "calls": 11,
+  "triangles": 159802,
+  "overdraw": {
+    "hardwareMeasured": false,
+    "alphaCoverage": "No alpha test or transparency in these grass batches; opaque depth-tested geometry, not a claim of zero fragment overdraw."
+  }
+}

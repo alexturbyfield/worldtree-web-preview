@@ -1,0 +1,78 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Wildloom Alpine Art Recipe",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "id",
+    "generatorVersion",
+    "biomeIdentity",
+    "conditions",
+    "palettes",
+    "compositions",
+    "systems",
+    "performance",
+    "seeds",
+    "approvalStatus"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": 1
+    },
+    "id": {
+      "type": "string"
+    },
+    "generatorVersion": {
+      "type": "string"
+    },
+    "biomeIdentity": {
+      "type": "string"
+    },
+    "conditions": {
+      "type": "object"
+    },
+    "palettes": {
+      "type": "object",
+      "required": [
+        "A",
+        "B",
+        "C"
+      ]
+    },
+    "compositions": {
+      "type": "object",
+      "required": [
+        "valley",
+        "overlook",
+        "treeline"
+      ]
+    },
+    "systems": {
+      "type": "object",
+      "required": [
+        "terrain",
+        "ecology",
+        "vegetation",
+        "rocks",
+        "trees",
+        "atmosphere",
+        "water"
+      ]
+    },
+    "performance": {
+      "type": "object"
+    },
+    "seeds": {
+      "type": "object"
+    },
+    "approvalStatus": {
+      "enum": [
+        "proposed",
+        "experimentally-supported",
+        "human-approved",
+        "rejected"
+      ]
+    }
+  },
+  "portability": "Metres, role and field descriptors; no renderer object identities or Three.js parameters."
+}

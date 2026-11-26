@@ -1,0 +1,20 @@
+{
+  "frozenAt": "2026-11-25T23:19:46.375709+00:00",
+  "version": "alpine-grassfield-1",
+  "sourceHashes": {
+    "src/lib/forest/alpine-adapter.ts": "b07c700a7b989f280cf6bc4701f9fbf7b665f748fbe3da3f93a2fcb299dc7a40",
+    "src/lib/forest/alpine-recipe.ts": "a25851ef6d8cb4c6ddd230d20d5f6d1068dd9717c85e1938949055670c60593b",
+    "src/lib/forest/alpine-meadow.ts": "3bfdaf4c53f0747d34d8ac3f77a0e0b416c7297c7556e48a07719a34629b3e3f",
+    "src/lib/forest/savanna-recipe.ts": "48c241b268d041363a626a3b6e031a1596e4942f261a9982b966b325487ec9e4",
+    "public/assets/alpine-meadow/meadow-ground-v1.png": "dda7595d93a385c227c03430b9338dcc7c3998fec539c5edd44dab16d3b47ed0",
+    "public/assets/alpine-meadow/regional-flowers-v1.png": "64ae16a63f0c871313699a546a17ba993254cbfed84b897ba92d7f53dcba14fa",
+    "public/assets/savanna-brush/painted-tufts-v1.webp": "b3be409e178c1a59036aa3b2ec29756a147ab8c403455883a4a975d7c0949a55"
+  },
+  "trainingSeeds": [
+    "29",
+    "41"
+  ],
+  "holdout": "9973",
+  "holdoutGenerated": false,
+  "noPostHoldoutTuning": true
+}

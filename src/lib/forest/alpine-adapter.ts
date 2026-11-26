@@ -1,0 +1,144 @@
+import {meadowFieldMaterial,meadowFieldPigment,flowerFieldGeometry} from './alpine-meadow';
+import {meadowFlowerGeometry,type MeadowFlowerForm} from './meadow-flowers';
+import {layeredConifersEnabled,distantConiferGeometry} from '../studio/conifer-foliage';
+import * as T from 'three';
+import {makeAlpinePlan,alpineHeight,alpineFields,alpinePalettes,drainage,smooth,type AlpinePlan,type AlpinePaletteId} from './alpine-recipe';
+import {sceneLibraryStudy} from './library';
+import {randomSource,hashSeed} from './random';
+import {rockGeometry,tuftGeometry,brushGeometry,reedGeometry,clearVegetationFromRocks} from './savanna-recipe';
+import type {SceneRecipe,SceneTree,SceneSpecies} from './recipe';
+import type {Point} from './tree';
+import type {StudioStudy} from '../studio/groups';
+import type {readAlpineOptions} from './alpine-recipe';
+export function alpineSceneRecipe(source:SceneRecipe,options:NonNullable<ReturnType<typeof readAlpineOptions>>){
+ const plan=makeAlpinePlan(options.family,options.seed,options.palette);
+ if(options.meadowArt)plan.meadowArt=true;if(options.grassField)plan.grassField=true;
+ if(options.backdrop==='subtle'){plan.backdrop='subtle';plan.regionalReliefEvidence={status:'unverified',nearMountainsAllowed:false};}
+ if(plan.meadowArt){
+  const r=randomSource(plan.seed+'|meadow-flower-banks-v1');
+  // Irregular banks flank a quiet opening; flowers are patches, not uniform saturated dots.
+  for(let bank=0;bank<9;bank++){const side=bank%2?1:-1,cx=side*(5+r()*(bank<2?7:16)),cz=bank<2?35-r()*5:23-r()*55;
+   for(let j=0;j<68;j++){const a=r()*Math.PI*2,rad=Math.sqrt(r()),x=cx+Math.cos(a)*rad*(2+r()*3),z=cz+Math.sin(a)*rad*(3+r()*5),f=alpineFields(plan,x,z);
+    if(f.slope>.7||f.rock>.55||(plan.water&&f.drainDistance<1.3))continue;
+    plan.plants.push({x,z,height:.65+r()*.7,width:.75+r()*.5,rotation:r()*6.283,flowerForm:(['spire','rosette','cloud'] as const)[bank%3],kind:'flower'});
+   }
+  }
+ }
+ if(plan.grassField){
+  // Keep the inherited flower banks; replace isolated random marks with broad, correlated meadow drifts.
+  plan.plants=plan.plants.filter(a=>a.kind!=='flower'||a.flowerForm);
+  const r=randomSource(plan.seed+'|regional-flower-drifts-1');for(let band=0;band<6;band++){const side=band%2?1:-1,cx=side*(12+r()*22),cz=-12-r()*95;for(let j=0;j<54;j++){const along=(r()-.5)*24,z=cz+along,x=cx+Math.sin(z*.06+plan.phase)*4+(r()-.5)*6,f=alpineFields(plan,x,z);if(f.rock>.55||f.slope>.7||(plan.water&&f.drainDistance<1.3))continue;plan.plants.push({x,z,height:.45+r()*.45,width:.65+r()*.5,rotation:r()*6.283,kind:'flower',flowerForm:(['spire','rosette','cloud'] as const)[band%3]});}}
+ }
+ const trees:SceneTree[]=plan.trees.map((t,i)=>{
+  const study=sceneLibraryStudy('douglas-v1',t.structuralSeed,t.appearanceSeed,1)!;const h=t.height/study.model.dimensions.height,w=t.width/(study.model.dimensions.crownWidth*.5),point=(p:Point)=>[p[0]*w,p[1]*h,p[2]*w] as Point;
+  const normal=(p:Point)=>new T.Vector3(p[0]*w,p[1]*h,p[2]*w).normalize().toArray() as Point;
+  const segments=study.segments.map(s=>({...s,a:point(s.a),b:point(s.b),r0:s.r0*w,r1:s.r1*w,tangentA:s.tangentA?normal(s.tangentA):undefined,tangentB:s.tangentB?normal(s.tangentB):undefined}));
+  const model={...study.model,segments,dimensions:{height:t.height,crownWidth:t.width*2,crownDepth:study.model.dimensions.crownDepth*w}};
+  const studio:StudioStudy={...study,model,segments,scale:1,offset:[0,0,0],groups:study.groups.map(g=>({...g,anchor:point(g.anchor),center:point(g.center),radii:point(g.radii)})),fronds:study.fronds.filter(f=>f.essential||f.groupId%2===0).map(f=>({...f,position:point(f.position),spine:f.spine?f.spine.map(point) as [Point,Point,Point]:undefined,width:f.width*w,length:f.length*w})),lod:{groupStride:3,essentialSprays:1}};
+  const species={id:'alpine-conifer-form',scientificName:null,commonName:'Subalpine fir/spruce functional form',confidence:'visual growth-form study',evidenceLevel:'art-direction',origin:'Existing conifer architecture adapted by environmental stress, not local species occurrence',sources:[],visual:{...source.palette[0]?.visual,presetId:'douglas',rendererPresetId:'douglas-v1'}} as SceneSpecies;
+  return {id:'alpine-tree-'+i,index:i,species,seed:t.structuralSeed,appearanceSeed:t.appearanceSeed,revision:0,position:[t.x,alpineHeight(plan,t.x,t.z),t.z],rotation:t.rotation,studio,model};
+ });
+ return {...source,trees,purpose:'visual_laboratory' as const,encounter:undefined,alpinePlan:plan};
+}
+function pigment(p:AlpinePlan,x:number,z:number,kind:'ground'|'grass'|'rock'|'tree'='ground'){
+ if(p.grassField&&(kind==='ground'||kind==='grass'))return meadowFieldPigment(p,x,z);
+ const a=alpinePalettes[p.palette],f=alpineFields(p,x,z),distance=Math.hypot(x-p.camera.position[0],z-p.camera.position[2]),c=new T.Color(a.meadow).lerp(new T.Color('#367942'),.7),shade=new T.Color(a.shade).lerp(new T.Color('#244e3d'),.25),warm=new T.Color(a.sunlit),opening=Math.exp(-((x-3)**2/700+(z+25)**2/3500)),frame=smooth(12,36,z)*(.5+.5*Math.sin(x*.09+z*.07+p.phase));
+ c.lerp(shade,Math.min(.65,frame*.55+(1-f.aspect)*.28)).lerp(warm,Math.min(.7,opening*.08+f.patch*.04));
+ if(kind==='rock')c.set(a.rock).lerp(new T.Color(a.shade),.12);else if(kind==='tree')c.set(a.shade).multiplyScalar(.68).lerp(new T.Color(a.meadow),.1);else c.lerp(new T.Color(a.rock),f.rock*.95).multiplyScalar(.92+f.patch*.13);
+ if(p.meadowArt&&kind!=='rock'&&kind!=='tree'){
+  const w=meadowLight(p,x,z);
+  c.set('#5a8b49').lerp(new T.Color('#29494d'),w.shade*.82).lerp(new T.Color('#dfcf72'),w.light*.88);
+  c.multiplyScalar(.87+f.patch*.16);
+ }
+ c.lerp(new T.Color(a.mountain),smooth(90,600,distance)*.45).lerp(new T.Color(p.backdrop==='subtle'?a.mountain:a.air),smooth(600,1500,distance)*.7);return c;
+}
+export function mountAlpineEnvironment(scene:T.Scene,recipe:SceneRecipe&{alpinePlan:AlpinePlan},sun:T.DirectionalLight,fill:T.DirectionalLight){
+ const p=recipe.alpinePlan,created:T.Mesh[]=[],textures:T.Texture[]=[],ground=scene.children.find(o=>o instanceof T.Mesh&&o.geometry.type==='PlaneGeometry') as T.Mesh,edge=scene.children.find(o=>o instanceof T.Mesh&&o.geometry.type==='BoxGeometry');ground.visible=false;if(edge)edge.visible=false;
+ let pending=(p.backdrop==='subtle'?3:2)+(p.meadowArt&&layeredConifersEnabled()?1:0)+(p.grassField?2:0);scene.userData.labAssetsReady=false;const loaded=()=>{pending--;scene.userData.labAssetsReady=pending===0;scene.userData.artRevision=(scene.userData.artRevision??0)+1;};
+ const skyMap=new T.TextureLoader().load('/assets/puget-v1/sky-matte-v1.webp',loaded,undefined,()=>{scene.userData.alpineAssetError='Sky asset failed';loaded();});skyMap.colorSpace=T.SRGBColorSpace;textures.push(skyMap);const skyMat=new T.MeshBasicMaterial({map:skyMap,side:T.BackSide,fog:false,depthWrite:false,toneMapped:false}),sky=new T.Mesh(new T.SphereGeometry(1800,48,24),skyMat);sky.name='alpine-shared-sky';sky.renderOrder=-10;scene.add(sky);created.push(sky);
+ if(p.backdrop==='subtle'){
+ // World-space cylindrical continuation. Illustrated relief is remote, never evidence of local geology.
+ const map=new T.TextureLoader().load('/assets/alpine-backdrop/distant-ridges-v1.png',loaded,undefined,()=>{scene.userData.alpineAssetError='Illustrated ridge asset failed';loaded();});
+ map.colorSpace=T.SRGBColorSpace;map.wrapS=T.MirroredRepeatWrapping;map.repeat.set(4,1);map.anisotropy=4;textures.push(map);
+ const geo=new T.CylinderGeometry(1450,1450,1100,192,1,true);geo.translate(0,180,0);
+ const material=new T.MeshBasicMaterial({map,transparent:true,alphaTest:.015,side:T.BackSide,depthWrite:false,fog:false,toneMapped:false});
+ material.onBeforeCompile=shader=>{shader.vertexShader='varying float ridgeAltitude;\n'+shader.vertexShader;shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nridgeAltitude=position.y;');shader.fragmentShader='varying float ridgeAltitude;\n'+shader.fragmentShader;shader.fragmentShader=shader.fragmentShader.replace('#include <alphatest_fragment>','diffuseColor.a*=smoothstep(-10.,135.,ridgeAltitude);\n#include <alphatest_fragment>');};
+ const backdrop=new T.Mesh(geo,material);backdrop.name='alpine-illustrated-distance';backdrop.renderOrder=-5;scene.add(backdrop);created.push(backdrop);
+ }
+ let groundMaterial=new T.MeshStandardMaterial({vertexColors:true,roughness:1});
+ const detail=new T.TextureLoader().load(p.grassField?'/assets/alpine-meadow/meadow-ground-v1.png':'/assets/savanna-recipe/painted-fibre-v1.webp',loaded,undefined,()=>{scene.userData.alpineAssetError='Ground detail failed';loaded();});detail.colorSpace=T.SRGBColorSpace;detail.wrapS=detail.wrapT=T.MirroredRepeatWrapping;detail.anisotropy=8;textures.push(detail);
+ const installSurface=(m:T.MeshStandardMaterial,grass=false)=>{m.onBeforeCompile=shader=>{shader.uniforms.alpineDetail={value:detail};shader.vertexShader='varying vec3 alpineWorld;varying float alpineTip;\n'+shader.vertexShader;shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>',`#include <begin_vertex>\nalpineWorld=(modelMatrix*${grass?'instanceMatrix*':''}vec4(position,1.)).xyz;alpineTip=${grass?'uv.y':'0.'};`);shader.fragmentShader='uniform sampler2D alpineDetail;varying vec3 alpineWorld;varying float alpineTip;\n'+shader.fragmentShader;shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>\nfloat d=length(alpineWorld.xz-vec2(${p.camera.position[0].toFixed(5)},${p.camera.position[2].toFixed(5)}));float ink=dot(texture2D(alpineDetail,alpineWorld.xz/12.).rgb,vec3(.2126,.7152,.0722));diffuseColor.rgb*=mix(1.,clamp(ink/.42,.75,1.25),.18*(1.-smoothstep(20.,150.,d))${grass?'*(1.-smoothstep(.0,.4,alpineTip))':''});${grass?'diffuseColor.rgb*=1.+.08*smoothstep(.2,1.,alpineTip);':''}`);if(grass)shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_begin>','#include <normal_fragment_begin>\nnormal=normalize(mat3(viewMatrix)*vec3(0.,1.,0.)+normal*.13);');};m.customProgramCacheKey=()=> 'alpine-surface-1-'+grass;};
+ const loadField=(url:string)=>{const t=new T.TextureLoader().load(url,loaded,undefined,()=>{scene.userData.alpineAssetError='Meadow asset failed: '+url;loaded();});t.colorSpace=T.SRGBColorSpace;t.anisotropy=8;textures.push(t);return t;};
+ const brushAtlas=p.grassField?loadField('/assets/savanna-brush/painted-tufts-v1.webp'):undefined,flowerAtlas=p.grassField?loadField('/assets/alpine-meadow/regional-flowers-v1.png'):undefined;
+ if(p.grassField){groundMaterial.dispose();groundMaterial=meadowFieldMaterial(p,detail);}else installSurface(groundMaterial);
+ const terrainMeshes:T.Mesh[]=[];
+ const addTerrain=(width:number,depth:number,zCenter:number,segments:number,hole?:{width:number;depth:number;z:number})=>{const g=new T.PlaneGeometry(width,depth,segments,segments);g.rotateX(-Math.PI/2);g.translate(0,0,zCenter);const a=g.getAttribute('position'),col=new Float32Array(a.count*3);for(let i=0;i<a.count;i++)a.setY(i,alpineHeight(p,a.getX(i),a.getZ(i)));if(hole){const ix:number[]=[],old=g.index!;for(let i=0;i<old.count;i+=3){const ids=[old.getX(i),old.getX(i+1),old.getX(i+2)];if(ids.every(j=>Math.abs(a.getX(j))<hole.width*.48&&Math.abs(a.getZ(j)-hole.z)<hole.depth*.48))continue;ix.push(...ids);}g.setIndex(ix);}g.setAttribute('color',new T.BufferAttribute(col,3));g.computeVertexNormals();const mesh=new T.Mesh(g,groundMaterial);mesh.name='alpine-terrain';mesh.receiveShadow=true;scene.add(mesh);terrainMeshes.push(mesh);created.push(mesh);};
+ addTerrain(430,580,-175,150);addTerrain(1500,1800,-550,128,{width:430,depth:580,z:-175});addTerrain(2800,3000,-850,110,{width:1500,depth:1800,z:-550});
+ // Existing weathered rock geometry and deterministic full footprint clearance, adapted to alpine elevation.
+ const stoneGeo=rockGeometry(true).toNonIndexed();stoneGeo.computeVertexNormals();const stoneMat=new T.MeshStandardMaterial({roughness:.95}),rocks=new T.InstancedMesh(stoneGeo,stoneMat,p.rocks.length),o=new T.Object3D();rocks.name='alpine-rocks';rocks.castShadow=true;rocks.receiveShadow=true;
+ p.rocks.forEach((a,i)=>{o.position.set(a.x,alpineHeight(p,a.x,a.z)+a.size*.16,a.z);o.rotation.set(.05*Math.sin(i),a.angle,.14*Math.cos(i));o.scale.set(a.size*a.aspect,a.size*.65,a.size);o.updateMatrix();rocks.setMatrixAt(i,o.matrix);});rocks.computeBoundingSphere();scene.add(rocks);created.push(rocks);
+ const plantBatches:{mesh:T.InstancedMesh;locations:{x:number;z:number}[];kind:'grass'|'flower'|'rock'|'tree'}[]=[{mesh:rocks,locations:p.rocks,kind:'rock'}];
+ for(const role of (p.grassField?['grass','low','flower-field']:p.meadowArt?['grass','low','spire','rosette','cloud']:['grass','low','flower'])){const flower=!['grass','low'].includes(role),kind=flower?'flower':role,plants=p.plants.filter(a=>a.kind===kind&&(p.grassField||!p.meadowArt||!flower||(a.flowerForm??'spire')===role)),mat=p.grassField?meadowFieldMaterial(p,detail,flower?flowerAtlas:kind==='grass'?brushAtlas:undefined,flower,true):new T.MeshStandardMaterial({roughness:1,side:T.DoubleSide,vertexColors:flower}),geo=p.grassField?(flower?flowerFieldGeometry():kind==='grass'?brushGeometry(true,true,1.45):reedGeometry()):flower?(p.meadowArt?meadowFlowerGeometry(role as MeadowFlowerForm):flowerGeometry()):tuftGeometry('c',kind==='low');if(!p.grassField)installSurface(mat,true);const mesh=new T.InstancedMesh(geo,mat,plants.length);mesh.name=kind==='flower'?'alpine-flowers':'alpine-grass';mesh.receiveShadow=true;mesh.castShadow=false;if(p.grassField&&kind!=='low')geo.setAttribute('brushTile',new T.InstancedBufferAttribute(Float32Array.from({length:plants.length},(_,i)=>flower?(plants[i].flowerForm==='spire'?(i%7===0?1:0):plants[i].flowerForm==='cloud'?2:i%5===0?3:1):i%4),1));
+ plants.forEach((a,i)=>{o.position.set(a.x,alpineHeight(p,a.x,a.z)-.03,a.z);o.rotation.set(0,a.rotation,0);o.scale.set(a.width,a.height/(kind==='flower'?1:kind==='low'?1.3:.6),a.width);o.updateMatrix();mesh.setMatrixAt(i,o.matrix);});mesh.computeBoundingSphere();scene.add(mesh);created.push(mesh);plantBatches.push({mesh,locations:plants,kind:kind==='flower'?'flower':'grass'});}
+ const coreMat=new T.MeshStandardMaterial({roughness:1}),cores=new T.InstancedMesh(coniferCoreGeometry(),coreMat,p.trees.length);cores.name='alpine-conifer-cores';cores.visible=!layeredConifersEnabled();cores.castShadow=true;cores.receiveShadow=true;p.trees.forEach((t,i)=>{o.position.set(t.x,alpineHeight(p,t.x,t.z),t.z);o.rotation.set(0,t.rotation,0);o.scale.set(t.width,t.height,t.width);o.updateMatrix();cores.setMatrixAt(i,o.matrix);});cores.computeBoundingSphere();scene.add(cores);created.push(cores);plantBatches.push({mesh:cores,locations:p.trees,kind:'tree'});
+ if(p.meadowArt){
+  const r=randomSource(p.seed+'|layered-treeline-v1'),locations:{x:number;z:number;height:number;width:number;rotation:number}[]=[];
+  for(let i=0;i<660;i++){
+   const depth=45+r()*750,side=i%2?1:-1,opening=15+depth*.15;
+   const x=side*(opening+Math.pow(r(),.7)*(25+depth*.32))+Math.sin(depth*.018+p.phase)*14,z=35-depth;
+   const patch=.5+.3*Math.sin(x*.047+z*.026)+.2*Math.sin(z*.061+p.phase);
+   if(r()>patch*.85||alpineFields(p,x,z).slope>.75)continue;
+   locations.push({x,z,height:6+r()*13,width:2.8+r()*3.0,rotation:r()*6.283});
+  }
+  const map=layeredConifersEnabled()?new T.TextureLoader().load('/assets/conifer-v2/fir-sprays-v1.png',loaded,undefined,()=>{scene.userData.alpineAssetError='Conifer atlas failed';loaded();}):null;if(map){map.colorSpace=T.SRGBColorSpace;map.anisotropy=4;textures.push(map);}
+  const mat=new T.MeshStandardMaterial({roughness:1,side:T.DoubleSide,map,alphaTest:map?.35:0});
+  mat.onBeforeCompile=shader=>{shader.vertexShader='varying float boughHeight;\n'+shader.vertexShader;shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nboughHeight=position.y;');shader.fragmentShader='varying float boughHeight;\n'+shader.fragmentShader;if(layeredConifersEnabled())shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>','#ifdef USE_MAP\nvec4 needles=texture2D(map,vMapUv);float ink=dot(needles.rgb,vec3(.2126,.7152,.0722));diffuseColor.rgb*=clamp(ink*3.,.72,1.2);diffuseColor.a*=needles.a;\n#endif');shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>','#include <color_fragment>\ndiffuseColor.rgb*=mix(vec3(.5,.7,.76),vec3(1.08,1.12,.8),smoothstep(.1,.95,boughHeight));');shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_begin>','#include <normal_fragment_begin>\nnormal=normalize(normal*.5+mat3(viewMatrix)*vec3(0.,1.,0.));');};
+  const mesh=new T.InstancedMesh(layeredConifersEnabled()?distantConiferGeometry():treelineGeometry(),mat,locations.length);
+  mesh.name='alpine-layered-treeline';mesh.castShadow=true;mesh.receiveShadow=true;
+  locations.forEach((t,i)=>{o.position.set(t.x,alpineHeight(p,t.x,t.z)-.1,t.z);o.rotation.set(0,t.rotation,0);o.scale.set(t.width,t.height,t.width);o.updateMatrix();mesh.setMatrixAt(i,o.matrix);});
+  mesh.computeBoundingSphere();scene.add(mesh);created.push(mesh);plantBatches.push({mesh,locations,kind:'tree'});
+ }
+ const waterMaterial=new T.MeshStandardMaterial({color:'#6898a1',roughness:.23,metalness:.15,emissive:'#243b43',emissiveIntensity:.15});if(p.water){const positions:number[]=[],uv:number[]=[],indices:number[]=[];for(let i=0;i<=360;i++){const z=65-i*.9,x=drainage(p,z),y=alpineHeight(p,x,z)+.19,w=.95+.1*Math.sin(z*.07);for(const side of [-1,1]){positions.push(x+side*w,y,z);uv.push((side+1)/2,i/12);}if(i<360){const a=i*2;indices.push(a,a+1,a+2,a+1,a+3,a+2);}}const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(positions,3));g.setAttribute('uv',new T.Float32BufferAttribute(uv,2));g.setIndex(indices);g.computeVertexNormals();const mesh=new T.Mesh(g,waterMaterial);mesh.name='alpine-stream';scene.add(mesh);created.push(mesh);waterMaterial.onBeforeCompile=shader=>{shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>','#include <color_fragment>\nfloat ripple=.5+.5*sin(vUv.y*72.+sin(vUv.x*15.));diffuseColor.rgb*=.88+ripple*.22;');};waterMaterial.defines={USE_UV:''};}
+ const allowed=(x:number,z:number)=>{const f=alpineFields(p,x,z);return f.rock<=.65&&f.slope<=.8&&(!p.water||f.drainDistance>=1.1);};
+ const clearance=clearVegetationFromRocks(scene,created,p.seed,'alpine-grass',(x,z)=>alpineHeight(p,x,z),allowed);
+ const flowerClearance=clearVegetationFromRocks(scene,created,p.seed,'alpine-flowers',(x,z)=>alpineHeight(p,x,z),allowed);
+ // Transfer terrain normals after rock clearance so relocated cards still shade like their new ground.
+ if(p.grassField)for(const mesh of created){if(!(mesh instanceof T.InstancedMesh)||!['alpine-grass','alpine-flowers'].includes(mesh.name))continue;const normals=new Float32Array(mesh.count*3);for(let i=0;i<mesh.count;i++){mesh.getMatrixAt(i,o.matrix);const x=o.matrix.elements[12],z=o.matrix.elements[14],dx=alpineHeight(p,x+.5,z)-alpineHeight(p,x-.5,z),dz=alpineHeight(p,x,z+.5)-alpineHeight(p,x,z-.5);new T.Vector3(-dx,1,-dz).normalize().toArray(normals,i*3);}mesh.geometry.setAttribute('meadowRootNormal',new T.InstancedBufferAttribute(normals,3));}
+ const geometryDigest=()=>{let hash=2166136261;scene.traverse(o=>{if(!(o instanceof T.Mesh))return;for(const a of [o.geometry.getAttribute('position')?.array,o instanceof T.InstancedMesh?o.instanceMatrix.array:undefined])if(a)for(const v of a)hash=Math.imul(hash^Math.round(Number(v)*10000),16777619);});return (hash>>>0).toString(16);};
+ const setPalette=(id:AlpinePaletteId)=>{p.palette=id;for(const mesh of created){const mats=Array.isArray(mesh.material)?mesh.material:[mesh.material];for(const m of mats)m.userData.alpineMeadowPalette?.(id);}const a=alpinePalettes[id];for(const mesh of terrainMeshes){const pos=mesh.geometry.getAttribute('position'),c=mesh.geometry.getAttribute('color');for(let i=0;i<pos.count;i++){const color=pigment(p,pos.getX(i),pos.getZ(i)),y=pos.getY(i),snow=smooth(155,235,y)*(1-smooth(.7,1.4,alpineFields(p,pos.getX(i),pos.getZ(i)).slope));color.lerp(new T.Color('#e1e7e4'),snow*.85);c.setXYZ(i,color.r,color.g,color.b);}c.needsUpdate=true;}
+  for(const batch of plantBatches){for(let i=0;i<batch.mesh.count;i++){batch.mesh.getMatrixAt(i,o.matrix);o.matrix.decompose(o.position,o.quaternion,o.scale);const c=batch.kind==='flower'?(p.grassField?meadowFieldPigment(p,o.position.x,o.position.z):new T.Color('#ffffff').lerp(new T.Color(a.sunlit),.1)):pigment(p,o.position.x,o.position.z,batch.kind==='rock'?'rock':batch.kind==='tree'?'tree':'grass');batch.mesh.setColorAt(i,c);}if(batch.mesh.instanceColor)batch.mesh.instanceColor.needsUpdate=true;}
+  skyMat.color.set(id==='C'?'#e6c8dc':id==='B'?'#e1f4ff':'#fff4db');scene.background=new T.Color(a.sky);scene.fog=new T.Fog(p.backdrop==='subtle'?new T.Color(a.air).lerp(new T.Color(a.mountain),.65):a.air,p.backdrop==='subtle'?220:135,p.backdrop==='subtle'?1800:1250);sun.position.set(-85,90,35);sun.color.set(a.sun);sun.intensity=p.meadowArt?3.1:id==='C'?2.:2.6;sun.shadow.intensity=p.meadowArt?.8:.65;fill.color.set(a.mountain);fill.intensity=p.meadowArt?.22:.4;scene.children.forEach(o=>{if(o instanceof T.HemisphereLight){o.color.set(a.air);o.groundColor.set(a.shade);o.intensity=p.meadowArt?.55:.9;}});
+  waterMaterial.color.set(a.mountain).lerp(new T.Color(a.air),.25);scene.traverse(o=>{if(!(o instanceof T.Mesh))return;for(const mat of Array.isArray(o.material)?o.material:[o.material])if(mat instanceof T.ShaderMaterial&&mat.uniforms.shadowPigment){mat.uniforms.shadowPigment.value.set(a.shade).multiplyScalar(.55);mat.uniforms.midPigment.value.set(a.shade).lerp(new T.Color(a.meadow),.25);mat.uniforms.highPigment.value.set(a.sunlit);mat.uniforms.sage.value=0;mat.uniforms.rimStrength.value=.22;const shader=mat.userData.alpineShader;if(shader?.uniforms?.attentionAir)shader.uniforms.attentionAir.value.set(a.air).convertLinearToSRGB();}});scene.userData.recipeShadowDirty=true;scene.userData.artRevision=(scene.userData.artRevision??0)+1;
+ };
+ const ecology={tested:0,violations:0};for(const batch of plantBatches){if(batch.kind!=='grass'&&batch.kind!=='flower')continue;for(let i=0;i<batch.mesh.count;i++){batch.mesh.getMatrixAt(i,o.matrix);o.matrix.decompose(o.position,o.quaternion,o.scale);ecology.tested++;if(!allowed(o.position.x,o.position.z))ecology.violations++;}}
+ setPalette(p.palette);scene.userData.alpineApplyPalette=(id:AlpinePaletteId)=>{const before=geometryDigest();setPalette(id);const after=geometryDigest();scene.userData.alpine.paletteInvariant={before,after,match:before===after};};scene.userData.alpine={plan:p,clearance,flowerClearance,ecology,textureRGBAEstimate:8386752,physicalGrass:'Existing curved indexed grass geometry; low green clumps, no gold cards',functionalTrees:'Existing conifer architecture, field-dependent height/width, no local occurrence assertion'};scene.userData.recipeEye=p.camera;
+ return ()=>{textures.forEach(t=>t.dispose());};
+}
+export function gradeAlpineTree(material:T.Material,p:AlpinePlan){const previous=material.onBeforeCompile,key=material.customProgramCacheKey.bind(material);material.onBeforeCompile=function(shader,renderer){previous.call(this,shader,renderer);material.userData.alpineShader=shader;if(shader.uniforms.attentionAir)shader.uniforms.attentionAir.value=new T.Color(alpinePalettes[p.palette].air).convertLinearToSRGB();shader.fragmentShader=shader.fragmentShader.replace(/smoothstep\(76\.,175\.,atmosphereDepth\)/g,'smoothstep(135.,650.,atmosphereDepth)').replace(/smoothstep\(42\.,145\.,atmosphereDepth\)/g,'smoothstep(135.,650.,atmosphereDepth)');};material.customProgramCacheKey=()=>key()+'|alpine-depth-1';if(material instanceof T.ShaderMaterial&&material.uniforms.shadowPigment){const a=alpinePalettes[p.palette];material.uniforms.shadowPigment.value.set(a.shade).multiplyScalar(.55);material.uniforms.midPigment.value.set(a.shade).lerp(new T.Color(a.meadow),.25);material.uniforms.highPigment.value.set(a.sunlit);material.uniforms.sage.value=0;material.uniforms.rimStrength.value=.22;}}
+function flowerGeometry(colorful=false){const g=new T.BufferGeometry(),positions:number[]=[],colors:number[]=[],uv:number[]=[];const triangle=(a:number[],b:number[],c:number[],color:string)=>{for(const v of [a,b,c]){positions.push(...v);colors.push(...new T.Color(color).toArray());uv.push(.5,v[1]);}};for(let j=0;j<3;j++){const x=(j-1)*.13,h=.65+j*.12;triangle([x-.012,0,0],[x+.012,0,0],[x+.06,h,0],'#4e734a');for(let k=0;k<5;k++){const y=h-.18+k*.04;for(let petal=0;petal<4;petal++){const angle=petal*1.57,dx=Math.cos(angle)*(colorful?.09:.055),dz=Math.sin(angle)*(colorful?.09:.055);triangle([x+.06,y,0],[x+.06+dx,y+.025,dz],[x+.06+dx*.3,y+.065,dz*.3],colorful?['#d86cab','#9281c5','#eee3c2'][j]:j%2?'#d8dce6':'#a18ab4');}}}g.setAttribute('position',new T.Float32BufferAttribute(positions,3));g.setAttribute('color',new T.Float32BufferAttribute(colors,3));g.setAttribute('uv',new T.Float32BufferAttribute(uv,2));g.computeVertexNormals();return g;}
+
+
+/** Irregular overlapping conifer bough envelopes: core value masses under the existing needle sprays. */
+function coniferCoreGeometry(){const positions:number[]=[],indices:number[]=[],rings=5,sides=11;for(let tier=0;tier<5;tier++){const base=positions.length/3,bottom=.17+tier*.15,height=.31-tier*.022,radius=1-tier*.18;for(let k=0;k<=rings;k++){const t=k/rings;for(let j=0;j<=sides;j++){const a=j/sides*6.283,r=radius*Math.pow(1-t,.85)*(1+.12*Math.sin(a*3+tier)+.06*Math.sin(a*7-tier));positions.push(Math.cos(a)*r,bottom+height*t-.025*(1-t)*Math.sin(a*3+tier),Math.sin(a)*r);}}for(let k=0;k<rings;k++)for(let j=0;j<sides;j++){const a=base+k*(sides+1)+j,b=a+sides+1;indices.push(a,b,a+1,a+1,b,b+1);}}const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(positions,3));g.setIndex(indices);g.computeVertexNormals();return g;}
+
+/** Shared world-space value organization; no screen vignette or per-card shadow stamping. */
+function meadowLight(p:AlpinePlan,x:number,z:number){
+ const flow=x+z*.42+7*Math.sin(z*.035+p.phase),broken=.5+.5*Math.sin(flow*.09+Math.sin(z*.026)*1.4);
+ const opening=Math.exp(-((x-2-Math.sin(z*.027)*7)**2/650+(z-4)**2/6500));
+ const edge=smooth(5,30,Math.abs(x))*(1-smooth(-55,-150,z)),near=smooth(10,43,z);
+ const shade=Math.min(1,near*.58+edge*.35+broken*.28);
+ const light=opening*(1-shade*.5)*(.78+.22*(1-broken))*(1-near*.95);
+ return {shade,light};
+}
+/** Crossed irregular bough silhouettes: middle/far-distance mass only, not full-detail specimens. */
+function treelineGeometry(){
+ const pos:number[]=[],indices:number[]=[];
+ for(let plane=0;plane<3;plane++){
+  const angle=plane*Math.PI/3,base=pos.length/3;
+  for(let j=0;j<25;j++){const y=j/24,width=Math.pow(1-y,.75)*(.85+.15*Math.sin(j*2.7+plane))*(j%2?.65:1);
+   for(const side of [-1,1])pos.push(Math.cos(angle)*width*side,.12+y*.88,Math.sin(angle)*width*side);
+  }
+  for(let j=0;j<24;j++){const a=base+j*2;indices.push(a,a+2,a+1,a+1,a+2,a+3);}
+ }
+ const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(pos,3));g.setIndex(indices);g.computeVertexNormals();return g;
+}

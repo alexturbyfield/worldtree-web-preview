@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "name": "golden-plains-trees",
+  "maxRounds": 3,
+  "rounds": [],
+  "recipeSession": {
+    "id": "golden-plains-trees",
+    "status": "awaiting-art-direction",
+    "records": "artifacts/golden-plains-trees",
+    "preferred": "A provisional",
+    "humanApproval": null
+  }
+}

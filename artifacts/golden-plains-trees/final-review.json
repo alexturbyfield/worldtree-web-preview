@@ -1,0 +1,14 @@
+{
+ "actor":"agent","visionAvailable":true,"ranking":["A","B","C"],"recommended":"A, provisionally","humanReview":null,"fullSceneApproved":false,
+ "imagesInspected":["artifacts/golden-plains-trees/diagnostics-A.png","artifacts/golden-plains-trees/diagnostics-B.png","artifacts/golden-plains-trees/diagnostics-C.png","artifacts/golden-plains-trees/seed-checks.png","artifacts/visual-quality/plains-final-A-29/savanna-hero.png","artifacts/visual-quality/plains-final-A-29/savanna-inspection.png"],
+ "judgments":[
+  {"candidate":"A","betterThanPrevious":true,"goodEnoughToApprove":false,"decision":"retain for human direction","evidence":"Broad low crown, visible outward scaffold, more connected lobes and selective warm surfaces are closer to references than the legacy pointed crown. Inner shoots modestly improve central coverage.","remaining":"Still regular/flat in places; some center gaps/ring-like physical shadow remain. Generic broadleaf texture is not a dedicated acacia compound-leaf asset."},
+  {"candidate":"B","betterThanPrevious":"Structurally distinct and more open; overall attractiveness is inconclusive","goodEnoughToApprove":false,"decision":"alternative only","evidence":"Five wind-biased scaffold paths, lean and larger exposed windows produce a different branch silhouette and visible support.","remaining":"Crown is too fragmented into a few pads for the supplied mature umbrella target; not proven preferable to A."},
+  {"candidate":"C","betterThanPrevious":false,"goodEnoughToApprove":false,"decision":"reject current implementation","evidence":"Two leaders and staggered crown levels are structurally distinct, but foliage still reads as floating separate tiers.","remaining":"Do not reject all layered crowns; this particular support/mass distribution needs a different implementation."}
+ ],
+ "landscape":"Warmer gold/straw and half added relief produce more expansive plains with distant geology preserved. Inner terrain and tree base coordinates remain unchanged.",
+ "grass":"Cheaper true curved/cupped blades and sparse seed heads add local depth, but small separated midground marks remain; connected swaths/noise target is only partial.",
+ "robustness":"A tested at29/41/73; no new exposed terrain edges in tested views. Wind/phase/specimen seeds vary morphology. B/C only seed29 controlled studies.",
+ "technicalVsArtistic":"C has lower alpha-layer proxy than A but worse visual coherence. Deterministic attachment and lower triangle count do not approve art.",
+ "checkpointQuestion":"Which tree direction should we develop next: A mature umbrella, B exposed wind-shaped, C layered, or reject all three?"
+}

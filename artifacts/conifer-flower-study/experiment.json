@@ -1,0 +1,372 @@
+{
+  "id": "conifer-flower-study-1",
+  "status": "retained-provisionally-awaiting-human-review",
+  "generatorVersion": "conifer-sprays-2",
+  "humanApproval": null,
+  "strategy": {
+    "type": "representation experiment plus flower assortment",
+    "why": "The cone/flat-spray silhouette was a major visible representation defect; parameter tuning could not remove its shape language. Solid volumes versus curved textured sprays test different constructions.",
+    "valueEstimate": "High visibility and reuse across every douglas-v1 instance; moderate implementation risk requiring protected-scene captures. These are judgments, not measured benefit."
+  },
+  "loadedContext": {
+    "permanent": [
+      "AGENTS.md",
+      "visual-lab/README.md",
+      "visual-lab/art-direction-policy.json",
+      "docs/visual-quality-workflow.md"
+    ],
+    "reusable": [
+      "foliage-study",
+      "mobile-budget",
+      "prototype-fast",
+      "visual-review",
+      "imagegen",
+      "visual-lab/procedural-tree-grammar.json",
+      "visual-lab/alpine/conifer-profiles.json"
+    ],
+    "taskSpecific": [
+      "Supplied alpine concept actually inspected",
+      "Retained alpine hero and source",
+      "artifacts/alpine-meadow-light/experiment.json",
+      "visual-lab/alpine/references.json"
+    ],
+    "architecture": [
+      "studio/groups.ts:evergreenBoughStudy",
+      "studio/geometry.ts",
+      "studio/renderer.ts",
+      "forest/library.ts",
+      "forest/alpine-adapter.ts",
+      "forest/presets.ts"
+    ],
+    "note": "Previous image/reference diagnosis was retained in conversation; relevant written records were consulted without reloading full historical reports."
+  },
+  "visualCritiqueFirst": [
+    {
+      "severity": "major",
+      "observed": "Smooth dark cone interiors dominate the conifers.",
+      "confirmedCause": "Alpine-only conifer core mesh."
+    },
+    {
+      "severity": "major",
+      "observed": "Disconnected sharp sprays and thin midground silhouettes do not read as coherent bough masses.",
+      "hypothesis": "Representation/texture silhouette and scale hierarchy are inadequate, not simply foliage density."
+    },
+    {
+      "severity": "major",
+      "observed": "Flower banks repeat a single pale/pink spike silhouette.",
+      "confirmedCause": "One geometry shared by all flower instances."
+    }
+  ],
+  "reviewer": {
+    "visionAvailable": true,
+    "actualImagesInterpreted": true,
+    "independentReview": false,
+    "attribution": "Implementing agent; no independent reviewer or human approval claimed."
+  },
+  "rounds": [
+    {
+      "id": "R1",
+      "technique": "Opaque branch-owned irregular bough volumes",
+      "decision": "reject",
+      "observed": "Waxy broad-leaf/banana-like masses, sparse far canopy.",
+      "classification": "inadequate representation",
+      "source": "rejected-volume.ts.txt",
+      "imageEvidence": "Actual original frame inspected in-session; raw frame path was overwritten by subsequent helper capture. Not presented as a saved volume frame."
+    },
+    {
+      "id": "R2",
+      "technique": "Curved crossed branch-owned sprays plus generated needle atlas",
+      "decision": "revise",
+      "observed": "Conifer silhouette improved; far foliage doubled dark albedo and blossoms faced upward too much.",
+      "image": "needle-round2-hero.png"
+    },
+    {
+      "id": "R3",
+      "technique": "Fix distant material modulation, eye-level petal orientation and foreground flower-bank placement",
+      "decision": "retain-provisionally",
+      "observed": "Softer needle-edged crowns and more readable pink/lavender/ivory assortment. Boughs and petals remain stylized and angular in close-up.",
+      "image": "comparison.png"
+    }
+  ],
+  "technicalRegression": {
+    "cause": "Anisotropy was inadvertently raised2\u21924 on all shared foliage textures.",
+    "fix": "Only needleAtlas gets4; every unrelated atlas retains2.",
+    "validation": "regression.json",
+    "holdoutHandling": "First freeze/seed8879 archived; no aesthetic tuning to it. Technical fix re-frozen and a new unseen seed8893 generated. Source unchanged after8893."
+  },
+  "judgments": {
+    "betterThanBaseline": true,
+    "provisionalRetention": true,
+    "goodEnoughForFinalArtisticApproval": false,
+    "humanApproved": false
+  },
+  "validation": {
+    "training": [
+      {
+        "seed": "29",
+        "family": "treeline",
+        "palette": "A"
+      },
+      {
+        "seed": "41",
+        "family": "treeline",
+        "palette": "A"
+      },
+      {
+        "seed": "41",
+        "family": "valley",
+        "palette": "A"
+      },
+      {
+        "seed": "29",
+        "family": "treeline",
+        "palette": "B"
+      }
+    ],
+    "finalUnseenHoldout": "8893",
+    "holdoutFrozenBeforeGeneration": true,
+    "noPostHoldoutTuning": true,
+    "protectedRegression": "Savanna and rainforest hero/inspection pixel-identical; Puget changes only by authorized shared-template update. Legacy Puget pixel-identical.",
+    "checks": [
+      "TypeScript passes",
+      "5 alpine/conifer/flower tests pass",
+      "5 existing Lab tests pass",
+      "No page/shader errors",
+      "Implemented plant constraints and rock clearance report zero violations/overlaps"
+    ],
+    "limits": [
+      "No verified alpine occurrence mapping",
+      "No physical mobile-device test",
+      "PaletteB retains pre-existing A-specific meadow pigment limitation",
+      "No claim of world-boundary repair"
+    ]
+  },
+  "performance": {
+    "before": {
+      "hero": {
+        "calls": 13,
+        "triangles": 663056,
+        "cpuSubmissionMs": [
+          0.5999999940395355,
+          0.30000001192092896,
+          0.29999998211860657
+        ],
+        "synchronousCompletionMs": [],
+        "pixelRatio": 1,
+        "textureObjects": 8,
+        "geometryObjects": 13,
+        "antialias": false
+      },
+      "inspection": {
+        "calls": 13,
+        "triangles": 517952,
+        "cpuSubmissionMs": [
+          2.2000000178813934,
+          0.3999999761581421,
+          0.20000001788139343
+        ],
+        "synchronousCompletionMs": [],
+        "pixelRatio": 1,
+        "textureObjects": 8,
+        "geometryObjects": 15,
+        "antialias": false
+      }
+    },
+    "after": {
+      "hero": {
+        "calls": 14,
+        "triangles": 641908,
+        "cpuSubmissionMs": [
+          0.5999999940395355,
+          0.4000000059604645,
+          0.4000000059604645
+        ],
+        "synchronousCompletionMs": [],
+        "pixelRatio": 1,
+        "textureObjects": 9,
+        "geometryObjects": 14,
+        "antialias": false
+      },
+      "inspection": {
+        "calls": 14,
+        "triangles": 548020,
+        "cpuSubmissionMs": [
+          2.199999988079071,
+          0.4000000059604645,
+          0.29999998211860657
+        ],
+        "synchronousCompletionMs": [],
+        "pixelRatio": 1,
+        "textureObjects": 9,
+        "geometryObjects": 16,
+        "antialias": false
+      }
+    },
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 15,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.17241768532736437,
+          1.092762661590926
+        ]
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3132,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.12082436680793762,
+          1.0533300638198853
+        ]
+      },
+      {
+        "name": "alpine-grass",
+        "count": 316,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.05613637715578079,
+          0.46644842624664307
+        ]
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 356,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.08959497511386871,
+          1.3475635051727295
+        ]
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 204,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.6502349972724915,
+          1.3499672412872314
+        ]
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 204,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.6542611718177795,
+          1.3460208177566528
+        ]
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 22,
+        "visible": false,
+        "tiles": null,
+        "scaleRange": [
+          11.039716720581055,
+          18.983625411987305
+        ]
+      },
+      {
+        "name": "alpine-layered-treeline",
+        "count": 286,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          6.071770191192627,
+          18.995885848999023
+        ]
+      }
+    ],
+    "benchmark": {
+      "benchmark": {
+        "durationMs": 5034.4000000059605,
+        "frames": 32,
+        "fps": 6.356268870165683,
+        "medianFrameMs": 162.7999999821186,
+        "p95FrameMs": 170.30000001192093,
+        "meanRenderCpuMs": 0.5454545472607468,
+        "calls": 14,
+        "triangles": 641908,
+        "quality": "software economy",
+        "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+        "viewport": "940 \u00d7 460",
+        "pixelRatio": 1,
+        "foliageCards": 14652,
+        "foliageMasses": 0,
+        "method": "5 second continuous orbit; browser frame intervals and CPU render submission time. Not a GPU timer or physical-device benchmark."
+      },
+      "renderer": "WebKit WebGL",
+      "framebuffer": [
+        640,
+        360
+      ]
+    },
+    "alphaProxy": {
+      "scene": "treeline29",
+      "resolution": [
+        320,
+        180
+      ],
+      "meanSurvivingLayersPerOccupiedPixel": 4.87017099430019,
+      "wholeSprayLayersPerScreenPixel": 0.7375,
+      "alphaRejectedFraction": 0.4569209039548022,
+      "coverage": 0.08223958333333334,
+      "peakLayers": 32,
+      "saturatedPixels": 0,
+      "passes": [
+        {
+          "sum": 23070,
+          "occupied": 4737,
+          "peak": 32,
+          "saturated": 0
+        },
+        {
+          "sum": 42480,
+          "occupied": 6108,
+          "peak": 45,
+          "saturated": 0
+        }
+      ],
+      "method": "Depth-disabled additive8-bit raster proxy of existing foliage shader metric branch. Core/wood/terrain occlusion excluded; upper-bound overlap indicator, not hardware counters or actual normal-depth fragment cost."
+    },
+    "additionalTextureMiBEstimate": 15,
+    "note": "Alpine loads two8MiB RGBA+mip copies of the new1254px atlas, replacing about1MiB software-economy source atlas. Driver allocations excluded."
+  },
+  "asset": {
+    "path": "public/assets/conifer-v2/fir-sprays-v1.png",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "alpha": true,
+    "origin": "Built-in imagegen; independently generated needle bough atlas from textual brief, no external imagery downloaded.",
+    "source": "C:/Users/aturb/.codex/generated_images/01a205da-da33-7d33-9ee8-3170650dd5eb/exec-dc86d463-4f88-4374-8f0a-40adcf419fd4.png",
+    "referenceRights": "User concept remains private art-direction reference; no rights transfer inferred."
+  },
+  "remainingDefects": [
+    {
+      "severity": "major",
+      "defect": "Bough clusters remain chunky at close range; some read as large layered sprays."
+    },
+    {
+      "severity": "major",
+      "defect": "Flower petals and leaves are visibly polygonal at close range."
+    },
+    {
+      "severity": "major",
+      "defect": "Middle/far forest and lateral terrain continuation remain simplified."
+    },
+    {
+      "severity": "major",
+      "defect": "Alpha-overdraw proxy and software-renderer timing need attention before mobile approval."
+    }
+  ],
+  "next": "Soften petal/bough shapes with a targeted detail representation study, then address atlas residency/overlap with matched device evidence; no further autonomous artistic rounds in this session."
+}

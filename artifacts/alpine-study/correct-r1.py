@@ -1,0 +1,16 @@
+from pathlib import Path
+p=Path('src/lib/forest/alpine-recipe.ts');s=p.read_text().replace('far=smooth(90,360,distance)','far=smooth(140,500,distance)').replace('33*Math.pow','18*Math.pow').replace('18*Math.pow(Math.abs(d-55)','10*Math.pow(Math.abs(d-55)')
+s=s.replace('r.height*Math.exp(-u*u*2-v*v*.7)', 'r.height*Math.exp(-Math.pow(Math.abs(u),1.25)*1.8-v*v*.7)')
+s=s.replace('h-=.32*Math.exp(-d*d/2.3)','h-=.55*Math.exp(-d*d/8)')
+s=s.replace("z:-230-i*100-r()*80,height:150+r()*160+(i>3?90:0),width:105+r()*110,depth:145+r()*170", "z:-520-i*115-r()*80,height:170+r()*140+(i>3?65:0),width:145+r()*110,depth:125+r()*160")
+s=s.replace("x=(dress()-.5)*150;z=44-dress()*165;", "const near=dress()<.72;x=(dress()-.5)*(near?48:150);z=near?8+dress()*36:44-dress()*165;")
+s=s.replace(".19+dress()*.35", ".24+dress()*.42")
+p.write_text(s)
+p=Path('src/lib/forest/alpine-adapter.ts');s=p.read_text().replace("position:point(f.position),width:f.width*w,length:f.length*w", "position:point(f.position),spine:f.spine?f.spine.map(point) as [Point,Point,Point]:undefined,width:f.width*w,length:f.length*w")
+s=s.replace("c=new T.Color(a.meadow)","c=new T.Color(a.meadow).lerp(new T.Color('#4e774a'),.3)").replace("frame*.4+(1-f.aspect)*.24", "frame*.55+(1-f.aspect)*.28").replace("opening*.43+f.patch*.25", "opening*.25+f.patch*.12")
+s=s.replace("const stoneGeo=rockGeometry(true)", "const stoneGeo=rockGeometry(true).toNonIndexed();stoneGeo.computeVertexNormals();const")
+# Correct the split declaration after making the shared rock primitive flat-shaded only in this adapter.
+s=s.replace("const ,stoneMat=", "const stoneMat=")
+s=s.replace('for(let i=0;i<=180;i++){const z=65-i*1.8','for(let i=0;i<=360;i++){const z=65-i*.9').replace('w=.65+.1*Math.sin','w=.95+.1*Math.sin').replace('if(i<180){const a=i*2','if(i<360){const a=i*2')
+s=s.replace("sun.intensity=id==='C'?2.6:3.8", "sun.intensity=id==='C'?2.3:3.")
+p.write_text(s)

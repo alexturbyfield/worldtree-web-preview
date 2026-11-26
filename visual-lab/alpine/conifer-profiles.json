@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "alpine-functional-conifers-1",
+  "source": "Existing sceneLibraryStudy(douglas-v1), evergreenBoughStudy and studio foliage atlas",
+  "notOccurrenceData": true,
+  "profiles": {
+    "sheltered": {
+      "targetHeightMeters": [
+        11,
+        19
+      ],
+      "crownRadiusMeters": [
+        1.6,
+        2.4
+      ],
+      "branchHierarchy": "Inherited leader, primary boughs and secondary sprays; original source seeds retained",
+      "taperAndCurvature": "Inherited shared conifer generator, not newly fitted to regional specimens",
+      "foliage": "Existing sparse needle/bough atlas plus experimental irregular tier cores",
+      "reference": "alpine-01, alpine-05"
+    },
+    "exposed": {
+      "heightMultiplier": "1 - stress*.6",
+      "radiusMultiplier": "1 - stress*.3",
+      "stress": "Exposure + relative elevation toward provisional treeline",
+      "branchArchitecture": "Same inherited architecture; full krummholz branch plasticity is NOT implemented",
+      "reference": "alpine-01, NPS subalpine ecosystem"
+    }
+  },
+  "lod": {
+    "sourceSprays": "Stable group thinning",
+    "wood": "Detailed secondary branches near encounter; primary/trunk farther than60m",
+    "inspection": "Existing coarse global branch/foliage LOD when above terrain25m",
+    "cores": "Instanced tier envelope, still too geometric visually"
+  },
+  "status": "proposed",
+  "evidence": "../../artifacts/alpine-study/conifer-complete.png",
+  "branchEvidence": "../../artifacts/alpine-study/conifer-branches.png",
+  "limitations": [
+    "Functional fir/spruce-like study, not a verified species model",
+    "Tier cores restore mass but do not meet reference silhouette quality",
+    "No mobile device approval",
+    "No source geometry was adapted from acacia"
+  ],
+  "representationUpdate": {
+    "version": "conifer-sprays-2",
+    "sharedModel": "douglas-v1",
+    "architectureChanged": false,
+    "foliage": "Branch-owned curved overlapping sprays with generated needle atlas; alpine cone cores removed from new default; conifer=legacy retains previous path.",
+    "scope": "Same shared model in every biome, not cedar/pine/broadleaf replacement",
+    "status": "experimentally-supported",
+    "humanApproval": null,
+    "evidence": "../../artifacts/conifer-flower-study/REPORT.md",
+    "limitations": [
+      "Idealized functional growth form, not verified alpine species occurrence",
+      "Alpha overdraw and atlas detail need device review"
+    ]
+  }
+}

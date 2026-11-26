@@ -1,0 +1,1 @@
+const h=require('../../scripts/studies/visual-quality.cjs');(async()=>{await h.startSession();try{for(const treeStudy of ['C','C2'])await h.capture({label:'c-fidelity-tree-'+treeStudy,scenes:['savanna'],candidate:'r-plains',treeStudy,recipeEye:true,verifyDeterminism:true,completionTiming:true});}finally{await h.closeSession();}})().catch(e=>{console.error(e);process.exitCode=1});

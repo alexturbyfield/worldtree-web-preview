@@ -1,0 +1,191 @@
+{
+  "id": "alpine-meadow-light-1",
+  "status": "provisionally-retained-awaiting-human-review",
+  "parent": "alpine-subtle-backdrop-1",
+  "humanRequest": "More dynamic highlights and shadows, shadow framing and texturing, colorful vegetation, and a midground treeline flowing into the backdrop.",
+  "humanCandidateApproval": null,
+  "reference": "User-supplied alpine flower-bank/treeline concept 1000011045.jpg",
+  "hypothesis": "Cool foreground framing plus a warm middle-distance opening, flower banks and connected irregular treeline masses establish three coherent depth layers.",
+  "implementation": {
+    "scope": [
+      "alpine-recipe.ts",
+      "alpine-adapter.ts"
+    ],
+    "optIn": "backdrop=subtle&alpineArt=meadow",
+    "worldSpace": true,
+    "newAssets": false,
+    "ecology": "Synthetic functional-form study; no new occurrence claims or nearby mountain evidence."
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "evidence": [
+        "Flower banks improve chromatic variety.",
+        "Thin sharp trees read as a fence.",
+        "Golden patch is largely hidden beyond the visible crest."
+      ],
+      "decision": "revise"
+    },
+    {
+      "round": 2,
+      "evidence": [
+        "Broader irregular silhouettes and gentle shoulders strengthen the midground.",
+        "Warm field leaks into foreground, flattening value separation."
+      ],
+      "decision": "revise"
+    },
+    {
+      "round": 3,
+      "evidence": [
+        "Cool green foreground contrasts with golden opening at normal and thumbnail scales.",
+        "Seed41 repeats the broad hierarchy.",
+        "Rotated view reveals flat continuation and repeated panorama; angular tree envelopes remain."
+      ],
+      "decision": "retain-provisionally"
+    }
+  ],
+  "judgments": {
+    "betterThanParent": true,
+    "goodEnoughForFinalApproval": false,
+    "humanApproved": false,
+    "attribution": "Agent actual-image inspection, separate from human preference."
+  },
+  "remainingDefects": [
+    {
+      "severity": "major",
+      "defect": "Rotated view exposes a broad flat horizon and sparse lateral vegetation."
+    },
+    {
+      "severity": "major",
+      "defect": "Near conifer cores and middle-distance silhouettes still look geometric."
+    },
+    {
+      "severity": "minor",
+      "defect": "Flower banks are clearer but retain repeated spike geometry; ground grass detail remains too uniform."
+    }
+  ],
+  "validation": {
+    "seed29": [
+      "hero",
+      "inspection",
+      "thumbnail",
+      "approximately90degreeRotation"
+    ],
+    "seed41": [
+      "hero",
+      "inspection"
+    ],
+    "typescript": "passed",
+    "existingAlpineTests": "3 passed; cover default recipe determinism/palette/placement, not artistic quality",
+    "captureErrors": [],
+    "plantConstraintViolations": 0,
+    "newHoldouts": false,
+    "protectedBiomes": "No Puget/savanna/rainforest renderer path changed. Not recaptured this pass. Alpine fallback pixels compared separately."
+  },
+  "performance": {
+    "before": [
+      {
+        "view": "hero",
+        "calls": 12,
+        "triangles": 583316
+      },
+      {
+        "view": "inspection",
+        "calls": 12,
+        "triangles": 438212
+      }
+    ],
+    "after": [
+      {
+        "view": "hero",
+        "calls": 13,
+        "triangles": 663056
+      },
+      {
+        "view": "inspection",
+        "calls": 13,
+        "triangles": 517952
+      }
+    ],
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 15,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.17241768532736437,
+          1.092762661590926
+        ]
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3132,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.12082436680793762,
+          1.0533300638198853
+        ]
+      },
+      {
+        "name": "alpine-grass",
+        "count": 316,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.05613637715578079,
+          0.46644842624664307
+        ]
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 764,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.08959497511386871,
+          1.3499672412872314
+        ]
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 22,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          11.039716720581055,
+          18.983625411987305
+        ]
+      },
+      {
+        "name": "alpine-layered-treeline",
+        "count": 286,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          6.071770191192627,
+          18.995885848999023
+        ]
+      }
+    ],
+    "mobileApproval": false
+  },
+  "evidenceBackedRules": [
+    {
+      "principle": "Suppress warm focal illumination near the viewer so cool foreground masses survive.",
+      "status": "experimentally-supported",
+      "scope": "This A-palette alpine study, seeds29/41; no global numeric defaults."
+    },
+    {
+      "principle": "A midground treeline needs crown width and landform support, not just more skinny trees.",
+      "status": "experimentally-supported",
+      "limitation": "Current crossed geometry remains an inadequate close-range representation."
+    },
+    {
+      "principle": "Cluster flowers into lateral banks to keep the opening readable.",
+      "status": "experimentally-supported",
+      "limitation": "Fine spike repetition remains."
+    }
+  ]
+}

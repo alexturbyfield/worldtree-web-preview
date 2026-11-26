@@ -1,3 +1,4 @@
+import {prettySceneEnabled,mountPrettyScene} from './pretty-scene';
 import {rainforestV5,mountRainforestDepth} from './rainforest-depth';
 import {activeArchetype,arrangeArchetype,rainforestV4} from './composition-archetype';
 import * as T from 'three';
@@ -24,8 +25,10 @@ export const biomeVisualProfiles:BiomeVisualProfile[]=[
 ];
 function baseBiomeVisualProfile(r:SceneRecipe){return biomeVisualProfiles.find(p=>p.match.ecoregions?.includes(r.ecoregion?.ECO_ID??-1))??biomeVisualProfiles.find(p=>p.match.biomes?.includes(r.ecoregion?.BIOME_NUM??-1)&&p.match.realm===r.ecoregion?.REALM);}
 export function biomeVisualProfile(r:SceneRecipe):BiomeVisualProfile|undefined{
- const p=baseBiomeVisualProfile(r);if(!p||p.id!=='amazon'||!rainforestV4())return p;
- return {...p,distribution:{...p.distribution,maxTrees:64},ground:{...p.ground,palette:['#302b20','#403a26','#3c4930','#777047'],soil:'#69472e',exposedSoil:.55,tileMeters:5},vegetation:{...p.vegetation,grass:0,shrubs:160,understory:360},light:{...p.light,position:[-28,48,18],intensity:3.8,ambient:'#81aaa0',fill:.42,shadowColor:'#284c3b'},sky:{...p.sky,haze:rainforestV5()?'#35665e':'#284a3a',near:rainforestV5()?28:65,far:rainforestV5()?125:150}};
+ const p=baseBiomeVisualProfile(r);if(!p)return p;
+ const current:BiomeVisualProfile=p.id!=='amazon'||!rainforestV4()?p:{...p,distribution:{...p.distribution,maxTrees:64},ground:{...p.ground,palette:['#302b20','#403a26','#3c4930','#777047'],soil:'#69472e',exposedSoil:.55,tileMeters:5},vegetation:{...p.vegetation,grass:0,shrubs:160,understory:360},light:{...p.light,position:[-28,48,18],intensity:3.8,ambient:'#81aaa0',fill:.42,shadowColor:'#284c3b'},sky:{...p.sky,haze:rainforestV5()?'#35665e':'#284a3a',near:rainforestV5()?28:65,far:rainforestV5()?125:150}};
+ if(!prettySceneEnabled(p.id))return current;
+ const forest=p.id==='amazon';return {...current,light:{...current.light,sun:'#ffe7bc',fill:forest?.68:.62,shadowColor:forest?'#365f52':'#6d7960'},sky:forest?current.sky:{...current.sky,haze:'#bac1b6',near:95,far:280}};
 }
 export type BiomeRecipe=SceneRecipe&{biomeVisualId?:string;encounter?:{version:'puget-encounter-v1';camera:'human'|'inspection';reserved:{x:number;z:number;radiusX:number;radiusZ:number}}};
 export function composeBiomeEncounter(recipe:SceneRecipe,p:BiomeVisualProfile):BiomeRecipe{
@@ -94,7 +97,8 @@ export function dressBiome(scene:T.Scene,recipe:SceneRecipe,p:BiomeVisualProfile
  o.position.set(x,terrainHeight(x,z,recipe.seed)-.02,z);o.rotation.set(0,r()*Math.PI*2,0);o.scale.set(scale,scale*p.vegetation.height,scale);o.updateMatrix();mesh.setMatrixAt(i,o.matrix);}if(a){mesh.instanceColor=new T.InstancedBufferAttribute(new Float32Array(count*3),3);for(let i=0;i<count;i++){const tint=new T.Color(p.vegetation.palette[i%3?0:1]).lerp(new T.Color('#ffffff'),.35);mesh.setColorAt(i,tint);}}mesh.receiveShadow=true;scene.add(mesh);}
  }
  if(!v4&&p.composition.enclosure>.8){for(let i=0;i<3;i++){const shaft=new T.Mesh(new T.PlaneGeometry(1.3,22),new T.MeshBasicMaterial({color:'#ffe3ac',transparent:true,opacity:.045,depthWrite:false,side:T.DoubleSide,blending:T.AdditiveBlending}));shaft.position.set(-5+i*5,12,-8-i*7);shaft.rotation.z=-.25;scene.add(shaft);}}
- scene.userData.compositionArchetype=a?.id;scene.userData.biomeVisual={id:p.id,version:v4?(rainforestV5()?'v5':'v4'):'v3',profile:p,treeCount:recipe.trees.length};return()=>{disposed=true;disposeDepth?.();textures.forEach(t=>t.dispose());};
+ const disposePretty=prettySceneEnabled(p.id)?mountPrettyScene(scene,recipe,p.id as 'savanna'|'amazon',ground):undefined;
+ scene.userData.compositionArchetype=a?.id;scene.userData.biomeVisual={id:p.id,version:v4?(rainforestV5()?'v5':'v4'):'v3',profile:p,treeCount:recipe.trees.length};return()=>{disposed=true;disposePretty?.();disposeDepth?.();textures.forEach(t=>t.dispose());};
 }
 
 /** Shared life-form geometry for Amazon V4; artistic dressing, not named occurrence records. */

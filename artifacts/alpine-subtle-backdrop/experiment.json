@@ -1,0 +1,86 @@
+{
+  "id": "alpine-subtle-backdrop-1",
+  "status": "awaiting-human-review",
+  "parent": "alpine-study-R2",
+  "seed": "29",
+  "family": "treeline",
+  "palette": "A",
+  "humanFeedback": {
+    "preference": "Subtle local landforms; prominent nearby mountains require gathered regional evidence; beautiful intricate distance may use geometry or prerendered imagery.",
+    "candidateApproval": null
+  },
+  "reference": "37f69a40-6882-4e44-8745-9e566ec161bd/1000011045.jpg",
+  "hypothesis": "Preserve local meadow geometry and replace dominating synthetic peaks with quieter intricately illustrated world-space distant relief.",
+  "regionalEvidence": {
+    "status": "unverified",
+    "nearMountainsAllowed": false,
+    "limitation": "No DEM, surveyed relief, prominence, bearing or distance evidence has been gathered; this is an artistic prototype, not geographic reconstruction."
+  },
+  "rounds": [
+    {
+      "round": 0,
+      "decision": "revise",
+      "evidence": "Ridge image compressed into thin band; repeat seam and exposed pale horizon."
+    },
+    {
+      "round": 1,
+      "decision": "revise",
+      "evidence": "Better ridge proportions, but hard terrain-to-backdrop contact remained."
+    },
+    {
+      "round": 2,
+      "decision": "retain-provisionally",
+      "evidence": "Altitude feathering softens contact; intricate remote relief improves over smooth close peaks; inspection middle distance and panorama repetition remain major defects."
+    }
+  ],
+  "judgments": {
+    "betterThanBaseline": true,
+    "goodEnoughForFinalApproval": false,
+    "humanApproved": false,
+    "reviewer": "agent actual screenshot interpretation"
+  },
+  "performance": {
+    "baselineHero": {
+      "calls": 11,
+      "triangles": 582932
+    },
+    "candidateHero": {
+      "calls": 12,
+      "triangles": 583316
+    },
+    "baselineInspection": {
+      "calls": 11,
+      "triangles": 437828
+    },
+    "candidateInspection": {
+      "calls": 12,
+      "triangles": 438212
+    },
+    "addedTextureMiB": 8,
+    "mobileDeviceTested": false
+  },
+  "checks": {
+    "typescript": "passed",
+    "captureErrors": [],
+    "protectedSceneRecapture": false,
+    "scope": "Only opt-in alpine behavior; no Puget/savanna/rainforest source paths changed."
+  },
+  "asset": {
+    "path": "public/assets/alpine-backdrop/distant-ridges-v1.png",
+    "size": [
+      1536,
+      1024
+    ],
+    "alpha": true,
+    "origin": "Built-in imagegen, generated independently from a textual art brief, not downloaded geographic imagery.",
+    "provenance": "C:/Users/aturb/.codex/generated_images/01a205da-da33-7d33-9ee8-3170650dd5eb/exec-1e6b429b-5f37-4d92-9431-14e63af9345b.png"
+  },
+  "futureEvidenceGate": {
+    "required": [
+      "regional elevation source and location",
+      "bearing, distance and angular height of candidate relief",
+      "source confidence and resolution"
+    ],
+    "default": "Without evidence favor gentle local landforms; never infer close mountain walls merely from alpine biome or latitude."
+  }
+}

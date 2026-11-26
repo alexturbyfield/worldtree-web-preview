@@ -1,0 +1,10 @@
+from pathlib import Path
+p=Path('src/lib/forest/savanna-recipe.ts');s=p.read_text()
+s=s.replace('faces=near?3:2,steps=near?4:2','faces=2,steps=near?4:2')
+s=s.replace('angle=f*Math.PI/faces','angle=.25+f*.42')
+s=s.replace("x=(u-.5)*(near?1.9:1.65)", "x=(u-.5)*(near?2.5:2.1)+t*t*.5")
+s=s.replace("-.13+t*(near?1.25:.7)", "-.16+t*(near?1.55:.7)")
+s=s.replace("${tuft?tuftProfile(tuft).highlight+(tuft==='c'?'*(1.-smoothstep(18.,65.,d))':''):'.12'}", "${brushAtlas?'.10':tuft?tuftProfile(tuft).highlight+(tuft==='c'?'*(1.-smoothstep(18.,65.,d))':''):'.12'}")
+s=s.replace('diffuseColor.a*=brushPaint.a*border;', 'diffuseColor.a*=brushPaint.a*border*(1.-smoothstep(28.,68.,distance(cameraPosition,recipeWorld)));')
+s=s.replace('diffuseColor.rgb*=mix(1.,stroke,.58);', 'diffuseColor.rgb*=mix(1.,stroke,.36);vec3 strokeHue=brushPaint.rgb/max(.08,dot(brushPaint.rgb,vec3(.2126,.7152,.0722)));diffuseColor.rgb*=mix(vec3(1.),strokeHue,.3);')
+p.write_text(s)

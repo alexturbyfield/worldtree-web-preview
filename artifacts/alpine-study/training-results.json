@@ -1,0 +1,1323 @@
+[
+  {
+    "label": "alpine-final-valley-29",
+    "family": "valley",
+    "seed": "29",
+    "palette": "A",
+    "view": "hero",
+    "calls": 12,
+    "triangles": 512026,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 18
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3145
+      },
+      {
+        "name": "alpine-grass",
+        "count": 313
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 142
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 10
+      }
+    ],
+    "ecology": {
+      "tested": 3600,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 18,
+      "checked": 3458,
+      "moved": 167,
+      "removed": 0,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "53a42a2c",
+      "after": "53a42a2c",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-final-valley-29",
+    "family": "valley",
+    "seed": "29",
+    "palette": "A",
+    "view": "inspection",
+    "calls": 12,
+    "triangles": 380906,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 18
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3145
+      },
+      {
+        "name": "alpine-grass",
+        "count": 313
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 142
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 10
+      }
+    ],
+    "ecology": {
+      "tested": 3600,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 18,
+      "checked": 3458,
+      "moved": 167,
+      "removed": 0,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "53a42a2c",
+      "after": "53a42a2c",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-palette-valley-B",
+    "family": "valley",
+    "seed": "29",
+    "palette": "B",
+    "view": "hero",
+    "calls": 12,
+    "triangles": 512026,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 18
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3145
+      },
+      {
+        "name": "alpine-grass",
+        "count": 313
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 142
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 10
+      }
+    ],
+    "ecology": {
+      "tested": 3600,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 18,
+      "checked": 3458,
+      "moved": 167,
+      "removed": 0,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "53a42a2c",
+      "after": "53a42a2c",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-palette-valley-B",
+    "family": "valley",
+    "seed": "29",
+    "palette": "B",
+    "view": "inspection",
+    "calls": 12,
+    "triangles": 380906,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 18
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3145
+      },
+      {
+        "name": "alpine-grass",
+        "count": 313
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 142
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 10
+      }
+    ],
+    "ecology": {
+      "tested": 3600,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 18,
+      "checked": 3458,
+      "moved": 167,
+      "removed": 0,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "53a42a2c",
+      "after": "53a42a2c",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-palette-valley-C",
+    "family": "valley",
+    "seed": "29",
+    "palette": "C",
+    "view": "hero",
+    "calls": 12,
+    "triangles": 512026,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 18
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3145
+      },
+      {
+        "name": "alpine-grass",
+        "count": 313
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 142
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 10
+      }
+    ],
+    "ecology": {
+      "tested": 3600,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 18,
+      "checked": 3458,
+      "moved": 167,
+      "removed": 0,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "53a42a2c",
+      "after": "53a42a2c",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-palette-valley-C",
+    "family": "valley",
+    "seed": "29",
+    "palette": "C",
+    "view": "inspection",
+    "calls": 12,
+    "triangles": 380906,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 18
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3145
+      },
+      {
+        "name": "alpine-grass",
+        "count": 313
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 142
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 10
+      }
+    ],
+    "ecology": {
+      "tested": 3600,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 18,
+      "checked": 3458,
+      "moved": 167,
+      "removed": 0,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "53a42a2c",
+      "after": "53a42a2c",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-final-valley-41",
+    "family": "valley",
+    "seed": "41",
+    "palette": "A",
+    "view": "hero",
+    "calls": 12,
+    "triangles": 512334,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 17
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3141
+      },
+      {
+        "name": "alpine-grass",
+        "count": 317
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 142
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 10
+      }
+    ],
+    "ecology": {
+      "tested": 3600,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 17,
+      "checked": 3458,
+      "moved": 335,
+      "removed": 0,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "a8765006",
+      "after": "a8765006",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-final-valley-41",
+    "family": "valley",
+    "seed": "41",
+    "palette": "A",
+    "view": "inspection",
+    "calls": 12,
+    "triangles": 381214,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 17
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3141
+      },
+      {
+        "name": "alpine-grass",
+        "count": 317
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 142
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 10
+      }
+    ],
+    "ecology": {
+      "tested": 3600,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 17,
+      "checked": 3458,
+      "moved": 335,
+      "removed": 0,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "a8765006",
+      "after": "a8765006",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-final-valley-73",
+    "family": "valley",
+    "seed": "73",
+    "palette": "A",
+    "view": "hero",
+    "calls": 12,
+    "triangles": 512498,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 18
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3135
+      },
+      {
+        "name": "alpine-grass",
+        "count": 315
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 150
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 10
+      }
+    ],
+    "ecology": {
+      "tested": 3600,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 18,
+      "checked": 3450,
+      "moved": 186,
+      "removed": 0,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "50fc7d6b",
+      "after": "50fc7d6b",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-final-valley-73",
+    "family": "valley",
+    "seed": "73",
+    "palette": "A",
+    "view": "inspection",
+    "calls": 12,
+    "triangles": 381378,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 18
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3135
+      },
+      {
+        "name": "alpine-grass",
+        "count": 315
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 150
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 10
+      }
+    ],
+    "ecology": {
+      "tested": 3600,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 18,
+      "checked": 3450,
+      "moved": 186,
+      "removed": 0,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "50fc7d6b",
+      "after": "50fc7d6b",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-final-overlook-29",
+    "family": "overlook",
+    "seed": "29",
+    "palette": "A",
+    "view": "hero",
+    "calls": 8,
+    "triangles": 330476,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 16
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3148
+      },
+      {
+        "name": "alpine-grass",
+        "count": 312
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 136
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 0
+      }
+    ],
+    "ecology": {
+      "tested": 3596,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 16,
+      "checked": 3464,
+      "moved": 495,
+      "removed": 4,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "284593be",
+      "after": "284593be",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-final-overlook-29",
+    "family": "overlook",
+    "seed": "29",
+    "palette": "A",
+    "view": "inspection",
+    "calls": 8,
+    "triangles": 330476,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 16
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3148
+      },
+      {
+        "name": "alpine-grass",
+        "count": 312
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 136
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 0
+      }
+    ],
+    "ecology": {
+      "tested": 3596,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 16,
+      "checked": 3464,
+      "moved": 495,
+      "removed": 4,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "284593be",
+      "after": "284593be",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-palette-overlook-B",
+    "family": "overlook",
+    "seed": "29",
+    "palette": "B",
+    "view": "hero",
+    "calls": 8,
+    "triangles": 330476,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 16
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3148
+      },
+      {
+        "name": "alpine-grass",
+        "count": 312
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 136
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 0
+      }
+    ],
+    "ecology": {
+      "tested": 3596,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 16,
+      "checked": 3464,
+      "moved": 495,
+      "removed": 4,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "284593be",
+      "after": "284593be",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-palette-overlook-B",
+    "family": "overlook",
+    "seed": "29",
+    "palette": "B",
+    "view": "inspection",
+    "calls": 8,
+    "triangles": 330476,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 16
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3148
+      },
+      {
+        "name": "alpine-grass",
+        "count": 312
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 136
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 0
+      }
+    ],
+    "ecology": {
+      "tested": 3596,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 16,
+      "checked": 3464,
+      "moved": 495,
+      "removed": 4,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "284593be",
+      "after": "284593be",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-palette-overlook-C",
+    "family": "overlook",
+    "seed": "29",
+    "palette": "C",
+    "view": "hero",
+    "calls": 8,
+    "triangles": 330476,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 16
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3148
+      },
+      {
+        "name": "alpine-grass",
+        "count": 312
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 136
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 0
+      }
+    ],
+    "ecology": {
+      "tested": 3596,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 16,
+      "checked": 3464,
+      "moved": 495,
+      "removed": 4,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "284593be",
+      "after": "284593be",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-palette-overlook-C",
+    "family": "overlook",
+    "seed": "29",
+    "palette": "C",
+    "view": "inspection",
+    "calls": 8,
+    "triangles": 330476,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 16
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3148
+      },
+      {
+        "name": "alpine-grass",
+        "count": 312
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 136
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 0
+      }
+    ],
+    "ecology": {
+      "tested": 3596,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 16,
+      "checked": 3464,
+      "moved": 495,
+      "removed": 4,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "284593be",
+      "after": "284593be",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-final-overlook-41",
+    "family": "overlook",
+    "seed": "41",
+    "palette": "A",
+    "view": "hero",
+    "calls": 8,
+    "triangles": 330442,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 18
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3155
+      },
+      {
+        "name": "alpine-grass",
+        "count": 313
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 114
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 0
+      }
+    ],
+    "ecology": {
+      "tested": 3582,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 18,
+      "checked": 3486,
+      "moved": 596,
+      "removed": 18,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "18931dd",
+      "after": "18931dd",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-final-overlook-41",
+    "family": "overlook",
+    "seed": "41",
+    "palette": "A",
+    "view": "inspection",
+    "calls": 8,
+    "triangles": 330442,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 18
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3155
+      },
+      {
+        "name": "alpine-grass",
+        "count": 313
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 114
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 0
+      }
+    ],
+    "ecology": {
+      "tested": 3582,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 18,
+      "checked": 3486,
+      "moved": 596,
+      "removed": 18,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "18931dd",
+      "after": "18931dd",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-final-overlook-73",
+    "family": "overlook",
+    "seed": "73",
+    "palette": "A",
+    "view": "hero",
+    "calls": 8,
+    "triangles": 332120,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 18
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3136
+      },
+      {
+        "name": "alpine-grass",
+        "count": 315
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 148
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 0
+      }
+    ],
+    "ecology": {
+      "tested": 3599,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 18,
+      "checked": 3452,
+      "moved": 326,
+      "removed": 1,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "6e6c3f1f",
+      "after": "6e6c3f1f",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-final-overlook-73",
+    "family": "overlook",
+    "seed": "73",
+    "palette": "A",
+    "view": "inspection",
+    "calls": 8,
+    "triangles": 332120,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 18
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3136
+      },
+      {
+        "name": "alpine-grass",
+        "count": 315
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 148
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 0
+      }
+    ],
+    "ecology": {
+      "tested": 3599,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 18,
+      "checked": 3452,
+      "moved": 326,
+      "removed": 1,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "6e6c3f1f",
+      "after": "6e6c3f1f",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-final-treeline-29",
+    "family": "treeline",
+    "seed": "29",
+    "palette": "A",
+    "view": "hero",
+    "calls": 11,
+    "triangles": 726292,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 15
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3132
+      },
+      {
+        "name": "alpine-grass",
+        "count": 316
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 152
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 22
+      }
+    ],
+    "ecology": {
+      "tested": 3600,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 15,
+      "checked": 3448,
+      "moved": 205,
+      "removed": 0,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "c7b9dfd3",
+      "after": "c7b9dfd3",
+      "match": true
+    },
+    "errors": [],
+    "findings": [
+      {
+        "severity": "major",
+        "defect": "Triangle target exceeded",
+        "actual": 726292,
+        "budget": 550000
+      }
+    ]
+  },
+  {
+    "label": "alpine-final-treeline-29",
+    "family": "treeline",
+    "seed": "29",
+    "palette": "A",
+    "view": "inspection",
+    "calls": 11,
+    "triangles": 437828,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 15
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3132
+      },
+      {
+        "name": "alpine-grass",
+        "count": 316
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 152
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 22
+      }
+    ],
+    "ecology": {
+      "tested": 3600,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 15,
+      "checked": 3448,
+      "moved": 205,
+      "removed": 0,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "c7b9dfd3",
+      "after": "c7b9dfd3",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-palette-treeline-B",
+    "family": "treeline",
+    "seed": "29",
+    "palette": "B",
+    "view": "hero",
+    "calls": 11,
+    "triangles": 726292,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 15
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3132
+      },
+      {
+        "name": "alpine-grass",
+        "count": 316
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 152
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 22
+      }
+    ],
+    "ecology": {
+      "tested": 3600,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 15,
+      "checked": 3448,
+      "moved": 205,
+      "removed": 0,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "c7b9dfd3",
+      "after": "c7b9dfd3",
+      "match": true
+    },
+    "errors": [],
+    "findings": [
+      {
+        "severity": "major",
+        "defect": "Triangle target exceeded",
+        "actual": 726292,
+        "budget": 550000
+      }
+    ]
+  },
+  {
+    "label": "alpine-palette-treeline-B",
+    "family": "treeline",
+    "seed": "29",
+    "palette": "B",
+    "view": "inspection",
+    "calls": 11,
+    "triangles": 437828,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 15
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3132
+      },
+      {
+        "name": "alpine-grass",
+        "count": 316
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 152
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 22
+      }
+    ],
+    "ecology": {
+      "tested": 3600,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 15,
+      "checked": 3448,
+      "moved": 205,
+      "removed": 0,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "c7b9dfd3",
+      "after": "c7b9dfd3",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  },
+  {
+    "label": "alpine-palette-treeline-C",
+    "family": "treeline",
+    "seed": "29",
+    "palette": "C",
+    "view": "hero",
+    "calls": 11,
+    "triangles": 726292,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 15
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3132
+      },
+      {
+        "name": "alpine-grass",
+        "count": 316
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 152
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 22
+      }
+    ],
+    "ecology": {
+      "tested": 3600,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 15,
+      "checked": 3448,
+      "moved": 205,
+      "removed": 0,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "c7b9dfd3",
+      "after": "c7b9dfd3",
+      "match": true
+    },
+    "errors": [],
+    "findings": [
+      {
+        "severity": "major",
+        "defect": "Triangle target exceeded",
+        "actual": 726292,
+        "budget": 550000
+      }
+    ]
+  },
+  {
+    "label": "alpine-palette-treeline-C",
+    "family": "treeline",
+    "seed": "29",
+    "palette": "C",
+    "view": "inspection",
+    "calls": 11,
+    "triangles": 437828,
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 15
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3132
+      },
+      {
+        "name": "alpine-grass",
+        "count": 316
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 152
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 22
+      }
+    ],
+    "ecology": {
+      "tested": 3600,
+      "violations": 0
+    },
+    "clearance": {
+      "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+      "rocks": 15,
+      "checked": 3448,
+      "moved": 205,
+      "removed": 0,
+      "remainingOverlaps": 0
+    },
+    "paletteInvariant": {
+      "before": "c7b9dfd3",
+      "after": "c7b9dfd3",
+      "match": true
+    },
+    "errors": [],
+    "findings": []
+  }
+]

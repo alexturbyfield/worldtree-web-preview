@@ -1,9 +1,11 @@
+import {isLayeredConifer,layeredConiferGeometry} from './conifer-foliage';
 import {BufferGeometry,Color,Float32BufferAttribute,Quaternion,Vector3} from 'three';
 import type {StudioStudy} from './groups';
 // Shared nine-vertex leaf/spray surface template, reused by every cluster and crown.
 const leafGrid=Array.from({length:9},(_,i)=>({u:i%3/2,t:Math.floor(i/3)/2}));
 const bladeGrid=Array.from({length:21},(_,i)=>({u:i%3/2,t:Math.floor(i/3)/6}));
 export function studioGeometry(studies:StudioStudy[],positions:number[]){
+  if(studies.length&&studies.every(isLayeredConifer))return layeredConiferGeometry(studies,positions);
   const p:number[]=[],n:number[]=[],uv:number[]=[],rect:number[]=[],colors:number[]=[],shade:number[]=[],indices:number[]=[];
   const q=new Quaternion(),v=new Vector3(),normal=new Vector3(),tint=new Color();
   studies.forEach((study,i)=>{for(const f of study.fronds){
@@ -24,5 +26,5 @@ export function studioGeometry(studies:StudioStudy[],positions:number[]){
     }
     for(let y=0;y<(f.spine?6:2);y++)for(let x=0;x<2;x++){const a=base+y*3+x;indices.push(a,a+1,a+3,a+1,a+4,a+3);}
   }});
-  const g=new BufferGeometry();for(const [key,values,size] of [['position',p,3],['normal',n,3],['uv',uv,2],['tileRect',rect,4],['color',colors,3],['interior',shade,1]] as const)g.setAttribute(key,new Float32BufferAttribute(values,size));g.setIndex(indices);g.computeBoundingBox();g.computeBoundingSphere();return g;
+  const g=new BufferGeometry();for(const [key,values,size] of [['position',p,3],['normal',n,3],['uv',uv,2],['tileRect',rect,4],['color',colors,3],['interior',shade,1]] as const)g.setAttribute(key,new Float32BufferAttribute(values,size));g.setAttribute('solidBough',new Float32BufferAttribute(new Float32Array(p.length/3),1));g.setIndex(indices);g.computeBoundingBox();g.computeBoundingSphere();return g;
 }

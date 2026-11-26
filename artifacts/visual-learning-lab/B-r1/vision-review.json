@@ -1,0 +1,80 @@
+{
+  "visionAvailable": true,
+  "reviewScope": "targeted parameter family in a fixed scene; not whole-scene approval",
+  "imagesInspected": [
+    "artifacts/visual-quality/lab-B-r1-b1/rainforest-hero.png",
+    "artifacts/visual-quality/lab-B-r1-b1/rainforest-inspection.png",
+    "artifacts/visual-quality/lab-B-r1-b2/rainforest-hero.png",
+    "artifacts/visual-quality/lab-B-r1-b2/rainforest-inspection.png",
+    "artifacts/visual-quality/lab-B-r1-b3/rainforest-hero.png",
+    "artifacts/visual-quality/lab-B-r1-b3/rainforest-inspection.png"
+  ],
+  "inspectionComposite": "artifacts/visual-learning-lab/B-r1/inspection-strip.png",
+  "referenceIds": [
+    "rainforest-floor",
+    "rainforest-depth",
+    "rainforest-focal"
+  ],
+  "ranking": [
+    "b3",
+    "b2",
+    "b1"
+  ],
+  "reason": "Placement changes cannot repair the angular shared plant geometry or create missing leaf-litter richness. All retain the inherited world boundary. No variant is approval quality; retain the baseline rather than interpreting more vegetation as success.",
+  "candidates": [
+    {
+      "id": "b1",
+      "betterThanPrevious": false,
+      "goodEnough": false,
+      "reason": "Low plants reduce angular foreground clutter, but framing becomes weak and the large brown floor looks even barer.",
+      "assessment": {
+        "biomeIdentity": "Canopy identity preserved",
+        "composition": "Center remains readable but poorly framed",
+        "silhouette": "Low islands too inconspicuous",
+        "vegetation": "Little convincing layered understory",
+        "groundRichness": "Large empty brown region persists",
+        "terrain": "Inspection boundary unchanged",
+        "depth": "Upper forest remains strong",
+        "lighting": "Existing pools preserved",
+        "repetition": "No circular stamps return",
+        "overallAppeal": "Not a meaningful improvement"
+      }
+    },
+    {
+      "id": "b2",
+      "betterThanPrevious": false,
+      "goodEnough": false,
+      "reason": "Stronger edge massing introduces oversized angular foreground fronds without making the central floor natural; lower-detail assets dominate the image.",
+      "assessment": {
+        "biomeIdentity": "Dense rainforest canopy preserved",
+        "composition": "Foreground foliage competes with the opening",
+        "silhouette": "Large clipped angular fronds are distracting",
+        "vegetation": "More mass is not more botanical plausibility",
+        "groundRichness": "Leaf litter still subtle",
+        "terrain": "Finite inspection edge remains",
+        "depth": "Some stronger foreground separation",
+        "lighting": "Dark foreground geometry needs material/shape work",
+        "repetition": "Repeated shrub/fern forms visible",
+        "overallAppeal": "Reject; density alone does not fix asset quality"
+      }
+    },
+    {
+      "id": "b3",
+      "betterThanPrevious": true,
+      "goodEnough": false,
+      "reason": "Best relative framing and patch variation of the three, but the bare floor, angular foliage and inherited inspection boundary prevent approval.",
+      "assessment": {
+        "biomeIdentity": "Rainforest identity remains strong",
+        "composition": "Slightly improved asymmetric framing",
+        "silhouette": "Recognizable but coarse foreground fronds",
+        "vegetation": "More irregular sizes, still generic life-form geometry",
+        "groundRichness": "Still too smooth and brown against the leaf-litter reference",
+        "terrain": "Exposed environment edge unchanged",
+        "depth": "Layered canopy preserved",
+        "lighting": "Existing selective lighting retained",
+        "repetition": "No circle regression; repeated plant silhouettes remain",
+        "overallAppeal": "Small relative improvement, not good enough"
+      }
+    }
+  ]
+}

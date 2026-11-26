@@ -1,0 +1,247 @@
+{
+  "schemaVersion": 1,
+  "references": [
+    {
+      "id": "savanna-composition",
+      "biome": "savanna",
+      "category": "composition-and-acacia",
+      "source": {
+        "kind": "user-supplied",
+        "attribution": "User-supplied image; original creator not verified",
+        "original": "savanna-wide"
+      },
+      "license": {
+        "status": "unverified",
+        "use": "private local visual reference only",
+        "redistributionAllowed": false,
+        "trainingEligible": false,
+        "note": "Verify ownership/provider terms and record explicit permission before redistribution or training."
+      },
+      "imagePath": ".codex-attachments/0cd44ce1-629d-4f8a-9bd2-2061fb7f1332/0d727cc7-0268-4165-98a5-d7a54546ce02/1000011014.png",
+      "available": true,
+      "principle": "Broad umbrella crown above a readable open encounter; layered distant trees.",
+      "positiveCharacteristics": [
+        "Asymmetric hero silhouette",
+        "Expansive sky",
+        "Clear middle-distance opening"
+      ],
+      "defectsToAvoid": [
+        "Round bush-like acacias",
+        "Foreground obstruction"
+      ]
+    },
+    {
+      "id": "savanna-grass",
+      "biome": "savanna",
+      "category": "grass-structure-distribution",
+      "source": {
+        "kind": "user-supplied",
+        "attribution": "User-supplied image; original creator not verified",
+        "original": "savanna-wide"
+      },
+      "license": {
+        "status": "unverified",
+        "use": "private local visual reference only",
+        "redistributionAllowed": false,
+        "trainingEligible": false,
+        "note": "Verify ownership/provider terms and record explicit permission before redistribution or training."
+      },
+      "imagePath": ".codex-attachments/0cd44ce1-629d-4f8a-9bd2-2061fb7f1332/0d727cc7-0268-4165-98a5-d7a54546ce02/1000011014.png",
+      "available": true,
+      "principle": "Long golden blade masses flow through irregular patches; cooler bases and lit tips.",
+      "positiveCharacteristics": [
+        "Continuous but varied coverage",
+        "Readable curved blades",
+        "Clumped height variation"
+      ],
+      "defectsToAvoid": [
+        "Skeletal pale fragments",
+        "Black grass",
+        "Uniform carpet",
+        "Empty brown ground"
+      ]
+    },
+    {
+      "id": "savanna-geology",
+      "biome": "savanna",
+      "category": "geological-character",
+      "source": {
+        "kind": "user-supplied",
+        "attribution": "User-supplied image; original creator not verified",
+        "original": "savanna-geology"
+      },
+      "license": {
+        "status": "unverified",
+        "use": "private local visual reference only",
+        "redistributionAllowed": false,
+        "trainingEligible": false,
+        "note": "Verify ownership/provider terms and record explicit permission before redistribution or training."
+      },
+      "imagePath": ".codex-attachments/0cd44ce1-629d-4f8a-9bd2-2061fb7f1332/ad20a51c-7248-4c95-80e6-45350e41fef3/1000011017.png",
+      "available": true,
+      "principle": "Weathered outcrops or distant escarpments connect physically to surrounding terrain.",
+      "positiveCharacteristics": [
+        "Irregular geological silhouette",
+        "Broad talus connection",
+        "Distance separation"
+      ],
+      "defectsToAvoid": [
+        "Faceted mountain wall",
+        "Floating terrain ends"
+      ]
+    },
+    {
+      "id": "savanna-light",
+      "biome": "savanna",
+      "category": "lighting-atmosphere",
+      "source": {
+        "kind": "user-supplied",
+        "attribution": "User-supplied image; original creator not verified",
+        "original": "savanna-light"
+      },
+      "license": {
+        "status": "unverified",
+        "use": "private local visual reference only",
+        "redistributionAllowed": false,
+        "trainingEligible": false,
+        "note": "Verify ownership/provider terms and record explicit permission before redistribution or training."
+      },
+      "imagePath": ".codex-attachments/0cd44ce1-629d-4f8a-9bd2-2061fb7f1332/268a9f8a-a89e-46f8-8243-3f84016fa18d/1000011015.png",
+      "available": true,
+      "principle": "Warm foreground grass and crowns contrast with cool atmospheric distance.",
+      "positiveCharacteristics": [
+        "Selective warm light",
+        "Cool shadow color",
+        "Expansive sky"
+      ],
+      "defectsToAvoid": [
+        "Global yellow filter",
+        "Gray wash"
+      ]
+    },
+    {
+      "id": "rainforest-hero",
+      "biome": "rainforest",
+      "category": "buttress-roots-hero-trees",
+      "source": {
+        "kind": "local-generated-concept",
+        "attribution": "Wildloom local image-generation concept",
+        "original": "rainforest-concept"
+      },
+      "license": {
+        "status": "unverified",
+        "use": "private local visual reference only",
+        "redistributionAllowed": false,
+        "trainingEligible": false,
+        "note": "Verify ownership/provider terms and record explicit permission before redistribution or training."
+      },
+      "imagePath": "artifacts/wildloom-amazon-terra-firme-concept-v1.png",
+      "available": true,
+      "principle": "Monumental buttressed trunks frame a small natural clearing.",
+      "positiveCharacteristics": [
+        "Massive partially cropped forms",
+        "Vertical scale",
+        "Recognizable roots"
+      ],
+      "defectsToAvoid": [
+        "Isolated specimen trees",
+        "Symmetric framing"
+      ]
+    },
+    {
+      "id": "rainforest-floor",
+      "biome": "rainforest",
+      "category": "understory-and-floor",
+      "source": {
+        "kind": "local-generated-concept",
+        "attribution": "Wildloom local image-generation concept",
+        "original": "rainforest-concept"
+      },
+      "license": {
+        "status": "unverified",
+        "use": "private local visual reference only",
+        "redistributionAllowed": false,
+        "trainingEligible": false,
+        "note": "Verify ownership/provider terms and record explicit permission before redistribution or training."
+      },
+      "imagePath": "artifacts/wildloom-amazon-terra-firme-concept-v1.png",
+      "available": true,
+      "principle": "Overlapping broadleaf, fern, root and litter layers form irregular masses and gaps.",
+      "positiveCharacteristics": [
+        "Distinct scales and silhouettes",
+        "Organic leaf litter",
+        "Readable center"
+      ],
+      "defectsToAvoid": [
+        "Circular stamps",
+        "Repeated identical clumps",
+        "Barren floor"
+      ]
+    },
+    {
+      "id": "rainforest-depth",
+      "biome": "rainforest",
+      "category": "atmospheric-depth",
+      "source": {
+        "kind": "local-generated-concept",
+        "attribution": "Wildloom local image-generation concept",
+        "original": "rainforest-concept"
+      },
+      "license": {
+        "status": "unverified",
+        "use": "private local visual reference only",
+        "redistributionAllowed": false,
+        "trainingEligible": false,
+        "note": "Verify ownership/provider terms and record explicit permission before redistribution or training."
+      },
+      "imagePath": "artifacts/wildloom-amazon-terra-firme-concept-v1.png",
+      "available": true,
+      "principle": "Clear nearby trunks separate from successive cool dark forest layers.",
+      "positiveCharacteristics": [
+        "Continuous forest depth",
+        "Humid air with readable silhouettes"
+      ],
+      "defectsToAvoid": [
+        "Uniform gray fog",
+        "Visible world edge",
+        "Uniformly spaced trunks"
+      ]
+    },
+    {
+      "id": "rainforest-focal",
+      "biome": "rainforest",
+      "category": "focal-lighting",
+      "source": {
+        "kind": "local-generated-concept",
+        "attribution": "Wildloom local image-generation concept",
+        "original": "rainforest-concept"
+      },
+      "license": {
+        "status": "unverified",
+        "use": "private local visual reference only",
+        "redistributionAllowed": false,
+        "trainingEligible": false,
+        "note": "Verify ownership/provider terms and record explicit permission before redistribution or training."
+      },
+      "imagePath": "artifacts/wildloom-amazon-terra-firme-concept-v1.png",
+      "available": true,
+      "principle": "Small warm pools of canopy light direct attention inside deep green shade.",
+      "positiveCharacteristics": [
+        "Selective leaf highlights",
+        "Cool readable shadow interiors"
+      ],
+      "defectsToAvoid": [
+        "Uniform brightness",
+        "Black shadow curtain"
+      ]
+    }
+  ],
+  "supplementalSources": [
+    {
+      "id": "savanna-real",
+      "imagePath": ".codex-attachments/0cd44ce1-629d-4f8a-9bd2-2061fb7f1332/e9e48a95-4496-49fb-9bf1-866f6a30ad01/1000011008.jpg",
+      "source": "User-supplied phone screenshot of a photograph; photographer/license unknown",
+      "license": "Unverified; private visual reference only; not training eligible"
+    }
+  ]
+}

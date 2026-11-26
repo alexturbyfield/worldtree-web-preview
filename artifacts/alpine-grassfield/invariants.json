@@ -1,0 +1,27 @@
+{
+  "treeDataIdentical": true,
+  "rockDataIdentical": true,
+  "cameraIdentical": true,
+  "grassCountBefore": 3448,
+  "grassCountAfter": 3448,
+  "ecology": {
+    "tested": 4384,
+    "violations": 0
+  },
+  "grassClearance": {
+    "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+    "rocks": 15,
+    "checked": 3448,
+    "moved": 298,
+    "removed": 0,
+    "remainingOverlaps": 0
+  },
+  "flowerClearance": {
+    "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+    "rocks": 15,
+    "checked": 936,
+    "moved": 39,
+    "removed": 0,
+    "remainingOverlaps": 0
+  }
+}

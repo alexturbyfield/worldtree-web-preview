@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-25",
+  "actor": "human",
+  "input": "explicit conversation",
+  "feedback": "Previous hybrid-tall is very close. Update background trees similarly to the front tree; match ground mesh colors to grass-card bottoms; add just one small upper clump to the foreground crown to match the concept silhouette.",
+  "scope": "Three targeted changes to retained direction, not final approval of new C3/cohesion render",
+  "previousEvidence": "artifacts/hybrid-tall/comparison.png",
+  "experiment": "artifacts/tree-ground-cohesion/record.json",
+  "humanFinalApproval": false
+}

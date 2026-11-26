@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "references": "01-reference-analysis.json",
+  "recipe": "../../visual-lab/alpine/recipe.json",
+  "grammar": "../../visual-lab/alpine/grammar.json",
+  "freeze": "freeze.json",
+  "controller": "../../visual-lab/alpine/controller.json",
+  "training": "validated-training-results.json",
+  "holdouts": "holdouts.json",
+  "review": "review.json",
+  "performance": "performance.json",
+  "regression": "regression.json",
+  "statuses": {
+    "technicalImplementation": "experimental",
+    "overallArtisticAcceptance": false,
+    "humanApproval": null,
+    "modelTrainingPerformed": false
+  },
+  "iterationHistory": [
+    {
+      "round": 0,
+      "scope": "initial reference-derived implementation",
+      "decision": "reject all visually",
+      "evidence": "alpine-r0-*",
+      "finding": "Oversized smooth hills, yellow bare-looking meadow, skeletal conifers, unresolved water bed."
+    },
+    {
+      "round": 1,
+      "scope": "ridge setback, greener fields, near-biased vegetation, stream bed resolution; spine transform safeguard",
+      "decision": "retain some technical improvements, still visually inadequate",
+      "finding": "Open structure improved; conifer coverage and geology still poor. Spine data was not the cause for this particular evergreen study."
+    },
+    {
+      "round": 2,
+      "scope": "branch-tier cores, coordinated green palette/less yellow light, rock/snow exposure",
+      "decision": "best technical checkpoint; no artistic approval",
+      "finding": "Recognizable conifers and greener meadow, but generic mountain/conifer surfaces."
+    },
+    {
+      "round": 3,
+      "scope": "multi-summit ar\u00eate representation",
+      "decision": "reject and revert to R2",
+      "finding": "Overly simple pyramid forms did not improve credibility."
+    }
+  ],
+  "futureHumanFeedback": "Record explicit response with these images, source hashes and seed/palette; never convert this agent review into a human approval label."
+}

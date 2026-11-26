@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "name": "c-fidelity",
+  "maxRounds": 3,
+  "rounds": [
+    {
+      "id": "C-fidelity-r1",
+      "target": "branch-supported crown volume",
+      "attempts": 1,
+      "decision": "retain-provisionally",
+      "evidence": "artifacts/c-fidelity/tree-diagnostics.png",
+      "meaningfulImprovement": true
+    },
+    {
+      "id": "C-fidelity-r2",
+      "target": "world-space values",
+      "attempts": 2,
+      "decision": "retain-revision-provisionally",
+      "rejected": "First ground was too brown; preserved as c-fidelity-ground",
+      "meaningfulImprovement": true
+    },
+    {
+      "id": "C-fidelity-r3",
+      "target": "dimensional foreground grass",
+      "attempts": 2,
+      "decision": "reject-both-retain-existing-grass",
+      "meaningfulImprovement": false,
+      "evidence": "artifacts/c-fidelity/grass-rejected.png"
+    }
+  ],
+  "status": "awaiting-art-direction",
+  "provisionalBest": {
+    "candidate": "r-fidelity",
+    "treeStudy": "C2",
+    "humanApproved": false,
+    "source": "agent visual critique only"
+  },
+  "stopReason": "Three scoped rounds complete; grass needs a stronger representation. Stop for visual review, do not layer more detail."
+}

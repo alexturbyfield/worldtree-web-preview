@@ -1,0 +1,2 @@
+import json,pathlib
+p=pathlib.Path('visual-lab/feedback/brush-weight-direction.json');p.write_text(json.dumps({'schemaVersion':1,'date':'2026-11-25','actor':'human','input':'explicit conversation','request':'Try softer and more brush like. Match the concept at in visual weight','scope':'Grass shape language and reference visual weight; preserve sparse C tree','priorEvidence':'artifacts/dense-tufts/comparison.png','experiment':'artifacts/brush-grass/record.json','candidateApproval':None},indent=2)+'\n')

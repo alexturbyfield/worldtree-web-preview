@@ -1,0 +1,7 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema","title":"Wildloom visual grammar evidence",
+ "type":"object","required":["schemaVersion","domain","rules"],
+ "properties":{"schemaVersion":{"const":1},"domain":{"type":"string"},"rules":{"type":"array","items":{"$ref":"#/$defs/rule"}}},
+ "$defs":{"rule":{"type":"object","required":["id","principle","referenceEvidence","implementationHypothesis","renderEvidence","result","knownLimitations","constraints","status"],"properties":{"id":{"type":"string"},"principle":{"type":"string"},"referenceEvidence":{"type":"array"},"implementationHypothesis":{"type":"string"},"renderEvidence":{"type":"array"},"result":{"type":"string"},"knownLimitations":{"type":"string"},"constraints":{"type":"object"},"status":{"enum":["proposed","experimentally-supported","human-approved","rejected"]},"humanApproval":{"type":["object","null"]}}}},
+ "policy":"Support is scoped to cited renders and tested species/biomes. Numeric validity is not aesthetic approval. Human-approved requires explicit user evidence. Untested generalization remains proposed."
+}

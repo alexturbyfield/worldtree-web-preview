@@ -1,0 +1,29 @@
+[
+  {
+    "biome": "puget",
+    "view": "hero",
+    "before": "artifacts/visual-quality/lab-initial/puget-hero.png",
+    "after": "artifacts/visual-quality/savanna-study-protected-regression/puget-hero.png",
+    "byteIdentical": true,
+    "beforeSHA": "e31999914a81216df5905eb5069fe4b9b33713101c2e4c494aaaf06ce9efd929",
+    "afterSHA": "e31999914a81216df5905eb5069fe4b9b33713101c2e4c494aaaf06ce9efd929"
+  },
+  {
+    "biome": "rainforest",
+    "view": "hero",
+    "before": "artifacts/visual-quality/lab-initial/rainforest-hero.png",
+    "after": "artifacts/visual-quality/savanna-study-protected-regression/rainforest-hero.png",
+    "byteIdentical": true,
+    "beforeSHA": "fe0d672f201af3036f258f60bb78fbe57e4d20cd398483e11d842a0a854a1af7",
+    "afterSHA": "fe0d672f201af3036f258f60bb78fbe57e4d20cd398483e11d842a0a854a1af7"
+  },
+  {
+    "biome": "rainforest",
+    "view": "inspection",
+    "before": "artifacts/visual-quality/lab-initial/rainforest-inspection.png",
+    "after": "artifacts/visual-quality/savanna-study-protected-regression/rainforest-inspection.png",
+    "byteIdentical": true,
+    "beforeSHA": "282d449d02d8565c0afa6c06d0cba33193b481c530ebc63448b84022168ea870",
+    "afterSHA": "282d449d02d8565c0afa6c06d0cba33193b481c530ebc63448b84022168ea870"
+  }
+]

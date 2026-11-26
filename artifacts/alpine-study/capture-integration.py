@@ -1,0 +1,12 @@
+from pathlib import Path
+p=Path('src/lib/forest/alpine-adapter.ts');s=p.read_text()
+s=s.replace(" const groundMaterial=", " let pending=2;scene.userData.labAssetsReady=false;const loaded=()=>{pending--;scene.userData.labAssetsReady=pending===0;scene.userData.artRevision=(scene.userData.artRevision??0)+1;};\n const skyMap=new T.TextureLoader().load('/assets/puget-v1/sky-matte-v1.webp',loaded,undefined,()=>{scene.userData.alpineAssetError='Sky asset failed';loaded();});skyMap.colorSpace=T.SRGBColorSpace;textures.push(skyMap);const skyMat=new T.MeshBasicMaterial({map:skyMap,side:T.BackSide,fog:false,depthWrite:false,toneMapped:false}),sky=new T.Mesh(new T.SphereGeometry(1800,48,24),skyMat);sky.name='alpine-shared-sky';sky.renderOrder=-10;scene.add(sky);created.push(sky);\n const groundMaterial=")
+s=s.replace("()=>{scene.userData.artRevision=(scene.userData.artRevision??0)+1;});detail.colorSpace", "loaded,undefined,()=>{scene.userData.alpineAssetError='Ground detail failed';loaded();});detail.colorSpace")
+s=s.replace("scene.background=new T.Color(a.sky);scene.fog", "skyMat.color.set(id==='C'?'#e6c8dc':id==='B'?'#e1f4ff':'#fff4db');scene.background=new T.Color(a.sky);scene.fog")
+p.write_text(s)
+p=Path('scripts/studies/visual-quality.cjs');s=p.read_text()
+s=s.replace("({id,verify})=>{const s=window.__visual.s;", "({id,verify,alpinePalette})=>{const s=window.__visual.s;if(alpinePalette&&s.userData.alpineApplyPalette)s.userData.alpineApplyPalette(alpinePalette);")
+s=s.replace("verify:request.verifyDeterminism??false}", "verify:request.verifyDeterminism??false,alpinePalette:request.alpinePalette??null}")
+s=s.replace("treeStudy:s.userData.treeStudy,textureAudit", "treeStudy:s.userData.treeStudy,alpine:s.userData.alpine,alpineAssetError:s.userData.alpineAssetError,textureAudit")
+s=s.replace("if(request.grassDetail)await captureGrassDetail(p,dir);", "if(request.grassDetail)await captureGrassDetail(p,dir);if(request.closePage){await p.close();for(const [key,page]of pages)if(page===p)pages.delete(key);}")
+p.write_text(s)

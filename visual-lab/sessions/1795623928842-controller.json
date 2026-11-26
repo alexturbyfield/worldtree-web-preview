@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "name": "reference-to-recipe-savanna",
+  "maxRounds": 3,
+  "rounds": [],
+  "recipeSession": {
+    "id": "savanna-reference-recipe-1",
+    "records": "artifacts/reference-to-recipe-savanna/gates",
+    "status": "awaiting-art-direction",
+    "maxCorrectionsPerGate": 3,
+    "ground": "provisional foundation only",
+    "grass": "provisional integration only",
+    "composition": "failed artistic gate",
+    "robustness": "diagnostic failed",
+    "humanApproval": null
+  }
+}

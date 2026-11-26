@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "name": "savanna-golden-hills",
+  "maxRounds": 3,
+  "rounds": [],
+  "recipeSession": {
+    "id": "savanna-golden-hills",
+    "status": "awaiting-art-direction",
+    "records": "artifacts/savanna-golden-hills",
+    "retained": "R2 / r-golden",
+    "rejectedLatest": "R3",
+    "roundsUsed": 3,
+    "humanApproval": null
+  }
+}

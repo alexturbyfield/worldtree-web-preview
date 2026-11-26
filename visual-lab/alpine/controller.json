@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "name": "alpine-first-cross-biome-study",
+  "budgetAuthorization": "Current user task, max3 correction rounds per composition family; not a reset of historical savanna budgets.",
+  "maxCorrectionRoundsPerFamily": 3,
+  "families": {
+    "valley": {
+      "rounds": [
+        {
+          "round": 0,
+          "scope": "initial reference-derived implementation",
+          "decision": "reject all visually",
+          "evidence": "alpine-r0-*",
+          "finding": "Oversized smooth hills, yellow bare-looking meadow, skeletal conifers, unresolved water bed."
+        },
+        {
+          "round": 1,
+          "scope": "ridge setback, greener fields, near-biased vegetation, stream bed resolution; spine transform safeguard",
+          "decision": "retain some technical improvements, still visually inadequate",
+          "finding": "Open structure improved; conifer coverage and geology still poor. Spine data was not the cause for this particular evergreen study."
+        },
+        {
+          "round": 2,
+          "scope": "branch-tier cores, coordinated green palette/less yellow light, rock/snow exposure",
+          "decision": "best technical checkpoint; no artistic approval",
+          "finding": "Recognizable conifers and greener meadow, but generic mountain/conifer surfaces."
+        },
+        {
+          "round": 3,
+          "scope": "multi-summit ar\u00eate representation",
+          "decision": "reject and revert to R2",
+          "finding": "Overly simple pyramid forms did not improve credibility."
+        }
+      ],
+      "correctionRoundsUsed": 3,
+      "bestTechnical": "R2",
+      "artisticDecision": "all not good enough",
+      "status": "awaiting-human-art-direction"
+    },
+    "overlook": {
+      "rounds": [
+        {
+          "round": 0,
+          "scope": "initial reference-derived implementation",
+          "decision": "reject all visually",
+          "evidence": "alpine-r0-*",
+          "finding": "Oversized smooth hills, yellow bare-looking meadow, skeletal conifers, unresolved water bed."
+        },
+        {
+          "round": 1,
+          "scope": "ridge setback, greener fields, near-biased vegetation, stream bed resolution; spine transform safeguard",
+          "decision": "retain some technical improvements, still visually inadequate",
+          "finding": "Open structure improved; conifer coverage and geology still poor. Spine data was not the cause for this particular evergreen study."
+        },
+        {
+          "round": 2,
+          "scope": "branch-tier cores, coordinated green palette/less yellow light, rock/snow exposure",
+          "decision": "best technical checkpoint; no artistic approval",
+          "finding": "Recognizable conifers and greener meadow, but generic mountain/conifer surfaces."
+        },
+        {
+          "round": 3,
+          "scope": "multi-summit ar\u00eate representation",
+          "decision": "reject and revert to R2",
+          "finding": "Overly simple pyramid forms did not improve credibility."
+        }
+      ],
+      "correctionRoundsUsed": 3,
+      "bestTechnical": "R2",
+      "artisticDecision": "all not good enough",
+      "status": "awaiting-human-art-direction"
+    },
+    "treeline": {
+      "rounds": [
+        {
+          "round": 0,
+          "scope": "initial reference-derived implementation",
+          "decision": "reject all visually",
+          "evidence": "alpine-r0-*",
+          "finding": "Oversized smooth hills, yellow bare-looking meadow, skeletal conifers, unresolved water bed."
+        },
+        {
+          "round": 1,
+          "scope": "ridge setback, greener fields, near-biased vegetation, stream bed resolution; spine transform safeguard",
+          "decision": "retain some technical improvements, still visually inadequate",
+          "finding": "Open structure improved; conifer coverage and geology still poor. Spine data was not the cause for this particular evergreen study."
+        },
+        {
+          "round": 2,
+          "scope": "branch-tier cores, coordinated green palette/less yellow light, rock/snow exposure",
+          "decision": "best technical checkpoint; no artistic approval",
+          "finding": "Recognizable conifers and greener meadow, but generic mountain/conifer surfaces."
+        },
+        {
+          "round": 3,
+          "scope": "multi-summit ar\u00eate representation",
+          "decision": "reject and revert to R2",
+          "finding": "Overly simple pyramid forms did not improve credibility."
+        }
+      ],
+      "correctionRoundsUsed": 3,
+      "bestTechnical": "R2",
+      "artisticDecision": "all not good enough",
+      "status": "awaiting-human-art-direction"
+    }
+  },
+  "freeze": "../../artifacts/alpine-study/freeze.json",
+  "holdouts": {
+    "status": "generated once after final freeze",
+    "seeds": {
+      "valley": "101",
+      "overlook": "131",
+      "treeline": "167"
+    },
+    "tunedAfterEvaluation": false
+  },
+  "regression": "../../artifacts/alpine-study/regression.json",
+  "humanApproval": null,
+  "sourceChangesAfterFinalFreeze": false
+}

@@ -1,0 +1,959 @@
+{
+  "metrics": [
+    {
+      "id": "recipe-eye-original",
+      "image": "artifacts/visual-quality/recipe-eye-original/savanna-hero.png",
+      "scales": [
+        {
+          "width": 160,
+          "height": 90,
+          "region": "lower45percent",
+          "meanLuminance": 0.5524967917597519,
+          "stdDev": 0.16949671174708203,
+          "edgeFraction": 0.28354430379746837
+        },
+        {
+          "width": 640,
+          "height": 360,
+          "region": "lower45percent",
+          "meanLuminance": 0.5502757801084437,
+          "stdDev": 0.18138151564691932,
+          "edgeFraction": 0.1381841546759088
+        }
+      ]
+    },
+    {
+      "id": "recipe-B-2-r-ground",
+      "image": "artifacts/visual-quality/recipe-B-2-r-ground/savanna-hero.png",
+      "scales": [
+        {
+          "width": 160,
+          "height": 90,
+          "region": "lower45percent",
+          "meanLuminance": 0.46086827910151584,
+          "stdDev": 0.06602639679325364,
+          "edgeFraction": 0.012183544303797469
+        },
+        {
+          "width": 640,
+          "height": 360,
+          "region": "lower45percent",
+          "meanLuminance": 0.456487771530578,
+          "stdDev": 0.06535569274013266,
+          "edgeFraction": 0.004001246130181662
+        }
+      ]
+    },
+    {
+      "id": "recipe-B-4-repaired-r-grass",
+      "image": "artifacts/visual-quality/recipe-B-4-repaired-r-grass/savanna-hero.png",
+      "scales": [
+        {
+          "width": 160,
+          "height": 90,
+          "region": "lower45percent",
+          "meanLuminance": 0.4474628485976675,
+          "stdDev": 0.06379697401794716,
+          "edgeFraction": 0.006012658227848101
+        },
+        {
+          "width": 640,
+          "height": 360,
+          "region": "lower45percent",
+          "meanLuminance": 0.4434075356821113,
+          "stdDev": 0.06446750634563989,
+          "edgeFraction": 0.0025604081076344943
+        }
+      ]
+    },
+    {
+      "id": "recipe-C-2-r-full",
+      "image": "artifacts/visual-quality/recipe-C-2-r-full/savanna-hero.png",
+      "scales": [
+        {
+          "width": 160,
+          "height": 90,
+          "region": "lower45percent",
+          "meanLuminance": 0.45033919161082064,
+          "stdDev": 0.08853686303151795,
+          "edgeFraction": 0.03892405063291139
+        },
+        {
+          "width": 640,
+          "height": 360,
+          "region": "lower45percent",
+          "meanLuminance": 0.4467160341448687,
+          "stdDev": 0.09299191105026589,
+          "edgeFraction": 0.03756887789871298
+        }
+      ]
+    },
+    {
+      "id": "reference",
+      "image": ".codex-attachments/0cd44ce1-629d-4f8a-9bd2-2061fb7f1332/0d727cc7-0268-4165-98a5-d7a54546ce02/1000011014.png",
+      "scales": [
+        {
+          "width": 160,
+          "height": 90,
+          "region": "lower45percent",
+          "meanLuminance": 0.527464548523208,
+          "stdDev": 0.13486124585563336,
+          "edgeFraction": 0.18496835443037973
+        },
+        {
+          "width": 640,
+          "height": 360,
+          "region": "lower45percent",
+          "meanLuminance": 0.5232362319756834,
+          "stdDev": 0.14445732153316118,
+          "edgeFraction": 0.11796374540002726
+        }
+      ]
+    }
+  ],
+  "performance": [
+    {
+      "label": "recipe-eye-original",
+      "frames": [
+        {
+          "view": "hero",
+          "camera": {
+            "position": [
+              0,
+              0.21041739075620725,
+              34
+            ],
+            "quaternion": [
+              0.024969864063644317,
+              0.01850322795785242,
+              -0.0004622464236711974,
+              0.9995168446664752
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "seed": "29",
+          "performance": {
+            "calls": 8,
+            "triangles": 57350,
+            "cpuSubmissionMs": [
+              0.4000000059604645,
+              0.09999999403953552,
+              0.20000001788139343
+            ],
+            "synchronousCompletionMs": [],
+            "pixelRatio": 1
+          },
+          "targetInstances": 11000,
+          "guard": {
+            "before": "a8a47407",
+            "after": "a8a47407",
+            "match": true,
+            "scope": "Non-target geometry identities/attribute versions, instance transforms, material identities/colors and lights; not a full per-vertex cryptographic proof."
+          },
+          "rawCoverage": {
+            "available": false,
+            "region": "lower half",
+            "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+            "fraction": null,
+            "nearBlackFraction": null,
+            "horizontalBands": null
+          },
+          "findings": [],
+          "errors": []
+        },
+        {
+          "view": "inspection",
+          "camera": {
+            "position": [
+              34,
+              23,
+              44
+            ],
+            "quaternion": [
+              -0.11289019307845702,
+              0.2798418085648005,
+              0.033156062656846556,
+              0.9528090270326922
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "seed": "29",
+          "performance": {
+            "calls": 8,
+            "triangles": 57350,
+            "cpuSubmissionMs": [
+              0.30000001192092896,
+              0.19999998807907104,
+              0.30000001192092896
+            ],
+            "synchronousCompletionMs": [],
+            "pixelRatio": 1
+          },
+          "targetInstances": 11000,
+          "guard": {
+            "before": "a8a47407",
+            "after": "a8a47407",
+            "match": true,
+            "scope": "Non-target geometry identities/attribute versions, instance transforms, material identities/colors and lights; not a full per-vertex cryptographic proof."
+          },
+          "rawCoverage": {
+            "available": false,
+            "region": "lower half",
+            "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+            "fraction": null,
+            "nearBlackFraction": null,
+            "horizontalBands": null
+          },
+          "findings": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "label": "recipe-B-2-r-ground",
+      "frames": [
+        {
+          "view": "hero",
+          "camera": {
+            "position": [
+              0,
+              0.21041739075620725,
+              34
+            ],
+            "quaternion": [
+              0.024969864063644317,
+              0.01850322795785242,
+              -0.0004622464236711974,
+              0.9995168446664752
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "seed": "29",
+          "performance": {
+            "calls": 6,
+            "triangles": 12720,
+            "cpuSubmissionMs": [
+              0.5,
+              0.19999998807907104,
+              0.19999998807907104
+            ],
+            "synchronousCompletionMs": [
+              0.5,
+              0.19999998807907104,
+              0.19999998807907104
+            ],
+            "pixelRatio": 1
+          },
+          "targetInstances": 0,
+          "guard": {
+            "before": "a319ce",
+            "after": "a319ce",
+            "match": true,
+            "scope": "Declared ground/distant material and decorative grass targets only; existing geometry, primary trees, sky, lights and fog guarded."
+          },
+          "deterministic": true,
+          "rawCoverage": {
+            "available": true,
+            "region": "lower half",
+            "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+            "fraction": 0,
+            "nearBlackFraction": 0,
+            "horizontalBands": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "findings": [
+            {
+              "severity": "major",
+              "defect": "Insufficient projected lower-half vegetation coverage",
+              "measurements": {
+                "coverage": 0,
+                "threshold": 0.15
+              }
+            }
+          ],
+          "errors": []
+        },
+        {
+          "view": "inspection",
+          "camera": {
+            "position": [
+              34,
+              23,
+              44
+            ],
+            "quaternion": [
+              -0.11289019307845702,
+              0.2798418085648005,
+              0.033156062656846556,
+              0.9528090270326922
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "seed": "29",
+          "performance": {
+            "calls": 6,
+            "triangles": 12720,
+            "cpuSubmissionMs": [
+              0.29999998211860657,
+              0.20000001788139343,
+              0
+            ],
+            "synchronousCompletionMs": [
+              0.29999998211860657,
+              0.20000001788139343,
+              0
+            ],
+            "pixelRatio": 1
+          },
+          "targetInstances": 0,
+          "guard": {
+            "before": "a319ce",
+            "after": "a319ce",
+            "match": true,
+            "scope": "Declared ground/distant material and decorative grass targets only; existing geometry, primary trees, sky, lights and fog guarded."
+          },
+          "deterministic": true,
+          "rawCoverage": {
+            "available": true,
+            "region": "lower half",
+            "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+            "fraction": 0,
+            "nearBlackFraction": 0,
+            "horizontalBands": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ]
+          },
+          "findings": [
+            {
+              "severity": "major",
+              "defect": "Insufficient projected lower-half vegetation coverage",
+              "measurements": {
+                "coverage": 0,
+                "threshold": 0.15
+              }
+            }
+          ],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "label": "recipe-B-4-repaired-r-grass",
+      "frames": [
+        {
+          "view": "hero",
+          "camera": {
+            "position": [
+              0,
+              0.21041739075620725,
+              34
+            ],
+            "quaternion": [
+              0.024969864063644317,
+              0.01850322795785242,
+              -0.0004622464236711974,
+              0.9995168446664752
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "seed": "29",
+          "performance": {
+            "calls": 7,
+            "triangles": 180720,
+            "cpuSubmissionMs": [
+              0.4000000059604645,
+              0.19999998807907104,
+              0.20000001788139343
+            ],
+            "synchronousCompletionMs": [
+              0.4000000059604645,
+              0.19999998807907104,
+              0.20000001788139343
+            ],
+            "pixelRatio": 1
+          },
+          "targetInstances": 2800,
+          "guard": {
+            "before": "dac6faf2",
+            "after": "dac6faf2",
+            "match": true,
+            "scope": "Declared ground/distant material and decorative grass targets only; existing geometry, primary trees, sky, lights and fog guarded."
+          },
+          "deterministic": true,
+          "rawCoverage": {
+            "available": true,
+            "region": "lower half",
+            "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+            "fraction": 0.5051996527777778,
+            "nearBlackFraction": 0.0006357497551504321,
+            "horizontalBands": [
+              8532,
+              8002,
+              6005,
+              4715,
+              5479,
+              5416,
+              5183,
+              4176,
+              3174,
+              1830,
+              2878,
+              2809
+            ]
+          },
+          "findings": [],
+          "errors": []
+        },
+        {
+          "view": "inspection",
+          "camera": {
+            "position": [
+              34,
+              23,
+              44
+            ],
+            "quaternion": [
+              -0.11289019307845702,
+              0.2798418085648005,
+              0.033156062656846556,
+              0.9528090270326922
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "seed": "29",
+          "performance": {
+            "calls": 7,
+            "triangles": 180720,
+            "cpuSubmissionMs": [
+              0.4000000059604645,
+              0.29999998211860657,
+              0.09999999403953552
+            ],
+            "synchronousCompletionMs": [
+              0.4000000059604645,
+              0.29999998211860657,
+              0.09999999403953552
+            ],
+            "pixelRatio": 1
+          },
+          "targetInstances": 2800,
+          "guard": {
+            "before": "dac6faf2",
+            "after": "dac6faf2",
+            "match": true,
+            "scope": "Declared ground/distant material and decorative grass targets only; existing geometry, primary trees, sky, lights and fog guarded."
+          },
+          "deterministic": true,
+          "rawCoverage": {
+            "available": true,
+            "region": "lower half",
+            "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+            "fraction": 0.25471354166666665,
+            "nearBlackFraction": 0.00034079678287836964,
+            "horizontalBands": [
+              3239,
+              2617,
+              2517,
+              2329,
+              2307,
+              2026,
+              2172,
+              2144,
+              2809,
+              2756,
+              2401,
+              2026
+            ]
+          },
+          "findings": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "label": "recipe-C-2-r-full",
+      "frames": [
+        {
+          "view": "hero",
+          "camera": {
+            "position": [
+              0,
+              0.21041739075620725,
+              34
+            ],
+            "quaternion": [
+              0.024969864063644317,
+              0.01850322795785242,
+              -0.0004622464236711974,
+              0.9995168446664752
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "seed": "29",
+          "performance": {
+            "calls": 9,
+            "triangles": 201060,
+            "cpuSubmissionMs": [
+              0.5,
+              0.19999998807907104,
+              0.19999998807907104
+            ],
+            "synchronousCompletionMs": [
+              0.6000000238418579,
+              0.19999998807907104,
+              0.19999998807907104
+            ],
+            "pixelRatio": 1
+          },
+          "targetInstances": 3055,
+          "guard": {
+            "before": "e6208538",
+            "after": "e6208538",
+            "match": true,
+            "scope": "Declared ground/distant material, decorative grass and added rock targets only; existing geometry, primary trees, sky, lights and fog guarded."
+          },
+          "deterministic": true,
+          "rawCoverage": {
+            "available": true,
+            "region": "lower half",
+            "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+            "fraction": 0.6170399305555555,
+            "nearBlackFraction": 0.0005205182673775726,
+            "horizontalBands": [
+              8776,
+              8235,
+              6917,
+              5971,
+              6433,
+              5553,
+              5183,
+              4176,
+              4181,
+              4840,
+              5608,
+              5210
+            ]
+          },
+          "findings": [],
+          "errors": []
+        },
+        {
+          "view": "inspection",
+          "camera": {
+            "position": [
+              34,
+              23,
+              44
+            ],
+            "quaternion": [
+              -0.11289019307845702,
+              0.2798418085648005,
+              0.033156062656846556,
+              0.9528090270326922
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "seed": "29",
+          "performance": {
+            "calls": 9,
+            "triangles": 201060,
+            "cpuSubmissionMs": [
+              0.5,
+              0.19999998807907104,
+              0.19999998807907104
+            ],
+            "synchronousCompletionMs": [
+              0.5,
+              0.19999998807907104,
+              0.19999998807907104
+            ],
+            "pixelRatio": 1
+          },
+          "targetInstances": 3055,
+          "guard": {
+            "before": "e6208538",
+            "after": "e6208538",
+            "match": true,
+            "scope": "Declared ground/distant material, decorative grass and added rock targets only; existing geometry, primary trees, sky, lights and fog guarded."
+          },
+          "deterministic": true,
+          "rawCoverage": {
+            "available": true,
+            "region": "lower half",
+            "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+            "fraction": 0.27697048611111114,
+            "nearBlackFraction": 0.0003134108502836368,
+            "horizontalBands": [
+              3261,
+              3544,
+              2851,
+              2487,
+              2307,
+              2940,
+              2381,
+              2144,
+              2809,
+              2756,
+              2401,
+              2026
+            ]
+          },
+          "findings": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "label": "recipe-robustness-41",
+      "frames": [
+        {
+          "view": "hero",
+          "camera": {
+            "position": [
+              0,
+              1.1788332948589335,
+              34
+            ],
+            "quaternion": [
+              0.015611043329352575,
+              0.018506744686680933,
+              -0.0002889943225312114,
+              0.9997068131255046
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "seed": "41",
+          "performance": {
+            "calls": 9,
+            "triangles": 201070,
+            "cpuSubmissionMs": [
+              0.5999999940395355,
+              0.20000001788139343,
+              0.30000001192092896
+            ],
+            "synchronousCompletionMs": [
+              0.5999999940395355,
+              0.30000001192092896,
+              0.30000001192092896
+            ],
+            "pixelRatio": 1
+          },
+          "targetInstances": 3055,
+          "guard": {
+            "before": "fa0d3e5a",
+            "after": "fa0d3e5a",
+            "match": true,
+            "scope": "Declared ground/distant material, decorative grass and added rock targets only; existing geometry, primary trees, sky, lights and fog guarded."
+          },
+          "deterministic": true,
+          "rawCoverage": {
+            "available": true,
+            "region": "lower half",
+            "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+            "fraction": 0.6069444444444444,
+            "nearBlackFraction": 0,
+            "horizontalBands": [
+              7243,
+              6936,
+              6594,
+              6184,
+              5578,
+              4745,
+              5672,
+              5526,
+              6172,
+              5662,
+              4679,
+              4929
+            ]
+          },
+          "findings": [],
+          "errors": []
+        },
+        {
+          "view": "inspection",
+          "camera": {
+            "position": [
+              34,
+              23,
+              44
+            ],
+            "quaternion": [
+              -0.11289019307845702,
+              0.2798418085648005,
+              0.033156062656846556,
+              0.9528090270326922
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "seed": "41",
+          "performance": {
+            "calls": 9,
+            "triangles": 201070,
+            "cpuSubmissionMs": [
+              0.5,
+              0.19999998807907104,
+              0.29999998211860657
+            ],
+            "synchronousCompletionMs": [
+              0.5,
+              0.30000001192092896,
+              2.199999988079071
+            ],
+            "pixelRatio": 1
+          },
+          "targetInstances": 3055,
+          "guard": {
+            "before": "fa0d3e5a",
+            "after": "fa0d3e5a",
+            "match": true,
+            "scope": "Declared ground/distant material, decorative grass and added rock targets only; existing geometry, primary trees, sky, lights and fog guarded."
+          },
+          "deterministic": true,
+          "rawCoverage": {
+            "available": true,
+            "region": "lower half",
+            "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+            "fraction": 0.31480902777777775,
+            "nearBlackFraction": 0.0006342028346109303,
+            "horizontalBands": [
+              3810,
+              4138,
+              4264,
+              3142,
+              2726,
+              2981,
+              2412,
+              2613,
+              2850,
+              2836,
+              2290,
+              2204
+            ]
+          },
+          "findings": [],
+          "errors": []
+        }
+      ]
+    },
+    {
+      "label": "recipe-robustness-73",
+      "frames": [
+        {
+          "view": "hero",
+          "camera": {
+            "position": [
+              0,
+              3.337687396021777,
+              34
+            ],
+            "quaternion": [
+              -0.0016502412547528434,
+              0.018508975750738472,
+              0.000030549550300308646,
+              0.9998273318864535
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "seed": "73",
+          "performance": {
+            "calls": 9,
+            "triangles": 201070,
+            "cpuSubmissionMs": [
+              0.5999999940395355,
+              0.19999998807907104,
+              0.30000001192092896
+            ],
+            "synchronousCompletionMs": [
+              0.5999999940395355,
+              0.29999998211860657,
+              0.30000001192092896
+            ],
+            "pixelRatio": 1
+          },
+          "targetInstances": 3055,
+          "guard": {
+            "before": "254cb38e",
+            "after": "254cb38e",
+            "match": true,
+            "scope": "Declared ground/distant material, decorative grass and added rock targets only; existing geometry, primary trees, sky, lights and fog guarded."
+          },
+          "deterministic": true,
+          "rawCoverage": {
+            "available": true,
+            "region": "lower half",
+            "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+            "fraction": 0.5916232638888889,
+            "nearBlackFraction": 0.0003961558212897073,
+            "horizontalBands": [
+              7960,
+              7435,
+              7639,
+              6862,
+              5908,
+              5164,
+              4905,
+              5306,
+              4467,
+              4484,
+              3764,
+              4261
+            ]
+          },
+          "findings": [],
+          "errors": []
+        },
+        {
+          "view": "inspection",
+          "camera": {
+            "position": [
+              34,
+              23,
+              44
+            ],
+            "quaternion": [
+              -0.11289019307845702,
+              0.2798418085648005,
+              0.033156062656846556,
+              0.9528090270326922
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "seed": "73",
+          "performance": {
+            "calls": 9,
+            "triangles": 201070,
+            "cpuSubmissionMs": [
+              0.5,
+              0.20000001788139343,
+              0.29999998211860657
+            ],
+            "synchronousCompletionMs": [
+              0.5,
+              0.20000001788139343,
+              0.29999998211860657
+            ],
+            "pixelRatio": 1
+          },
+          "targetInstances": 3055,
+          "guard": {
+            "before": "254cb38e",
+            "after": "254cb38e",
+            "match": true,
+            "scope": "Declared ground/distant material, decorative grass and added rock targets only; existing geometry, primary trees, sky, lights and fog guarded."
+          },
+          "deterministic": true,
+          "rawCoverage": {
+            "available": true,
+            "region": "lower half",
+            "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+            "fraction": 0.2830729166666667,
+            "nearBlackFraction": 0.00024532352039251763,
+            "horizontalBands": [
+              3849,
+              3898,
+              4076,
+              3796,
+              2156,
+              2027,
+              2158,
+              2126,
+              1976,
+              2188,
+              2247,
+              2113
+            ]
+          },
+          "findings": [],
+          "errors": []
+        }
+      ]
+    }
+  ],
+  "regression": [
+    {
+      "biome": "savanna",
+      "view": "hero",
+      "before": "artifacts/visual-quality/recipe-A1-baseline/savanna-hero.png",
+      "after": "artifacts/visual-quality/recipe-retained-defaults/savanna-hero.png",
+      "byteIdentical": true,
+      "sha256": "529c1d99cbad9246740b0091b415930a7215849f51a2223e2b78d26fbf0f3f31"
+    },
+    {
+      "biome": "savanna",
+      "view": "inspection",
+      "before": "artifacts/visual-quality/recipe-A1-baseline/savanna-inspection.png",
+      "after": "artifacts/visual-quality/recipe-retained-defaults/savanna-inspection.png",
+      "byteIdentical": true,
+      "sha256": "719c14aa542ff38aace76c41d023ac748d5140674599501e61b6cd8b4f2afdfd"
+    },
+    {
+      "biome": "puget",
+      "view": "hero",
+      "before": "artifacts/visual-quality/lab-initial/puget-hero.png",
+      "after": "artifacts/visual-quality/recipe-retained-defaults/puget-hero.png",
+      "byteIdentical": true,
+      "sha256": "e31999914a81216df5905eb5069fe4b9b33713101c2e4c494aaaf06ce9efd929"
+    },
+    {
+      "biome": "rainforest",
+      "view": "hero",
+      "before": "artifacts/visual-quality/lab-initial/rainforest-hero.png",
+      "after": "artifacts/visual-quality/recipe-retained-defaults/rainforest-hero.png",
+      "byteIdentical": true,
+      "sha256": "fe0d672f201af3036f258f60bb78fbe57e4d20cd398483e11d842a0a854a1af7"
+    },
+    {
+      "biome": "rainforest",
+      "view": "inspection",
+      "before": "artifacts/visual-quality/lab-initial/rainforest-inspection.png",
+      "after": "artifacts/visual-quality/recipe-retained-defaults/rainforest-inspection.png",
+      "byteIdentical": true,
+      "sha256": "282d449d02d8565c0afa6c06d0cba33193b481c530ebc63448b84022168ea870"
+    }
+  ],
+  "exactSeed29Repeat": true,
+  "matchedCameras": true,
+  "limitations": [
+    "Metrics do not approve aesthetics.",
+    "References differ in composition; edge density is descriptive.",
+    "Geometry mask excludes the painted substrate; inspect the surface rather than interpreting coverage alone.",
+    "Wall-time submission/gl.finish samples are not GPU timers or mobile frame rates.",
+    "No MSAA: alpha-to-coverage was rejected; hard edges/aliasing remain possible."
+  ]
+}

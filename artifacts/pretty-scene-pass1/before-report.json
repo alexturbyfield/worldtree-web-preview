@@ -1,0 +1,136 @@
+[
+  {
+    "name": "savanna-before",
+    "url": "http://localhost:3001/explore?lat=-2.3&lon=35.2&habitat=grassland&conditional=1&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human&composition=C&groundLighting=B&illumination=on&pretty=off",
+    "camera": [
+      -0.0008636562301815864,
+      5.497448580548599,
+      33.976681281785154
+    ],
+    "direction": [
+      -0.036993397489654564,
+      -0.0314107590781284,
+      -0.9988217322206744
+    ],
+    "width": 819,
+    "height": 513,
+    "pixelRatio": 0.65,
+    "calls": 8,
+    "triangles": 63750,
+    "renderSubmissionMs": [
+      0.3999999910593033,
+      0.30000001192092896,
+      0.29999999701976776
+    ],
+    "shadowSize": [
+      1024,
+      1024
+    ],
+    "instances": [
+      {
+        "name": "biome-grass",
+        "count": 2800
+      },
+      {
+        "name": "biome-shrub",
+        "count": 35
+      },
+      {
+        "name": "biome-understory",
+        "count": 0
+      }
+    ],
+    "errors": []
+  },
+  {
+    "name": "rainforest-before",
+    "url": "http://localhost:3001/explore?lat=-3.12&lon=-60.02&habitat=forest&rainforest=v5&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human&composition=C&groundLighting=B&illumination=on&pretty=off",
+    "camera": [
+      6.661338147750939e-16,
+      0.1252664940564987,
+      29
+    ],
+    "direction": [
+      -0.027684362931449883,
+      0.24569134329843836,
+      -0.9689527026007455
+    ],
+    "width": 819,
+    "height": 513,
+    "pixelRatio": 0.65,
+    "calls": 26,
+    "triangles": 1450298,
+    "renderSubmissionMs": [
+      3,
+      1.5,
+      0.7000000029802322
+    ],
+    "shadowSize": [
+      1024,
+      1024
+    ],
+    "instances": [
+      {
+        "name": "rainforest-v4-seedlings",
+        "count": 180
+      },
+      {
+        "name": "rainforest-v4-ferns",
+        "count": 150
+      },
+      {
+        "name": "rainforest-v4-palms",
+        "count": 90
+      },
+      {
+        "name": "rainforest-v4-shrubs",
+        "count": 120
+      },
+      {
+        "name": "rainforest-v4-lianas",
+        "count": 72
+      },
+      {
+        "name": "rainforest-v4-epiphytes",
+        "count": 100
+      },
+      {
+        "name": "rainforest-v5-forest-wall",
+        "count": 108
+      },
+      {
+        "name": "rainforest-v5-lower-understory",
+        "count": 3
+      },
+      {
+        "name": "rainforest-v5-outer-trunks",
+        "count": 32
+      },
+      {
+        "name": "rainforest-v5-outer-crowns",
+        "count": 192
+      },
+      {
+        "name": "rainforest-v5-ferns",
+        "count": 220
+      },
+      {
+        "name": "rainforest-v5-palms",
+        "count": 120
+      },
+      {
+        "name": "rainforest-v5-seedlings",
+        "count": 240
+      },
+      {
+        "name": "rainforest-v5-foliage-cards",
+        "count": 850
+      },
+      {
+        "name": "rainforest-v5-floor-decals",
+        "count": 520
+      }
+    ],
+    "errors": []
+  }
+]

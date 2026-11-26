@@ -1,0 +1,29 @@
+import type {StudioStudy} from '../studio/groups';
+import type {Point,Segment} from './tree';
+import type {SceneRecipe} from './recipe';
+import {speciesV1Study,type SpeciesDesign} from '../studio/species-v1';
+import {librarySettings} from './library';
+import profiles from '../../../visual-lab/acacia-architectures.json';
+/** Replace only a selected visual model. Ecological identity, location and individual seeds are retained. */
+export function treeExperiment(recipe:SceneRecipe,requested:string|null,heroId?:string){
+ if(!requested||!['baseline','A','B','C','C2','C3'].includes(requested))return {recipe};
+ const hero=recipe.trees.find(t=>t.id===heroId)??recipe.trees.find(t=>t.model.presetId==='acacia');if(!hero)return {recipe};
+ if(requested==='baseline')return {recipe,hero};
+ const p=profiles.profiles[(requested==='C3'?'C':requested) as keyof typeof profiles.profiles],q=librarySettings('acacia',hero.seed,hero.appearanceSeed??recipe.appearanceSeed);
+ const design:SpeciesDesign={name:'Umbrella visual study',scientificName:'Visual profile, not occurrence data',height:p.height,radius:p.radius,trunk:p.trunk.radius,base:p.trunk.forkHeight,branches:p.scaffold.count,form:'emergent',bark:'#81705a',conifer:false,visualGrammar:p};
+ let studio=speciesV1Study('acacia',q,()=>[],design);if(requested==='C3')studio=withUpperClump(studio);const replacement={...hero,model:studio.model,studio};
+ return {recipe:{...recipe,trees:recipe.trees.map(t=>{if(t.id===hero.id)return replacement;if(requested!=='C3'||t.model.presetId!=='acacia')return t;const scale=Math.min(1,Math.max(.3,t.model.dimensions.height/9.73)),profile={...p,height:p.height*scale,radius:p.radius*scale,trunk:{...p.trunk,radius:p.trunk.radius*scale,leaderSpread:p.trunk.leaderSpread*scale},foliage:{...p.foliage,width:p.foliage.width*scale,length:p.foliage.length*scale}};const background=speciesV1Study('acacia',librarySettings('acacia',t.seed,t.appearanceSeed??recipe.appearanceSeed),()=>[],{...design,height:profile.height,radius:profile.radius,trunk:profile.trunk.radius,visualGrammar:profile});return {...t,model:background.model,studio:background};})},hero:replacement};
+}
+
+export const treeStudyRendering=profiles.rendering;
+
+/** Exactly one extra living clump; the existing sparse C crown and its source seed remain unchanged. */
+function withUpperClump(study:StudioStudy):StudioStudy{
+ const parent=[...study.groups].filter(g=>g.anchor[1]>study.model.dimensions.height*.72).sort((a,b)=>Math.hypot(a.anchor[0],a.anchor[2])-Math.hypot(b.anchor[0],b.anchor[2]))[0];if(!parent)return study;
+ const anchor:Point=[parent.anchor[0]*.55,study.model.dimensions.height+.2,parent.anchor[2]*.65],pathId=Math.max(...study.segments.map(s=>s.pathId??0))+1,id=study.groups.length,first=study.segments.length,wood:Segment[]=[],direction=anchor.map((v,k)=>v-parent.anchor[k]) as Point,length=Math.hypot(...direction),tangent=direction.map(v=>v/length) as Point;
+ for(let i=0;i<4;i++){const at=(t:number)=>parent.anchor.map((v,k)=>v+(anchor[k]-v)*t) as Point;wood.push({a:at(i/4),b:at((i+1)/4),r0:.035*(1-i*.19),r1:.035*(1-(i+1)*.19),depth:2,pathId,parentPathId:parent.branchId,tangentA:tangent,tangentB:tangent,capStart:false,capEnd:i===3,color:'#81705a'});}
+ const group={...parent,id,anchor,center:anchor,radii:[1.3,.5,1.1] as Point,branchId:pathId,parentBranchId:parent.branchId,branchIndex:first+3,axis:anchor.map((v,k)=>v-parent.anchor[k]) as Point};
+ const sprays=study.fronds.filter(f=>f.groupId===parent.id).map((f,i)=>({...f,groupId:id,position:f.position.map((v,k)=>anchor[k]+(v-parent.anchor[k])*.8) as Point,width:f.width*.8,length:f.length*.8,essential:i===0}));
+ const segments=[...study.segments,...wood],model={...study.model,segments,dimensions:{...study.model.dimensions,height:anchor[1]+.7}};
+ return {...study,model,segments,groups:[...study.groups,group],fronds:[...study.fronds,...sprays]};
+}

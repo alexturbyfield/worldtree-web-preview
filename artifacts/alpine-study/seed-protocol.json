@@ -1,0 +1,16 @@
+{
+  "trainingSeeds": [
+    "29",
+    "41",
+    "73"
+  ],
+  "holdouts": {
+    "valley": "101",
+    "overlook": "131",
+    "treeline": "167"
+  },
+  "holdoutStatus": "Generated once after final freeze; source hashes unchanged afterward",
+  "maxCorrectionRoundsPerFamily": 3,
+  "stopAfterConsecutiveFailures": 2,
+  "freezeRequiredBeforeHoldout": true
+}

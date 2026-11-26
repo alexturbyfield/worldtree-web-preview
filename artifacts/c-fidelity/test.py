@@ -1,0 +1,4 @@
+from pathlib import Path
+p=Path('tests/tree-growth-profile.test.ts');s=p.read_text();s=s.replace("const p=profiles.profiles.A as TreeGrowthProfile,a=", "for(const p of [profiles.profiles.A,profiles.profiles.C2] as TreeGrowthProfile[]){const a=").replace("'Leaf guide must be attached to an owned wood path');\n }\n});", "'Leaf guide must be attached to an owned wood path');\n }}\n});")
+s+="\ntest('C2 retains the preferred fork while adding branch-owned vertical canopy support',()=>{const c=profiles.profiles.C,c2=profiles.profiles.C2;assert.deepEqual(c2.trunk,c.trunk);assert.equal(c2.height,c.height);assert.equal(c2.radius,c.radius);const base=growthProfileStudy('acacia',c,q),next=growthProfileStudy('acacia',c2,q);assert.ok(next.groups.length>base.groups.length);assert.ok(next.model.dimensions.height>base.model.dimensions.height);});\n"
+p.write_text(s)

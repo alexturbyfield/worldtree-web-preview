@@ -18,7 +18,7 @@ export const studioDefaults:StudioSettings={size:1,density:.76,overlap:.72,detai
 export const studioKinds:StudioKind[]=['broadleaf','flower','conifer'];
 export interface FoliageGroup {branchId?:number;parentBranchId?:number;zone?:OakFoliageZone;id:number;anchor:Point;center:Point;radii:Point;branchIndex:number;axis:Point}
 export interface StudioFrond {spine?:[Point,Point,Point];essential?:boolean;position:Point;rotation:[number,number,number,number];width:number;length:number;curve:number;droop:number;tile:number;color:string;normal:Point;interior:number;groupId:number}
-export interface StudioStudy {kind:StudioKind;model:PaintedTree;groups:FoliageGroup[];fronds:StudioFrond[];segments:Segment[];scale:number;offset:Point}
+export interface StudioStudy {lod?:{groupStride:number;essentialSprays:number};kind:StudioKind;model:PaintedTree;groups:FoliageGroup[];fronds:StudioFrond[];segments:Segment[];scale:number;offset:Point}
 export function parseStudio(p:Pick<URLSearchParams,'get'>):StudioSettings{
   const q={...studioDefaults};for(const key of ['size','density','overlap','detail','colorVariation'] as const){if(p.get(key)!==null)q[key]=Number(p.get(key));const min=key==='size'?.5:0,max=key==='size'?1.8:1;if(!Number.isFinite(q[key])||q[key]<min||q[key]>max)throw Error('Studio controls are outside their supported range.');}
   q.structure=(p.get('structure')??q.structure).slice(0,64);q.appearance=(p.get('appearance')??q.appearance).slice(0,64);

@@ -1,0 +1,25 @@
+{
+  "phase": "2-3",
+  "independentDiagnosis": "01-image-diagnosis.json; unchanged after freezing",
+  "calibration": [
+    {"criterion":"Excessive visual noise","diagnosisCoverage":"identified","evidence":"D1 describes equal-attention branching marks; D3 describes repetitive radial spikes.","refinement":"Measure thumbnail readability and localized edge energy, not just vegetation coverage."},
+    {"criterion":"Weak value hierarchy","diagnosisCoverage":"identified","evidence":"D2 explicitly contrasts connected light/shadow bands with flat ochre plus dark outlines."},
+    {"criterion":"Poor ground-to-grass integration","diagnosisCoverage":"identified","evidence":"D4 identifies the exclusion-mask stage and mismatched plant bases; proposes a shared field."},
+    {"criterion":"Insufficient rolling visual forms","diagnosisCoverage":"partial","evidence":"D1/D3 identify curved groups and directional flow, but do not explicitly diagnose the absence of broad height envelopes.","missedWhy":"The first reading emphasized silhouette rhythm and tonal flow more than the distinction between apparent rolling color and actual low canopy relief.","refinement":"Test real intermediate canopy relief/parallax separately from material-only suggestions of relief."},
+    {"criterion":"Weak painterly coherence","diagnosisCoverage":"identified","evidence":"D5 compares soft sky decisions against hard, equally detailed terrestrial marks."}
+  ],
+  "additionalLimits": "The diagnosis was not formally blinded because the full prompt arrived together. The freeze demonstrates ordering of saved analysis and calibration, not absence of prior exposure.",
+  "grammar": [
+    {"category":"Large-scale value masses","relationship":"A few connected lit and shaded regions should explain the field before individual plants can be seen.","observableGoal":"At 160x90, the land remains legible as a framed opening and broad meadow masses; dark marks do not fragment it into static."},
+    {"category":"Mid-frequency vegetation groupings","relationship":"Clumps overlap into elongated, irregular sweeps; their height and lean vary more slowly than their edge detail.","observableGoal":"At 640x360, groups have coherent crests and gaps without identical round pillows, planting rows or isolated debris."},
+    {"category":"Fine detail","relationship":"Fine blades support close silhouettes, selected crests and focal accents; their contrast and prevalence diminish with distance.","observableGoal":"A detail crop can reveal grass while the thumbnail does not depend on resolving those blades."},
+    {"category":"Ground/vegetation palette","relationship":"Substrate, plant bases and short growth sample a common world-space palette; tips separate gently through value and light.","observableGoal":"Sparse areas remain grassland rather than an unrelated brown material surrounded by objects."},
+    {"category":"Soil transitions","relationship":"Exposed earth, shortened growth and mature grass overlap through gradual spatial transitions rather than a binary clearing mask.","observableGoal":"The encounter opening is readable without an obvious oval exclusion boundary or black outlines at every root."},
+    {"category":"Lighting/shadows","relationship":"Keep the existing physical sun and tree shadows; coordinate supplementary broad world-space light variation across ground and grass.","observableGoal":"Warm middle-distance accents and cooler framing remain textured and readable, without global yellow tint or black plant bases."},
+    {"category":"Depth","relationship":"Near silhouettes receive most geometric detail; middle distance is grouped; the far field becomes quiet color and low-contrast shape.","observableGoal":"Detail/contrast step down continuously, without visible distance bands or equally sharp marks at the horizon."},
+    {"category":"Natural silhouette variation","relationship":"Related directional flow unifies groups while irregular crest height and local edge breakup prevent a repeated template.","observableGoal":"Avoid radial agave-like tufts, hedge pillows, scalloped rows and mechanically identical wave crests."},
+    {"category":"Ecological plausibility","relationship":"Keep an open, dry-grass savanna with scattered existing acacias; variation reflects patches and gradual conditions rather than arbitrary decoration.","observableGoal":"No new species, flowers, paths, props or dense forest are introduced to disguise grass failures."},
+    {"category":"Painterly cohesion","relationship":"The land should share the sky's broad shape decisions and selective edges while retaining different material character.","observableGoal":"Compare reference-calibrated edge/contrast at several scales; neither maximal sharpness nor minimal detail is an aesthetic objective by itself."}
+  ],
+  "reuse": "Apply these relationships to future biomes by changing ecological forms and palette, not by copying fixed density or color constants."
+}

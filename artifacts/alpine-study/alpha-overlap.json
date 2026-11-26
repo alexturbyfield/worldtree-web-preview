@@ -1,0 +1,28 @@
+{
+  "scene": "treeline29",
+  "resolution": [
+    320,
+    180
+  ],
+  "meanSurvivingLayersPerOccupiedPixel": 1.4311632870864461,
+  "wholeSprayLayersPerScreenPixel": 0.5383506944444445,
+  "alphaRejectedFraction": 0.9135089812635041,
+  "coverage": 0.03253472222222222,
+  "peakLayers": 6,
+  "saturatedPixels": 0,
+  "passes": [
+    {
+      "sum": 2682,
+      "occupied": 1874,
+      "peak": 6,
+      "saturated": 0
+    },
+    {
+      "sum": 31009,
+      "occupied": 5498,
+      "peak": 38,
+      "saturated": 0
+    }
+  ],
+  "method": "Depth-disabled additive8-bit raster proxy of existing foliage shader metric branch. Core/wood/terrain occlusion excluded; upper-bound overlap indicator, not hardware counters or actual normal-depth fragment cost."
+}

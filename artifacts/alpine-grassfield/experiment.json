@@ -1,0 +1,394 @@
+{
+  "id": "alpine-grassfield-1",
+  "status": "awaiting-art-direction; rejected-for-performance-promotion",
+  "humanApproval": null,
+  "defaultScene": "Previous alpine scene retained; new work requires meadowField=brush.",
+  "scope": "Ground-first alpine grassland, shared savanna brush geometry and atlas, regional flower illustrations; no tree/camera/terrain/light/sky change.",
+  "loadedKnowledge": [
+    "AGENTS.md adaptive protocol",
+    "prototype-fast",
+    "visual-review",
+    "mobile-budget",
+    "imagegen",
+    "retained savanna hybrid/tall/cohesion evidence",
+    "conifer-flower experiment",
+    "alpine supplied concept actually inspected"
+  ],
+  "visualCritiqueFirst": [
+    {
+      "severity": "major",
+      "observation": "Thin isolated grass strips compete with a smooth undetailed ground surface."
+    },
+    {
+      "severity": "major",
+      "observation": "Foreground lacks continuous soft vegetation masses and parallax."
+    },
+    {
+      "severity": "major",
+      "observation": "Regional flower fields should read as coherent botanical shapes, not repeated polygonal spikes."
+    }
+  ],
+  "artisticHypothesis": "Transfer broad ground values, root-matched painterly tuft cards and selected dimensional accents from savanna to a green alpine meadow, with clustered regional flower cards.",
+  "techniques": {
+    "ground": "New generated meadow albedo; mirrored wrap, sRGB, mipmaps, anisotropy8, world6m scale and macro colours.",
+    "grass": "Shared savanna brushGeometry(true,true,1.45) and original atlas, recoloured by the meadow pigment field. Existing low clumps use shared curved reedGeometry.",
+    "flowers": "Four padded illustrated tiles: paintbrush, violet fleabane, white western-anemone and pale fleabane variation. Three semantic forms in one instanced batch.",
+    "rootMatching": "Ground and plants share macro pigments; projected ground detail fades above6\u201330cm; terrain normals transferred after rock clearance.",
+    "placement": "Inherited grass count, existing flower banks plus6 irregular middle-distance drifts, isolated flower marks removed; slope/rock/drainage checks remain."
+  },
+  "regionalEvidence": {
+    "queryLocation": [
+      51.17,
+      -116.18
+    ],
+    "scope": "Banff/Lake Louise regional inspiration, not point-occurrence survey or verified bloom calendar.",
+    "source": "https://parks.canada.ca/~/media/pn-np/ab/banff/natcul/pdfs/wildflowers_of_the_rocky_mountains.ashx",
+    "evidenceUsed": "Parks Canada search-indexed guide text names paintbrush, western anemone and fleabanes. Direct full PDF retrieval timed out. No external imagery downloaded.",
+    "repository": "No local alpine herb occurrence records identified; no new species occurrence claims inserted."
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decision": "revise",
+      "evidence": "Better ground/flower silhouettes; grass too low, reed accents nearly black.",
+      "image": "r1-hero.png"
+    },
+    {
+      "round": 2,
+      "decision": "revise",
+      "evidence": "Taller brush gives more body, but vertical streaks remain. Normals corrected for dimensional accents.",
+      "image": "r2-hero.png"
+    },
+    {
+      "round": 3,
+      "decision": "retain-visual-direction-only",
+      "evidence": "Root-normal transfer alone barely changes streaks. Isolated tuft/shader inspection confirms world-projected ground detail stretched up cards; height-fading that detail markedly improves integration.",
+      "images": [
+        "isolated-tuft.png",
+        "comparison.png"
+      ]
+    }
+  ],
+  "performanceInvestigation": {
+    "criticalFinding": "Initial matched5s software orbit6.02FPS before vs1.57FPS field despite lower triangles.",
+    "technicalCorrections": [
+      "Early alpha rejection",
+      "Move macro math from fragment to vertex",
+      "Bake slow-changing pigments using existing CPU vertex/instance-colour pass"
+    ],
+    "actualOutcome": "Macro baking preserves appearance but does not remove the slowdown. Fixed-camera ablations localize most added cost to the brush layer.",
+    "rejectedOptimizations": [
+      {
+        "test": "Atlas anisotropy8\u21922",
+        "result": "Only about8\u201310percent wall-time reduction; retained8 to preserve texture quality."
+      },
+      {
+        "test": "Front-to-back instance sorting",
+        "result": "Little benefit; not adopted."
+      },
+      {
+        "test": "Disable card shadow reception",
+        "result": "Small benefit; not adopted, preserve physical shadows."
+      }
+    ],
+    "classification": "High alpha-covered surface/fragment cost is the leading remaining hypothesis; exact hardware cause not certified. More overlapping large cards in this compact meadow cannot be justified solely by the savanna instance count.",
+    "rawEvidence": [
+      "rejected-fragment-field-benchmark.json",
+      "rejected-vertex-field-benchmark.json",
+      "benchmark.json",
+      "shadow-cost-ablation.json"
+    ]
+  },
+  "judgments": {
+    "betterVisualIntegrationThanBaseline": true,
+    "goodEnoughForProvisionalVisualDirection": true,
+    "goodEnoughForTechnicalPromotion": false,
+    "humanApproved": false,
+    "reviewer": "Implementing agent actual screenshot interpretation; no independent review claimed."
+  },
+  "validation": {
+    "invariants": {
+      "treeDataIdentical": true,
+      "rockDataIdentical": true,
+      "cameraIdentical": true,
+      "grassCountBefore": 3448,
+      "grassCountAfter": 3448,
+      "ecology": {
+        "tested": 4384,
+        "violations": 0
+      },
+      "grassClearance": {
+        "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+        "rocks": 15,
+        "checked": 3448,
+        "moved": 298,
+        "removed": 0,
+        "remainingOverlaps": 0
+      },
+      "flowerClearance": {
+        "method": "Transformed full vegetation bounds versus actual rock bounds in world XZ,8cm padding",
+        "rocks": 15,
+        "checked": 936,
+        "moved": 39,
+        "removed": 0,
+        "remainingOverlaps": 0
+      }
+    },
+    "regression": "regression.json; protected5views and alpine fallback2views pixel-identical. Later performance-only changes confined to alpine shader/helper paths.",
+    "priorVersionCases": [
+      "treeline29A",
+      "treeline41A",
+      "valley41A",
+      "treeline29B",
+      "frozen holdout9973A"
+    ],
+    "finalPerformanceVersion": "Hero/inspection29 captured after CPU baking. Other artistic/generalization captures are explicitly earlier shader versions; no final robust-generation approval claimed.",
+    "holdoutHandling": {
+      "version": "alpine-grassfield-baked-experimental-1",
+      "frozenAt": "2026-11-25T23:37:40.344895+00:00",
+      "sourceHashes": {
+        "src/lib/forest/alpine-adapter.ts": "7d090b8d3780c134c6ab72bdf996b623451d239ed57103c1400c38ccc816f3b5",
+        "src/lib/forest/alpine-recipe.ts": "a25851ef6d8cb4c6ddd230d20d5f6d1068dd9717c85e1938949055670c60593b",
+        "src/lib/forest/alpine-meadow.ts": "24f44f5b2dfa961eb57f533cec3bae687d17c9a503f87fb6c779fadb00cb180c",
+        "src/lib/forest/savanna-recipe.ts": "48c241b268d041363a626a3b6e031a1596e4942f261a9982b966b325487ec9e4",
+        "public/assets/alpine-meadow/meadow-ground-v1.png": "dda7595d93a385c227c03430b9338dcc7c3998fec539c5edd44dab16d3b47ed0",
+        "public/assets/alpine-meadow/regional-flowers-v1.png": "64ae16a63f0c871313699a546a17ba993254cbfed84b897ba92d7f53dcba14fa",
+        "public/assets/savanna-brush/painted-tufts-v1.webp": "b3be409e178c1a59036aa3b2ec29756a147ab8c403455883a4a975d7c0949a55"
+      },
+      "status": "rejected-for-promotion-major-performance-regression",
+      "priorHoldout": "9973 evaluated on pre-performance shader version; revealed and never treated as unseen again.",
+      "reservedFinalHoldout": "10007",
+      "finalHoldoutGenerated": false,
+      "reason": "No final candidate accepted; do not spend another holdout on a technically rejected representation."
+    },
+    "checks": [
+      "TypeScript passes",
+      "5 targeted existing alpine/conifer/flower tests passed",
+      "Capture page/shader errors none",
+      "Implemented plant ecological violations0, rock overlaps0"
+    ],
+    "mobileApproval": false
+  },
+  "performance": {
+    "before": {
+      "hero": {
+        "calls": 14,
+        "triangles": 641908,
+        "cpuSubmissionMs": [
+          0.699999988079071,
+          0.5,
+          0.30000001192092896
+        ],
+        "synchronousCompletionMs": [],
+        "pixelRatio": 1,
+        "textureObjects": 9,
+        "geometryObjects": 14,
+        "antialias": false
+      },
+      "inspection": {
+        "calls": 14,
+        "triangles": 548020,
+        "cpuSubmissionMs": [
+          2.300000011920929,
+          0.4000000059604645,
+          0.29999998211860657
+        ],
+        "synchronousCompletionMs": [],
+        "pixelRatio": 1,
+        "textureObjects": 9,
+        "geometryObjects": 16,
+        "antialias": false
+      }
+    },
+    "experimental": {
+      "hero": {
+        "calls": 12,
+        "triangles": 501884,
+        "cpuSubmissionMs": [
+          0.5999999940395355,
+          0.29999998211860657,
+          0.30000001192092896
+        ],
+        "synchronousCompletionMs": [],
+        "pixelRatio": 1,
+        "textureObjects": 11,
+        "geometryObjects": 12,
+        "antialias": false
+      },
+      "inspection": {
+        "calls": 12,
+        "triangles": 407996,
+        "cpuSubmissionMs": [
+          2.2999999821186066,
+          0.4000000059604645,
+          0.30000001192092896
+        ],
+        "synchronousCompletionMs": [],
+        "pixelRatio": 1,
+        "textureObjects": 11,
+        "geometryObjects": 14,
+        "antialias": false
+      }
+    },
+    "instances": [
+      {
+        "name": "alpine-rocks",
+        "count": 15,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.17241768532736437,
+          1.092762661590926
+        ]
+      },
+      {
+        "name": "alpine-grass",
+        "count": 3132,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.12082436680793762,
+          1.0533300638198853
+        ]
+      },
+      {
+        "name": "alpine-grass",
+        "count": 316,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.05613637715578079,
+          0.46644842624664307
+        ]
+      },
+      {
+        "name": "alpine-flowers",
+        "count": 936,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.4508103132247925,
+          1.3499672412872314
+        ]
+      },
+      {
+        "name": "alpine-conifer-cores",
+        "count": 22,
+        "visible": false,
+        "tiles": null,
+        "scaleRange": [
+          11.039716720581055,
+          18.983625411987305
+        ]
+      },
+      {
+        "name": "alpine-layered-treeline",
+        "count": 286,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          6.071770191192627,
+          18.995885848999023
+        ]
+      }
+    ],
+    "latestMatchedSoftwareOrbit": [
+      {
+        "variant": "before",
+        "benchmark": {
+          "durationMs": 5139.799999982119,
+          "frames": 32,
+          "fps": 6.225923187694332,
+          "medianFrameMs": 157.80000001192093,
+          "p95FrameMs": 175.10000002384186,
+          "meanRenderCpuMs": 0.5454545454545454,
+          "calls": 14,
+          "triangles": 641908,
+          "quality": "software economy",
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+          "viewport": "940 \u00d7 460",
+          "pixelRatio": 1,
+          "foliageCards": 14652,
+          "foliageMasses": 0,
+          "method": "5 second continuous orbit; browser frame intervals and CPU render submission time. Not a GPU timer or physical-device benchmark."
+        },
+        "framebuffer": [
+          640,
+          360
+        ]
+      },
+      {
+        "variant": "brush-field",
+        "benchmark": {
+          "durationMs": 5298.600000023842,
+          "frames": 10,
+          "fps": 1.8872909825151933,
+          "medianFrameMs": 527.3000000119209,
+          "p95FrameMs": 558.7999999821186,
+          "meanRenderCpuMs": 0.5727272738109935,
+          "calls": 12,
+          "triangles": 501884,
+          "quality": "software economy",
+          "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+          "viewport": "940 \u00d7 460",
+          "pixelRatio": 1,
+          "foliageCards": 14652,
+          "foliageMasses": 0,
+          "method": "5 second continuous orbit; browser frame intervals and CPU render submission time. Not a GPU timer or physical-device benchmark."
+        },
+        "framebuffer": [
+          640,
+          360
+        ]
+      }
+    ],
+    "extraTextureMiBEstimate": 16,
+    "hardwareAlphaOverdrawMeasured": false
+  },
+  "assets": [
+    {
+      "path": "public/assets/alpine-meadow/meadow-ground-v1.png",
+      "origin": "Built-in imagegen, independently generated textual brief",
+      "sourceFile": "exec-4c2de96a-819d-4fde-a069-599aa8f936ed.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "limitations": "Direct3x3 preview shows periodic forb motifs and imperfect source-edge matching. Runtime mirrored wrapping avoids hard boundary colour jumps; not certified seamless source artwork."
+    },
+    {
+      "path": "public/assets/alpine-meadow/regional-flowers-v1.png",
+      "origin": "Built-in imagegen, independently generated textual brief",
+      "sourceFile": "exec-e788bf93-59f6-4902-a6d7-582282b925a7.png",
+      "dimensions": [
+        1254,
+        1254
+      ],
+      "alpha": true,
+      "limitations": "Regional functional illustrations, not validated species models."
+    },
+    {
+      "path": "public/assets/savanna-brush/painted-tufts-v1.webp",
+      "origin": "Reused unchanged retained savanna asset; shader recolours via shared meadow field."
+    }
+  ],
+  "remainingDefects": [
+    {
+      "severity": "critical",
+      "defect": "Large software-rendering performance regression; new treatment remains opt-in and unpromoted."
+    },
+    {
+      "severity": "major",
+      "defect": "Close cards remain recognizable as layered painted surfaces."
+    },
+    {
+      "severity": "minor",
+      "defect": "Source meadow repeats some forb motifs; not mathematically edge-matched."
+    },
+    {
+      "severity": "major",
+      "defect": "Old sparse inspection/lateral terrain continuation remains."
+    }
+  ],
+  "recommendation": "Keep the painted meadow/flower look as the next art target, but retain old active scene. Next representation study should match projected coverage per area with fewer overlapping cards and distance-based representations; do not blindly transfer savanna counts."
+}

@@ -1,0 +1,348 @@
+{
+  "environment": "Headless Chromium; software rendering; pixel ratio 1; static 1024x1024 shadows. CPU submission samples are not GPU frame times or FPS.",
+  "rows": [
+    {
+      "biome": "savanna",
+      "view": "hero",
+      "before": {
+        "calls": 9,
+        "triangles": 30258,
+        "cpuSubmissionMs": [
+          0.7000000029802322,
+          0.5,
+          0.20000000298023224
+        ],
+        "pixelRatio": 1
+      },
+      "retained": {
+        "calls": 8,
+        "triangles": 57350,
+        "cpuSubmissionMs": [
+          1,
+          0.3999999910593033,
+          0.4000000059604645
+        ],
+        "pixelRatio": 1
+      },
+      "historical": {
+        "calls": 8,
+        "triangles": 63750,
+        "cpuSubmissionMs": [
+          0.4000000059604645,
+          0.29999999701976776,
+          0.29999999701976776
+        ],
+        "pixelRatio": 1
+      },
+      "triangleChangePercent": 89.53665146407562,
+      "visibleDecorativeInstances": 11035,
+      "allocatedDecorativeInstances": 13835,
+      "tier1Coverage": {
+        "available": true,
+        "region": "lower half",
+        "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+        "fraction": 0.7334375,
+        "nearBlackFraction": 0.0033731004118733136,
+        "horizontalBands": [
+          9137,
+          8646,
+          8404,
+          7626,
+          6452,
+          5230,
+          4451,
+          4150,
+          5745,
+          7297,
+          8388,
+          8966
+        ]
+      },
+      "findings": []
+    },
+    {
+      "biome": "savanna",
+      "view": "inspection",
+      "before": {
+        "calls": 9,
+        "triangles": 30258,
+        "cpuSubmissionMs": [
+          0.5999999940395355,
+          0.20000000298023224,
+          0.10000000894069672
+        ],
+        "pixelRatio": 1
+      },
+      "retained": {
+        "calls": 8,
+        "triangles": 57350,
+        "cpuSubmissionMs": [
+          0.5,
+          0.09999999403953552,
+          0.20000000298023224
+        ],
+        "pixelRatio": 1
+      },
+      "historical": {
+        "calls": 8,
+        "triangles": 63750,
+        "cpuSubmissionMs": [
+          0.3999999910593033,
+          0.29999999701976776,
+          0.20000000298023224
+        ],
+        "pixelRatio": 1
+      },
+      "triangleChangePercent": 89.53665146407562,
+      "visibleDecorativeInstances": 11035,
+      "allocatedDecorativeInstances": 13835,
+      "tier1Coverage": {
+        "available": true,
+        "region": "lower half",
+        "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+        "fraction": 0.6689930555555555,
+        "nearBlackFraction": 0.009121814501479213,
+        "horizontalBands": [
+          6612,
+          7677,
+          8304,
+          7284,
+          5221,
+          4502,
+          4791,
+          5813,
+          6909,
+          6820,
+          6703,
+          6432
+        ]
+      },
+      "findings": []
+    },
+    {
+      "biome": "rainforest",
+      "view": "hero",
+      "before": {
+        "calls": 26,
+        "triangles": 1450298,
+        "cpuSubmissionMs": [
+          3.4000000059604645,
+          2,
+          1.8999999910593033
+        ],
+        "pixelRatio": 1
+      },
+      "retained": {
+        "calls": 26,
+        "triangles": 1450298,
+        "cpuSubmissionMs": [
+          3.3999999910593033,
+          1.9000000059604645,
+          0.7000000029802322
+        ],
+        "pixelRatio": 1
+      },
+      "historical": {
+        "calls": 26,
+        "triangles": 1450298,
+        "cpuSubmissionMs": [
+          2.800000011920929,
+          2.5999999940395355,
+          1.9000000059604645
+        ],
+        "pixelRatio": 1
+      },
+      "triangleChangePercent": 0,
+      "visibleDecorativeInstances": 2997,
+      "allocatedDecorativeInstances": 2997,
+      "tier1Coverage": {
+        "available": true,
+        "region": "lower half",
+        "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+        "fraction": 0.1864236111111111,
+        "nearBlackFraction": 0.4470106165021419,
+        "horizontalBands": [
+          3322,
+          3371,
+          2684,
+          1228,
+          935,
+          205,
+          122,
+          643,
+          1038,
+          1683,
+          2583,
+          3662
+        ]
+      },
+      "findings": [
+        {
+          "severity": "minor",
+          "defect": "Near-black pixels overlap vegetation silhouette mask",
+          "measurements": {
+            "fraction": 0.4470106165021419,
+            "threshold": 0.2,
+            "note": "Includes real shadows and possible occluders; visual review must distinguish legitimate shade."
+          }
+        },
+        {
+          "severity": "minor",
+          "defect": "Four-tile leaf atlas reuse still requires visual repetition review",
+          "measurements": {
+            "count": 520,
+            "tiles": 4,
+            "scaleRange": [
+              1,
+              1
+            ],
+            "albedoMask": {
+              "mode": "leaf-root-fragments",
+              "linearAlbedoCutoff": [
+                0.045,
+                0.095
+              ],
+              "instances": 520
+            }
+          }
+        }
+      ]
+    },
+    {
+      "biome": "rainforest",
+      "view": "inspection",
+      "before": {
+        "calls": 22,
+        "triangles": 1433698,
+        "cpuSubmissionMs": [
+          0.7000000029802322,
+          0.29999999701976776,
+          0.4000000059604645
+        ],
+        "pixelRatio": 1
+      },
+      "retained": {
+        "calls": 22,
+        "triangles": 1433698,
+        "cpuSubmissionMs": [
+          0.5999999940395355,
+          0.29999999701976776,
+          0.30000001192092896
+        ],
+        "pixelRatio": 1
+      },
+      "historical": {
+        "calls": 22,
+        "triangles": 1433698,
+        "cpuSubmissionMs": [
+          0.5999999940395355,
+          0.20000000298023224,
+          0.20000000298023224
+        ],
+        "pixelRatio": 1
+      },
+      "triangleChangePercent": 0,
+      "visibleDecorativeInstances": 2662,
+      "allocatedDecorativeInstances": 2997,
+      "tier1Coverage": {
+        "available": true,
+        "region": "lower half",
+        "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+        "fraction": 0.15043402777777778,
+        "nearBlackFraction": 0.16006924408540105,
+        "horizontalBands": [
+          1086,
+          2620,
+          2305,
+          1205,
+          2145,
+          2200,
+          2121,
+          1474,
+          1254,
+          804,
+          116,
+          0
+        ]
+      },
+      "findings": [
+        {
+          "severity": "minor",
+          "defect": "Four-tile leaf atlas reuse still requires visual repetition review",
+          "measurements": {
+            "count": 520,
+            "tiles": 4,
+            "scaleRange": [
+              1,
+              1
+            ],
+            "albedoMask": {
+              "mode": "leaf-root-fragments",
+              "linearAlbedoCutoff": [
+                0.045,
+                0.095
+              ],
+              "instances": 520
+            }
+          }
+        },
+        {
+          "severity": "major",
+          "defect": "Forest continuation disabled at inspection height",
+          "measurements": {
+            "backdropVisible": false
+          }
+        }
+      ]
+    },
+    {
+      "biome": "puget",
+      "view": "hero",
+      "before": {
+        "calls": 19,
+        "triangles": 675089,
+        "cpuSubmissionMs": [
+          1.9000000059604645,
+          1.2999999970197678,
+          1.2999999970197678
+        ],
+        "pixelRatio": 1
+      },
+      "retained": {
+        "calls": 19,
+        "triangles": 675089,
+        "cpuSubmissionMs": [
+          0.6000000089406967,
+          0.29999999701976776,
+          0.29999999701976776
+        ],
+        "pixelRatio": 1
+      },
+      "triangleChangePercent": 0,
+      "visibleDecorativeInstances": 4787,
+      "allocatedDecorativeInstances": 4787,
+      "tier1Coverage": {
+        "available": true,
+        "region": "lower half",
+        "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+        "fraction": 0.03875,
+        "nearBlackFraction": 0.12746415770609318,
+        "horizontalBands": [
+          370,
+          461,
+          167,
+          92,
+          54,
+          15,
+          20,
+          12,
+          124,
+          265,
+          757,
+          2127
+        ]
+      },
+      "findings": []
+    }
+  ]
+}

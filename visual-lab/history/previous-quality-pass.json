@@ -1,0 +1,34 @@
+{
+  "source": "artifacts/visual-quality/review.json",
+  "actor": {
+    "type": "agent",
+    "humanApproval": false
+  },
+  "note": "Historical retain/revert decisions are not human approval labels.",
+  "cycles": [
+    {
+      "cycle": 1,
+      "scene": "savanna",
+      "decision": "accept as a relative improvement",
+      "evidence": "Tier 1 coverage 10.54% to 73.34%; near-black mask overlap 37.2% to 0.337%. Hero and inspection regain a readable golden grass layer."
+    },
+    {
+      "cycle": 2,
+      "scene": "savanna",
+      "decision": "revert after Tier 3",
+      "evidence": "Tier 1 improves the hero silhouette, but Tier 3 rotated inspection reveals a sky wedge beneath the left end: the feature is still disconnected."
+    },
+    {
+      "cycle": 3,
+      "scene": "rainforest",
+      "decision": "accept as a relative improvement",
+      "evidence": "Circular borders disappear in the same hero and inspection views. Existing physical tree shadows, canopy and seed remain unchanged."
+    },
+    {
+      "cycle": 4,
+      "scene": "rainforest",
+      "decision": "revert after Tier 3",
+      "evidence": "Tier 1 hides the edge, but Tier 3 shows visually detached outer foliage and a flat teal curtain. These are new regressions rather than convincing forest depth."
+    }
+  ]
+}

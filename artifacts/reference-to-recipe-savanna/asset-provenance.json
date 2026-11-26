@@ -1,0 +1,10 @@
+{
+  "mode": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. Asset: square seamless repeating ground albedo texture for an East African dry golden savanna, 2048x2048. Full bleed texture ONLY, perfectly overhead orthographic material study, NO horizon, sky, perspective, trees, rocks, objects, flowers, paths, borders, labels or cast shadows. Artistically sophisticated painterly gouache/oil surface: connected soft flowing golden grass sweeps, ochre straw, muted olive low growth, cooler gray-sage inner streaks, selective pale straw brush accents. Broad medium-scale directional, gently curving interwoven brush masses; restrained thin strands subordinate to those masses, NOT uniform tiny blade marks, not a photo, not high-contrast granular noise. Grass should look lush yet dry, a continuous woven fabric, not scattered tufts on soil. No black outlines, neon yellow or glossy specular. Diffuse surface pigment with gentle local value variation, no baked sunlight pools, vignette or directional shadows. All four opposite edges must match seamlessly; no large landmarks or unmistakable swirls, avoid stripes/rows and repeating radial bundles. Natural asymmetry, rich but restrained warm/cool hues, no muddy monochrome. This texture supplies painterly meso-detail while independent world-space fields govern large color and lighting masses. The supplied conceptual savanna's broad wind-swept painted grass aesthetic is the direction; recreate it as independently usable top-down material, not a scene image.",
+  "asset": "public/assets/savanna-recipe/painted-fibre-v1.webp",
+  "nativeSize": [
+    1254,
+    1254
+  ],
+  "note": "Encoded WebP at native resolution; requested 2048 but did not invent resolution. Mirrored sampler ensures continuous values at repeat edges; inspect repetition."
+}

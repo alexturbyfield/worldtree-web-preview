@@ -1,0 +1,43 @@
+/** Engine-neutral Alpine Art Recipe v1. Metres, normalized ecological fields, semantic roles. */
+import {hashSeed,randomSource} from './random';
+export type AlpineFamily='valley'|'overlook'|'treeline';
+export type AlpinePaletteId='A'|'B'|'C';
+export interface AlpinePalette {name:string;sunlit:string;meadow:string;shade:string;rock:string;mountain:string;air:string;sun:string;sky:string}
+export const alpinePalettes:Record<AlpinePaletteId,AlpinePalette>={
+ A:{name:'Golden Alpine Afternoon',sunlit:'#F3D58B',meadow:'#B8B76C',shade:'#627B58',rock:'#8B8173',mountain:'#879EAD',air:'#D6E6E4',sun:'#fff1cf',sky:'#a8c7d3'},
+ B:{name:'Emerald Glacial Valley',sunlit:'#DCE9A4',meadow:'#78A66A',shade:'#416C60',rock:'#728C93',mountain:'#718EB4',air:'#B9D8DD',sun:'#fff0cc',sky:'#91b8cf'},
+ C:{name:'Violet Mountain Dusk',sunlit:'#F5CA8B',meadow:'#A8A76B',shade:'#666D68',rock:'#9A819B',mountain:'#727FA9',air:'#D4B5CC',sun:'#ffd09b',sky:'#b2bbd0'}
+};
+export interface AlpinePlan {schemaVersion:1;generatorVersion:string;family:AlpineFamily;seed:string;presentationSeed:string;palette:AlpinePaletteId;phase:number;turn:number;baseElevation:number;treelineElevation:number;camera:{position:[number,number,number];target:[number,number,number]};inspection:{position:[number,number,number];target:[number,number,number]};ridges:{x:number;z:number;height:number;width:number;depth:number;angle:number;spurs:number}[];rocks:{x:number;z:number;size:number;aspect:number;angle:number;role:'anchor'|'cluster'|'scree'}[];plants:{x:number;z:number;height:number;width:number;rotation:number;kind:'grass'|'flower'|'low'}[];trees:{x:number;z:number;height:number;width:number;rotation:number;exposure:number;structuralSeed:string;appearanceSeed:string}[];hero:{kind:string;x:number;z:number};water:boolean;budgets:{drawCalls:number;triangles:number;detailedTrees:number};}
+const clamp=(v:number)=>Math.max(0,Math.min(1,v));
+export function smooth(a:number,b:number,v:number){const t=clamp((v-a)/(b-a));return t*t*(3-2*t);}
+export function readAlpineOptions(search:string,seed:string){const q=new URLSearchParams(search),family=q.get('alpine');if(!['valley','overlook','treeline'].includes(family??''))return;const palette=q.get('palette')??'A';return {family:family as AlpineFamily,seed,palette:(['A','B','C'].includes(palette)?palette:'A') as AlpinePaletteId};}
+export function drainage(p:Pick<AlpinePlan,'phase'|'turn'>,z:number){return Math.sin(z*.018+p.phase)*4.5+Math.sin(z*.041+p.phase*.3)*1.2+p.turn*z*.035;}
+export function alpineHeight(p:AlpinePlan,x:number,z:number){
+ const d=x-drainage(p,z),distance=Math.max(0,42-z),far=smooth(140,500,distance),width=95+distance*.10;
+ let h=.011*(42-z)+.42*Math.sin(x*.047+p.phase)*Math.cos(z*.033)+.22*Math.sin(x*.11+z*.08+p.phase);
+ if(p.family==='valley')h+=Math.min(160,18*Math.pow(Math.abs(d)/width,1.8))*(.65+.35*Math.cos(z*.004+p.phase));
+ if(p.family==='overlook')h+=24*(1-smooth(-12,85,42-z))+Math.min(100,10*Math.pow(Math.abs(d-55)/(width*1.2),1.6));
+ if(p.family==='treeline')h+=8*Math.exp(-((x+36)**2/8000+(z+5)**2/11000))+3*Math.sin(x*.014+p.phase)*Math.cos(z*.009);
+ let mountains=0;for(const r of p.ridges){const co=Math.cos(r.angle),si=Math.sin(r.angle),dx=x-r.x,dz=z-r.z,u=(dx*co+dz*si)/r.width,v=(-dx*si+dz*co)/r.depth,crest=1+.18*Math.sin(v*r.spurs*1.7+p.phase)+.07*Math.sin(v*r.spurs*3.1);mountains=Math.max(mountains,r.height*Math.exp(-Math.pow(Math.abs(u),1.25)*1.8-v*v*.7)*crest);}
+ h+=mountains*far;
+ if(p.water)h-=.55*Math.exp(-d*d/8);
+ return h;
+}
+export function alpineFields(p:AlpinePlan,x:number,z:number){
+ const y=alpineHeight(p,x,z),dx=(alpineHeight(p,x+1,z)-alpineHeight(p,x-1,z))*.5,dz=(alpineHeight(p,x,z+1)-alpineHeight(p,x,z-1))*.5,slope=Math.hypot(dx,dz),aspect=clamp(.5+(-dx*.65+dz*.4)/Math.max(.5,slope)*.5),exposure=clamp(slope*.6+smooth(20,120,y)*.5),drainDistance=Math.abs(x-drainage(p,z)),moisture=clamp(.35+Math.exp(-drainDistance*drainDistance/65)*.6-exposure*.3),rock=clamp(smooth(.3,.7,slope)*.82+smooth(35,110,y)*.85),soil=clamp(1-rock*.9-exposure*.25),shelter=clamp(1-exposure*.7-slope*.2),patch=clamp(.5+.24*Math.sin(x*.11+z*.065+Math.sin(z*.08+p.phase))+.2*Math.sin(x*.045-z*.13+p.phase)),density=clamp(soil*(.25+.75*moisture)*(.35+.65*patch)),focal=1-Math.exp(-((x-1)**2/22+(z-18)**2/120));
+ return {y,elevation:p.baseElevation+y,slope,aspect,exposure,moisture,rock,soil,shelter,patch,density,focal,drainDistance};
+}
+export function makeAlpinePlan(family:AlpineFamily,seed:string,palette:AlpinePaletteId='A'):AlpinePlan{
+ const r=randomSource(seed+'|alpine-geology-v1|'+family),phase=r()*6.283,turn=(r()-.5)*1.8;
+ const p:AlpinePlan={schemaVersion:1,generatorVersion:'alpine-1',family,seed,presentationSeed:'alpine-dressing-1',palette,phase,turn,baseElevation:family==='overlook'?2780:family==='treeline'?2350:2550,treelineElevation:2750,camera:{position:[0,0,42],target:[0,12,-180]},inspection:{position:[95,75,135],target:[0,25,-140]},ridges:[],rocks:[],plants:[],trees:[],hero:{kind:'quiet valley opening',x:0,z:-180},water:family==='valley',budgets:{drawCalls:28,triangles:550000,detailedTrees:family==='treeline'?22:family==='valley'?10:4}};
+ for(let i=0;i<7;i++){const side=i%2?-1:1;p.ridges.push({x:side*(160+r()*220)+turn*45,z:-520-i*115-r()*80,height:170+r()*140+(i>3?65:0),width:145+r()*110,depth:125+r()*160,angle:side*(.18+r()*.5),spurs:4+r()*4});}
+ const eyeX=(r()-.5)*7,eyeZ=40+r()*6;p.camera.position=[eyeX,alpineHeight(p,eyeX,eyeZ)+1.7,eyeZ];const tx=family==='overlook'?25+turn*10:drainage(p,-160);p.camera.target=[tx,alpineHeight(p,tx,-160)+12,-160];p.inspection.position[1]=Math.max(80,alpineHeight(p,95,135)+65);
+ const dress=randomSource(seed+'|'+p.presentationSeed+'|'+family);
+ for(let cluster=0;cluster<3;cluster++){const side=cluster%2?-1:1,x=eyeX+side*(5.5+dress()*6),z=eyeZ-(7+dress()*15),size=(cluster===0?1.6:1)*(1+dress()*.65)*(family==='overlook'?1.5:1);for(let k=0;k<5;k++){const angle=dress()*6.283,rad=k?1+dress()*2:0;p.rocks.push({x:x+Math.cos(angle)*rad,z:z+Math.sin(angle)*rad,size:k?size*(.2+dress()*.35):size,angle:dress()*6.283,aspect:1.2+dress()*.6,role:k?'cluster':'anchor'});}}
+ for(let i=0;i<100;i++){const x=(dress()-.5)*210,z=35-dress()*300,f=alpineFields(p,x,z);if(dress()<f.rock*.8+f.slope*.15)p.rocks.push({x,z,size:.25+dress()*1.3,angle:dress()*6.283,aspect:1+dress()*.7,role:'scree'});}
+ const desired=3600;for(let i=0;i<desired;i++){let x=0,z=0;for(let k=0;k<35;k++){const near=dress()<.72;x=(dress()-.5)*(near?48:150);z=near?8+dress()*36:44-dress()*165;const f=alpineFields(p,x,z);if(f.slope<.8&&f.rock<.6&&(!p.water||f.drainDistance>1.1)&&dress()<f.density*(.28+.72*f.focal))break;}const f=alpineFields(p,x,z);if(f.rock>.65||f.slope>.8||(p.water&&f.drainDistance<1.1))continue;const near=smooth(65,5,Math.hypot(x-eyeX,z-eyeZ));const kind=i%17===0&&f.moisture>.3&&f.patch>.45?'flower':i%11===0?'low':'grass';p.plants.push({x,z,height:(kind==='flower'?.3:.24+dress()*.42)*(.5+.5*f.moisture)*(.45+.55*near),width:.55+dress()*.55,rotation:.3+Math.sin(z*.06+x*.03)*.5+(dress()-.5)*.8,kind});}
+ const treesR=randomSource(seed+'|alpine-treeline');for(let i=0;i<p.budgets.detailedTrees;i++){let x=0,z=0,f=alpineFields(p,0,0);for(let trial=0;trial<100;trial++){x=(i%2?1:-1)*(family==='treeline'?9+treesR()*35:30+treesR()*50);z=family==='treeline'?26-treesR()*120:-15-treesR()*140;f=alpineFields(p,x,z);const treeLine=1-smooth(p.treelineElevation-100,p.treelineElevation+50,f.elevation);if(f.slope<.7&&f.rock<.5&&treesR()<treeLine*f.shelter)break;}if(f.elevation>p.treelineElevation+30||f.rock>.65)continue;const stress=clamp(f.exposure+(f.elevation-p.treelineElevation+120)/250),height=(11+treesR()*8)*(1-stress*.6);p.trees.push({x,z,height,width:(1.6+treesR()*.8)*(1-stress*.3),rotation:treesR()*6.283,exposure:stress,structuralSeed:String(hashSeed(seed+'|alpine-tree|'+i)),appearanceSeed:String(hashSeed(seed+'|alpine-paint|'+i))});}
+ if(family==='overlook'){p.hero={kind:'embedded weathered overlook',x:p.rocks[0].x,z:p.rocks[0].z};}else if(family==='treeline'&&p.trees.length){p.hero={kind:'exposed treeline conifer',x:p.trees[0].x,z:p.trees[0].z};}else p.hero={kind:parseInt(seed)%3===0?'quiet opening':'mountain pass',x:drainage(p,-180),z:-180};
+ return p;
+}

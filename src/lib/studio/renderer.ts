@@ -1,3 +1,4 @@
+import {layeredConifersEnabled} from './conifer-foliage';
 import * as THREE from 'three';
 import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 import {batchSpecies} from './species-v1';
@@ -117,7 +118,8 @@ function oakBark(){
 }
 /** Shared Atelier paint pipeline; callers own and dispose its texture and material. */
 export function studioFoliageMaterial(q:StudioSettings,mobile=false){
-  const texture=new THREE.CanvasTexture(studioAtlas(q,mobile));texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=2;
+  const needleAtlas=layeredConifersEnabled()&&q.evergreenStudy&&q.view==='conifer';
+  const texture=needleAtlas?new THREE.TextureLoader().load('/assets/conifer-v2/fir-sprays-v1.png',()=>window.dispatchEvent(new Event('resize'))):new THREE.CanvasTexture(studioAtlas(q,mobile));texture.colorSpace=THREE.SRGBColorSpace;texture.anisotropy=needleAtlas?4:2;
   const library=!!q.presetId&&!!batchSpecies[q.presetId];
   const pigments=q.evergreenStudy&&q.view==='conifer'?['#163c37','#647f65','#a5b697']:{sage:['#294135','#6e9462','#d9c976'],woodland:['#254c45','#3e6c37','#b8b15c'],sunlit:['#2c5147','#507639','#c4b45b'],cool:['#264e4c','#3d6950','#a2ab68']}[q.palette??'woodland'];
   const material=new THREE.ShaderMaterial({uniforms:{windTime:{value:0},windAmplitude:{value:0},crownMin:{value:new THREE.Vector3()},crownMax:{value:new THREE.Vector3(1,1,1)},gradientStrength:{value:q.crownGradient??.45},rimStrength:{value:q.crownRim??.4},sage:{value:q.palette==='sage'||q.evergreenStudy&&q.view==='conifer'?1:0},woodland:{value:q.unified&&q.view==='broadleaf'||q.evergreenStudy&&q.view==='conifer'||library?1:0},shadowPigment:{value:new THREE.Color(pigments[0])},midPigment:{value:new THREE.Color(pigments[1])},highPigment:{value:new THREE.Color(pigments[2])},foliageMap:{value:texture},metric:{value:0},silhouette:{value:0}},vertexShader:vertex,fragmentShader:fragment,side:THREE.DoubleSide,depthWrite:true,transparent:false});

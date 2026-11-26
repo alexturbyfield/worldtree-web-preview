@@ -1,0 +1,4 @@
+from pathlib import Path
+p=Path('src/lib/forest/savanna-recipe.ts');s=p.read_text().replace("const fidelity=id.startsWith('r-fidelity'),", "const dimensional=id==='r-fidelity-solid',fidelity=id.startsWith('r-fidelity'),").replace("full=id==='r-fidelity'||", "full=dimensional||id==='r-fidelity'||").replace('fidelity?dimensionalGrassGeometry','dimensional?dimensionalGrassGeometry').replace('edgeMat,fidelity?320:','edgeMat,dimensional?320:').replace('if(fidelity&&i%3!==0)','if(dimensional&&i%3!==0)').replace('*(fidelity?.55+r()*.4:', '*(dimensional?.55+r()*.4:').replace("'r-fidelity'].includes(id)","'r-fidelity','r-fidelity-solid'].includes(id)")
+s=s.replace("parameters:golden?{...p,golden:style}:p", "parameters:golden?{...p,golden:style,...(fidelity?{valueField:'warm-near-gold-middle-v1',grassRepresentation:dimensional?'closed-folded-blades-rejected':'retained-plains-blades',frameInstances:dimensional?320:style.frameGrass}:{} )}:p")
+p.write_text(s)

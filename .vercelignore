@@ -8,3 +8,6 @@ prototype
 tests
 test-results
 playwright-report
+
+# Local visual evidence is committed but is not a runtime dependency.
+artifacts

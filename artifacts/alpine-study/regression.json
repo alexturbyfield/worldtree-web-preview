@@ -1,0 +1,32 @@
+[
+  {
+    "baseline": "lab-initial/puget-hero.png",
+    "current": "alpine-protected/puget-hero.png",
+    "pixelIdentical": true,
+    "fileHashIdentical": true
+  },
+  {
+    "baseline": "lab-initial/rainforest-hero.png",
+    "current": "alpine-protected/rainforest-hero.png",
+    "pixelIdentical": true,
+    "fileHashIdentical": true
+  },
+  {
+    "baseline": "lab-initial/rainforest-inspection.png",
+    "current": "alpine-protected/rainforest-inspection.png",
+    "pixelIdentical": true,
+    "fileHashIdentical": true
+  },
+  {
+    "baseline": "cohesion-retained/savanna-hero.png",
+    "current": "alpine-protected-savanna/savanna-hero.png",
+    "pixelIdentical": true,
+    "fileHashIdentical": true
+  },
+  {
+    "baseline": "cohesion-retained/savanna-inspection.png",
+    "current": "alpine-protected-savanna/savanna-inspection.png",
+    "pixelIdentical": true,
+    "fileHashIdentical": true
+  }
+]

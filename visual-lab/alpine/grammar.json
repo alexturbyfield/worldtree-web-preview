@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "domain": "Alpine cross-biome visual grammar",
+  "rules": [
+    {
+      "id": "ALP-1",
+      "principle": "Coarse valley forms and sharper ridges establish scale before meadow detail.",
+      "referenceEvidence": [
+        {
+          "referenceId": "alpine-01",
+          "observation": "See independent reference analysis for complete-image relationship."
+        },
+        {
+          "referenceId": "alpine-02",
+          "observation": "See independent reference analysis for complete-image relationship."
+        },
+        {
+          "referenceId": "alpine-04",
+          "observation": "See independent reference analysis for complete-image relationship."
+        }
+      ],
+      "intendedEffect": "Recognizable alpine identity without a painted-only backdrop.",
+      "systems": [
+        "alpine-recipe",
+        "alpine-adapter"
+      ],
+      "implementation": "Continuous multiresolution height field with distinct landform families.",
+      "evaluation": "Inspect hero/inspection at160x90,640x360 and detail; check environmental masks and seed/holdout robustness.",
+      "confidence": "medium",
+      "biomeConstraints": "Alpine ecology/geology; numeric elevations and conifer profiles not universal.",
+      "reuse": "Relationships portable; biome-specific forms/pigments require new reference evidence.",
+      "status": "proposed",
+      "evidence": [
+        "artifacts/alpine-study/review.json",
+        "artifacts/alpine-study/compositions.png",
+        "artifacts/alpine-study/holdout-review.png"
+      ],
+      "humanApproval": null,
+      "failedImplementations": [
+        "Gaussian ridges too rounded/simple",
+        "Piecewise multi-summit ridges too pyramidal; rejectedR3"
+      ]
+    },
+    {
+      "id": "ALP-2",
+      "principle": "Foreground framing and a luminous middle opening must remain distinct.",
+      "referenceEvidence": [
+        {
+          "referenceId": "alpine-01",
+          "observation": "See independent reference analysis for complete-image relationship."
+        },
+        {
+          "referenceId": "alpine-03",
+          "observation": "See independent reference analysis for complete-image relationship."
+        },
+        {
+          "referenceId": "alpine-05",
+          "observation": "See independent reference analysis for complete-image relationship."
+        }
+      ],
+      "intendedEffect": "Readable encounter region without a vignette filter.",
+      "systems": [
+        "alpine-recipe",
+        "alpine-adapter"
+      ],
+      "implementation": "World-space pigment/vegetation fields, terrain/light and asymmetrical rock/tree groups.",
+      "evaluation": "Inspect hero/inspection at160x90,640x360 and detail; check environmental masks and seed/holdout robustness.",
+      "confidence": "medium",
+      "biomeConstraints": "Alpine ecology/geology; numeric elevations and conifer profiles not universal.",
+      "reuse": "Relationships portable; biome-specific forms/pigments require new reference evidence.",
+      "status": "proposed",
+      "evidence": [
+        "artifacts/alpine-study/review.json",
+        "artifacts/alpine-study/compositions.png",
+        "artifacts/alpine-study/holdout-review.png"
+      ],
+      "humanApproval": null
+    },
+    {
+      "id": "ALP-3",
+      "principle": "Drainage links water, moisture and vegetation.",
+      "referenceEvidence": [
+        {
+          "referenceId": "alpine-02",
+          "observation": "See independent reference analysis for complete-image relationship."
+        },
+        {
+          "referenceId": "alpine-03",
+          "observation": "See independent reference analysis for complete-image relationship."
+        },
+        {
+          "referenceId": "alpine-04",
+          "observation": "See independent reference analysis for complete-image relationship."
+        }
+      ],
+      "intendedEffect": "Physically credible flow and clustered lush growth.",
+      "systems": [
+        "alpine-recipe",
+        "alpine-adapter"
+      ],
+      "implementation": "One drainage coordinate drives bed depression, moisture, material and water strip.",
+      "evaluation": "Inspect hero/inspection at160x90,640x360 and detail; check environmental masks and seed/holdout robustness.",
+      "confidence": "medium",
+      "biomeConstraints": "Alpine ecology/geology; numeric elevations and conifer profiles not universal.",
+      "reuse": "Relationships portable; biome-specific forms/pigments require new reference evidence.",
+      "status": "experimentally-supported",
+      "evidence": [
+        "artifacts/alpine-study/review.json",
+        "artifacts/alpine-study/compositions.png",
+        "artifacts/alpine-study/holdout-review.png"
+      ],
+      "humanApproval": null,
+      "knownLimitations": "Technical/relationship support only in the cited frozen prototypes. Overall scene quality is not acceptable; no human approval and no universal numeric prescription."
+    },
+    {
+      "id": "ALP-4",
+      "principle": "Rocks repeat geological structure across scales.",
+      "referenceEvidence": [
+        {
+          "referenceId": "alpine-02",
+          "observation": "See independent reference analysis for complete-image relationship."
+        },
+        {
+          "referenceId": "alpine-04",
+          "observation": "See independent reference analysis for complete-image relationship."
+        }
+      ],
+      "intendedEffect": "Grounded foreground weight and connected geology.",
+      "systems": [
+        "alpine-recipe",
+        "alpine-adapter"
+      ],
+      "implementation": "Embedded anchors, followers and scree selected by slope/soil/rock fields.",
+      "evaluation": "Inspect hero/inspection at160x90,640x360 and detail; check environmental masks and seed/holdout robustness.",
+      "confidence": "medium",
+      "biomeConstraints": "Alpine ecology/geology; numeric elevations and conifer profiles not universal.",
+      "reuse": "Relationships portable; biome-specific forms/pigments require new reference evidence.",
+      "status": "proposed",
+      "evidence": [
+        "artifacts/alpine-study/review.json",
+        "artifacts/alpine-study/compositions.png",
+        "artifacts/alpine-study/holdout-review.png"
+      ],
+      "humanApproval": null
+    },
+    {
+      "id": "ALP-5",
+      "principle": "Flowers are medium-scale color groups with restrained fine accents.",
+      "referenceEvidence": [
+        {
+          "referenceId": "alpine-02",
+          "observation": "See independent reference analysis for complete-image relationship."
+        },
+        {
+          "referenceId": "alpine-05",
+          "observation": "See independent reference analysis for complete-image relationship."
+        }
+      ],
+      "intendedEffect": "Avoid a carpet of saturated dots.",
+      "systems": [
+        "alpine-recipe",
+        "alpine-adapter"
+      ],
+      "implementation": "Patch/soil/moisture masks with low floral fraction.",
+      "evaluation": "Inspect hero/inspection at160x90,640x360 and detail; check environmental masks and seed/holdout robustness.",
+      "confidence": "medium",
+      "biomeConstraints": "Alpine ecology/geology; numeric elevations and conifer profiles not universal.",
+      "reuse": "Relationships portable; biome-specific forms/pigments require new reference evidence.",
+      "status": "proposed",
+      "evidence": [
+        "artifacts/alpine-study/review.json",
+        "artifacts/alpine-study/compositions.png",
+        "artifacts/alpine-study/holdout-review.png"
+      ],
+      "humanApproval": null
+    },
+    {
+      "id": "ALP-6",
+      "principle": "Treeline is a field-dependent transition.",
+      "referenceEvidence": [
+        {
+          "referenceId": "alpine-01",
+          "observation": "See independent reference analysis for complete-image relationship."
+        },
+        {
+          "referenceId": "alpine-05",
+          "observation": "See independent reference analysis for complete-image relationship."
+        }
+      ],
+      "intendedEffect": "Ecological variety and open meadow/forest boundaries.",
+      "systems": [
+        "alpine-recipe",
+        "alpine-adapter"
+      ],
+      "implementation": "Conifer size/placement respond to elevation, exposure and shelter.",
+      "evaluation": "Inspect hero/inspection at160x90,640x360 and detail; check environmental masks and seed/holdout robustness.",
+      "confidence": "medium",
+      "biomeConstraints": "Alpine ecology/geology; numeric elevations and conifer profiles not universal.",
+      "reuse": "Relationships portable; biome-specific forms/pigments require new reference evidence.",
+      "status": "experimentally-supported",
+      "evidence": [
+        "artifacts/alpine-study/review.json",
+        "artifacts/alpine-study/compositions.png",
+        "artifacts/alpine-study/holdout-review.png"
+      ],
+      "humanApproval": null,
+      "knownLimitations": "Technical/relationship support only in the cited frozen prototypes. Overall scene quality is not acceptable; no human approval and no universal numeric prescription."
+    },
+    {
+      "id": "ALP-7",
+      "principle": "Ground and plant roots share pigments and projection appropriate to each surface.",
+      "referenceEvidence": [
+        {
+          "referenceId": "alpine-03",
+          "observation": "See independent reference analysis for complete-image relationship."
+        },
+        {
+          "referenceId": "alpine-05",
+          "observation": "See independent reference analysis for complete-image relationship."
+        }
+      ],
+      "intendedEffect": "Grass grows from terrain rather than floating over it.",
+      "systems": [
+        "alpine-recipe",
+        "alpine-adapter"
+      ],
+      "implementation": "Reuse savanna root-projection lesson, low curved grass and common field colors.",
+      "evaluation": "Inspect hero/inspection at160x90,640x360 and detail; check environmental masks and seed/holdout robustness.",
+      "confidence": "medium",
+      "biomeConstraints": "Alpine ecology/geology; numeric elevations and conifer profiles not universal.",
+      "reuse": "Relationships portable; biome-specific forms/pigments require new reference evidence.",
+      "status": "experimentally-supported",
+      "evidence": [
+        "artifacts/alpine-study/review.json",
+        "artifacts/alpine-study/compositions.png",
+        "artifacts/alpine-study/holdout-review.png"
+      ],
+      "humanApproval": null,
+      "knownLimitations": "Technical/relationship support only in the cited frozen prototypes. Overall scene quality is not acceptable; no human approval and no universal numeric prescription."
+    },
+    {
+      "id": "ALP-8",
+      "principle": "Successive depth layers reduce contrast and shift atmospheric hue.",
+      "referenceEvidence": [
+        {
+          "referenceId": "alpine-01",
+          "observation": "See independent reference analysis for complete-image relationship."
+        },
+        {
+          "referenceId": "alpine-04",
+          "observation": "See independent reference analysis for complete-image relationship."
+        },
+        {
+          "referenceId": "alpine-05",
+          "observation": "See independent reference analysis for complete-image relationship."
+        }
+      ],
+      "intendedEffect": "Scale and distance with readable foreground.",
+      "systems": [
+        "alpine-recipe",
+        "alpine-adapter"
+      ],
+      "implementation": "World anchored palette transitions plus distant fog, clear near range.",
+      "evaluation": "Inspect hero/inspection at160x90,640x360 and detail; check environmental masks and seed/holdout robustness.",
+      "confidence": "medium",
+      "biomeConstraints": "Alpine ecology/geology; numeric elevations and conifer profiles not universal.",
+      "reuse": "Relationships portable; biome-specific forms/pigments require new reference evidence.",
+      "status": "experimentally-supported",
+      "evidence": [
+        "artifacts/alpine-study/review.json",
+        "artifacts/alpine-study/compositions.png",
+        "artifacts/alpine-study/holdout-review.png"
+      ],
+      "humanApproval": null,
+      "knownLimitations": "Technical/relationship support only in the cited frozen prototypes. Overall scene quality is not acceptable; no human approval and no universal numeric prescription."
+    },
+    {
+      "id": "ALP-9",
+      "principle": "Palette is a visual state, geology is a stable landscape.",
+      "referenceEvidence": [
+        {
+          "referenceId": "alpine-01",
+          "observation": "See independent reference analysis for complete-image relationship."
+        },
+        {
+          "referenceId": "alpine-03",
+          "observation": "See independent reference analysis for complete-image relationship."
+        },
+        {
+          "referenceId": "alpine-05",
+          "observation": "See independent reference analysis for complete-image relationship."
+        }
+      ],
+      "intendedEffect": "Three lighting/palette states without regenerating terrain.",
+      "systems": [
+        "alpine-recipe",
+        "alpine-adapter"
+      ],
+      "implementation": "Color/uniform updates over frozen heights and placements.",
+      "evaluation": "Inspect hero/inspection at160x90,640x360 and detail; check environmental masks and seed/holdout robustness.",
+      "confidence": "medium",
+      "biomeConstraints": "Alpine ecology/geology; numeric elevations and conifer profiles not universal.",
+      "reuse": "Relationships portable; biome-specific forms/pigments require new reference evidence.",
+      "status": "experimentally-supported",
+      "evidence": [
+        "artifacts/alpine-study/review.json",
+        "artifacts/alpine-study/compositions.png",
+        "artifacts/alpine-study/holdout-review.png"
+      ],
+      "humanApproval": null,
+      "knownLimitations": "Technical/relationship support only in the cited frozen prototypes. Overall scene quality is not acceptable; no human approval and no universal numeric prescription."
+    }
+  ]
+}

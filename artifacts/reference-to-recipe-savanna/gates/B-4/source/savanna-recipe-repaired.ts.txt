@@ -1,0 +1,62 @@
+import * as T from 'three';
+import {hashSeed,randomSource} from './random';
+import {terrainHeight,type SceneRecipe} from './recipe';
+import recipeDefinition from '../../../visual-lab/savanna-recipe.json';
+
+/** Opt-in staged recipe. Structural trees, terrain vertices, sky and defaults remain untouched. */
+export function installSavannaRecipe(scene:T.Scene,recipe:SceneRecipe,guard:(targets:Set<string>)=>string){
+ scene.userData.recipeEye={position:[0,terrainHeight(0,34,recipe.seed)+1.7,34],target:[-2,terrainHeight(-2,-20,recipe.seed)+3,-20]};
+ const ground=scene.children.find(o=>o instanceof T.Mesh&&o.geometry.type==='PlaneGeometry') as T.Mesh<T.BufferGeometry,T.MeshStandardMaterial>;
+ const hill=scene.children.find(o=>o instanceof T.Mesh&&o.geometry.type==='SphereGeometry'&&o.scale.x===110) as T.Mesh|undefined;
+ const saved=[ground,...(hill?[hill]:[])].map(mesh=>({mesh,material:mesh.material}));
+ const old=scene.children.filter(o=>['pretty-savanna-grass','biome-shrub','biome-understory'].includes(o.name));
+ const visibility=old.map(o=>[o,o.visible] as const),created:T.Mesh[]=[],materials:T.Material[]=[];
+ const targets=new Set(saved.map(s=>s.mesh.uuid)),p=recipeDefinition.parameters;
+ let texture:T.Texture|undefined;
+ const reset=()=>{for(const s of saved)s.mesh.material=s.material;for(const [o,v]of visibility)o.visible=v;for(const o of created){scene.remove(o);o.geometry.dispose();if(o instanceof T.InstancedMesh)o.dispose();}created.length=0;materials.forEach(m=>m.dispose());materials.length=0;};
+ const load=()=>{if(texture)return texture;scene.userData.labAssetsReady=false;texture=new T.TextureLoader().load('/assets/savanna-recipe/painted-fibre-v1.webp',()=>{scene.userData.labAssetsReady=true;scene.userData.artRevision=(scene.userData.artRevision??0)+1;},undefined,()=>{scene.userData.labAssetsReady=true;scene.userData.labAssetError='Recipe texture failed to load';});texture.colorSpace=T.SRGBColorSpace;texture.wrapS=texture.wrapT=T.MirroredRepeatWrapping;texture.anisotropy=8;return texture;};
+ const apply=(id:string)=>{
+  reset();const before=guard(targets);old.forEach(o=>o.visible=false);const map=load();
+  if(id!=='r-control'){const land=surfaceMaterial(recipe,0,map);materials.push(land);ground.material=land;
+  if(hill){const distant=surfaceMaterial(recipe,1,map);materials.push(distant);hill.material=distant;}}
+  let count=0,digest=2166136261;
+  if(id==='r-grass'||id==='r-full'){
+   const material=surfaceMaterial(recipe,2,map),mesh=new T.InstancedMesh(fibreGeometry(),material,p.grassInstances),r=randomSource(recipe.seed+'|'+p.presentationSeed),o=new T.Object3D();materials.push(material);mesh.name='lab-savanna-grass';mesh.receiveShadow=true;mesh.castShadow=false;
+   for(let i=0;i<mesh.count;i++){let x=0,z=0;for(let trial=0;trial<30;trial++){x=(r()-.5)*98;z=-48+r()*92;const flow=.5+.25*Math.sin(z*.13+x*.032+Math.sin(x*.085)*1.6);if(r()<.38+flow*.6)break;}const open=Math.exp(-((x-2)**2/529+(z-2)**2/841)),growth=(.55+r()*.65)*(1-open*.55),near=T.MathUtils.smoothstep(z,-20,26);o.position.set(x,terrainHeight(x,z,recipe.seed)-.025,z);o.rotation.set(0,.45+Math.sin(z*.065+x*.04)*.3+(r()-.5)*.45,0);o.scale.set(.75+r()*.65,p.grassHeight*growth*(.55+.45*near),.75+r()*.65);o.updateMatrix();mesh.setMatrixAt(i,o.matrix);}
+   mesh.computeBoundingSphere();scene.add(mesh);created.push(mesh);count+=mesh.count;for(const n of mesh.instanceMatrix.array)digest=Math.imul(digest^Math.round(n*10000),16777619);
+  }
+  const after=guard(targets);
+  scene.userData.visualLab={schemaVersion:1,generatorVersion:'recipe-1',experiment:'R',candidate:id,worldSeed:recipe.seed,presentationSeed:p.presentationSeed,parameters:p,recipeId:recipeDefinition.id,coverageMode:'ground-and-geometry',targetLayout:{count,matrixDigest:(digest>>>0).toString(16)},unchangedSystems:{before,after,match:before===after,scope:'Declared ground/distant material and decorative grass targets only; existing geometry, primary trees, sky, lights and fog guarded.'}};
+  scene.userData.artRevision=(scene.userData.artRevision??0)+1;
+ };
+ return {accepts:(id:string)=>['r-control','r-ground','r-grass','r-full'].includes(id),apply,reset,dispose:()=>{reset();texture?.dispose();}};
+}
+
+/** Related flowing fibres: shared lean, distributed roots, tapered geometry, no opaque card footprint. */
+function fibreGeometry(){const v:number[]=[],uv:number[]=[],width=recipeDefinition.parameters.bladeWidth;for(let j=0;j<6;j++)for(let k=0;k<5;k++){const point=(t:number,side:number)=>[(j-2.5)*.19+t*t*(.95+j*.06)+side*width*Math.pow(1-t,.7),Math.sin(t*Math.PI*.58)*(.75+(j%3)*.12),Math.sin(j*2.4)*.3+t*t*.15];const a=k/5,b=(k+1)/5;for(const [t,s]of [[a,-1],[a,1],[b,-1],[a,1],[b,1],[b,-1]]){v.push(...point(t,s));uv.push((s+1)/2,t);}}const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(v,3));g.setAttribute('uv',new T.Float32BufferAttribute(uv,2));g.computeVertexNormals();return g;}
+
+function surfaceMaterial(recipe:SceneRecipe,role:number,map:T.Texture){
+ const p=recipeDefinition.parameters,phase=(hashSeed(recipe.seed)%6283)/1000;
+ // The existing renderer has antialias:false. A2C there writes partial canvas alpha without coverage.
+ const m=new T.MeshStandardMaterial({map,roughness:1,color:'#ffffff',side:role===2?T.DoubleSide:T.FrontSide,alphaTest:role===2?.12:0});
+ const c=(s:string)=>`vec3(${new T.Color(s).toArray().map(n=>n.toFixed(5)).join(',')})`;
+ const shared=`
+ float sweep(vec2 p){return .5+.25*sin(p.y*.13+p.x*.032+sin(p.x*.085+${phase.toFixed(5)})*1.6)+.18*sin(p.x*.11-p.y*.043+${phase.toFixed(5)});}
+ float clearing(vec2 p){p+=vec2(sin(p.y*.12)*3.,cos(p.x*.08)*2.);vec2 q=(p-vec2(2.,2.))/vec2(23.,29.);return exp(-dot(q,q));}
+ vec3 pigment(vec2 p){float s=clamp(.5+(sweep(p)-.5)*${p.macroContrast.toFixed(4)},0.,1.),f=clearing(p);vec3 a=mix(${c('#7f8a5b')},${c('#e5ac46')},smoothstep(.1,.85,s));a=mix(a,${c('#e9c16b')},f*.62);float nearShade=smoothstep(0.,24.,p.y)*(.65+.35*cos(p.x*.11+sin(p.y*.08)))*(1.-f*.35);return mix(a,${c('#5c7976')},nearShade*.9);}
+ `;
+ m.onBeforeCompile=shader=>{
+  shader.vertexShader='varying vec3 recipeWorld;varying float fibreTip;\n'+shader.vertexShader;
+  const world=role===2?'modelMatrix*instanceMatrix*vec4(position,1.)':'modelMatrix*vec4(position,1.)';
+  shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>',`#include <begin_vertex>\nrecipeWorld=(${world}).xyz;fibreTip=uv.y;`);
+  shader.vertexShader=shader.vertexShader.replace('#include <uv_vertex>',`#include <uv_vertex>\nvec3 recipeSource=(${world}).xyz;vMapUv=vec2(recipeSource.x*.85+recipeSource.z*.3,recipeSource.z*.8-recipeSource.x*.15)/${p.tileMeters.toFixed(4)};`);
+  shader.fragmentShader=shared+'\nvarying vec3 recipeWorld;varying float fibreTip;\n'+shader.fragmentShader;
+  shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
+   float d=distance(cameraPosition,recipeWorld);float fine=1.-smoothstep(25.,100.,d);vec3 base=pigment(recipeWorld.xz);float painted=clamp(dot(diffuseColor.rgb,vec3(.2126,.7152,.0722))/.36,.55,1.45);
+   diffuseColor.rgb=base*mix(1.,painted,${p.textureContrast.toFixed(4)}*(.4+.6*fine));
+   ${role===1?`diffuseColor.rgb=mix(${c('#738c8a')},${c('#9ba991')},smoothstep(-2.,3.,recipeWorld.y));`:role===2?'diffuseColor.rgb*=mix(1.,1.04,fibreTip);diffuseColor.a*=smoothstep(0.,.12,fibreTip)*(1.-smoothstep(70.,120.,d));':''}`);
+  if(role===2)shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_begin>','#include <normal_fragment_begin>\nnormal=normalize(mat3(viewMatrix)*vec3(0.,1.,0.)+normal*.12);');
+  shader.fragmentShader=shader.fragmentShader.replace('#include <opaque_fragment>',`${role!==1?`float warm=clearing(recipeWorld.xz)*.6+sweep(recipeWorld.xz)*.25;outgoingLight*=mix(vec3(.7,.9,1.15),vec3(1.3,1.15,.85),warm);`:`outgoingLight=mix(outgoingLight,${c('#8fa2a0')},.55);`}\n#include <opaque_fragment>`);
+ };
+ m.customProgramCacheKey=()=> 'reference-recipe-'+role+'-'+JSON.stringify(p);return m;
+}

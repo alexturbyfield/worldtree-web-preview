@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "basis": "Approximate sunlit ground regions interpreted from the fixed seed-29 baseline images. These are review ROIs, not a physical direct-sun or shadow buffer. Do not reuse them for arbitrary cameras.",
+  "regions": {
+    "savanna": {
+      "hero": [0.62, 0.6, 0.98, 0.98],
+      "inspection": [0.65, 0.65, 0.98, 0.98]
+    }
+  }
+}

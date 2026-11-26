@@ -1,0 +1,13 @@
+{
+ "visionAvailable":true,"actor":"agent","status":"diagnostic-only; Gate C failed, so Gate D cannot pass",
+ "imagesInspected":["artifacts/visual-quality/recipe-robustness-29/savanna-hero.png","artifacts/visual-quality/recipe-robustness-29/savanna-inspection.png","artifacts/visual-quality/recipe-robustness-41/savanna-hero.png","artifacts/visual-quality/recipe-robustness-41/savanna-inspection.png","artifacts/visual-quality/recipe-robustness-73/savanna-hero.png","artifacts/visual-quality/recipe-robustness-73/savanna-inspection.png"],
+ "technical":"Seed 29 repeats both final frames byte-for-byte. All three seeded target-layout digests reproduce and non-target guards match; no page/shader errors captured.",
+ "findings":[
+  {"severity":"major","defect":"Seed 41 overfills near framing and hides the open middle","evidence":"Tall near grass and very large close boulders dominate the eye-height image.","hypothesis":"Fixed world-zone ranges do not account sufficiently for terrain-relative projected size, occlusion and local rising ground.","recommendation":"A future parent-dressing plan needs screen-projected-size/occlusion constraints computed once into stable world anchors, with terrain slope/height checks. Do not implement a screen vignette."},
+  {"severity":"major","defect":"Exposed distant-landform underside in seed 41 inspection","evidence":"A light horizontal mass floats above a strip of sky near the upper right/center.","cause":"Existing sphere-based distant landform and finite ground do not form a continuous landscape for every seeded terrain.","recommendation":"A later coordinated terrain-continuation representation is needed; no approved geology rule is established by recoloring the old shape."},
+  {"severity":"major","defect":"Strip-like vegetation and smooth generic stone persist across seeds","evidence":"Both extra seeds retain broad directional growth but close detail is geometric and stones lack convincing weathered structure.","recommendation":"Do not promote the fibre/rock implementations globally or claim that changing seed fixes their artistic defects."}
+ ],
+ "betterThanOriginal":"Material continuity and removal of opaque fragmented clutter improve in the tested presentation, but the full style and robustness remain inadequate.",
+ "goodEnoughToApprove":false,"humanApproval":null,
+ "sharedLearning":"Seeded determinism is not compositional robustness. Keep rules R5/R6/R7/R8 proposed; record these images as counterexamples to assuming good seed-29 framing generalizes."
+}
