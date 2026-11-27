@@ -1,0 +1,652 @@
+[
+  {
+    "biome": "desert",
+    "seed": "27139",
+    "mode": "after",
+    "view": "hero",
+    "file": "artifacts/wave1-fidelity/holdout/desert-27139-after-hero.png",
+    "camera": {
+      "position": [
+        -63,
+        2.8555764431338333,
+        9
+      ],
+      "target": [
+        -112.49747468305833,
+        1.9555764431338334,
+        -40.497474683058314
+      ],
+      "width": 640
+    },
+    "samples": [
+      {
+        "cpuSubmissionMs": 0.4000000059604645,
+        "frame": 6,
+        "calls": 19,
+        "triangles": 898508,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.5,
+        "frame": 7,
+        "calls": 19,
+        "triangles": 898508,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.4000000059604645,
+        "frame": 8,
+        "calls": 19,
+        "triangles": 898508,
+        "points": 0,
+        "lines": 0
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 1.3126738895353118,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "artDirection": {
+      "biome": "desert",
+      "seed": "27139",
+      "worldSpace": true,
+      "waterUnchanged": true
+    },
+    "geology": {
+      "assemblies": 56,
+      "dominant": -1,
+      "seed": "27139",
+      "representation": "six connected weathered cores per assembly; receding geological shoulders"
+    },
+    "trees": 0,
+    "renderer": "WebKit WebGL",
+    "matrixDigests": [
+      {
+        "name": "field-jointed-bedrock",
+        "count": 2,
+        "hash": "f9731f92170bbd25566cee9d0920ebd78ee287f924f22a0372423c79bd8bb8e0"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 17,
+        "hash": "a57985976f63e17c621b632e0e208ea0999fa533ce9a2a1ce689d2c084657f3d"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 3,
+        "hash": "14e92c5343feb0508ec4a4d9c85d1fe81a025bc781ab30ac8fa36628b904c119"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 15,
+        "hash": "f2e400c231302aac3743aaa6b08dd4d46cf182d5b633dd265a7e4885b5052fda"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 3,
+        "hash": "6bbb3d0d93bc5fd1a5fce7e1f6132ce51bc5834ff0265976b735f1508e7812d8"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 16,
+        "hash": "c27b8db0ef0eb33f46ececf5b4fca332935e78644cb918c2b33b3b9c050a49eb"
+      },
+      {
+        "name": "desert-contact-gravel",
+        "count": 2058,
+        "hash": "a0dd2d95213cbbc96dbcf4daf6bb1f0f55a5af903a189d73b3adfc1344707c4e"
+      },
+      {
+        "name": "desert-unnamed-open-shrub",
+        "count": 4,
+        "hash": "90a36088a4e5cc5c1062f927f9ad402767adcc540aea9d29cdc0120c442dd0c6"
+      },
+      {
+        "name": "desert-unnamed-open-shrub",
+        "count": 4,
+        "hash": "cf5bc64e7f16c9fa32f4f1a568fec853042d5e0114f85a3df673c36e7885bcc0"
+      },
+      {
+        "name": "desert-unnamed-dry-fibres",
+        "count": 242,
+        "hash": "1c4764432b513333882ce3ef5399678cad8b5c0e39c363fdf510a1633fb3f45a"
+      },
+      {
+        "name": "depth-dry-grass",
+        "count": 52,
+        "hash": "3a0032dfe95e53b8556b00a994cb567c6c7ad305def7e80a5a15df9af288f645"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "biome": "desert",
+    "seed": "27139",
+    "mode": "after",
+    "view": "inspection",
+    "file": "artifacts/wave1-fidelity/holdout/desert-27139-after-inspection.png",
+    "camera": {
+      "position": [
+        2,
+        47.855576443133835,
+        74
+      ],
+      "target": [
+        -87.74873734152916,
+        0,
+        -15.748737341529157
+      ],
+      "width": 640
+    },
+    "samples": [
+      {
+        "cpuSubmissionMs": 0.800000011920929,
+        "frame": 10,
+        "calls": 17,
+        "triangles": 898504,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.5999999940395355,
+        "frame": 11,
+        "calls": 17,
+        "triangles": 898504,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.30000001192092896,
+        "frame": 12,
+        "calls": 17,
+        "triangles": 898504,
+        "points": 0,
+        "lines": 0
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 1.3126738895353118,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "artDirection": {
+      "biome": "desert",
+      "seed": "27139",
+      "worldSpace": true,
+      "waterUnchanged": true
+    },
+    "geology": {
+      "assemblies": 56,
+      "dominant": -1,
+      "seed": "27139",
+      "representation": "six connected weathered cores per assembly; receding geological shoulders"
+    },
+    "trees": 0,
+    "renderer": "WebKit WebGL",
+    "matrixDigests": [
+      {
+        "name": "field-jointed-bedrock",
+        "count": 2,
+        "hash": "f9731f92170bbd25566cee9d0920ebd78ee287f924f22a0372423c79bd8bb8e0"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 17,
+        "hash": "a57985976f63e17c621b632e0e208ea0999fa533ce9a2a1ce689d2c084657f3d"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 3,
+        "hash": "14e92c5343feb0508ec4a4d9c85d1fe81a025bc781ab30ac8fa36628b904c119"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 15,
+        "hash": "f2e400c231302aac3743aaa6b08dd4d46cf182d5b633dd265a7e4885b5052fda"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 3,
+        "hash": "6bbb3d0d93bc5fd1a5fce7e1f6132ce51bc5834ff0265976b735f1508e7812d8"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 16,
+        "hash": "c27b8db0ef0eb33f46ececf5b4fca332935e78644cb918c2b33b3b9c050a49eb"
+      },
+      {
+        "name": "desert-contact-gravel",
+        "count": 2058,
+        "hash": "a0dd2d95213cbbc96dbcf4daf6bb1f0f55a5af903a189d73b3adfc1344707c4e"
+      },
+      {
+        "name": "desert-unnamed-open-shrub",
+        "count": 4,
+        "hash": "90a36088a4e5cc5c1062f927f9ad402767adcc540aea9d29cdc0120c442dd0c6"
+      },
+      {
+        "name": "desert-unnamed-open-shrub",
+        "count": 4,
+        "hash": "cf5bc64e7f16c9fa32f4f1a568fec853042d5e0114f85a3df673c36e7885bcc0"
+      },
+      {
+        "name": "desert-unnamed-dry-fibres",
+        "count": 242,
+        "hash": "1c4764432b513333882ce3ef5399678cad8b5c0e39c363fdf510a1633fb3f45a"
+      },
+      {
+        "name": "depth-dry-grass",
+        "count": 52,
+        "hash": "3a0032dfe95e53b8556b00a994cb567c6c7ad305def7e80a5a15df9af288f645"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "biome": "mangrove",
+    "seed": "27139",
+    "mode": "after",
+    "view": "hero",
+    "file": "artifacts/wave1-fidelity/holdout/mangrove-27139-after-hero.png",
+    "camera": {
+      "position": [
+        63,
+        2.027701833232194,
+        63
+      ],
+      "target": [
+        63.00000000000001,
+        1.1277018332321938,
+        133
+      ],
+      "width": 640
+    },
+    "samples": [
+      {
+        "cpuSubmissionMs": 0.8999999761581421,
+        "frame": 16,
+        "calls": 25,
+        "triangles": 2682670,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.9000000059604645,
+        "frame": 18,
+        "calls": 25,
+        "triangles": 2682670,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.800000011920929,
+        "frame": 20,
+        "calls": 25,
+        "triangles": 2682670,
+        "points": 0,
+        "lines": 0
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 0.21151021887023322,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "lighting": {
+      "biome": "mangrove",
+      "key": 4.6,
+      "hemi": 0.5,
+      "fill": 0.2,
+      "palette": "world-space correlated pigments; actual incident lighting; restrained diffuse bounce",
+      "geometryChanged": false
+    },
+    "artDirection": {
+      "biome": "mangrove",
+      "seed": "27139",
+      "worldSpace": true,
+      "waterUnchanged": true
+    },
+    "trees": 95,
+    "renderer": "WebKit WebGL",
+    "matrixDigests": [
+      {
+        "name": "field-source-stand-impostors",
+        "count": 650,
+        "hash": "a79bd3ee2ea5c5abdbd2a0c686b37dbc93b83380ef61ebe3016833834e5ee7fe"
+      },
+      {
+        "name": "mangrove-unnamed-juvenile-leaves",
+        "count": 1500,
+        "hash": "4857fdf04f546df80de6cad78b2e262b483dcc1368af2ab125de2b1f3134315b"
+      },
+      {
+        "name": "mangrove-unnamed-juvenile-stems",
+        "count": 301,
+        "hash": "eccdaa946cea487d56da7b758924c3631fe69dfc17dd1b1a15539332e356de5f"
+      },
+      {
+        "name": "mangrove-low-folded-leaf-litter",
+        "count": 2446,
+        "hash": "a9524f7ebe88b3144202e321f07041c736ae6c56e6293c7a01dd25c3846851e7"
+      },
+      {
+        "name": "mangrove-fallen-shore-twigs",
+        "count": 37,
+        "hash": "91bce121521ffc77f770343c5357d7001b32dcae5367b627b55afb364d5b0f16"
+      },
+      {
+        "name": "depth-washed-gravel",
+        "count": 1900,
+        "hash": "c44c25c69b3c4e164b824d9d848ce5a0d0694071e81e468b7903c728a5235639"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "biome": "mangrove",
+    "seed": "27139",
+    "mode": "after",
+    "view": "inspection",
+    "file": "artifacts/wave1-fidelity/holdout/mangrove-27139-after-inspection.png",
+    "camera": {
+      "position": [
+        128,
+        47.02770183323219,
+        128
+      ],
+      "target": [
+        63,
+        0,
+        98
+      ],
+      "width": 640
+    },
+    "samples": [
+      {
+        "cpuSubmissionMs": 1.5,
+        "frame": 24,
+        "calls": 25,
+        "triangles": 2682670,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 1.0999999940395355,
+        "frame": 26,
+        "calls": 25,
+        "triangles": 2682670,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.9000000059604645,
+        "frame": 28,
+        "calls": 25,
+        "triangles": 2682670,
+        "points": 0,
+        "lines": 0
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 0.21151021887023322,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "lighting": {
+      "biome": "mangrove",
+      "key": 4.6,
+      "hemi": 0.5,
+      "fill": 0.2,
+      "palette": "world-space correlated pigments; actual incident lighting; restrained diffuse bounce",
+      "geometryChanged": false
+    },
+    "artDirection": {
+      "biome": "mangrove",
+      "seed": "27139",
+      "worldSpace": true,
+      "waterUnchanged": true
+    },
+    "trees": 95,
+    "renderer": "WebKit WebGL",
+    "matrixDigests": [
+      {
+        "name": "field-source-stand-impostors",
+        "count": 650,
+        "hash": "a79bd3ee2ea5c5abdbd2a0c686b37dbc93b83380ef61ebe3016833834e5ee7fe"
+      },
+      {
+        "name": "mangrove-unnamed-juvenile-leaves",
+        "count": 1500,
+        "hash": "4857fdf04f546df80de6cad78b2e262b483dcc1368af2ab125de2b1f3134315b"
+      },
+      {
+        "name": "mangrove-unnamed-juvenile-stems",
+        "count": 301,
+        "hash": "eccdaa946cea487d56da7b758924c3631fe69dfc17dd1b1a15539332e356de5f"
+      },
+      {
+        "name": "mangrove-low-folded-leaf-litter",
+        "count": 2446,
+        "hash": "a9524f7ebe88b3144202e321f07041c736ae6c56e6293c7a01dd25c3846851e7"
+      },
+      {
+        "name": "mangrove-fallen-shore-twigs",
+        "count": 37,
+        "hash": "91bce121521ffc77f770343c5357d7001b32dcae5367b627b55afb364d5b0f16"
+      },
+      {
+        "name": "depth-washed-gravel",
+        "count": 1900,
+        "hash": "c44c25c69b3c4e164b824d9d848ce5a0d0694071e81e468b7903c728a5235639"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "biome": "flooded",
+    "seed": "27139",
+    "mode": "after",
+    "view": "hero",
+    "file": "artifacts/wave1-fidelity/holdout/flooded-27139-after-hero.png",
+    "camera": {
+      "position": [
+        63,
+        1.9617241438612405,
+        63
+      ],
+      "target": [
+        112.49747468305833,
+        1.0617241438612406,
+        13.502525316941671
+      ],
+      "width": 640
+    },
+    "samples": [
+      {
+        "cpuSubmissionMs": 0.800000011920929,
+        "frame": 18,
+        "calls": 21,
+        "triangles": 2175446,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.7999999821186066,
+        "frame": 20,
+        "calls": 21,
+        "triangles": 2175446,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.7000000178813934,
+        "frame": 22,
+        "calls": 21,
+        "triangles": 2175446,
+        "points": 0,
+        "lines": 0
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 0.2093077945574443,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "lighting": {
+      "biome": "flooded",
+      "key": 4.6,
+      "hemi": 0.5,
+      "fill": 0.2,
+      "palette": "world-space correlated pigments; actual incident lighting; restrained diffuse bounce",
+      "geometryChanged": false
+    },
+    "artDirection": {
+      "biome": "flooded",
+      "seed": "27139",
+      "worldSpace": true,
+      "waterUnchanged": true
+    },
+    "trees": 24,
+    "renderer": "WebKit WebGL",
+    "matrixDigests": [
+      {
+        "name": "field-source-stand-impostors",
+        "count": 100,
+        "hash": "7ebcc11b508b0a554177e9062dcded12f296b00ca4c318ab4a7e849e360f2459"
+      },
+      {
+        "name": "field-dimensional-meadow",
+        "count": 2239,
+        "hash": "020e736c8d74ed0fad49318768f349f9feb60dee21240df108a8056091602c45"
+      },
+      {
+        "name": "field-distant-meadow",
+        "count": 12145,
+        "hash": "e10bce764497cd21e67deb64860e8c3230102e8171b518291f33ad7cc5d79016"
+      },
+      {
+        "name": "field-sparse-unnamed-seedheads",
+        "count": 29,
+        "hash": "f060634bb632924fa75ea8c7fe164e0b85155c713cb097aa1b3f8579826ff6fd"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "biome": "flooded",
+    "seed": "27139",
+    "mode": "after",
+    "view": "inspection",
+    "file": "artifacts/wave1-fidelity/holdout/flooded-27139-after-inspection.png",
+    "camera": {
+      "position": [
+        128,
+        46.96172414386124,
+        128
+      ],
+      "target": [
+        87.74873734152916,
+        0,
+        38.251262658470836
+      ],
+      "width": 640
+    },
+    "samples": [
+      {
+        "cpuSubmissionMs": 1,
+        "frame": 26,
+        "calls": 21,
+        "triangles": 2175446,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 3.5,
+        "frame": 28,
+        "calls": 21,
+        "triangles": 2175446,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.9000000059604645,
+        "frame": 30,
+        "calls": 21,
+        "triangles": 2175446,
+        "points": 0,
+        "lines": 0
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 0.2093077945574443,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "lighting": {
+      "biome": "flooded",
+      "key": 4.6,
+      "hemi": 0.5,
+      "fill": 0.2,
+      "palette": "world-space correlated pigments; actual incident lighting; restrained diffuse bounce",
+      "geometryChanged": false
+    },
+    "artDirection": {
+      "biome": "flooded",
+      "seed": "27139",
+      "worldSpace": true,
+      "waterUnchanged": true
+    },
+    "trees": 24,
+    "renderer": "WebKit WebGL",
+    "matrixDigests": [
+      {
+        "name": "field-source-stand-impostors",
+        "count": 100,
+        "hash": "7ebcc11b508b0a554177e9062dcded12f296b00ca4c318ab4a7e849e360f2459"
+      },
+      {
+        "name": "field-dimensional-meadow",
+        "count": 2239,
+        "hash": "020e736c8d74ed0fad49318768f349f9feb60dee21240df108a8056091602c45"
+      },
+      {
+        "name": "field-distant-meadow",
+        "count": 12145,
+        "hash": "e10bce764497cd21e67deb64860e8c3230102e8171b518291f33ad7cc5d79016"
+      },
+      {
+        "name": "field-sparse-unnamed-seedheads",
+        "count": 29,
+        "hash": "f060634bb632924fa75ea8c7fe164e0b85155c713cb097aa1b3f8579826ff6fd"
+      }
+    ],
+    "errors": []
+  }
+]

@@ -1,0 +1,36 @@
+import {libraryFoliageBatch} from './library';
+import {paintedWoodGeometry} from './paint-assets';
+import * as T from 'three';
+import type {SceneRecipe} from './recipe';
+import {landscapeField,fieldPlan,type FieldBiome} from './wave1-fields';
+import {randomSource} from './random';
+/** Bake existing rendered source stands once with the same renderer. No separate tree pipeline. */
+export function forestImpostors(scene:T.Scene,recipe:SceneRecipe,biome:FieldBiome){
+ if(!recipe.trees.length||!recipe.trees[0].studio)return()=>{};
+ const plan=fieldPlan(biome,recipe.seed),rand=randomSource(recipe.seed+'|stand-continuation'),geo=new T.PlaneGeometry(1,1),tiles:number[]=[],placements:{x:number;z:number;y:number}[]=[];
+ for(let i=0;i<10000&&placements.length<(biome==='mangrove'?650:100);i++){
+  const x=plan.eye[0]+(rand()-.5)*1000,z=plan.eye[2]+(rand()-.5)*1000,r=Math.hypot(x-plan.eye[0],z-plan.eye[2]),f=landscapeField(biome,recipe.seed,x,z);
+  if(r<75||f.woody<(biome==='mangrove'?.15:.75))continue;placements.push({x,z,y:f.height});tiles.push(Math.floor(rand()*4));
+ }
+ geo.setAttribute('standTile',new T.InstancedBufferAttribute(new Float32Array(tiles),1));
+ const mat=new T.MeshBasicMaterial({alphaTest:.38,side:T.DoubleSide,fog:true});mat.onBeforeCompile=shader=>{shader.vertexShader='attribute float standTile;\n'+shader.vertexShader;shader.vertexShader=shader.vertexShader.replace('#include <uv_vertex>','#include <uv_vertex>\n#ifdef USE_MAP\nvMapUv=(uv+vec2(mod(standTile,2.),floor(standTile/2.)))/2.;\n#endif');};
+ const mesh=new T.InstancedMesh(geo,mat,placements.length),o=new T.Object3D();mesh.name='field-source-stand-impostors';
+ placements.forEach((p,i)=>{const h=18+rand()*8;o.position.set(p.x,p.y+h*.5-.5,p.z);o.rotation.set(0,Math.atan2(plan.eye[0]-p.x,plan.eye[2]-p.z)+(rand()-.5)*.6,0);o.scale.set(h*1.1,h,1);o.updateMatrix();mesh.setMatrixAt(i,o.matrix);});mesh.computeBoundingSphere();scene.add(mesh);
+ let target:T.WebGLRenderTarget|undefined,baking=false;
+ mesh.onBeforeRender=renderer=>{
+  if(target||baking)return;baking=true;
+  const rt=new T.WebGLRenderTarget(1024,1024),originalTarget=renderer.getRenderTarget(),viewport=renderer.getViewport(new T.Vector4()),scissor=renderer.getScissor(new T.Vector4()),scissorTest=renderer.getScissorTest(),clear=renderer.getClearColor(new T.Color()),alpha=renderer.getClearAlpha(),background=scene.background,fog=scene.fog,visibility:[T.Object3D,boolean][]=[];
+  const source={...recipe.trees[0],position:[0,0,0] as [number,number,number],rotation:0},bake=new T.Scene();
+  const foliage=libraryFoliageBatch([source],source.model.presetId,recipe.appearanceSeed,true,true,false);
+  const woodGeometry=paintedWoodGeometry([{model:source.model,position:source.position,rotation:0}],true,true).geometry,woodMaterial=new T.MeshLambertMaterial({color:'#92704f'});
+  bake.add(foliage.mesh,new T.Mesh(woodGeometry,woodMaterial));scene.children.forEach(obj=>{if(obj instanceof T.Light)bake.add(obj.clone());});
+  const bounds=new T.Box3().setFromObject(bake),center=bounds.getCenter(new T.Vector3()),size=bounds.getSize(new T.Vector3()),h=size.y*1.12,w=Math.max(size.x,size.z)*1.12;
+  try{
+   renderer.setRenderTarget(rt);renderer.setScissorTest(false);renderer.setClearColor(0,0);renderer.clear();
+   const camera=new T.OrthographicCamera(-w*.5,w*.5,h*.5,-h*.5,.1,200);
+   for(let i=0;i<4;i++){const a=i*Math.PI*.5;camera.position.copy(center).add(new T.Vector3(Math.sin(a)*60,0,Math.cos(a)*60));camera.lookAt(center);camera.updateMatrixWorld();renderer.setViewport((i%2)*512,Math.floor(i/2)*512,512,512);renderer.setScissor((i%2)*512,Math.floor(i/2)*512,512,512);renderer.setScissorTest(true);renderer.render(bake,camera);}
+   target=rt;mat.map=rt.texture;mat.needsUpdate=true;scene.userData.fieldImpostors={count:placements.length,atlas:[1024,1024],source:'Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations.'};
+  }finally{foliage.mesh.geometry.dispose();foliage.mesh.material.dispose();foliage.texture.dispose();woodGeometry.dispose();woodMaterial.dispose();visibility.forEach(([obj,v])=>obj.visible=v);scene.background=background;scene.fog=fog;renderer.setRenderTarget(originalTarget);renderer.setViewport(viewport);renderer.setScissor(scissor);renderer.setScissorTest(scissorTest);renderer.setClearColor(clear,alpha);baking=false;}
+ };
+ return()=>{target?.dispose();geo.dispose();mat.dispose();};
+}

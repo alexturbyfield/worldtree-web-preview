@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-27T04:17:52.575Z",
+  "holdout": "9182743",
+  "source": {
+    "src/lib/forest/wave2-temperate.ts": "9e022ba26643fc60e969633e06f5be7c59cff759bfc795adf494c3fe67f36419",
+    "src/lib/forest/wave2-temperate-concept.ts": "75cc90c775dd87fd1df8d6ddea60c379b12d5e989abb3e759a21ee2fa0446719",
+    "src/lib/forest/wave2-temperate-depth.ts": "ec24837ca1561545872de6f3180a0f3bd2f6e4da29bfce3c66ff22c171de829d"
+  }
+}

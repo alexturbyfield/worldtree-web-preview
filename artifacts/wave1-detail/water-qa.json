@@ -1,0 +1,75 @@
+{
+  "records": [
+    {
+      "biome": "mangrove",
+      "state": "blue-no-vegetation",
+      "file": "artifacts/wave1-detail/mangrove-water-blue-no-vegetation.png",
+      "shallowDepth": null,
+      "errors": []
+    },
+    {
+      "biome": "mangrove",
+      "state": "clouds-no-vegetation",
+      "file": "artifacts/wave1-detail/mangrove-water-clouds-no-vegetation.png",
+      "shallowDepth": null,
+      "errors": []
+    },
+    {
+      "biome": "mangrove",
+      "state": "local-vegetation",
+      "file": "artifacts/wave1-detail/mangrove-water-local-vegetation.png",
+      "shallowDepth": null,
+      "errors": []
+    },
+    {
+      "biome": "mangrove",
+      "state": "shallow-sediment",
+      "file": "artifacts/wave1-detail/mangrove-water-shallow-sediment.png",
+      "shallowDepth": 0.08013191532249668,
+      "errors": []
+    },
+    {
+      "biome": "mangrove",
+      "state": "wind-ripples",
+      "file": "artifacts/wave1-detail/mangrove-water-wind-ripples.png",
+      "shallowDepth": null,
+      "errors": []
+    },
+    {
+      "biome": "flooded",
+      "state": "blue-no-vegetation",
+      "file": "artifacts/wave1-detail/flooded-water-blue-no-vegetation.png",
+      "shallowDepth": null,
+      "errors": []
+    },
+    {
+      "biome": "flooded",
+      "state": "clouds-no-vegetation",
+      "file": "artifacts/wave1-detail/flooded-water-clouds-no-vegetation.png",
+      "shallowDepth": null,
+      "errors": []
+    },
+    {
+      "biome": "flooded",
+      "state": "local-vegetation",
+      "file": "artifacts/wave1-detail/flooded-water-local-vegetation.png",
+      "shallowDepth": null,
+      "errors": []
+    },
+    {
+      "biome": "flooded",
+      "state": "shallow-sediment",
+      "file": "artifacts/wave1-detail/flooded-water-shallow-sediment.png",
+      "shallowDepth": 0.08003663771740033,
+      "errors": []
+    },
+    {
+      "biome": "flooded",
+      "state": "wind-ripples",
+      "file": "artifacts/wave1-detail/flooded-water-wind-ripples.png",
+      "shallowDepth": null,
+      "errors": []
+    }
+  ],
+  "note": "Diagnostic scene visibility/background/camera/wind overrides only; no production source edits. Actual reflection shader retained. Not physical water validation."
+}

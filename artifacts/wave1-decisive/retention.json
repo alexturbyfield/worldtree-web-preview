@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-26T17:36:38.359Z",
+  "originalFreeze": "artifacts/wave1-decisive/freeze.json",
+  "holdoutAlreadyRevealed": 6131,
+  "tuningAfterHoldout": false,
+  "action": "Selective rollback of rejected wetland presentation to retained split baseline; desert candidate unchanged. No new optimization round.",
+  "rejectedReplay": "artPass=decisive&wetStudy=rejected",
+  "sourceHashes": {
+    "src/lib/forest/wave1-desert-direction.ts": "9d1c91e5170ca615baa7945241e050a56f18c7ded8ba529f520876e5b938589e",
+    "src/lib/forest/wave1-wet-lighting.ts": "a413238a2d1d0b56e81137b14ebc84cc2e779e505594446d49a0f13bdb0064ac",
+    "src/lib/forest/wave1-rebuild.ts": "c6a3d9a9cec20be5ce6c146b4b64576eea6dea1a58f10a7a9f5950ebe8a67099",
+    "src/lib/forest/wave1-fields.ts": "3b75c341d19bcf56d8681750577d0e58a42c848ef628c0aa850e61f58f27e1cb",
+    "src/lib/forest/wave1-water.ts": "a41be61219232b2033b94abda2d7767964bcfc8b9798eb81fa748a576a3d2f35",
+    "public/assets/wave1-detail/arid-sediment-v1.webp": "67ff274ba29d736c58a2e5578bc8915289e37f5a93e3f68cb0147ea004c0ae84"
+  }
+}

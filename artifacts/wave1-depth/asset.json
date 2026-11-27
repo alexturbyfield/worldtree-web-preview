@@ -1,0 +1,24 @@
+{
+  "path": "public/assets/wave1-detail/desert-distance-v1.webp",
+  "source": "Built-in imagegen; independently generated transparent distant-land matte, user concept direction only",
+  "dimensions": [
+    2172,
+    724
+  ],
+  "requested": [
+    2048,
+    512
+  ],
+  "sha256": "f54c66be1d0ede9171192ff62b463c6ef234a69eed6fa5a54ebd45837ec782ca",
+  "worldPlacement": {
+    "distanceMetres": 1550,
+    "widthMetres": 4200,
+    "heightMetres": 700,
+    "centerHeightMetres": 140
+  },
+  "cameraVisibility": "Hidden above35m camera height; anchored sector study, not360-degree panorama",
+  "lighting": "Prepainted warm daylight, no dynamic weather/time relighting claim",
+  "geography": "Illustrative low tablelands and distant plains, not verified point-specific topography",
+  "decodedRgbaMipMiB": 7.998291015625,
+  "rights": "Generated asset; user concept rights remain unverified/private, no training consent inferred"
+}

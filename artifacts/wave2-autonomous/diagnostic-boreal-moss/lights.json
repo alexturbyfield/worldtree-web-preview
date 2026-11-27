@@ -1,0 +1,42 @@
+[
+  {
+    "mode": "normal",
+    "light": [
+      -28,
+      34,
+      -8
+    ]
+  },
+  {
+    "mode": "no-caps",
+    "light": [
+      -28,
+      34,
+      -8
+    ]
+  },
+  {
+    "mode": "no-stones",
+    "light": [
+      -28,
+      34,
+      -8
+    ]
+  },
+  {
+    "mode": "sun-off",
+    "light": [
+      -28,
+      34,
+      -8
+    ]
+  },
+  {
+    "mode": "higher-sun",
+    "light": [
+      -28,
+      52,
+      -8
+    ]
+  }
+]

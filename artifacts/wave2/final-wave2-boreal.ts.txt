@@ -1,0 +1,7 @@
+import * as T from 'three';
+import type {SceneRecipe} from './recipe';
+import {makeExpansionPlan,composeExpansionForest,mountExpansionBase,mountExpansionDressing,type ExpansionPalette} from './wave2-shared';
+const palette:ExpansionPalette={ground:['#2e513e','#50794e','#9fa96b'],soil:'#776246',air:'#91a9ad',sun:'#ffe2ad',foliage:['#213e38','#486c4b','#aab36d'],texture:'/assets/puget-v1/forest-floor.png'};
+const plan=(r:SceneRecipe)=>makeExpansionPlan('boreal',6,r.seed,.8);
+export const borealStudy={id:'boreal',biome:6,compose:(r:SceneRecipe)=>composeExpansionForest(r,plan(r),'boreal'),camera:(r:SceneRecipe)=>plan(r).camera,mount:(s:T.Scene,r:SceneRecipe,sun:T.DirectionalLight,fill:T.DirectionalLight)=>{const p=plan(r),base=mountExpansionBase(s,r,p,sun,fill,palette),floor=mountExpansionDressing(s,p,palette,'forest',false,base.load);base.finish();return()=>{floor();base.dispose();};}};
+

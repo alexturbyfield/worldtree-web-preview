@@ -1,0 +1,109 @@
+{
+  "frames": [
+    {
+      "biome": "desert",
+      "frame": 7,
+      "calls": 9,
+      "triangles": 285316,
+      "points": 0,
+      "lines": 0,
+      "instances": [
+        {
+          "name": "desert-weathered-granite",
+          "count": 38,
+          "visible": true,
+          "trianglesPerInstance": 320
+        },
+        {
+          "name": "desert-weathered-granite",
+          "count": 70,
+          "visible": true,
+          "trianglesPerInstance": 320
+        },
+        {
+          "name": "desert-weathered-granite",
+          "count": 105,
+          "visible": true,
+          "trianglesPerInstance": 320
+        },
+        {
+          "name": "desert-resolver-xeric-shrub-form",
+          "count": 420,
+          "visible": true,
+          "trianglesPerInstance": 333
+        }
+      ],
+      "treeCount": 0,
+      "cpuSubmissionMs": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.09999999403953552
+      ],
+      "textureObjects": 4
+    },
+    {
+      "biome": "mangrove",
+      "frame": 16,
+      "calls": 15,
+      "triangles": 1535238,
+      "points": 0,
+      "lines": 0,
+      "instances": [
+        {
+          "name": "mangrove-shore-root-debris",
+          "count": 339,
+          "visible": true,
+          "trianglesPerInstance": 10
+        },
+        {
+          "name": "mangrove-distant-canopy-masses",
+          "count": 46,
+          "visible": true,
+          "trianglesPerInstance": 144
+        }
+      ],
+      "treeCount": 36,
+      "cpuSubmissionMs": [
+        0.7000000178813934,
+        0.5999999940395355,
+        0.5
+      ],
+      "textureObjects": 8
+    },
+    {
+      "biome": "flooded",
+      "frame": 7,
+      "calls": 6,
+      "triangles": 469378,
+      "points": 0,
+      "lines": 0,
+      "instances": [
+        {
+          "name": "wave1-flooded-sedges",
+          "count": 3000,
+          "visible": true,
+          "trianglesPerInstance": 104
+        },
+        {
+          "name": "wave1-flooded-distant-sedges",
+          "count": 2700,
+          "visible": true,
+          "trianglesPerInstance": 20
+        }
+      ],
+      "treeCount": 0,
+      "cpuSubmissionMs": [
+        0.19999998807907104,
+        0.30000001192092896,
+        0.29999998211860657
+      ],
+      "textureObjects": 5
+    }
+  ],
+  "measurement": "Submitted calls/triangles include nested reflection pass with autoReset disabled; timings are desktop CPU submissions, not GPU frame times or mobile approval.",
+  "limitations": [
+    "No semantic vegetation buffer in this integration audit; dark lower-half pixels include water, soil and legitimate shadows.",
+    "No automatic artistic repetition/scene-boundary detector; these are explicitly reviewed in parent-review.json.",
+    "Texture object count is not texture memory or alpha-overdraw measurement."
+  ]
+}

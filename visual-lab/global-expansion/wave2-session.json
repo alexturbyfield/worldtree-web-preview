@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "wave2-initial-boreal-temperate-tundra",
+  "date": "2026-11-26",
+  "generatorVersion": "b1f4a12d21d281f74fed23932daa056d2da845cb plus frozen uncommitted source hashes",
+  "report": "artifacts/wave2/REPORT.md",
+  "sourceFreeze": "artifacts/wave2/freeze.json",
+  "baselineRecovery": "artifacts/wave2/baseline-source/src",
+  "loadedGuidance": ["AGENTS.md", "docs/visual-quality-workflow.md", "visual-lab/art-direction-policy.json", "visual-lab/global-expansion/INVENTORY.md", ".agents/skills/prototype-fast/SKILL.md", ".agents/skills/visual-review/SKILL.md"],
+  "humanDecision": {"evidence": "User said Yes to the audited next-three selection, then Continue", "scope": "Authorize implementation of boreal BIO6, temperate BIO4 and tundra BIO11 prototypes", "candidateApproval": false},
+  "vision": {"actualImageInterpretation": true, "reviewer": "root using view_image", "independent": false, "humanReviewOfNewImages": false},
+  "references": ["wave2-boreal-fws", "wave2-temperate-usgs-canopy", "wave2-temperate-usgs-distance", "wave2-tundra-fws"],
+  "developmentSeeds": [29, 41, 73],
+  "holdouts": {"boreal": 20717, "temperate": 23819, "tundra": 26123},
+  "captureConfig": "artifacts/wave2/capture.cjs and per-frame report.json",
+  "findings": "artifacts/wave2/validation.json",
+  "history": [
+    {"checkpoint": "r1", "hypothesis": "Transfer existing low-cover and source-tree presentation systems into ecological families", "visibleResult": "Sparse prototypes; insufficient forest enclosure", "severity": "major", "decision": "revise"},
+    {"checkpoint": "r2", "hypothesis": "Broader cover and baked continuation can connect the ground and distant stand", "visibleResult": "Brown brush strips and bare card continuation", "severity": "major", "decision": "reject-as-artistic-result"},
+    {"checkpoint": "r3", "hypothesis": "Correct palette remap and source birch rendering before assessing massing", "visibleResult": "Color/specimen response improved; enclosure still weak", "severity": "major", "decision": "revise"},
+    {"checkpoint": "r4", "hypothesis": "Conifer-biased eligible presentation and low-detail continuation improve stand identity", "visibleResult": "Boreal enclosure improves; temperate remains park-like and tundra weak; inspection exposes repeated pigment cells", "severity": "major", "decision": "retain-for-review-only"}
+  ],
+  "rules": [
+    {"principle": "Route explicit biome studies using actual metadata and retain fallback", "status": "experimentally-supported", "evidence": "artifacts/wave2/data-checks.json", "kind": "technical", "globalArtisticApproval": false},
+    {"principle": "Preserve canonical ecology while composing source-linked presentation occurrences", "status": "experimentally-supported", "evidence": "artifacts/wave2/data-checks.json", "limitation": "Presentation changes are artistic; regional candidates are not verified local occurrence"},
+    {"principle": "Generic savanna brush cover suffices for tundra heath", "status": "rejected", "evidence": "artifacts/wave2/inspection-seeds.png", "reason": "Pasted low shapes and weak continuous vegetation"},
+    {"principle": "Broad cellular pigment fields produce a finished forest floor", "status": "rejected", "evidence": "artifacts/wave2/inspection-seeds.png", "reason": "Obvious rounded recurring patches in elevated view"},
+    {"principle": "Layered conifer continuation strengthens boreal enclosure", "status": "experimentally-supported", "evidence": "artifacts/wave2/comparison.png", "limitation": "Fallback foliage and lighting still below target; not human-approved"}
+  ],
+  "status": "stopped-at-bounded-review-checkpoint",
+  "correctionRoundsUsed": 3,
+  "remainingBudget": 0,
+  "humanApproval": null,
+  "humanApprovedBestChanged": false,
+  "globalPromotion": false,
+  "trainingOccurred": false,
+  "parallelWork": "Three reference-gathering agents stopped at usage cap; root continued serially. Do not claim completed parallel implementation.",
+  "limitations": ["Family/seed synthetic terrain does not use geographic elevation", "Generic visual tree fallbacks limit regional variety", "Ground patterns and low-cover representation remain inadequate", "No mobile device or alpha-overdraw validation", "Independent weather/season/time metadata is not a completed simulation"]
+}

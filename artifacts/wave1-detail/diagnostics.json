@@ -1,0 +1,86 @@
+[
+  {
+    "biome": "mangrove",
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 0.2607121371096338,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "intersections": [],
+    "detail": {
+      "version": 3,
+      "pockets": 63,
+      "nearShoreAnchors": 7,
+      "seedlings": 209,
+      "leaves": 1026,
+      "litter": 1532,
+      "twigs": 44,
+      "drawCalls": 4,
+      "footprint": "forward 2..7m, abs(side)<1.5m: no plants/twigs; litter below .03m",
+      "ecology": "Unnamed juvenile growth forms and fallen fragments; synthetic moisture/tree/shore association, no species or occurrence claim"
+    },
+    "plan": {
+      "biome": "mangrove",
+      "seed": "29",
+      "eye": [
+        72,
+        2.077603828842169,
+        -18
+      ],
+      "target": [
+        142,
+        1.1776038288421693,
+        -18.000000000000004
+      ],
+      "heading": 1.5707963267948966,
+      "stagingClearance": 0.15266596056652895
+    },
+    "actualWaterMask": {
+      "fullFrame": 0.09920572916666667,
+      "lowerHalf": 0.19514756944444445,
+      "middleBand": 0.31933238636363637,
+      "method": "White actual water fragments with original terrain/opaque grass and alpha-tested foliage depth occlusion. Not a ground-area fraction or artistic score."
+    },
+    "errors": []
+  },
+  {
+    "biome": "flooded",
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 0.14770435479323532,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "intersections": [],
+    "plan": {
+      "biome": "flooded",
+      "seed": "29",
+      "eye": [
+        -63,
+        1.7116061343029232,
+        -27
+      ],
+      "target": [
+        -112.49747468305833,
+        0.8116061343029232,
+        -76.49747468305831
+      ],
+      "heading": 5.497787143782138,
+      "stagingClearance": 0.10796727499743605
+    },
+    "actualWaterMask": {
+      "fullFrame": 0.043919270833333336,
+      "lowerHalf": 0.08335069444444444,
+      "middleBand": 0.13639204545454545,
+      "method": "White actual water fragments with original terrain/opaque grass and alpha-tested foliage depth occlusion. Not a ground-area fraction or artistic score."
+    },
+    "errors": []
+  }
+]

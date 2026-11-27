@@ -1,0 +1,58 @@
+[
+  {
+    "name": "puget-hero",
+    "before": "artifacts/visual-quality/wave1-protected-before/puget-hero.png",
+    "after": "artifacts/visual-quality/wave1-protected-split/puget-hero.png",
+    "pixelIdentical": true,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "name": "rainforest-hero",
+    "before": "artifacts/visual-quality/wave1-protected-before/rainforest-hero.png",
+    "after": "artifacts/visual-quality/wave1-protected-split/rainforest-hero.png",
+    "pixelIdentical": true,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "name": "rainforest-inspection",
+    "before": "artifacts/visual-quality/wave1-protected-before/rainforest-inspection.png",
+    "after": "artifacts/visual-quality/wave1-protected-split/rainforest-inspection.png",
+    "pixelIdentical": true,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "name": "savanna-hero",
+    "before": "artifacts/visual-quality/wave1-savanna-before/savanna-hero.png",
+    "after": "artifacts/visual-quality/wave1-savanna-split/savanna-hero.png",
+    "pixelIdentical": true,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "name": "savanna-inspection",
+    "before": "artifacts/visual-quality/wave1-savanna-before/savanna-inspection.png",
+    "after": "artifacts/visual-quality/wave1-savanna-split/savanna-inspection.png",
+    "pixelIdentical": true,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "name": "alpine-hero",
+    "before": "artifacts/visual-quality/wave1-alpine-before/alpine-hero.png",
+    "after": "artifacts/visual-quality/wave1-alpine-split/alpine-hero.png",
+    "pixelIdentical": true,
+    "changedPixels": 0,
+    "maxDelta": 0
+  },
+  {
+    "name": "alpine-inspection",
+    "before": "artifacts/visual-quality/wave1-alpine-before/alpine-inspection.png",
+    "after": "artifacts/visual-quality/wave1-alpine-split/alpine-inspection.png",
+    "pixelIdentical": true,
+    "changedPixels": 0,
+    "maxDelta": 0
+  }
+]

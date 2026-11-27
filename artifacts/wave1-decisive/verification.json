@@ -1,0 +1,1109 @@
+[
+  {
+    "biome": "desert",
+    "seed": "29",
+    "materials": [
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "field-existing-sky",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "field-sky-seam-feather-1"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "arid-world-albedo-1|desert-substrate-3|assembly-sediment-1"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "arid-world-albedo-1|desert-substrate-3|assembly-sediment-1"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "arid-world-albedo-1|desert-substrate-3|assembly-sediment-1"
+      },
+      {
+        "mesh": "field-jointed-bedrock",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3|eroded-mineral-relief-1"
+      },
+      {
+        "mesh": "field-jointed-bedrock",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3|eroded-mineral-relief-1"
+      },
+      {
+        "mesh": "field-jointed-bedrock",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3|eroded-mineral-relief-1"
+      },
+      {
+        "mesh": "field-jointed-bedrock",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3|eroded-mineral-relief-1"
+      },
+      {
+        "mesh": "field-jointed-bedrock",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3|eroded-mineral-relief-1"
+      },
+      {
+        "mesh": "field-jointed-bedrock",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3|eroded-mineral-relief-1"
+      },
+      {
+        "mesh": "desert-contact-gravel",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3"
+      },
+      {
+        "mesh": "desert-unnamed-open-shrub",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "desert-unnamed-open-shrub",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "desert-unnamed-dry-fibres",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "diagnostic-character-capsule",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 1.1732626222280358,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "hits": [],
+    "shaderErrors": []
+  },
+  {
+    "biome": "desert",
+    "seed": "41",
+    "materials": [
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "field-existing-sky",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "field-sky-seam-feather-1"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "arid-world-albedo-1|desert-substrate-3|assembly-sediment-1"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "arid-world-albedo-1|desert-substrate-3|assembly-sediment-1"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "arid-world-albedo-1|desert-substrate-3|assembly-sediment-1"
+      },
+      {
+        "mesh": "field-jointed-bedrock",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3|eroded-mineral-relief-1"
+      },
+      {
+        "mesh": "field-jointed-bedrock",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3|eroded-mineral-relief-1"
+      },
+      {
+        "mesh": "field-jointed-bedrock",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3|eroded-mineral-relief-1"
+      },
+      {
+        "mesh": "field-jointed-bedrock",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3|eroded-mineral-relief-1"
+      },
+      {
+        "mesh": "field-jointed-bedrock",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3|eroded-mineral-relief-1"
+      },
+      {
+        "mesh": "field-jointed-bedrock",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3|eroded-mineral-relief-1"
+      },
+      {
+        "mesh": "desert-contact-gravel",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3"
+      },
+      {
+        "mesh": "desert-unnamed-open-shrub",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "desert-unnamed-open-shrub",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "desert-unnamed-dry-fibres",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "diagnostic-character-capsule",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 1.5758650105426235,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "hits": [],
+    "shaderErrors": []
+  },
+  {
+    "biome": "desert",
+    "seed": "6131",
+    "materials": [
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "field-existing-sky",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "field-sky-seam-feather-1"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "arid-world-albedo-1|desert-substrate-3|assembly-sediment-1"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "arid-world-albedo-1|desert-substrate-3|assembly-sediment-1"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "arid-world-albedo-1|desert-substrate-3|assembly-sediment-1"
+      },
+      {
+        "mesh": "field-jointed-bedrock",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3|eroded-mineral-relief-1"
+      },
+      {
+        "mesh": "field-jointed-bedrock",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3|eroded-mineral-relief-1"
+      },
+      {
+        "mesh": "field-jointed-bedrock",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3|eroded-mineral-relief-1"
+      },
+      {
+        "mesh": "field-jointed-bedrock",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3|eroded-mineral-relief-1"
+      },
+      {
+        "mesh": "field-jointed-bedrock",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3|eroded-mineral-relief-1"
+      },
+      {
+        "mesh": "field-jointed-bedrock",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3|eroded-mineral-relief-1"
+      },
+      {
+        "mesh": "desert-contact-gravel",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "desert-mineral-joints-3"
+      },
+      {
+        "mesh": "desert-unnamed-open-shrub",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "desert-unnamed-open-shrub",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "desert-unnamed-dry-fibres",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "diagnostic-character-capsule",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 1.1570100311142106,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "hits": [],
+    "shaderErrors": []
+  },
+  {
+    "biome": "mangrove",
+    "seed": "29",
+    "materials": [
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|wet-pigment-1|mangrove|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|wet-pigment-1|mangrove|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "field-existing-sky",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "field-sky-seam-feather-1"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-continuous-wet-substrate-1|true|wet-pigment-1|mangrove|true|false|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-continuous-wet-substrate-1|true|wet-pigment-1|mangrove|true|false|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-continuous-wet-substrate-1|true|wet-pigment-1|mangrove|true|false|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "field-source-stand-impostors",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "source-stand-cylindrical-billboard-1"
+      },
+      {
+        "mesh": "",
+        "type": "ShaderMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "mangrove-unnamed-juvenile-leaves",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|wet-pigment-1|mangrove|false|false|true|false|preserved-texture-2"
+      },
+      {
+        "mesh": "mangrove-unnamed-juvenile-stems",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "mangrove-low-folded-leaf-litter",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|wet-pigment-1|mangrove|false|false|true|false|preserved-texture-2"
+      },
+      {
+        "mesh": "mangrove-fallen-shore-twigs",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "diagnostic-character-capsule",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|attention-v2-wood-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#72978b\"}|wet-pigment-1|mangrove|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "",
+        "type": "ShaderMaterial",
+        "canopy": true,
+        "key": "(shader, renderer)=>{\n                        before.call(mat, shader, renderer);\n                        // Replace the library's broad fixed fill with cooler readable interior light\n                        // and stronger response to its existing per-spray actual directional normal.\n                        shader.fragmentShader = shader.fragmentShader.replace('vec3(.32,.48,.55)+actualSunColor*actualSunPower*actualNdotL*1.65', 'vec3(.40,.53,.57)+actualSunColor*actualSunPower*pow(actualNdotL,1.35)*1.85');\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('shaded=attentionGrade(shaded);', `shaded=attentionGrade(shaded);float crownSun=smoothstep(.45,.9,actualNdotL)*smoothstep(.4,.85,attentionHeight)*(1.-smoothstep(55.,180.,distance(attentionWorld,attentionAnchor)));shaded=mix(shaded,highPigment*.75,crownSun*.40);`);\n                    }|attention-v2-library-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#72978b\"}|wet-incident-1|crown-sun-2"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|attention-v2-wood-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#72978b\"}|wet-pigment-1|mangrove|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "",
+        "type": "ShaderMaterial",
+        "canopy": true,
+        "key": "(shader, renderer)=>{\n                        before.call(mat, shader, renderer);\n                        // Replace the library's broad fixed fill with cooler readable interior light\n                        // and stronger response to its existing per-spray actual directional normal.\n                        shader.fragmentShader = shader.fragmentShader.replace('vec3(.32,.48,.55)+actualSunColor*actualSunPower*actualNdotL*1.65', 'vec3(.40,.53,.57)+actualSunColor*actualSunPower*pow(actualNdotL,1.35)*1.85');\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('shaded=attentionGrade(shaded);', `shaded=attentionGrade(shaded);float crownSun=smoothstep(.45,.9,actualNdotL)*smoothstep(.4,.85,attentionHeight)*(1.-smoothstep(55.,180.,distance(attentionWorld,attentionAnchor)));shaded=mix(shaded,highPigment*.75,crownSun*.40);`);\n                    }|attention-v2-library-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#72978b\"}|wet-incident-1|crown-sun-2"
+      },
+      {
+        "mesh": "",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 0.2607121371096338,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "hits": [],
+    "shaderErrors": []
+  },
+  {
+    "biome": "mangrove",
+    "seed": "41",
+    "materials": [
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|wet-pigment-1|mangrove|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|wet-pigment-1|mangrove|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "field-existing-sky",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "field-sky-seam-feather-1"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-continuous-wet-substrate-1|true|wet-pigment-1|mangrove|true|false|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-continuous-wet-substrate-1|true|wet-pigment-1|mangrove|true|false|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-continuous-wet-substrate-1|true|wet-pigment-1|mangrove|true|false|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "field-source-stand-impostors",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "source-stand-cylindrical-billboard-1"
+      },
+      {
+        "mesh": "",
+        "type": "ShaderMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "mangrove-unnamed-juvenile-leaves",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|wet-pigment-1|mangrove|false|false|true|false|preserved-texture-2"
+      },
+      {
+        "mesh": "mangrove-unnamed-juvenile-stems",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "mangrove-low-folded-leaf-litter",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|wet-pigment-1|mangrove|false|false|true|false|preserved-texture-2"
+      },
+      {
+        "mesh": "mangrove-fallen-shore-twigs",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "diagnostic-character-capsule",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|attention-v2-wood-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#72978b\"}|wet-pigment-1|mangrove|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "",
+        "type": "ShaderMaterial",
+        "canopy": true,
+        "key": "(shader, renderer)=>{\n                        before.call(mat, shader, renderer);\n                        // Replace the library's broad fixed fill with cooler readable interior light\n                        // and stronger response to its existing per-spray actual directional normal.\n                        shader.fragmentShader = shader.fragmentShader.replace('vec3(.32,.48,.55)+actualSunColor*actualSunPower*actualNdotL*1.65', 'vec3(.40,.53,.57)+actualSunColor*actualSunPower*pow(actualNdotL,1.35)*1.85');\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('shaded=attentionGrade(shaded);', `shaded=attentionGrade(shaded);float crownSun=smoothstep(.45,.9,actualNdotL)*smoothstep(.4,.85,attentionHeight)*(1.-smoothstep(55.,180.,distance(attentionWorld,attentionAnchor)));shaded=mix(shaded,highPigment*.75,crownSun*.40);`);\n                    }|attention-v2-library-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#72978b\"}|wet-incident-1|crown-sun-2"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|attention-v2-wood-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#72978b\"}|wet-pigment-1|mangrove|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "",
+        "type": "ShaderMaterial",
+        "canopy": true,
+        "key": "(shader, renderer)=>{\n                        before.call(mat, shader, renderer);\n                        // Replace the library's broad fixed fill with cooler readable interior light\n                        // and stronger response to its existing per-spray actual directional normal.\n                        shader.fragmentShader = shader.fragmentShader.replace('vec3(.32,.48,.55)+actualSunColor*actualSunPower*actualNdotL*1.65', 'vec3(.40,.53,.57)+actualSunColor*actualSunPower*pow(actualNdotL,1.35)*1.85');\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('shaded=attentionGrade(shaded);', `shaded=attentionGrade(shaded);float crownSun=smoothstep(.45,.9,actualNdotL)*smoothstep(.4,.85,attentionHeight)*(1.-smoothstep(55.,180.,distance(attentionWorld,attentionAnchor)));shaded=mix(shaded,highPigment*.75,crownSun*.40);`);\n                    }|attention-v2-library-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#72978b\"}|wet-incident-1|crown-sun-2"
+      },
+      {
+        "mesh": "",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 0.16662988049795863,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "hits": [],
+    "shaderErrors": []
+  },
+  {
+    "biome": "mangrove",
+    "seed": "6131",
+    "materials": [
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|wet-pigment-1|mangrove|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|wet-pigment-1|mangrove|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "field-existing-sky",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "field-sky-seam-feather-1"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-continuous-wet-substrate-1|true|wet-pigment-1|mangrove|true|false|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-continuous-wet-substrate-1|true|wet-pigment-1|mangrove|true|false|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-continuous-wet-substrate-1|true|wet-pigment-1|mangrove|true|false|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "field-source-stand-impostors",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "source-stand-cylindrical-billboard-1"
+      },
+      {
+        "mesh": "",
+        "type": "ShaderMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "mangrove-unnamed-juvenile-leaves",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|wet-pigment-1|mangrove|false|false|true|false|preserved-texture-2"
+      },
+      {
+        "mesh": "mangrove-unnamed-juvenile-stems",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "mangrove-low-folded-leaf-litter",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|wet-pigment-1|mangrove|false|false|true|false|preserved-texture-2"
+      },
+      {
+        "mesh": "mangrove-fallen-shore-twigs",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "diagnostic-character-capsule",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|attention-v2-wood-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#72978b\"}|wet-pigment-1|mangrove|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "",
+        "type": "ShaderMaterial",
+        "canopy": true,
+        "key": "(shader, renderer)=>{\n                        before.call(mat, shader, renderer);\n                        // Replace the library's broad fixed fill with cooler readable interior light\n                        // and stronger response to its existing per-spray actual directional normal.\n                        shader.fragmentShader = shader.fragmentShader.replace('vec3(.32,.48,.55)+actualSunColor*actualSunPower*actualNdotL*1.65', 'vec3(.40,.53,.57)+actualSunColor*actualSunPower*pow(actualNdotL,1.35)*1.85');\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('shaded=attentionGrade(shaded);', `shaded=attentionGrade(shaded);float crownSun=smoothstep(.45,.9,actualNdotL)*smoothstep(.4,.85,attentionHeight)*(1.-smoothstep(55.,180.,distance(attentionWorld,attentionAnchor)));shaded=mix(shaded,highPigment*.75,crownSun*.40);`);\n                    }|attention-v2-library-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#72978b\"}|wet-incident-1|crown-sun-2"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|attention-v2-wood-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#72978b\"}|wet-pigment-1|mangrove|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "",
+        "type": "ShaderMaterial",
+        "canopy": true,
+        "key": "(shader, renderer)=>{\n                        before.call(mat, shader, renderer);\n                        // Replace the library's broad fixed fill with cooler readable interior light\n                        // and stronger response to its existing per-spray actual directional normal.\n                        shader.fragmentShader = shader.fragmentShader.replace('vec3(.32,.48,.55)+actualSunColor*actualSunPower*actualNdotL*1.65', 'vec3(.40,.53,.57)+actualSunColor*actualSunPower*pow(actualNdotL,1.35)*1.85');\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('shaded=attentionGrade(shaded);', `shaded=attentionGrade(shaded);float crownSun=smoothstep(.45,.9,actualNdotL)*smoothstep(.4,.85,attentionHeight)*(1.-smoothstep(55.,180.,distance(attentionWorld,attentionAnchor)));shaded=mix(shaded,highPigment*.75,crownSun*.40);`);\n                    }|attention-v2-library-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#72978b\"}|wet-incident-1|crown-sun-2"
+      },
+      {
+        "mesh": "",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 0.2833468494065741,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "hits": [],
+    "shaderErrors": []
+  },
+  {
+    "biome": "flooded",
+    "seed": "29",
+    "materials": [
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|wet-pigment-1|flooded|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|wet-pigment-1|flooded|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "field-existing-sky",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "field-sky-seam-feather-1"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-continuous-wet-substrate-1|false|wet-pigment-1|flooded|true|false|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-continuous-wet-substrate-1|false|wet-pigment-1|flooded|true|false|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-continuous-wet-substrate-1|false|wet-pigment-1|flooded|true|false|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "field-source-stand-impostors",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "source-stand-cylindrical-billboard-1"
+      },
+      {
+        "mesh": "",
+        "type": "ShaderMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "field-dimensional-meadow",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-meadow-soft-normal-3|leaf-scatter|false|wet-pigment-1|flooded|false|true|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "field-distant-meadow",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-meadow-soft-normal-3|leaf-scatter|true|wet-pigment-1|flooded|false|true|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "field-sparse-unnamed-seedheads",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-meadow-soft-normal-3|leaf-scatter|false"
+      },
+      {
+        "mesh": "diagnostic-character-capsule",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|attention-v2-wood-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#78977c\"}|wet-pigment-1|flooded|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "",
+        "type": "ShaderMaterial",
+        "canopy": true,
+        "key": "(shader, renderer)=>{\n                        before.call(mat, shader, renderer);\n                        // Replace the library's broad fixed fill with cooler readable interior light\n                        // and stronger response to its existing per-spray actual directional normal.\n                        shader.fragmentShader = shader.fragmentShader.replace('vec3(.32,.48,.55)+actualSunColor*actualSunPower*actualNdotL*1.65', 'vec3(.40,.53,.57)+actualSunColor*actualSunPower*pow(actualNdotL,1.35)*1.85');\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('shaded=attentionGrade(shaded);', `shaded=attentionGrade(shaded);float crownSun=smoothstep(.45,.9,actualNdotL)*smoothstep(.4,.85,attentionHeight)*(1.-smoothstep(55.,180.,distance(attentionWorld,attentionAnchor)));shaded=mix(shaded,highPigment*.75,crownSun*.40);`);\n                    }|attention-v2-library-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#78977c\"}|wet-incident-1|crown-sun-2"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|attention-v2-wood-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#78977c\"}|wet-pigment-1|flooded|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "",
+        "type": "ShaderMaterial",
+        "canopy": true,
+        "key": "(shader, renderer)=>{\n                        before.call(mat, shader, renderer);\n                        // Replace the library's broad fixed fill with cooler readable interior light\n                        // and stronger response to its existing per-spray actual directional normal.\n                        shader.fragmentShader = shader.fragmentShader.replace('vec3(.32,.48,.55)+actualSunColor*actualSunPower*actualNdotL*1.65', 'vec3(.40,.53,.57)+actualSunColor*actualSunPower*pow(actualNdotL,1.35)*1.85');\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('shaded=attentionGrade(shaded);', `shaded=attentionGrade(shaded);float crownSun=smoothstep(.45,.9,actualNdotL)*smoothstep(.4,.85,attentionHeight)*(1.-smoothstep(55.,180.,distance(attentionWorld,attentionAnchor)));shaded=mix(shaded,highPigment*.75,crownSun*.40);`);\n                    }|attention-v2-library-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#78977c\"}|wet-incident-1|crown-sun-2"
+      },
+      {
+        "mesh": "",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 0.14770435479323532,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "hits": [],
+    "shaderErrors": []
+  },
+  {
+    "biome": "flooded",
+    "seed": "41",
+    "materials": [
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|wet-pigment-1|flooded|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|wet-pigment-1|flooded|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "field-existing-sky",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "field-sky-seam-feather-1"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-continuous-wet-substrate-1|false|wet-pigment-1|flooded|true|false|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-continuous-wet-substrate-1|false|wet-pigment-1|flooded|true|false|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-continuous-wet-substrate-1|false|wet-pigment-1|flooded|true|false|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "field-source-stand-impostors",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "source-stand-cylindrical-billboard-1"
+      },
+      {
+        "mesh": "",
+        "type": "ShaderMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "field-dimensional-meadow",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-meadow-soft-normal-3|leaf-scatter|false|wet-pigment-1|flooded|false|true|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "field-distant-meadow",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-meadow-soft-normal-3|leaf-scatter|true|wet-pigment-1|flooded|false|true|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "field-sparse-unnamed-seedheads",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-meadow-soft-normal-3|leaf-scatter|false"
+      },
+      {
+        "mesh": "diagnostic-character-capsule",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|attention-v2-wood-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#78977c\"}|wet-pigment-1|flooded|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "",
+        "type": "ShaderMaterial",
+        "canopy": true,
+        "key": "(shader, renderer)=>{\n                        before.call(mat, shader, renderer);\n                        // Replace the library's broad fixed fill with cooler readable interior light\n                        // and stronger response to its existing per-spray actual directional normal.\n                        shader.fragmentShader = shader.fragmentShader.replace('vec3(.32,.48,.55)+actualSunColor*actualSunPower*actualNdotL*1.65', 'vec3(.40,.53,.57)+actualSunColor*actualSunPower*pow(actualNdotL,1.35)*1.85');\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('shaded=attentionGrade(shaded);', `shaded=attentionGrade(shaded);float crownSun=smoothstep(.45,.9,actualNdotL)*smoothstep(.4,.85,attentionHeight)*(1.-smoothstep(55.,180.,distance(attentionWorld,attentionAnchor)));shaded=mix(shaded,highPigment*.75,crownSun*.40);`);\n                    }|attention-v2-library-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#78977c\"}|wet-incident-1|crown-sun-2"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|attention-v2-wood-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#78977c\"}|wet-pigment-1|flooded|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "",
+        "type": "ShaderMaterial",
+        "canopy": true,
+        "key": "(shader, renderer)=>{\n                        before.call(mat, shader, renderer);\n                        // Replace the library's broad fixed fill with cooler readable interior light\n                        // and stronger response to its existing per-spray actual directional normal.\n                        shader.fragmentShader = shader.fragmentShader.replace('vec3(.32,.48,.55)+actualSunColor*actualSunPower*actualNdotL*1.65', 'vec3(.40,.53,.57)+actualSunColor*actualSunPower*pow(actualNdotL,1.35)*1.85');\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('shaded=attentionGrade(shaded);', `shaded=attentionGrade(shaded);float crownSun=smoothstep(.45,.9,actualNdotL)*smoothstep(.4,.85,attentionHeight)*(1.-smoothstep(55.,180.,distance(attentionWorld,attentionAnchor)));shaded=mix(shaded,highPigment*.75,crownSun*.40);`);\n                    }|attention-v2-library-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#78977c\"}|wet-incident-1|crown-sun-2"
+      },
+      {
+        "mesh": "",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 0.13725945311205892,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "hits": [],
+    "shaderErrors": []
+  },
+  {
+    "biome": "flooded",
+    "seed": "6131",
+    "materials": [
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|wet-pigment-1|flooded|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|wet-pigment-1|flooded|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "field-existing-sky",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "field-sky-seam-feather-1"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-continuous-wet-substrate-1|false|wet-pigment-1|flooded|true|false|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-continuous-wet-substrate-1|false|wet-pigment-1|flooded|true|false|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "connected-field-terrain",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-continuous-wet-substrate-1|false|wet-pigment-1|flooded|true|false|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "field-source-stand-impostors",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "source-stand-cylindrical-billboard-1"
+      },
+      {
+        "mesh": "",
+        "type": "ShaderMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "field-dimensional-meadow",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-meadow-soft-normal-3|leaf-scatter|false|wet-pigment-1|flooded|false|true|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "field-distant-meadow",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-meadow-soft-normal-3|leaf-scatter|true|wet-pigment-1|flooded|false|true|false|false|preserved-texture-2"
+      },
+      {
+        "mesh": "field-sparse-unnamed-seedheads",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "wave1-meadow-soft-normal-3|leaf-scatter|false"
+      },
+      {
+        "mesh": "diagnostic-character-capsule",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|attention-v2-wood-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#78977c\"}|wet-pigment-1|flooded|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "",
+        "type": "ShaderMaterial",
+        "canopy": true,
+        "key": "(shader, renderer)=>{\n                        before.call(mat, shader, renderer);\n                        // Replace the library's broad fixed fill with cooler readable interior light\n                        // and stronger response to its existing per-spray actual directional normal.\n                        shader.fragmentShader = shader.fragmentShader.replace('vec3(.32,.48,.55)+actualSunColor*actualSunPower*actualNdotL*1.65', 'vec3(.40,.53,.57)+actualSunColor*actualSunPower*pow(actualNdotL,1.35)*1.85');\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('shaded=attentionGrade(shaded);', `shaded=attentionGrade(shaded);float crownSun=smoothstep(.45,.9,actualNdotL)*smoothstep(.4,.85,attentionHeight)*(1.-smoothstep(55.,180.,distance(attentionWorld,attentionAnchor)));shaded=mix(shaded,highPigment*.75,crownSun*.40);`);\n                    }|attention-v2-library-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#78977c\"}|wet-incident-1|crown-sun-2"
+      },
+      {
+        "mesh": "",
+        "type": "MeshStandardMaterial",
+        "canopy": false,
+        "key": "(shader, renderer)=>{\n                        previous.call(mat, shader, renderer);\n                        shader.vertexShader = 'varying vec3 wetPigmentWorld;varying float wetBladeHeight;\\n' + shader.vertexShader;\n                        shader.vertexShader = shader.vertexShader.replace('#include <begin_vertex>', `#include <begin_vertex>\n       vec4 wetP=vec4(transformed,1.);\n       #ifdef USE_INSTANCING\n       wetP=instanceMatrix*wetP;\n       #endif\n       wetPigmentWorld=(modelMatrix*wetP).xyz;wetBladeHeight=clamp(position.y/.7,0.,1.);`);\n                        shader.fragmentShader = `varying vec3 wetPigmentWorld;varying float wetBladeHeight;\n       float wetHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}\n       float wetNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(wetHash(i),wetHash(i+vec2(1,0)),f.x),mix(wetHash(i+vec2(0,1)),wetHash(i+vec2(1,1)),f.x),f.y);}\n       ` + shader.fragmentShader;\n                        const anchors = grass ? [\n                            '#5d744d',\n                            '#94a464',\n                            '#d8c878'\n                        ] : leaf ? [\n                            '#304f3a',\n                            '#5e8748',\n                            '#b5ca69'\n                        ] : wood ? [\n                            '#463e36',\n                            '#84634c',\n                            '#c3986c'\n                        ] : biome === 'mangrove' ? [\n                            '#514b42',\n                            '#89715a',\n                            '#c0a078'\n                        ] : [\n                            '#5c5b4b',\n                            '#8c7d5d',\n                            '#bba477'\n                        ];\n                        if (!decisive) {\n                            if (grass) anchors.splice(0, 3, '#596f4c', '#91a35d', '#d9c77c');\n                            else if (ground) anchors.splice(0, 3, ...biome === 'mangrove' ? [\n                                '#514d43',\n                                '#88745d',\n                                '#b59a70'\n                            ] : [\n                                '#5e5c4c',\n                                '#8b795c',\n                                '#b49a6b'\n                            ]);\n                        }\n                        anchors.forEach((c, i)=>shader.uniforms['wetPigment' + i] = {\n                                value: new __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$three$2f$build$2f$three$2e$core$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__[\"Color\"](c)\n                            });\n                        shader.fragmentShader = 'uniform vec3 wetPigment0,wetPigment1,wetPigment2;\\n' + shader.fragmentShader;\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <roughnessmap_fragment>', `\n       float pigmentField=wetNoise(wetPigmentWorld.xz*.095+wetNoise(wetPigmentWorld.xz*.033)*2.);\n       float textureValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));\n       vec3 pigment=mix(wetPigment0,wetPigment1,smoothstep(.18,.64,pigmentField));\n       pigment=mix(pigment,wetPigment2,smoothstep(.62,.9,pigmentField)*${grass ? '.48' : '.24'});\n       ${decisive ? `float moist=max(1.-smoothstep(.01,.24,wetPigmentWorld.y),.65*smoothstep(.35,.7,wetNoise(wetPigmentWorld.xz*.25))*(1.-pigmentField*.6));\n       pigment=mix(pigment,wetPigment0,moist*.7);\n       vec3 texturePigment=pigment*${grass ? '(.65+textureValue*1.2)' : 'pow(textureValue/max(.025,dot(pigment,vec3(.2126,.7152,.0722))),1.18)'};\n       diffuseColor.rgb=mix(diffuseColor.rgb,texturePigment,${grass ? '.85' : ground ? '.65' : '.55'});\n       ${ground ? `diffuseColor.rgb*=mix(.62,1.32,smoothstep(.25,.74,pigmentField))*(1.-moist*.24);` : ''}` : `diffuseColor.rgb=mix(diffuseColor.rgb,pigment*(.75+min(textureValue,1.)*.7),${grass ? '.72' : ground ? '.48' : '.55'});`}\n       ${grass ? 'diffuseColor.rgb*=mix(vec3(.72,.84,.81),vec3(1.10,1.04,.88),wetBladeHeight);' : ''}\n       #include <roughnessmap_fragment>\n      `);\n                        // Small diffuse bounce inherits local pigment, most visible on upward surfaces.\n                        shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.055,.060,.047)*(.4+.6*max(0.,dot(normal,mat3(viewMatrix)*vec3(0.,1.,0.))));`);\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('#include <lights_fragment_end>', `#include <lights_fragment_end>\n       reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.11,.095,.062)*(1.-smoothstep(.015,.20,wetPigmentWorld.y));`);\n                    }|attention-v2-wood-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#78977c\"}|wet-pigment-1|flooded|false|false|false|true|preserved-texture-2"
+      },
+      {
+        "mesh": "",
+        "type": "ShaderMaterial",
+        "canopy": true,
+        "key": "(shader, renderer)=>{\n                        before.call(mat, shader, renderer);\n                        // Replace the library's broad fixed fill with cooler readable interior light\n                        // and stronger response to its existing per-spray actual directional normal.\n                        shader.fragmentShader = shader.fragmentShader.replace('vec3(.32,.48,.55)+actualSunColor*actualSunPower*actualNdotL*1.65', 'vec3(.40,.53,.57)+actualSunColor*actualSunPower*pow(actualNdotL,1.35)*1.85');\n                        if (decisive) shader.fragmentShader = shader.fragmentShader.replace('shaded=attentionGrade(shaded);', `shaded=attentionGrade(shaded);float crownSun=smoothstep(.45,.9,actualNdotL)*smoothstep(.4,.85,attentionHeight)*(1.-smoothstep(55.,180.,distance(attentionWorld,attentionAnchor)));shaded=mix(shaded,highPigment*.75,crownSun*.40);`);\n                    }|attention-v2-library-true|{\"near\":120,\"far\":650,\"strength\":0.5,\"color\":\"#78977c\"}|wet-incident-1|crown-sun-2"
+      },
+      {
+        "mesh": "",
+        "type": "MeshBasicMaterial",
+        "canopy": false,
+        "key": "onBeforeCompile() {}"
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 0.17352174313272517,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "hits": [],
+    "shaderErrors": []
+  }
+]

@@ -1,0 +1,254 @@
+[
+  {
+    "mode": "baseline",
+    "seed": "29",
+    "url": "http://localhost:3002/explore?lat=34&lon=-116.15&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human&wave1=baseline",
+    "matchedCamera": true,
+    "holdout": false,
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            0.8472590633566935,
+            34
+          ],
+          "quaternion": [
+            0.01230337707261847,
+            -0.004031854530539593,
+            0.00004960958482750933,
+            0.999916180787441
+          ]
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "metadata": null
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            70,
+            50,
+            85
+          ],
+          "quaternion": [
+            -0.17164577003343667,
+            0.2750834768545333,
+            0.04998336618883981,
+            0.9446525676118614
+          ]
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "metadata": null
+      }
+    ]
+  },
+  {
+    "mode": "desert",
+    "seed": "29",
+    "url": "http://localhost:3002/explore?lat=34&lon=-116.15&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human&wave1=desert",
+    "matchedCamera": true,
+    "holdout": false,
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            0.8472590633566935,
+            34
+          ],
+          "quaternion": [
+            0.01230337707261847,
+            -0.004031854530539593,
+            0.00004960958482750933,
+            0.999916180787441
+          ]
+        },
+        "calls": 9,
+        "triangles": 285316,
+        "metadata": {
+          "id": "desert",
+          "biome": 13,
+          "seed": "29",
+          "rocks": 213,
+          "understoryInstances": 420,
+          "ecology": "Only unnamed xeric_shrub growth form from resolver; no Joshua-tree presence asserted. Synthetic geology, not local DEM.",
+          "season": "not inferred",
+          "weather": "clear presentation layer",
+          "timeOfDay": "warm oblique lighting presentation layer"
+        }
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            70,
+            50,
+            85
+          ],
+          "quaternion": [
+            -0.17164577003343667,
+            0.2750834768545333,
+            0.04998336618883981,
+            0.9446525676118614
+          ]
+        },
+        "calls": 9,
+        "triangles": 285316,
+        "metadata": {
+          "id": "desert",
+          "biome": 13,
+          "seed": "29",
+          "rocks": 213,
+          "understoryInstances": 420,
+          "ecology": "Only unnamed xeric_shrub growth form from resolver; no Joshua-tree presence asserted. Synthetic geology, not local DEM.",
+          "season": "not inferred",
+          "weather": "clear presentation layer",
+          "timeOfDay": "warm oblique lighting presentation layer"
+        }
+      }
+    ]
+  },
+  {
+    "mode": "desert",
+    "seed": "41",
+    "url": "http://localhost:3002/explore?lat=34&lon=-116.15&habitat=forest&seed=41&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human&wave1=desert",
+    "matchedCamera": true,
+    "holdout": false,
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            3.5069481897706387,
+            34
+          ],
+          "quaternion": [
+            0.006385897452937148,
+            -0.004032077510005769,
+            0.000025749167852159296,
+            0.9999714805941488
+          ]
+        },
+        "calls": 9,
+        "triangles": 285316,
+        "metadata": {
+          "id": "desert",
+          "biome": 13,
+          "seed": "41",
+          "rocks": 213,
+          "understoryInstances": 420,
+          "ecology": "Only unnamed xeric_shrub growth form from resolver; no Joshua-tree presence asserted. Synthetic geology, not local DEM.",
+          "season": "not inferred",
+          "weather": "clear presentation layer",
+          "timeOfDay": "warm oblique lighting presentation layer"
+        }
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            70,
+            50,
+            85
+          ],
+          "quaternion": [
+            -0.17164577003343667,
+            0.2750834768545333,
+            0.04998336618883981,
+            0.9446525676118614
+          ]
+        },
+        "calls": 9,
+        "triangles": 285316,
+        "metadata": {
+          "id": "desert",
+          "biome": 13,
+          "seed": "41",
+          "rocks": 213,
+          "understoryInstances": 420,
+          "ecology": "Only unnamed xeric_shrub growth form from resolver; no Joshua-tree presence asserted. Synthetic geology, not local DEM.",
+          "season": "not inferred",
+          "weather": "clear presentation layer",
+          "timeOfDay": "warm oblique lighting presentation layer"
+        }
+      }
+    ]
+  },
+  {
+    "mode": "desert",
+    "seed": "5171",
+    "url": "http://localhost:3002/explore?lat=34&lon=-116.15&habitat=forest&seed=5171&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human&wave1=desert",
+    "matchedCamera": true,
+    "holdout": true,
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            0.8791912578357413,
+            34
+          ],
+          "quaternion": [
+            0.011595599740041197,
+            -0.004031888635832752,
+            0.00004675569037135838,
+            0.9999246390376639
+          ]
+        },
+        "calls": 9,
+        "triangles": 285316,
+        "metadata": {
+          "id": "desert",
+          "biome": 13,
+          "seed": "5171",
+          "rocks": 213,
+          "understoryInstances": 420,
+          "ecology": "Only unnamed xeric_shrub growth form from resolver; no Joshua-tree presence asserted. Synthetic geology, not local DEM.",
+          "season": "not inferred",
+          "weather": "clear presentation layer",
+          "timeOfDay": "warm oblique lighting presentation layer"
+        }
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            70,
+            50,
+            85
+          ],
+          "quaternion": [
+            -0.17164577003343667,
+            0.2750834768545333,
+            0.04998336618883981,
+            0.9446525676118614
+          ]
+        },
+        "calls": 9,
+        "triangles": 285316,
+        "metadata": {
+          "id": "desert",
+          "biome": 13,
+          "seed": "5171",
+          "rocks": 213,
+          "understoryInstances": 420,
+          "ecology": "Only unnamed xeric_shrub growth form from resolver; no Joshua-tree presence asserted. Synthetic geology, not local DEM.",
+          "season": "not inferred",
+          "weather": "clear presentation layer",
+          "timeOfDay": "warm oblique lighting presentation layer"
+        }
+      }
+    ]
+  }
+]

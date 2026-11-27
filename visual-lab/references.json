@@ -234,6 +234,396 @@
         "Uniform brightness",
         "Black shadow curtain"
       ]
+    },
+    {
+      "id": "wave1-desert-usgs-granite",
+      "biome": "desert",
+      "category": "geology-and-xeric-massing",
+      "imagePath": "visual-lab/wave1/desert/usgs-joshua-reference.jpg",
+      "principle": "Weathered interlocking granite, broken ridge rhythm and layered sparse vegetation across an alluvial fan.",
+      "positiveCharacteristics": [
+        "Connected geology",
+        "Mixed-scale xeric masses",
+        "Pale substrate with restrained variation"
+      ],
+      "defectsToAvoid": [
+        "Clay blobs",
+        "Mechanical shrubs",
+        "Uniform tan ground"
+      ],
+      "source": {
+        "kind": "public-agency-photo",
+        "url": "https://www.usgs.gov/media/images/joshua-tree-national-park-0",
+        "attribution": "Phil Stoffer / USGS"
+      },
+      "license": {
+        "status": "Public Domain",
+        "use": "visual reference",
+        "redistributionAllowed": true,
+        "trainingEligible": false,
+        "note": "Primary-source rights evidence recorded in Wave1 reference records. No model training performed."
+      },
+      "available": true
+    },
+    {
+      "id": "mg-usgs-everglades-proproots",
+      "biome": "mangrove",
+      "category": "roots-canopy-and-water",
+      "imagePath": "visual-lab/wave1/mangrove/reference-usgs-roots.jpg",
+      "principle": "Dense connected roots separate dark reflective water from layered canopy.",
+      "positiveCharacteristics": [
+        "Root lattice",
+        "Irregular banks",
+        "Canopy continuity"
+      ],
+      "defectsToAvoid": [
+        "Straight canal",
+        "Floating roots",
+        "Isolated specimens"
+      ],
+      "source": {
+        "kind": "public-agency-photo",
+        "url": "https://www.usgs.gov/media/images/prop-roots-red-mangrove-trees-everglades-national-park",
+        "attribution": "Michael Johannes Osland / USGS"
+      },
+      "license": {
+        "status": "Public Domain",
+        "use": "visual reference",
+        "redistributionAllowed": true,
+        "trainingEligible": false,
+        "note": "Primary-source rights evidence recorded in Wave1 reference records. No model training performed."
+      },
+      "available": true
+    },
+    {
+      "id": "flooded-ref-nps-prairie",
+      "biome": "flooded-grassland",
+      "category": "grass-water-mosaic",
+      "imagePath": "visual-lab/wave1/flooded/references/nps-sawgrass-prairie-medium.jpg",
+      "principle": "Broad continuous grass masses interlock with small reflective water windows below a low horizontal horizon.",
+      "positiveCharacteristics": [
+        "Mass continuity",
+        "Irregular water windows",
+        "Restrained fine detail"
+      ],
+      "defectsToAvoid": [
+        "Broad canal",
+        "Uniform tufts",
+        "Barren bank ribbons"
+      ],
+      "source": {
+        "kind": "public-agency-photo",
+        "url": "https://commons.wikimedia.org/wiki/File:Sawgrass_Prairie_NPS_Photo_G_Gardner_(42295786392).jpg",
+        "attribution": "G. Gardner / National Park Service"
+      },
+      "license": {
+        "status": "Public Domain",
+        "use": "visual reference",
+        "redistributionAllowed": true,
+        "trainingEligible": false,
+        "note": "Primary-source rights evidence recorded in Wave1 reference records. No model training performed."
+      },
+      "available": true
+    },
+    {
+      "id": "flooded-ref-usgs-waterway",
+      "biome": "flooded-grassland",
+      "category": "wetland-network",
+      "imagePath": "visual-lab/wave1/flooded/references/usgs-everglades.jpg",
+      "principle": "Interlocking slough and vegetation networks rather than isolated ponds.",
+      "positiveCharacteristics": [
+        "Connected water",
+        "Patch hierarchy"
+      ],
+      "defectsToAvoid": [
+        "Regular shorelines",
+        "Even scatter"
+      ],
+      "source": {
+        "kind": "public-agency-photo",
+        "url": "https://www.usgs.gov/media/images/florida-everglades-national-park-10",
+        "attribution": "USGS"
+      },
+      "license": {
+        "status": "Public Domain",
+        "use": "visual reference",
+        "redistributionAllowed": true,
+        "trainingEligible": false,
+        "note": "Primary-source rights evidence recorded in Wave1 reference records. No model training performed."
+      },
+      "available": true
+    },
+    {
+      "id": "wave2-boreal-fws",
+      "biome": "boreal",
+      "biomeId": 6,
+      "category": "forest-framing-and-floor",
+      "source": {
+        "kind": "public-domain-photo",
+        "attribution": "Laura Kennedy / USFWS; Commons copy includes color correction",
+        "url": "https://commons.wikimedia.org/wiki/File:Borealforest.JPG"
+      },
+      "imagePath": "visual-lab/global-expansion/references/boreal-fws.jpg",
+      "principle": "Tall narrow trunks and lateral boughs frame a mossy opening; connected low cover supports broad value masses",
+      "positiveCharacteristics": [
+        "Strong vertical scale",
+        "Pillowy floor with selective sunlight",
+        "Quiet distant stand"
+      ],
+      "defectsToAvoid": [
+        "Park-like isolated specimens",
+        "Bare straight background sticks",
+        "Assuming an Alaskan lake or white spruce occurs in Finland"
+      ],
+      "license": {
+        "status": "public-domain",
+        "use": "visual reference; not a runtime panorama",
+        "redistributionAllowed": true,
+        "trainingEligible": false,
+        "note": "Public-domain government work according to linked source; no model training performed"
+      },
+      "available": true,
+      "inspection": {
+        "reviewer": "root",
+        "actualImageContentInterpreted": true
+      }
+    },
+    {
+      "id": "wave2-temperate-usgs-canopy",
+      "biome": "temperate",
+      "biomeId": 4,
+      "category": "canopy-branching-and-light",
+      "source": {
+        "kind": "public-domain-photo",
+        "attribution": "Cynthia L. Cunningham / USGS; Shenandoah tree canopy",
+        "url": "https://www.usgs.gov/media/images/tree-canopy"
+      },
+      "imagePath": "visual-lab/global-expansion/temperate-references/usgs-tree-canopy.jpg",
+      "principle": "Branch-supported overlapping crowns form connected shelter, with cool interiors and small warm gaps",
+      "positiveCharacteristics": [
+        "Layered crown masses",
+        "Branch continuity",
+        "Selective transmitted sunlight"
+      ],
+      "defectsToAvoid": [
+        "Copying fisheye projection",
+        "Uniform ambient illumination",
+        "Treating a Virginia photograph as German species evidence"
+      ],
+      "license": {
+        "status": "public-domain",
+        "use": "visual reference; not a runtime panorama",
+        "redistributionAllowed": true,
+        "trainingEligible": false,
+        "note": "Public-domain government work according to linked source; no model training performed"
+      },
+      "available": true,
+      "inspection": {
+        "reviewer": "root",
+        "actualImageContentInterpreted": true
+      }
+    },
+    {
+      "id": "wave2-temperate-usgs-distance",
+      "biome": "temperate",
+      "biomeId": 4,
+      "category": "atmospheric-layering",
+      "source": {
+        "kind": "public-domain-photo",
+        "attribution": "Cynthia L. Cunningham / USGS; Great Smoky Mountains",
+        "url": "https://www.usgs.gov/media/images/great-smoky-mountains"
+      },
+      "imagePath": "visual-lab/global-expansion/temperate-references/usgs-smoky-cunningham.jpg",
+      "principle": "Distant forest masses lose contrast and unify into broad green layers",
+      "positiveCharacteristics": [
+        "Connected mid/far forest masses",
+        "Soft atmospheric separation"
+      ],
+      "defectsToAvoid": [
+        "Adding photographed mountains without regional relief evidence",
+        "Hiding missing geometry with near fog"
+      ],
+      "license": {
+        "status": "public-domain",
+        "use": "visual reference; not a runtime panorama",
+        "redistributionAllowed": true,
+        "trainingEligible": false,
+        "note": "Public-domain government work according to linked source; no model training performed"
+      },
+      "available": true,
+      "inspection": {
+        "reviewer": "root",
+        "actualImageContentInterpreted": true
+      }
+    },
+    {
+      "id": "wave2-tundra-fws",
+      "biome": "tundra",
+      "biomeId": 11,
+      "category": "low-vegetation-and-horizontal-depth",
+      "source": {
+        "kind": "public-domain-photo",
+        "attribution": "Steve Hillebrand / USFWS; Selawik Refuge",
+        "url": "https://www.fws.gov/media/tundra-landscape-selawik-refuge"
+      },
+      "imagePath": "visual-lab/global-expansion/tundra-references/selawik-fws.jpg",
+      "principle": "Low, intricately interlocking vegetation masses carry most of the image below a long quiet horizon",
+      "positiveCharacteristics": [
+        "Low vegetation silhouette",
+        "Warm/cool peat and vegetation masses",
+        "Meaningful negative space"
+      ],
+      "defectsToAvoid": [
+        "Adding trees to Arctic tundra",
+        "Uniform grass carpet",
+        "Assuming pictured water exists at the test coordinate"
+      ],
+      "license": {
+        "status": "public-domain",
+        "use": "visual reference; not a runtime panorama",
+        "redistributionAllowed": true,
+        "trainingEligible": false,
+        "note": "Public-domain government work according to linked source; no model training performed"
+      },
+      "available": true,
+      "inspection": {
+        "reviewer": "root",
+        "actualImageContentInterpreted": true
+      }
+    },
+    {
+      "id": "wave2-concept-boreal",
+      "biome": "boreal",
+      "biomeId": 6,
+      "category": "concept-first-composition-and-representation",
+      "source": {
+        "kind": "user-supplied",
+        "attribution": "Creator/provider not verified; supplied by user for this task",
+        "original": ".codex-attachments/13cfc56f-a20e-43cd-bebd-ba1d2dd588ba/e8dfd5f1-7e79-499a-a056-94c01836fe1c/1000011103.png"
+      },
+      "license": {
+        "status": "unverified",
+        "use": "private local visual reference only",
+        "redistributionAllowed": false,
+        "trainingEligible": false
+      },
+      "imagePath": "visual-lab/global-expansion/references/wave2-concept-sheet.png",
+      "available": true,
+      "panelBoundsPixels": [
+        0,
+        32,
+        426,
+        283
+      ],
+      "panelMeaning": "Top-row concept; supplied bottom-row Result is reference art, not a Wildloom runtime capture",
+      "principle": "Overlapping drooping boughs and narrow trunks enclose a connected moss/duff opening with selective light pools.",
+      "positiveCharacteristics": [
+        "Strong lateral and overhead enclosure",
+        "Interlocking moss, rock and low shrub floor",
+        "Warm pools within cool green shadow"
+      ],
+      "defectsToAvoid": [
+        "Open specimen park",
+        "Generic Douglas identity substitution",
+        "Savanna brush floor",
+        "Uniform shadow curtain"
+      ],
+      "constructionPlan": "visual-lab/global-expansion/CONCEPT-CONSTRUCTION-PLANS.md",
+      "status": "Primary artistic target; autonomous prototype checkpoint has no human artistic approval",
+      "renderEvidence": "artifacts/wave2-autonomous/retained-concept-comparison.png",
+      "experimentRecord": "visual-lab/global-expansion/autonomous-session.json",
+      "priorExperimentRecords": [
+        "visual-lab/global-expansion/concept-session.json"
+      ]
+    },
+    {
+      "id": "wave2-concept-temperate",
+      "biome": "temperate",
+      "biomeId": 4,
+      "category": "concept-first-composition-and-representation",
+      "source": {
+        "kind": "user-supplied",
+        "attribution": "Creator/provider not verified; supplied by user for this task",
+        "original": ".codex-attachments/13cfc56f-a20e-43cd-bebd-ba1d2dd588ba/e8dfd5f1-7e79-499a-a056-94c01836fe1c/1000011103.png"
+      },
+      "license": {
+        "status": "unverified",
+        "use": "private local visual reference only",
+        "redistributionAllowed": false,
+        "trainingEligible": false
+      },
+      "imagePath": "visual-lab/global-expansion/references/wave2-concept-sheet.png",
+      "available": true,
+      "panelBoundsPixels": [
+        427,
+        32,
+        426,
+        283
+      ],
+      "panelMeaning": "Top-row concept; supplied bottom-row Result is reference art, not a Wildloom runtime capture",
+      "principle": "Connected broadleaf branches and crowns arch around a luminous opening; understory and litter connect foreground to depth.",
+      "positiveCharacteristics": [
+        "Connected canopy with small sky windows",
+        "Layered rooted understory",
+        "Warm light over cool foliage interiors"
+      ],
+      "defectsToAvoid": [
+        "Isolated crown balls",
+        "Bare brown staging plane",
+        "Unsupported pale bark or local flower identities"
+      ],
+      "constructionPlan": "visual-lab/global-expansion/CONCEPT-CONSTRUCTION-PLANS.md",
+      "status": "Primary artistic target; autonomous prototype checkpoint has no human artistic approval",
+      "renderEvidence": "artifacts/wave2-autonomous/retained-concept-comparison.png",
+      "experimentRecord": "visual-lab/global-expansion/autonomous-session.json",
+      "priorExperimentRecords": [
+        "visual-lab/global-expansion/concept-session.json"
+      ]
+    },
+    {
+      "id": "wave2-concept-tundra",
+      "biome": "tundra",
+      "biomeId": 11,
+      "category": "concept-first-composition-and-representation",
+      "source": {
+        "kind": "user-supplied",
+        "attribution": "Creator/provider not verified; supplied by user for this task",
+        "original": ".codex-attachments/13cfc56f-a20e-43cd-bebd-ba1d2dd588ba/e8dfd5f1-7e79-499a-a056-94c01836fe1c/1000011103.png"
+      },
+      "license": {
+        "status": "unverified",
+        "use": "private local visual reference only",
+        "redistributionAllowed": false,
+        "trainingEligible": false
+      },
+      "imagePath": "visual-lab/global-expansion/references/wave2-concept-sheet.png",
+      "available": true,
+      "panelBoundsPixels": [
+        854,
+        32,
+        426,
+        283
+      ],
+      "panelMeaning": "Top-row concept; supplied bottom-row Result is reference art, not a Wildloom runtime capture",
+      "principle": "Continuous low heath/mineral ribbons and shallow landform flow support intricate foreground detail and a long open horizon.",
+      "positiveCharacteristics": [
+        "Interwoven warm/cool low vegetation",
+        "Embedded rocks and continuous substrate",
+        "Fine detail subordinate to broad shallow terrain"
+      ],
+      "defectsToAvoid": [
+        "Savanna tuft substitution",
+        "Cellular stamps",
+        "Unsupported red foliage phenology",
+        "Forcing rich cover into sparse Arctic desert"
+      ],
+      "constructionPlan": "visual-lab/global-expansion/CONCEPT-CONSTRUCTION-PLANS.md",
+      "status": "Primary artistic target; autonomous prototype checkpoint has no human artistic approval",
+      "renderEvidence": "artifacts/wave2-autonomous/retained-concept-comparison.png",
+      "experimentRecord": "visual-lab/global-expansion/autonomous-session.json",
+      "priorExperimentRecords": [
+        "visual-lab/global-expansion/concept-session.json"
+      ]
     }
   ],
   "supplementalSources": [

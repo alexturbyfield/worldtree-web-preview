@@ -1,0 +1,54 @@
+[
+  {
+    "name": "puget-hero",
+    "pixelIdentical": true
+  },
+  {
+    "name": "rainforest-hero",
+    "pixelIdentical": true
+  },
+  {
+    "name": "rainforest-inspection",
+    "pixelIdentical": true
+  },
+  {
+    "name": "savanna-hero",
+    "pixelIdentical": true
+  },
+  {
+    "name": "savanna-inspection",
+    "pixelIdentical": true
+  },
+  {
+    "name": "alpine-hero",
+    "pixelIdentical": true
+  },
+  {
+    "name": "alpine-inspection",
+    "pixelIdentical": true
+  },
+  {
+    "name": "desert-hero",
+    "pixelIdentical": true
+  },
+  {
+    "name": "desert-inspection",
+    "pixelIdentical": true
+  },
+  {
+    "name": "mangrove-hero",
+    "pixelIdentical": true
+  },
+  {
+    "name": "mangrove-inspection",
+    "pixelIdentical": true
+  },
+  {
+    "name": "flooded-hero",
+    "pixelIdentical": true
+  },
+  {
+    "name": "flooded-inspection",
+    "pixelIdentical": true
+  }
+]

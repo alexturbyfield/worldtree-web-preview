@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "wave1-green-canopy-dirt",
+  "status": "provisionally retained for human review",
+  "humanDirection": "More green and interesting rock silhouettes in desert; more mangrove canopy; randomized flooded dirt patches",
+  "baseline": "artPass=depth; before-source snapshots and matched seed29 renders in artifacts/wave1-variation",
+  "loaded": ["Persistent AGENTS rules", "prototype-fast skill", "visual-review skill", "prior depth-session findings", "existing scene/material/rock adapters", "installed Next client guide"],
+  "intervention": {
+    "desert": "Existing dry plants receive greener pigments; six structural rock characters: slab, upright split mass, saddle, tilted mass, stepped shoulder and low broken mass",
+    "mangrove": "Near foliage sprays width1.4/length1.24 rather than1.1/1.06; far thinning stride8 rather than12. Species, stems, roots, positions and seeds preserved",
+    "flooded": "Domain-warped world-space soil mask replaces selected grass-albedo regions with mottled brown soil. No terrain/water/placement edits"
+  },
+  "experiment": {"roundsUsed": 1, "decision": "retain first candidate provisionally", "reason": "Requested changes visibly read in hero and inspection captures; further automatic calibration was not warranted"},
+  "vision": {
+    "available": true,
+    "reviewer": "root agent through actual view_image interpretation; no independent review this turn",
+    "evidence": ["R1 direct desert/mangrove/flooded hero images", "R1 flooded inspection", "three-seed hero and inspection sheets"],
+    "betterThanPreviousForRequestedFeatures": true,
+    "goodEnoughForFinalBiomeApproval": false
+  },
+  "findings": [
+    {"biome": "desert", "observed": "Rock profiles are visibly less uniform; plant leaves and tufts read greener without turning the whole soil surface green", "remaining": "Vegetation is still sparse, stylized functional-form dressing; no new verified local species"},
+    {"biome": "mangrove", "observed": "More crown overlap and fuller upper framing; water and readable staging retained", "remaining": "Large spray cards remain visible at close range"},
+    {"biome": "flooded", "observed": "Irregular brown soil breaks appear between grassy regions, with stronger visibility from inspection", "remaining": "Material patches do not remove underlying grass instances; soil coverage differs naturally with seed"}
+  ],
+  "validation": {
+    "development": [29, 41],
+    "frozenHoldout": 9157,
+    "holdoutTuned": false,
+    "freeze": "artifacts/wave1-variation/freeze.json",
+    "matched": "artifacts/wave1-variation/matched-checks.json",
+    "meshChecks": "artifacts/wave1-variation/geometry-checks.json",
+    "protected": "artifacts/wave1-variation/regression.json",
+    "checks": "TypeScript passes; six diagnostic mesh characters finite and closed; no captured render errors; seven protected views pixel-identical",
+    "mobileApproved": false
+  },
+  "approval": {"humanFinalApproval": null, "approvedBestChanged": false, "globalPromotion": false},
+  "report": "artifacts/wave1-variation/REPORT.md"
+}

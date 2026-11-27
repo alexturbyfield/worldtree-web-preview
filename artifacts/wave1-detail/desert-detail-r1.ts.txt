@@ -1,0 +1,137 @@
+import * as T from 'three';
+import type {SceneRecipe} from './recipe';
+import {cameraSpace, landscapeField, type FieldPlan} from './wave1-fields';
+import {randomSource} from './random';
+
+// The detail layer is optional and leaves all original block transforms and the horizon alone.
+const noiseGLSL = `
+float ddHash(vec3 p) {p=fract(p*.3183099+vec3(.13,.37,.71));p*=17.;return fract(p.x*p.y*p.z*(p.x+p.y+p.z));}
+float ddNoise(vec3 p) {vec3 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);
+return mix(mix(mix(ddHash(i),ddHash(i+vec3(1,0,0)),f.x),mix(ddHash(i+vec3(0,1,0)),ddHash(i+vec3(1,1,0)),f.x),f.y),
+mix(mix(ddHash(i+vec3(0,0,1)),ddHash(i+vec3(1,0,1)),f.x),mix(ddHash(i+vec3(0,1,1)),ddHash(i+vec3(1,1,1)),f.x),f.y),f.z);}
+float ddFbm(vec3 p) {return .57*ddNoise(p)+.28*ddNoise(p*2.07)+.15*ddNoise(p*4.17);}
+`;
+
+function worldVarying(shader: {vertexShader:string;fragmentShader:string}) {
+  shader.vertexShader='varying vec3 ddWorld; varying vec3 ddLocal;\n'+shader.vertexShader;
+  shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>',`#include <begin_vertex>
+ddLocal=position; vec4 ddP=vec4(transformed,1.);
+#ifdef USE_INSTANCING
+ddP=instanceMatrix*ddP;
+#endif
+ddWorld=(modelMatrix*ddP).xyz;`);
+  shader.fragmentShader='varying vec3 ddWorld; varying vec3 ddLocal;\n'+noiseGLSL+shader.fragmentShader;
+}
+
+/** Inexpensive directional fracture planes, mineral islands and fine granite grain. */
+export function desertRockMaterial():T.MeshStandardMaterial {
+  const material=new T.MeshStandardMaterial({roughness:.94});
+  material.onBeforeCompile=shader=>{
+    worldVarying(shader);
+    shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
+vec3 rp=ddWorld; float macro=ddFbm(rp*.85),grain=ddNoise(rp*72.);
+float warp=(ddNoise(rp*2.4)-.5)*.14;
+float j1=abs(sin(dot(rp,vec3(.72,.31,.24))*2.7+warp*3.));
+float j2=abs(sin(dot(rp,vec3(-.22,.81,.57))*1.8+1.7+warp));
+float joint=min(j1,j2); float crack=1.-smoothstep(.009,.032,joint);
+// Broken discontinuous seams, with wider pale weathered shoulders instead of ink outlines.
+crack*=smoothstep(.32,.55,ddFbm(rp*3.2));
+float shoulder=(1.-smoothstep(.025,.13,joint))*(1.-crack);
+float mineral=smoothstep(.49,.67,ddFbm(rp*9.+vec3(macro*3.)));
+vec3 pigment=mix(vec3(.66,.57,.47),vec3(1.08,1.01,.88),macro);
+pigment=mix(pigment,vec3(.73,.69,.61),mineral*.42);
+pigment+=shoulder*.12; pigment*=1.-crack*.48;
+pigment*=.92+.16*grain; diffuseColor.rgb*=pigment;
+`);
+    shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_maps>',`#include <normal_fragment_maps>
+float relief=ddFbm(ddWorld*17.)*.013;
+vec3 drdx=dFdx(-vViewPosition),drdy=dFdy(-vViewPosition);vec3 rr1=cross(drdy,normal),rr2=cross(normal,drdx);
+float rd=dot(drdx,rr1);normal=normalize(abs(rd)*normal-sign(rd)*(dFdx(relief)*rr1+dFdy(relief)*rr2));
+`);
+  };
+  material.customProgramCacheKey=()=> 'desert-mineral-joints-1';
+  return material;
+}
+
+/** Small intersecting joint offsets, retaining the parent block's large planes and volume. */
+export function weatherRockGeometry(g:T.BufferGeometry,variant:number):T.BufferGeometry {
+  const p=g.getAttribute('position');
+  for(let i=0;i<p.count;i++){
+    const x=p.getX(i),y=p.getY(i),z=p.getZ(i);
+    const cut=Math.max(0,x*.34+y*.21-z*.76-.68)*.075;
+    const wear=Math.sin(x*7.1+z*3.7+variant*2)*Math.sin(y*6.3-z*2.4)*.012;
+    p.setXYZ(i,x+wear-cut*.34,y+wear*.32-cut*.21,z+wear*.6+cut*.76);
+  }
+  g.computeVertexNormals();g.computeBoundingSphere();return g;
+}
+
+function tuftGeometry() {
+  const positions:number[]=[],colors:number[]=[],indices:number[]=[];
+  const r=randomSource('desert-low-fibre-geometry');
+  for(let blade=0;blade<19;blade++){
+    const a=r()*Math.PI*2,l=.11+r()*.26,reach=.05+r()*.15,w=.006+r()*.008;
+    const dx=Math.cos(a),dz=Math.sin(a),base=positions.length/3;
+    for(let k=0;k<4;k++){const t=k/3,y=l*Math.sin(t*Math.PI*.63),rad=reach*t*t,width=w*(1-t*.91);
+      for(const s of [-1,1]){positions.push(dx*rad-dz*width*s,y,dz*rad+dx*width*s);colors.push(.64+t*.27,.56+t*.2,.32+t*.13);}
+    }
+    for(let k=0;k<3;k++){const b=base+k*2;indices.push(b,b+1,b+2,b+1,b+3,b+2);}
+  }
+  const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(positions,3));g.setAttribute('color',new T.Float32BufferAttribute(colors,3));g.setIndex(indices);g.computeVertexNormals();return g;
+}
+
+export function installDesertDetail(scene:T.Scene,recipe:SceneRecipe,plan:FieldPlan):()=>void {
+  const group=new T.Group();group.name='field-desert-detail';scene.add(group);
+  const r=randomSource(recipe.seed+'|desert-contact-detail-1'),o=new T.Object3D();
+  const field=(x:number,z:number)=>landscapeField('desert',recipe.seed,x,z);
+  const terrainMaterials=new Set<T.MeshStandardMaterial>();
+  scene.traverse(child=>{if(child instanceof T.Mesh&&child.name==='connected-field-terrain'&&child.material instanceof T.MeshStandardMaterial)terrainMaterials.add(child.material);});
+  const restores:Array<()=>void>=[];
+  for(const material of terrainMaterials){
+    const previous=material.onBeforeCompile,previousKey=material.customProgramCacheKey;
+    material.onBeforeCompile=(shader,renderer)=>{
+      previous.call(material,shader,renderer);worldVarying(shader);
+      shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
+vec3 sp=ddWorld;float broad=ddFbm(sp*vec3(.18,.03,.22));
+float fine=ddNoise(sp*27.);float grit=ddNoise(sp*88.);
+// Continuous depositional patches, not repeated stamps or concentric ripple rings.
+float wash=ddFbm(vec3(sp.x*.8,sp.z*.11,broad*2.));
+vec3 sand=mix(vec3(.77,.70,.58),vec3(1.08,1.04,.94),smoothstep(.27,.73,broad));
+sand*=.95+.1*fine;sand*=1.-smoothstep(.75,.9,grit)*.16;
+sand=mix(sand,sand*vec3(.88,.89,.88),smoothstep(.57,.71,wash)*.38);
+diffuseColor.rgb*=sand;
+`);
+    };
+    material.customProgramCacheKey=()=>previousKey.call(material)+'|desert-substrate-1';material.needsUpdate=true;
+    restores.push(()=>{material.onBeforeCompile=previous;material.customProgramCacheKey=previousKey;material.needsUpdate=true;});
+  }
+  // The gravel budget is concentrated in irregular field-correlated patches and at rock feet.
+  const points:Array<{x:number;z:number;size:number}>=[];
+  for(let i=0;i<14500&&points.length<1950;i++){
+    const x=plan.eye[0]+(r()-.5)*125,z=plan.eye[2]+(r()-.5)*125,q=cameraSpace(plan,x,z),f=field(x,z);
+    if(Math.hypot(q.side,q.forward)<1.7||r()>.06+f.substrate*.52+f.rock*.3)continue;
+    points.push({x,z,size:.018+Math.pow(r(),2)*.085});
+  }
+  // Read existing transforms rather than reproducing the rock-placement random stream.
+  const matrix=new T.Matrix4(),p=new T.Vector3(),rotation=new T.Quaternion(),scale=new T.Vector3();
+  scene.traverse(child=>{if(!(child instanceof T.InstancedMesh)||child.name!=='field-jointed-bedrock')return;
+    for(let i=0;i<child.count;i++){child.getMatrixAt(i,matrix);matrix.decompose(p,rotation,scale);
+      if(Math.hypot(p.x-plan.eye[0],p.z-plan.eye[2])>85)continue;
+      for(let j=0;j<9;j++){const a=r()*Math.PI*2,d=Math.max(scale.x,scale.z)*(.6+r()*.7),x=p.x+Math.cos(a)*d,z=p.z+Math.sin(a)*d,q=cameraSpace(plan,x,z);
+        const staged=q.forward>2&&q.forward<7&&Math.abs(q.side)<1.5;
+        points.push({x,z,size:staged?.03+r()*.04:.045+r()*.15});}
+    }
+  });
+  const gravel=new T.InstancedMesh(new T.DodecahedronGeometry(1,0),desertRockMaterial(),points.length);gravel.name='desert-contact-gravel';
+  points.forEach((p,i)=>{o.position.set(p.x,field(p.x,p.z).height+p.size*.14,p.z);o.rotation.set(r(),r()*6.28,r());o.scale.set(p.size*(.8+r()*.8),p.size*.42,p.size);o.updateMatrix();gravel.setMatrixAt(i,o.matrix);gravel.setColorAt(i,new T.Color('#a68b6a').lerp(new T.Color('#d6ba90'),r()));});
+  gravel.computeBoundingSphere();gravel.receiveShadow=true;group.add(gravel);
+  const plants:Array<{x:number;z:number;s:number}>=[];
+  for(let i=0;i<20000&&plants.length<250;i++){
+    const x=plan.eye[0]+(r()-.5)*105,z=plan.eye[2]+(r()-.5)*105,q=cameraSpace(plan,x,z),f=field(x,z);
+    if(q.forward>1&&q.forward<8&&Math.abs(q.side)<1.7||Math.hypot(q.side,q.forward)<2.8||r()>f.community*(.04+f.moisture*.15))continue;
+    plants.push({x,z,s:.6+r()*.7});
+  }
+  const tufts=new T.InstancedMesh(tuftGeometry(),new T.MeshStandardMaterial({vertexColors:true,roughness:1,side:T.DoubleSide}),plants.length);tufts.name='desert-unnamed-dry-fibres';
+  plants.forEach((p,i)=>{o.position.set(p.x,field(p.x,p.z).height-.025,p.z);o.rotation.set(0,r()*6.28,0);o.scale.setScalar(p.s);o.updateMatrix();tufts.setMatrixAt(i,o.matrix);});tufts.computeBoundingSphere();tufts.receiveShadow=true;group.add(tufts);
+  group.userData={seed:recipe.seed,gravel:points.length,unnamedDryTufts:plants.length,ecology:'Generic dry fibre placeholders; no species occurrence asserted.',mobile:'Instanced geometry; no alpha textures; device frame time unmeasured.'};
+  return()=>{restores.forEach(fn=>fn());scene.remove(group);group.traverse(child=>{if(child instanceof T.Mesh){child.geometry.dispose();for(const m of Array.isArray(child.material)?child.material:[child.material])m.dispose();}});};
+}

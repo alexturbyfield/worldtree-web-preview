@@ -1,3 +1,4 @@
+import {wave1Study} from './wave1';
 import {alpineHeight,readAlpineOptions} from './alpine-recipe';
 import {alpineSceneRecipe,mountAlpineEnvironment,gradeAlpineTree} from './alpine-adapter';
 import {prettySceneEnabled,prettyScenePlan,installPrettyFoliage} from './pretty-scene';
@@ -20,8 +21,14 @@ import type {PaintedTree} from './painterly';
 import type {BenchmarkResult,CameraView,RenderOptions,RenderStats} from './render-types';
 
 export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick:(index:number|null)=>void,onStats:(stats:RenderStats)=>void,onError:(message:string)=>void,view?:CameraView,options:RenderOptions&{environment?:false|EnvironmentOptions}={}) {
+  const expansionPickSources=new URLSearchParams(location.search).has('expansion')?new Map(recipe.trees.map(t=>[t.id,t.index])):undefined;
   const alpineOptions=readAlpineOptions(location.search,recipe.seed),alpine=alpineOptions?alpineSceneRecipe(recipe,alpineOptions):undefined;if(alpine)recipe=alpine;
-  const biome=alpine?undefined:biomeVisualProfile(recipe);
+  const wave=alpine?undefined:wave1Study(recipe,location.search);if(wave)recipe=wave.compose(recipe);
+  if(expansionPickSources&&wave&&['boreal','temperate','tundra'].includes(wave.id)){
+    const canonicalPick=onPick,mapping=new Map(recipe.trees.map(t=>[t.index,expansionPickSources.get(t.id.split('-'+wave.id+'-presentation-')[0])]));
+    onPick=index=>canonicalPick(index===null?null:mapping.get(index)??null);
+  }
+  const biome=alpine||wave?undefined:biomeVisualProfile(recipe);
   if(biome?.id==='amazon'&&rainforestV4()&&new URLSearchParams(location.search).get('camera')==='inspection'&&!(recipe as BiomeRecipe).encounter){
     const inspection=composeBiomeEncounter(recipe,biome);recipe={...inspection,encounter:{...inspection.encounter!,camera:'inspection'}} as BiomeRecipe;
   }
@@ -38,11 +45,12 @@ export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick
   renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.12;
   renderer.domElement.setAttribute('aria-label','Interactive painterly trees. Drag to orbit, pinch to zoom, tap a tree to inspect.');renderer.domElement.setAttribute('role','img');host.appendChild(renderer.domElement);
   const scene=new THREE.Scene();scene.background=new THREE.Color(lab?'#e3e9dd':'#dde7de');scene.fog=new THREE.Fog(lab?'#e3e9dd':'#dde7de',lab?110:95,lab?260:230);
-  const camera=new THREE.PerspectiveCamera(lab?38:47,1,.2,alpine?3500:350),controls=new OrbitControls(camera,renderer.domElement);
+  const camera=new THREE.PerspectiveCamera(lab?38:47,1,.2,alpine?3500:wave?2500:350),controls=new OrbitControls(camera,renderer.domElement);
   const model=recipe.trees[0]?.model,treeHeight=model?.dimensions.height??18;
   camera.position.set(...(lab?[treeHeight*1.05,treeHeight*.65,treeHeight*1.5]:[58,39,70]) as [number,number,number]);
   controls.target.set(0,lab?treeHeight*.43:9,0);controls.enableDamping=true;controls.dampingFactor=.1;controls.minDistance=lab?.8:12;controls.maxDistance=lab?90:175;controls.maxPolarAngle=Math.PI*.49;controls.minPolarAngle=.08;
   controls.touches.ONE=THREE.TOUCH.ROTATE;controls.touches.TWO=THREE.TOUCH.DOLLY_PAN;
+  if(wave){controls.maxDistance=900;controls.maxPolarAngle=Math.PI*.6;view??=new URLSearchParams(location.search).get('camera')==='inspection'?{position:[70,50,85],target:[0,1,-25]}:wave.camera(recipe);}
   if(alpine){controls.maxDistance=1600;controls.maxPolarAngle=Math.PI*.65;view??=new URLSearchParams(location.search).get('camera')==='inspection'?alpine.alpinePlan.inspection:alpine.alpinePlan.camera;}
   view??=(recipe as BiomeRecipe).biomeVisualId==='amazon'&&rainforestV4()&&(recipe as BiomeRecipe).encounter?.camera==='inspection'?{position:[50,46,60],target:[-2,7,-12]}:encounterCamera(recipe as EncounterRecipe);
   if(view){camera.position.set(...view.position);controls.target.set(...view.target);}
@@ -66,7 +74,7 @@ export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick
     const ground=new THREE.Mesh(geometry,new THREE.MeshStandardMaterial({vertexColors:true,roughness:1}));ground.receiveShadow=true;scene.add(ground);
     const edge=new THREE.Mesh(new THREE.BoxGeometry(100,3,100),new THREE.MeshStandardMaterial({color:ice?'#aab7b1':'#7a7154',roughness:1}));edge.position.y=-3;scene.add(edge);
   }
-  const foundations=(!!alpine||!!(recipe as EncounterRecipe).encounter)&&options.environment!==false;
+  const foundations=(!!wave||!!alpine||!!(recipe as EncounterRecipe).encounter)&&options.environment!==false;
   const compositionMode=new URLSearchParams(location.search).get('composition')??'C';
   const anchored=foundations&&(recipe as EncounterRecipe).encounter?.camera==='human';
   if(anchored&&compositionMode!=='A'&&options.environment!==false&&options.environment?.composition!==false){
@@ -81,11 +89,12 @@ export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick
     }
     scene.userData.composition=resolveEncounterComposition(recipe,camera,profile);scene.userData.compositionMode=compositionMode;
   }
-  const disposeEncounter=alpine?mountAlpineEnvironment(scene,alpine,sun,fill):dressEncounter(scene,recipe as EncounterRecipe,mobile,foundations);
+  const disposeEncounter=wave?wave.mount(scene,recipe,sun,fill):alpine?mountAlpineEnvironment(scene,alpine,sun,fill):dressEncounter(scene,recipe as EncounterRecipe,mobile,foundations);
+  if(wave){scene.userData.recipeEye=wave.camera(recipe);scene.userData.wave1??={id:wave.id,biome:wave.biome};}
   if(scene.userData.environmentArt){sun.color.set('#ffe1a4');sun.intensity=4.1;fill.color.set('#779cb9');fill.intensity=.42;scene.children.forEach(o=>{if(o instanceof THREE.HemisphereLight)o.intensity=1.15;});scene.fog=new THREE.Fog('#c5d9cc',76,175);}
   const lighting=new URLSearchParams(location.search).get('lighting')??'final';
   const directLighting=foundations&&lighting!=='baseline';
-  if(directLighting&&!alpine){sun.position.set(-36,38,22);sun.color.set('#ffe0a8');sun.intensity=4.8;fill.intensity=.18;scene.children.forEach(o=>{if(o instanceof THREE.HemisphereLight){o.color.set('#a3c4df');o.groundColor.set('#52726a');o.intensity=.75;}});}
+  if(directLighting&&!alpine&&!wave){sun.position.set(-36,38,22);sun.color.set('#ffe0a8');sun.intensity=4.8;fill.intensity=.18;scene.children.forEach(o=>{if(o instanceof THREE.HemisphereLight){o.color.set('#a3c4df');o.groundColor.set('#52726a');o.intensity=.75;}});}
   const composition=scene.userData.composition as ReturnType<typeof resolveEncounterComposition>|undefined;
   if(composition&&compositionMode==='C'){
     const light=composition.profile.light;sun.position.set(...light.position);sun.color.set(light.color);sun.intensity=light.intensity;sun.shadow.radius=light.shadowSoftness;sun.shadow.intensity=light.shadowStrength;
@@ -94,7 +103,8 @@ export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick
   }
   const requestedTree=new URLSearchParams(location.search).get('treeStudy'),experiment=biome?.id==='savanna'?treeExperiment(recipe,requestedTree,scene.userData.prettyScene?.hero.id):{recipe};recipe=experiment.recipe;
   if(experiment.hero)scene.userData.treeStudy={candidate:requestedTree,heroId:experiment.hero.id,position:experiment.hero.position,seed:experiment.hero.seed,appearanceSeed:experiment.hero.appearanceSeed,dimensions:experiment.hero.model.dimensions,segments:experiment.hero.model.segments.length,groups:experiment.hero.studio?.groups.length??0,sprays:experiment.hero.studio?.fronds.length??0,profileVersion:'branch-grammar-1'};
-  const attention={...sceneAttention(recipe,options.environment||{}),sun:directLighting?sun:undefined,composition:compositionMode==='C'?composition:undefined};
+  const fieldPresentation=scene.userData.wave1?.presentation;
+  const attention={...sceneAttention(recipe,options.environment||{}),...(fieldPresentation?{anchor:new THREE.Vector3(...scene.userData.wave1.plan.eye),direction:new THREE.Vector3(...scene.userData.wave1.plan.target).sub(new THREE.Vector3(...scene.userData.wave1.plan.eye)).normalize(),atmosphere:fieldPresentation.foliageAtmosphere}:{}),sun:directLighting?sun:undefined,composition:compositionMode==='C'?composition:undefined};
   const gradedMaterials=new Set<THREE.Material>();
   const grade=(material:THREE.Material,kind:'library'|'billboards'|'wood',deciduous=false)=>{if(foundations&&!gradedMaterials.has(material)){installTreeAttention(material,kind,{...attention,deciduous});if(!alpine&&biomeVisualProfile(recipe)?.id==='amazon'&&rainforestV4()&&rainforestV5())installRainforestDepthResponse(material,kind);if(directLighting&&biome&&prettySceneEnabled(biome.id))installPrettyFoliage(material,kind,prettyScenePlan(recipe,biome.id as 'savanna'|'amazon'));if(alpine)gradeAlpineTree(material,alpine.alpinePlan);gradedMaterials.add(material);}};
   const bark=brushTexture('bark'),woodMaterial=new THREE.MeshStandardMaterial({map:bark,vertexColors:true,roughness:1,wireframe:options.debug==='wireframe'});

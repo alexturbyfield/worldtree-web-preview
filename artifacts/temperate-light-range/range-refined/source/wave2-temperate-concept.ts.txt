@@ -1,0 +1,144 @@
+import * as T from 'three';
+import type {SceneTree,SceneRecipe} from './recipe';
+import type {Point,Segment} from './tree';
+import type {PaintedTree} from './painterly';
+import type {StudioStudy,StudioFrond,FoliageGroup} from '../studio/groups';
+import {randomSource} from './random';
+import {expansionHeight,expansionFields,type ExpansionPlan} from './wave2-shared';
+import {rockGeometry} from './savanna-recipe';
+
+/** Crown masses belong to real supported branch paths, with species-specific habit.
+ * Existing leaf atlas reuse is a material approximation, never a new taxon identity. */
+export function temperateArchitecture(source:SceneTree,height:number,radius:number,occurrence:number,worldSeed:string):StudioStudy{
+ const name=source.species.scientificName??'',birch=/Betula/i.test(name),beech=/Fagus|Carpinus/i.test(name),r=randomSource(source.seed+'|woodland-architecture-v1|'+occurrence),segments:Segment[]=[],fronds:StudioFrond[]=[],groups:FoliageGroup[]=[];
+ const bark=birch?'#b9bbae':beech?'#777a69':'#75654e',trunk=birch?.30:beech?.46:.62,lean=(occurrence<2?1.8:.35)+(r()-.5)*.6,leanAngle=r()*Math.PI*2;
+ const leader=(t:number)=>new T.Vector3(Math.cos(leanAngle)*lean*t*t,height*t,Math.sin(leanAngle)*lean*t*t),tuple=(v:T.Vector3)=>v.toArray() as Point;
+ function path(points:T.Vector3[],r0:number,r1:number,depth:number){const c=new T.CatmullRomCurve3(points),pathId=segments.length;for(let j=0;j<6;j++){const u=j/6,v=(j+1)/6;segments.push({a:tuple(c.getPoint(u)),b:tuple(c.getPoint(v)),r0:r0+(r1-r0)*u,r1:r0+(r1-r0)*v,depth,color:bark,pathId,tangentA:tuple(c.getTangent(u)),tangentB:tuple(c.getTangent(v)),capEnd:j===5});}return c;}
+ path([leader(0),leader(.35),leader(.7),leader(1)],trunk,.035,0);
+ const leaves=(curve:T.CatmullRomCurve3,size:number,id:number)=>{
+  // Preserve the structural stream when leaf counts change.
+  for(let n=0;n<72;n++)r();
+  const leafRand=randomSource(source.seed+'|woodland-leaves-v2|'+occurrence+'|'+id);
+  const center=curve.getPoint(.72);groups.push({id,anchor:tuple(curve.getPoint(.25)),center:tuple(center),radii:[size*1.3,size*.7,size*1.3],branchIndex:segments.length-4,axis:tuple(curve.getTangent(.6))});
+  for(let j=0;j<6;j++){
+   const t=.18+j*.15,anchor=curve.getPoint(t),tangent=curve.getTangent(t),side=new T.Vector3(-tangent.z,.10,tangent.x).normalize();
+   const fans=birch?5:3;
+   for(let cross=0;cross<fans;cross++){
+    const lane=cross-(fans-1)/2,a=lane*.65,axis=tangent.clone().multiplyScalar(.30).addScaledVector(side,a).add(new T.Vector3(0,.4+(leafRand()-.5)*.3,0)).normalize(),q=new T.Quaternion().setFromUnitVectors(new T.Vector3(0,1,0),axis),pos=anchor.clone().addScaledVector(side,lane*size*.34),scale=size*(.74+leafRand()*.23),h=pos.y/height;
+    // Approximate branch-owned canopy depth, independently from orientation.
+    // Retain readable upward normals: the prior underside-normal test crushed
+    // entire masses. This bounded occlusion is not a physical shadow map.
+    q.multiply(new T.Quaternion().setFromEuler(new T.Euler(Math.sin(j*2.4+cross)*.32,Math.sin(j*1.7+cross*2.4)*.85,Math.cos(j+cross*2.1)*.35)));
+    const radial=Math.hypot(pos.x,pos.z)/Math.max(.1,radius),occlusion=T.MathUtils.clamp((1-radial)*.82+(1-h)*.26,.06,.82);
+    fronds.push({position:tuple(pos),rotation:q.toArray() as [number,number,number,number],width:scale*1.5,length:scale*1.6,curve:.20,droop:0,tile:0,color:new T.Color('#52783b').lerp(new T.Color('#b7be67'),Math.max(0,h-.45)*.7+leafRand()*.16).getStyle(),normal:[axis.x*.4,.82,axis.z*.4],interior:occlusion,groupId:id,essential:j===4&&cross===Math.floor(fans/2)});
+   }
+  }
+ };
+ const primaryCount=birch?13:11;
+ for(let k=0;k<primaryCount;k++){
+  const f=k/(primaryCount-1),angle=k*2.399+r()*.35,start=leader(.19+f*.64),reach=radius*(.95-.40*f)*(birch?.90:1),rise=height*(beech?.25:.18)*(1-f*.38),dir=new T.Vector3(Math.cos(angle),0,Math.sin(angle));
+  const end=start.clone().addScaledVector(dir,reach).add(new T.Vector3(0,rise,0)),bend=start.clone().lerp(end,.50).add(new T.Vector3(0,-.25,0)),primary=path([start,bend,end],trunk*(birch?.40:.56)*(1-f*.55),.025,1);
+  for(let s=0;s<5;s++){
+   const u=.34+s*.15,origin=primary.getPoint(u),branchDir=angle+(s%2?1:-1)*(.65+r()*.35),length=radius*(.32+r()*.18)*(1-f*.40),tip=origin.clone().add(new T.Vector3(Math.cos(branchDir)*length,length*(birch?-.12:beech?.70:.35),Math.sin(branchDir)*length)),mid=origin.clone().lerp(tip,.5).add(new T.Vector3(0,length*.2,0));
+   leaves(path([origin,mid,tip],trunk*.14*(1-f*.5),.008,2),(birch?1.12:1.58)*(1-f*.18),groups.length);
+  }
+ }
+ for(let k=0;k<4;k++){const a=k*2.399,start=leader(.79+k*.035),end=start.clone().add(new T.Vector3(Math.cos(a)*radius*.32,height*.10,Math.sin(a)*radius*.32));leaves(path([start,start.clone().lerp(end,.5),end],trunk*.09,.006,2),birch?.67:1.0,groups.length);}
+ const max=new T.Vector3(-Infinity,-Infinity,-Infinity),min=new T.Vector3(Infinity,0,Infinity);for(const s of segments)for(const p of [s.a,s.b]){max.max(new T.Vector3(...p));min.min(new T.Vector3(...p));}
+ const model:PaintedTree={kind:'painterly',seed:source.seed,presetId:birch?'silver-birch':'oak',segments,foliage:[],parameters:{height,crownRadius:radius,crownBase:.3,trunkRadius:trunk,taper:.94,recursion:3,whorls:primaryCount,spread:1,droop:birch?.4:.1},dimensions:{height:max.y+1,crownWidth:max.x-min.x+2,crownDepth:max.z-min.z+2},appearanceSeed:source.appearanceSeed??worldSeed,art:{stylization:.7,foliageDensity:.8,asymmetry:.6},palette:{name:'woodland reference state',shadow:'#254334',body:'#678144',light:'#c3ce78',bark}};
+ return {kind:'broadleaf',model,segments,groups,fronds,scale:1,offset:[0,0,0],lod:{groupStride:2,essentialSprays:1}};
+}
+
+export function composeTemperateConcept(r:SceneRecipe,p:ExpansionPlan):SceneRecipe{
+ const rand=randomSource(r.seed+'|connected-broadleaf-stand-v1'),pool=r.trees.filter(t=>/Quercus|Fagus|Acer|Fraxinus|Betula|Carpinus|Tilia/i.test(t.species.scientificName??'')),trees:SceneTree[]=[];
+ for(let i=0;i<48&&pool.length;i++){
+  const source=pool[i%pool.length],near=i<12;let x:number,z:number;
+  if(i<4){x=(i%2?1:-1)*(4.8+rand()*1.8);z=27-Math.floor(i/2)*12+rand()*2;}
+  else if(i<12){x=(i%2?1:-1)*(5.0+rand()*11);z=12-(i-4)*4+rand()*3;}
+  else{const row=Math.floor((i-12)/9),col=(i-12)%9;x=(col-4)*9+(rand()-.5)*5;z=-13-row*17+(rand()-.5)*7;}
+  const height=(near?14.8:13.5)*(.84+rand()*.28),width=(near?6.4:5.8)*(.86+rand()*.3),studio=temperateArchitecture(source,height,width,i,r.seed),species={...source.species,visual:{...source.species.visual,fallback:true,reason:'Species-conditioned connected woodland architecture; regional candidate retained, local occurrence unverified; leaf silhouette approximate.'}};
+  trees.push({...source,id:source.id+'-temperate-presentation-'+i,index:i,studio,model:studio.model,position:[x,expansionHeight(p,x,z),z],rotation:rand()*Math.PI*2,species});
+ }
+ return {...r,trees,purpose:'visual_laboratory',distribution:'Source-linked regional broadleaf candidates in a synthetic connected woodland gap; not measured abundance or tree locations.',limitations:[...r.limitations,'Concept broadleaf architecture and nonwoody functional forms remain studies, not verified local vegetation.']};
+}
+
+function leafGeometry(){const p:number[]=[],ix:number[]=[];for(let row=0;row<3;row++){const t=row/2,w=Math.sin(t*Math.PI)*.18;for(const across of [-1,0,1])p.push(t*.7,w*(1-Math.abs(across))*.28+Math.sin(t*Math.PI)*.06,w*across);}for(let y=0;y<2;y++)for(let x=0;x<2;x++){const a=y*3+x;ix.push(a,a+1,a+3,a+1,a+4,a+3);}const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(p,3));g.setIndex(ix);g.computeVertexNormals();return g;}
+function fernGeometry(){const base=leafGeometry(),positions:number[]=[],indices:number[]=[];
+ for(let f=0;f<7;f++){const angle=f*2.399,length=.70+(f%3)*.13;for(let j=1;j<10;j++)for(const side of [-1,1]){const t=j/11,span=Math.sin(Math.PI*t)*(.30-(f%2)*.02),mat=new T.Matrix4().compose(new T.Vector3(Math.cos(angle)*t*length,Math.sin(t*Math.PI*.88)*.62,Math.sin(angle)*t*length),new T.Quaternion().setFromEuler(new T.Euler(0,-angle+side*.95,-.15)),new T.Vector3(span*1.7,.65,span*2.4)),g=base.clone().applyMatrix4(mat),off=positions.length/3;positions.push(...g.attributes.position.array);for(const idx of g.index!.array)indices.push(idx+off);g.dispose();}}
+ base.dispose();const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(positions,3));g.setIndex(indices);g.computeVertexNormals();return g;}
+
+/** Dimensional leaf litter and fern-like functional forms; no grass atlas substitution. */
+export function mountTemperateFloor(scene:T.Scene,plan:ExpansionPlan){
+ const r=randomSource(plan.seed+'|temperate-living-floor'),group=new T.Group();group.name='temperate-concept-floor';scene.add(group);const o=new T.Object3D(),leaf=leafGeometry(),fern=fernGeometry(),litter:{x:number;z:number;scale:number}[]=[],ferns:{x:number;z:number;scale:number}[]=[],rocks:{x:number;z:number;scale:number}[]=[];
+ for(let i=0;i<16000;i++){const close=i<8000,x=close?(r()-.5)*28:(r()-.5)*100,z=close?35-r()*42:37-r()*130,f=expansionFields(plan,x,z),edge=Math.abs(x)>1.6||z<21||z>29;
+  if(i<11000&&r()<(edge?.80:.65))litter.push({x,z,scale:.10+r()*.18});
+  if(edge&&r()<.034&&ferns.length<260&&f.moisture>.35&&Math.hypot(x,z-26)>3.4)ferns.push({x,z,scale:.9+r()*.95});
+ }
+ rocks.push({x:-5.5,z:25,scale:1.5},{x:4.6,z:26,scale:1.15},{x:7.6,z:13,scale:1.0});
+ for(let i=0;i<32;i++){const x=(r()-.5)*80,z=30-r()*100;if(Math.abs(x)<3&&z>16)continue;rocks.push({x,z,scale:.18+r()*.6});}
+ const l=new T.InstancedMesh(leaf,new T.MeshStandardMaterial({side:T.DoubleSide,roughness:1}),litter.length);l.name='temperate-curled-leaf-litter';litter.forEach((p,i)=>{o.position.set(p.x,expansionHeight(plan,p.x,p.z)+.014,p.z);o.rotation.set((r()-.5)*.35,r()*Math.PI*2,(r()-.5)*.25);o.scale.setScalar(p.scale);o.updateMatrix();l.setMatrixAt(i,o.matrix);l.setColorAt(i,new T.Color('#625138').lerp(new T.Color('#b59b62'),r()*.72));});l.receiveShadow=true;l.computeBoundingSphere();group.add(l);
+ const f=new T.InstancedMesh(fern,new T.MeshStandardMaterial({side:T.DoubleSide,roughness:.90}),ferns.length);f.name='temperate-unnamed-fern-functional-forms';ferns.forEach((p,i)=>{o.position.set(p.x,expansionHeight(plan,p.x,p.z)-.03,p.z);o.rotation.set(0,r()*Math.PI*2,0);o.scale.setScalar(p.scale);o.updateMatrix();f.setMatrixAt(i,o.matrix);f.setColorAt(i,new T.Color('#365a2e').lerp(new T.Color('#91aa47'),r()*.75));});f.receiveShadow=true;f.computeBoundingSphere();group.add(f);
+ const b=new T.InstancedMesh(rockGeometry(true),new T.MeshStandardMaterial({roughness:1}),rocks.length);b.name='temperate-embedded-moss-stone';rocks.forEach((p,i)=>{o.position.set(p.x,expansionHeight(plan,p.x,p.z)-p.scale*.07,p.z);o.rotation.set(0,r()*Math.PI*2,0);o.scale.set(p.scale*1.3,p.scale*.72,p.scale);o.updateMatrix();b.setMatrixAt(i,o.matrix);b.setColorAt(i,new T.Color('#606959').lerp(new T.Color('#89946a'),r()*.7));});b.castShadow=b.receiveShadow=true;b.computeBoundingSphere();group.add(b);
+ scene.userData.temperateFloor={litter:l.count,ferns:f.count,rocks:b.count};
+ return()=>{scene.remove(group);for(const mesh of [l,f,b]){mesh.geometry.dispose();(mesh.material as T.Material).dispose();}};
+}
+
+/** Local art-directed bounce response. Directional sun still establishes the
+ * actual orientation/shadows; this selects crown groups, not a global yellow tint. */
+export const temperateFoliageResponse={
+ shadow:'#1d382e',body:'#4f6d45',sunlit:'#e6dc98',
+ interiorStrength:.64,highlightStrength:1.0,highlightGain:2.10,
+ // Approximate reference P05/P95 display luminance, not shader radiance clamps.
+ referenceDisplayRange:[43,220] as const,
+};
+export function installTemperateLightResponse(scene:T.Scene){
+ const previous=scene.onBeforeRender;let installed=false;const diagnostic={compiledMaterials:0,actualSunMaterials:0,normalDesign:'Readable C2 normals, branch-radial canopy depth occlusion bounded independently from directional orientation',artisticEffect:'Experimental upper/exterior highlights and cool interior; not human-approved'};scene.userData.temperateLightResponse=diagnostic;
+ scene.onBeforeRender=function(...args){previous.apply(this,args);if(installed)return;installed=true;const seen=new Set<T.Material>();
+  scene.traverse(object=>{if(!(object instanceof T.Mesh))return;for(const material of Array.isArray(object.material)?object.material:[object.material]){
+   if(seen.has(material))continue;seen.add(material);
+   if(material instanceof T.ShaderMaterial&&material.uniforms.shadowPigment){
+    if(object.userData.temperateDepthFoliage){
+     material.uniforms.shadowPigment.value.set('#203e32');material.uniforms.midPigment.value.set('#4b6740');material.uniforms.highPigment.value.set('#9caa65');
+     material.uniforms.rimStrength.value=.12;material.uniforms.gradientStrength.value=.35;continue;
+    }
+    material.uniforms.rimStrength.value=.18;material.uniforms.gradientStrength.value=.48;
+    material.uniforms.shadowPigment.value.set(temperateFoliageResponse.shadow);material.uniforms.midPigment.value.set(temperateFoliageResponse.body);material.uniforms.highPigment.value.set(temperateFoliageResponse.sunlit);
+    const before=material.onBeforeCompile,key=material.customProgramCacheKey;
+    material.onBeforeCompile=function(shader,renderer){before.call(this,shader,renderer);const directional=shader.fragmentShader.includes('varying float actualNdotL')?'actualNdotL':'sunFacing';diagnostic.compiledMaterials++;if(directional==='actualNdotL')diagnostic.actualSunMaterials++;material.userData.temperateLightHookCompiled=true;material.userData.temperateActualSun=directional==='actualNdotL';
+     shader.fragmentShader=shader.fragmentShader.replace('gl_FragColor=vec4(shaded,1.);',`
+      float tcCrownPatch=.5+.25*sin(canopyWorld.x*.32+canopyWorld.z*.17)+.25*sin(canopyWorld.z*.29-canopyWorld.x*.11);
+      float tcSun=${directional};
+      float tcOcclusion=smoothstep(.14,.76,depthShade);
+      float tcValue=clamp(dot(shaded,vec3(.2126,.7152,.0722))/max(.04,dot(midPigment,vec3(.2126,.7152,.0722))),.45,1.65);
+      vec3 tcCoolInterior=mix(shadowPigment,midPigment,.18)*tcValue;
+      shaded=mix(shaded,tcCoolInterior,tcOcclusion*${temperateFoliageResponse.interiorStrength.toFixed(3)});
+      float tcHighlight=smoothstep(.35,.70,tcCrownPatch)*smoothstep(.50,.83,tcSun)*smoothstep(.32,.75,attentionHeight)*(1.-tcOcclusion*.88);
+      vec3 tcSunlit=highPigment*${temperateFoliageResponse.highlightGain.toFixed(3)}*tcSun*${directional==='actualNdotL'?'actualSunPower':'1.'};
+      shaded=mix(shaded,tcSunlit,tcHighlight*${temperateFoliageResponse.highlightStrength.toFixed(3)}*(.70+.30*attentionPigment.w));
+      gl_FragColor=vec4(shaded,1.);`);
+    };material.customProgramCacheKey=()=>key.call(material)+'|temperate-depth-light-v6|'+JSON.stringify(temperateFoliageResponse);material.needsUpdate=true;
+   }
+   if(material instanceof T.MeshStandardMaterial&&(object.name==='expansion-terrain'||object.name==='temperate-unnamed-fern-functional-forms'||object.name==='temperate-curled-leaf-litter')){
+    const before=material.onBeforeCompile,key=material.customProgramCacheKey;
+    material.onBeforeCompile=function(shader,renderer){before.call(this,shader,renderer);
+     shader.vertexShader='varying vec3 tcFloorWorld;\n'+shader.vertexShader;
+     shader.vertexShader=shader.vertexShader.replace('#include <project_vertex>',`vec4 tcPosition=vec4(transformed,1.);
+      #ifdef USE_INSTANCING
+       tcPosition=instanceMatrix*tcPosition;
+      #endif
+      tcFloorWorld=(modelMatrix*tcPosition).xyz;
+      #include <project_vertex>`);
+     shader.fragmentShader='varying vec3 tcFloorWorld;\n'+shader.fragmentShader;
+     shader.fragmentShader=shader.fragmentShader.replace('#include <opaque_fragment>',`
+      float tcGroundDapple=.5+.25*sin(tcFloorWorld.x*.32+tcFloorWorld.z*.17)+.25*sin(tcFloorWorld.z*.29-tcFloorWorld.x*.11);
+      float tcOpening=exp(-pow((tcFloorWorld.x+sin(tcFloorWorld.z*.13)*1.7)/8.,2.))*smoothstep(-24.,-6.,tcFloorWorld.z)*(1.-smoothstep(28.,38.,tcFloorWorld.z));
+      // Local art-directed diffuse gain on the existing clearing field. Keep
+      // ground texture and actual leaf-shadow modulation, never emission.
+      outgoingLight*=mix(vec3(.88,.96,1.06),${object.name==='expansion-terrain'?'vec3(2.30,2.12,1.68)':'vec3(1.20,1.11,.82)'},smoothstep(.37,.82,tcGroundDapple)*tcOpening);
+      #include <opaque_fragment>`);
+    };material.customProgramCacheKey=()=>key.call(material)+'|temperate-connected-bounce-v3|'+object.name;material.needsUpdate=true;
+   }
+  }});
+ };
+ return()=>{scene.onBeforeRender=previous;};
+}

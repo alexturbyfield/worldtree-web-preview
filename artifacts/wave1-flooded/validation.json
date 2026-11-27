@@ -1,0 +1,377 @@
+{
+  "fieldChecks": [
+    {
+      "seed": "29",
+      "waterFraction": 0.13533834586466165,
+      "maxHeightStepPer10cm": 0.010393362953458468,
+      "deterministic": true
+    },
+    {
+      "seed": "41",
+      "waterFraction": 0.13750284802916382,
+      "maxHeightStepPer10cm": 0.011137256165894074,
+      "deterministic": true
+    },
+    {
+      "seed": "613",
+      "waterFraction": 0.13727500569605833,
+      "maxHeightStepPer10cm": 0.011209303829298009,
+      "deterministic": true
+    }
+  ],
+  "frames": [
+    {
+      "seed": "29",
+      "view": "hero",
+      "calls": 6,
+      "triangles": 469378,
+      "cpuSubmissionMs": [
+        0.5,
+        0.19999998807907104,
+        0.30000001192092896,
+        0.19999998807907104,
+        0.30000001192092896,
+        0.19999998807907104,
+        0.19999998807907104,
+        0.10000002384185791
+      ],
+      "textureObjects": 5,
+      "geometryObjects": 6,
+      "wave1": {
+        "id": "flooded",
+        "version": "flooded-3",
+        "biome": 9,
+        "ecoregion": 581,
+        "seed": "29",
+        "treeCount": 0,
+        "sedgeInstances": [
+          3000,
+          2700
+        ],
+        "reflection": "Reflected sky lookup with subtle ripples; no planar geometry or tree reflection.",
+        "ecology": "Unnamed open-groundcover sedge/grass forms; no confirmed local taxon inferred.",
+        "layers": {
+          "season": "inherited/not inferred",
+          "weather": "fixed clear study",
+          "timeOfDay": "fixed warm directional study"
+        },
+        "limitations": [
+          "Synthetic wetland microtopography, not surveyed hydrology.",
+          "Far marsh simplified; no tree islands inserted without source palette."
+        ]
+      },
+      "camera": {
+        "position": [
+          -18,
+          1.6941562907697951,
+          34
+        ],
+        "target": [
+          2,
+          1.1,
+          -140
+        ]
+      },
+      "errors": [],
+      "checks": {
+        "lowerHalfNearBlackFraction": 0,
+        "note": "RGB lower-half diagnostic, not semantic vegetation mask or artistic approval."
+      }
+    },
+    {
+      "seed": "29",
+      "view": "inspection",
+      "calls": 6,
+      "triangles": 469378,
+      "cpuSubmissionMs": [
+        0.29999998211860657,
+        0.20000001788139343,
+        0,
+        0.19999998807907104,
+        1.4000000059604645,
+        0.09999999403953552,
+        0.20000001788139343,
+        0.19999998807907104
+      ],
+      "textureObjects": 5,
+      "geometryObjects": 6,
+      "wave1": {
+        "id": "flooded",
+        "version": "flooded-3",
+        "biome": 9,
+        "ecoregion": 581,
+        "seed": "29",
+        "treeCount": 0,
+        "sedgeInstances": [
+          3000,
+          2700
+        ],
+        "reflection": "Reflected sky lookup with subtle ripples; no planar geometry or tree reflection.",
+        "ecology": "Unnamed open-groundcover sedge/grass forms; no confirmed local taxon inferred.",
+        "layers": {
+          "season": "inherited/not inferred",
+          "weather": "fixed clear study",
+          "timeOfDay": "fixed warm directional study"
+        },
+        "limitations": [
+          "Synthetic wetland microtopography, not surveyed hydrology.",
+          "Far marsh simplified; no tree islands inserted without source palette."
+        ]
+      },
+      "camera": {
+        "position": [
+          70,
+          50,
+          85
+        ],
+        "target": [
+          0,
+          1,
+          -25
+        ]
+      },
+      "errors": [],
+      "checks": {
+        "lowerHalfNearBlackFraction": 0,
+        "note": "RGB lower-half diagnostic, not semantic vegetation mask or artistic approval."
+      }
+    },
+    {
+      "seed": "41",
+      "view": "hero",
+      "calls": 6,
+      "triangles": 469378,
+      "cpuSubmissionMs": [
+        0.4000000059604645,
+        0.30000001192092896,
+        0.19999998807907104,
+        0.30000001192092896,
+        0.29999998211860657,
+        0.30000001192092896,
+        0.19999998807907104,
+        0.20000001788139343
+      ],
+      "textureObjects": 5,
+      "geometryObjects": 6,
+      "wave1": {
+        "id": "flooded",
+        "version": "flooded-3",
+        "biome": 9,
+        "ecoregion": 581,
+        "seed": "41",
+        "treeCount": 0,
+        "sedgeInstances": [
+          3000,
+          2700
+        ],
+        "reflection": "Reflected sky lookup with subtle ripples; no planar geometry or tree reflection.",
+        "ecology": "Unnamed open-groundcover sedge/grass forms; no confirmed local taxon inferred.",
+        "layers": {
+          "season": "inherited/not inferred",
+          "weather": "fixed clear study",
+          "timeOfDay": "fixed warm directional study"
+        },
+        "limitations": [
+          "Synthetic wetland microtopography, not surveyed hydrology.",
+          "Far marsh simplified; no tree islands inserted without source palette."
+        ]
+      },
+      "camera": {
+        "position": [
+          -18,
+          1.8123973158900182,
+          34
+        ],
+        "target": [
+          2,
+          1.1,
+          -140
+        ]
+      },
+      "errors": [],
+      "checks": {
+        "lowerHalfNearBlackFraction": 0,
+        "note": "RGB lower-half diagnostic, not semantic vegetation mask or artistic approval."
+      }
+    },
+    {
+      "seed": "41",
+      "view": "inspection",
+      "calls": 6,
+      "triangles": 469378,
+      "cpuSubmissionMs": [
+        0.4000000059604645,
+        0.29999998211860657,
+        0.09999999403953552,
+        0.20000001788139343,
+        0.29999998211860657,
+        0.20000001788139343,
+        0.19999998807907104,
+        0.09999999403953552
+      ],
+      "textureObjects": 5,
+      "geometryObjects": 6,
+      "wave1": {
+        "id": "flooded",
+        "version": "flooded-3",
+        "biome": 9,
+        "ecoregion": 581,
+        "seed": "41",
+        "treeCount": 0,
+        "sedgeInstances": [
+          3000,
+          2700
+        ],
+        "reflection": "Reflected sky lookup with subtle ripples; no planar geometry or tree reflection.",
+        "ecology": "Unnamed open-groundcover sedge/grass forms; no confirmed local taxon inferred.",
+        "layers": {
+          "season": "inherited/not inferred",
+          "weather": "fixed clear study",
+          "timeOfDay": "fixed warm directional study"
+        },
+        "limitations": [
+          "Synthetic wetland microtopography, not surveyed hydrology.",
+          "Far marsh simplified; no tree islands inserted without source palette."
+        ]
+      },
+      "camera": {
+        "position": [
+          70,
+          50,
+          85
+        ],
+        "target": [
+          0,
+          1,
+          -25
+        ]
+      },
+      "errors": [],
+      "checks": {
+        "lowerHalfNearBlackFraction": 0,
+        "note": "RGB lower-half diagnostic, not semantic vegetation mask or artistic approval."
+      }
+    },
+    {
+      "seed": "613",
+      "view": "hero",
+      "calls": 6,
+      "triangles": 469378,
+      "cpuSubmissionMs": [
+        0.5,
+        0.20000001788139343,
+        0.29999998211860657,
+        0.30000001192092896,
+        0.29999998211860657,
+        0.20000001788139343,
+        0.19999998807907104,
+        0.30000001192092896
+      ],
+      "textureObjects": 5,
+      "geometryObjects": 6,
+      "wave1": {
+        "id": "flooded",
+        "version": "flooded-3",
+        "biome": 9,
+        "ecoregion": 581,
+        "seed": "613",
+        "treeCount": 0,
+        "sedgeInstances": [
+          3000,
+          2700
+        ],
+        "reflection": "Reflected sky lookup with subtle ripples; no planar geometry or tree reflection.",
+        "ecology": "Unnamed open-groundcover sedge/grass forms; no confirmed local taxon inferred.",
+        "layers": {
+          "season": "inherited/not inferred",
+          "weather": "fixed clear study",
+          "timeOfDay": "fixed warm directional study"
+        },
+        "limitations": [
+          "Synthetic wetland microtopography, not surveyed hydrology.",
+          "Far marsh simplified; no tree islands inserted without source palette."
+        ]
+      },
+      "camera": {
+        "position": [
+          -18,
+          1.9621121839389386,
+          34
+        ],
+        "target": [
+          2,
+          1.1,
+          -140
+        ]
+      },
+      "errors": [],
+      "checks": {
+        "lowerHalfNearBlackFraction": 0,
+        "note": "RGB lower-half diagnostic, not semantic vegetation mask or artistic approval."
+      }
+    },
+    {
+      "seed": "613",
+      "view": "inspection",
+      "calls": 6,
+      "triangles": 469378,
+      "cpuSubmissionMs": [
+        0.4000000059604645,
+        0.19999998807907104,
+        0.20000001788139343,
+        0.19999998807907104,
+        0.4000000059604645,
+        0.09999999403953552,
+        0.30000001192092896,
+        0.19999998807907104
+      ],
+      "textureObjects": 5,
+      "geometryObjects": 6,
+      "wave1": {
+        "id": "flooded",
+        "version": "flooded-3",
+        "biome": 9,
+        "ecoregion": 581,
+        "seed": "613",
+        "treeCount": 0,
+        "sedgeInstances": [
+          3000,
+          2700
+        ],
+        "reflection": "Reflected sky lookup with subtle ripples; no planar geometry or tree reflection.",
+        "ecology": "Unnamed open-groundcover sedge/grass forms; no confirmed local taxon inferred.",
+        "layers": {
+          "season": "inherited/not inferred",
+          "weather": "fixed clear study",
+          "timeOfDay": "fixed warm directional study"
+        },
+        "limitations": [
+          "Synthetic wetland microtopography, not surveyed hydrology.",
+          "Far marsh simplified; no tree islands inserted without source palette."
+        ]
+      },
+      "camera": {
+        "position": [
+          70,
+          50,
+          85
+        ],
+        "target": [
+          0,
+          1,
+          -25
+        ]
+      },
+      "errors": [],
+      "checks": {
+        "lowerHalfNearBlackFraction": 0,
+        "note": "RGB lower-half diagnostic, not semantic vegetation mask or artistic approval."
+      }
+    }
+  ],
+  "checksLimitations": [
+    "No automated boundary, repetition, or aesthetic approval detector. Actual image review is required.",
+    "CPU submission measurements on headless desktop software renderer are not device GPU timings.",
+    "Opaque sedge geometry uses no alpha textures; hardware overdraw not measured."
+  ]
+}

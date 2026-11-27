@@ -1,0 +1,271 @@
+[
+  {
+    "id": "boreal",
+    "reference": [
+      {
+        "region": "background",
+        "luminance": 0.3691612156862744,
+        "chroma": 0.1641158088235295,
+        "nearBlackFraction": 0.00234375,
+        "thumbnailEdgeFraction": 0.29359375
+      },
+      {
+        "region": "middle",
+        "luminance": 0.2909940016850482,
+        "chroma": 0.15256357230392253,
+        "nearBlackFraction": 0.0015625,
+        "thumbnailEdgeFraction": 0.25546875
+      },
+      {
+        "region": "foreground",
+        "luminance": 0.27256109453781596,
+        "chroma": 0.1862927170868325,
+        "nearBlackFraction": 0.0019642857142857144,
+        "thumbnailEdgeFraction": 0.12839285714285714
+      }
+    ],
+    "candidate": [
+      {
+        "region": "background",
+        "luminance": 0.25698678529411895,
+        "chroma": 0.24506250000000324,
+        "nearBlackFraction": 0.0296875,
+        "thumbnailEdgeFraction": 0.1246875
+      },
+      {
+        "region": "middle",
+        "luminance": 0.22317410891544043,
+        "chroma": 0.18886718749999792,
+        "nearBlackFraction": 0.0123046875,
+        "thumbnailEdgeFraction": 0.1109375
+      },
+      {
+        "region": "foreground",
+        "luminance": 0.21685514313725435,
+        "chroma": 0.19342997198879536,
+        "nearBlackFraction": 0.0008928571428571428,
+        "thumbnailEdgeFraction": 0.010714285714285714
+      }
+    ],
+    "technical": {
+      "errors": [],
+      "calls": 15,
+      "triangles": 691432,
+      "textureEstimatedRGBABytes": 31823072,
+      "instances": [
+        {
+          "name": "boreal-distant-attached-boughs",
+          "count": 420
+        },
+        {
+          "name": "boreal-weathered-rootbed-stone",
+          "count": 8
+        },
+        {
+          "name": "boreal-weathered-rootbed-stone",
+          "count": 8
+        },
+        {
+          "name": "boreal-weathered-rootbed-stone",
+          "count": 8
+        }
+      ]
+    },
+    "limitations": [
+      "Luminance is display-encoded RGB diagnostic, not physical radiance.",
+      "Horizontal image thirds are composition probes, not semantic material masks.",
+      "Edges/chroma do not establish artistic quality.",
+      "No alpha overdraw or mobile GPU measurement."
+    ]
+  },
+  {
+    "id": "temperate",
+    "reference": [
+      {
+        "region": "background",
+        "luminance": 0.40903735943627423,
+        "chroma": 0.24618627450980174,
+        "nearBlackFraction": 0.001875,
+        "thumbnailEdgeFraction": 0.4065625
+      },
+      {
+        "region": "middle",
+        "luminance": 0.36559827496936254,
+        "chroma": 0.17793121936274597,
+        "nearBlackFraction": 0.0015625,
+        "thumbnailEdgeFraction": 0.3416015625
+      },
+      {
+        "region": "foreground",
+        "luminance": 0.3274660928571424,
+        "chroma": 0.21121568627451173,
+        "nearBlackFraction": 0.005357142857142857,
+        "thumbnailEdgeFraction": 0.2305357142857143
+      }
+    ],
+    "candidate": [
+      {
+        "region": "background",
+        "luminance": 0.46509504117647155,
+        "chroma": 0.32362438725488607,
+        "nearBlackFraction": 0.011875,
+        "thumbnailEdgeFraction": 0.0846875
+      },
+      {
+        "region": "middle",
+        "luminance": 0.32766866467524586,
+        "chroma": 0.2326187193627452,
+        "nearBlackFraction": 0.0431640625,
+        "thumbnailEdgeFraction": 0.1935546875
+      },
+      {
+        "region": "foreground",
+        "luminance": 0.2402309463585433,
+        "chroma": 0.21537044817927758,
+        "nearBlackFraction": 0,
+        "thumbnailEdgeFraction": 0.0125
+      }
+    ],
+    "technical": {
+      "errors": [],
+      "calls": 12,
+      "triangles": 721818,
+      "textureEstimatedRGBABytes": 23086795,
+      "instances": [
+        {
+          "name": "temperate-curled-leaf-litter",
+          "count": 8753
+        },
+        {
+          "name": "temperate-unnamed-fern-functional-forms",
+          "count": 260
+        },
+        {
+          "name": "temperate-embedded-moss-stone",
+          "count": 35
+        },
+        {
+          "name": "field-source-stand-impostors",
+          "count": 320
+        }
+      ]
+    },
+    "limitations": [
+      "Luminance is display-encoded RGB diagnostic, not physical radiance.",
+      "Horizontal image thirds are composition probes, not semantic material masks.",
+      "Edges/chroma do not establish artistic quality.",
+      "No alpha overdraw or mobile GPU measurement."
+    ]
+  },
+  {
+    "id": "tundra",
+    "reference": [
+      {
+        "region": "background",
+        "luminance": 0.7420229363970609,
+        "chroma": 0.28787867647058435,
+        "nearBlackFraction": 0,
+        "thumbnailEdgeFraction": 0.0246875
+      },
+      {
+        "region": "middle",
+        "luminance": 0.4641869218750001,
+        "chroma": 0.29364276960784375,
+        "nearBlackFraction": 0,
+        "thumbnailEdgeFraction": 0.14375
+      },
+      {
+        "region": "foreground",
+        "luminance": 0.36314798893557304,
+        "chroma": 0.30429621848739363,
+        "nearBlackFraction": 0.0017857142857142857,
+        "thumbnailEdgeFraction": 0.30392857142857144
+      }
+    ],
+    "candidate": [
+      {
+        "region": "background",
+        "luminance": 0.6433451754901961,
+        "chroma": 0.43529289215684075,
+        "nearBlackFraction": 0,
+        "thumbnailEdgeFraction": 0.01296875
+      },
+      {
+        "region": "middle",
+        "luminance": 0.42003677696078306,
+        "chroma": 0.26380438112745275,
+        "nearBlackFraction": 0,
+        "thumbnailEdgeFraction": 0.037109375
+      },
+      {
+        "region": "foreground",
+        "luminance": 0.4563154624649863,
+        "chroma": 0.2618326330532123,
+        "nearBlackFraction": 0,
+        "thumbnailEdgeFraction": 0.1367857142857143
+      }
+    ],
+    "technical": {
+      "errors": [],
+      "calls": 16,
+      "triangles": 1040908,
+      "textureEstimatedRGBABytes": 16778955,
+      "instances": [
+        {
+          "name": "tundra-true-branchlet-near-0",
+          "count": 356
+        },
+        {
+          "name": "tundra-true-branchlet-near-1",
+          "count": 373
+        },
+        {
+          "name": "tundra-true-branchlet-near-2",
+          "count": 321
+        },
+        {
+          "name": "tundra-true-branchlet-middle-0",
+          "count": 498
+        },
+        {
+          "name": "tundra-true-branchlet-middle-1",
+          "count": 510
+        },
+        {
+          "name": "tundra-true-branchlet-middle-2",
+          "count": 542
+        },
+        {
+          "name": "tundra-embedded-mineral-stone-0",
+          "count": 22
+        },
+        {
+          "name": "tundra-embedded-mineral-stone-1",
+          "count": 21
+        },
+        {
+          "name": "tundra-embedded-mineral-stone-2",
+          "count": 21
+        },
+        {
+          "name": "tundra-rare-stalks",
+          "count": 191
+        },
+        {
+          "name": "tundra-pale-functional-seedheads",
+          "count": 191
+        },
+        {
+          "name": "tundra-curved-short-sedge-functional-form",
+          "count": 191
+        }
+      ]
+    },
+    "limitations": [
+      "Luminance is display-encoded RGB diagnostic, not physical radiance.",
+      "Horizontal image thirds are composition probes, not semantic material masks.",
+      "Edges/chroma do not establish artistic quality.",
+      "No alpha overdraw or mobile GPU measurement."
+    ]
+  }
+]

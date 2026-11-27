@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "id": "wave1-desert",
+  "status": "rejected-for-artistic-approval; technical-opt-in-only",
+  "biome": 13,
+  "ecoregion": {
+    "ECO_ID": 433,
+    "name": "Mojave desert",
+    "lat": 34,
+    "lon": -116.15,
+    "lookup": "Actual repository RESOLVE2017 polygon lookup",
+    "candidateSpecies": 0
+  },
+  "ecology": "Keep canonical recipe trees/palette untouched; generic xeric_shrub form is provided by resolver. No Joshua trees or named species invented. No local abundance/surface geology inference.",
+  "referenceIDs": [
+    "wave1-desert-usgs-granite"
+  ],
+  "vision": {
+    "actualImagesInspected": true,
+    "implementer": "desert agent",
+    "independentAgentCritique": "Parent root inspected reference/hero/inspection before reading source",
+    "humanApproval": null
+  },
+  "rounds": [
+    {
+      "round": 1,
+      "decision": "revise",
+      "evidence": "Faceted granite and nearly absent foreground vegetation."
+    },
+    {
+      "round": 2,
+      "decision": "revise",
+      "evidence": "Smoother rocks but conical shrub lobes read as mini conifers."
+    },
+    {
+      "round": 3,
+      "decision": "reject-for-artistic-approval",
+      "evidence": "Rounded shrubs still geometric; clay-like boulders and smooth mounds; inspection reveals regular circular/grid substrate pattern."
+    }
+  ],
+  "technicalChecks": {
+    "typescript": "passed",
+    "targetedTest": "tests/wave1-desert.test.ts passed",
+    "pageErrors": [],
+    "drawCalls": 9,
+    "triangles": 285316,
+    "understoryInstances": 420,
+    "rockInstances": 213,
+    "hardwareDevicePerformance": "unmeasured",
+    "seeds": [
+      "29",
+      "41"
+    ],
+    "holdout": "5189 generated after rollback re-freeze; no tuning afterward. Revealed5171 remains negative evidence."
+  },
+  "defects": [
+    {
+      "severity": "critical",
+      "defect": "Inspection substrate displays regular circular/grid stamping.",
+      "technicalCause": "Suspected periodic crossed-sine material masks and mesh sampling; no decal or photographic stamp texture is used.",
+      "decision": "Rejected and rolled back; retained as negative technique, not current active ground.",
+      "current": false
+    },
+    {
+      "severity": "major",
+      "defect": "Shrub lobes remain generic geometric beads rather than twiggy xeric plants."
+    },
+    {
+      "severity": "major",
+      "defect": "Large boulders read as clay; distant terrain is smooth, lacks credible fracture/erosion hierarchy."
+    },
+    {
+      "severity": "major",
+      "defect": "Revealed seed5171 is obstructed by a huge cropped foreground boulder; fixed archetype variation not robust."
+    },
+    {
+      "severity": "major",
+      "defect": "Retained pre-gravel substrate is too uniform; no finished ground material."
+    }
+  ],
+  "layers": {
+    "season": "not inferred; fixed neutral plant state",
+    "weather": "clear presentation, no weather generator added",
+    "timeOfDay": "warm oblique sunlight presentation independent of botanical candidates"
+  },
+  "sharedReuseCandidates": [
+    {
+      "principle": "One continuous terrain height function for camera, rock and shrub contact",
+      "status": "technically-supported, not artistic approval"
+    },
+    {
+      "principle": "Instanced geology and low vegetation with a few batches",
+      "status": "technically-supported; performance on hardware not approved"
+    },
+    {
+      "principle": "Species presence must not be inferred from reference imagery",
+      "status": "existing permanent constraint respected"
+    }
+  ],
+  "doNotPromote": [
+    "Current substrate shader",
+    "Clay-like rock normals/material",
+    "Current shrub geometry",
+    "Fixed hero outcrop placement"
+  ],
+  "budget": "3 rounds exhausted; stop. No tuning after holdout5171.",
+  "rollback": {
+    "reason": "Obvious crossed-sine gravel circles in training29 inspection",
+    "action": "Reverted R3 gravel-mask shader to earlier non-stamped version, retaining shrubs and broad vertex colours.",
+    "budget": "Mandatory regression rollback, not a new artistic round",
+    "evidence": [
+      "artifacts/wave1-desert/rejected-stamp-inspection.png",
+      "artifacts/wave1-desert/desert-29-inspection.png"
+    ],
+    "outcome": "Conspicuous circle/grid pattern removed; ground is still too uniform."
+  }
+}

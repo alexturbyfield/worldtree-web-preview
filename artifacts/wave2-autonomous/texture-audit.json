@@ -1,0 +1,44 @@
+[
+  {
+    "id": "boreal-floor-v1",
+    "source": "C:/Users/aturb/.codex/generated_images/01a205da-da33-7d33-9ee8-3170650dd5eb/exec-e34db479-3ad3-49ec-af1b-5fcca3719264.png",
+    "path": "public/assets/wave2-autonomous/boreal-floor-v1.png",
+    "width": 1254,
+    "height": 1254,
+    "horizontalEdgeMeanDifference": 0.04840666729211621,
+    "ordinaryNeighborMeanDifference": 0.04386277637051631,
+    "interpretation": "Diagnostic only; inspect tiled image. Not guaranteed exact boundary match.",
+    "sha256": "1a2ff0f48dfe4bd5eaf0a0e3fb126fef5910d38bcde237ce70baff76f8f78664"
+  },
+  {
+    "id": "temperate-floor-v1",
+    "source": "C:/Users/aturb/.codex/generated_images/01a205da-da33-7d33-9ee8-3170650dd5eb/exec-071607d7-d619-4a05-bec4-3ac54d1eb0a2.png",
+    "path": "public/assets/wave2-autonomous/temperate-floor-v1.png",
+    "width": 1254,
+    "height": 1254,
+    "horizontalEdgeMeanDifference": 0.06659786721706226,
+    "ordinaryNeighborMeanDifference": 0.05276292335115865,
+    "interpretation": "Diagnostic only; inspect tiled image. Not guaranteed exact boundary match.",
+    "sha256": "278d59f727fa7a85813d36f931ad83f49d6749b6710a85f0771c04badf8d8e5d"
+  },
+  {
+    "id": "tundra-floor-v1",
+    "source": "C:/Users/aturb/.codex/generated_images/01a205da-da33-7d33-9ee8-3170650dd5eb/exec-9ae1da19-2147-4b14-a76e-62a6c3429b57.png",
+    "path": "public/assets/wave2-autonomous/tundra-floor-v1.png",
+    "width": 1254,
+    "height": 1254,
+    "horizontalEdgeMeanDifference": 0.08768594093671493,
+    "ordinaryNeighborMeanDifference": 0.07082694853592686,
+    "interpretation": "Diagnostic only; inspect tiled image. Not guaranteed exact boundary match.",
+    "sha256": "a46deeef8cf8ed882fe3eb33fb2edcc77083695fdb82206877b3cec5e9524876"
+  },
+  {
+    "id": "forest-moss-v1",
+    "path": "public/assets/wave2-autonomous/forest-moss-v1.png",
+    "width": 1254,
+    "height": 1254,
+    "preview": "artifacts/wave2-autonomous/forest-moss-v1-3x3.png",
+    "inspection": "Actual texture and repeated preview interpreted; no conspicuous hard seams at768; opposite edges not asserted pixel-identical",
+    "sha256": "190cc904c8ad3e89145d8d443f8d6e307259c673d5cfe58f2be4cd11adca9035"
+  }
+]

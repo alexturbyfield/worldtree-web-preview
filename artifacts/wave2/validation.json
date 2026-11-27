@@ -1,0 +1,157 @@
+{
+  "protected": [
+    {
+      "name": "puget-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "rainforest-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "rainforest-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "savanna-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "savanna-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "alpine-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "alpine-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "desert-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "desert-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "mangrove-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "mangrove-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "flooded-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "flooded-inspection",
+      "pixelIdentical": true
+    }
+  ],
+  "frames": 62,
+  "sourceFreezeUnchanged": true,
+  "postFreezeTechnicalCorrection": {
+    "file": "src/lib/forest/painted-renderer.ts",
+    "hash": "708fcc7adb2cff42a23423662adfe00048778ca68547ba4d6aaa75d764281f07",
+    "reason": "New opt-in study pick callback maps presentation occurrence indices to canonical source IDs. No scene parameters, geometry, shaders or artistic choices changed; protected previews bypass this mapping.",
+    "artisticHoldoutTuning": false
+  },
+  "renderErrors": 0,
+  "performance": [
+    {
+      "id": "boreal",
+      "calls": [
+        7,
+        11
+      ],
+      "triangles": [
+        223146,
+        587412
+      ],
+      "instances": [
+        {
+          "name": "expansion-distant-conifer-forms",
+          "count": 480
+        },
+        {
+          "name": "expansion-low-unnamed-cover",
+          "count": 2100
+        },
+        {
+          "name": "expansion-embedded-weathered-stone",
+          "count": 39
+        },
+        {
+          "name": "expansion-unnamed-low-foliage",
+          "count": 280
+        }
+      ],
+      "treeOccurrences": 48,
+      "cameraMatched": true
+    },
+    {
+      "id": "temperate",
+      "calls": [
+        8,
+        12
+      ],
+      "triangles": [
+        250558,
+        486432
+      ],
+      "instances": [
+        {
+          "name": "field-source-stand-impostors",
+          "count": 600
+        },
+        {
+          "name": "expansion-low-unnamed-cover",
+          "count": 2100
+        },
+        {
+          "name": "expansion-embedded-weathered-stone",
+          "count": 52
+        },
+        {
+          "name": "expansion-unnamed-low-foliage",
+          "count": 280
+        }
+      ],
+      "treeOccurrences": 34,
+      "cameraMatched": true
+    },
+    {
+      "id": "tundra",
+      "calls": [
+        2,
+        7
+      ],
+      "triangles": [
+        2060,
+        280248
+      ],
+      "instances": [
+        {
+          "name": "expansion-low-unnamed-cover",
+          "count": 3600
+        },
+        {
+          "name": "expansion-embedded-weathered-stone",
+          "count": 42
+        },
+        {
+          "name": "expansion-unnamed-low-foliage",
+          "count": 309
+        }
+      ],
+      "treeOccurrences": 0,
+      "cameraMatched": true
+    }
+  ],
+  "mobileApproved": false
+}

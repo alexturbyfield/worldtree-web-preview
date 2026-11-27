@@ -1,0 +1,33 @@
+import * as T from 'three';
+import {Reflector} from 'three/addons/objects/Reflector.js';
+/** Camera-derived encounter footprint; terrain anchored after composition, never screen-pixel shading. */
+export function stagingWeight(x:number,z:number,eye:[number,number],target:[number,number]){
+ const dx=target[0]-eye[0],dz=target[1]-eye[1],l=Math.hypot(dx,dz),f=((x-eye[0])*dx+(z-eye[1])*dz)/l,s=Math.abs(((x-eye[0])*dz-(z-eye[1])*dx)/l);
+ const smooth=(a:number,b:number,v:number)=>{const t=T.MathUtils.clamp((v-a)/(b-a),0,1);return t*t*(3-2*t);};
+ return smooth(0,2,f)*(1-smooth(6+Math.sin(x*.6)*.8,13+Math.sin(x*.4+z*.3),f))*(1-smooth(1.3+f*.09,3+f*.16,s));
+}
+/** Planar environment reflection + sampled terrain depth. No biome tint/overlay. */
+export function tidalWater(height:(x:number,z:number)=>number,level:number,size:number,center:number,wind=0){
+ const n=256,depth=new Float32Array(n*n);for(let j=0;j<n;j++)for(let i=0;i<n;i++)depth[j*n+i]=Math.max(0,level-height((i/(n-1)-.5)*size,(j/(n-1)-.5)*size+center));
+ const map=new T.DataTexture(depth,n,n,T.RedFormat,T.FloatType);map.minFilter=map.magFilter=T.LinearFilter;map.needsUpdate=true;
+ const water=new Reflector(new T.PlaneGeometry(size,size),{textureWidth:512,textureHeight:256,clipBias:.003,color:0xffffff});water.rotation.x=-Math.PI/2;water.position.set(0,level,center);
+ const m=water.material as T.ShaderMaterial;
+ Object.assign(m.uniforms,{depthField:{value:map},extent:{value:new T.Vector3(size,center,level)},windStrength:{value:Math.max(0,wind)},sediment:{value:new T.Color('#8b7656')},absorption:{value:new T.Vector3(1.1,1.6,2.3)}});
+ m.vertexShader=m.vertexShader.replace('varying vec4 vUv;','varying vec4 vUv; varying vec3 waterWorld;').replace('vUv = textureMatrix','waterWorld=(modelMatrix*vec4(position,1.)).xyz;\n vUv = textureMatrix');
+ m.fragmentShader=`uniform sampler2D depthField;uniform vec3 extent,sediment,absorption;uniform float windStrength;varying vec3 waterWorld;\n`+m.fragmentShader;
+ m.fragmentShader=m.fragmentShader.replace('vec4 base = texture2DProj( tDiffuse, vUv );',`vec3 V=normalize(cameraPosition-waterWorld);
+ float ripple=.001+min(windStrength,2.)*.002;
+ vec2 waves=vec2(sin(waterWorld.x*.83+waterWorld.z*.61),cos(waterWorld.z*1.13-waterWorld.x*.31));
+ vec3 N=normalize(vec3(waves.x*ripple*9.,1.,waves.y*ripple*9.));
+ vec4 reflectedUV=vUv;reflectedUV.xy+=waves*ripple*vUv.w;
+ vec4 base=texture2DProj(tDiffuse,reflectedUV);
+ float depth=texture2D(depthField,vec2(waterWorld.x/extent.x+.5,(waterWorld.z-extent.y)/extent.x+.5)).r;
+ vec3 transmission=exp(-absorption*depth/max(.2,abs(dot(V,N))));
+ float grain=.92+.08*sin(waterWorld.x*8.1+sin(waterWorld.z*3.7));
+ vec3 substrate=sediment*grain;
+ vec3 underwater=substrate*transmission+sediment*.35*(1.-transmission);
+ float F=.02+.98*pow(1.-max(0.,dot(V,N)),5.);
+ base.rgb=mix(underwater,base.rgb,F);`);
+ m.fragmentShader=m.fragmentShader.replace('blendOverlay( base.rgb, color )','base.rgb');
+ return {water,dispose:()=>{map.dispose();water.dispose();},limitations:'Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation.'};
+}

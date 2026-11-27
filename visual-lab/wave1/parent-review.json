@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-26T04:21:32.055Z",
+  "reviewer": "Parent agent, separate from biome implementers; not blind, not human approval",
+  "actualVision": true,
+  "method": "Actual reference photos, corrected captures and final comparison/inspection sheets interpreted using view_image. Initial image-first critique preceded module-source reading.",
+  "loaded": [
+    "AGENTS.md",
+    "visual-lab/README.md",
+    "docs/visual-quality-workflow.md",
+    "visual-lab/art-direction-policy.json",
+    ".agents/skills/prototype-fast/SKILL.md",
+    "existing recipes/renderers/ecological resolver",
+    "protected reference captures",
+    "workstream reference analyses and rejected records"
+  ],
+  "imagesInspected": [
+    "artifacts/wave1/comparison.png",
+    "artifacts/wave1/inspection.png",
+    "artifacts/wave1-desert/desert-29-inspection.png",
+    "artifacts/wave1-desert/desert-5189-hero.png",
+    "artifacts/wave1-flooded/final-613-hero.png",
+    "artifacts/wave1-flooded/final-613-inspection.png",
+    "artifacts/wave1-mangrove/final-41-hero.png",
+    "artifacts/wave1-mangrove/final-617-hero.png",
+    "artifacts/wave1-mangrove/final-617-inspection.png"
+  ],
+  "desert": {
+    "betterThanGenericBaseline": true,
+    "goodEnoughToApprove": false,
+    "humanApproval": null,
+    "severity": "major",
+    "evidence": [
+      "Clay-like rocks and rounded distant mounds",
+      "Geometric shrub lobes and uniform substrate",
+      "Fresh5189 still has obstructive oversized foreground boulder"
+    ],
+    "confirmedCause": "Current explicit geometry/material representation; high-contrast stamped gravel was rolled back after training29 inspection.",
+    "hypothesis": "Need fracture-scale geology and foreground occupancy safeguards, not extra random density.",
+    "decision": "retain opt-in technical checkpoint only; reject artistic approval",
+    "roundsUsed": 3,
+    "negativeEvidence": [
+      "round1",
+      "round2",
+      "rejected-stamp-inspection",
+      "revealed5171",
+      "5189"
+    ]
+  },
+  "mangrove": {
+    "betterThanGenericBaseline": true,
+    "goodEnoughToApprove": false,
+    "humanApproval": null,
+    "severity": "major",
+    "evidence": [
+      "Recognizable roots and water reflection",
+      "Noisy small foliage marks and planar canal banks",
+      "Pale distant gaps and almost bare inspection surroundings"
+    ],
+    "confirmedCause": "Current dressing is concentrated along the synthetic channel; R3 added generic canopy ellipsoids and was rejected.",
+    "hypothesis": "Coordinated shore mesh/material and surrounding forest layers are required.",
+    "decision": "retain R2 only; no global promotion",
+    "roundsUsed": 3,
+    "invalidEvidence": "Original R1/R2 hero captures used inverted reflection camera; withdraw their hero-comparison critiques. Corrected captures and final primary-camera images supersede them."
+  },
+  "flooded": {
+    "betterThanPrevious": true,
+    "goodEnoughToApprove": false,
+    "humanApproval": null,
+    "severity": "major",
+    "evidence": [
+      "R3 curved grass fuller than pale R1/R2 sticks",
+      "29 emphasizes a broad canal",
+      "613 hides much water at human height; inspection shows exposed bank ribbons and sparse distant geometry"
+    ],
+    "confirmedCause": "World water-area fraction remains about13.5%, but projected composition varies sharply with seed.",
+    "hypothesis": "Need jointly evaluated projected water-window scale and ground/vegetation transitions.",
+    "decision": "retain R3 provisionally only; reject artistic approval",
+    "roundsUsed": 3
+  },
+  "protected": {
+    "result": "7/7 pixel-identical",
+    "evidence": "artifacts/wave1/regression.json"
+  },
+  "stopReason": "Three parallel workstream rounds exhausted, major representation limitations remain. No further artistic changes or Wave2 expansion.",
+  "humanPreference": null
+}

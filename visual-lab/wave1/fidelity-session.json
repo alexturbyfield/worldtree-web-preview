@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "wave1-concept-fidelity-push",
+  "date": "2026-11-26",
+  "status": "review checkpoint; artistic acceptance unmet",
+  "authorization": "User requested a substantial concept-led rebuild, progress-based iteration and roughly60/25/15 effort. No commit, push, deploy, global promotion or Wave2.",
+  "loaded": ["AGENTS.md", "prototype-fast skill", "visual-review skill", "imagegen skill", "Visual Learning Lab workflow/policy/reference and variation/depth/rebuild records", "actual supplied concepts and retained images", "existing terrain, implicit geology, vegetation, water and lighting adapters", "installed Next documentation index"],
+  "references": "rebuild-session.json references, unchanged primary supplied concepts",
+  "baseline": "artPass=variation; fresh640 and1920 captures plus before-source snapshots in artifacts/wave1-fidelity",
+  "candidate": "artPass=fidelity; three localized runtime source files and one generated mineral texture",
+  "independentDiagnosis": "artifacts/wave1-fidelity/DIAGNOSIS.md",
+  "vision": {"available": true, "reviewer": "root via actual view_image content interpretation", "independentReviewer": null, "humanApproval": null},
+  "history": [
+    {"stage": "isolated spire / R1", "hypothesis": "Connected upright cores and slumped shoulders create geological framing", "visibleEvidence": "Narrow stretched ellipsoidal core reads as a clay spire", "severity": "major", "decision": "reject core construction; preserve geological hierarchy"},
+    {"stage": "rounded joint core / R2", "hypothesis": "Broader bevelled mass plus generated mineral albedo corrects clay appearance", "visibleEvidence": "Granite texture improves surface, but silhouette remains egg-shaped", "severity": "major", "decision": "reject shape, retain generated surface provisionally"},
+    {"stage": "fracture-plane core / R3", "hypothesis": "Intersected joint faces supply structural planes", "visibleEvidence": "Stronger facets, but core resembles a regular slab", "severity": "major", "decision": "revise with convex weathering, recessed joints and unequal assembly tilt"},
+    {"stage": "weathered joint geometry / R4", "hypothesis": "Mixed curved/planar surfaces provide a less mechanical silhouette", "visibleEvidence": "Full scene has much stronger rock framing; isolated geometry remains simplified", "severity": "major", "decision": "retain as review candidate only; excellent isolated-rock gate not passed"},
+    {"stage": "wetland materials / R2-R4", "hypothesis": "Preserved material detail and weaker severe art-shadow attenuation produce luminous wet/dry sediment", "visibleEvidence": "Mangrove foreground now has clearly brighter textured deposits, varied shadows and selective crown highlights", "severity": "major", "decision": "retain provisionally; canopy still too open/coarse"},
+    {"stage": "grass material binding correction", "hypothesis": "New pigment shader was not reaching meadow meshes", "confirmedCause": "Selector inadvertently matched fqMeadow rather than meadow", "visibleEvidence": "Correct binding yields obvious golden tips, initially too pale/skeletal", "severity": "major", "decision": "reject first pale result; moderate tip pigment and height falloff"},
+    {"stage": "R5 development", "hypothesis": "Lower-valued tip pigments, dark bases and narrower arched ribbons create golden-olive grass; denser existing xeric leaves improve shrub readability", "visibleEvidence": "Seed29 is visibly warmer, desert shrubs less skeletal", "severity": "major", "decision": "store candidate; no promotion"},
+    {"stage": "frozen holdout27139", "hypothesis": "Unchanged recipe generalizes without further tuning", "visibleEvidence": "Rock shoulders and mangrove sediment treatment persist; flooded grass becomes too pale and uniform", "severity": "major", "decision": "flooded robustness fails; do not promote. No artistic tuning after holdout"}
+  ],
+  "validation": {
+    "developmentSeeds": [29,41],
+    "holdout": 27139,
+    "freeze": "artifacts/wave1-fidelity/freeze.json",
+    "typeOnlyAmendment": "Post-capture ArrayLike<number> assertions fix TS inference; erased by compilation, no runtime/artistic parameter change. Original and amended hashes retained.",
+    "reports": "artifacts/wave1-fidelity/validation.json",
+    "protected": "Seven fresh Puget/savanna/rainforest/alpine captures pixel-identical",
+    "geometry": "Three current assemblies finite and closed at1e-6 weld tolerance; coarser quantization collapses tiny edges, recorded separately",
+    "checks": "Targeted tsc --noEmit and git diff --check; no full suite/build or mobile device test",
+    "water": "Existing environment-derived water shader and fields unchanged",
+    "mobileApproved": false
+  },
+  "judgment": {
+    "desert": {"betterThanBaseline": true, "goodEnoughForConceptApproval": false, "excellentIsolatedRockGate": false},
+    "mangrove": {"betterThanBaseline": true, "goodEnoughForConceptApproval": false},
+    "flooded": {"visibleChange": true, "betterThanBaseline": "mixed; warmer at29, too pale at holdout", "goodEnoughForConceptApproval": false, "robustness": "failed"}
+  },
+  "learning": [
+    {"principle": "Foreground occupancy and receding geological hierarchy change composition more than small prop variation", "status": "experimentally supported for this scene; not global approval", "evidence": "Matched desert hero29/41/27139", "limitation": "Does not establish rock quality"},
+    {"principle": "Albedo detail cannot repair an inadequate silhouette", "status": "experimentally supported negative finding", "evidence": "Rejected spire, egg and slab isolation views"},
+    {"principle": "Investigate actual material binding and existing shadow attenuation before compensating with color/exposure", "status": "experimentally supported technical finding", "evidence": "Grass selector correction and wetland art-shadow attenuation replacement"},
+    {"principle": "A seed-specific pigment improvement is not robust artistic success", "status": "experimentally supported negative finding", "evidence": "Frozen flooded holdout27139"}
+  ],
+  "approval": {"humanFinal": null, "humanApprovedBestChanged": false, "globalPromotion": false, "trainingOccurred": false},
+  "report": "artifacts/wave1-fidelity/REPORT.md"
+}

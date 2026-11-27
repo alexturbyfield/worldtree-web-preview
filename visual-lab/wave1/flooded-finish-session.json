@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "flooded-foreground-soil-tree-finish",
+  "date": "2026-11-26",
+  "scope": "Only flooded grassland: rich visible foreground dirt patches and tree refinement",
+  "baseline": "artPass=fidelity, matched seed29 native and640 captures",
+  "candidate": "artPass=flooded-finish; preceding fidelity fallback preserved",
+  "loaded": ["AGENTS permanent visual rules", "visual-review and prototype-fast skills", "fidelity-session findings and actual images", "supplied flooded concept", "existing source-tree, foliage shader, sediment and capture implementations", "installed Next documentation index"],
+  "diagnosis": [
+    {"severity": "major", "evidence": "Concept foreground exposes warm rich sediment between grass masses; current render remains a green carpet", "hypothesis": "Prior weak color-only masks cannot create convincing exposed earth with tall grass still present"},
+    {"severity": "major", "evidence": "Tree crowns have fragmented sprays and high-contrast leaf flecks", "hypothesis": "Extreme far spray thinning, oversized remaining patches and lost secondary wood reduce coherence"},
+    {"severity": "minor", "evidence": "Bright foliage and grass appear pale", "hypothesis": "Crown highlight blending and high-frequency albedo contrast overpower interior value structure"}
+  ],
+  "intervention": {
+    "soil": "Reuse generated tidal-mud texture at2.8m plus rotated1.3m detail; deterministic warped world-space mask with ragged edges, damp roughness and restrained normal relief",
+    "grass": "Same mask shortens vegetation over exposed soil; retain tall lateral framing; no new instances or per-clump draw calls",
+    "trees": "Original source/positions/seeds; group-based distant coverage, slightly overlapping near sprays, retained secondary branches; reduced texture/value noise and more restrained warm highlights",
+    "preserved": "Water optics and shoreline field, terrain heights, camera, source ecological identity, sky and other environments"
+  },
+  "history": [
+    {"candidate": "R1", "decision": "revise", "actualEvidence": "Dirt obvious, but too dark and side grass framing weakened", "source": "artifacts/flooded-finish/r1-source.ts.txt"},
+    {"candidate": "R2", "decision": "retain provisionally for review", "actualEvidence": "Warmer lighter dirt with readable texture and restored side-clump weight; connected green crowns with supporting branches"},
+    {"candidate": "frozen63817", "decision": "retain without tuning", "actualEvidence": "More exposed dirt than development seeds, but water mosaic and staging remain readable; source unchanged"}
+  ],
+  "vision": {"available": true, "reviewer": "root actual view_image interpretation", "independentReviewer": null, "scales": ["640 hero/inspection", "1280 soil/tree inspection", "native1920 detail crops"], "betterThanPreviousForRequestedFeatures": true, "humanFinalApproval": null},
+  "validation": {"development": [29,41], "frozenHoldout": 63817, "holdoutTuned": false, "sourceFreeze": "artifacts/flooded-finish/freeze.json", "deterministicMask": "artifacts/flooded-finish/mask-checks.json", "report": "artifacts/flooded-finish/validation.json", "checks": "tsc --noEmit and git diff --check pass; captured page/shader errors empty", "otherWave1Scenes": "Four native-resolution desert/mangrove hero/inspection views pixel-identical", "approvedBiomes": "No path/source changes; not recaptured in this flooded-only pass", "mobileApproved": false},
+  "performance": {"callsBeforeAfter": [21,21], "submittedTrianglesBeforeAfter": [2182574,2414846], "triangleIncreasePercent": 10.6, "cause": "Tree crown/support detail; reflection passes included", "limits": "No GPU or mobile device timing approval; added texture sampling/memory"},
+  "learning": [
+    {"principle": "Share exposed-soil material masks with vegetation representation", "status": "experimentally supported for flooded candidate, not universal/human-approved", "evidence": "Matched R2 hero and inspection views", "limitation": "Terrain blend still leaves soft grassy remnants"},
+    {"principle": "Distant tree simplification should retain branch-owned groups and supporting secondary structure", "status": "experimentally supported visual refinement", "evidence": "Matched tree crop and inspection seeds", "limitation": "Additional submitted triangles; close atlas silhouettes remain visible"}
+  ],
+  "approval": {"humanApprovedBestChanged": false, "globalPromotion": false, "trainingOccurred": false},
+  "report": "artifacts/flooded-finish/REPORT.md"
+}

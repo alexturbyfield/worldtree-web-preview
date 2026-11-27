@@ -1,0 +1,190 @@
+[
+  {
+    "biome": "flooded",
+    "seed": "41",
+    "mode": "after",
+    "view": "hero",
+    "file": "artifacts/flooded-finish/development/flooded-41-after-hero.png",
+    "camera": {
+      "position": [
+        9,
+        1.9868786765423327,
+        9
+      ],
+      "target": [
+        -61,
+        1.0868786765423328,
+        9.000000000000012
+      ],
+      "width": 640
+    },
+    "samples": [
+      {
+        "cpuSubmissionMs": 0.800000011920929,
+        "frame": 18,
+        "calls": 21,
+        "triangles": 2550190,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.5999999940395355,
+        "frame": 20,
+        "calls": 21,
+        "triangles": 2550190,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.800000011920929,
+        "frame": 22,
+        "calls": 21,
+        "triangles": 2550190,
+        "points": 0,
+        "lines": 0
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 0.13725945311205892,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "lighting": {
+      "biome": "flooded",
+      "key": 4.6,
+      "hemi": 0.5,
+      "fill": 0.2,
+      "palette": "world-space correlated pigments; actual incident lighting; restrained diffuse bounce",
+      "geometryChanged": false
+    },
+    "artDirection": {
+      "biome": "flooded",
+      "seed": "41",
+      "worldSpace": true,
+      "waterUnchanged": true
+    },
+    "trees": 24,
+    "renderer": "WebKit WebGL",
+    "matrixDigests": [
+      {
+        "name": "field-source-stand-impostors",
+        "count": 100,
+        "hash": "5d5a076b5f342e48bb06ea634ce67fd96ecec66beae0b5fd3f04a25f388c25ce"
+      },
+      {
+        "name": "field-dimensional-meadow",
+        "count": 2770,
+        "hash": "90c0d7eb18a466fe106d04a2b611e4566c5c68c2a1ddce0f9269755475f5616a"
+      },
+      {
+        "name": "field-distant-meadow",
+        "count": 11317,
+        "hash": "51b43fa227b046e4b3dd2caf46a9fad4e7bf34344946439c080258f31b55e612"
+      },
+      {
+        "name": "field-sparse-unnamed-seedheads",
+        "count": 60,
+        "hash": "5c6c992de2214c1b321e869390392adc2f8065bf5ea442c8020ff406911ef7b7"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "biome": "flooded",
+    "seed": "41",
+    "mode": "after",
+    "view": "inspection",
+    "file": "artifacts/flooded-finish/development/flooded-41-after-inspection.png",
+    "camera": {
+      "position": [
+        74,
+        46.98687867654233,
+        74
+      ],
+      "target": [
+        -26,
+        0,
+        9.000000000000007
+      ],
+      "width": 640
+    },
+    "samples": [
+      {
+        "cpuSubmissionMs": 1.0999999940395355,
+        "frame": 26,
+        "calls": 21,
+        "triangles": 2550190,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.7999999821186066,
+        "frame": 28,
+        "calls": 21,
+        "triangles": 2550190,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 1,
+        "frame": 30,
+        "calls": 21,
+        "triangles": 2550190,
+        "points": 0,
+        "lines": 0
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 0.13725945311205892,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "lighting": {
+      "biome": "flooded",
+      "key": 4.6,
+      "hemi": 0.5,
+      "fill": 0.2,
+      "palette": "world-space correlated pigments; actual incident lighting; restrained diffuse bounce",
+      "geometryChanged": false
+    },
+    "artDirection": {
+      "biome": "flooded",
+      "seed": "41",
+      "worldSpace": true,
+      "waterUnchanged": true
+    },
+    "trees": 24,
+    "renderer": "WebKit WebGL",
+    "matrixDigests": [
+      {
+        "name": "field-source-stand-impostors",
+        "count": 100,
+        "hash": "5d5a076b5f342e48bb06ea634ce67fd96ecec66beae0b5fd3f04a25f388c25ce"
+      },
+      {
+        "name": "field-dimensional-meadow",
+        "count": 2770,
+        "hash": "90c0d7eb18a466fe106d04a2b611e4566c5c68c2a1ddce0f9269755475f5616a"
+      },
+      {
+        "name": "field-distant-meadow",
+        "count": 11317,
+        "hash": "51b43fa227b046e4b3dd2caf46a9fad4e7bf34344946439c080258f31b55e612"
+      },
+      {
+        "name": "field-sparse-unnamed-seedheads",
+        "count": 60,
+        "hash": "5c6c992de2214c1b321e869390392adc2f8065bf5ea442c8020ff406911ef7b7"
+      }
+    ],
+    "errors": []
+  }
+]

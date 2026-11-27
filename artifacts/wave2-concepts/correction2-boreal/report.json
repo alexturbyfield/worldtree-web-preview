@@ -1,0 +1,340 @@
+[
+  {
+    "id": "boreal",
+    "seed": "29",
+    "view": "hero",
+    "file": "artifacts/wave2-concepts/correction2-boreal/boreal-29-hero.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        0,
+        1.6436058218259575,
+        34
+      ],
+      "target": [
+        0,
+        3.3126993447811843,
+        -30
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 7,
+        "calls": 11,
+        "triangles": 1914168,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      },
+      {
+        "frame": 8,
+        "calls": 11,
+        "triangles": 1914168,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      },
+      {
+        "frame": 9,
+        "calls": 11,
+        "triangles": 1914168,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.19999998807907104
+      }
+    ],
+    "instances": [
+      {
+        "name": "boreal-distant-attached-boughs",
+        "count": 420
+      },
+      {
+        "name": "boreal-low-moss-cushions",
+        "count": 3100
+      },
+      {
+        "name": "boreal-embedded-moss-stone",
+        "count": 96
+      },
+      {
+        "name": "boreal-unnamed-low-heath-leaves",
+        "count": 2400
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "bytes": 22369621
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "recipe": {
+      "id": "boreal",
+      "biome": 6,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "boreal",
+        "biome": 6,
+        "seed": "29",
+        "phase": 6.217533754060308,
+        "relief": 0.65,
+        "camera": {
+          "position": [
+            0,
+            1.6436058218259575,
+            34
+          ],
+          "target": [
+            0,
+            3.3126993447811843,
+            -30
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.6436058218259575,
+          34
+        ],
+        "target": [
+          0,
+          3.3126993447811843,
+          -30
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#9aafa6"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "id": "boreal",
+      "version": 2,
+      "trees": 48,
+      "architecture": "Genus-conditional leader, attached drooping boughs and curved alpha-tested sprays",
+      "needleArtwork": "Generated spruce spray atlas is a painterly needle-texture approximation; pine/larch family differences remain structural, not verified species anatomy",
+      "ecology": "Regional candidates; unnamed moss/heath; local occurrence unverified",
+      "referenceState": {
+        "season": "green with provisional warm low foliage",
+        "weather": "clear",
+        "timeOfDay": "warm upper-left reference light"
+      },
+      "staging": "Low cover remains; no hard anchors in approach"
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "boreal",
+    "seed": "29",
+    "view": "inspection",
+    "file": "artifacts/wave2-concepts/correction2-boreal/boreal-29-inspection.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 11,
+        "calls": 11,
+        "triangles": 1914168,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      },
+      {
+        "frame": 12,
+        "calls": 11,
+        "triangles": 1914168,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      },
+      {
+        "frame": 13,
+        "calls": 11,
+        "triangles": 1914168,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.19999998807907104
+      }
+    ],
+    "instances": [
+      {
+        "name": "boreal-distant-attached-boughs",
+        "count": 420
+      },
+      {
+        "name": "boreal-low-moss-cushions",
+        "count": 3100
+      },
+      {
+        "name": "boreal-embedded-moss-stone",
+        "count": 96
+      },
+      {
+        "name": "boreal-unnamed-low-heath-leaves",
+        "count": 2400
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "bytes": 22369621
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "recipe": {
+      "id": "boreal",
+      "biome": 6,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "boreal",
+        "biome": 6,
+        "seed": "29",
+        "phase": 6.217533754060308,
+        "relief": 0.65,
+        "camera": {
+          "position": [
+            0,
+            1.6436058218259575,
+            34
+          ],
+          "target": [
+            0,
+            3.3126993447811843,
+            -30
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.6436058218259575,
+          34
+        ],
+        "target": [
+          0,
+          3.3126993447811843,
+          -30
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#9aafa6"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "id": "boreal",
+      "version": 2,
+      "trees": 48,
+      "architecture": "Genus-conditional leader, attached drooping boughs and curved alpha-tested sprays",
+      "needleArtwork": "Generated spruce spray atlas is a painterly needle-texture approximation; pine/larch family differences remain structural, not verified species anatomy",
+      "ecology": "Regional candidates; unnamed moss/heath; local occurrence unverified",
+      "referenceState": {
+        "season": "green with provisional warm low foliage",
+        "weather": "clear",
+        "timeOfDay": "warm upper-left reference light"
+      },
+      "staging": "Low cover remains; no hard anchors in approach"
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  }
+]

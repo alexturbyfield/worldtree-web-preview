@@ -1,0 +1,20 @@
+[
+  {
+    "precision": 0.0001,
+    "collapsed": 96,
+    "boundary": 0,
+    "overIncident": 52
+  },
+  {
+    "precision": 0.00001,
+    "collapsed": 6,
+    "boundary": 0,
+    "overIncident": 5
+  },
+  {
+    "precision": 0.000001,
+    "collapsed": 0,
+    "boundary": 0,
+    "overIncident": 0
+  }
+]

@@ -1,0 +1,105 @@
+import * as T from 'three';
+import type {SceneRecipe} from './recipe';
+import {cameraSpace, landscapeField, type FieldPlan} from './wave1-fields';
+import {randomSource} from './random';
+
+/** Opaque folded ribbons: irregular arching leaves, rather than crossed spear cards. */
+export function meadowGeometry(far: boolean): T.BufferGeometry {
+  const positions: number[] = [], colors: number[] = [], uvs: number[] = [], indices: number[] = [];
+  const random = randomSource('wave1-meadow-ribbon-1');
+  const blades = far ? 5 : 9, steps = far ? 3 : 5, columns = far ? 2 : 3;
+  for (let blade = 0; blade < blades; blade++) {
+    const start = positions.length / 3;
+    const angle = blade * 2.39996 + (random() - .5) * .65;
+    const height = .28 + random() * .63;
+    const reach = .18 + random() * .43;
+    const width = .025 + random() * .025;
+    const rootRadius = random() * .10, curl = (random() - .5) * .2;
+    const tint = .91 + random() * .16;
+    for (let row = 0; row <= steps; row++) {
+      const t = row / steps;
+      // The tip falls gently after the arch; uneven blade lengths interlock across clumps.
+      const reachAt = rootRadius + reach * t * t;
+      const y = height * (t - .29 * t * t * t);
+      const bladeWidth = width * Math.pow(Math.sin(Math.PI * (.13 + t * .87)), .7) * (1 - t * .6);
+      const twist = angle + curl * t;
+      for (let column = 0; column < columns; column++) {
+        const across = column / (columns - 1) * 2 - 1;
+        const lateral = across * bladeWidth;
+        const fold = (1 - Math.abs(across)) * bladeWidth * .42;
+        positions.push(Math.cos(angle) * reachAt - Math.sin(twist) * lateral,
+          y + fold, Math.sin(angle) * reachAt + Math.cos(twist) * lateral);
+        uvs.push(column / (columns - 1), t);
+        // Pigment stays close to the shared instance palette; selected tips catch warm light.
+        const c = new T.Color().setRGB(.74 + .25 * t, .79 + .20 * t, .67 + .20 * t);
+        c.multiplyScalar(tint * (column === 1 && !far ? 1.035 : 1));
+        colors.push(c.r, c.g, c.b);
+      }
+    }
+    for (let row = 0; row < steps; row++) for (let column = 0; column < columns - 1; column++) {
+      const a = start + row * columns + column;
+      indices.push(a, a + columns, a + 1, a + 1, a + columns, a + columns + 1);
+    }
+  }
+  const geometry = new T.BufferGeometry();
+  geometry.setAttribute('position', new T.Float32BufferAttribute(positions, 3));
+  geometry.setAttribute('color', new T.Float32BufferAttribute(colors, 3));
+  geometry.setAttribute('uv', new T.Float32BufferAttribute(uvs, 2));
+  geometry.setIndex(indices);
+  geometry.computeVertexNormals();
+  geometry.computeBoundingSphere();
+  return geometry;
+}
+
+export function meadowMaterial(): T.MeshStandardMaterial {
+  const material = new T.MeshStandardMaterial({vertexColors: true, side: T.DoubleSide, roughness: .96});
+  material.name = 'meadow-soft-ribbon';
+  material.onBeforeCompile = shader => {
+    // Folded leaf normals remain visible, but both sides share broad sky illumination.
+    // The smooth upward term prevents backlit opaque ribbons becoming black needles.
+    shader.fragmentShader = shader.fragmentShader.replace('#include <normal_fragment_begin>',
+      '#include <normal_fragment_begin>\nnormal = normalize(normal * .36 + mat3(viewMatrix) * vec3(0., .85, 0.));');
+  };
+  material.customProgramCacheKey = () => 'wave1-meadow-soft-normal-1';
+  return material;
+}
+
+/** Sparse unnamed seed-bearing accents; the caller owns the single grass carpet. */
+export function installMeadowDetail(scene: T.Scene, recipe: SceneRecipe, plan: FieldPlan): () => void {
+  const random = randomSource(recipe.seed + '|meadow-seedheads-1');
+  const placements: {x: number; z: number; y: number; size: number; angle: number}[] = [];
+  for (let attempt = 0; attempt < 2200 && placements.length < 90; attempt++) {
+    const x = plan.eye[0] + (random() - .5) * 100, z = plan.eye[2] + (random() - .5) * 100;
+    const q = cameraSpace(plan, x, z), f = landscapeField('flooded', recipe.seed, x, z);
+    if (q.forward < 7 || q.forward > 55 || Math.abs(q.side) > 35 || Math.hypot(q.forward, q.side) < 9) continue;
+    if (q.forward < 9 && Math.abs(q.side) < 2.5 || f.height < .04 || f.height > .34 || f.community < .47) continue;
+    if (random() > f.community * .4) continue;
+    placements.push({x, z, y: f.height - .015, size: .68 + random() * .46, angle: random() * Math.PI * 2});
+  }
+  // One small combined geometry, one draw call, no alpha and no individual shadows.
+  const positions: number[] = [], colors: number[] = [], indices: number[] = [];
+  const addRibbon = (x: number, y: number, z: number, w: number, h: number, tint: [number, number, number]) => {
+    const start = positions.length / 3;
+    positions.push(x - w, y, z, x + w, y, z, x - w * .4, y + h, z + .008, x + w * .4, y + h, z + .008);
+    for (let i = 0; i < 4; i++) colors.push(...tint);
+    indices.push(start, start + 1, start + 2, start + 1, start + 3, start + 2);
+  };
+  addRibbon(0, 0, 0, .007, .87, [.65, .72, .42]);
+  for (let j = 0; j < 7; j++) {
+    const y = .68 + j * .047, width = .012 * Math.sin((j + 1) / 8 * Math.PI);
+    addRibbon((j % 2 ? 1 : -1) * .014, y, j % 2 * .011, width, .04, [.76, .69, .40]);
+  }
+  const geometry = new T.BufferGeometry();
+  geometry.setAttribute('position', new T.Float32BufferAttribute(positions, 3));
+  geometry.setAttribute('color', new T.Float32BufferAttribute(colors, 3));
+  geometry.setIndex(indices); geometry.computeVertexNormals();
+  const material = meadowMaterial(), mesh = new T.InstancedMesh(geometry, material, placements.length), object = new T.Object3D();
+  mesh.name = 'field-sparse-unnamed-seedheads';
+  placements.forEach((p, i) => {
+    object.position.set(p.x, p.y, p.z); object.rotation.set(0, p.angle, 0); object.scale.setScalar(p.size); object.updateMatrix();
+    mesh.setMatrixAt(i, object.matrix);
+  });
+  mesh.castShadow = false; mesh.receiveShadow = false; mesh.computeBoundingSphere(); scene.add(mesh);
+  scene.userData.meadowDetail = {version: 'ribbon-1', seedheads: mesh.count, nearTriangles: 180, farTriangles: 30, alpha: false, footprint: 'no seedheads within forward < 7; central forward < 9 excluded'};
+  return () => {scene.remove(mesh); geometry.dispose(); material.dispose();};
+}

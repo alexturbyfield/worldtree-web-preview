@@ -1,0 +1,3386 @@
+[
+  {
+    "id": "boreal",
+    "seed": "29",
+    "view": "hero",
+    "file": "artifacts/wave2-concepts/retained/boreal-29-hero.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        0,
+        1.6436058218259575,
+        34
+      ],
+      "target": [
+        0,
+        3.3126993447811843,
+        -30
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 7,
+        "calls": 11,
+        "triangles": 797220,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      },
+      {
+        "frame": 8,
+        "calls": 11,
+        "triangles": 797220,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      },
+      {
+        "frame": 9,
+        "calls": 11,
+        "triangles": 797220,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      }
+    ],
+    "instances": [
+      {
+        "name": "boreal-distant-attached-boughs",
+        "count": 420
+      },
+      {
+        "name": "boreal-low-moss-cushions",
+        "count": 3100
+      },
+      {
+        "name": "boreal-embedded-moss-stone",
+        "count": 96
+      },
+      {
+        "name": "boreal-unnamed-low-heath-leaves",
+        "count": 2400
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "bytes": 22369621
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "recipe": {
+      "id": "boreal",
+      "biome": 6,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "boreal",
+        "biome": 6,
+        "seed": "29",
+        "phase": 6.217533754060308,
+        "relief": 0.65,
+        "camera": {
+          "position": [
+            0,
+            1.6436058218259575,
+            34
+          ],
+          "target": [
+            0,
+            3.3126993447811843,
+            -30
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.6436058218259575,
+          34
+        ],
+        "target": [
+          0,
+          3.3126993447811843,
+          -30
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#9aafa6"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "id": "boreal",
+      "version": 3,
+      "trees": 48,
+      "architecture": "Genus-conditional leader, paired rolled alpha-tested lobes attached to drooping bough chains",
+      "needleArtwork": "Generated spruce spray atlas is a painterly needle-texture approximation; pine/larch family differences remain structural, not verified species anatomy",
+      "ecology": "Regional candidates; unnamed moss/heath; local occurrence unverified",
+      "referenceState": {
+        "season": "green with provisional warm low foliage",
+        "weather": "clear",
+        "timeOfDay": "warm upper-left reference light"
+      },
+      "staging": "Low cover remains; no hard anchors in approach"
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "boreal",
+    "seed": "29",
+    "view": "inspection",
+    "file": "artifacts/wave2-concepts/retained/boreal-29-inspection.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 11,
+        "calls": 11,
+        "triangles": 797220,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.19999998807907104
+      },
+      {
+        "frame": 12,
+        "calls": 11,
+        "triangles": 797220,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.40000003576278687
+      },
+      {
+        "frame": 13,
+        "calls": 11,
+        "triangles": 797220,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      }
+    ],
+    "instances": [
+      {
+        "name": "boreal-distant-attached-boughs",
+        "count": 420
+      },
+      {
+        "name": "boreal-low-moss-cushions",
+        "count": 3100
+      },
+      {
+        "name": "boreal-embedded-moss-stone",
+        "count": 96
+      },
+      {
+        "name": "boreal-unnamed-low-heath-leaves",
+        "count": 2400
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "bytes": 22369621
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "recipe": {
+      "id": "boreal",
+      "biome": 6,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "boreal",
+        "biome": 6,
+        "seed": "29",
+        "phase": 6.217533754060308,
+        "relief": 0.65,
+        "camera": {
+          "position": [
+            0,
+            1.6436058218259575,
+            34
+          ],
+          "target": [
+            0,
+            3.3126993447811843,
+            -30
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.6436058218259575,
+          34
+        ],
+        "target": [
+          0,
+          3.3126993447811843,
+          -30
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#9aafa6"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "id": "boreal",
+      "version": 3,
+      "trees": 48,
+      "architecture": "Genus-conditional leader, paired rolled alpha-tested lobes attached to drooping bough chains",
+      "needleArtwork": "Generated spruce spray atlas is a painterly needle-texture approximation; pine/larch family differences remain structural, not verified species anatomy",
+      "ecology": "Regional candidates; unnamed moss/heath; local occurrence unverified",
+      "referenceState": {
+        "season": "green with provisional warm low foliage",
+        "weather": "clear",
+        "timeOfDay": "warm upper-left reference light"
+      },
+      "staging": "Low cover remains; no hard anchors in approach"
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "boreal",
+    "seed": "41",
+    "view": "hero",
+    "file": "artifacts/wave2-concepts/retained/boreal-41-hero.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        0,
+        1.591092254136895,
+        34
+      ],
+      "target": [
+        0,
+        3.2380820709357976,
+        -30
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 7,
+        "calls": 11,
+        "triangles": 804846,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      },
+      {
+        "frame": 8,
+        "calls": 11,
+        "triangles": 804846,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.19999998807907104
+      },
+      {
+        "frame": 9,
+        "calls": 11,
+        "triangles": 804846,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.40000003576278687
+      }
+    ],
+    "instances": [
+      {
+        "name": "boreal-distant-attached-boughs",
+        "count": 420
+      },
+      {
+        "name": "boreal-low-moss-cushions",
+        "count": 3100
+      },
+      {
+        "name": "boreal-embedded-moss-stone",
+        "count": 96
+      },
+      {
+        "name": "boreal-unnamed-low-heath-leaves",
+        "count": 2400
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "bytes": 22369621
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "recipe": {
+      "id": "boreal",
+      "biome": 6,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "boreal",
+        "biome": 6,
+        "seed": "41",
+        "phase": 2.6452059000147714,
+        "relief": 0.65,
+        "camera": {
+          "position": [
+            0,
+            1.591092254136895,
+            34
+          ],
+          "target": [
+            0,
+            3.2380820709357976,
+            -30
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.591092254136895,
+          34
+        ],
+        "target": [
+          0,
+          3.2380820709357976,
+          -30
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#9aafa6"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "id": "boreal",
+      "version": 3,
+      "trees": 48,
+      "architecture": "Genus-conditional leader, paired rolled alpha-tested lobes attached to drooping bough chains",
+      "needleArtwork": "Generated spruce spray atlas is a painterly needle-texture approximation; pine/larch family differences remain structural, not verified species anatomy",
+      "ecology": "Regional candidates; unnamed moss/heath; local occurrence unverified",
+      "referenceState": {
+        "season": "green with provisional warm low foliage",
+        "weather": "clear",
+        "timeOfDay": "warm upper-left reference light"
+      },
+      "staging": "Low cover remains; no hard anchors in approach"
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "boreal",
+    "seed": "41",
+    "view": "inspection",
+    "file": "artifacts/wave2-concepts/retained/boreal-41-inspection.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 11,
+        "calls": 11,
+        "triangles": 804846,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.10000002384185791
+      },
+      {
+        "frame": 12,
+        "calls": 11,
+        "triangles": 804846,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.6000000238418579
+      },
+      {
+        "frame": 13,
+        "calls": 11,
+        "triangles": 804846,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      }
+    ],
+    "instances": [
+      {
+        "name": "boreal-distant-attached-boughs",
+        "count": 420
+      },
+      {
+        "name": "boreal-low-moss-cushions",
+        "count": 3100
+      },
+      {
+        "name": "boreal-embedded-moss-stone",
+        "count": 96
+      },
+      {
+        "name": "boreal-unnamed-low-heath-leaves",
+        "count": 2400
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "bytes": 22369621
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "recipe": {
+      "id": "boreal",
+      "biome": 6,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "boreal",
+        "biome": 6,
+        "seed": "41",
+        "phase": 2.6452059000147714,
+        "relief": 0.65,
+        "camera": {
+          "position": [
+            0,
+            1.591092254136895,
+            34
+          ],
+          "target": [
+            0,
+            3.2380820709357976,
+            -30
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.591092254136895,
+          34
+        ],
+        "target": [
+          0,
+          3.2380820709357976,
+          -30
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#9aafa6"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "id": "boreal",
+      "version": 3,
+      "trees": 48,
+      "architecture": "Genus-conditional leader, paired rolled alpha-tested lobes attached to drooping bough chains",
+      "needleArtwork": "Generated spruce spray atlas is a painterly needle-texture approximation; pine/larch family differences remain structural, not verified species anatomy",
+      "ecology": "Regional candidates; unnamed moss/heath; local occurrence unverified",
+      "referenceState": {
+        "season": "green with provisional warm low foliage",
+        "weather": "clear",
+        "timeOfDay": "warm upper-left reference light"
+      },
+      "staging": "Low cover remains; no hard anchors in approach"
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "boreal",
+    "seed": "73",
+    "view": "hero",
+    "file": "artifacts/wave2-concepts/retained/boreal-73-hero.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        0,
+        1.7371205746731846,
+        34
+      ],
+      "target": [
+        0,
+        3.152120083518543,
+        -30
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 7,
+        "calls": 11,
+        "triangles": 778666,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      },
+      {
+        "frame": 8,
+        "calls": 11,
+        "triangles": 778666,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      },
+      {
+        "frame": 9,
+        "calls": 11,
+        "triangles": 778666,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.20000004768371582
+      }
+    ],
+    "instances": [
+      {
+        "name": "boreal-distant-attached-boughs",
+        "count": 420
+      },
+      {
+        "name": "boreal-low-moss-cushions",
+        "count": 3100
+      },
+      {
+        "name": "boreal-embedded-moss-stone",
+        "count": 96
+      },
+      {
+        "name": "boreal-unnamed-low-heath-leaves",
+        "count": 2400
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "bytes": 22369621
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "recipe": {
+      "id": "boreal",
+      "biome": 6,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "boreal",
+        "biome": 6,
+        "seed": "73",
+        "phase": 0.8829416451721374,
+        "relief": 0.65,
+        "camera": {
+          "position": [
+            0,
+            1.7371205746731846,
+            34
+          ],
+          "target": [
+            0,
+            3.152120083518543,
+            -30
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.7371205746731846,
+          34
+        ],
+        "target": [
+          0,
+          3.152120083518543,
+          -30
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#9aafa6"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "id": "boreal",
+      "version": 3,
+      "trees": 48,
+      "architecture": "Genus-conditional leader, paired rolled alpha-tested lobes attached to drooping bough chains",
+      "needleArtwork": "Generated spruce spray atlas is a painterly needle-texture approximation; pine/larch family differences remain structural, not verified species anatomy",
+      "ecology": "Regional candidates; unnamed moss/heath; local occurrence unverified",
+      "referenceState": {
+        "season": "green with provisional warm low foliage",
+        "weather": "clear",
+        "timeOfDay": "warm upper-left reference light"
+      },
+      "staging": "Low cover remains; no hard anchors in approach"
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "boreal",
+    "seed": "73",
+    "view": "inspection",
+    "file": "artifacts/wave2-concepts/retained/boreal-73-inspection.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 11,
+        "calls": 11,
+        "triangles": 778666,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.19999998807907104
+      },
+      {
+        "frame": 12,
+        "calls": 11,
+        "triangles": 778666,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      },
+      {
+        "frame": 13,
+        "calls": 11,
+        "triangles": 778666,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      }
+    ],
+    "instances": [
+      {
+        "name": "boreal-distant-attached-boughs",
+        "count": 420
+      },
+      {
+        "name": "boreal-low-moss-cushions",
+        "count": 3100
+      },
+      {
+        "name": "boreal-embedded-moss-stone",
+        "count": 96
+      },
+      {
+        "name": "boreal-unnamed-low-heath-leaves",
+        "count": 2400
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "bytes": 22369621
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "recipe": {
+      "id": "boreal",
+      "biome": 6,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "boreal",
+        "biome": 6,
+        "seed": "73",
+        "phase": 0.8829416451721374,
+        "relief": 0.65,
+        "camera": {
+          "position": [
+            0,
+            1.7371205746731846,
+            34
+          ],
+          "target": [
+            0,
+            3.152120083518543,
+            -30
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.7371205746731846,
+          34
+        ],
+        "target": [
+          0,
+          3.152120083518543,
+          -30
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#9aafa6"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "id": "boreal",
+      "version": 3,
+      "trees": 48,
+      "architecture": "Genus-conditional leader, paired rolled alpha-tested lobes attached to drooping bough chains",
+      "needleArtwork": "Generated spruce spray atlas is a painterly needle-texture approximation; pine/larch family differences remain structural, not verified species anatomy",
+      "ecology": "Regional candidates; unnamed moss/heath; local occurrence unverified",
+      "referenceState": {
+        "season": "green with provisional warm low foliage",
+        "weather": "clear",
+        "timeOfDay": "warm upper-left reference light"
+      },
+      "staging": "Low cover remains; no hard anchors in approach"
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "temperate",
+    "seed": "29",
+    "view": "hero",
+    "file": "artifacts/wave2-concepts/retained/temperate-29-hero.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        0,
+        1.7147654075940282,
+        34
+      ],
+      "target": [
+        0,
+        2.1224894886788106,
+        -55
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 7,
+        "calls": 10,
+        "triangles": 711028,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.40000003576278687
+      },
+      {
+        "frame": 8,
+        "calls": 10,
+        "triangles": 711028,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      },
+      {
+        "frame": 9,
+        "calls": 10,
+        "triangles": 711028,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      }
+    ],
+    "instances": [
+      {
+        "name": "temperate-curled-leaf-litter",
+        "count": 8753
+      },
+      {
+        "name": "temperate-unnamed-fern-functional-forms",
+        "count": 260
+      },
+      {
+        "name": "temperate-embedded-moss-stone",
+        "count": 35
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "bytes": 22369621
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "recipe": {
+      "id": "temperate",
+      "biome": 4,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "temperate",
+        "biome": 4,
+        "seed": "29",
+        "phase": 1.894691307875228,
+        "relief": 0.62,
+        "camera": {
+          "position": [
+            0,
+            1.7147654075940282,
+            34
+          ],
+          "target": [
+            0,
+            2.1224894886788106,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.7147654075940282,
+          34
+        ],
+        "target": [
+          0,
+          2.1224894886788106,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#91aaa0"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "biome": "temperate",
+      "version": "connected-woodland-1",
+      "architecture": "Species-conditioned scaffold; broad spreading oak, upward beech, slender drooping birch; elliptic leaf rendering approximate",
+      "ecology": "Source regional candidates and unnamed fern/leafy functional forms, not local occurrence evidence",
+      "states": {
+        "season": "leaf-on reference",
+        "weather": "clear reference",
+        "timeOfDay": "warm reference"
+      },
+      "staging": {
+        "center": [
+          0,
+          26
+        ],
+        "radius": 1.4,
+        "height": 1.8
+      },
+      "trees": 48
+    },
+    "lightDiagnostics": {
+      "compiledMaterials": 2,
+      "actualSunMaterials": 2,
+      "normalDesign": "Retained C2 up-facing normals; C3 radial/underside experiment rejected for near-black masses",
+      "artisticEffect": "Selective hook inconclusive; do not generalize"
+    },
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "temperate",
+    "seed": "29",
+    "view": "inspection",
+    "file": "artifacts/wave2-concepts/retained/temperate-29-inspection.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 11,
+        "calls": 10,
+        "triangles": 711028,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.19999998807907104
+      },
+      {
+        "frame": 12,
+        "calls": 10,
+        "triangles": 711028,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.20000004768371582
+      },
+      {
+        "frame": 13,
+        "calls": 10,
+        "triangles": 711028,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.699999988079071
+      }
+    ],
+    "instances": [
+      {
+        "name": "temperate-curled-leaf-litter",
+        "count": 8753
+      },
+      {
+        "name": "temperate-unnamed-fern-functional-forms",
+        "count": 260
+      },
+      {
+        "name": "temperate-embedded-moss-stone",
+        "count": 35
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "bytes": 22369621
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "recipe": {
+      "id": "temperate",
+      "biome": 4,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "temperate",
+        "biome": 4,
+        "seed": "29",
+        "phase": 1.894691307875228,
+        "relief": 0.62,
+        "camera": {
+          "position": [
+            0,
+            1.7147654075940282,
+            34
+          ],
+          "target": [
+            0,
+            2.1224894886788106,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.7147654075940282,
+          34
+        ],
+        "target": [
+          0,
+          2.1224894886788106,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#91aaa0"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "biome": "temperate",
+      "version": "connected-woodland-1",
+      "architecture": "Species-conditioned scaffold; broad spreading oak, upward beech, slender drooping birch; elliptic leaf rendering approximate",
+      "ecology": "Source regional candidates and unnamed fern/leafy functional forms, not local occurrence evidence",
+      "states": {
+        "season": "leaf-on reference",
+        "weather": "clear reference",
+        "timeOfDay": "warm reference"
+      },
+      "staging": {
+        "center": [
+          0,
+          26
+        ],
+        "radius": 1.4,
+        "height": 1.8
+      },
+      "trees": 48
+    },
+    "lightDiagnostics": {
+      "compiledMaterials": 2,
+      "actualSunMaterials": 2,
+      "normalDesign": "Retained C2 up-facing normals; C3 radial/underside experiment rejected for near-black masses",
+      "artisticEffect": "Selective hook inconclusive; do not generalize"
+    },
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "temperate",
+    "seed": "41",
+    "view": "hero",
+    "file": "artifacts/wave2-concepts/retained/temperate-41-hero.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        0,
+        1.6415234594544525,
+        34
+      ],
+      "target": [
+        0,
+        2.416417591120088,
+        -55
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 7,
+        "calls": 10,
+        "triangles": 714852,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      },
+      {
+        "frame": 8,
+        "calls": 10,
+        "triangles": 714852,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      },
+      {
+        "frame": 9,
+        "calls": 10,
+        "triangles": 714852,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      }
+    ],
+    "instances": [
+      {
+        "name": "temperate-curled-leaf-litter",
+        "count": 8731
+      },
+      {
+        "name": "temperate-unnamed-fern-functional-forms",
+        "count": 260
+      },
+      {
+        "name": "temperate-embedded-moss-stone",
+        "count": 35
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "bytes": 22369621
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "recipe": {
+      "id": "temperate",
+      "biome": 4,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "temperate",
+        "biome": 4,
+        "seed": "41",
+        "phase": 0.13130044957932405,
+        "relief": 0.62,
+        "camera": {
+          "position": [
+            0,
+            1.6415234594544525,
+            34
+          ],
+          "target": [
+            0,
+            2.416417591120088,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.6415234594544525,
+          34
+        ],
+        "target": [
+          0,
+          2.416417591120088,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#91aaa0"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "biome": "temperate",
+      "version": "connected-woodland-1",
+      "architecture": "Species-conditioned scaffold; broad spreading oak, upward beech, slender drooping birch; elliptic leaf rendering approximate",
+      "ecology": "Source regional candidates and unnamed fern/leafy functional forms, not local occurrence evidence",
+      "states": {
+        "season": "leaf-on reference",
+        "weather": "clear reference",
+        "timeOfDay": "warm reference"
+      },
+      "staging": {
+        "center": [
+          0,
+          26
+        ],
+        "radius": 1.4,
+        "height": 1.8
+      },
+      "trees": 48
+    },
+    "lightDiagnostics": {
+      "compiledMaterials": 2,
+      "actualSunMaterials": 2,
+      "normalDesign": "Retained C2 up-facing normals; C3 radial/underside experiment rejected for near-black masses",
+      "artisticEffect": "Selective hook inconclusive; do not generalize"
+    },
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "temperate",
+    "seed": "41",
+    "view": "inspection",
+    "file": "artifacts/wave2-concepts/retained/temperate-41-inspection.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 11,
+        "calls": 10,
+        "triangles": 714852,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      },
+      {
+        "frame": 12,
+        "calls": 10,
+        "triangles": 714852,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.09999996423721313
+      },
+      {
+        "frame": 13,
+        "calls": 10,
+        "triangles": 714852,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.800000011920929
+      }
+    ],
+    "instances": [
+      {
+        "name": "temperate-curled-leaf-litter",
+        "count": 8731
+      },
+      {
+        "name": "temperate-unnamed-fern-functional-forms",
+        "count": 260
+      },
+      {
+        "name": "temperate-embedded-moss-stone",
+        "count": 35
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "bytes": 22369621
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "recipe": {
+      "id": "temperate",
+      "biome": 4,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "temperate",
+        "biome": 4,
+        "seed": "41",
+        "phase": 0.13130044957932405,
+        "relief": 0.62,
+        "camera": {
+          "position": [
+            0,
+            1.6415234594544525,
+            34
+          ],
+          "target": [
+            0,
+            2.416417591120088,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.6415234594544525,
+          34
+        ],
+        "target": [
+          0,
+          2.416417591120088,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#91aaa0"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "biome": "temperate",
+      "version": "connected-woodland-1",
+      "architecture": "Species-conditioned scaffold; broad spreading oak, upward beech, slender drooping birch; elliptic leaf rendering approximate",
+      "ecology": "Source regional candidates and unnamed fern/leafy functional forms, not local occurrence evidence",
+      "states": {
+        "season": "leaf-on reference",
+        "weather": "clear reference",
+        "timeOfDay": "warm reference"
+      },
+      "staging": {
+        "center": [
+          0,
+          26
+        ],
+        "radius": 1.4,
+        "height": 1.8
+      },
+      "trees": 48
+    },
+    "lightDiagnostics": {
+      "compiledMaterials": 2,
+      "actualSunMaterials": 2,
+      "normalDesign": "Retained C2 up-facing normals; C3 radial/underside experiment rejected for near-black masses",
+      "artisticEffect": "Selective hook inconclusive; do not generalize"
+    },
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "temperate",
+    "seed": "73",
+    "view": "hero",
+    "file": "artifacts/wave2-concepts/retained/temperate-73-hero.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        0,
+        1.8895797594044321,
+        34
+      ],
+      "target": [
+        0,
+        2.021040173146983,
+        -55
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 7,
+        "calls": 10,
+        "triangles": 699876,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      },
+      {
+        "frame": 8,
+        "calls": 10,
+        "triangles": 699876,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.40000003576278687
+      },
+      {
+        "frame": 9,
+        "calls": 10,
+        "triangles": 699876,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.2999999523162842
+      }
+    ],
+    "instances": [
+      {
+        "name": "temperate-curled-leaf-litter",
+        "count": 8742
+      },
+      {
+        "name": "temperate-unnamed-fern-functional-forms",
+        "count": 252
+      },
+      {
+        "name": "temperate-embedded-moss-stone",
+        "count": 35
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "bytes": 22369621
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "recipe": {
+      "id": "temperate",
+      "biome": 4,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "temperate",
+        "biome": 4,
+        "seed": "73",
+        "phase": 3.8907125245021703,
+        "relief": 0.62,
+        "camera": {
+          "position": [
+            0,
+            1.8895797594044321,
+            34
+          ],
+          "target": [
+            0,
+            2.021040173146983,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.8895797594044321,
+          34
+        ],
+        "target": [
+          0,
+          2.021040173146983,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#91aaa0"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "biome": "temperate",
+      "version": "connected-woodland-1",
+      "architecture": "Species-conditioned scaffold; broad spreading oak, upward beech, slender drooping birch; elliptic leaf rendering approximate",
+      "ecology": "Source regional candidates and unnamed fern/leafy functional forms, not local occurrence evidence",
+      "states": {
+        "season": "leaf-on reference",
+        "weather": "clear reference",
+        "timeOfDay": "warm reference"
+      },
+      "staging": {
+        "center": [
+          0,
+          26
+        ],
+        "radius": 1.4,
+        "height": 1.8
+      },
+      "trees": 48
+    },
+    "lightDiagnostics": {
+      "compiledMaterials": 2,
+      "actualSunMaterials": 2,
+      "normalDesign": "Retained C2 up-facing normals; C3 radial/underside experiment rejected for near-black masses",
+      "artisticEffect": "Selective hook inconclusive; do not generalize"
+    },
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "temperate",
+    "seed": "73",
+    "view": "inspection",
+    "file": "artifacts/wave2-concepts/retained/temperate-73-inspection.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 11,
+        "calls": 10,
+        "triangles": 699876,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 1.2999999523162842
+      },
+      {
+        "frame": 12,
+        "calls": 10,
+        "triangles": 699876,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      },
+      {
+        "frame": 13,
+        "calls": 10,
+        "triangles": 699876,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 1
+      }
+    ],
+    "instances": [
+      {
+        "name": "temperate-curled-leaf-litter",
+        "count": 8742
+      },
+      {
+        "name": "temperate-unnamed-fern-functional-forms",
+        "count": 252
+      },
+      {
+        "name": "temperate-embedded-moss-stone",
+        "count": 35
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "bytes": 22369621
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "recipe": {
+      "id": "temperate",
+      "biome": 4,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "temperate",
+        "biome": 4,
+        "seed": "73",
+        "phase": 3.8907125245021703,
+        "relief": 0.62,
+        "camera": {
+          "position": [
+            0,
+            1.8895797594044321,
+            34
+          ],
+          "target": [
+            0,
+            2.021040173146983,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.8895797594044321,
+          34
+        ],
+        "target": [
+          0,
+          2.021040173146983,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#91aaa0"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "biome": "temperate",
+      "version": "connected-woodland-1",
+      "architecture": "Species-conditioned scaffold; broad spreading oak, upward beech, slender drooping birch; elliptic leaf rendering approximate",
+      "ecology": "Source regional candidates and unnamed fern/leafy functional forms, not local occurrence evidence",
+      "states": {
+        "season": "leaf-on reference",
+        "weather": "clear reference",
+        "timeOfDay": "warm reference"
+      },
+      "staging": {
+        "center": [
+          0,
+          26
+        ],
+        "radius": 1.4,
+        "height": 1.8
+      },
+      "trees": 48
+    },
+    "lightDiagnostics": {
+      "compiledMaterials": 2,
+      "actualSunMaterials": 2,
+      "normalDesign": "Retained C2 up-facing normals; C3 radial/underside experiment rejected for near-black masses",
+      "artisticEffect": "Selective hook inconclusive; do not generalize"
+    },
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "tundra",
+    "seed": "29",
+    "view": "hero",
+    "file": "artifacts/wave2-concepts/retained/tundra-29-hero.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        0,
+        2.7718088878891134,
+        34
+      ],
+      "target": [
+        0,
+        -2.802707328634806,
+        -55
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 7,
+        "calls": 13,
+        "triangles": 466016,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.2999999523162842
+      },
+      {
+        "frame": 8,
+        "calls": 13,
+        "triangles": 466016,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.40000003576278687
+      },
+      {
+        "frame": 9,
+        "calls": 13,
+        "triangles": 466016,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      }
+    ],
+    "instances": [
+      {
+        "name": "tundra-dedicated-heath-mats-0",
+        "count": 1402
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-1",
+        "count": 3062
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-2",
+        "count": 636
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-3",
+        "count": 1100
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-0",
+        "count": 21
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-1",
+        "count": 21
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-2",
+        "count": 20
+      },
+      {
+        "name": "tundra-rare-stalks",
+        "count": 171
+      },
+      {
+        "name": "tundra-pale-functional-seedheads",
+        "count": 171
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      }
+    ],
+    "recipe": {
+      "id": "tundra",
+      "biome": 11,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "tundra",
+        "biome": 11,
+        "seed": "29",
+        "phase": 4.389788291205383,
+        "relief": 2.1,
+        "camera": {
+          "position": [
+            0,
+            2.7718088878891134,
+            34
+          ],
+          "target": [
+            0,
+            -2.802707328634806,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          2.7718088878891134,
+          34
+        ],
+        "target": [
+          0,
+          -2.802707328634806,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#a8bec3"
+        }
+      },
+      "trees": 0,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "Independent reference pigment state: warm russet heath, local phenology unverified",
+        "weather": "Independent clear reference state",
+        "timeOfDay": "Independent low warm sun reference state"
+      }
+    },
+    "concept": {
+      "biome": "tundra",
+      "representation": "Continuous mineral/heath pigments with dedicated generated low-shrub atlas on curved rooted mats; C1 flat-leaf geometry rejected",
+      "ecology": "Unnamed dwarf-shrub and seedhead functional forms; no verified local taxon or phenology asserted",
+      "sparseArcticHabitat": false,
+      "referenceLighting": "Warm key from upper right, independent time-of-day layer",
+      "seasonalState": "Russet reference state, not permanent biome identity",
+      "cameraChange": "Concept-fit: same 1.7m eye, target lowered2.5m to place low horizon near40% of panel; C1/C2 camera differs",
+      "counts": {
+        "lowHeath": 6200,
+        "rocks": 62,
+        "seedheads": 171
+      }
+    },
+    "dressing": {
+      "instances": {
+        "lowHeath": 6200,
+        "rocks": 62,
+        "seedheads": 171
+      },
+      "identity": "Unnamed dwarf-shrub/lichen/seedhead functional study; local flora unverified",
+      "seasonalState": "Russet pigment reference state independent of biome identity",
+      "staging": "Low substrate only inside character approach"
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        29
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "tundra",
+    "seed": "29",
+    "view": "inspection",
+    "file": "artifacts/wave2-concepts/retained/tundra-29-inspection.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 11,
+        "calls": 13,
+        "triangles": 466016,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.2999999523162842
+      },
+      {
+        "frame": 12,
+        "calls": 13,
+        "triangles": 466016,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 13,
+        "calls": 13,
+        "triangles": 466016,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.6000000238418579
+      }
+    ],
+    "instances": [
+      {
+        "name": "tundra-dedicated-heath-mats-0",
+        "count": 1402
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-1",
+        "count": 3062
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-2",
+        "count": 636
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-3",
+        "count": 1100
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-0",
+        "count": 21
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-1",
+        "count": 21
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-2",
+        "count": 20
+      },
+      {
+        "name": "tundra-rare-stalks",
+        "count": 171
+      },
+      {
+        "name": "tundra-pale-functional-seedheads",
+        "count": 171
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      }
+    ],
+    "recipe": {
+      "id": "tundra",
+      "biome": 11,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "tundra",
+        "biome": 11,
+        "seed": "29",
+        "phase": 4.389788291205383,
+        "relief": 2.1,
+        "camera": {
+          "position": [
+            0,
+            2.7718088878891134,
+            34
+          ],
+          "target": [
+            0,
+            -2.802707328634806,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          2.7718088878891134,
+          34
+        ],
+        "target": [
+          0,
+          -2.802707328634806,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#a8bec3"
+        }
+      },
+      "trees": 0,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "Independent reference pigment state: warm russet heath, local phenology unverified",
+        "weather": "Independent clear reference state",
+        "timeOfDay": "Independent low warm sun reference state"
+      }
+    },
+    "concept": {
+      "biome": "tundra",
+      "representation": "Continuous mineral/heath pigments with dedicated generated low-shrub atlas on curved rooted mats; C1 flat-leaf geometry rejected",
+      "ecology": "Unnamed dwarf-shrub and seedhead functional forms; no verified local taxon or phenology asserted",
+      "sparseArcticHabitat": false,
+      "referenceLighting": "Warm key from upper right, independent time-of-day layer",
+      "seasonalState": "Russet reference state, not permanent biome identity",
+      "cameraChange": "Concept-fit: same 1.7m eye, target lowered2.5m to place low horizon near40% of panel; C1/C2 camera differs",
+      "counts": {
+        "lowHeath": 6200,
+        "rocks": 62,
+        "seedheads": 171
+      }
+    },
+    "dressing": {
+      "instances": {
+        "lowHeath": 6200,
+        "rocks": 62,
+        "seedheads": 171
+      },
+      "identity": "Unnamed dwarf-shrub/lichen/seedhead functional study; local flora unverified",
+      "seasonalState": "Russet pigment reference state independent of biome identity",
+      "staging": "Low substrate only inside character approach"
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        29
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "tundra",
+    "seed": "41",
+    "view": "hero",
+    "file": "artifacts/wave2-concepts/retained/tundra-41-hero.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        0,
+        1.5098408402486985,
+        34
+      ],
+      "target": [
+        0,
+        -1.3385777218983526,
+        -55
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 6,
+        "calls": 13,
+        "triangles": 457176,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      },
+      {
+        "frame": 7,
+        "calls": 13,
+        "triangles": 457176,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.40000003576278687
+      },
+      {
+        "frame": 8,
+        "calls": 13,
+        "triangles": 457176,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.2999999523162842
+      }
+    ],
+    "instances": [
+      {
+        "name": "tundra-dedicated-heath-mats-0",
+        "count": 1311
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-1",
+        "count": 1077
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-2",
+        "count": 2472
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-3",
+        "count": 1340
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-0",
+        "count": 16
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-1",
+        "count": 16
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-2",
+        "count": 15
+      },
+      {
+        "name": "tundra-rare-stalks",
+        "count": 341
+      },
+      {
+        "name": "tundra-pale-functional-seedheads",
+        "count": 341
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      }
+    ],
+    "recipe": {
+      "id": "tundra",
+      "biome": 11,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "tundra",
+        "biome": 11,
+        "seed": "41",
+        "phase": 0.1941007153824691,
+        "relief": 2.1,
+        "camera": {
+          "position": [
+            0,
+            1.5098408402486985,
+            34
+          ],
+          "target": [
+            0,
+            -1.3385777218983526,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.5098408402486985,
+          34
+        ],
+        "target": [
+          0,
+          -1.3385777218983526,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#a8bec3"
+        }
+      },
+      "trees": 0,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "Independent reference pigment state: warm russet heath, local phenology unverified",
+        "weather": "Independent clear reference state",
+        "timeOfDay": "Independent low warm sun reference state"
+      }
+    },
+    "concept": {
+      "biome": "tundra",
+      "representation": "Continuous mineral/heath pigments with dedicated generated low-shrub atlas on curved rooted mats; C1 flat-leaf geometry rejected",
+      "ecology": "Unnamed dwarf-shrub and seedhead functional forms; no verified local taxon or phenology asserted",
+      "sparseArcticHabitat": false,
+      "referenceLighting": "Warm key from upper right, independent time-of-day layer",
+      "seasonalState": "Russet reference state, not permanent biome identity",
+      "cameraChange": "Concept-fit: same 1.7m eye, target lowered2.5m to place low horizon near40% of panel; C1/C2 camera differs",
+      "counts": {
+        "lowHeath": 6200,
+        "rocks": 47,
+        "seedheads": 341
+      }
+    },
+    "dressing": {
+      "instances": {
+        "lowHeath": 6200,
+        "rocks": 47,
+        "seedheads": 341
+      },
+      "identity": "Unnamed dwarf-shrub/lichen/seedhead functional study; local flora unverified",
+      "seasonalState": "Russet pigment reference state independent of biome identity",
+      "staging": "Low substrate only inside character approach"
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        29
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "tundra",
+    "seed": "41",
+    "view": "inspection",
+    "file": "artifacts/wave2-concepts/retained/tundra-41-inspection.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 10,
+        "calls": 13,
+        "triangles": 457176,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.7000000476837158
+      },
+      {
+        "frame": 11,
+        "calls": 13,
+        "triangles": 457176,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 1.0999999642372131
+      },
+      {
+        "frame": 12,
+        "calls": 13,
+        "triangles": 457176,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      }
+    ],
+    "instances": [
+      {
+        "name": "tundra-dedicated-heath-mats-0",
+        "count": 1311
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-1",
+        "count": 1077
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-2",
+        "count": 2472
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-3",
+        "count": 1340
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-0",
+        "count": 16
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-1",
+        "count": 16
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-2",
+        "count": 15
+      },
+      {
+        "name": "tundra-rare-stalks",
+        "count": 341
+      },
+      {
+        "name": "tundra-pale-functional-seedheads",
+        "count": 341
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      }
+    ],
+    "recipe": {
+      "id": "tundra",
+      "biome": 11,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "tundra",
+        "biome": 11,
+        "seed": "41",
+        "phase": 0.1941007153824691,
+        "relief": 2.1,
+        "camera": {
+          "position": [
+            0,
+            1.5098408402486985,
+            34
+          ],
+          "target": [
+            0,
+            -1.3385777218983526,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.5098408402486985,
+          34
+        ],
+        "target": [
+          0,
+          -1.3385777218983526,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#a8bec3"
+        }
+      },
+      "trees": 0,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "Independent reference pigment state: warm russet heath, local phenology unverified",
+        "weather": "Independent clear reference state",
+        "timeOfDay": "Independent low warm sun reference state"
+      }
+    },
+    "concept": {
+      "biome": "tundra",
+      "representation": "Continuous mineral/heath pigments with dedicated generated low-shrub atlas on curved rooted mats; C1 flat-leaf geometry rejected",
+      "ecology": "Unnamed dwarf-shrub and seedhead functional forms; no verified local taxon or phenology asserted",
+      "sparseArcticHabitat": false,
+      "referenceLighting": "Warm key from upper right, independent time-of-day layer",
+      "seasonalState": "Russet reference state, not permanent biome identity",
+      "cameraChange": "Concept-fit: same 1.7m eye, target lowered2.5m to place low horizon near40% of panel; C1/C2 camera differs",
+      "counts": {
+        "lowHeath": 6200,
+        "rocks": 47,
+        "seedheads": 341
+      }
+    },
+    "dressing": {
+      "instances": {
+        "lowHeath": 6200,
+        "rocks": 47,
+        "seedheads": 341
+      },
+      "identity": "Unnamed dwarf-shrub/lichen/seedhead functional study; local flora unverified",
+      "seasonalState": "Russet pigment reference state independent of biome identity",
+      "staging": "Low substrate only inside character approach"
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        29
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "tundra",
+    "seed": "73",
+    "view": "hero",
+    "file": "artifacts/wave2-concepts/retained/tundra-73-hero.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        0,
+        1.9445756396064198,
+        34
+      ],
+      "target": [
+        0,
+        -2.296858492661413,
+        -55
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 7,
+        "calls": 13,
+        "triangles": 459848,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 8,
+        "calls": 13,
+        "triangles": 459848,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.40000003576278687
+      },
+      {
+        "frame": 9,
+        "calls": 13,
+        "triangles": 459848,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      }
+    ],
+    "instances": [
+      {
+        "name": "tundra-dedicated-heath-mats-0",
+        "count": 722
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-1",
+        "count": 1970
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-2",
+        "count": 2125
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-3",
+        "count": 1383
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-0",
+        "count": 17
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-1",
+        "count": 16
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-2",
+        "count": 16
+      },
+      {
+        "name": "tundra-rare-stalks",
+        "count": 365
+      },
+      {
+        "name": "tundra-pale-functional-seedheads",
+        "count": 365
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      }
+    ],
+    "recipe": {
+      "id": "tundra",
+      "biome": 11,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "tundra",
+        "biome": 11,
+        "seed": "73",
+        "phase": 1.3335352461128283,
+        "relief": 2.1,
+        "camera": {
+          "position": [
+            0,
+            1.9445756396064198,
+            34
+          ],
+          "target": [
+            0,
+            -2.296858492661413,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.9445756396064198,
+          34
+        ],
+        "target": [
+          0,
+          -2.296858492661413,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#a8bec3"
+        }
+      },
+      "trees": 0,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "Independent reference pigment state: warm russet heath, local phenology unverified",
+        "weather": "Independent clear reference state",
+        "timeOfDay": "Independent low warm sun reference state"
+      }
+    },
+    "concept": {
+      "biome": "tundra",
+      "representation": "Continuous mineral/heath pigments with dedicated generated low-shrub atlas on curved rooted mats; C1 flat-leaf geometry rejected",
+      "ecology": "Unnamed dwarf-shrub and seedhead functional forms; no verified local taxon or phenology asserted",
+      "sparseArcticHabitat": false,
+      "referenceLighting": "Warm key from upper right, independent time-of-day layer",
+      "seasonalState": "Russet reference state, not permanent biome identity",
+      "cameraChange": "Concept-fit: same 1.7m eye, target lowered2.5m to place low horizon near40% of panel; C1/C2 camera differs",
+      "counts": {
+        "lowHeath": 6200,
+        "rocks": 49,
+        "seedheads": 365
+      }
+    },
+    "dressing": {
+      "instances": {
+        "lowHeath": 6200,
+        "rocks": 49,
+        "seedheads": 365
+      },
+      "identity": "Unnamed dwarf-shrub/lichen/seedhead functional study; local flora unverified",
+      "seasonalState": "Russet pigment reference state independent of biome identity",
+      "staging": "Low substrate only inside character approach"
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        29
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "tundra",
+    "seed": "73",
+    "view": "inspection",
+    "file": "artifacts/wave2-concepts/retained/tundra-73-inspection.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 11,
+        "calls": 13,
+        "triangles": 459848,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      },
+      {
+        "frame": 12,
+        "calls": 13,
+        "triangles": 459848,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 13,
+        "calls": 13,
+        "triangles": 459848,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.6000000238418579
+      }
+    ],
+    "instances": [
+      {
+        "name": "tundra-dedicated-heath-mats-0",
+        "count": 722
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-1",
+        "count": 1970
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-2",
+        "count": 2125
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-3",
+        "count": 1383
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-0",
+        "count": 17
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-1",
+        "count": 16
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-2",
+        "count": 16
+      },
+      {
+        "name": "tundra-rare-stalks",
+        "count": 365
+      },
+      {
+        "name": "tundra-pale-functional-seedheads",
+        "count": 365
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      }
+    ],
+    "recipe": {
+      "id": "tundra",
+      "biome": 11,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "tundra",
+        "biome": 11,
+        "seed": "73",
+        "phase": 1.3335352461128283,
+        "relief": 2.1,
+        "camera": {
+          "position": [
+            0,
+            1.9445756396064198,
+            34
+          ],
+          "target": [
+            0,
+            -2.296858492661413,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.9445756396064198,
+          34
+        ],
+        "target": [
+          0,
+          -2.296858492661413,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#a8bec3"
+        }
+      },
+      "trees": 0,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "Independent reference pigment state: warm russet heath, local phenology unverified",
+        "weather": "Independent clear reference state",
+        "timeOfDay": "Independent low warm sun reference state"
+      }
+    },
+    "concept": {
+      "biome": "tundra",
+      "representation": "Continuous mineral/heath pigments with dedicated generated low-shrub atlas on curved rooted mats; C1 flat-leaf geometry rejected",
+      "ecology": "Unnamed dwarf-shrub and seedhead functional forms; no verified local taxon or phenology asserted",
+      "sparseArcticHabitat": false,
+      "referenceLighting": "Warm key from upper right, independent time-of-day layer",
+      "seasonalState": "Russet reference state, not permanent biome identity",
+      "cameraChange": "Concept-fit: same 1.7m eye, target lowered2.5m to place low horizon near40% of panel; C1/C2 camera differs",
+      "counts": {
+        "lowHeath": 6200,
+        "rocks": 49,
+        "seedheads": 365
+      }
+    },
+    "dressing": {
+      "instances": {
+        "lowHeath": 6200,
+        "rocks": 49,
+        "seedheads": 365
+      },
+      "identity": "Unnamed dwarf-shrub/lichen/seedhead functional study; local flora unverified",
+      "seasonalState": "Russet pigment reference state independent of biome identity",
+      "staging": "Low substrate only inside character approach"
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        29
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  }
+]

@@ -1,0 +1,73 @@
+import * as T from 'three';
+import type {FieldBiome,FieldPlan} from './wave1-fields';
+import {collisionFootprint,cameraSpace} from './wave1-fields';
+import {randomSource} from './random';
+
+/** Isolated world-space texture/light study. No water-shader or ecological data edits. */
+export function depthTextureStudy(scene:T.Scene,biome:FieldBiome,plan:FieldPlan,height:(x:number,z:number)=>number,loaded:()=>void){
+ const maps:T.Texture[]=[],load=(path:string)=>{const map=new T.TextureLoader().load(path,loaded,undefined,loaded);map.colorSpace=T.SRGBColorSpace;map.wrapS=map.wrapT=T.RepeatWrapping;map.anisotropy=4;maps.push(map);return map;};
+ const detail=load(biome==='flooded'?'/assets/alpine-meadow/meadow-ground-v1.png':'/assets/wave1-detail/arid-sediment-v1.webp'),shadow=load('/assets/puget-v1/grass.png');
+ const s=Math.sin(plan.heading),c=Math.cos(plan.heading),r=randomSource(plan.seed+'|depth-ground');
+ if(biome==='desert'){
+  const matte=load('/assets/wave1-detail/desert-distance-v1.webp');matte.wrapS=matte.wrapT=T.ClampToEdgeWrapping;
+  const material=new T.MeshBasicMaterial({map:matte,transparent:true,alphaTest:.20,depthWrite:false,side:T.DoubleSide,fog:false,toneMapped:false});
+  const backdrop=new T.Mesh(new T.PlaneGeometry(4200,210),material);backdrop.name='depth-distant-plains-matte';backdrop.position.set(plan.eye[0]+s*1550,87,plan.eye[2]-c*1550);backdrop.rotation.y=-plan.heading;scene.add(backdrop);
+  // Low land shelves sit beyond the near ecology, not a wall of near mountains.
+  for(let layer=0;layer<2;layer++){const g=new T.PlaneGeometry(3600,700,80,12);g.rotateX(-Math.PI/2);const p=g.attributes.position;for(let i=0;i<p.count;i++){const x=p.getX(i),z=p.getZ(i),distance=650+layer*430+z;const side=x,base=height(plan.eye[0]+s*distance+c*side,plan.eye[2]-c*distance+s*side);p.setXYZ(i,plan.eye[0]+s*distance+c*side,base+Math.pow(Math.max(0,Math.sin(x*.004+layer*1.9)*.5+.5),3)*(8+layer*9),plan.eye[2]-c*distance+s*side);}g.computeVertexNormals();const shelf=new T.Mesh(g,new T.MeshStandardMaterial({color:layer?'#a49aa1':'#b5a08c',roughness:1}));shelf.name='depth-low-distant-shelf';scene.add(shelf);}
+  // Reuse the existing unnamed grass silhouette as sparse dry functional forms.
+  const patches:{x:number;z:number;size:number}[]=[];
+  scene.traverse(o=>{if(!(o instanceof T.InstancedMesh)||o.name!=='field-jointed-bedrock')return;const m=new T.Matrix4();for(let i=0;i<o.count;i++){o.getMatrixAt(i,m);const x=m.elements[12],z=m.elements[14],q=cameraSpace(plan,x,z);if(q.forward<0||q.forward>90)continue;for(let j=0;j<4;j++){const px=x+(r()-.5)*4,pz=z+(r()-.5)*4;if(!collisionFootprint(plan,px,pz,1.2))patches.push({x:px,z:pz,size:.35+r()*.55});}}});
+  const geometry=new T.PlaneGeometry(1.25,1.1);geometry.translate(0,.55,0);const mat=new T.MeshStandardMaterial({map:shadow,alphaTest:.35,side:T.DoubleSide,roughness:1});
+  mat.onBeforeCompile=shader=>{shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
+   float ink=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));diffuseColor.rgb=mix(vec3(.12,.13,.07),vec3(.48,.39,.20),sqrt(ink));`);};mat.customProgramCacheKey=()=> 'dry-functional-tuft-1';
+  const tufts=new T.InstancedMesh(geometry,mat,patches.length),o=new T.Object3D();tufts.name='depth-dry-grass';patches.forEach((p,i)=>{o.position.set(p.x,height(p.x,p.z)-.01,p.z);o.rotation.set(0,r()*6.28,(r()-.5)*.2);o.scale.setScalar(p.size);o.updateMatrix();tufts.setMatrixAt(i,o.matrix);});tufts.receiveShadow=true;tufts.computeBoundingSphere();scene.add(tufts);
+  scene.userData.depthDressing={dryTufts:patches.length,ecology:'Unnamed dry grass growth-form study; no new species occurrence claim'};
+ }
+ const old=scene.onBeforeRender;let installed=false;
+ scene.onBeforeRender=function(...args){old.apply(this,args);if(installed)return;installed=true;const seen=new Set<T.Material>();
+  scene.traverse(o=>{if(!(o instanceof T.Mesh))return;const ground=o.name==='connected-field-terrain',grass=/meadow|depth-dry-grass/.test(o.name),rock=o.name==='field-jointed-bedrock',plant=/juvenile|unnamed-open-shrub/.test(o.name);if(!ground&&!grass&&!rock&&!plant)return;
+   for(const mat of Array.isArray(o.material)?o.material:[o.material]){if(!(mat instanceof T.MeshStandardMaterial)||seen.has(mat))continue;seen.add(mat);const previous=mat.onBeforeCompile,key=mat.customProgramCacheKey.bind(mat);
+    mat.onBeforeCompile=(shader,renderer)=>{previous.call(mat,shader,renderer);Object.assign(shader.uniforms,{depthDetail:{value:detail},depthShadow:{value:shadow}});
+     shader.vertexShader='varying vec3 depthWorld;\n'+shader.vertexShader;shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>',`#include <begin_vertex>
+      vec4 depthP=vec4(transformed,1.);
+      #ifdef USE_INSTANCING
+      depthP=instanceMatrix*depthP;
+      #endif
+      depthWorld=(modelMatrix*depthP).xyz;`);
+     shader.fragmentShader=`varying vec3 depthWorld;uniform sampler2D depthDetail,depthShadow;
+      float dpHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}
+      float dpNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(dpHash(i),dpHash(i+vec2(1,0)),f.x),mix(dpHash(i+vec2(0,1)),dpHash(i+vec2(1,1)),f.x),f.y);}
+      float dpLeaf(vec2 p){vec2 cell=floor(p/7.),q=fract(p/7.)-.5;float a=dpHash(cell)*6.28;q=mat2(cos(a),-sin(a),sin(a),cos(a))*q;vec2 uv=vec2(q.x*.30+.50,q.y+.5);return (texture2D(depthShadow,uv).a+texture2D(depthShadow,uv+vec2(.008,.006)).a+texture2D(depthShadow,uv-vec2(.008,.006)).a)/3.;}
+     `+shader.fragmentShader;
+     shader.fragmentShader=shader.fragmentShader.replace('#include <roughnessmap_fragment>',`
+      vec2 dp=depthWorld.xz-vec2(${plan.eye[0].toFixed(3)},${plan.eye[2].toFixed(3)});
+      float forward=dot(dp,vec2(${s.toFixed(6)},${(-c).toFixed(6)})),side=dot(dp,vec2(${c.toFixed(6)},${s.toFixed(6)}));
+      float dpMedium=dpNoise(depthWorld.xz*.44),dpGrain=dpNoise(depthWorld.xz*23.);
+      float pattern=dpLeaf(depthWorld.xz+vec2(forward*.12,side*.18));
+      float framing=(1.-smoothstep(3.,13.,forward))*.55+smoothstep(3.5,12.,abs(side))*.45;
+      float shade=clamp(framing*(.35+.85*pattern),0.,.85);
+      float sunPool=(1.-smoothstep(6.,20.,abs(side)))*smoothstep(1.,12.,forward)*(1.-smoothstep(75.,180.,forward));
+      float brokenSun=sunPool*(.45+.55*(1.-pattern));
+      ${ground&&biome==='flooded'?`vec3 tuft=texture2D(depthDetail,depthWorld.xz/2.4).rgb;float cover=smoothstep(.35,.65,dpMedium);float ink=dot(tuft,vec3(.2126,.7152,.0722));vec3 meadow=mix(vec3(.17,.20,.085),vec3(.49,.43,.19),ink);diffuseColor.rgb=mix(diffuseColor.rgb,meadow,cover*.78);`:''}
+      ${ground&&biome==='mangrove'?`vec3 gravel=texture2D(depthDetail,depthWorld.xz/1.6).rgb;float grit=dot(gravel,vec3(.2126,.7152,.0722));float deposit=smoothstep(.38,.66,dpMedium);diffuseColor.rgb*=mix(.65,1.38,grit)*mix(.9,1.10,deposit);`:''}
+      ${grass?`diffuseColor.rgb*=mix(vec3(.77,.84,.80),vec3(1.21,1.10,.74),smoothstep(.25,.75,dpMedium));`:''}
+      #include <roughnessmap_fragment>
+      ${ground?`roughnessFactor=mix(.42,.98,smoothstep(.015,.20,depthWorld.y));`:''}
+     `);
+     shader.fragmentShader=shader.fragmentShader.replace('#include <lights_fragment_end>',`#include <lights_fragment_end>
+      float lightPattern=dpLeaf(depthWorld.xz+vec2(dot(depthWorld.xz,vec2(.03,.06))));
+      vec2 lightDelta=depthWorld.xz-vec2(${plan.eye[0].toFixed(3)},${plan.eye[2].toFixed(3)});
+      float lightForward=dot(lightDelta,vec2(${s.toFixed(6)},${(-c).toFixed(6)})),lightSide=dot(lightDelta,vec2(${c.toFixed(6)},${s.toFixed(6)}));
+      float edgeShade=clamp(((1.-smoothstep(3.,13.,lightForward))*.55+smoothstep(3.5,12.,abs(lightSide))*.45)*(.35+.85*lightPattern),0.,.85);
+      float clearingLight=(1.-smoothstep(6.,20.,abs(lightSide)))*smoothstep(1.,12.,lightForward)*(1.-smoothstep(75.,180.,lightForward))*(1.-lightPattern);
+      reflectedLight.directDiffuse*=max(.18,1.-edgeShade*.85)*(1.+clearingLight*.48);
+      reflectedLight.indirectDiffuse*=mix(vec3(1.),vec3(.72,.64,1.18),edgeShade);
+      reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.06,.035,.11)*edgeShade;
+     `);
+    };mat.customProgramCacheKey=()=>key()+`|depth-textured-light-1|${biome}|${ground}|${grass}`;mat.needsUpdate=true;
+   }
+  });scene.userData.depthTexture={version:1,worldAnchored:true,artisticShadowField:'Vegetation-shaped transmission approximation, separate from retained physical shadows',waterShaderUnchanged:true};
+ };
+ return()=>maps.forEach(m=>m.dispose());
+}
+

@@ -1,0 +1,13 @@
+{
+  "frozenAt": "2026-11-26T04:00:51.825Z",
+  "version": "flooded-3",
+  "source": "src/lib/forest/wave1-flooded.ts",
+  "sha256": "c068e2bd54deaa592992de5ab31957e315e1301a0b6eb036b906a4f7d3ba695c",
+  "developmentSeeds": [
+    "29",
+    "41"
+  ],
+  "unseenHoldout": "613",
+  "decision": "provisional representation checkpoint; not visually approved",
+  "roundBudgetUsed": 3
+}

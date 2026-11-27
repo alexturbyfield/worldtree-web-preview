@@ -1,0 +1,38 @@
+[
+  {
+    "variant": 1,
+    "triangles": 3428,
+    "finite": true,
+    "closed": true
+  },
+  {
+    "variant": 2,
+    "triangles": 3836,
+    "finite": true,
+    "closed": true
+  },
+  {
+    "variant": 3,
+    "triangles": 4064,
+    "finite": true,
+    "closed": true
+  },
+  {
+    "variant": 4,
+    "triangles": 3508,
+    "finite": true,
+    "closed": true
+  },
+  {
+    "variant": 5,
+    "triangles": 4144,
+    "finite": true,
+    "closed": true
+  },
+  {
+    "variant": 6,
+    "triangles": 3180,
+    "finite": true,
+    "closed": true
+  }
+]

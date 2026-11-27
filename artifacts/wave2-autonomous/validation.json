@@ -1,0 +1,483 @@
+{
+  "sourceFreezeUnchanged": true,
+  "protectedViews": [
+    {
+      "name": "puget-hero",
+      "old": "artifacts/visual-quality/wave1-protected-fidelity/puget-hero.png",
+      "now": "artifacts/visual-quality/wave1-protected-wave2-auto/puget-hero.png",
+      "pixelIdentical": true
+    },
+    {
+      "name": "rainforest-hero",
+      "old": "artifacts/visual-quality/wave1-protected-fidelity/rainforest-hero.png",
+      "now": "artifacts/visual-quality/wave1-protected-wave2-auto/rainforest-hero.png",
+      "pixelIdentical": true
+    },
+    {
+      "name": "rainforest-inspection",
+      "old": "artifacts/visual-quality/wave1-protected-fidelity/rainforest-inspection.png",
+      "now": "artifacts/visual-quality/wave1-protected-wave2-auto/rainforest-inspection.png",
+      "pixelIdentical": true
+    },
+    {
+      "name": "savanna-hero",
+      "old": "artifacts/visual-quality/wave1-savanna-fidelity/savanna-hero.png",
+      "now": "artifacts/visual-quality/wave1-savanna-wave2-auto/savanna-hero.png",
+      "pixelIdentical": true
+    },
+    {
+      "name": "savanna-inspection",
+      "old": "artifacts/visual-quality/wave1-savanna-fidelity/savanna-inspection.png",
+      "now": "artifacts/visual-quality/wave1-savanna-wave2-auto/savanna-inspection.png",
+      "pixelIdentical": true
+    },
+    {
+      "name": "alpine-hero",
+      "old": "artifacts/visual-quality/wave1-alpine-fidelity/alpine-hero.png",
+      "now": "artifacts/visual-quality/wave1-alpine-wave2-auto/alpine-hero.png",
+      "pixelIdentical": true
+    },
+    {
+      "name": "alpine-inspection",
+      "old": "artifacts/visual-quality/wave1-alpine-fidelity/alpine-inspection.png",
+      "now": "artifacts/visual-quality/wave1-alpine-wave2-auto/alpine-inspection.png",
+      "pixelIdentical": true
+    },
+    {
+      "name": "desert-hero",
+      "old": "artifacts/wave1-fidelity/final/desert-29-after-hero.png",
+      "now": "artifacts/flooded-finish/wave2-auto-guard/desert-29-before-hero.png",
+      "pixelIdentical": true
+    },
+    {
+      "name": "desert-inspection",
+      "old": "artifacts/wave1-fidelity/final/desert-29-after-inspection.png",
+      "now": "artifacts/flooded-finish/wave2-auto-guard/desert-29-before-inspection.png",
+      "pixelIdentical": true
+    },
+    {
+      "name": "mangrove-hero",
+      "old": "artifacts/wave1-fidelity/final/mangrove-29-after-hero.png",
+      "now": "artifacts/flooded-finish/wave2-auto-guard/mangrove-29-before-hero.png",
+      "pixelIdentical": true
+    },
+    {
+      "name": "mangrove-inspection",
+      "old": "artifacts/wave1-fidelity/final/mangrove-29-after-inspection.png",
+      "now": "artifacts/flooded-finish/wave2-auto-guard/mangrove-29-before-inspection.png",
+      "pixelIdentical": true
+    },
+    {
+      "name": "flooded-hero",
+      "old": "artifacts/flooded-finish/final/flooded-29-after-hero.png",
+      "now": "artifacts/flooded-finish/wave2-auto-flooded-guard/flooded-29-after-hero.png",
+      "pixelIdentical": true
+    },
+    {
+      "name": "flooded-inspection",
+      "old": "artifacts/flooded-finish/final/flooded-29-after-inspection.png",
+      "now": "artifacts/flooded-finish/wave2-auto-flooded-guard/flooded-29-after-inspection.png",
+      "pixelIdentical": true
+    }
+  ],
+  "frames": 38,
+  "renderErrors": [],
+  "performance": [
+    {
+      "id": "boreal",
+      "calls": [
+        11,
+        15
+      ],
+      "triangles": [
+        797220,
+        691432
+      ],
+      "trees": 48,
+      "instances": [
+        {
+          "name": "boreal-distant-attached-boughs",
+          "count": 420
+        },
+        {
+          "name": "boreal-weathered-rootbed-stone",
+          "count": 8
+        },
+        {
+          "name": "boreal-weathered-rootbed-stone",
+          "count": 8
+        },
+        {
+          "name": "boreal-weathered-rootbed-stone",
+          "count": 8
+        }
+      ],
+      "textureEstimatedRGBABytes": 31823072,
+      "cameraMatchedToBaseline": true,
+      "lightingHook": null
+    },
+    {
+      "id": "temperate",
+      "calls": [
+        10,
+        12
+      ],
+      "triangles": [
+        711028,
+        721818
+      ],
+      "trees": 48,
+      "instances": [
+        {
+          "name": "temperate-curled-leaf-litter",
+          "count": 8753
+        },
+        {
+          "name": "temperate-unnamed-fern-functional-forms",
+          "count": 260
+        },
+        {
+          "name": "temperate-embedded-moss-stone",
+          "count": 35
+        },
+        {
+          "name": "field-source-stand-impostors",
+          "count": 320
+        }
+      ],
+      "textureEstimatedRGBABytes": 23086795,
+      "cameraMatchedToBaseline": true,
+      "lightingHook": {
+        "compiledMaterials": 2,
+        "actualSunMaterials": 2,
+        "normalDesign": "Readable C2 normals, branch-radial canopy depth occlusion bounded independently from directional orientation",
+        "artisticEffect": "Experimental upper/exterior highlights and cool interior; not human-approved"
+      }
+    },
+    {
+      "id": "tundra",
+      "calls": [
+        13,
+        16
+      ],
+      "triangles": [
+        466016,
+        1040908
+      ],
+      "trees": 0,
+      "instances": [
+        {
+          "name": "tundra-true-branchlet-near-0",
+          "count": 356
+        },
+        {
+          "name": "tundra-true-branchlet-near-1",
+          "count": 373
+        },
+        {
+          "name": "tundra-true-branchlet-near-2",
+          "count": 321
+        },
+        {
+          "name": "tundra-true-branchlet-middle-0",
+          "count": 498
+        },
+        {
+          "name": "tundra-true-branchlet-middle-1",
+          "count": 510
+        },
+        {
+          "name": "tundra-true-branchlet-middle-2",
+          "count": 542
+        },
+        {
+          "name": "tundra-embedded-mineral-stone-0",
+          "count": 22
+        },
+        {
+          "name": "tundra-embedded-mineral-stone-1",
+          "count": 21
+        },
+        {
+          "name": "tundra-embedded-mineral-stone-2",
+          "count": 21
+        },
+        {
+          "name": "tundra-rare-stalks",
+          "count": 191
+        },
+        {
+          "name": "tundra-pale-functional-seedheads",
+          "count": 191
+        },
+        {
+          "name": "tundra-curved-short-sedge-functional-form",
+          "count": 191
+        }
+      ],
+      "textureEstimatedRGBABytes": 16778955,
+      "cameraMatchedToBaseline": true,
+      "lightingHook": null
+    }
+  ],
+  "staging": [
+    {
+      "id": "temperate",
+      "seed": "29",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "id": "temperate",
+      "seed": "41",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "id": "temperate",
+      "seed": "73",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "id": "tundra",
+      "seed": "29",
+      "center": [
+        0,
+        29
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "id": "tundra",
+      "seed": "41",
+      "center": [
+        0,
+        29
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "id": "tundra",
+      "seed": "73",
+      "center": [
+        0,
+        29
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "id": "boreal",
+      "seed": "29",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "id": "boreal",
+      "seed": "41",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "id": "boreal",
+      "seed": "73",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "id": "temperate",
+      "seed": "7056763",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "id": "tundra",
+      "seed": "5554973",
+      "center": [
+        0,
+        29
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "id": "boreal",
+      "seed": "8553620",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "id": "temperate-appalachia",
+      "seed": "41",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "id": "temperate-eastasia",
+      "seed": "41",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "id": "tundra-siberia",
+      "seed": "41",
+      "center": [
+        0,
+        29
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "id": "tundra-svalbard",
+      "seed": "41",
+      "center": [
+        0,
+        29
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "id": "boreal-canada",
+      "seed": "41",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "id": "boreal-siberia",
+      "seed": "41",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "id": "boreal-birch-edge",
+      "seed": "41",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    }
+  ],
+  "limitations": [
+    "Bounding boxes are conservative dressing clearance flags, not a character collision engine.",
+    "CPU timings are software submission measurements; no mobile approval.",
+    "Texture estimates exclude shadow/render targets and hidden allocations.",
+    "Alpha overdraw unmeasured.",
+    "No human artistic approval."
+  ],
+  "repeatRender": [
+    {
+      "id": "boreal",
+      "view": "hero",
+      "pixelIdentical": true
+    },
+    {
+      "id": "boreal",
+      "view": "inspection",
+      "pixelIdentical": true
+    },
+    {
+      "id": "temperate",
+      "view": "hero",
+      "pixelIdentical": true
+    },
+    {
+      "id": "temperate",
+      "view": "inspection",
+      "pixelIdentical": true
+    },
+    {
+      "id": "tundra",
+      "view": "hero",
+      "pixelIdentical": true
+    },
+    {
+      "id": "tundra",
+      "view": "inspection",
+      "pixelIdentical": true
+    }
+  ],
+  "inspectionRepair": {
+    "changedFiles": [
+      "src/lib/forest/wave2-boreal-floor.ts"
+    ],
+    "oldBorealHoldout": 2472814,
+    "freshBorealHoldout": 8553620,
+    "developmentEvidence": "boreal seed29 inspection; no holdout tuning",
+    "unchangedBiomeHoldoutsRetained": true
+  },
+  "assetScanLimitation": "Texture byte sum excludes shader-injected samplers and render targets; lower bound only"
+}

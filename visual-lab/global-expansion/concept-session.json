@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "id": "wave2-concept-first-2026-11-26",
+  "status": "bounded-review-checkpoint; artistic target unmet",
+  "plan": "visual-lab/global-expansion/CONCEPT-CONSTRUCTION-PLANS.md",
+  "humanPlanAcceptance": "artifacts/wave2-concepts/acceptance.json",
+  "humanCandidateApproval": null,
+  "humanApprovedBestChanged": false,
+  "referenceIds": [
+    "wave2-concept-boreal",
+    "wave2-concept-temperate",
+    "wave2-concept-tundra"
+  ],
+  "loadedGuidance": [
+    "AGENTS.md",
+    "docs/visual-quality-workflow.md",
+    "visual-lab/art-direction-policy.json",
+    ".agents/skills/prototype-fast/SKILL.md",
+    ".agents/skills/visual-review/SKILL.md",
+    "imagegen SKILL.md",
+    "global-expansion INVENTORY and prior wave2-session"
+  ],
+  "sourceFreeze": "artifacts/wave2-concepts/freeze.json",
+  "report": "artifacts/wave2-concepts/REPORT.md",
+  "captureConfig": "artifacts/wave2-concepts/capture.cjs",
+  "validation": "artifacts/wave2-concepts/validation.json",
+  "referenceComparison": "artifacts/wave2-concepts/retained-concept-comparison.png",
+  "iterationImages": [
+    "artifacts/wave2-concepts/structure",
+    "artifacts/wave2-concepts/correction1",
+    "artifacts/wave2-concepts/correction1-rest",
+    "artifacts/wave2-concepts/correction2-boreal",
+    "artifacts/wave2-concepts/correction2-temperate",
+    "artifacts/wave2-concepts/correction2-tundra",
+    "artifacts/wave2-concepts/correction3-boreal",
+    "artifacts/wave2-concepts/correction3-rest",
+    "artifacts/wave2-concepts/retained"
+  ],
+  "correctionRoundsUsed": 3,
+  "remainingRounds": 0,
+  "developmentSeeds": [
+    29,
+    41,
+    73
+  ],
+  "holdouts": {
+    "boreal": 810951,
+    "temperate": 940218,
+    "tundra": 428445
+  },
+  "holdoutTuned": false,
+  "parallelWorkstreams": [
+    "concept_boreal",
+    "concept_temperate",
+    "concept_tundra"
+  ],
+  "visionReview": {
+    "root": "actual reference, primary intermediate, final and multi-seed/regional images interpreted via view_image",
+    "workstreams": "Each implementer inspected own actual captures; not independent aesthetic reviewers",
+    "humanReviewOfNewRenders": false
+  },
+  "retained": {
+    "boreal": {
+      "candidate": "C3",
+      "betterThanPrevious": true,
+      "goodEnoughToApprove": false,
+      "reason": "Volumetric bough enclosure improved; floor/light/continuation still major gaps"
+    },
+    "temperate": {
+      "candidate": "C2 plus conservative fern clearance",
+      "betterThanPrevious": true,
+      "goodEnoughToApprove": false,
+      "reason": "Connected canopy retained; C3 black crown regression reverted; light hierarchy incomplete"
+    },
+    "tundra": {
+      "candidate": "C3 evidence only",
+      "betterThanPrevious": "Coverage improved, aesthetic outcome still rejected",
+      "goodEnoughToApprove": false,
+      "reason": "Compressed crossed mats and ochre dominance remain major failures"
+    }
+  },
+  "rules": [
+    {
+      "principle": "Eye-level conifer masses need vertical silhouette volume, not horizontal patches",
+      "status": "experimentally-supported",
+      "evidence": "artifacts/wave2-concepts/correction3-boreal/boreal-29-hero.png",
+      "scope": "Boreal study only; not global approval"
+    },
+    {
+      "principle": "Connected branch-owned crowns and layered middle trees establish enclosure",
+      "status": "experimentally-supported",
+      "evidence": "artifacts/wave2-concepts/structure-to-retained.png",
+      "scope": "Temperate study only; material hierarchy unresolved"
+    },
+    {
+      "principle": "Generated alpha must be checked before runtime use",
+      "status": "experimentally-supported",
+      "evidence": "artifacts/wave2-concepts/asset-prompts.json",
+      "scope": "Technical validation; no aesthetic approval"
+    },
+    {
+      "principle": "Mixed radial/underside leaf normals alone yield convincing woodland lighting",
+      "status": "rejected",
+      "evidence": "artifacts/wave2-concepts/correction3-rest/temperate-29-hero.png",
+      "reason": "Near-black masses; incompatible fill/translucency representation"
+    },
+    {
+      "principle": "Compressed crossed shrub cards reproduce tundra heath quality",
+      "status": "rejected",
+      "evidence": "artifacts/wave2-concepts/retained/tundra-29-hero.png",
+      "reason": "Flat star intersections and wrong volume despite rich artwork"
+    },
+    {
+      "principle": "Selective-light shader hook provides clear artistic hierarchy",
+      "status": "proposed/inconclusive",
+      "evidence": "artifacts/wave2-concepts/validation.json",
+      "reason": "Hook compiled for actual-sun materials; little visible benefit"
+    }
+  ],
+  "globalPromotion": false,
+  "trainingOccurred": false
+}

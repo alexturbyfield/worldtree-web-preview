@@ -2,6 +2,42 @@
 
 This is a local experiment/review tool built on the existing renderer and `scripts/studies/visual-quality.cjs`. It stores experiment memory and explicit preferences. **It does not train a model, infer human approval, or automatically replace the main encounter scene with a winner.**
 
+## Current Wave 2 human approval
+
+The user approved the current batch, including the latest temperate yellow-green highlights. [Approval and pinned images](feedback/wave2-current-batch-approved.json). This supersedes earlier agent-only retention labels for the presented artistic baselines; historical rejected evidence remains intact. No deployment, global promotion, ecological verification or mobile performance approval is inferred.
+
+## Temperate tree-lighting range checkpoint
+
+[Concept / before / retained and bark shadows](../artifacts/temperate-light-range/comparison.png) · [Measured values, controls and costs](../artifacts/temperate-light-range/REPORT.md) · [Review decisions](../artifacts/temperate-light-range/review.json). Wood now receives actual alpha-cutout crown shadows; selective foliage highlights and dirt albedo are lighter. A brighter but washed-out foreground treatment was rejected. Seeds 29, 41 and a frozen holdout inspected; seven protected views unchanged. Agent retention only, not human approval.
+
+## Temperate forest continuity checkpoint
+
+[Concept / before / retained](../artifacts/temperate-forest-depth/comparison.png) · [Critique, preview and costs](../artifacts/temperate-forest-depth/REPORT.md) · [Agent decisions and evidence-backed rules](../artifacts/temperate-forest-depth/review.json). Mixed-height source-baked patches and saplings close the under-canopy gap; the first black-curtain bake was rejected. Crown pigments are quieter. Seeds 29, 41 and a frozen holdout were inspected; seven protected views are unchanged. Agent retention only, no human approval or global promotion.
+
+## Wave 2 — autonomous living-floor checkpoint
+
+[Matched before/after](../artifacts/wave2-autonomous/before-after.png) · [Concept comparison](../artifacts/wave2-autonomous/retained-concept-comparison.png) · [Report and previews](../artifacts/wave2-autonomous/REPORT.md) · [Autonomous session, decisions and rules](global-expansion/autonomous-session.json).
+
+User-authorized progress-based iteration supersedes the old fixed-round cap **for this session**, without rewriting older experiments. Retained changes improve moss/duff/litter, grounded rocks/roots, temperate continuation and true tundra branchlets; failed distributions, camera obstruction and ineffective changes were rejected. Secondary inspection exposed a boreal moss regression, repaired and validated with a fresh holdout. **No scene is newly human-approved or globally promoted.** All seven protected environments remain unchanged across 13 views. Current images still show major material, foliage, terrain and continuation limitations.
+
+## Global expansion — concept-led Wave 2 checkpoint
+
+[Actual concepts versus renders](../artifacts/wave2-concepts/retained-concept-comparison.png) · [Report and preview links](../artifacts/wave2-concepts/REPORT.md) · [Seed/holdout views](../artifacts/wave2-concepts/hero-seeds.png) · [Inspection](../artifacts/wave2-concepts/inspection-seeds.png) · [Session/rule decisions](global-expansion/concept-session.json).
+
+The user accepted the construction plans, then three isolated workstreams implemented them. Boreal bough volume and temperate enclosure improve, but floor/light/continuation remain major gaps; tundra crossed mats fail the artistic gate. Temperate C3 black-crown regression was rejected and C2 restored. **No new biome is artistically approved or globally promoted.** Three correction rounds are spent and fresh holdouts are revealed; do not reset this budget or tune silently against them. All seven protected scenes remain unchanged across 13 views. The supplied sheet's bottom-row “Result” is reference artwork, never runtime evidence.
+
+## Earlier global expansion — first Wave 2 review
+
+[Inventory](global-expansion/INVENTORY.md) · [Prototype report](../artifacts/wave2/REPORT.md) · [Matched comparison](../artifacts/wave2/comparison.png) · [Session and rejected findings](global-expansion/wave2-session.json).
+
+The user authorized boreal6, temperate4 and tundra11 development. Explicit `expansion` previews are implemented; all seven protected environments remain pixel-identical across 13 views. **New prototypes are below the artistic target and have no human approval.** Three correction rounds are exhausted; holdouts have been revealed. Preserve the evidence and do not silently resume tuning or promote recipes globally. The latest Wave 1 user provisional approvals supersede the older initial-checkpoint status below; see [the feedback record](feedback/wave1-provisional-baselines.json).
+
+## Parallel biome expansion — Wave 1
+
+[Review checkpoint](../artifacts/wave1/REPORT.md) · [Real reference / baseline / prototype comparison](../artifacts/wave1/comparison.png) · [Inspection views](../artifacts/wave1/inspection.png) · [Workstream records](wave1/README.md).
+
+Desert13, mangrove14 and flooded grassland9 are explicit opt-in studies, guarded by actual RESOLVE metadata. Three bounded workstreams retain rejected evidence and frozen seed checks. **None is artistically approved or ready for global recipe promotion.** Existing protected woodland, rainforest, savanna and alpine captures are pixel-identical. Do not reset exhausted experiment budgets or treat revealed holdouts as unseen.
+
 
 ## Alpine cross-biome experiment
 

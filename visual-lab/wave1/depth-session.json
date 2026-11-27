@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "id": "wave1-depth-texture-light",
+  "status": "provisionally retained for visual review; no human final approval",
+  "humanDirection": {
+    "source": "User feedback following decisive pass",
+    "preferences": ["Desert should read as miles of landscape rather than a shallow rock enclosure", "Distant geometry and pre-rendered mattes explicitly authorized", "Dark cooler purplish textured framing shade and broken golden focal light", "More plausible local vegetation", "Painted grass texture patches and washed sediment/gravel in wetlands"],
+    "scope": "Artistic direction, not approval of this candidate"
+  },
+  "loaded": ["AGENTS.md", "Visual Learning Lab retained/rejected decisive-session findings", "actual approved concept and retained thumbnail images", "prototype-fast skill", "visual-review skill", "imagegen skill", "installed Next client-boundary guide", "existing field, water and ground/grass asset adapters"],
+  "baseline": "Fresh artPass=decisive captures; all prior checkpoints remain accessible",
+  "independentDiagnosis": [
+    "Oversized near rock silhouettes and insufficient intermediate scale cues compress desert depth",
+    "Sparse middle distance lacks material/geological progression toward the horizon",
+    "Wetland ground needs readable local surface structure rather than another broad pigment cloud"
+  ],
+  "cycles": [
+    {"round": 1, "hypothesis": "Open foreground framing, receding exposures, distant matte and world-space texture/light fields", "evidence": "artifacts/wave1-depth/r1-fixed", "decision": "revise", "defects": "Raised distant geometry creates a dark ledge; full grass atlas makes rows; shade too weak", "technicalRepair": "Missing newline after shader include fixed before usable render; failed compile is not aesthetic evidence"},
+    {"round": 2, "hypothesis": "Feather distant geometry, crop individual tufts and strengthen cool framing", "evidence": "artifacts/wave1-depth/r2 and horizon diagnostics", "decision": "revise", "findings": "World-space cool shade becomes readable; horizon strip persists; wetland texture still weak", "confirmedCause": "Camera-basis mapping reflected plane winding; corrected indices restore upward normals. Matte was also excessively vertically compressed."},
+    {"round": 3, "hypothesis": "Correct distant geometry/matte scale; stronger painted grass and actual fine mineral fragments", "evidence": "artifacts/wave1-depth/r3 and final", "decision": "retain core provisionally after local shadow correction", "correction": "Removed repeated cell shadow stamps with continuous overlapping soft atlas fields, bounded18–55m from encounter anchor before freeze"}
+  ],
+  "selection": {
+    "manifest": "artifacts/wave1-depth/selection.json",
+    "postHoldoutAction": "Rolled excessive violet bounce back to earlier tested cool calibration after elevated review; no new geometry, masks, texture or placement tuning",
+    "negativeEvidence": "Original frozen violet-bounce renders and source preserved; reads as purple pigment from elevation",
+    "selectedDesertRenders": "Fresh selected captures for29/41/8423 after color rollback",
+    "wetlandSelection": "Final frozen wetland captures remain selected; desert-only color rollback cannot affect their shader branch"
+  },
+  "vision": {
+    "available": true,
+    "reviewer": "root agent through actual view_image visual interpretation",
+    "independentReviewThisSession": false,
+    "inspected": ["retained concept thumbnails", "R1/R2/R3 direct hero images", "1280 horizon-isolation diagnostics", "final three-seed hero/inspection sheets", "selected desert hero/elevated images", "grass/albedo source previews"]
+  },
+  "reviews": {
+    "desert": {"betterThanPrevious": true, "goodEnoughForFinalApproval": false, "decision": "provisional", "observed": "Smaller foreground angular mass, more intermediate exposures, distant plain/tableland matte, cooler framing and golden opening give a more expansive reading", "remaining": [{"severity": "major", "defect": "Existing shrubs remain skeletal and rock surfaces overly smooth"}, {"severity": "major", "defect": "Backdrop is an anchored-sector warm-day matte, not full360-degree dynamic geography"}, {"severity": "minor", "defect": "Some grass cards still read as flat glyphs"}]},
+    "mangrove": {"betterThanPrevious": true, "goodEnoughForFinalApproval": false, "decision": "provisional", "observed": "Fine exposed stone fragments and sediment texture now read at character height; broken framing light adds local contrast", "remaining": [{"severity": "major", "defect": "Pebble highlights may be too uniformly prominent in some views"}, {"severity": "major", "defect": "Shore transition remains cleaner than concept"}, {"severity": "minor", "defect": "Artistic shade still visible as a stylized field in inspection"}]},
+    "flooded": {"betterThanPrevious": true, "goodEnoughForFinalApproval": false, "decision": "provisional", "observed": "Painted grass strokes replace the flat staging lawn and join dimensional grass silhouettes; selective golden illumination reads in the opening", "remaining": [{"severity": "major", "defect": "Existing grass fan geometry still repeats"}, {"severity": "minor", "defect": "Ground texture repetition and brighter holdout palette remain visible"}, {"severity": "minor", "defect": "Shade is an artistic approximation rather than actual offscreen foliage geometry"}]}
+  },
+  "rules": [
+    {"id": "depth-angular-hierarchy", "status": "experimentally-supported", "principle": "Reduce foreground angular dominance and populate intermediate scales before changing horizon height", "evidence": "selected before/after and seed sheets", "constraints": "Open arid encounter; not a universal rule for enclosed forest"},
+    {"id": "ground-texture-supports-geometry", "status": "experimentally-supported", "principle": "Material-scale blade masses can bridge short cover and dimensional grass", "evidence": "Flooded hero comparisons", "limits": "Reuse is a visual material, not verified local species data"},
+    {"id": "fine-washed-minerals", "status": "experimentally-supported", "principle": "Batched low mineral fragments create real directional glints missing from flat sediment", "evidence": "Mangrove hero comparisons;1889 instances in seed29", "limits": "Highlight density needs human review; not a geological observation"},
+    {"id": "textured-framing-transmission", "status": "proposed", "principle": "World-space vegetation-shaped transmission can supplement physical shadows", "evidence": "Selected cool framing views", "limits": "Bound to encounter neighborhood; pattern/physical-light approximation needs review"},
+    {"id": "violet-additive-bounce", "status": "rejected", "principle": "A purple shadow anchor is not permission for luminous purple pigment fields", "evidence": "Original final desert inspection versus selected rollback"},
+    {"id": "repeated-shadow-cells", "status": "rejected", "principle": "Rotated stamps can still expose a regular field in elevated views", "evidence": "R3 before shadow-bound correction"}
+  ],
+  "validation": {
+    "developmentSeeds": [29, 41],
+    "frozenHoldout": 8423,
+    "originalFreeze": "artifacts/wave1-depth/freeze.json",
+    "selection": "artifacts/wave1-depth/selection.json",
+    "matchedComparisons": "artifacts/wave1-depth/matched-checks.json",
+    "stagingAndShaderAudit": "artifacts/wave1-depth/verification.json",
+    "protected": "artifacts/wave1-depth/regression.json",
+    "checks": "TypeScript and10 targeted tests pass;18 matched camera pairs; existing wetland instance transforms unchanged;7 protected views pixel-identical",
+    "mobileApproved": false
+  },
+  "asset": "artifacts/wave1-depth/asset.json",
+  "ecology": "Canonical tree/species/habitat data unchanged. Added desert grasses are explicitly unnamed dry functional forms using an existing atlas; no verified local occurrence or new named species claim.",
+  "scope": {"waterShaderChanged": false, "globalPromotion": false, "committed": false, "pushed": false, "deployed": false},
+  "report": "artifacts/wave1-depth/REPORT.md"
+}

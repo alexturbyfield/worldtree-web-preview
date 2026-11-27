@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-27T00:07:22.422Z",
+  "sourceHashes": {
+    "src/lib/forest/wave2-shared.ts": "6978a5c05311a8103363631cef5674da4056e38d49a679d74d2f0e7c20663a21",
+    "src/lib/forest/wave2-boreal.ts": "abe1ad9e8e5ff083ce3f32a3a6cd19ebef2d723b225f7f91d36172684fa1db49",
+    "src/lib/forest/wave2-boreal-geometry.ts": "0be82ad55c5cda425e6c0db7fcadbfd60c85bd19ffa7b7d987157048a650c974",
+    "src/lib/forest/wave2-temperate.ts": "7904a874e0b40ca4e7b41436cb10cdc93c8047193824f73c32fc7136ed8e1d74",
+    "src/lib/forest/wave2-temperate-concept.ts": "75bb2e84facc7b10bfee6b5882fb44ea3e063afe5db29611ec7bfc0acdf3bab8",
+    "src/lib/forest/wave2-tundra.ts": "e763df7a741899ab6454551f40a6d80e69c1e30d29c2abcb0555596af506cadf",
+    "src/lib/forest/wave2-tundra-heath.ts": "32b36aab4ddf9169d91188ed139fe570ddff611e0572276f24adffc7ef83179c"
+  },
+  "holdouts": {
+    "boreal": 810951,
+    "temperate": 940218,
+    "tundra": 428445
+  },
+  "policy": "Source frozen before these new holdouts were selected. No artistic tuning after holdout reveal.",
+  "correctionRounds": 3,
+  "retained": {
+    "boreal": "C3",
+    "temperate": "C2 restored after rejecting C3, conservative fern clearance retained",
+    "tundra": "C3 technical checkpoint only"
+  }
+}

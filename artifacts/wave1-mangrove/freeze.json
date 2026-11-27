@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-26T04:16:45.803Z",
+  "hashes": {
+    "src/lib/forest/wave1-mangrove.ts": "9eaa66d2de716f412f41fe01429c5e935052d60a53e6426221c1955500df21e3",
+    "src/lib/vegetation.ts": "388467b3615d80cb7932e5bc070e61173c44fed2ef8b21e9891264d9cbf52eae"
+  },
+  "holdout": 617,
+  "training": [
+    29,
+    41
+  ],
+  "retained": "R2; selection-index correction only, no new art round",
+  "humanApproved": false,
+  "originalArtFreeze": {
+    "src/lib/forest/wave1-mangrove.ts": "f28d8f4a97943353ddb663f2138d06c67ca12e3e9c86fe1146e821643e04cd1f",
+    "src/lib/vegetation.ts": "388467b3615d80cb7932e5bc070e61173c44fed2ef8b21e9891264d9cbf52eae"
+  },
+  "holdoutNote": "617 first generated after original art-source freeze; parent reproduced after selection-index-only correction. It is revealed and may not be reused as unseen."
+}

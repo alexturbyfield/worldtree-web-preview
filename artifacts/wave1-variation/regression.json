@@ -1,0 +1,30 @@
+[
+  {
+    "name": "puget-hero",
+    "pixelIdentical": true
+  },
+  {
+    "name": "rainforest-hero",
+    "pixelIdentical": true
+  },
+  {
+    "name": "rainforest-inspection",
+    "pixelIdentical": true
+  },
+  {
+    "name": "savanna-hero",
+    "pixelIdentical": true
+  },
+  {
+    "name": "savanna-inspection",
+    "pixelIdentical": true
+  },
+  {
+    "name": "alpine-hero",
+    "pixelIdentical": true
+  },
+  {
+    "name": "alpine-inspection",
+    "pixelIdentical": true
+  }
+]

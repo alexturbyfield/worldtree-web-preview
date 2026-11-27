@@ -1,0 +1,36 @@
+{
+  "status": "proposed",
+  "references": [
+    {
+      "id": "flooded-ref-usgs-waterway",
+      "source": "https://www.usgs.gov/media/images/florida-everglades-national-park-10",
+      "license": "Public Domain, stated by USGS",
+      "image": "references/usgs-everglades.jpg",
+      "observed": "A broad, irregular water network interlocks with dense vegetation masses rather than discrete ponds.",
+      "principles": [
+        "Connected sloughs",
+        "Irregular shoreline transitions",
+        "Broad horizontal land-water masses"
+      ]
+    },
+    {
+      "id": "flooded-ref-nps-prairie",
+      "source": "https://commons.wikimedia.org/wiki/File:Sawgrass_Prairie_NPS_Photo_G_Gardner_(42295786392).jpg",
+      "license": "Public domain federal employee work; NPS G. Gardner, official NPS Flickr.",
+      "image": "references/nps-sawgrass-prairie-medium.jpg",
+      "principles": [
+        "Low horizontal horizon",
+        "Warm-cool reflected sky",
+        "Grass masses rather than individually emphasized blades"
+      ]
+    }
+  ],
+  "ecology": {
+    "ecoregion": 581,
+    "biome": 9,
+    "lat": 26.209957419,
+    "lon": -80.9383825925,
+    "trees": "No palette injected. Resolver open_groundcover supports unnamed grass/sedge matrix, not confirmed sawgrass taxon."
+  },
+  "hypothesis": "Near grass silhouettes and branching blue-gold reflected sloughs lead across quiet medium distance to a continuous low marsh horizon."
+}

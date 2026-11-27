@@ -1,0 +1,1 @@
+require('tsx/cjs');const f=require('../../src/lib/forest/wave1-fields.ts');for(const b of ['desert','mangrove','flooded'])for(const seed of ['29','41','73']){const p=f.fieldPlan(b,seed);console.log(b,seed,p);}

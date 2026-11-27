@@ -1,0 +1,10 @@
+[
+  {
+    "id": "desert",
+    "byteIdenticalToWorkstream": true
+  },
+  {
+    "id": "flooded",
+    "byteIdenticalToWorkstream": true
+  }
+]

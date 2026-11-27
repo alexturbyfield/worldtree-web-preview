@@ -1,0 +1,546 @@
+[
+  {
+    "id": "temperate",
+    "seed": "29",
+    "view": "hero",
+    "file": "artifacts/temperate-tree-polish/bark-final/temperate-29-hero.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        -3,
+        2.5,
+        30
+      ],
+      "target": [
+        -6,
+        3.4,
+        27
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 10,
+        "calls": 12,
+        "triangles": 788238,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.2999999523162842
+      },
+      {
+        "frame": 11,
+        "calls": 12,
+        "triangles": 788238,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.10000002384185791
+      },
+      {
+        "frame": 12,
+        "calls": 12,
+        "triangles": 788238,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.2999999523162842
+      }
+    ],
+    "instances": [
+      {
+        "name": "temperate-curled-leaf-litter",
+        "count": 8753
+      },
+      {
+        "name": "temperate-unnamed-fern-functional-forms",
+        "count": 260
+      },
+      {
+        "name": "temperate-embedded-moss-stone",
+        "count": 35
+      },
+      {
+        "name": "field-source-stand-impostors",
+        "count": 320
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1024,
+        "height": 1024,
+        "bytes": 4194304
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "a4c6df",
+        "intensity": 0.55,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "97b8ce",
+        "intensity": 0.16,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffe2ae",
+        "intensity": 4.1,
+        "position": [
+          -28,
+          70,
+          18
+        ],
+        "target": [
+          0,
+          1,
+          8
+        ],
+        "shadow": {
+          "intensity": 0.66,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -38,
+          "right": 38,
+          "normalBias": 0.035
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "recipe": {
+      "id": "temperate",
+      "biome": 4,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "temperate",
+        "biome": 4,
+        "seed": "29",
+        "phase": 1.894691307875228,
+        "relief": 0.62,
+        "camera": {
+          "position": [
+            0,
+            1.7147654075940282,
+            34
+          ],
+          "target": [
+            0,
+            2.1224894886788106,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.7147654075940282,
+          34
+        ],
+        "target": [
+          0,
+          2.1224894886788106,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#91aaa0"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "biome": "temperate",
+      "version": "connected-woodland-light-3",
+      "architecture": "Species-conditioned scaffold; broad spreading oak, upward beech, slender drooping birch; elliptic leaf rendering approximate",
+      "ecology": "Source regional candidates and unnamed fern/leafy functional forms, not local occurrence evidence",
+      "states": {
+        "season": "leaf-on reference",
+        "weather": "clear reference",
+        "timeOfDay": "warm upper-left directional reference state"
+      },
+      "staging": {
+        "center": [
+          0,
+          26
+        ],
+        "radius": 1.4,
+        "height": 1.8
+      },
+      "trees": 48,
+      "lighting": {
+        "shadowSpanMeters": 76,
+        "key": [
+          -28,
+          70,
+          18
+        ],
+        "target": [
+          0,
+          1,
+          8
+        ],
+        "sun": 4.1,
+        "fill": 0.16,
+        "hemisphere": 0.55,
+        "shadowStrength": 0.66,
+        "selection": "Source-group CPU candidate followed by actual fixed-energy image comparison; visual retention, not human approval"
+      }
+    },
+    "lightDiagnostics": {
+      "compiledMaterials": 2,
+      "actualSunMaterials": 2,
+      "normalDesign": "Readable C2 normals, branch-radial canopy depth occlusion bounded independently from directional orientation",
+      "artisticEffect": "Experimental upper/exterior highlights and cool interior; not human-approved"
+    },
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "temperate",
+    "seed": "29",
+    "view": "inspection",
+    "file": "artifacts/temperate-tree-polish/bark-final/temperate-29-inspection.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 15,
+        "calls": 12,
+        "triangles": 788238,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.19999998807907104
+      },
+      {
+        "frame": 16,
+        "calls": 12,
+        "triangles": 788238,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.19999998807907104
+      },
+      {
+        "frame": 17,
+        "calls": 12,
+        "triangles": 788238,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.20000004768371582
+      }
+    ],
+    "instances": [
+      {
+        "name": "temperate-curled-leaf-litter",
+        "count": 8753
+      },
+      {
+        "name": "temperate-unnamed-fern-functional-forms",
+        "count": 260
+      },
+      {
+        "name": "temperate-embedded-moss-stone",
+        "count": 35
+      },
+      {
+        "name": "field-source-stand-impostors",
+        "count": 320
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1024,
+        "height": 1024,
+        "bytes": 4194304
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "a4c6df",
+        "intensity": 0.55,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "97b8ce",
+        "intensity": 0.16,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffe2ae",
+        "intensity": 4.1,
+        "position": [
+          -28,
+          70,
+          18
+        ],
+        "target": [
+          0,
+          1,
+          8
+        ],
+        "shadow": {
+          "intensity": 0.66,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -38,
+          "right": 38,
+          "normalBias": 0.035
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "recipe": {
+      "id": "temperate",
+      "biome": 4,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "temperate",
+        "biome": 4,
+        "seed": "29",
+        "phase": 1.894691307875228,
+        "relief": 0.62,
+        "camera": {
+          "position": [
+            0,
+            1.7147654075940282,
+            34
+          ],
+          "target": [
+            0,
+            2.1224894886788106,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.7147654075940282,
+          34
+        ],
+        "target": [
+          0,
+          2.1224894886788106,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#91aaa0"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "biome": "temperate",
+      "version": "connected-woodland-light-3",
+      "architecture": "Species-conditioned scaffold; broad spreading oak, upward beech, slender drooping birch; elliptic leaf rendering approximate",
+      "ecology": "Source regional candidates and unnamed fern/leafy functional forms, not local occurrence evidence",
+      "states": {
+        "season": "leaf-on reference",
+        "weather": "clear reference",
+        "timeOfDay": "warm upper-left directional reference state"
+      },
+      "staging": {
+        "center": [
+          0,
+          26
+        ],
+        "radius": 1.4,
+        "height": 1.8
+      },
+      "trees": 48,
+      "lighting": {
+        "shadowSpanMeters": 76,
+        "key": [
+          -28,
+          70,
+          18
+        ],
+        "target": [
+          0,
+          1,
+          8
+        ],
+        "sun": 4.1,
+        "fill": 0.16,
+        "hemisphere": 0.55,
+        "shadowStrength": 0.66,
+        "selection": "Source-group CPU candidate followed by actual fixed-energy image comparison; visual retention, not human approval"
+      }
+    },
+    "lightDiagnostics": {
+      "compiledMaterials": 2,
+      "actualSunMaterials": 2,
+      "normalDesign": "Readable C2 normals, branch-radial canopy depth occlusion bounded independently from directional orientation",
+      "artisticEffect": "Experimental upper/exterior highlights and cool interior; not human-approved"
+    },
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "id": "wave2-current-batch-approval",
+  "recordedAt": "2026-11-27T05:42:12.914659+00:00",
+  "actor": "human",
+  "statement": "The batch is approved. What next",
+  "scope": "Current Wave 2 artistic batch as presented: boreal, temperate woodland and tundra; latest temperate yellow-green highlight correction retained. This records visual-baseline approval, not ecological verification or global/device approval.",
+  "status": "human-approved-artistic-baseline",
+  "deploymentAuthorized": false,
+  "globalPromotionAuthorized": false,
+  "nextBiomeImplementationAuthorized": false,
+  "previousRejectionsPreserved": true,
+  "baselinePins": [
+    {
+      "biome": "boreal",
+      "image": "artifacts/wave2-autonomous/retained/boreal-29-hero.png",
+      "sha256": "be13557ef154174ba277c7feff799bdda6f525d603fee4d1b400a1cf8121fb86"
+    },
+    {
+      "biome": "temperate",
+      "image": "artifacts/temperate-light-range/yellow-green-highlight/temperate-29-hero.png",
+      "sha256": "de0ab26f8fb025df66c9e2a7341b59dc78355baddd67aceba9c48fef3520f873"
+    },
+    {
+      "biome": "tundra",
+      "image": "artifacts/wave2-autonomous/retained/tundra-29-hero.png",
+      "sha256": "53a4e8971e3afbb9bf6fd482f7fb59b12d9470a7a89cf00099f77062a756db8d"
+    }
+  ]
+}

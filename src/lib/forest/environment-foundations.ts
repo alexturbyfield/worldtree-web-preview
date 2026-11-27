@@ -377,6 +377,7 @@ export function mountEnvironmentGround(scene:T.Scene,recipe:SceneRecipe,clearing
 }
 
 export interface AttentionSettings {
+  atmosphere?:{near:number;far:number;strength:number;color:string};
   sun?:T.DirectionalLight;
   deciduous?:boolean;
   composition?:ResolvedEncounterComposition;
@@ -389,7 +390,7 @@ export interface AttentionSettings {
 /** Shader-only grading: original pigments, geometry, atlas, seeds and lighting survive. */
 export function installTreeAttention(material:T.Material,kind:'library'|'billboards'|'wood',settings:AttentionSettings={}){
   const art=typeof location!=='undefined'&&new URLSearchParams(location.search).get('environmentArt')!=='0';
-  const uniforms={attentionAnchor:{value:settings.anchor??new T.Vector3(0,0,34)},attentionDirection:{value:settings.direction??new T.Vector3(0,0,-1)},attentionFocus:{value:settings.focalCenter??new T.Vector3()},attentionRadii:{value:settings.focalRadii??new T.Vector3(1,1,1)},attentionWeight:{value:T.MathUtils.clamp(settings.focalWeight??0,0,1)},attentionStudyDepth:{value:settings.studyDepth??-1},attentionAir:{value:new T.Color('#c5d9cc').convertLinearToSRGB()}};
+  const uniforms={attentionAnchor:{value:settings.anchor??new T.Vector3(0,0,34)},attentionDirection:{value:settings.direction??new T.Vector3(0,0,-1)},attentionFocus:{value:settings.focalCenter??new T.Vector3()},attentionRadii:{value:settings.focalRadii??new T.Vector3(1,1,1)},attentionWeight:{value:T.MathUtils.clamp(settings.focalWeight??0,0,1)},attentionStudyDepth:{value:settings.studyDepth??-1},attentionAir:{value:new T.Color(settings.atmosphere?.color??'#c5d9cc').convertLinearToSRGB()}};
   const composition=settings.composition;
   const direct=!!settings.sun;
   const sunUniforms={actualSunDirection:{value:new T.Vector3(-.6,.85,.55).normalize()},actualSunColor:{value:new T.Color()},actualSunPower:{value:1}};
@@ -459,14 +460,14 @@ export function installTreeAttention(material:T.Material,kind:'library'|'billboa
       // Match Three's Fog: camera-forward depth, smoothstep, then blend in output colour space.
       shader.fragmentShader=shader.fragmentShader.replace('#include <colorspace_fragment>',`#include <colorspace_fragment>
         float atmosphereDepth=attentionStudyDepth>=0.?attentionStudyDepth:max(0.,-(viewMatrix*vec4(attentionWorld,1.)).z);
-        gl_FragColor.rgb=mix(gl_FragColor.rgb,attentionAir,smoothstep(${art?'76.,175.':'42.,145.'},atmosphereDepth)*(1.-attentionFocal()*.65));
+        gl_FragColor.rgb=mix(gl_FragColor.rgb,attentionAir,smoothstep(${settings.atmosphere?`${settings.atmosphere.near.toFixed(3)},${settings.atmosphere.far.toFixed(3)}`:art?'76.,175.':'42.,145.'},atmosphereDepth)${settings.atmosphere?'*'+settings.atmosphere.strength.toFixed(4):''}*(1.-attentionFocal()*.65));
       `);
     }else{
       shader.fragmentShader=shader.fragmentShader.replace('#include <opaque_fragment>','outgoingLight=attentionGrade(outgoingLight);\n#include <opaque_fragment>');
       shader.fragmentShader=shader.fragmentShader.replace('#include <fog_fragment>',T.ShaderChunk.fog_fragment.replaceAll('vFogDepth','(attentionStudyDepth>=0.?attentionStudyDepth:vFogDepth)').replace('fogColor, fogFactor','fogColor, fogFactor*(1.-attentionFocal()*.65)'));
     }
   };
-  material.customProgramCacheKey=()=>cache()+`|attention-v2-${kind}-${direct}`;material.needsUpdate=true;return uniforms;
+  material.customProgramCacheKey=()=>cache()+`|attention-v2-${kind}-${direct}`+(settings.atmosphere?'|'+JSON.stringify(settings.atmosphere):'');material.needsUpdate=true;return uniforms;
 }
 
 export function sceneAttention(recipe:SceneRecipe,options:EnvironmentOptions={}):AttentionSettings{

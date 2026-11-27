@@ -1,0 +1,1644 @@
+{
+  "frames": [
+    {
+      "biome": "desert",
+      "seed": "29",
+      "view": "hero",
+      "file": "artifacts/wave1-rebuild/desert-29-hero.png",
+      "camera": {
+        "position": [
+          -27,
+          3.036333874529917,
+          -36
+        ],
+        "target": [
+          22.49747468305833,
+          2.1363338745299174,
+          13.497474683058321
+        ]
+      },
+      "wave1": {
+        "id": "desert",
+        "biome": 13,
+        "version": "connected-field-structure-1",
+        "plan": {
+          "biome": "desert",
+          "seed": "29",
+          "eye": [
+            -27,
+            3.036333874529917,
+            -36
+          ],
+          "target": [
+            22.49747468305833,
+            2.1363338745299174,
+            13.497474683058321
+          ],
+          "heading": 2.356194490192345,
+          "stagingClearance": 1.255546546258769
+        },
+        "trees": 0,
+        "instances": [
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-correlated-low-vegetation",
+            "count": 180
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        }
+      },
+      "samples": [
+        {
+          "cpuSubmissionMs": 0.3999999761581421,
+          "frame": 7,
+          "calls": 7,
+          "triangles": 469088,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.20000001788139343,
+          "frame": 8,
+          "calls": 7,
+          "triangles": 469088,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.19999998807907104,
+          "frame": 9,
+          "calls": 7,
+          "triangles": 469088,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 4,
+      "geometryObjects": 7,
+      "errors": []
+    },
+    {
+      "biome": "desert",
+      "seed": "29",
+      "view": "inspection",
+      "file": "artifacts/wave1-rebuild/desert-29-inspection.png",
+      "camera": {
+        "position": [
+          38,
+          48.036333874529916,
+          29
+        ],
+        "target": [
+          -2.2512626584708357,
+          0,
+          -11.25126265847084
+        ]
+      },
+      "wave1": {
+        "id": "desert",
+        "biome": 13,
+        "version": "connected-field-structure-1",
+        "plan": {
+          "biome": "desert",
+          "seed": "29",
+          "eye": [
+            -27,
+            3.036333874529917,
+            -36
+          ],
+          "target": [
+            22.49747468305833,
+            2.1363338745299174,
+            13.497474683058321
+          ],
+          "heading": 2.356194490192345,
+          "stagingClearance": 1.255546546258769
+        },
+        "trees": 0,
+        "instances": [
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-correlated-low-vegetation",
+            "count": 180
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        }
+      },
+      "samples": [
+        {
+          "cpuSubmissionMs": 0.19999998807907104,
+          "frame": 12,
+          "calls": 7,
+          "triangles": 469088,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.09999999403953552,
+          "frame": 13,
+          "calls": 7,
+          "triangles": 469088,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.20000001788139343,
+          "frame": 14,
+          "calls": 7,
+          "triangles": 469088,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 4,
+      "geometryObjects": 7,
+      "errors": []
+    },
+    {
+      "biome": "mangrove",
+      "seed": "29",
+      "view": "hero",
+      "file": "artifacts/wave1-rebuild/mangrove-29-hero.png",
+      "camera": {
+        "position": [
+          -45,
+          2.0066225841158225,
+          27
+        ],
+        "target": [
+          -45,
+          1.1066225841158226,
+          -43
+        ]
+      },
+      "wave1": {
+        "id": "mangrove",
+        "biome": 14,
+        "version": "connected-field-structure-1",
+        "plan": {
+          "biome": "mangrove",
+          "seed": "29",
+          "eye": [
+            -45,
+            2.0066225841158225,
+            27
+          ],
+          "target": [
+            -45,
+            1.1066225841158226,
+            -43
+          ],
+          "heading": 0,
+          "stagingClearance": 0.25116772421656514
+        },
+        "trees": 95,
+        "instances": [
+          {
+            "name": "field-correlated-low-vegetation",
+            "count": 1363
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation."
+      },
+      "impostors": {
+        "count": 650,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "cpuSubmissionMs": 0.5999999940395355,
+          "frame": 18,
+          "calls": 15,
+          "triangles": 2813502,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.5999999940395355,
+          "frame": 20,
+          "calls": 15,
+          "triangles": 2813502,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.5,
+          "frame": 22,
+          "calls": 15,
+          "triangles": 2813502,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 10,
+      "geometryObjects": 8,
+      "errors": []
+    },
+    {
+      "biome": "mangrove",
+      "seed": "29",
+      "view": "inspection",
+      "file": "artifacts/wave1-rebuild/mangrove-29-inspection.png",
+      "camera": {
+        "position": [
+          20,
+          47.006622584115824,
+          92
+        ],
+        "target": [
+          -45,
+          0,
+          -8
+        ]
+      },
+      "wave1": {
+        "id": "mangrove",
+        "biome": 14,
+        "version": "connected-field-structure-1",
+        "plan": {
+          "biome": "mangrove",
+          "seed": "29",
+          "eye": [
+            -45,
+            2.0066225841158225,
+            27
+          ],
+          "target": [
+            -45,
+            1.1066225841158226,
+            -43
+          ],
+          "heading": 0,
+          "stagingClearance": 0.25116772421656514
+        },
+        "trees": 95,
+        "instances": [
+          {
+            "name": "field-correlated-low-vegetation",
+            "count": 1363
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation."
+      },
+      "impostors": {
+        "count": 650,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "cpuSubmissionMs": 1.300000011920929,
+          "frame": 28,
+          "calls": 15,
+          "triangles": 2813502,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 1,
+          "frame": 30,
+          "calls": 15,
+          "triangles": 2813502,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.5999999940395355,
+          "frame": 32,
+          "calls": 15,
+          "triangles": 2813502,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 10,
+      "geometryObjects": 8,
+      "errors": []
+    },
+    {
+      "biome": "flooded",
+      "seed": "29",
+      "view": "hero",
+      "file": "artifacts/wave1-rebuild/flooded-29-hero.png",
+      "camera": {
+        "position": [
+          -9,
+          2.2915634741192648,
+          -9
+        ],
+        "target": [
+          -8.999999999999991,
+          1.3915634741192648,
+          61
+        ]
+      },
+      "wave1": {
+        "id": "flooded",
+        "biome": 9,
+        "version": "connected-field-structure-1",
+        "plan": {
+          "biome": "flooded",
+          "seed": "29",
+          "eye": [
+            -9,
+            2.2915634741192648,
+            -9
+          ],
+          "target": [
+            -8.999999999999991,
+            1.3915634741192648,
+            61
+          ],
+          "heading": 3.141592653589793,
+          "stagingClearance": 0.5435467410289448
+        },
+        "trees": 24,
+        "instances": [
+          {
+            "name": "field-correlated-low-vegetation",
+            "count": 9919
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation."
+      },
+      "impostors": {
+        "count": 100,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "cpuSubmissionMs": 0.5999999940395355,
+          "frame": 18,
+          "calls": 15,
+          "triangles": 2737490,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.5,
+          "frame": 20,
+          "calls": 15,
+          "triangles": 2737490,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.5999999940395355,
+          "frame": 22,
+          "calls": 15,
+          "triangles": 2737490,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 10,
+      "geometryObjects": 8,
+      "errors": []
+    },
+    {
+      "biome": "flooded",
+      "seed": "29",
+      "view": "inspection",
+      "file": "artifacts/wave1-rebuild/flooded-29-inspection.png",
+      "camera": {
+        "position": [
+          56,
+          47.291563474119265,
+          56
+        ],
+        "target": [
+          -8.999999999999996,
+          0,
+          26
+        ]
+      },
+      "wave1": {
+        "id": "flooded",
+        "biome": 9,
+        "version": "connected-field-structure-1",
+        "plan": {
+          "biome": "flooded",
+          "seed": "29",
+          "eye": [
+            -9,
+            2.2915634741192648,
+            -9
+          ],
+          "target": [
+            -8.999999999999991,
+            1.3915634741192648,
+            61
+          ],
+          "heading": 3.141592653589793,
+          "stagingClearance": 0.5435467410289448
+        },
+        "trees": 24,
+        "instances": [
+          {
+            "name": "field-correlated-low-vegetation",
+            "count": 9919
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation."
+      },
+      "impostors": {
+        "count": 100,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "cpuSubmissionMs": 0.5999999940395355,
+          "frame": 28,
+          "calls": 15,
+          "triangles": 2737490,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.5,
+          "frame": 30,
+          "calls": 15,
+          "triangles": 2737490,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.5,
+          "frame": 32,
+          "calls": 15,
+          "triangles": 2737490,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 10,
+      "geometryObjects": 8,
+      "errors": []
+    },
+    {
+      "biome": "desert",
+      "seed": "41",
+      "view": "hero",
+      "file": "artifacts/wave1-rebuild/desert-41-hero.png",
+      "camera": {
+        "position": [
+          -63,
+          3.3680408437594105,
+          -81
+        ],
+        "target": [
+          -112.49747468305833,
+          2.46804084375941,
+          -130.49747468305833
+        ]
+      },
+      "wave1": {
+        "id": "desert",
+        "biome": 13,
+        "version": "connected-field-structure-1",
+        "plan": {
+          "biome": "desert",
+          "seed": "41",
+          "eye": [
+            -63,
+            3.3680408437594105,
+            -81
+          ],
+          "target": [
+            -112.49747468305833,
+            2.46804084375941,
+            -130.49747468305833
+          ],
+          "heading": 5.497787143782138,
+          "stagingClearance": 1.5993552972317373
+        },
+        "trees": 0,
+        "instances": [
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-correlated-low-vegetation",
+            "count": 180
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        }
+      },
+      "samples": [
+        {
+          "cpuSubmissionMs": 0.19999998807907104,
+          "frame": 7,
+          "calls": 7,
+          "triangles": 469088,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.30000001192092896,
+          "frame": 8,
+          "calls": 7,
+          "triangles": 469088,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.19999998807907104,
+          "frame": 9,
+          "calls": 7,
+          "triangles": 469088,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 4,
+      "geometryObjects": 7,
+      "errors": []
+    },
+    {
+      "biome": "desert",
+      "seed": "41",
+      "view": "inspection",
+      "file": "artifacts/wave1-rebuild/desert-41-inspection.png",
+      "camera": {
+        "position": [
+          2,
+          48.36804084375941,
+          -16
+        ],
+        "target": [
+          -87.74873734152916,
+          0,
+          -105.74873734152916
+        ]
+      },
+      "wave1": {
+        "id": "desert",
+        "biome": 13,
+        "version": "connected-field-structure-1",
+        "plan": {
+          "biome": "desert",
+          "seed": "41",
+          "eye": [
+            -63,
+            3.3680408437594105,
+            -81
+          ],
+          "target": [
+            -112.49747468305833,
+            2.46804084375941,
+            -130.49747468305833
+          ],
+          "heading": 5.497787143782138,
+          "stagingClearance": 1.5993552972317373
+        },
+        "trees": 0,
+        "instances": [
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-correlated-low-vegetation",
+            "count": 180
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        }
+      },
+      "samples": [
+        {
+          "cpuSubmissionMs": 0.19999998807907104,
+          "frame": 12,
+          "calls": 7,
+          "triangles": 469088,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.10000002384185791,
+          "frame": 13,
+          "calls": 7,
+          "triangles": 469088,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.19999998807907104,
+          "frame": 14,
+          "calls": 7,
+          "triangles": 469088,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 4,
+      "geometryObjects": 7,
+      "errors": []
+    },
+    {
+      "biome": "mangrove",
+      "seed": "41",
+      "view": "hero",
+      "file": "artifacts/wave1-rebuild/mangrove-41-hero.png",
+      "camera": {
+        "position": [
+          -45,
+          2.375178054205377,
+          -45
+        ],
+        "target": [
+          -45,
+          1.4751780542053772,
+          -115
+        ]
+      },
+      "wave1": {
+        "id": "mangrove",
+        "biome": 14,
+        "version": "connected-field-structure-1",
+        "plan": {
+          "biome": "mangrove",
+          "seed": "41",
+          "eye": [
+            -45,
+            2.375178054205377,
+            -45
+          ],
+          "target": [
+            -45,
+            1.4751780542053772,
+            -115
+          ],
+          "heading": 0,
+          "stagingClearance": 0.5074915875722436
+        },
+        "trees": 95,
+        "instances": [
+          {
+            "name": "field-correlated-low-vegetation",
+            "count": 1142
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation."
+      },
+      "impostors": {
+        "count": 650,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "cpuSubmissionMs": 0.5999999940395355,
+          "frame": 18,
+          "calls": 15,
+          "triangles": 2767534,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.5,
+          "frame": 20,
+          "calls": 15,
+          "triangles": 2767534,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.5999999940395355,
+          "frame": 22,
+          "calls": 15,
+          "triangles": 2767534,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 10,
+      "geometryObjects": 8,
+      "errors": []
+    },
+    {
+      "biome": "mangrove",
+      "seed": "41",
+      "view": "inspection",
+      "file": "artifacts/wave1-rebuild/mangrove-41-inspection.png",
+      "camera": {
+        "position": [
+          20,
+          47.37517805420538,
+          20
+        ],
+        "target": [
+          -45,
+          0,
+          -80
+        ]
+      },
+      "wave1": {
+        "id": "mangrove",
+        "biome": 14,
+        "version": "connected-field-structure-1",
+        "plan": {
+          "biome": "mangrove",
+          "seed": "41",
+          "eye": [
+            -45,
+            2.375178054205377,
+            -45
+          ],
+          "target": [
+            -45,
+            1.4751780542053772,
+            -115
+          ],
+          "heading": 0,
+          "stagingClearance": 0.5074915875722436
+        },
+        "trees": 95,
+        "instances": [
+          {
+            "name": "field-correlated-low-vegetation",
+            "count": 1142
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation."
+      },
+      "impostors": {
+        "count": 650,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "cpuSubmissionMs": 0.9000000059604645,
+          "frame": 28,
+          "calls": 15,
+          "triangles": 2767534,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.699999988079071,
+          "frame": 30,
+          "calls": 15,
+          "triangles": 2767534,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.800000011920929,
+          "frame": 32,
+          "calls": 15,
+          "triangles": 2767534,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 10,
+      "geometryObjects": 8,
+      "errors": []
+    },
+    {
+      "biome": "flooded",
+      "seed": "41",
+      "view": "hero",
+      "file": "artifacts/wave1-rebuild/flooded-41-hero.png",
+      "camera": {
+        "position": [
+          -63,
+          2.0618703732550436,
+          -81
+        ],
+        "target": [
+          -112.49747468305833,
+          1.1618703732550437,
+          -130.49747468305833
+        ]
+      },
+      "wave1": {
+        "id": "flooded",
+        "biome": 9,
+        "version": "connected-field-structure-1",
+        "plan": {
+          "biome": "flooded",
+          "seed": "41",
+          "eye": [
+            -63,
+            2.0618703732550436,
+            -81
+          ],
+          "target": [
+            -112.49747468305833,
+            1.1618703732550437,
+            -130.49747468305833
+          ],
+          "heading": 5.497787143782138,
+          "stagingClearance": 0.3137120384697418
+        },
+        "trees": 24,
+        "instances": [
+          {
+            "name": "field-correlated-low-vegetation",
+            "count": 10500
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation."
+      },
+      "impostors": {
+        "count": 100,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "cpuSubmissionMs": 0.7000000178813934,
+          "frame": 18,
+          "calls": 15,
+          "triangles": 2858338,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.5,
+          "frame": 20,
+          "calls": 15,
+          "triangles": 2858338,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.5999999940395355,
+          "frame": 22,
+          "calls": 15,
+          "triangles": 2858338,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 10,
+      "geometryObjects": 8,
+      "errors": []
+    },
+    {
+      "biome": "flooded",
+      "seed": "41",
+      "view": "inspection",
+      "file": "artifacts/wave1-rebuild/flooded-41-inspection.png",
+      "camera": {
+        "position": [
+          2,
+          47.06187037325505,
+          -16
+        ],
+        "target": [
+          -87.74873734152916,
+          0,
+          -105.74873734152916
+        ]
+      },
+      "wave1": {
+        "id": "flooded",
+        "biome": 9,
+        "version": "connected-field-structure-1",
+        "plan": {
+          "biome": "flooded",
+          "seed": "41",
+          "eye": [
+            -63,
+            2.0618703732550436,
+            -81
+          ],
+          "target": [
+            -112.49747468305833,
+            1.1618703732550437,
+            -130.49747468305833
+          ],
+          "heading": 5.497787143782138,
+          "stagingClearance": 0.3137120384697418
+        },
+        "trees": 24,
+        "instances": [
+          {
+            "name": "field-correlated-low-vegetation",
+            "count": 10500
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation."
+      },
+      "impostors": {
+        "count": 100,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "cpuSubmissionMs": 0.5,
+          "frame": 28,
+          "calls": 15,
+          "triangles": 2858338,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.6000000238418579,
+          "frame": 30,
+          "calls": 15,
+          "triangles": 2858338,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.5,
+          "frame": 32,
+          "calls": 15,
+          "triangles": 2858338,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 10,
+      "geometryObjects": 8,
+      "errors": []
+    },
+    {
+      "biome": "desert",
+      "seed": "997",
+      "view": "hero",
+      "file": "artifacts/wave1-rebuild/desert-997-hero.png",
+      "camera": {
+        "position": [
+          -72,
+          3.4318535869363087,
+          -72
+        ],
+        "target": [
+          -22.50252531694167,
+          2.531853586936309,
+          -22.50252531694168
+        ]
+      },
+      "wave1": {
+        "id": "desert",
+        "biome": 13,
+        "version": "connected-field-structure-1",
+        "plan": {
+          "biome": "desert",
+          "seed": "997",
+          "eye": [
+            -72,
+            3.4318535869363087,
+            -72
+          ],
+          "target": [
+            -22.50252531694167,
+            2.531853586936309,
+            -22.50252531694168
+          ],
+          "heading": 2.356194490192345,
+          "stagingClearance": 1.7142947844909648
+        },
+        "trees": 0,
+        "instances": [
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-correlated-low-vegetation",
+            "count": 180
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        }
+      },
+      "samples": [
+        {
+          "cpuSubmissionMs": 0.19999998807907104,
+          "frame": 7,
+          "calls": 7,
+          "triangles": 469088,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.19999998807907104,
+          "frame": 8,
+          "calls": 7,
+          "triangles": 469088,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.30000001192092896,
+          "frame": 9,
+          "calls": 7,
+          "triangles": 469088,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 4,
+      "geometryObjects": 7,
+      "errors": []
+    },
+    {
+      "biome": "desert",
+      "seed": "997",
+      "view": "inspection",
+      "file": "artifacts/wave1-rebuild/desert-997-inspection.png",
+      "camera": {
+        "position": [
+          -7,
+          48.431853586936306,
+          -7
+        ],
+        "target": [
+          -47.251262658470836,
+          0,
+          -47.251262658470836
+        ]
+      },
+      "wave1": {
+        "id": "desert",
+        "biome": 13,
+        "version": "connected-field-structure-1",
+        "plan": {
+          "biome": "desert",
+          "seed": "997",
+          "eye": [
+            -72,
+            3.4318535869363087,
+            -72
+          ],
+          "target": [
+            -22.50252531694167,
+            2.531853586936309,
+            -22.50252531694168
+          ],
+          "heading": 2.356194490192345,
+          "stagingClearance": 1.7142947844909648
+        },
+        "trees": 0,
+        "instances": [
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-correlated-low-vegetation",
+            "count": 180
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        }
+      },
+      "samples": [
+        {
+          "cpuSubmissionMs": 0.09999999403953552,
+          "frame": 12,
+          "calls": 7,
+          "triangles": 469088,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.20000001788139343,
+          "frame": 13,
+          "calls": 7,
+          "triangles": 469088,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.19999998807907104,
+          "frame": 14,
+          "calls": 7,
+          "triangles": 469088,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 4,
+      "geometryObjects": 7,
+      "errors": []
+    },
+    {
+      "biome": "mangrove",
+      "seed": "997",
+      "view": "hero",
+      "file": "artifacts/wave1-rebuild/mangrove-997-hero.png",
+      "camera": {
+        "position": [
+          54,
+          2.248302075056043,
+          36
+        ],
+        "target": [
+          124,
+          1.3483020750560428,
+          35.99999999999999
+        ]
+      },
+      "wave1": {
+        "id": "mangrove",
+        "biome": 14,
+        "version": "connected-field-structure-1",
+        "plan": {
+          "biome": "mangrove",
+          "seed": "997",
+          "eye": [
+            54,
+            2.248302075056043,
+            36
+          ],
+          "target": [
+            124,
+            1.3483020750560428,
+            35.99999999999999
+          ],
+          "heading": 1.5707963267948966,
+          "stagingClearance": 0.48870599519782426
+        },
+        "trees": 95,
+        "instances": [
+          {
+            "name": "field-correlated-low-vegetation",
+            "count": 1494
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation."
+      },
+      "impostors": {
+        "count": 650,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "cpuSubmissionMs": 0.6000000238418579,
+          "frame": 18,
+          "calls": 15,
+          "triangles": 2840750,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.5,
+          "frame": 20,
+          "calls": 15,
+          "triangles": 2840750,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.5,
+          "frame": 22,
+          "calls": 15,
+          "triangles": 2840750,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 10,
+      "geometryObjects": 8,
+      "errors": []
+    },
+    {
+      "biome": "mangrove",
+      "seed": "997",
+      "view": "inspection",
+      "file": "artifacts/wave1-rebuild/mangrove-997-inspection.png",
+      "camera": {
+        "position": [
+          119,
+          47.248302075056046,
+          101
+        ],
+        "target": [
+          89,
+          0,
+          36
+        ]
+      },
+      "wave1": {
+        "id": "mangrove",
+        "biome": 14,
+        "version": "connected-field-structure-1",
+        "plan": {
+          "biome": "mangrove",
+          "seed": "997",
+          "eye": [
+            54,
+            2.248302075056043,
+            36
+          ],
+          "target": [
+            124,
+            1.3483020750560428,
+            35.99999999999999
+          ],
+          "heading": 1.5707963267948966,
+          "stagingClearance": 0.48870599519782426
+        },
+        "trees": 95,
+        "instances": [
+          {
+            "name": "field-correlated-low-vegetation",
+            "count": 1494
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation."
+      },
+      "impostors": {
+        "count": 650,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "cpuSubmissionMs": 0.6000000238418579,
+          "frame": 28,
+          "calls": 15,
+          "triangles": 2840750,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.5,
+          "frame": 30,
+          "calls": 15,
+          "triangles": 2840750,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.5,
+          "frame": 32,
+          "calls": 15,
+          "triangles": 2840750,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 10,
+      "geometryObjects": 8,
+      "errors": []
+    },
+    {
+      "biome": "flooded",
+      "seed": "997",
+      "view": "hero",
+      "file": "artifacts/wave1-rebuild/flooded-997-hero.png",
+      "camera": {
+        "position": [
+          -45,
+          1.9511016132318988,
+          36
+        ],
+        "target": [
+          -94.49747468305833,
+          1.0511016132318989,
+          -13.497474683058314
+        ]
+      },
+      "wave1": {
+        "id": "flooded",
+        "biome": 9,
+        "version": "connected-field-structure-1",
+        "plan": {
+          "biome": "flooded",
+          "seed": "997",
+          "eye": [
+            -45,
+            1.9511016132318988,
+            36
+          ],
+          "target": [
+            -94.49747468305833,
+            1.0511016132318989,
+            -13.497474683058314
+          ],
+          "heading": 5.497787143782138,
+          "stagingClearance": 0.25476839244633537
+        },
+        "trees": 24,
+        "instances": [
+          {
+            "name": "field-correlated-low-vegetation",
+            "count": 10500
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation."
+      },
+      "impostors": {
+        "count": 100,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "cpuSubmissionMs": 0.5999999940395355,
+          "frame": 18,
+          "calls": 15,
+          "triangles": 2858338,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.5999999940395355,
+          "frame": 20,
+          "calls": 15,
+          "triangles": 2858338,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.5,
+          "frame": 22,
+          "calls": 15,
+          "triangles": 2858338,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 10,
+      "geometryObjects": 8,
+      "errors": []
+    },
+    {
+      "biome": "flooded",
+      "seed": "997",
+      "view": "inspection",
+      "file": "artifacts/wave1-rebuild/flooded-997-inspection.png",
+      "camera": {
+        "position": [
+          20,
+          46.9511016132319,
+          101
+        ],
+        "target": [
+          -69.74873734152916,
+          0,
+          11.251262658470843
+        ]
+      },
+      "wave1": {
+        "id": "flooded",
+        "biome": 9,
+        "version": "connected-field-structure-1",
+        "plan": {
+          "biome": "flooded",
+          "seed": "997",
+          "eye": [
+            -45,
+            1.9511016132318988,
+            36
+          ],
+          "target": [
+            -94.49747468305833,
+            1.0511016132318989,
+            -13.497474683058314
+          ],
+          "heading": 5.497787143782138,
+          "stagingClearance": 0.25476839244633537
+        },
+        "trees": 24,
+        "instances": [
+          {
+            "name": "field-correlated-low-vegetation",
+            "count": 10500
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation."
+      },
+      "impostors": {
+        "count": 100,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "cpuSubmissionMs": 0.5999999940395355,
+          "frame": 28,
+          "calls": 15,
+          "triangles": 2858338,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.5999999940395355,
+          "frame": 30,
+          "calls": 15,
+          "triangles": 2858338,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "cpuSubmissionMs": 0.5,
+          "frame": 32,
+          "calls": 15,
+          "triangles": 2858338,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 10,
+      "geometryObjects": 8,
+      "errors": []
+    }
+  ],
+  "holdout": "997 frozen before generation; no tuning afterward",
+  "counterMethod": "renderer.info.autoReset=false, warm steady-state sum of all nested reflection passes; CPU submissions are not GPU/mobile frame timings"
+}

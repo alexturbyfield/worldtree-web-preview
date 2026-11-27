@@ -1,0 +1,7 @@
+import * as T from 'three';
+import type {SceneRecipe} from './recipe';
+import {makeExpansionPlan,composeExpansionForest,mountExpansionBase,mountExpansionDressing,type ExpansionPalette} from './wave2-shared';
+const palette:ExpansionPalette={ground:['#4e3f2c','#806a42','#b8a86f'],soil:'#9c7952',air:'#a8b9a4',sun:'#ffe0a3',foliage:['#2c4935','#65783e','#c3bc65'],texture:'/assets/puget-v1/forest-floor.png'};
+const plan=(r:SceneRecipe)=>makeExpansionPlan('temperate',4,r.seed,1.1);
+export const temperateStudy={id:'temperate',biome:4,compose:(r:SceneRecipe)=>composeExpansionForest(r,plan(r),'temperate'),camera:(r:SceneRecipe)=>plan(r).camera,mount:(s:T.Scene,r:SceneRecipe,sun:T.DirectionalLight,fill:T.DirectionalLight)=>{const p=plan(r),base=mountExpansionBase(s,r,p,sun,fill,palette),floor=mountExpansionDressing(s,p,palette,'forest',false,base.load);base.finish();return()=>{floor();base.dispose();};}};
+

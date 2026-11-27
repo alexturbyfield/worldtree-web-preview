@@ -1,0 +1,2318 @@
+{
+  "auditDate": "2026-11-26T20:22:17.806Z",
+  "categories": [
+    {
+      "biomeId": 1,
+      "label": "Tropical moist forests",
+      "sourceLabel": "Tropical & Subtropical Moist Broadleaf Forests",
+      "ecoregions": 230,
+      "realms": [
+        "Australasia",
+        "Afrotropic",
+        "Neotropic",
+        "Indomalayan",
+        "Oceania",
+        "Palearctic"
+      ],
+      "approxDisplayAreaKm2": 19539930
+    },
+    {
+      "biomeId": 2,
+      "label": "Tropical dry forests",
+      "sourceLabel": "Tropical & Subtropical Dry Broadleaf Forests",
+      "ecoregions": 56,
+      "realms": [
+        "Neotropic",
+        "Afrotropic",
+        "Indomalayan",
+        "Oceania",
+        "Australasia",
+        "Nearctic"
+      ],
+      "approxDisplayAreaKm2": 3881476
+    },
+    {
+      "biomeId": 3,
+      "label": "Tropical conifer forests",
+      "sourceLabel": "Tropical & Subtropical Coniferous Forests",
+      "ecoregions": 15,
+      "realms": [
+        "Nearctic",
+        "Neotropic",
+        "Indomalayan"
+      ],
+      "approxDisplayAreaKm2": 670090
+    },
+    {
+      "biomeId": 4,
+      "label": "Temperate broadleaf forests",
+      "sourceLabel": "Temperate Broadleaf & Mixed Forests",
+      "ecoregions": 83,
+      "realms": [
+        "Nearctic",
+        "Palearctic",
+        "Australasia",
+        "Indomalayan",
+        "Neotropic"
+      ],
+      "approxDisplayAreaKm2": 12541122
+    },
+    {
+      "biomeId": 5,
+      "label": "Temperate conifer forests",
+      "sourceLabel": "Temperate Conifer Forests",
+      "ecoregions": 47,
+      "realms": [
+        "Nearctic",
+        "Palearctic",
+        "Indomalayan"
+      ],
+      "approxDisplayAreaKm2": 3742327
+    },
+    {
+      "biomeId": 6,
+      "label": "Boreal forests / taiga",
+      "sourceLabel": "Boreal Forests/Taiga",
+      "ecoregions": 26,
+      "realms": [
+        "Nearctic",
+        "Palearctic"
+      ],
+      "approxDisplayAreaKm2": 15319426
+    },
+    {
+      "biomeId": 7,
+      "label": "Tropical grasslands & savannas",
+      "sourceLabel": "Tropical & Subtropical Grasslands, Savannas & Shrublands",
+      "ecoregions": 58,
+      "realms": [
+        "Afrotropic",
+        "Australasia",
+        "Neotropic",
+        "Oceania",
+        "Indomalayan",
+        "Nearctic"
+      ],
+      "approxDisplayAreaKm2": 21393687
+    },
+    {
+      "biomeId": 8,
+      "label": "Temperate grasslands",
+      "sourceLabel": "Temperate Grasslands, Savannas & Shrublands",
+      "ecoregions": 48,
+      "realms": [
+        "Palearctic",
+        "Afrotropic",
+        "Nearctic",
+        "Australasia",
+        "Neotropic"
+      ],
+      "approxDisplayAreaKm2": 10571628
+    },
+    {
+      "biomeId": 9,
+      "label": "Flooded grasslands",
+      "sourceLabel": "Flooded Grasslands & Savannas",
+      "ecoregions": 25,
+      "realms": [
+        "Palearctic",
+        "Neotropic",
+        "Afrotropic",
+        "Indomalayan"
+      ],
+      "approxDisplayAreaKm2": 1149716
+    },
+    {
+      "biomeId": 10,
+      "label": "Montane grasslands",
+      "sourceLabel": "Montane Grasslands & Shrublands",
+      "ecoregions": 46,
+      "realms": [
+        "Palearctic",
+        "Afrotropic",
+        "Australasia",
+        "Neotropic",
+        "Indomalayan"
+      ],
+      "approxDisplayAreaKm2": 4865869
+    },
+    {
+      "biomeId": 11,
+      "label": "Tundra",
+      "sourceLabel": "Tundra",
+      "ecoregions": 51,
+      "realms": [
+        "Antarctica",
+        "Nearctic",
+        "Australasia",
+        "Palearctic"
+      ],
+      "approxDisplayAreaKm2": 8440405
+    },
+    {
+      "biomeId": 12,
+      "label": "Mediterranean woodland",
+      "sourceLabel": "Mediterranean Forests, Woodlands & Scrub",
+      "ecoregions": 40,
+      "realms": [
+        "Palearctic",
+        "Afrotropic",
+        "Nearctic",
+        "Neotropic",
+        "Australasia"
+      ],
+      "approxDisplayAreaKm2": 3293822
+    },
+    {
+      "biomeId": 13,
+      "label": "Deserts & xeric shrublands",
+      "sourceLabel": "Deserts & Xeric Shrublands",
+      "ecoregions": 102,
+      "realms": [
+        "Palearctic",
+        "Afrotropic",
+        "Neotropic",
+        "Nearctic",
+        "Australasia",
+        "Indomalayan"
+      ],
+      "approxDisplayAreaKm2": 26336122
+    },
+    {
+      "biomeId": 14,
+      "label": "Mangroves",
+      "sourceLabel": "Mangroves",
+      "ecoregions": 19,
+      "realms": [
+        "Neotropic",
+        "Afrotropic",
+        "Indomalayan",
+        "Australasia"
+      ],
+      "approxDisplayAreaKm2": 299948
+    }
+  ],
+  "specials": [
+    {
+      "id": 0,
+      "name": "Rock and Ice",
+      "biome": "N/A",
+      "biomeId": 11,
+      "realm": "N/A",
+      "auditPoint": {
+        "lat": -76.54787594049992,
+        "lon": 65.57543204822493
+      }
+    }
+  ],
+  "totals": {
+    "sourceFeatures": 847,
+    "terrestrialEcoregions": 846,
+    "liveTaxa": 402,
+    "acceptedTaxa": 402,
+    "verifiedAssociations": 0,
+    "exactVisualMappings": 25,
+    "fallbackVisualMappings": 377,
+    "treePresets": 26,
+    "studioSpeciesDesigns": 20,
+    "approxDisplayAreaKm2": 132045568,
+    "emptyDisplayFeatures": 12
+  },
+  "areaCaveat": "Approximate spherical area from simplified display polygons; skips empty geometry. Not scientific biome area, present land cover or validated habitat coverage. Counts are not area.",
+  "sources": [
+    "src/lib/geography.ts",
+    "data/global/ecoregions.json",
+    "public/data/resolve-2017/display.geojson",
+    "public/data/resolve-2017/tiles",
+    "data/global/taxa.json",
+    "data/global/ecoregion-associations.json",
+    "src/lib/vegetation.ts",
+    "src/lib/forest/presets.ts",
+    "src/lib/studio/species-v1.ts"
+  ],
+  "locations": [
+    {
+      "id": "puget",
+      "lat": 47.6062,
+      "lon": -122.3321,
+      "habitat": "forest",
+      "tile": "5-13",
+      "geography": {
+        "ECO_ID": 364,
+        "ECO_NAME": "Puget lowland forests",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Temperate Conifer Forests",
+        "REALM": "Nearctic",
+        "COLOR_BIO": "#458970",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "WAS",
+        "name": "Washington"
+      },
+      "status": "species_candidates",
+      "evidence": "documented_regional_range",
+      "regionalSpeciesCount": 18,
+      "palette": [
+        {
+          "name": "Pinus ponderosa",
+          "presetId": "ponderosa",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Tsuga heterophylla",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Betula papyrifera",
+          "presetId": "birch",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Abies amabilis",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Taxus brevifolia",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Physocarpus capitatus",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Purshia tridentata",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Pseudotsuga menziesii",
+          "presetId": "douglas-v1",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Thuja plicata",
+          "presetId": "cedar",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Ribes bracteosum",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Oemleria cerasiformis",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Callitropsis nootkatensis",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        }
+      ],
+      "growthForms": [
+        {
+          "name": "Conifer canopy",
+          "archetype": "conifer",
+          "conditional": false
+        },
+        {
+          "name": "Understory, gaps and non-tree cover",
+          "archetype": "understory",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "savanna",
+      "lat": -2.3,
+      "lon": 35.2,
+      "habitat": "grassland",
+      "tile": "21-8",
+      "geography": {
+        "ECO_ID": 57,
+        "ECO_NAME": "Southern Acacia-Commiphora bushlands and thickets",
+        "BIOME_NUM": 7,
+        "BIOME_NAME": "Tropical & Subtropical Grasslands, Savannas & Shrublands",
+        "REALM": "Afrotropic",
+        "COLOR_BIO": "#FEAA01",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "TAN",
+        "name": "Tanzania"
+      },
+      "status": "open_vegetation",
+      "evidence": "biome_realm_fallback",
+      "regionalSpeciesCount": 0,
+      "palette": [],
+      "growthForms": [
+        {
+          "name": "Grass, sedge or low-shrub matrix",
+          "archetype": "open_groundcover",
+          "conditional": false
+        },
+        {
+          "name": "Scattered canopy only with local habitat evidence",
+          "archetype": "savanna_canopy",
+          "conditional": true
+        }
+      ]
+    },
+    {
+      "id": "rainforest",
+      "lat": -3.12,
+      "lon": -60.02,
+      "habitat": "forest",
+      "tile": "11-8",
+      "geography": {
+        "ECO_ID": 473,
+        "ECO_NAME": "Japurá-Solimões-Negro moist forests",
+        "BIOME_NUM": 1,
+        "BIOME_NAME": "Tropical & Subtropical Moist Broadleaf Forests",
+        "REALM": "Neotropic",
+        "COLOR_BIO": "#38A700",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "BZN",
+        "name": "Brazil North"
+      },
+      "status": "species_candidates",
+      "evidence": "documented_regional_range",
+      "regionalSpeciesCount": 8,
+      "palette": [
+        {
+          "name": "Euterpe precatoria",
+          "presetId": "acai",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Swartzia lanata",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Cecropia peltata",
+          "presetId": "cecropia",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Hevea brasiliensis",
+          "presetId": "rubber",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Theobroma cacao",
+          "presetId": "cacao",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Bertholletia excelsa",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Swietenia macrophylla",
+          "presetId": "mahogany",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Rhizophora mangle",
+          "presetId": "red-mangrove",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      ],
+      "growthForms": [
+        {
+          "name": "Layered tropical canopy",
+          "archetype": "broadleaf_tree",
+          "conditional": false
+        },
+        {
+          "name": "Understory, gaps and non-tree cover",
+          "archetype": "understory",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "alpine",
+      "lat": 51.17,
+      "lon": -116.18,
+      "habitat": "alpine",
+      "tile": "6-14",
+      "geography": {
+        "ECO_ID": 361,
+        "ECO_NAME": "Northern Rockies conifer forests",
+        "BIOME_NUM": 5,
+        "BIOME_NAME": "Temperate Conifer Forests",
+        "REALM": "Nearctic",
+        "COLOR_BIO": "#458970",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "BRC",
+        "name": "British Columbia"
+      },
+      "status": "growth_form_fallback",
+      "evidence": "biome_realm_fallback",
+      "regionalSpeciesCount": 0,
+      "palette": [],
+      "growthForms": [
+        {
+          "name": "Low shrubs and alpine groundcover",
+          "archetype": "alpine_groundcover",
+          "conditional": true
+        },
+        {
+          "name": "Stunted tree-line forms below the local tree line",
+          "archetype": "krummholz",
+          "conditional": true
+        }
+      ]
+    },
+    {
+      "id": "desert",
+      "lat": 34,
+      "lon": -116.15,
+      "habitat": "forest",
+      "tile": "6-12",
+      "geography": {
+        "ECO_ID": 433,
+        "ECO_NAME": "Mojave desert",
+        "BIOME_NUM": 13,
+        "BIOME_NAME": "Deserts & Xeric Shrublands",
+        "REALM": "Nearctic",
+        "COLOR_BIO": "#CC6767",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "CAL",
+        "name": "California"
+      },
+      "status": "open_vegetation",
+      "evidence": "biome_realm_fallback",
+      "regionalSpeciesCount": 0,
+      "palette": [],
+      "growthForms": [
+        {
+          "name": "Sparse drought-adapted shrubs",
+          "archetype": "xeric_shrub",
+          "conditional": false
+        },
+        {
+          "name": "Woody oasis or river vegetation only if documented",
+          "archetype": "sparse_dryland_tree",
+          "conditional": true
+        }
+      ]
+    },
+    {
+      "id": "mangrove",
+      "lat": 25.2,
+      "lon": -80.9,
+      "habitat": "coastal",
+      "tile": "9-11",
+      "geography": {
+        "ECO_ID": 612,
+        "ECO_NAME": "Bahamian-Antillean mangroves",
+        "BIOME_NUM": 14,
+        "BIOME_NAME": "Mangroves",
+        "REALM": "Neotropic",
+        "COLOR_BIO": "#FE01C4",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "FLA",
+        "name": "Florida"
+      },
+      "status": "species_candidates",
+      "evidence": "documented_regional_range",
+      "regionalSpeciesCount": 1,
+      "palette": [
+        {
+          "name": "Rhizophora mangle",
+          "presetId": "red-mangrove",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      ],
+      "growthForms": [
+        {
+          "name": "Tidal mangrove canopy and roots",
+          "archetype": "mangrove",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "flooded",
+      "lat": 26.209957419,
+      "lon": -80.9383825925,
+      "habitat": "wetland",
+      "tile": "9-11",
+      "geography": {
+        "ECO_ID": 581,
+        "ECO_NAME": "Everglades flooded grasslands",
+        "BIOME_NUM": 9,
+        "BIOME_NAME": "Flooded Grasslands & Savannas",
+        "REALM": "Neotropic",
+        "COLOR_BIO": "#BEE7FF",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "FLA",
+        "name": "Florida"
+      },
+      "status": "open_vegetation",
+      "evidence": "biome_realm_fallback",
+      "regionalSpeciesCount": 0,
+      "palette": [],
+      "growthForms": [
+        {
+          "name": "Grass, sedge or low-shrub matrix",
+          "archetype": "open_groundcover",
+          "conditional": false
+        },
+        {
+          "name": "Conditional wooded wetland margins or raised tree islands; local hydrology unverified",
+          "archetype": "riparian_canopy",
+          "conditional": true
+        }
+      ]
+    },
+    {
+      "id": "boreal-finland",
+      "lat": 66.5,
+      "lon": 26,
+      "habitat": "forest",
+      "tile": "20-15",
+      "geography": {
+        "ECO_ID": 717,
+        "ECO_NAME": "Scandinavian and Russian taiga",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Boreal Forests/Taiga",
+        "REALM": "Palearctic",
+        "COLOR_BIO": "#7AB6F5",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "FIN",
+        "name": "Finland"
+      },
+      "status": "species_candidates",
+      "evidence": "documented_regional_range",
+      "regionalSpeciesCount": 6,
+      "palette": [
+        {
+          "name": "Picea obovata",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Picea abies",
+          "presetId": "spruce",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Quercus robur",
+          "presetId": "oak",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Pinus sylvestris",
+          "presetId": "pine",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Betula pubescens",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Betula pendula",
+          "presetId": "silver-birch",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      ],
+      "growthForms": [
+        {
+          "name": "Boreal conifer / mixed canopy",
+          "archetype": "conifer",
+          "conditional": false
+        },
+        {
+          "name": "Understory, gaps and non-tree cover",
+          "archetype": "understory",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "boreal-canada",
+      "lat": 55,
+      "lon": -105,
+      "habitat": "forest",
+      "tile": "7-14",
+      "geography": {
+        "ECO_ID": 377,
+        "ECO_NAME": "Midwest Canadian Shield forests",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Boreal Forests/Taiga",
+        "REALM": "Nearctic",
+        "COLOR_BIO": "#7AB6F5",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "SAS",
+        "name": "Saskatchewan"
+      },
+      "status": "species_candidates",
+      "evidence": "documented_regional_range",
+      "regionalSpeciesCount": 5,
+      "palette": [
+        {
+          "name": "Populus tremuloides",
+          "presetId": "aspen",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Picea laxa",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Elaeagnus commutata",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Betula pendula",
+          "presetId": "silver-birch",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Betula papyrifera",
+          "presetId": "birch",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      ],
+      "growthForms": [
+        {
+          "name": "Boreal conifer / mixed canopy",
+          "archetype": "conifer",
+          "conditional": false
+        },
+        {
+          "name": "Understory, gaps and non-tree cover",
+          "archetype": "understory",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "boreal-siberia",
+      "lat": 62,
+      "lon": 129,
+      "habitat": "forest",
+      "tile": "30-15",
+      "geography": {
+        "ECO_ID": 710,
+        "ECO_NAME": "East Siberian taiga",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Boreal Forests/Taiga",
+        "REALM": "Palearctic",
+        "COLOR_BIO": "#7AB6F5",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "YAK",
+        "name": "Yakutskiya"
+      },
+      "status": "species_candidates",
+      "evidence": "documented_regional_range",
+      "regionalSpeciesCount": 9,
+      "palette": [
+        {
+          "name": "Sambucus williamsii",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Larix gmelinii",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Pinus sylvestris",
+          "presetId": "pine",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Pinus sibirica",
+          "presetId": "pine",
+          "fallback": true,
+          "reason": "Visual archetype fallback (central-leader-conifer); not a species-specific reconstruction."
+        },
+        {
+          "name": "Alnus glutipes",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Betula pendula",
+          "presetId": "silver-birch",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Picea obovata",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Larix sibirica",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Betula pubescens",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      ],
+      "growthForms": [
+        {
+          "name": "Boreal conifer / mixed canopy",
+          "archetype": "conifer",
+          "conditional": false
+        },
+        {
+          "name": "Understory, gaps and non-tree cover",
+          "archetype": "understory",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "temperate-europe",
+      "lat": 50.5,
+      "lon": 10.5,
+      "habitat": "forest",
+      "tile": "19-14",
+      "geography": {
+        "ECO_ID": 686,
+        "ECO_NAME": "Western European broadleaf forests",
+        "BIOME_NUM": 4,
+        "BIOME_NAME": "Temperate Broadleaf & Mixed Forests",
+        "REALM": "Palearctic",
+        "COLOR_BIO": "#00734C",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "GER",
+        "name": "Germany"
+      },
+      "status": "species_candidates",
+      "evidence": "documented_regional_range",
+      "regionalSpeciesCount": 13,
+      "palette": [
+        {
+          "name": "Aria franconica",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "× Arsorbus thuringiaca",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Pinus sylvestris",
+          "presetId": "pine",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Fraxinus excelsior",
+          "presetId": "ash",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Quercus robur",
+          "presetId": "oak",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Abies alba",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Larix decidua",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Buxus sempervirens",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Fagus sylvatica",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Betula pendula",
+          "presetId": "silver-birch",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Picea abies",
+          "presetId": "spruce",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Cormus domestica",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      ],
+      "growthForms": [
+        {
+          "name": "Temperate broadleaf / mixed canopy",
+          "archetype": "broadleaf_tree",
+          "conditional": false
+        },
+        {
+          "name": "Understory, gaps and non-tree cover",
+          "archetype": "understory",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "temperate-appalachia",
+      "lat": 35.6,
+      "lon": -83.5,
+      "habitat": "forest",
+      "tile": "9-12",
+      "geography": {
+        "ECO_ID": 331,
+        "ECO_NAME": "Appalachian-Blue Ridge forests",
+        "BIOME_NUM": 4,
+        "BIOME_NAME": "Temperate Broadleaf & Mixed Forests",
+        "REALM": "Nearctic",
+        "COLOR_BIO": "#00734C",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "TEN",
+        "name": "Tennessee"
+      },
+      "status": "species_candidates",
+      "evidence": "documented_regional_range",
+      "regionalSpeciesCount": 15,
+      "palette": [
+        {
+          "name": "Spiraea virginiana",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Pinus taeda",
+          "presetId": "pine",
+          "fallback": true,
+          "reason": "Visual archetype fallback (central-leader-conifer); not a species-specific reconstruction."
+        },
+        {
+          "name": "Taxodium distichum",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Paxistima canbyi",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Pinus strobus",
+          "presetId": "pine",
+          "fallback": true,
+          "reason": "Visual archetype fallback (central-leader-conifer); not a species-specific reconstruction."
+        },
+        {
+          "name": "Tsuga canadensis",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Liriodendron tulipifera",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Liquidambar styraciflua",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Fagus grandifolia",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Eubotrys recurvus",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Acer saccharum",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Quercus falcata",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      ],
+      "growthForms": [
+        {
+          "name": "Temperate broadleaf / mixed canopy",
+          "archetype": "broadleaf_tree",
+          "conditional": false
+        },
+        {
+          "name": "Understory, gaps and non-tree cover",
+          "archetype": "understory",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "temperate-eastasia",
+      "lat": 36,
+      "lon": 138,
+      "habitat": "forest",
+      "tile": "31-12",
+      "geography": {
+        "ECO_ID": 683,
+        "ECO_NAME": "Taiheiyo montane deciduous forests",
+        "BIOME_NUM": 4,
+        "BIOME_NAME": "Temperate Broadleaf & Mixed Forests",
+        "REALM": "Palearctic",
+        "COLOR_BIO": "#00734C",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "JAP",
+        "name": "Japan"
+      },
+      "status": "species_candidates",
+      "evidence": "documented_regional_range",
+      "regionalSpeciesCount": 12,
+      "palette": [
+        {
+          "name": "Cryptomeria japonica",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Acer palmatum",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Ilex sugerokii",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Betula pendula",
+          "presetId": "silver-birch",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Euonymus maackii",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Rosa fujisanensis",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Sambucus williamsii",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Fagus crenata",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Viburnum wrightii",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Chamaecyparis obtusa",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Tilia maximowicziana",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Zelkova serrata",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      ],
+      "growthForms": [
+        {
+          "name": "Temperate broadleaf / mixed canopy",
+          "archetype": "broadleaf_tree",
+          "conditional": false
+        },
+        {
+          "name": "Understory, gaps and non-tree cover",
+          "archetype": "understory",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "tundra-alaska",
+      "lat": 69,
+      "lon": -150,
+      "habitat": "forest",
+      "tile": "3-15",
+      "geography": {
+        "ECO_ID": 408,
+        "ECO_NAME": "Arctic foothills tundra",
+        "BIOME_NUM": 11,
+        "BIOME_NAME": "Tundra",
+        "REALM": "Nearctic",
+        "COLOR_BIO": "#9ED7C2",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "ASK",
+        "name": "Alaska"
+      },
+      "status": "naturally_treeless",
+      "evidence": "biome_realm_fallback",
+      "regionalSpeciesCount": 0,
+      "palette": [],
+      "growthForms": [
+        {
+          "name": "Low shrubs, sedges and mosses",
+          "archetype": "tundra_groundcover",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "tundra-siberia",
+      "lat": 70,
+      "lon": 100,
+      "habitat": "forest",
+      "tile": "28-16",
+      "geography": {
+        "ECO_ID": 781,
+        "ECO_NAME": "Taimyr-Central Siberian tundra",
+        "BIOME_NUM": 11,
+        "BIOME_NAME": "Tundra",
+        "REALM": "Palearctic",
+        "COLOR_BIO": "#9ED7C2",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "KRA",
+        "name": "Krasnoyarsk"
+      },
+      "status": "naturally_treeless",
+      "evidence": "biome_realm_fallback",
+      "regionalSpeciesCount": 0,
+      "palette": [],
+      "growthForms": [
+        {
+          "name": "Low shrubs, sedges and mosses",
+          "archetype": "tundra_groundcover",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "tundra-svalbard",
+      "lat": 78,
+      "lon": 16,
+      "habitat": "forest",
+      "tile": "19-16",
+      "geography": {
+        "ECO_ID": 778,
+        "ECO_NAME": "Russian Arctic desert",
+        "BIOME_NUM": 11,
+        "BIOME_NAME": "Tundra",
+        "REALM": "Palearctic",
+        "COLOR_BIO": "#9ED7C2",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "SVA",
+        "name": "Svalbard"
+      },
+      "status": "naturally_treeless",
+      "evidence": "biome_realm_fallback",
+      "regionalSpeciesCount": 0,
+      "palette": [],
+      "growthForms": [
+        {
+          "name": "Low shrubs, sedges and mosses",
+          "archetype": "tundra_groundcover",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "mediterranean-iberia",
+      "lat": 39,
+      "lon": -5,
+      "habitat": "forest",
+      "tile": "17-12",
+      "geography": {
+        "ECO_ID": 793,
+        "ECO_NAME": "Iberian sclerophyllous and semi-deciduous forests",
+        "BIOME_NUM": 12,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub",
+        "REALM": "Palearctic",
+        "COLOR_BIO": "#FE0000",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "SPA",
+        "name": "Spain"
+      },
+      "status": "species_candidates",
+      "evidence": "documented_regional_range",
+      "regionalSpeciesCount": 18,
+      "palette": [
+        {
+          "name": "Pinus sylvestris",
+          "presetId": "pine",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Tetraclinis articulata",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Quercus ilex",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Abies alba",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Fraxinus excelsior",
+          "presetId": "ash",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Buxus sempervirens",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Chamaebuxus balansae",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Pinus halepensis",
+          "presetId": "pine",
+          "fallback": true,
+          "reason": "Visual archetype fallback (central-leader-conifer); not a species-specific reconstruction."
+        },
+        {
+          "name": "Cormus domestica",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Quercus robur",
+          "presetId": "oak",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Paliurus spina-christi",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Fagus sylvatica",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      ],
+      "growthForms": [
+        {
+          "name": "Sclerophyll woodland / scrub",
+          "archetype": "broadleaf_tree",
+          "conditional": false
+        },
+        {
+          "name": "Understory, gaps and non-tree cover",
+          "archetype": "understory",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "mediterranean-california",
+      "lat": 34.8,
+      "lon": -119.5,
+      "habitat": "forest",
+      "tile": "6-12",
+      "geography": {
+        "ECO_ID": 424,
+        "ECO_NAME": "California montane chaparral and woodlands",
+        "BIOME_NUM": 12,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub",
+        "REALM": "Nearctic",
+        "COLOR_BIO": "#FE0000",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "CAL",
+        "name": "California"
+      },
+      "status": "species_candidates",
+      "evidence": "documented_regional_range",
+      "regionalSpeciesCount": 26,
+      "palette": [
+        {
+          "name": "Taxus brevifolia",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Tsuga heterophylla",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Hesperocyparis abramsiana",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Physocarpus capitatus",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Sequoia sempervirens",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Notholithocarpus densiflorus",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Ribes bracteosum",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Dendromecon harfordii",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Ceanothus parryi",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Pinus ponderosa",
+          "presetId": "ponderosa",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Thuja plicata",
+          "presetId": "cedar",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        },
+        {
+          "name": "Abies amabilis",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        }
+      ],
+      "growthForms": [
+        {
+          "name": "Sclerophyll woodland / scrub",
+          "archetype": "broadleaf_tree",
+          "conditional": false
+        },
+        {
+          "name": "Understory, gaps and non-tree cover",
+          "archetype": "understory",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "mediterranean-cape",
+      "lat": -33.9,
+      "lon": 18.8,
+      "habitat": "forest",
+      "tile": "19-5",
+      "geography": {
+        "ECO_ID": 90,
+        "ECO_NAME": "Renosterveld shrubland",
+        "BIOME_NUM": 12,
+        "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub",
+        "REALM": "Afrotropic",
+        "COLOR_BIO": "#FE0000",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "CPP",
+        "name": "Cape Provinces"
+      },
+      "status": "species_candidates",
+      "evidence": "documented_regional_range",
+      "regionalSpeciesCount": 4,
+      "palette": [
+        {
+          "name": "Podocarpus latifolius",
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        },
+        {
+          "name": "Protea lanceolata",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Myrica integra",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        },
+        {
+          "name": "Leucospermum conocarpodendron",
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      ],
+      "growthForms": [
+        {
+          "name": "Sclerophyll woodland / scrub",
+          "archetype": "broadleaf_tree",
+          "conditional": false
+        },
+        {
+          "name": "Understory, gaps and non-tree cover",
+          "archetype": "understory",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "steppe-mongolia",
+      "lat": 47,
+      "lon": 106,
+      "habitat": "grassland",
+      "tile": "28-13",
+      "geography": {
+        "ECO_ID": 734,
+        "ECO_NAME": "Mongolian-Manchurian grassland",
+        "BIOME_NUM": 8,
+        "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands",
+        "REALM": "Palearctic",
+        "COLOR_BIO": "#FEFF73",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "MON",
+        "name": "Mongolia"
+      },
+      "status": "open_vegetation",
+      "evidence": "biome_realm_fallback",
+      "regionalSpeciesCount": 0,
+      "palette": [],
+      "growthForms": [
+        {
+          "name": "Grass, sedge or low-shrub matrix",
+          "archetype": "open_groundcover",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "prairie",
+      "lat": 47,
+      "lon": -102,
+      "habitat": "grassland",
+      "tile": "7-13",
+      "geography": {
+        "ECO_ID": 396,
+        "ECO_NAME": "Northern Shortgrass prairie",
+        "BIOME_NUM": 8,
+        "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands",
+        "REALM": "Nearctic",
+        "COLOR_BIO": "#FEFF73",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "NDA",
+        "name": "North Dakota"
+      },
+      "status": "open_vegetation",
+      "evidence": "biome_realm_fallback",
+      "regionalSpeciesCount": 0,
+      "palette": [],
+      "growthForms": [
+        {
+          "name": "Grass, sedge or low-shrub matrix",
+          "archetype": "open_groundcover",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "pampas",
+      "lat": -35,
+      "lon": -60,
+      "habitat": "grassland",
+      "tile": "12-5",
+      "geography": {
+        "ECO_ID": 576,
+        "ECO_NAME": "Humid Pampas",
+        "BIOME_NUM": 8,
+        "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands",
+        "REALM": "Neotropic",
+        "COLOR_BIO": "#FEFF73",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "AGE",
+        "name": "Argentina Northeast"
+      },
+      "status": "open_vegetation",
+      "evidence": "biome_realm_fallback",
+      "regionalSpeciesCount": 0,
+      "palette": [],
+      "growthForms": [
+        {
+          "name": "Grass, sedge or low-shrub matrix",
+          "archetype": "open_groundcover",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "dateline-west",
+      "lat": 65,
+      "lon": 179.9,
+      "habitat": "forest",
+      "tile": "35-15",
+      "geography": null,
+      "botanicalArea": null,
+      "status": "insufficient_data",
+      "evidence": "insufficient_data",
+      "regionalSpeciesCount": 0,
+      "palette": [],
+      "growthForms": []
+    },
+    {
+      "id": "dateline-east",
+      "lat": 65,
+      "lon": -179.9,
+      "habitat": "forest",
+      "tile": "0-15",
+      "geography": null,
+      "botanicalArea": null,
+      "status": "insufficient_data",
+      "evidence": "insufficient_data",
+      "regionalSpeciesCount": 0,
+      "palette": [],
+      "growthForms": []
+    },
+    {
+      "id": "ocean",
+      "lat": 0,
+      "lon": -140,
+      "habitat": "forest",
+      "tile": "4-9",
+      "geography": null,
+      "botanicalArea": null,
+      "status": "insufficient_data",
+      "evidence": "insufficient_data",
+      "regionalSpeciesCount": 0,
+      "palette": [],
+      "growthForms": []
+    },
+    {
+      "id": "antarctic",
+      "lat": -80,
+      "lon": 0,
+      "habitat": "forest",
+      "tile": "18-1",
+      "geography": {
+        "ECO_ID": 0,
+        "ECO_NAME": "Rock and Ice",
+        "BIOME_NUM": 11,
+        "BIOME_NAME": "N/A",
+        "REALM": "N/A",
+        "COLOR_BIO": "#FFEAAF",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "ANT",
+        "name": "Antarctica"
+      },
+      "status": "naturally_treeless",
+      "evidence": "biome_realm_fallback",
+      "regionalSpeciesCount": 0,
+      "palette": [],
+      "growthForms": [
+        {
+          "name": "Bare substrate / ice",
+          "archetype": "bare_ground",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "shore-gap",
+      "lat": 25.7,
+      "lon": -80.1,
+      "habitat": "coastal",
+      "tile": "9-11",
+      "geography": null,
+      "botanicalArea": null,
+      "status": "insufficient_data",
+      "evidence": "insufficient_data",
+      "regionalSpeciesCount": 0,
+      "palette": [],
+      "growthForms": []
+    },
+    {
+      "id": "dateline-land-probe-west",
+      "lat": 66.5,
+      "lon": 179.5,
+      "habitat": "forest",
+      "tile": "35-15",
+      "geography": {
+        "ECO_ID": 772,
+        "ECO_NAME": "Chukchi Peninsula tundra",
+        "BIOME_NUM": 11,
+        "BIOME_NAME": "Tundra",
+        "REALM": "Palearctic",
+        "COLOR_BIO": "#9ED7C2",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "MAG",
+        "name": "Magadan"
+      },
+      "status": "naturally_treeless",
+      "evidence": "biome_realm_fallback",
+      "regionalSpeciesCount": 0,
+      "palette": [],
+      "growthForms": [
+        {
+          "name": "Low shrubs, sedges and mosses",
+          "archetype": "tundra_groundcover",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "dateline-land-probe-east",
+      "lat": 66.5,
+      "lon": -179.5,
+      "habitat": "forest",
+      "tile": "0-15",
+      "geography": {
+        "ECO_ID": 772,
+        "ECO_NAME": "Chukchi Peninsula tundra",
+        "BIOME_NUM": 11,
+        "BIOME_NAME": "Tundra",
+        "REALM": "Palearctic",
+        "COLOR_BIO": "#9ED7C2",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "MAG",
+        "name": "Magadan"
+      },
+      "status": "naturally_treeless",
+      "evidence": "biome_realm_fallback",
+      "regionalSpeciesCount": 0,
+      "palette": [],
+      "growthForms": [
+        {
+          "name": "Low shrubs, sedges and mosses",
+          "archetype": "tundra_groundcover",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "tile-seam-west",
+      "lat": 50.000001,
+      "lon": 9.999999,
+      "habitat": "forest",
+      "tile": "18-14",
+      "geography": {
+        "ECO_ID": 686,
+        "ECO_NAME": "Western European broadleaf forests",
+        "BIOME_NUM": 4,
+        "BIOME_NAME": "Temperate Broadleaf & Mixed Forests",
+        "REALM": "Palearctic",
+        "COLOR_BIO": "#00734C",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "GER",
+        "name": "Germany"
+      },
+      "status": "species_candidates",
+      "evidence": "documented_regional_range",
+      "regionalSpeciesCount": 13,
+      "palette": [
+        {
+          "name": "Aria franconica"
+        },
+        {
+          "name": "× Arsorbus thuringiaca"
+        },
+        {
+          "name": "Pinus sylvestris"
+        },
+        {
+          "name": "Fraxinus excelsior"
+        },
+        {
+          "name": "Quercus robur"
+        },
+        {
+          "name": "Abies alba"
+        },
+        {
+          "name": "Larix decidua"
+        },
+        {
+          "name": "Buxus sempervirens"
+        },
+        {
+          "name": "Fagus sylvatica"
+        },
+        {
+          "name": "Betula pendula"
+        },
+        {
+          "name": "Picea abies"
+        },
+        {
+          "name": "Cormus domestica"
+        }
+      ],
+      "growthForms": [
+        {
+          "name": "Temperate broadleaf / mixed canopy",
+          "archetype": "broadleaf_tree",
+          "conditional": false
+        },
+        {
+          "name": "Understory, gaps and non-tree cover",
+          "archetype": "understory",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "tile-seam-east",
+      "lat": 50.000001,
+      "lon": 10.000001,
+      "habitat": "forest",
+      "tile": "19-14",
+      "geography": {
+        "ECO_ID": 686,
+        "ECO_NAME": "Western European broadleaf forests",
+        "BIOME_NUM": 4,
+        "BIOME_NAME": "Temperate Broadleaf & Mixed Forests",
+        "REALM": "Palearctic",
+        "COLOR_BIO": "#00734C",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "GER",
+        "name": "Germany"
+      },
+      "status": "species_candidates",
+      "evidence": "documented_regional_range",
+      "regionalSpeciesCount": 13,
+      "palette": [
+        {
+          "name": "Aria franconica"
+        },
+        {
+          "name": "× Arsorbus thuringiaca"
+        },
+        {
+          "name": "Pinus sylvestris"
+        },
+        {
+          "name": "Fraxinus excelsior"
+        },
+        {
+          "name": "Quercus robur"
+        },
+        {
+          "name": "Abies alba"
+        },
+        {
+          "name": "Larix decidua"
+        },
+        {
+          "name": "Buxus sempervirens"
+        },
+        {
+          "name": "Fagus sylvatica"
+        },
+        {
+          "name": "Betula pendula"
+        },
+        {
+          "name": "Picea abies"
+        },
+        {
+          "name": "Cormus domestica"
+        }
+      ],
+      "growthForms": [
+        {
+          "name": "Temperate broadleaf / mixed canopy",
+          "archetype": "broadleaf_tree",
+          "conditional": false
+        },
+        {
+          "name": "Understory, gaps and non-tree cover",
+          "archetype": "understory",
+          "conditional": false
+        }
+      ]
+    },
+    {
+      "id": "boreal-birch-edge",
+      "lat": 64.96154821700006,
+      "lon": -18.46637953432941,
+      "habitat": "forest",
+      "tile": "16-15",
+      "geography": {
+        "ECO_ID": 711,
+        "ECO_NAME": "Iceland boreal birch forests and alpine tundra",
+        "BIOME_NUM": 6,
+        "BIOME_NAME": "Boreal Forests/Taiga",
+        "REALM": "Palearctic",
+        "COLOR_BIO": "#7AB6F5",
+        "LICENSE": "CC-BY 4.0"
+      },
+      "botanicalArea": {
+        "code": "ICE",
+        "name": "Iceland"
+      },
+      "status": "species_candidates",
+      "evidence": "documented_regional_range",
+      "regionalSpeciesCount": 1,
+      "palette": [
+        {
+          "name": "Betula pubescens"
+        }
+      ],
+      "growthForms": [
+        {
+          "name": "Birch / broadleaf woodland below local tree line",
+          "archetype": "broadleaf_tree",
+          "conditional": false
+        },
+        {
+          "name": "Understory, gaps and non-tree cover",
+          "archetype": "understory",
+          "conditional": false
+        }
+      ]
+    }
+  ],
+  "recipeRoutingScopes": {
+    "puget": [
+      364
+    ],
+    "savanna": [
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      57,
+      58,
+      62,
+      66,
+      64,
+      42,
+      65,
+      60,
+      61,
+      63,
+      59,
+      56
+    ],
+    "rainforest": [
+      439,
+      440,
+      441,
+      442,
+      443,
+      444,
+      445,
+      446,
+      447,
+      448,
+      449,
+      450,
+      451,
+      452,
+      453,
+      454,
+      455,
+      456,
+      457,
+      458,
+      459,
+      460,
+      461,
+      462,
+      463,
+      464,
+      465,
+      466,
+      467,
+      468,
+      469,
+      470,
+      471,
+      472,
+      473,
+      474,
+      475,
+      476,
+      478,
+      477,
+      480,
+      479,
+      481,
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      488,
+      489,
+      490,
+      491,
+      492,
+      493,
+      494,
+      495,
+      497,
+      496,
+      498,
+      499,
+      500,
+      501,
+      502,
+      503,
+      504,
+      505,
+      506,
+      507,
+      510,
+      511,
+      512,
+      513,
+      514,
+      515,
+      516,
+      517,
+      518,
+      519,
+      508,
+      509
+    ],
+    "desert": [
+      807,
+      808,
+      91,
+      810,
+      597,
+      598,
+      839,
+      812,
+      813,
+      426,
+      814,
+      599,
+      207,
+      815,
+      816,
+      817,
+      818,
+      819,
+      427,
+      820,
+      208,
+      428,
+      429,
+      600,
+      315,
+      92,
+      821,
+      822,
+      823,
+      824,
+      93,
+      601,
+      94,
+      209,
+      316,
+      825,
+      430,
+      826,
+      210,
+      211,
+      602,
+      431,
+      95,
+      317,
+      827,
+      97,
+      98,
+      828,
+      829,
+      603,
+      99,
+      100,
+      604,
+      432,
+      830,
+      433,
+      605,
+      101,
+      102,
+      103,
+      104,
+      831,
+      832,
+      833,
+      106,
+      314,
+      212,
+      606,
+      834,
+      213,
+      835,
+      837,
+      836,
+      838,
+      607,
+      608,
+      214,
+      434,
+      105,
+      435,
+      841,
+      842,
+      108,
+      109,
+      609,
+      110,
+      843,
+      436,
+      437,
+      610,
+      318,
+      844,
+      215,
+      845,
+      846,
+      216,
+      438,
+      107,
+      811,
+      840,
+      809,
+      96
+    ],
+    "mangrove": [
+      611,
+      612,
+      111,
+      112,
+      113,
+      319,
+      320,
+      114,
+      613,
+      321,
+      217,
+      614,
+      115,
+      615,
+      116,
+      616,
+      617,
+      322,
+      323
+    ],
+    "flooded": [
+      741,
+      742,
+      579,
+      69,
+      580,
+      70,
+      581,
+      582,
+      71,
+      72,
+      73,
+      743,
+      744,
+      583,
+      584,
+      585,
+      312,
+      745,
+      586,
+      74,
+      746,
+      747,
+      748,
+      75,
+      76
+    ],
+    "alpine": "URL opt-in; no current geographic eligibility gate"
+  },
+  "nextThreeProposed": [
+    {
+      "biomeId": 6,
+      "environment": "Boreal forest and glacial-lake margin",
+      "reason": "Largest currently unrepresented forest footprint; conifer/moss/opening language",
+      "pointIds": [
+        "boreal-finland",
+        "boreal-canada",
+        "boreal-siberia"
+      ]
+    },
+    {
+      "biomeId": 4,
+      "environment": "Temperate broadleaf and mixed woodland",
+      "reason": "Large global footprint; distinct broadleaf branch/crown and understory language; Puget is biome5",
+      "pointIds": [
+        "temperate-europe",
+        "temperate-appalachia",
+        "temperate-eastasia"
+      ]
+    },
+    {
+      "biomeId": 11,
+      "environment": "Arctic tundra mosaic",
+      "reason": "Strongly distinct treeless environment; tests ground-led art and ecological no-tree rules",
+      "pointIds": [
+        "tundra-alaska",
+        "tundra-siberia",
+        "tundra-svalbard"
+      ]
+    }
+  ],
+  "missingFamilyPriority": [
+    6,
+    4,
+    11,
+    8,
+    12,
+    2,
+    3
+  ],
+  "montaneGap": "Alpine is a developed habitat adapter tested inside biome5, not validated global coverage of biome10",
+  "unknownMeasurementCheck": {
+    "case": "Finland regional candidates with requested elevation1800 but no observed elevation",
+    "speciesCount": 0,
+    "unvalidated": [
+      "elevation"
+    ],
+    "title": "Environmental filter evidence is missing"
+  }
+}

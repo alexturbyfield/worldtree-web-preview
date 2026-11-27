@@ -1,0 +1,33 @@
+{
+  "mode": "built-in image_gen",
+  "generationIsNotSceneCapture": true,
+  "trainingOccurred": false,
+  "requests": [
+    {
+      "id": "spruce-v1-rejected-alpha",
+      "prompt": "Generate one production game foliage texture atlas, square 2048x2048, real transparent background and proper alpha. 2 by 2 equal atlas cells, each a different isolated broad flat Norwegian spruce (Picea abies-like, regional candidate morphology only) needle-bearing secondary bough spray viewed from above at slight angle, stem rooted at bottom center of each cell and branching upward/outward. Dense overlapping short needles on delicate connected irregular branchlets, natural asymmetric feathery edges, rich deep emerald green interior and moss olive outer needles with restrained warm yellow-green tips. Painterly richly detailed coherent leaf masses inspired by beautiful illustrated boreal forest concepts, not photographic scan, not fantasy. Botanically believable conifer sprays, no broad leaves or generic fern. Each bough fills central 75% of its equal square cell; at least 12% cell padding transparent on all sides, no overlap across cells; no background, no labels, no pots, no tree silhouettes. Flat neutral diffuse albedo only, no directional cast shadows, no baked sun beam or lighting gradients. Broad coherent softly irregular spray silhouettes with finer needles near edges, avoid evenly spaced spikes and comb patterns. This is a texture asset to be alpha-tested on curved GPU-instanced branch-attached cards, not an environmental concept image.",
+      "output": "artifacts/wave2-concepts/rejected-assets/spruce-opaque-v1.png",
+      "actualResolution": [1254,1254],
+      "alphaMinMax": [191,249],
+      "decision": "rejected: opaque white background despite transparent request"
+    },
+    {
+      "id": "spruce-v2-alpha-edit",
+      "prompt": "Precisely remove ALL the white and pale background around and between these four spruce boughs. Preserve only the four boughs and their fine needles in exactly the same positions, colors and detail. Output genuine binary/soft foreground alpha with full background alpha=0, not an opaque white image or globally translucent white pixels. This is an alpha foliage game texture, white rectangles would be a critical rendering bug. Keep 2x2 equal atlas grid. Remove white halos and leave adequate transparent padding around each shape. Do not redraw or add lighting, do not include any checkerboard pixels as artwork. Background removal only.",
+      "output": "public/assets/wave2-concepts/spruce-sprays-v2.png",
+      "actualResolution": [1254,1254],
+      "alphaMinMax": [0,255],
+      "decision": "retained experimentally after actual atlas and scene inspection",
+      "limitations": "Faint yellow/green edge fringe; morphology/tones are generated approximations. Not full 2048 output and padding less than requested. Spruce-like artwork does not validate pine/larch needle anatomy."
+    },
+    {
+      "id": "heath-v1",
+      "prompt": "Create a single production vegetation texture atlas for a painterly tundra game environment, square 2048x2048 with real transparent background, 2x2 equal cells. Each cell contains one distinct very low spreading dwarf-heath cushion shrub, stem base bottom center, viewed at human eye height looking slightly down. Intricate wiry branching woody stems with hundreds of very small rounded leathery leaves; no large broadleaf blades, no tall grass, no fern, no tree. One olive and ochre mat, one muted burgundy russet mat, one rich green mossy heath mat, one amber and sage mat. Small leaves form overlapping soft irregular coherent cushions, detailed but not sharp noisy specks. Leaf masses mostly continuous with slight negative gaps; branchlets support them visibly. Painterly botanical naturalism inspired by beautiful tundra environmental concept art, not fantasy. Natural warm and cool pigments, restrained luminous leaf tips, no neon orange. No baked directional light or cast shadows, neutral diffuse albedo. Each isolated plant fills inner75% of its cell with at least12% transparent margin on every side to prevent bleeding. Clearly separated cells no labels, no ground, no landscape, no rocks, no flowers, no sky, no rectangular background. Design for alpha-tested curved crossedcards rooted in moss and mineral soil, preserving intricate silhouettes and layered volume at 0.15–0.40metres physical shrub height. All plant types are unnamed artistic growth-form studies, do not assert species.",
+      "output": "public/assets/wave2-concepts/heath-mats-v1.png",
+      "actualResolution": [1254,1254],
+      "alphaMinMax": [0,255],
+      "decision": "artwork usable as experimental asset; crossed-mat construction fails artistic gate",
+      "limitations": "Narrow colored fringes and less padding than requested. Field-scale leaf community and local taxonomy are unverified."
+    }
+  ]
+}

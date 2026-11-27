@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "references": [
+    {
+      "id": "wave2-boreal-fws",
+      "biome": "boreal",
+      "biomeId": 6,
+      "category": "forest-framing-and-floor",
+      "source": {
+        "kind": "public-domain-photo",
+        "attribution": "Laura Kennedy / USFWS; Commons copy includes color correction",
+        "url": "https://commons.wikimedia.org/wiki/File:Borealforest.JPG"
+      },
+      "imagePath": "visual-lab/global-expansion/references/boreal-fws.jpg",
+      "principle": "Tall narrow trunks and lateral boughs frame a mossy opening; connected low cover supports broad value masses",
+      "positiveCharacteristics": [
+        "Strong vertical scale",
+        "Pillowy floor with selective sunlight",
+        "Quiet distant stand"
+      ],
+      "defectsToAvoid": [
+        "Park-like isolated specimens",
+        "Bare straight background sticks",
+        "Assuming an Alaskan lake or white spruce occurs in Finland"
+      ],
+      "license": {
+        "status": "public-domain",
+        "use": "visual reference; not a runtime panorama",
+        "redistributionAllowed": true,
+        "trainingEligible": false,
+        "note": "Public-domain government work according to linked source; no model training performed"
+      },
+      "available": true,
+      "inspection": {
+        "reviewer": "root",
+        "actualImageContentInterpreted": true
+      }
+    },
+    {
+      "id": "wave2-temperate-usgs-canopy",
+      "biome": "temperate",
+      "biomeId": 4,
+      "category": "canopy-branching-and-light",
+      "source": {
+        "kind": "public-domain-photo",
+        "attribution": "Cynthia L. Cunningham / USGS; Shenandoah tree canopy",
+        "url": "https://www.usgs.gov/media/images/tree-canopy"
+      },
+      "imagePath": "visual-lab/global-expansion/temperate-references/usgs-tree-canopy.jpg",
+      "principle": "Branch-supported overlapping crowns form connected shelter, with cool interiors and small warm gaps",
+      "positiveCharacteristics": [
+        "Layered crown masses",
+        "Branch continuity",
+        "Selective transmitted sunlight"
+      ],
+      "defectsToAvoid": [
+        "Copying fisheye projection",
+        "Uniform ambient illumination",
+        "Treating a Virginia photograph as German species evidence"
+      ],
+      "license": {
+        "status": "public-domain",
+        "use": "visual reference; not a runtime panorama",
+        "redistributionAllowed": true,
+        "trainingEligible": false,
+        "note": "Public-domain government work according to linked source; no model training performed"
+      },
+      "available": true,
+      "inspection": {
+        "reviewer": "root",
+        "actualImageContentInterpreted": true
+      }
+    },
+    {
+      "id": "wave2-temperate-usgs-distance",
+      "biome": "temperate",
+      "biomeId": 4,
+      "category": "atmospheric-layering",
+      "source": {
+        "kind": "public-domain-photo",
+        "attribution": "Cynthia L. Cunningham / USGS; Great Smoky Mountains",
+        "url": "https://www.usgs.gov/media/images/great-smoky-mountains"
+      },
+      "imagePath": "visual-lab/global-expansion/temperate-references/usgs-smoky-cunningham.jpg",
+      "principle": "Distant forest masses lose contrast and unify into broad green layers",
+      "positiveCharacteristics": [
+        "Connected mid/far forest masses",
+        "Soft atmospheric separation"
+      ],
+      "defectsToAvoid": [
+        "Adding photographed mountains without regional relief evidence",
+        "Hiding missing geometry with near fog"
+      ],
+      "license": {
+        "status": "public-domain",
+        "use": "visual reference; not a runtime panorama",
+        "redistributionAllowed": true,
+        "trainingEligible": false,
+        "note": "Public-domain government work according to linked source; no model training performed"
+      },
+      "available": true,
+      "inspection": {
+        "reviewer": "root",
+        "actualImageContentInterpreted": true
+      }
+    },
+    {
+      "id": "wave2-tundra-fws",
+      "biome": "tundra",
+      "biomeId": 11,
+      "category": "low-vegetation-and-horizontal-depth",
+      "source": {
+        "kind": "public-domain-photo",
+        "attribution": "Steve Hillebrand / USFWS; Selawik Refuge",
+        "url": "https://www.fws.gov/media/tundra-landscape-selawik-refuge"
+      },
+      "imagePath": "visual-lab/global-expansion/tundra-references/selawik-fws.jpg",
+      "principle": "Low, intricately interlocking vegetation masses carry most of the image below a long quiet horizon",
+      "positiveCharacteristics": [
+        "Low vegetation silhouette",
+        "Warm/cool peat and vegetation masses",
+        "Meaningful negative space"
+      ],
+      "defectsToAvoid": [
+        "Adding trees to Arctic tundra",
+        "Uniform grass carpet",
+        "Assuming pictured water exists at the test coordinate"
+      ],
+      "license": {
+        "status": "public-domain",
+        "use": "visual reference; not a runtime panorama",
+        "redistributionAllowed": true,
+        "trainingEligible": false,
+        "note": "Public-domain government work according to linked source; no model training performed"
+      },
+      "available": true,
+      "inspection": {
+        "reviewer": "root",
+        "actualImageContentInterpreted": true
+      }
+    }
+  ],
+  "observationVsTechnique": "Observations above are image-supported; the source-trees, instancing, palette, LOD and terrain methods are implementation hypotheses, not facts about the photographs.",
+  "vision": "Root actual image interpretation; no independent review. Subagents gathered references before a usage cap ended their work."
+}

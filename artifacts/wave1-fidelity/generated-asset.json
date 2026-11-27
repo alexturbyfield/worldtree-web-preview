@@ -1,0 +1,12 @@
+{
+  "tool": "built-in image_gen",
+  "source": "C:/Users/aturb/.codex/generated_images/01a205da-da33-7d33-9ee8-3170650dd5eb/exec-b97f390e-473c-42df-9f70-2eb916e6b78c.png",
+  "asset": "public/assets/wave1-detail/desert-granite-v1.webp",
+  "runtimeSize": [
+    1024,
+    1024
+  ],
+  "sampling": "MirroredRepeatWrapping, triplanar 2.3m, sRGB, mipmaps, anisotropy4",
+  "prompt": "Create a production game base-color material texture: a single seamless tile of weathered desert granite / quartz monzonite, straight-on orthographic surface with no perspective. Entire square filled edge to edge with dry stone. Painterly naturalism with intricate but restrained granular mineral structure, tiny pale quartz flecks, buff feldspar, muted rose ochre and weathered gray-violet mineral patches, small discontinuous eroded hairline fractures. Broad pale warm buff body, subtle varied mottles at medium scales, exquisite fine rough grain. Not sandstone striations, not cracked mud polygons, not lava. Absolutely flat diffuse unlit albedo, no cast shadows, no directional highlights, no ambient occlusion, no boulders or objects, no border, no text. Genuinely matching opposite edges, seamless tileable. Square texture asset 2048x2048. Save the generated artwork for use in the Wildloom project.",
+  "notes": "Mirrored 3x3 preview inspected. No assertion of mathematically matching original image edges; mirrored sampling supplies edge continuity. Synthetic material, not measured regional lithology."
+}

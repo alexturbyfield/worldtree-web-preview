@@ -1,0 +1,163 @@
+import * as T from 'three';
+import type {SceneRecipe} from './recipe';
+import {hashSeed,randomSource} from './random';
+import {sceneLibraryStudy} from './library';
+import {meadowGeometry,meadowMaterial} from './wave1-meadow-detail';
+import {rockGeometry,brushGeometry} from './savanna-recipe';
+import {forestImpostors} from './wave1-impostors';
+import {distantConiferGeometry} from '../studio/conifer-foliage';
+
+export interface ExpansionPlan {
+ id:'boreal'|'temperate'|'tundra';biome:number;seed:string;phase:number;relief:number;
+ camera:{position:[number,number,number];target:[number,number,number]};
+ inspection:{position:[number,number,number];target:[number,number,number]};
+}
+export interface ExpansionPalette {ground:[string,string,string];soil:string;air:string;sun:string;foliage:[string,string,string];texture?:string}
+export interface ExpansionBaseOptions {concept?:boolean;canopy?:boolean;groundScale?:number;sunDirection?:[number,number,number]}
+const clamp=(v:number)=>Math.max(0,Math.min(1,v));
+const smooth=(a:number,b:number,v:number)=>{const t=clamp((v-a)/(b-a));return t*t*(3-2*t);};
+export function makeExpansionPlan(id:ExpansionPlan['id'],biome:number,seed:string,relief=1):ExpansionPlan{
+ const phase=hashSeed(seed+'|'+id+'|landform')/4294967296*Math.PI*2;
+ const p:ExpansionPlan={id,biome,seed,phase,relief,camera:{position:[0,1.7,34],target:[0,2,-55]},inspection:{position:[62,38,76],target:[0,2,-24]}};
+ p.camera.position[1]=expansionHeight(p,0,34)+1.7;p.camera.target[1]=expansionHeight(p,0,-55)+(id==='tundra'?.8:3.5);return p;
+}
+export function expansionHeight(p:ExpansionPlan,x:number,z:number){
+ return p.relief*(.43*Math.sin(x*.045+p.phase)*Math.cos(z*.036-p.phase)+.21*Math.sin(z*.092+x*.021+p.phase)+.10*Math.sin(x*.13-z*.055));
+}
+/** Synthetic site-scale fields, never claimed as observed soil, moisture or elevation. */
+export function expansionFields(p:ExpansionPlan,x:number,z:number){
+ const h=expansionHeight(p,x,z),moisture=clamp(.49+.22*Math.sin(x*.041+z*.031+p.phase)-h*.10),patch=clamp(.5+.26*Math.sin(x*.16+Math.sin(z*.09+p.phase)*2.)+.19*Math.sin(z*.22-x*.08+p.phase));
+ const rock=clamp(.25+.25*Math.sin(x*.07-z*.055+p.phase)-moisture*.20),staging=(1-smooth(1.3,3.8,Math.abs(x)))*(1-smooth(4,9,Math.abs(z-26)));
+ return {height:h,moisture,rock,vegetation:patch*(.28+.72*moisture)*(1-staging*.90),staging};
+}
+/** Presentation occurrences from eligible source individuals, not a population survey. */
+export function composeExpansionForest(source:SceneRecipe,plan:ExpansionPlan,kind:'boreal'|'temperate'){
+ const birchOnly=/birch/i.test(source.ecoregion?.ECO_NAME??''),allowed=kind==='boreal'?(birchOnly?/Betula/i:/Picea|Pinus|Larix|Abies|Betula|Populus/i):/Quercus|Fagus|Acer|Fraxinus|Betula|Carpinus|Tilia/i;
+ const pool=source.trees.filter(t=>allowed.test(t.species.scientificName??'')),r=randomSource(source.seed+'|'+kind+'|stand'),trees:SceneRecipe['trees']=[];
+ const count=kind==='boreal'?(birchOnly?23:48):34;
+ for(let i=0;i<count&&pool.length;i++){
+  const conifers=pool.filter(t=>/Picea|Pinus|Larix|Abies/i.test(t.species.scientificName??'')),broad=pool.filter(t=>/Betula|Populus/i.test(t.species.scientificName??''));
+  const rolePool=kind==='boreal'&&!birchOnly?(i%7===0&&broad.length?broad:conifers.length?conifers:pool):pool;
+  const t=rolePool[i%rolePool.length],near=i<(kind==='boreal'?21:17);let x=0,z=0;
+  for(let attempt=0;attempt<100;attempt++){
+   x=near?(i%2?1:-1)*(10+r()*25):(r()-.5)*300;z=near?32-r()*85:-45-r()*240;
+   if(z>7&&Math.abs(x)<9||trees.some(o=>Math.hypot(o.position[0]-x,o.position[2]-z)<(near?6:10)))continue;break;
+  }
+  if(i<4){x=(i%2?1:-1)*(11+r()*2.5);z=28-Math.floor(i/2)*20+(r()-.5)*4;}
+  else if(i<11){x=(r()-.5)*24;z=-8-(i-4)*7-r()*7;}
+  let studio=t.studio,model=t.model,species=t.species;
+  if((kind==='boreal'&&!/Betula|Populus/i.test(t.species.scientificName??'')&&!studio)||/Betula/i.test(t.species.scientificName??'')){
+   const renderer=/Betula/i.test(t.species.scientificName??'')?'silver-birch':'douglas-v1';
+   studio=sceneLibraryStudy(renderer,t.seed,t.appearanceSeed??source.appearanceSeed,t.sizeScale??.85,{fluffiness:source.art.fluffiness??.78,clumpOverlap:source.art.clumpOverlap??.82,foliageDensity:source.art.foliageDensity,foliageDetail:source.art.foliageDetail??.65,asymmetry:source.art.asymmetry});
+   if(studio){model=studio.model;species={...species,visual:{...species.visual,rendererPresetId:renderer,fallback:true,reason:'Compatible shared genus/growth-form visual approximation; source regional taxon retained, local presence unverified'}};}
+  }
+  if(studio&&!near)studio={...studio,fronds:studio.fronds.filter(f=>f.essential||f.groupId%2===0),lod:{groupStride:2,essentialSprays:1}};
+  trees.push({...t,species,studio,model:near?model:{...model,segments:model.segments.filter(s=>s.depth<=1)},id:t.id+'-'+kind+'-presentation-'+i,index:i,position:[x,expansionHeight(plan,x,z),z],rotation:r()*Math.PI*2});
+ }
+ return {...source,trees,purpose:'visual_laboratory' as const,distribution:'Deterministic presentation stand of compatible regional source candidates; source seeds retained, local occurrence and abundance unverified',limitations:[...source.limitations,'Expansion terrain, moisture and soil fields are synthetic. Regional source candidates are not verified point occurrences.']};
+}
+
+/** Shared low-dimensional dressing, correlated by field; no named ground flora asserted. */
+export function mountExpansionDressing(scene:T.Scene,plan:ExpansionPlan,palette:ExpansionPalette,kind:'forest'|'tundra',sparse=false,load?:(path:string)=>T.Texture){
+ const r=randomSource(plan.seed+'|'+plan.id+'|floor'),group=new T.Group(),o=new T.Object3D();group.name='expansion-functional-groundcover';scene.add(group);
+ const points:{x:number;z:number;size:number}[]=[];
+ const target=kind==='tundra'?(sparse?700:3600):2100;
+ for(let attempt=0;attempt<target*10&&points.length<target;attempt++){
+  const near=r()<.72,x=(r()-.5)*(near?95:360),z=near?42-r()*115:40-r()*330,f=expansionFields(plan,x,z);
+  if(r()>f.vegetation*(kind==='forest'?.83:1)||f.staging>.25)continue;
+  points.push({x,z,size:(.40+r()*.50)*(kind==='tundra'?.85:.72)});
+ }
+ const coverGeometry=load?brushGeometry(true,true):meadowGeometry(true);
+ if(load)coverGeometry.translate(0,.16,0);
+ const coverMaterial=load?new T.MeshStandardMaterial({map:load('/assets/savanna-brush/painted-tufts-v1.webp'),alphaTest:.28,side:T.DoubleSide,roughness:1}):meadowMaterial(true);
+ if(load){const uv=coverGeometry.attributes.uv;for(let i=0;i<uv.count;i++)uv.setXY(i,uv.getX(i)*.5,uv.getY(i)*.5);
+  coverMaterial.onBeforeCompile=shader=>{shader.uniforms.exCoverBody={value:new T.Color(palette.ground[1])};shader.uniforms.exCoverTip={value:new T.Color(palette.ground[2])};shader.fragmentShader='uniform vec3 exCoverBody,exCoverTip;\n'+shader.fragmentShader;shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
+   float exBrush=dot(texture2D(map,vMapUv).rgb,vec3(.2126,.7152,.0722));
+   diffuseColor.rgb=mix(exCoverBody,exCoverTip,smoothstep(.25,.48,vMapUv.y)*.35)*clamp(.78+sqrt(max(0.,exBrush))*.5,.65,1.30);
+  `);shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_maps>','#include <normal_fragment_maps>\nnormal=normalize(mat3(viewMatrix)*vec3(0.,1.,0.)+normal*.12);');};coverMaterial.customProgramCacheKey=()=> 'expansion-rooted-brush-2|'+plan.id;}
+ const grass=new T.InstancedMesh(coverGeometry,coverMaterial,points.length);grass.name='expansion-low-unnamed-cover';
+ points.forEach((p,i)=>{const f=expansionFields(plan,p.x,p.z);o.position.set(p.x,f.height-.015,p.z);o.rotation.set(0,r()*6.283,0);o.scale.set(p.size*1.1,p.size*(kind==='tundra'?1.25:1.65),p.size*1.1);o.updateMatrix();grass.setMatrixAt(i,o.matrix);grass.setColorAt(i,new T.Color(palette.ground[1]).lerp(new T.Color(palette.ground[2]),f.vegetation*.45));});grass.receiveShadow=true;grass.computeBoundingSphere();group.add(grass);
+ const rocks:{x:number;z:number;size:number}[]=[];
+ for(let i=0;i<230;i++){const x=(r()-.5)*170,z=40-r()*210,f=expansionFields(plan,x,z);if(f.staging>.1||r()>f.rock*(sparse?1.6:1))continue;rocks.push({x,z,size:.18+r()*.64});}
+ for(const side of [-1,1])rocks.push({x:side*(5.5+r()*2),z:22+r()*4,size:.65+r()*.35});
+ const stones=new T.InstancedMesh(rockGeometry(true),new T.MeshStandardMaterial({roughness:.94}),rocks.length);stones.name='expansion-embedded-weathered-stone';rocks.forEach((p,i)=>{o.position.set(p.x,expansionHeight(plan,p.x,p.z)+p.size*.18,p.z);o.rotation.set((r()-.5)*.3,r()*6.283,(r()-.5)*.25);o.scale.set(p.size*1.4,p.size*.75,p.size);o.updateMatrix();stones.setMatrixAt(i,o.matrix);stones.setColorAt(i,new T.Color('#656b64').lerp(new T.Color('#a6a38a'),r()*.7));});stones.castShadow=stones.receiveShadow=true;stones.computeBoundingSphere();group.add(stones);
+ const leafPositions:number[]=[],leafIndices:number[]=[];
+ for(let leaf=0;leaf<9;leaf++){const a=leaf*2.399,start=leafPositions.length/3;
+  for(let row=0;row<=4;row++){const t=row/4,w=Math.sin(t*Math.PI)*(.12+leaf%3*.02),reach=t*(.45+leaf%4*.05),y=Math.sin(t*Math.PI*.8)*(.40+leaf%3*.08);
+   for(const across of [-1,0,1])leafPositions.push(Math.cos(a)*reach-Math.sin(a)*w*across,y+(1-Math.abs(across))*w*.3,Math.sin(a)*reach+Math.cos(a)*w*across);}
+  for(let row=0;row<4;row++)for(let col=0;col<2;col++){const b=start+row*3+col;leafIndices.push(b,b+1,b+3,b+1,b+4,b+3);}
+ }
+ const leafGeo=new T.BufferGeometry();leafGeo.setAttribute('position',new T.Float32BufferAttribute(leafPositions,3));leafGeo.setIndex(leafIndices);leafGeo.computeVertexNormals();
+ const leaves:{x:number;z:number;scale:number}[]=[];
+ if(!sparse)for(let i=0;i<900&&leaves.length<(kind==='forest'?280:380);i++){
+  const x=(r()-.5)*75,z=36-r()*100,f=expansionFields(plan,x,z);if(f.staging>.15||f.vegetation<.24||r()>.55)continue;leaves.push({x,z,scale:(.55+r()*.65)*(kind==='tundra'?.42:1)});
+ }
+ const shrubs=new T.InstancedMesh(leafGeo,new T.MeshStandardMaterial({side:T.DoubleSide,roughness:.95}),leaves.length);shrubs.name='expansion-unnamed-low-foliage';leaves.forEach((p,i)=>{o.position.set(p.x,expansionHeight(plan,p.x,p.z),p.z);o.rotation.set(0,r()*6.283,0);o.scale.setScalar(p.scale);o.updateMatrix();shrubs.setMatrixAt(i,o.matrix);shrubs.setColorAt(i,new T.Color(palette.foliage[1]).lerp(new T.Color(palette.foliage[2]),r()*.3));});shrubs.receiveShadow=true;shrubs.computeBoundingSphere();group.add(shrubs);
+ scene.userData.expansionDressing={instances:{lowCover:points.length,rocks:rocks.length},identity:'Unnamed low grass/sedge/shrub functional forms, not a regional flora inventory',staging:'No roots or tall dressing within the central approach field'};
+ return()=>{scene.remove(group);group.traverse(o=>{if(o instanceof T.Mesh){o.geometry.dispose();for(const m of Array.isArray(o.material)?o.material:[o.material])m.dispose();}});};
+}
+const noise=`
+float exHash(vec2 p){p=fract(p*vec2(.1031,.11369));p+=dot(p,p.yx+19.19);return fract(p.x*p.y);}
+float exNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(exHash(i),exHash(i+vec2(1,0)),f.x),mix(exHash(i+vec2(0,1)),exHash(i+vec2(1,1)),f.x),f.y);}
+`;
+
+/** Small opt-in adapter for existing renderer; protected scenes never call this. */
+export function mountExpansionBase(scene:T.Scene,recipe:SceneRecipe,plan:ExpansionPlan,sun:T.DirectionalLight,fill:T.DirectionalLight,palette:ExpansionPalette,options:ExpansionBaseOptions={}){
+ const textures:T.Texture[]=[],created:T.Mesh[]=[],group=new T.Group();group.name='expansion-'+plan.id;scene.add(group);
+ let pending=0,sealed=false,disposed=false;scene.userData.labAssetsReady=false;
+ const update=()=>{scene.userData.labAssetsReady=sealed&&pending===0;scene.userData.artRevision=(scene.userData.artRevision??0)+1;};
+ const load=(path:string)=>{pending++;const done=()=>{pending--;if(!disposed)update();};const texture=new T.TextureLoader().load(path,done,undefined,()=>{scene.userData.expansionAssetError=path;done();});texture.colorSpace=T.SRGBColorSpace;texture.wrapS=texture.wrapT=T.RepeatWrapping;texture.anisotropy=4;textures.push(texture);return texture;};
+ for(const o of scene.children)if(o instanceof T.Mesh&&['PlaneGeometry','BoxGeometry'].includes(o.geometry.type))o.visible=false;
+ const skyMap=load('/assets/puget-v1/sky-matte-v1.webp'),sky=new T.Mesh(new T.SphereGeometry(2000,40,20),new T.MeshBasicMaterial({map:skyMap,side:T.BackSide,depthWrite:false,fog:false,toneMapped:false}));sky.name='expansion-existing-sky';sky.rotation.y=.8;group.add(sky);created.push(sky);
+ const groundMap=load(palette.texture??'/assets/puget-v1/forest-floor.png');
+ const ground=new T.MeshStandardMaterial({map:groundMap,roughness:.96});
+ ground.onBeforeCompile=shader=>{
+  Object.assign(shader.uniforms,{exShade:{value:new T.Color(palette.ground[0])},exBody:{value:new T.Color(palette.ground[1])},exSun:{value:new T.Color(palette.ground[2])},exSoil:{value:new T.Color(palette.soil)}});
+  shader.vertexShader='varying vec3 exWorld;\n'+shader.vertexShader;shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nexWorld=(modelMatrix*vec4(transformed,1.)).xyz;');
+  shader.fragmentShader='varying vec3 exWorld;uniform vec3 exShade,exBody,exSun,exSoil;\n'+noise+shader.fragmentShader;
+  shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>',T.ShaderChunk.map_fragment.replaceAll('vMapUv',`exWorld.xz/${(options.groundScale??6).toFixed(2)}`));
+  shader.fragmentShader=shader.fragmentShader.replace('#include <roughnessmap_fragment>',options.concept?`
+   // Connected organic substrate with nested directional structure. Never stamp
+   // separate round color islands; the photographic/painterly map retains detail.
+   vec2 exFlow=vec2(exWorld.x*.032,exWorld.z*.048);
+   float exWarp=exNoise(exWorld.xz*.018+vec2(${plan.phase.toFixed(5)}));
+   float exShelter=exNoise(exFlow+vec2(exWarp*1.4,exWarp*.6));
+   float exFibres=exNoise(vec2(exWorld.x*.31+exWarp*2.,exWorld.z*.12));
+   float exInk=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));
+   vec3 exPigment=mix(exBody,exShade,smoothstep(.30,.80,exShelter)*.55);
+   exPigment=mix(exPigment,exSoil,smoothstep(.42,.76,exFibres)*.26);
+   exPigment=mix(exPigment,exSun,smoothstep(.56,.82,exNoise(exWorld.xz*.022+exWarp))*.18);
+   diffuseColor.rgb=exPigment*clamp(.57+sqrt(max(exInk,0.))*.92,.55,1.16);
+   #include <roughnessmap_fragment>
+  `:`
+   float exBroad=exNoise(exWorld.xz*.075+vec2(${plan.phase.toFixed(5)})),exMeso=exNoise(exWorld.xz*.37+exBroad*2.);
+   float exInk=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));
+   vec3 exPigment=mix(exShade,exBody,smoothstep(.12,.72,exBroad));
+   exPigment=mix(exPigment,exSun,smoothstep(.57,.88,exMeso)*.4);
+   exPigment=mix(exPigment,exSoil,smoothstep(.68,.87,exNoise(exWorld.xz*.21))*.45);
+   diffuseColor.rgb=exPigment*clamp(.58+sqrt(max(exInk,0.))*1.15,.55,1.5);
+   #include <roughnessmap_fragment>
+  `);
+ };ground.customProgramCacheKey=()=> 'wave2-shared-ground-2|'+plan.id+'|'+!!options.concept;
+ for(const [size,steps,hole]of [[120,160,0],[400,100,60],[2600,130,200]] as const){
+  const g=new T.PlaneGeometry(size,size,steps,steps);g.rotateX(-Math.PI/2);const a=g.attributes.position;for(let i=0;i<a.count;i++)a.setY(i,expansionHeight(plan,a.getX(i),a.getZ(i)));
+  if(hole){const indices:number[]=[],ix=g.index!;for(let i=0;i<ix.count;i+=3){const ids=[ix.getX(i),ix.getX(i+1),ix.getX(i+2)],x=ids.reduce((s,j)=>s+a.getX(j),0)/3,z=ids.reduce((s,j)=>s+a.getZ(j),0)/3;if(Math.abs(x)<hole&&Math.abs(z)<hole)continue;indices.push(...ids);}g.setIndex(indices);}
+  g.computeVertexNormals();const mesh=new T.Mesh(g,ground);mesh.name='expansion-terrain';mesh.receiveShadow=true;group.add(mesh);created.push(mesh);
+ }
+ sun.position.fromArray(options.sunDirection??[-42,46,20]);sun.target.position.set(0,2,-14);scene.add(sun.target);sun.color.set(palette.sun);sun.intensity=plan.id==='tundra'?3.1:3.5;sun.shadow.intensity=.73;sun.shadow.normalBias=options.concept?.035:.10;
+ fill.color.set('#97b8ce');fill.intensity=.27;scene.children.forEach(o=>{if(o instanceof T.HemisphereLight){o.color.set('#a4c6df');o.groundColor.set(palette.ground[1]);o.intensity=.70;}});
+ scene.fog=new T.Fog(palette.air,plan.id==='tundra'?180:110,plan.id==='tundra'?1300:650);
+ scene.userData.wave1={id:plan.id,biome:plan.biome,version:'global-expansion-prototype-1',plan:{...plan,eye:plan.camera.position,target:plan.camera.target},presentation:{foliageAtmosphere:{near:95,far:420,strength:.55,color:palette.air}},trees:recipe.trees.length,ecology:'Regional catalogue candidates or explicit functional forms; local occurrence unverified',layers:{season:'independent reference state, unresolved',weather:'clear visual study',timeOfDay:'warm directional reference state'}};
+ scene.userData.recipeEye=plan.camera;scene.userData.expansionPlan={...plan,fieldEvidence:'synthetic art fields, not measured terrain/hydrology'};scene.userData.recipeShadowDirty=true;
+ const hasConifers=recipe.trees.some(t=>t.studio?.kind==='conifer');
+ const preferred=recipe.trees.find(t=>!!t.studio)??recipe.trees[0];
+ const continuation=options.canopy!==false&&plan.id!=='tundra'&&!(plan.id==='boreal'&&hasConifers)&&preferred?.studio?forestImpostors(scene,{...recipe,trees:[preferred]},'flooded',{eye:plan.camera.position,seed:plan.seed,height:(x,z)=>expansionHeight(plan,x,z),count:600}):()=>{};
+ if(options.canopy!==false&&plan.id==='boreal'&&hasConifers){
+  const farR=randomSource(plan.seed+'|boreal-continuation'),far=new T.InstancedMesh(distantConiferGeometry(),new T.MeshStandardMaterial({color:palette.foliage[1],roughness:1,side:T.DoubleSide}),480),o=new T.Object3D();far.name='expansion-distant-conifer-forms';
+  for(let i=0;i<far.count;i++){let x=(farR()-.5)*740,z=38-farR()*620;if(Math.hypot(x,z-34)<90)z-=130;o.position.set(x,expansionHeight(plan,x,z),z);o.rotation.set(0,farR()*6.283,0);o.scale.set(4+farR()*3,13+farR()*10,4+farR()*3);o.updateMatrix();far.setMatrixAt(i,o.matrix);}far.computeBoundingSphere();group.add(far);created.push(far);
+ }
+ const previous=scene.onBeforeRender;let graded=false;
+ scene.onBeforeRender=function(...args){previous.apply(this,args);if(graded)return;graded=true;const seen=new Set<T.Material>();scene.traverse(o=>{if(!(o instanceof T.Mesh))return;for(const material of Array.isArray(o.material)?o.material:[o.material]){if(seen.has(material))continue;seen.add(material);if(material instanceof T.ShaderMaterial&&material.uniforms.shadowPigment){material.uniforms.shadowPigment.value.set(palette.foliage[0]);material.uniforms.midPigment.value.set(palette.foliage[1]);material.uniforms.highPigment.value.set(palette.foliage[2]);material.uniforms.rimStrength.value=.22;material.uniforms.gradientStrength.value=.55;material.uniforms.sage.value=0;}}});};
+ return {load,finish:()=>{sealed=true;update();},dispose:()=>{disposed=true;continuation();textures.forEach(t=>t.dispose());scene.remove(group);created.forEach(o=>{o.geometry.dispose();for(const m of Array.isArray(o.material)?o.material:[o.material])m.dispose();});}};
+}
+

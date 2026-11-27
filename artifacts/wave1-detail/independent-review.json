@@ -1,0 +1,110 @@
+{
+  "reviewer": "Independent visual-review subagent /root/detail_visual_review",
+  "role": "Critique only; did not implement candidates; did not inspect implementation or parent technical explanations.",
+  "actualVisualInterpretationAvailable": true,
+  "method": "Inspected all twelve images directly using view_image: three supplied concepts, three original hero baselines, and six r5 hero/inspection captures.",
+  "humanApproval": null,
+  "approvalContext": "Original large layouts were approved for development, not final biome approval. This review supplies agent judgments only.",
+  "comparisonCaveat": "Current and original hero framing/sky differ visibly, especially in the wet biomes. These are useful qualitative environment comparisons, not a controlled same-camera material A/B; no topology-change inference is made.",
+  "imagesInspected": [
+    ".codex-attachments/e97cc808-5cc4-4a8d-8112-5971ec4a638c/d8c2f236-d851-4cee-8b7d-e90370ec72a3/1000011078.png",
+    ".codex-attachments/e97cc808-5cc4-4a8d-8112-5971ec4a638c/f7213038-9a0f-4c0c-b3da-323d6cd7bfec/1000011080.png",
+    ".codex-attachments/e97cc808-5cc4-4a8d-8112-5971ec4a638c/38620747-464e-4437-a47d-8842aa806c4f/1000011079.png",
+    "artifacts/wave1-rebuild/desert-29-hero.png",
+    "artifacts/wave1-rebuild/mangrove-29-hero.png",
+    "artifacts/wave1-rebuild/flooded-29-hero.png",
+    "artifacts/visual-quality/wave1-detail-r5/desert-hero.png",
+    "artifacts/visual-quality/wave1-detail-r5/desert-inspection.png",
+    "artifacts/visual-quality/wave1-detail-r5/mangrove-hero.png",
+    "artifacts/visual-quality/wave1-detail-r5/mangrove-inspection.png",
+    "artifacts/visual-quality/wave1-detail-r5/flooded-hero.png",
+    "artifacts/visual-quality/wave1-detail-r5/flooded-inspection.png"
+  ],
+  "biomes": {
+    "desert": {
+      "visibleImprovements": [
+        "Sand now has subtle grain and broad color variation instead of a uniform orange plane.",
+        "Rocks have visible mottling and fracture-like marks, with scattered small stones adding scale cues."
+      ],
+      "readsAsDevelopingEnvironment": "Partially: recognizable desert terrain with useful material development, but the hero remains dominated by an almost empty foreground.",
+      "betterThanBaseline": true,
+      "goodEnoughToApprove": false,
+      "highestImpactGaps": [
+        {
+          "severity": "major",
+          "visibleEvidence": "Hero foreground is a broad nearly featureless sand sheet; scattered dark flecks are too small to read as vegetation. The concept has legible dry grass, shrubs and succulents concentrated around rock groups.",
+          "causeHypothesis": "Vegetation silhouettes and clustered medium-scale detail may be too sparse or small for this camera."
+        },
+        {
+          "severity": "major",
+          "visibleEvidence": "Large hero rocks retain broad angular faces and shallow surface marks. Concept rocks show varied rounded masses, broken edges and crevice shadow; current inspection rocks are consistently faceted.",
+          "causeHypothesis": "Surface color detail alone may be unable to overcome the simple rock silhouette and face structure."
+        },
+        {
+          "severity": "minor",
+          "visibleEvidence": "Inspection view exposes large pale/tan ground patches with soft generalized boundaries, whereas the concept's substrate detail is smaller and tied to stones, runoff and plant bases.",
+          "causeHypothesis": "Broad substrate variation may need more local association with visible features."
+        }
+      ],
+      "mostUsefulNextCorrection": "Add one restrained, readable dry vegetation construction in irregular clusters at existing rock bases and foreground edges; preserve the central open sand and existing topology.",
+      "decision": "Retain material improvement as development progress; do not treat this as final visual approval."
+    },
+    "mangrove": {
+      "visibleImprovements": [
+        "Hero now contains a substantial clearly reflective water opening instead of a thin partly obscured water strip.",
+        "Foreground soil has mottled tonal detail and nearby plant silhouettes; roots and tree reflections make the wetland identity legible."
+      ],
+      "readsAsDevelopingEnvironment": "Yes: it now reads as a developing mangrove environment, though still sparse and visibly procedural.",
+      "betterThanBaseline": true,
+      "goodEnoughToApprove": false,
+      "highestImpactGaps": [
+        {
+          "severity": "major",
+          "visibleEvidence": "Hero soil-water boundary is visually clean and abrupt, with a broad bare brown foreground. Concept has damp irregular shore texture, root debris, small pools and vegetation transitioning into water.",
+          "causeHypothesis": "Missing shoreline-scale material and vegetation transitions may make existing banks read as cutouts."
+        },
+        {
+          "severity": "major",
+          "visibleEvidence": "Far-bank trees remain separate round crowns with substantial sky gaps; foreground roots are thin repeated lines. The concept has interlocking dark canopy masses and thick tangled root bases.",
+          "causeHypothesis": "Crown/root silhouette scale and local grouping may be insufficient to create a dense mangrove enclosure."
+        },
+        {
+          "severity": "major",
+          "visibleEvidence": "Water reads as a smooth bright mirror, with small regular bands visible in the inspection capture. The concept contains broken reflections, shallow muddy margins and scattered surface interruptions.",
+          "causeHypothesis": "Reflection breakup and near-shore depth/contact cues may be too weak or too regular."
+        }
+      ],
+      "mostUsefulNextCorrection": "Develop a narrow damp shoreline band with irregular small plant/root debris clusters and broken shallow reflections along existing water edges, without moving the banks.",
+      "decision": "Retain the more visible water and soil detail. Environment development is clear; substantial reference gaps remain."
+    },
+    "flooded": {
+      "visibleImprovements": [
+        "Hero now clearly displays reflective water between grassy land masses; the baseline read mostly as dry flat ground.",
+        "Large foreground grass clusters frame an open approach, and ground variation gives more material identity than the flat baseline."
+      ],
+      "readsAsDevelopingEnvironment": "Yes: the flooded-grassland identity is now apparent in both hero and inspection views.",
+      "betterThanBaseline": true,
+      "goodEnoughToApprove": false,
+      "highestImpactGaps": [
+        {
+          "severity": "major",
+          "visibleEvidence": "Foreground grasses form chunky, flat-looking angular blades in similar olive tones. The concept has finer curved overlapping leaves, luminous tips and darker self-shadowed bases.",
+          "causeHypothesis": "Blade silhouette, curvature and within-clump shading may be limiting detail more than density."
+        },
+        {
+          "severity": "major",
+          "visibleEvidence": "Inspection view reveals extensive mostly bare green islands with sparse small plant dots; concept water channels weave through dense grassy hummocks. Hero foreground also has a large smooth dark patch.",
+          "causeHypothesis": "Vegetation may lack coherent mid-scale patches and damp substrate transitions across the existing islands."
+        },
+        {
+          "severity": "major",
+          "visibleEvidence": "Water has very clean bank outlines and broad mirror reflections, with repetitive bands in inspection. Concept water is interrupted by reeds, small ripples and shallow muddy contact zones.",
+          "causeHypothesis": "Near-water vegetation and irregular reflection/contact breakup may be insufficient."
+        }
+      ],
+      "mostUsefulNextCorrection": "Improve one curved grass-clump representation and use it in irregular groups along existing island margins, with smaller interstitial tufts and darker damp bases; preserve open water and topology.",
+      "decision": "Retain the water visibility and stronger foreground framing; develop vegetation representation before declaring this visually convincing."
+    }
+  },
+  "overall": "All three candidates visibly improve on their structural baselines. Wet-biome water visibility is a meaningful improvement. None approaches the supplied concepts closely enough for final visual approval; material marks currently outpace coherent vegetation and shoreline detail. No structural rebuild is recommended from this review."
+}

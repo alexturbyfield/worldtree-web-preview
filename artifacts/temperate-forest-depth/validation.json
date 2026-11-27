@@ -1,0 +1,200 @@
+{
+  "date": "2026-11-27T04:19:29.774Z",
+  "sourceFreezeIntact": true,
+  "holdout": "9182743",
+  "renderErrors": [],
+  "protected": [
+    {
+      "name": "puget-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "rainforest-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "rainforest-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "savanna-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "savanna-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "alpine-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "alpine-inspection",
+      "pixelIdentical": true
+    }
+  ],
+  "performance": [
+    {
+      "seed": "29",
+      "calls": [
+        12,
+        15
+      ],
+      "triangles": [
+        788238,
+        942962
+      ],
+      "textureRGBAWithMipEstimateBytes": [
+        23086795,
+        37766859
+      ],
+      "cpuSubmissionMs": [
+        0.30000001192092896,
+        0.5,
+        0.3999999761581421
+      ],
+      "cameraAndLightsMatch": true,
+      "beforeImage": {
+        "lowerCanopyBlueFraction": 0.04782366071428571,
+        "nearBlackFraction": 0.03719308035714286,
+        "meanDisplayLuminance": 0.3858356206889117,
+        "region": "x10-90%, y48-64%; heuristic holes/shadow diagnostic only, not aesthetic approval"
+      },
+      "afterImage": {
+        "lowerCanopyBlueFraction": 0,
+        "nearBlackFraction": 0.026478794642857142,
+        "meanDisplayLuminance": 0.32169094513744423,
+        "region": "x10-90%, y48-64%; heuristic holes/shadow diagnostic only, not aesthetic approval"
+      }
+    },
+    {
+      "seed": "41",
+      "calls": [
+        12,
+        15
+      ],
+      "triangles": [
+        805166,
+        968442
+      ],
+      "textureRGBAWithMipEstimateBytes": [
+        23086795,
+        37766859
+      ],
+      "cpuSubmissionMs": [
+        0.40000003576278687,
+        0.30000001192092896,
+        0.2999999523162842
+      ],
+      "cameraAndLightsMatch": true,
+      "beforeImage": {
+        "lowerCanopyBlueFraction": 0.03646763392857143,
+        "nearBlackFraction": 0.05217633928571429,
+        "meanDisplayLuminance": 0.3515159411764628,
+        "region": "x10-90%, y48-64%; heuristic holes/shadow diagnostic only, not aesthetic approval"
+      },
+      "afterImage": {
+        "lowerCanopyBlueFraction": 0,
+        "nearBlackFraction": 0.03138950892857143,
+        "meanDisplayLuminance": 0.30340100402660525,
+        "region": "x10-90%, y48-64%; heuristic holes/shadow diagnostic only, not aesthetic approval"
+      }
+    }
+  ],
+  "staging": [
+    {
+      "seed": "29",
+      "view": "hero",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "seed": "29",
+      "view": "inspection",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "seed": "41",
+      "view": "hero",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "seed": "41",
+      "view": "inspection",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "seed": "9182743",
+      "view": "hero",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "seed": "9182743",
+      "view": "inspection",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "seed": "29",
+      "view": "hero",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    {
+      "seed": "29",
+      "view": "inspection",
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    }
+  ],
+  "limitations": [
+    "Headless software capture; no mobile GPU/alpha-overdraw approval",
+    "Pixel ratios/luminance are heuristic diagnostics",
+    "Unmeasured regeneration/species abundance; source-linked presentation only",
+    "Inspection exposes card layering and the wider undressed terrain"
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "id": "temperate-forest-depth-2026-11-26",
+  "date": "2026-11-27T04:20:36.353019+00:00",
+  "reviewer": "Primary agent; actual visual-content interpretation. No independent reviewer used.",
+  "humanApproval": null,
+  "reference": "visual-lab/global-expansion/references/wave2-concept-sheet.png",
+  "baseline": "artifacts\\temperate-forest-depth\\before\\source.json",
+  "frozenSource": "artifacts\\temperate-forest-depth\\freeze.json",
+  "diagnosis": "artifacts\\temperate-forest-depth\\diagnosis.json",
+  "validation": "artifacts\\temperate-forest-depth\\validation.json",
+  "iterations": [
+    {
+      "id": "palette-only",
+      "hypothesis": "Reduce broad lime illumination, retain selective upper/exterior accents",
+      "evidence": "candidate/temperate-29-hero.png",
+      "decision": "retain as component; alone does not solve separated horizontal bands"
+    },
+    {
+      "id": "mixed-height-depth",
+      "hypothesis": "Low regeneration plus mixed-height source-baked stands close the repeated clear-trunk gap",
+      "evidence": "depth-candidate/temperate-29-hero.png",
+      "decision": "revise; silhouettes close the opening, but first bake reads as black curtain"
+    },
+    {
+      "id": "depth-pigment",
+      "hypothesis": "Brighter source bake, neutral instance pigment and distance-limited blue-green blending reveal layered silhouettes without foreground fog",
+      "evidence": "depth-refined/temperate-29-hero.png",
+      "decision": "retain provisionally; lower horizon holes gone and depth readable in seeds 29 and 41"
+    }
+  ],
+  "holdout": {
+    "seed": "9182743",
+    "generatedAfterFreeze": true,
+    "recipeRetunedAfterHoldout": false,
+    "evidence": "holdout/temperate-9182743-hero.png",
+    "critique": "Enclosure and staging retained, no bright stripe; tree scaffolds and fern geometry still visibly artificial."
+  },
+  "rotated": {
+    "evidence": "rotated/temperate-29-hero.png",
+    "critique": "Continuous forest blocks the horizon; side view still exposes an undressed brown floor and recognizably repeated tree-patch silhouettes."
+  },
+  "remainingDefects": [
+    {
+      "severity": "major",
+      "defect": "Leaf sprays and exposed horizontal branching remain graphic/flat rather than naturally intricate."
+    },
+    {
+      "severity": "major",
+      "defect": "Foreground fern silhouettes are large, bright and faceted; ground-to-understory variation remains weaker than concept."
+    },
+    {
+      "severity": "minor",
+      "defect": "Source-baked patches approximate parallax and fixed-key lighting; inspection reveals the synthetic stand and layered cards."
+    }
+  ],
+  "rules": [
+    {
+      "id": "mixed-height-forest-continuation",
+      "status": "experimentally supported",
+      "principle": "Forest enclosure requires vertically overlapping low, intermediate and upper foliage rather than an isolated tree repeated at the horizon.",
+      "referenceEvidence": "Concept has no continuous bright strip beneath crowns.",
+      "renderEvidence": [
+        "before/temperate-29-hero.png",
+        "depth-refined/temperate-29-hero.png",
+        "depth-refined/temperate-41-hero.png"
+      ],
+      "implementation": "Source-linked saplings plus layered mixed-height stands baked with existing foliage renderer.",
+      "portability": "Height/overlap/ground anchoring principle reusable; palette, densities and taxa remain biome-specific."
+    },
+    {
+      "id": "selective-crown-luminance",
+      "status": "experimentally supported",
+      "principle": "Quiet green interiors allow small upper/exterior highlights to carry attention.",
+      "referenceEvidence": "Concept concentrates warm light in openings, retains rich shaded foliage.",
+      "renderEvidence": [
+        "before/temperate-29-hero.png",
+        "candidate/temperate-29-hero.png"
+      ],
+      "implementation": "Temperate-only lower rim, restrained pigments and weaker selective crown highlight.",
+      "limitation": "Current broadleaf/fern representation still too flat; no universal or human-approved palette rule."
+    }
+  ],
+  "approval": "Agent provisional retention only; not promoted globally, committed, pushed or deployed."
+}

@@ -1,0 +1,1199 @@
+{
+  "frames": [
+    {
+      "id": "mangrove",
+      "seed": 29,
+      "baseline": true,
+      "url": "http://localhost:3002/explore?lat=25.2&lon=-80.9&habitat=coastal&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&camera=human&wave1=baseline",
+      "file": "artifacts/wave1-mangrove/baseline-matched-hero.png",
+      "view": "hero",
+      "wave1": null,
+      "assetError": null,
+      "submissions": [
+        {
+          "frame": 6,
+          "calls": 4,
+          "triangles": 322748,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 7,
+          "calls": 4,
+          "triangles": 322748,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 8,
+          "calls": 4,
+          "triangles": 322748,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "cpuSubmissionMs": [
+        0.20000001788139343,
+        0.19999998807907104,
+        0.20000001788139343
+      ],
+      "instances": [],
+      "camera": {
+        "position": [
+          0,
+          2.05,
+          31
+        ],
+        "target": [
+          -2,
+          2,
+          -35
+        ]
+      },
+      "renderer": "WebKit WebGL",
+      "renderSettings": {
+        "exposure": 1.12,
+        "toneMapping": 4,
+        "pixelRatio": 1
+      },
+      "textureObjects": 5,
+      "geometryObjects": 4,
+      "errors": [],
+      "findings": [],
+      "lowerHalfNearBlackFraction": 0
+    },
+    {
+      "id": "mangrove",
+      "seed": 29,
+      "baseline": true,
+      "url": "http://localhost:3002/explore?lat=25.2&lon=-80.9&habitat=coastal&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&camera=human&wave1=baseline",
+      "file": "artifacts/wave1-mangrove/baseline-matched-inspection.png",
+      "view": "inspection",
+      "wave1": null,
+      "assetError": null,
+      "submissions": [
+        {
+          "frame": 12,
+          "calls": 4,
+          "triangles": 685232,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 13,
+          "calls": 4,
+          "triangles": 685232,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 14,
+          "calls": 4,
+          "triangles": 685232,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "cpuSubmissionMs": [
+        0.19999998807907104,
+        0.20000001788139343,
+        0.09999999403953552
+      ],
+      "instances": [],
+      "camera": {
+        "position": [
+          70,
+          50,
+          85
+        ],
+        "target": [
+          0,
+          1,
+          -25
+        ]
+      },
+      "renderer": "WebKit WebGL",
+      "renderSettings": {
+        "exposure": 1.12,
+        "toneMapping": 4,
+        "pixelRatio": 1
+      },
+      "textureObjects": 5,
+      "geometryObjects": 6,
+      "errors": [],
+      "findings": [],
+      "lowerHalfNearBlackFraction": 0
+    },
+    {
+      "id": "desert",
+      "seed": 29,
+      "baseline": false,
+      "url": "http://localhost:3001/explore?lat=34&lon=-116.15&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&camera=human&wave1=desert",
+      "file": "artifacts/wave1/desert-29-hero.png",
+      "view": "hero",
+      "wave1": {
+        "id": "desert",
+        "biome": 13,
+        "seed": "29",
+        "rocks": 213,
+        "understoryInstances": 420,
+        "ecology": "Only unnamed xeric_shrub growth form from resolver; no Joshua-tree presence asserted. Synthetic geology, not local DEM.",
+        "season": "not inferred",
+        "weather": "clear presentation layer",
+        "timeOfDay": "warm oblique lighting presentation layer"
+      },
+      "assetError": null,
+      "submissions": [
+        {
+          "frame": 7,
+          "calls": 9,
+          "triangles": 285316,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 8,
+          "calls": 9,
+          "triangles": 285316,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 9,
+          "calls": 9,
+          "triangles": 285316,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "cpuSubmissionMs": [
+        0.30000001192092896,
+        0.30000001192092896,
+        0.09999999403953552
+      ],
+      "instances": [
+        {
+          "name": "desert-weathered-granite",
+          "count": 38,
+          "visible": true,
+          "trianglesPerInstance": 320
+        },
+        {
+          "name": "desert-weathered-granite",
+          "count": 70,
+          "visible": true,
+          "trianglesPerInstance": 320
+        },
+        {
+          "name": "desert-weathered-granite",
+          "count": 105,
+          "visible": true,
+          "trianglesPerInstance": 320
+        },
+        {
+          "name": "desert-resolver-xeric-shrub-form",
+          "count": 420,
+          "visible": true,
+          "trianglesPerInstance": 333
+        }
+      ],
+      "camera": {
+        "position": [
+          0,
+          0.8472590633566935,
+          34
+        ],
+        "target": [
+          1,
+          3.8993136550023424,
+          -90
+        ]
+      },
+      "renderer": "WebKit WebGL",
+      "renderSettings": {
+        "exposure": 1.12,
+        "toneMapping": 4,
+        "pixelRatio": 1
+      },
+      "textureObjects": 4,
+      "geometryObjects": 9,
+      "errors": [],
+      "findings": [],
+      "lowerHalfNearBlackFraction": 0.019782986111111112
+    },
+    {
+      "id": "desert",
+      "seed": 29,
+      "baseline": false,
+      "url": "http://localhost:3001/explore?lat=34&lon=-116.15&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&camera=human&wave1=desert",
+      "file": "artifacts/wave1/desert-29-inspection.png",
+      "view": "inspection",
+      "wave1": {
+        "id": "desert",
+        "biome": 13,
+        "seed": "29",
+        "rocks": 213,
+        "understoryInstances": 420,
+        "ecology": "Only unnamed xeric_shrub growth form from resolver; no Joshua-tree presence asserted. Synthetic geology, not local DEM.",
+        "season": "not inferred",
+        "weather": "clear presentation layer",
+        "timeOfDay": "warm oblique lighting presentation layer"
+      },
+      "assetError": null,
+      "submissions": [
+        {
+          "frame": 12,
+          "calls": 9,
+          "triangles": 285316,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 13,
+          "calls": 9,
+          "triangles": 285316,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 14,
+          "calls": 9,
+          "triangles": 285316,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "cpuSubmissionMs": [
+        0.4000000059604645,
+        0.29999998211860657,
+        0.20000001788139343
+      ],
+      "instances": [
+        {
+          "name": "desert-weathered-granite",
+          "count": 38,
+          "visible": true,
+          "trianglesPerInstance": 320
+        },
+        {
+          "name": "desert-weathered-granite",
+          "count": 70,
+          "visible": true,
+          "trianglesPerInstance": 320
+        },
+        {
+          "name": "desert-weathered-granite",
+          "count": 105,
+          "visible": true,
+          "trianglesPerInstance": 320
+        },
+        {
+          "name": "desert-resolver-xeric-shrub-form",
+          "count": 420,
+          "visible": true,
+          "trianglesPerInstance": 333
+        }
+      ],
+      "camera": {
+        "position": [
+          70,
+          50,
+          85
+        ],
+        "target": [
+          0,
+          1,
+          -25
+        ]
+      },
+      "renderer": "WebKit WebGL",
+      "renderSettings": {
+        "exposure": 1.12,
+        "toneMapping": 4,
+        "pixelRatio": 1
+      },
+      "textureObjects": 4,
+      "geometryObjects": 9,
+      "errors": [],
+      "findings": [],
+      "lowerHalfNearBlackFraction": 0.0023697916666666667
+    },
+    {
+      "id": "mangrove",
+      "seed": 29,
+      "baseline": false,
+      "url": "http://localhost:3001/explore?lat=25.2&lon=-80.9&habitat=coastal&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&camera=human&wave1=mangrove",
+      "file": "artifacts/wave1-mangrove/final-29-hero.png",
+      "view": "hero",
+      "wave1": {
+        "id": "mangrove",
+        "biome": 14,
+        "version": "mangrove-1",
+        "trees": 36,
+        "eligibleSpecies": [
+          "Rhizophora mangle"
+        ],
+        "shoreInstances": 339,
+        "farCanopyInstances": 46,
+        "layers": {
+          "season": "existing unresolved ecological input; no forced flowering",
+          "weather": "clear reference study, no weather simulation",
+          "timeOfDay": {
+            "sun": [
+              -28,
+              38,
+              8
+            ],
+            "color": "#ffe4ae",
+            "intensity": 2.7
+          },
+          "tide": {
+            "waterY": 0.29,
+            "source": "synthetic art state, no tidal observation"
+          }
+        },
+        "reflection": {
+          "type": "planar render-target mirror",
+          "resolution": [
+            512,
+            256
+          ],
+          "limitations": "One extra scene render; mirror softened only by tint/ripple, no depth-aware refraction."
+        },
+        "evidence": "Regionally native candidates only; local occurrence unverified",
+        "terrain": "Synthetic tidal field; not measured hydrology"
+      },
+      "assetError": null,
+      "submissions": [
+        {
+          "frame": 16,
+          "calls": 15,
+          "triangles": 1535238,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 18,
+          "calls": 15,
+          "triangles": 1535238,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 20,
+          "calls": 15,
+          "triangles": 1535238,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "cpuSubmissionMs": [
+        0.7000000178813934,
+        0.5999999940395355,
+        0.5
+      ],
+      "instances": [
+        {
+          "name": "mangrove-shore-root-debris",
+          "count": 339,
+          "visible": true,
+          "trianglesPerInstance": 10
+        },
+        {
+          "name": "mangrove-distant-canopy-masses",
+          "count": 46,
+          "visible": true,
+          "trianglesPerInstance": 144
+        }
+      ],
+      "camera": {
+        "position": [
+          0,
+          2.05,
+          31
+        ],
+        "target": [
+          -2,
+          2,
+          -35
+        ]
+      },
+      "renderer": "WebKit WebGL",
+      "renderSettings": {
+        "exposure": 1.12,
+        "toneMapping": 4,
+        "pixelRatio": 1
+      },
+      "textureObjects": 8,
+      "geometryObjects": 8,
+      "errors": [],
+      "findings": [],
+      "lowerHalfNearBlackFraction": 0.021076388888888888
+    },
+    {
+      "id": "mangrove",
+      "seed": 29,
+      "baseline": false,
+      "url": "http://localhost:3001/explore?lat=25.2&lon=-80.9&habitat=coastal&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&camera=human&wave1=mangrove",
+      "file": "artifacts/wave1-mangrove/final-29-inspection.png",
+      "view": "inspection",
+      "wave1": {
+        "id": "mangrove",
+        "biome": 14,
+        "version": "mangrove-1",
+        "trees": 36,
+        "eligibleSpecies": [
+          "Rhizophora mangle"
+        ],
+        "shoreInstances": 339,
+        "farCanopyInstances": 46,
+        "layers": {
+          "season": "existing unresolved ecological input; no forced flowering",
+          "weather": "clear reference study, no weather simulation",
+          "timeOfDay": {
+            "sun": [
+              -28,
+              38,
+              8
+            ],
+            "color": "#ffe4ae",
+            "intensity": 2.7
+          },
+          "tide": {
+            "waterY": 0.29,
+            "source": "synthetic art state, no tidal observation"
+          }
+        },
+        "reflection": {
+          "type": "planar render-target mirror",
+          "resolution": [
+            512,
+            256
+          ],
+          "limitations": "One extra scene render; mirror softened only by tint/ripple, no depth-aware refraction."
+        },
+        "evidence": "Regionally native candidates only; local occurrence unverified",
+        "terrain": "Synthetic tidal field; not measured hydrology"
+      },
+      "assetError": null,
+      "submissions": [
+        {
+          "frame": 26,
+          "calls": 15,
+          "triangles": 1535238,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 28,
+          "calls": 15,
+          "triangles": 1535238,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 30,
+          "calls": 15,
+          "triangles": 1535238,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "cpuSubmissionMs": [
+        1,
+        1,
+        1
+      ],
+      "instances": [
+        {
+          "name": "mangrove-shore-root-debris",
+          "count": 339,
+          "visible": true,
+          "trianglesPerInstance": 10
+        },
+        {
+          "name": "mangrove-distant-canopy-masses",
+          "count": 46,
+          "visible": true,
+          "trianglesPerInstance": 144
+        }
+      ],
+      "camera": {
+        "position": [
+          70,
+          50,
+          85
+        ],
+        "target": [
+          0,
+          1,
+          -25
+        ]
+      },
+      "renderer": "WebKit WebGL",
+      "renderSettings": {
+        "exposure": 1.12,
+        "toneMapping": 4,
+        "pixelRatio": 1
+      },
+      "textureObjects": 8,
+      "geometryObjects": 8,
+      "errors": [],
+      "findings": [],
+      "lowerHalfNearBlackFraction": 0.001857638888888889
+    },
+    {
+      "id": "flooded",
+      "seed": 29,
+      "baseline": false,
+      "url": "http://localhost:3001/explore?lat=26.209957419&lon=-80.9383825925&habitat=wetland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&camera=human&wave1=flooded",
+      "file": "artifacts/wave1/flooded-29-hero.png",
+      "view": "hero",
+      "wave1": {
+        "id": "flooded",
+        "version": "flooded-3",
+        "biome": 9,
+        "ecoregion": 581,
+        "seed": "29",
+        "treeCount": 0,
+        "sedgeInstances": [
+          3000,
+          2700
+        ],
+        "reflection": "Reflected sky lookup with subtle ripples; no planar geometry or tree reflection.",
+        "ecology": "Unnamed open-groundcover sedge/grass forms; no confirmed local taxon inferred.",
+        "layers": {
+          "season": "inherited/not inferred",
+          "weather": "fixed clear study",
+          "timeOfDay": "fixed warm directional study"
+        },
+        "limitations": [
+          "Synthetic wetland microtopography, not surveyed hydrology.",
+          "Far marsh simplified; no tree islands inserted without source palette."
+        ]
+      },
+      "assetError": null,
+      "submissions": [
+        {
+          "frame": 7,
+          "calls": 6,
+          "triangles": 469378,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 8,
+          "calls": 6,
+          "triangles": 469378,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 9,
+          "calls": 6,
+          "triangles": 469378,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "cpuSubmissionMs": [
+        0.19999998807907104,
+        0.30000001192092896,
+        0.29999998211860657
+      ],
+      "instances": [
+        {
+          "name": "wave1-flooded-sedges",
+          "count": 3000,
+          "visible": true,
+          "trianglesPerInstance": 104
+        },
+        {
+          "name": "wave1-flooded-distant-sedges",
+          "count": 2700,
+          "visible": true,
+          "trianglesPerInstance": 20
+        }
+      ],
+      "camera": {
+        "position": [
+          -18,
+          1.6941562907697951,
+          34
+        ],
+        "target": [
+          2,
+          1.1,
+          -140
+        ]
+      },
+      "renderer": "WebKit WebGL",
+      "renderSettings": {
+        "exposure": 1.12,
+        "toneMapping": 4,
+        "pixelRatio": 1
+      },
+      "textureObjects": 5,
+      "geometryObjects": 6,
+      "errors": [],
+      "findings": [],
+      "lowerHalfNearBlackFraction": 0
+    },
+    {
+      "id": "flooded",
+      "seed": 29,
+      "baseline": false,
+      "url": "http://localhost:3001/explore?lat=26.209957419&lon=-80.9383825925&habitat=wetland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&camera=human&wave1=flooded",
+      "file": "artifacts/wave1/flooded-29-inspection.png",
+      "view": "inspection",
+      "wave1": {
+        "id": "flooded",
+        "version": "flooded-3",
+        "biome": 9,
+        "ecoregion": 581,
+        "seed": "29",
+        "treeCount": 0,
+        "sedgeInstances": [
+          3000,
+          2700
+        ],
+        "reflection": "Reflected sky lookup with subtle ripples; no planar geometry or tree reflection.",
+        "ecology": "Unnamed open-groundcover sedge/grass forms; no confirmed local taxon inferred.",
+        "layers": {
+          "season": "inherited/not inferred",
+          "weather": "fixed clear study",
+          "timeOfDay": "fixed warm directional study"
+        },
+        "limitations": [
+          "Synthetic wetland microtopography, not surveyed hydrology.",
+          "Far marsh simplified; no tree islands inserted without source palette."
+        ]
+      },
+      "assetError": null,
+      "submissions": [
+        {
+          "frame": 12,
+          "calls": 6,
+          "triangles": 469378,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 13,
+          "calls": 6,
+          "triangles": 469378,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 14,
+          "calls": 6,
+          "triangles": 469378,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "cpuSubmissionMs": [
+        0.10000002384185791,
+        0.19999998807907104,
+        1.0999999940395355
+      ],
+      "instances": [
+        {
+          "name": "wave1-flooded-sedges",
+          "count": 3000,
+          "visible": true,
+          "trianglesPerInstance": 104
+        },
+        {
+          "name": "wave1-flooded-distant-sedges",
+          "count": 2700,
+          "visible": true,
+          "trianglesPerInstance": 20
+        }
+      ],
+      "camera": {
+        "position": [
+          70,
+          50,
+          85
+        ],
+        "target": [
+          0,
+          1,
+          -25
+        ]
+      },
+      "renderer": "WebKit WebGL",
+      "renderSettings": {
+        "exposure": 1.12,
+        "toneMapping": 4,
+        "pixelRatio": 1
+      },
+      "textureObjects": 5,
+      "geometryObjects": 6,
+      "errors": [],
+      "findings": [],
+      "lowerHalfNearBlackFraction": 0
+    },
+    {
+      "id": "mangrove",
+      "seed": 41,
+      "baseline": false,
+      "url": "http://localhost:3001/explore?lat=25.2&lon=-80.9&habitat=coastal&seed=41&density=36&structure=grove-1&appearance=garden&wind=0&camera=human&wave1=mangrove",
+      "file": "artifacts/wave1-mangrove/final-41-hero.png",
+      "view": "hero",
+      "wave1": {
+        "id": "mangrove",
+        "biome": 14,
+        "version": "mangrove-1",
+        "trees": 36,
+        "eligibleSpecies": [
+          "Rhizophora mangle"
+        ],
+        "shoreInstances": 339,
+        "farCanopyInstances": 46,
+        "layers": {
+          "season": "existing unresolved ecological input; no forced flowering",
+          "weather": "clear reference study, no weather simulation",
+          "timeOfDay": {
+            "sun": [
+              -28,
+              38,
+              8
+            ],
+            "color": "#ffe4ae",
+            "intensity": 2.7
+          },
+          "tide": {
+            "waterY": 0.29,
+            "source": "synthetic art state, no tidal observation"
+          }
+        },
+        "reflection": {
+          "type": "planar render-target mirror",
+          "resolution": [
+            512,
+            256
+          ],
+          "limitations": "One extra scene render; mirror softened only by tint/ripple, no depth-aware refraction."
+        },
+        "evidence": "Regionally native candidates only; local occurrence unverified",
+        "terrain": "Synthetic tidal field; not measured hydrology"
+      },
+      "assetError": null,
+      "submissions": [
+        {
+          "frame": 16,
+          "calls": 15,
+          "triangles": 1535238,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 18,
+          "calls": 15,
+          "triangles": 1535238,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 20,
+          "calls": 15,
+          "triangles": 1535238,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "cpuSubmissionMs": [
+        0.699999988079071,
+        0.5999999940395355,
+        0.800000011920929
+      ],
+      "instances": [
+        {
+          "name": "mangrove-shore-root-debris",
+          "count": 339,
+          "visible": true,
+          "trianglesPerInstance": 10
+        },
+        {
+          "name": "mangrove-distant-canopy-masses",
+          "count": 46,
+          "visible": true,
+          "trianglesPerInstance": 144
+        }
+      ],
+      "camera": {
+        "position": [
+          0,
+          2.05,
+          31
+        ],
+        "target": [
+          -2,
+          2,
+          -35
+        ]
+      },
+      "renderer": "WebKit WebGL",
+      "renderSettings": {
+        "exposure": 1.12,
+        "toneMapping": 4,
+        "pixelRatio": 1
+      },
+      "textureObjects": 8,
+      "geometryObjects": 8,
+      "errors": [],
+      "findings": [],
+      "lowerHalfNearBlackFraction": 0.02800347222222222
+    },
+    {
+      "id": "mangrove",
+      "seed": 41,
+      "baseline": false,
+      "url": "http://localhost:3001/explore?lat=25.2&lon=-80.9&habitat=coastal&seed=41&density=36&structure=grove-1&appearance=garden&wind=0&camera=human&wave1=mangrove",
+      "file": "artifacts/wave1-mangrove/final-41-inspection.png",
+      "view": "inspection",
+      "wave1": {
+        "id": "mangrove",
+        "biome": 14,
+        "version": "mangrove-1",
+        "trees": 36,
+        "eligibleSpecies": [
+          "Rhizophora mangle"
+        ],
+        "shoreInstances": 339,
+        "farCanopyInstances": 46,
+        "layers": {
+          "season": "existing unresolved ecological input; no forced flowering",
+          "weather": "clear reference study, no weather simulation",
+          "timeOfDay": {
+            "sun": [
+              -28,
+              38,
+              8
+            ],
+            "color": "#ffe4ae",
+            "intensity": 2.7
+          },
+          "tide": {
+            "waterY": 0.29,
+            "source": "synthetic art state, no tidal observation"
+          }
+        },
+        "reflection": {
+          "type": "planar render-target mirror",
+          "resolution": [
+            512,
+            256
+          ],
+          "limitations": "One extra scene render; mirror softened only by tint/ripple, no depth-aware refraction."
+        },
+        "evidence": "Regionally native candidates only; local occurrence unverified",
+        "terrain": "Synthetic tidal field; not measured hydrology"
+      },
+      "assetError": null,
+      "submissions": [
+        {
+          "frame": 26,
+          "calls": 15,
+          "triangles": 1535238,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 28,
+          "calls": 15,
+          "triangles": 1535238,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 30,
+          "calls": 15,
+          "triangles": 1535238,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "cpuSubmissionMs": [
+        1.199999988079071,
+        1.199999988079071,
+        1.100000023841858
+      ],
+      "instances": [
+        {
+          "name": "mangrove-shore-root-debris",
+          "count": 339,
+          "visible": true,
+          "trianglesPerInstance": 10
+        },
+        {
+          "name": "mangrove-distant-canopy-masses",
+          "count": 46,
+          "visible": true,
+          "trianglesPerInstance": 144
+        }
+      ],
+      "camera": {
+        "position": [
+          70,
+          50,
+          85
+        ],
+        "target": [
+          0,
+          1,
+          -25
+        ]
+      },
+      "renderer": "WebKit WebGL",
+      "renderSettings": {
+        "exposure": 1.12,
+        "toneMapping": 4,
+        "pixelRatio": 1
+      },
+      "textureObjects": 8,
+      "geometryObjects": 8,
+      "errors": [],
+      "findings": [],
+      "lowerHalfNearBlackFraction": 0.0021614583333333334
+    },
+    {
+      "id": "mangrove",
+      "seed": 617,
+      "baseline": false,
+      "url": "http://localhost:3001/explore?lat=25.2&lon=-80.9&habitat=coastal&seed=617&density=36&structure=grove-1&appearance=garden&wind=0&camera=human&wave1=mangrove",
+      "file": "artifacts/wave1-mangrove/final-617-hero.png",
+      "view": "hero",
+      "wave1": {
+        "id": "mangrove",
+        "biome": 14,
+        "version": "mangrove-1",
+        "trees": 36,
+        "eligibleSpecies": [
+          "Rhizophora mangle"
+        ],
+        "shoreInstances": 346,
+        "farCanopyInstances": 46,
+        "layers": {
+          "season": "existing unresolved ecological input; no forced flowering",
+          "weather": "clear reference study, no weather simulation",
+          "timeOfDay": {
+            "sun": [
+              -28,
+              38,
+              8
+            ],
+            "color": "#ffe4ae",
+            "intensity": 2.7
+          },
+          "tide": {
+            "waterY": 0.29,
+            "source": "synthetic art state, no tidal observation"
+          }
+        },
+        "reflection": {
+          "type": "planar render-target mirror",
+          "resolution": [
+            512,
+            256
+          ],
+          "limitations": "One extra scene render; mirror softened only by tint/ripple, no depth-aware refraction."
+        },
+        "evidence": "Regionally native candidates only; local occurrence unverified",
+        "terrain": "Synthetic tidal field; not measured hydrology"
+      },
+      "assetError": null,
+      "submissions": [
+        {
+          "frame": 16,
+          "calls": 15,
+          "triangles": 1535378,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 18,
+          "calls": 15,
+          "triangles": 1535378,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 20,
+          "calls": 15,
+          "triangles": 1535378,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "cpuSubmissionMs": [
+        0.7999999821186066,
+        0.6000000238418579,
+        0.699999988079071
+      ],
+      "instances": [
+        {
+          "name": "mangrove-shore-root-debris",
+          "count": 346,
+          "visible": true,
+          "trianglesPerInstance": 10
+        },
+        {
+          "name": "mangrove-distant-canopy-masses",
+          "count": 46,
+          "visible": true,
+          "trianglesPerInstance": 144
+        }
+      ],
+      "camera": {
+        "position": [
+          0,
+          2.05,
+          31
+        ],
+        "target": [
+          -2,
+          2,
+          -35
+        ]
+      },
+      "renderer": "WebKit WebGL",
+      "renderSettings": {
+        "exposure": 1.12,
+        "toneMapping": 4,
+        "pixelRatio": 1
+      },
+      "textureObjects": 8,
+      "geometryObjects": 8,
+      "errors": [],
+      "findings": [],
+      "lowerHalfNearBlackFraction": 0.016189236111111113
+    },
+    {
+      "id": "mangrove",
+      "seed": 617,
+      "baseline": false,
+      "url": "http://localhost:3001/explore?lat=25.2&lon=-80.9&habitat=coastal&seed=617&density=36&structure=grove-1&appearance=garden&wind=0&camera=human&wave1=mangrove",
+      "file": "artifacts/wave1-mangrove/final-617-inspection.png",
+      "view": "inspection",
+      "wave1": {
+        "id": "mangrove",
+        "biome": 14,
+        "version": "mangrove-1",
+        "trees": 36,
+        "eligibleSpecies": [
+          "Rhizophora mangle"
+        ],
+        "shoreInstances": 346,
+        "farCanopyInstances": 46,
+        "layers": {
+          "season": "existing unresolved ecological input; no forced flowering",
+          "weather": "clear reference study, no weather simulation",
+          "timeOfDay": {
+            "sun": [
+              -28,
+              38,
+              8
+            ],
+            "color": "#ffe4ae",
+            "intensity": 2.7
+          },
+          "tide": {
+            "waterY": 0.29,
+            "source": "synthetic art state, no tidal observation"
+          }
+        },
+        "reflection": {
+          "type": "planar render-target mirror",
+          "resolution": [
+            512,
+            256
+          ],
+          "limitations": "One extra scene render; mirror softened only by tint/ripple, no depth-aware refraction."
+        },
+        "evidence": "Regionally native candidates only; local occurrence unverified",
+        "terrain": "Synthetic tidal field; not measured hydrology"
+      },
+      "assetError": null,
+      "submissions": [
+        {
+          "frame": 26,
+          "calls": 15,
+          "triangles": 1535378,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 28,
+          "calls": 15,
+          "triangles": 1535378,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "frame": 30,
+          "calls": 15,
+          "triangles": 1535378,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "cpuSubmissionMs": [
+        1.0999999940395355,
+        1.199999988079071,
+        1.2000000178813934
+      ],
+      "instances": [
+        {
+          "name": "mangrove-shore-root-debris",
+          "count": 346,
+          "visible": true,
+          "trianglesPerInstance": 10
+        },
+        {
+          "name": "mangrove-distant-canopy-masses",
+          "count": 46,
+          "visible": true,
+          "trianglesPerInstance": 144
+        }
+      ],
+      "camera": {
+        "position": [
+          70,
+          50,
+          85
+        ],
+        "target": [
+          0,
+          1,
+          -25
+        ]
+      },
+      "renderer": "WebKit WebGL",
+      "renderSettings": {
+        "exposure": 1.12,
+        "toneMapping": 4,
+        "pixelRatio": 1
+      },
+      "textureObjects": 8,
+      "geometryObjects": 8,
+      "errors": [],
+      "findings": [],
+      "lowerHalfNearBlackFraction": 0.002170138888888889
+    }
+  ],
+  "sourceFreeze": {
+    "src/lib/forest/wave1-mangrove.ts": "9eaa66d2de716f412f41fe01429c5e935052d60a53e6426221c1955500df21e3",
+    "src/lib/vegetation.ts": "388467b3615d80cb7932e5bc070e61173c44fed2ef8b21e9891264d9cbf52eae"
+  },
+  "vision": "Actual images require separate vision review. Pixel diagnostics never establish aesthetics.",
+  "measurement": "Submitted calls/triangles include nested reflection pass with autoReset disabled; timings are desktop CPU submissions, not GPU frame times or mobile approval.",
+  "limitations": [
+    "No semantic vegetation buffer in this integration audit; dark lower-half pixels include water, soil and legitimate shadows.",
+    "No automatic artistic repetition/scene-boundary detector; these are explicitly reviewed in parent-review.json.",
+    "Texture object count is not texture memory or alpha-overdraw measurement."
+  ]
+}

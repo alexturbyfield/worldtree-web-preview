@@ -1,0 +1,14 @@
+{
+  "typecheck": "passed",
+  "focusedWave1Tests": 7,
+  "reflectionProbeTests": 1,
+  "ecologyTests": {
+    "pass": 31,
+    "fail": 1,
+    "existingFailure": "Catalog contains402 taxa already at base commit; stale assertion expects400"
+  },
+  "integratedCaptureErrors": 0,
+  "protectedPixelIdentical": 7,
+  "fullBuild": "not run",
+  "mobileDeviceTest": "not run"
+}

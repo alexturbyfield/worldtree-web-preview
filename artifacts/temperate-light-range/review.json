@@ -1,0 +1,255 @@
+{
+  "id": "temperate-light-range-2026-11-26",
+  "date": "2026-11-27T05:34:29.964575+00:00",
+  "reviewer": "Primary agent, actual reference and screenshot interpretation; not independent review",
+  "humanApproval": null,
+  "request": "Find light/dark values, add textured leaf self-shadowing on branches/trunks, lighten dirt texture",
+  "confirmedCauses": [
+    "Canonical wood batches cast shadows but receiveShadow was false.",
+    "Foliage highlight response had a narrow value range despite strong directional sun.",
+    "Ground artwork albedo and canopy cover limited sunlit dirt values."
+  ],
+  "referenceSampling": "Foliage: upper concept region with green/gold chroma filter; wood: manually annotated near-birch polygon; soil: central lower brown chroma region. Approximate photographic reference segmentation, not semantic ground truth.",
+  "renderSampling": "Actual rendered material IDs: foliage=1, source wood=2, terrain=3; brown chroma filter isolates soil from moss.",
+  "ranges": {
+    "concept": {
+      "foliage": {
+        "count": 46081,
+        "p05": 43,
+        "p50": 96,
+        "p95": 220,
+        "p99": 242,
+        "shadowRGB": [
+          31,
+          50,
+          4
+        ],
+        "highlightRGB": [
+          228,
+          228,
+          116
+        ]
+      },
+      "wood": {
+        "count": 2813,
+        "p05": 14,
+        "p50": 69,
+        "p95": 121,
+        "p99": 186,
+        "shadowRGB": [
+          14,
+          15,
+          1
+        ],
+        "highlightRGB": [
+          118,
+          118,
+          154
+        ]
+      },
+      "soil": {
+        "count": 7290,
+        "p05": 53,
+        "p50": 105,
+        "p95": 222,
+        "p99": 236,
+        "shadowRGB": [
+          63,
+          54,
+          13
+        ],
+        "highlightRGB": [
+          249,
+          219,
+          167
+        ]
+      }
+    },
+    "before": {
+      "foliage": {
+        "count": 91732,
+        "p05": 57,
+        "p50": 75,
+        "p95": 116,
+        "p99": 142,
+        "shadowRGB": [
+          22,
+          70,
+          35
+        ],
+        "highlightRGB": [
+          87,
+          131,
+          58
+        ]
+      },
+      "wood": {
+        "count": 23010,
+        "p05": 17,
+        "p50": 93,
+        "p95": 194,
+        "p99": 219,
+        "shadowRGB": [
+          21,
+          17,
+          10
+        ],
+        "highlightRGB": [
+          200,
+          195,
+          172
+        ]
+      },
+      "soil": {
+        "count": 59226,
+        "p05": 34,
+        "p50": 55,
+        "p95": 107,
+        "p99": 126,
+        "shadowRGB": [
+          52,
+          31,
+          9
+        ],
+        "highlightRGB": [
+          136,
+          106,
+          34
+        ]
+      }
+    },
+    "retained": {
+      "foliage": {
+        "count": 91732,
+        "p05": 48,
+        "p50": 71,
+        "p95": 191,
+        "p99": 225,
+        "shadowRGB": [
+          14,
+          60,
+          26
+        ],
+        "highlightRGB": [
+          191,
+          197,
+          136
+        ]
+      },
+      "wood": {
+        "count": 23010,
+        "p05": 9,
+        "p50": 65,
+        "p95": 160,
+        "p99": 203,
+        "shadowRGB": [
+          9,
+          9,
+          6
+        ],
+        "highlightRGB": [
+          161,
+          161,
+          144
+        ]
+      },
+      "soil": {
+        "count": 67148,
+        "p05": 34,
+        "p50": 69,
+        "p95": 140,
+        "p99": 165,
+        "shadowRGB": [
+          48,
+          33,
+          9
+        ],
+        "highlightRGB": [
+          149,
+          148,
+          40
+        ]
+      }
+    }
+  },
+  "decisions": [
+    {
+      "experiment": "wood receiving",
+      "decision": "retain",
+      "evidence": "receive-shadows/bark.png",
+      "reason": "Real alpha-cutout leaf shadows now break up formerly flat wood; no painted shadow decal or bark cookie."
+    },
+    {
+      "experiment": "initial range calibration",
+      "decision": "revise",
+      "evidence": "calibrated/hero.png",
+      "reason": "Crown P95 rose 116 to 148 but still too compressed."
+    },
+    {
+      "experiment": "selective crown range",
+      "decision": "retain provisionally",
+      "evidence": "range-refined/hero.png",
+      "reason": "Warm selected exterior leaves reach P99 225; shaded leaves remain near P05 48; exposure unchanged."
+    },
+    {
+      "experiment": "broad clearing gain",
+      "decision": "reject broad foreground coverage",
+      "evidence": "ground-highlight/hero.png",
+      "reason": "Soil P95 reached 207, closer numerically, but the foreground washed out and lost framing. Better metrics were not artistic approval."
+    },
+    {
+      "experiment": "recessed clearing light",
+      "decision": "retain provisionally",
+      "evidence": "final/hero.png",
+      "reason": "Lighter warm dirt and luminous middle-distance patches retain dark foreground framing and real leaf-shadow detail."
+    }
+  ],
+  "holdout": {
+    "seed": "1529371",
+    "generatedAfterFreeze": true,
+    "retunedAfter": false,
+    "evidence": "final/temperate-1529371-hero.png",
+    "finding": "Lighting separation/staging retained; simplified foliage and exposed branch scaffolds remain visible."
+  },
+  "reusableFindings": [
+    {
+      "status": "experimentally supported",
+      "principle": "Verify both castShadow and receiveShadow before adding procedural self-shadow approximations.",
+      "evidence": [
+        "before/settings.json",
+        "final/settings.json",
+        "before/bark.png",
+        "final/bark.png"
+      ]
+    },
+    {
+      "status": "experimentally supported",
+      "principle": "Calibrate high/low display values separately; retain selective high-value leaves instead of increasing whole-scene exposure.",
+      "evidence": [
+        "before/ranges.json",
+        "final/ranges.json"
+      ],
+      "constraint": "Reference segmentation approximate; palette and gains temperate-specific."
+    },
+    {
+      "status": "rejected",
+      "principle": "Broad terrain illumination gain is acceptable solely because its luminance percentiles match the concept.",
+      "evidence": [
+        "ground-highlight/ranges.json",
+        "ground-highlight/hero.png"
+      ],
+      "reason": "Destroyed foreground shadow framing."
+    }
+  ],
+  "remaining": [
+    "Foliage P95 is still below concept; the bright accents exist but cover a smaller fraction of leaves.",
+    "Dirt still has fewer luminous pixels than concept. Stronger broad gain was deliberately rejected.",
+    "Large spray geometry softens leaf-shadow shapes; branch architecture and fern faceting remain simplified.",
+    "No mobile GPU testing; coarse-pointer map resolution remains 1024."
+  ],
+  "runtimeFiles": [
+    "src/lib/forest/wave2-temperate-concept.ts",
+    "src/lib/forest/wave2-temperate-surfaces.ts",
+    "src/lib/forest/wave2-temperate.ts"
+  ]
+}

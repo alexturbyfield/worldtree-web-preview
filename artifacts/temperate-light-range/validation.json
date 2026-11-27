@@ -1,0 +1,135 @@
+{
+  "freezeIntact": true,
+  "holdout": "1529371",
+  "protected": [
+    {
+      "name": "puget-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "rainforest-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "rainforest-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "savanna-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "savanna-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "alpine-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "alpine-inspection",
+      "pixelIdentical": true
+    }
+  ],
+  "performance": [
+    {
+      "seed": "29",
+      "calls": [
+        15,
+        15
+      ],
+      "triangles": [
+        942962,
+        942962
+      ],
+      "cameraUnchanged": true,
+      "exposure": 1.12,
+      "shadow": {
+        "intensity": 0.78,
+        "map": [
+          2048,
+          2048
+        ],
+        "left": -30,
+        "right": 30,
+        "normalBias": 0.018
+      },
+      "staging": {
+        "center": [
+          0,
+          26
+        ],
+        "radius": 0.45,
+        "conservativeRockFernBoundsOverlaps": [],
+        "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+      }
+    },
+    {
+      "seed": "41",
+      "calls": [
+        15,
+        15
+      ],
+      "triangles": [
+        968442,
+        968442
+      ],
+      "cameraUnchanged": true,
+      "exposure": 1.12,
+      "shadow": {
+        "intensity": 0.78,
+        "map": [
+          2048,
+          2048
+        ],
+        "left": -30,
+        "right": 30,
+        "normalBias": 0.018
+      },
+      "staging": {
+        "center": [
+          0,
+          26
+        ],
+        "radius": 0.45,
+        "conservativeRockFernBoundsOverlaps": [],
+        "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+      }
+    },
+    {
+      "seed": "1529371",
+      "calls": [
+        null,
+        15
+      ],
+      "triangles": [
+        null,
+        893224
+      ],
+      "cameraUnchanged": null,
+      "exposure": 1.12,
+      "shadow": {
+        "intensity": 0.78,
+        "map": [
+          2048,
+          2048
+        ],
+        "left": -30,
+        "right": 30,
+        "normalBias": 0.018
+      },
+      "staging": {
+        "center": [
+          0,
+          26
+        ],
+        "radius": 0.45,
+        "conservativeRockFernBoundsOverlaps": [],
+        "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+      }
+    }
+  ],
+  "errors": [],
+  "checks": "Targeted TypeScript and deterministic/source-geometry preservation checks passed; no broad suite.",
+  "limits": "No mobile device GPU timings or alpha-overdraw measurement. Shadow color storage rises by approximately 12 MiB at 2048 vs 1024, plus depth/driver overhead; coarse-pointer devices retain 1024."
+}
