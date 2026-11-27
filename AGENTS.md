@@ -99,3 +99,15 @@ Prioritize expected artistic improvement and reusable learning using severity/vi
 Reuse the existing Diagnose → Plan → Implement → Capture → Critique → Decide → Record tools. Keep mechanical provenance detailed and routine summaries concise. Test relevant seeds, views, composition families, biomes and visual states. Freeze before revealing at least one unseen final seed; record failures without silent holdout tuning. Retest affected/protected scenes after shared changes; distinguish authorized species updates from unintended regressions.
 
 Stop at the milestone, stalled learning, existing budget/failure limits, or when another improvement has higher expected value. Preserve the best and rejected evidence; do not stop only because easy techniques are exhausted. Seek human art direction at consequential aesthetic or expensive uncertain choices. Report observed change, remaining defects and next action. Efficiency never excuses omitted meaningful experimentation, actual inspection, or reliable evaluation.
+
+
+## High-priority landscape composition checks
+
+For every environment art pass, inspect these before fine-detail polish: **horizon placement, convincing distant continuation, and textured foreground light/shadow framing**. These are permanent high-priority checks requested by the user, not optional finishing details.
+
+- Compose the horizon deliberately from the concept and encounter needs. Keep human eye height and staging readable; adjust camera aim only within the task's authorization. Never default to a horizon or near ridge that makes the world feel shallow.
+- Build overlapping near/middle/far silhouettes. Use geography-compatible terrain and, when useful, a detailed generated or appropriately licensed matte to extend distance. Do not invent mountains, forests or landmarks unsupported by the region. Integrate matte edges, ground contact, palette, illumination and atmosphere; inspect elevated/rotated views and hide or transition encounter-only mattes when necessary.
+- Establish natural foreground shadow framing with readable cool values and irregular vegetation/cloud texture, consistent with the key light and plausible surroundings. Favor actual occluders where practical; any art-directed supplement must remain world-space stable, preserve surface detail and agree across terrain and plants. Preserve a luminous focal opening. Avoid black curtains, generic dark corners and screen-space vignettes.
+- Assess all three for every biome; implement the appropriate solution rather than adding identical hills, canopy shadows or camera settings everywhere. Protect approved scenes and record rendered evidence. The process priority is user-directed; individual techniques remain proposed/experimental until supported and approved.
+
+The Visual Learning Lab remains the authority: see `compositionPriorities` in [its policy](visual-lab/art-direction-policy.json).

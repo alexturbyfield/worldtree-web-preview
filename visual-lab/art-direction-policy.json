@@ -117,5 +117,23 @@
     "retestProtectedScenesAfterSharedChanges": true,
     "efficiencyMustNotReduceVisualQuality": true,
     "humanApprovalCreated": false
+  },
+  "compositionPriorities": {
+    "priority": "high \u2014 before fine-detail polish",
+    "status": "user-directed process requirement; not approval of any candidate or universal rendering technique",
+    "source": "User requested lower prairie horizon, distant hill matte, textured foreground shadows, and high-priority rules for future environments.",
+    "checkEveryEnvironment": [
+      "deliberate horizon placement and expansive depth",
+      "geographically plausible layered landscape continuation; evaluate detailed matte supplementation",
+      "natural textured foreground shadow framing around a luminous readable opening"
+    ],
+    "constraints": [
+      "No mandatory mountain/forest ring or copied backdrop in every biome",
+      "Respect authorized camera changes, eye height and character staging",
+      "World-space art-directed fields supplement rather than replace physical shadows and must agree across terrain and plants",
+      "Match matte light, color, horizon integration and atmospheric distance; verify inspection/rotation transitions",
+      "No unverified geographic features, black foreground curtains or screen-space vignette substitutes",
+      "Protect approved scenes; retain actual rendered evidence and distinguish human approval from agent retention"
+    ]
   }
 }

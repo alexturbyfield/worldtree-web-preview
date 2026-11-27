@@ -1,0 +1,1 @@
+const sharp=require('sharp');sharp('C:/Users/aturb/.codex/generated_images/01a205da-da33-7d33-9ee8-3170650dd5eb/exec-c7af043d-8a04-440e-82fa-83ae8a21ff77.png').resize(1024,1024).webp({quality:90}).toFile('public/assets/prairie/black-willow-bark-v1.webp').then(x=>console.log(x));

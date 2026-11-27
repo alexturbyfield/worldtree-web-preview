@@ -1,3 +1,4 @@
+import type {RegionalPlant} from './regional-land-cover';
 import type { EcoProperties } from './geography';
 import type { TreeCandidate } from './catalog';
 
@@ -23,6 +24,7 @@ export interface VegetationProfile {
   habitat: VegetationHabitat; seed: string; evidenceLevel: EvidenceLevel;
   status: 'species_candidates' | 'growth_form_fallback' | 'naturally_treeless' | 'open_vegetation' | 'insufficient_data';
   title: string; description: string; growthForms: {name:string;archetype:string;conditional:boolean}[];
+  landCover?: RegionalPlant[];
   species: Taxon[]; regionalSpeciesCount: number; provisionalCandidates: TreeCandidate[];
   limitations: string[]; sources: {name:string;url:string;license:string}[];
   procedural: {method:string;paletteLimit:number;spawnWeights:null;abundance:null};

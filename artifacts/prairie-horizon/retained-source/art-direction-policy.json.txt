@@ -1,0 +1,139 @@
+{
+  "schemaVersion": 1,
+  "id": "creative-autonomy-and-art-direction-checkpoints",
+  "recordedAt": "2026-11-25T03:30:04.544Z",
+  "source": {
+    "actor": "user",
+    "kind": "explicit-conversation-instruction",
+    "scope": "Global artistic and process preferences; no candidate approved or rejected by this instruction"
+  },
+  "interventionLevels": [
+    "refinement",
+    "representation",
+    "art-direction"
+  ],
+  "candidateDiversity": {
+    "count": "adaptive",
+    "requirement": "Choose count by uncertainty and information value; no automatic cosmetic triplets.",
+    "example": [
+      "curved overlapping cards",
+      "painterly textured clumps",
+      "ground-material and instanced-vegetation hybrid"
+    ]
+  },
+  "failureDiagnosis": [
+    "implementation-quality",
+    "inadequate-representation",
+    "weak-artistic-concept"
+  ],
+  "checkpointTriggers": [
+    "multiple viable artistic directions",
+    "competing aesthetics",
+    "promising direction significantly diverges from references",
+    "complementary candidates without a clear winner",
+    "repeated failure to approach the visual target",
+    "major change to an approved scene identity"
+  ],
+  "checkpointRequirements": {
+    "actualRenderedImages": {
+      "minimum": 2,
+      "maximum": 3
+    },
+    "describeDifferences": true,
+    "artisticAndTechnicalTradeoffs": true,
+    "mobileCost": true,
+    "agentRecommendation": true,
+    "specificUserQuestions": 1,
+    "ordinaryTechnicalQuestions": false
+  },
+  "protectedConstraints": [
+    "deterministic generation",
+    "ecological plausibility",
+    "mobile performance",
+    "reproducible experiments",
+    "approved Puget identity",
+    "reversible source changes",
+    "no arbitrary human-made objects or unrelated decorative landmarks"
+  ],
+  "iteration": {
+    "autonomousBetweenCheckpoints": true,
+    "preserveStrongest": true,
+    "objectiveChecksAreNotAestheticApproval": true,
+    "escalateAfterWeakTuning": true,
+    "doNotResetBudget": true,
+    "promisingOverBudget": "Preserve evidence, document potential and remaining cost, request a larger authorized effort",
+    "allPoor": "Reject all, explain the fundamental limitation, seek artistic guidance when warranted"
+  },
+  "feedback": {
+    "linkTo": [
+      "actual screenshots",
+      "exact parameters",
+      "artistic hypotheses"
+    ],
+    "humanApprovalMustBeExplicit": true,
+    "agentJudgmentIsNotHumanApproval": true,
+    "consultHistoryBeforeNextExperiment": true
+  },
+  "success": "Visibly compelling, technically credible environments with demonstrated improvement toward the user artistic vision",
+  "candidateApprovalCreated": false,
+  "sceneChangesAuthorizedByThisRecord": "No immediate scene edits; creative latitude applies to future isolated, reproducible experiments",
+  "efficientVisualDevelopment": {
+    "source": "Explicit user protocol 2026-11-25",
+    "workflow": [
+      "diagnose-images-first",
+      "technical-hypothesis",
+      "plan",
+      "implement",
+      "capture",
+      "critique",
+      "decide",
+      "record"
+    ],
+    "instructionLayers": [
+      "permanent",
+      "reusable art-direction",
+      "task-specific"
+    ],
+    "strategies": {
+      "confirmed-defect": "focused fix",
+      "calibration": "controlled sweep",
+      "uncertain-representation": "distinct constructions",
+      "new-direction": "broad compositions",
+      "architecture": "minimal competing prototypes"
+    },
+    "prioritize": [
+      "visibility/severity",
+      "confidence",
+      "artistic improvement",
+      "cost",
+      "reuse",
+      "information from failure",
+      "regression risk"
+    ],
+    "estimatesAreJudgments": true,
+    "independentReview": "Use when available and justified; never imply independence from agent-only critique",
+    "freezeBeforeUnseenSeed": true,
+    "noSilentHoldoutTuning": true,
+    "retestProtectedScenesAfterSharedChanges": true,
+    "efficiencyMustNotReduceVisualQuality": true,
+    "humanApprovalCreated": false
+  },
+  "compositionPriorities": {
+    "priority": "high \u2014 before fine-detail polish",
+    "status": "user-directed process requirement; not approval of any candidate or universal rendering technique",
+    "source": "User requested lower prairie horizon, distant hill matte, textured foreground shadows, and high-priority rules for future environments.",
+    "checkEveryEnvironment": [
+      "deliberate horizon placement and expansive depth",
+      "geographically plausible layered landscape continuation; evaluate detailed matte supplementation",
+      "natural textured foreground shadow framing around a luminous readable opening"
+    ],
+    "constraints": [
+      "No mandatory mountain/forest ring or copied backdrop in every biome",
+      "Respect authorized camera changes, eye height and character staging",
+      "World-space art-directed fields supplement rather than replace physical shadows and must agree across terrain and plants",
+      "Match matte light, color, horizon integration and atmospheric distance; verify inspection/rotation transitions",
+      "No unverified geographic features, black foreground curtains or screen-space vignette substitutes",
+      "Protect approved scenes; retain actual rendered evidence and distinguish human approval from agent retention"
+    ]
+  }
+}

@@ -1,0 +1,1 @@
+const sharp=require('sharp');sharp('C:/Users/aturb/.codex/generated_images/01a205da-da33-7d33-9ee8-3170650dd5eb/exec-632165b0-f3b1-4ae1-872e-01de361fb0ee.png').resize(1024,1024).webp({quality:90}).toFile('public/assets/prairie/foreground-shadow-v1.webp').then(x=>console.log(x));

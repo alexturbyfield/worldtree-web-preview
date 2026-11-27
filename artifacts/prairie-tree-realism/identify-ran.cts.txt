@@ -1,0 +1,6 @@
+import {resolveVegetation} from '../../src/lib/vegetation';
+import {createSceneRecipe} from '../../src/lib/forest/recipe';
+import {prairieStudy} from '../../src/lib/forest/wave3-prairie';
+const profile=resolveVegetation({lat:36.5736504415,lon:-98.3419281896,geography:{ECO_ID:389,ECO_NAME:'Central-Southern US mixed grasslands',BIOME_NAME:'Temperate grasslands',BIOME_NUM:8,REALM:'Nearctic'},botanicalArea:{code:'OKL',name:'Oklahoma'},habitat:'grassland',seed:'grove-1'});
+const r=createSceneRecipe(profile,{seed:'29',conditional:true,density:36,structureSeed:'grove-1',appearanceSeed:'garden'});
+console.log(prairieStudy.compose(r).trees.map(t=>({index:t.index,species:t.species.scientificName,renderer:t.model.presetId,seed:t.seed,studio:!!t.studio,dimensions:t.model.dimensions,position:t.position})));

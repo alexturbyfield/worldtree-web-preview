@@ -1,0 +1,105 @@
+{
+  "task": "Prairie ground and vegetation cohesion",
+  "seed": 29,
+  "hypothesis": "A shared multiscale substrate pigment, richer soil detail, darker olive blade bodies and localized UV-normalized tips connect the ground and existing grass representation.",
+  "scope": "One coordinated implementation pass in two prairie-specific files. Horizon, matte, tree specimens, key light and shadow fields retained.",
+  "implementation": [
+    "World-space irregular grass/soil swaths use the existing community field with fine warped breakup; existing sediment artwork provides substrate texture and small bump response.",
+    "Terrain and plant roots share the same pigment function and soil sampler. Root color stays continuous; green/olive body transition and gold are confined to upper blade UVs.",
+    "Short cover extends from foreground pockets toward the middle opening; tall framing geometry retained. 240 additional short clump instances in the existing grass batch, no new draw calls."
+  ],
+  "review": {
+    "reviewer": "Primary Codex actual matched hero and elevated image interpretation",
+    "decision": "Retain for human review",
+    "humanApproval": null,
+    "observations": [
+      "Foreground grasses are deeper olive/green rather than uniformly pale straw; small warm tips and yellow flowers stand out.",
+      "Irregular warm soil areas appear within cooler vegetated ground, especially legible from above.",
+      "Short cover helps blend the staging opening into surrounding growth.",
+      "Human-height shaded center remains subdued and fine texture is still not as rich as the concept. No final artistic approval claimed."
+    ]
+  },
+  "learning": [
+    {
+      "principle": "Normalize tip-pigment masks to blade UV length rather than absolute plant height.",
+      "cause": "Confirmed: the previous meter-based tip mask spread gold too far down taller blades.",
+      "result": "Experimentally supported here: deeper bodies and more selective tip color.",
+      "scope": "Prairie experiment; not promoted globally or human-approved."
+    },
+    {
+      "principle": "Coordinate soil breakup and root pigment through one world-space function.",
+      "result": "Shared roots and surface color remain coherent, but the image shows that broad pigment patches alone do not finish fine ground detail.",
+      "scope": "Experimental evidence, not a universal palette or approval."
+    }
+  ],
+  "validation": {
+    "typescript": "passed",
+    "targetedChecks": "3 passed",
+    "captureErrors": [],
+    "cameraMatched": true,
+    "renderSettingsMatched": true,
+    "lightsMatched": true,
+    "before": [
+      {
+        "frame": 6,
+        "calls": 24,
+        "triangles": 959332,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 7,
+        "calls": 24,
+        "triangles": 959332,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.6000000238418579
+      },
+      {
+        "frame": 8,
+        "calls": 24,
+        "triangles": 959332,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      }
+    ],
+    "after": [
+      {
+        "frame": 6,
+        "calls": 24,
+        "triangles": 1002290,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.6000000238418579
+      },
+      {
+        "frame": 7,
+        "calls": 24,
+        "triangles": 1002290,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.699999988079071
+      },
+      {
+        "frame": 8,
+        "calls": 24,
+        "triangles": 1002290,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.6000000238418579
+      }
+    ],
+    "triangleChangePercent": 4.48,
+    "protected": "No protected recipe, shared renderer, ecological resolver or asset edited. No full regression suite run.",
+    "mobileDeviceApproval": false
+  },
+  "files": {
+    "src/lib/forest/wave3-prairie.ts": "86f1084be87d510d47fbb7566b3ba2ddd427c519a0dfac1cbb5dd74e4f56adee",
+    "src/lib/forest/wave3-prairie-dressing.ts": "b3d369c4759b9136aebfa0ed4e69dbd97add1d6a3da8b881b19aec32b90b14e2"
+  },
+  "comparison": "artifacts\\prairie-cohesion\\comparison.png",
+  "inspection": "artifacts\\prairie-cohesion\\after\\prairie-29-inspection.png",
+  "noCommitPushDeploy": true
+}

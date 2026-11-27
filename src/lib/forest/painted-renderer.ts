@@ -1,3 +1,4 @@
+import {finishPrairieTreeMaterial,prairieBarkTexture,prairieWoodUV} from './prairie-tree-finish';
 import {wave1Study} from './wave1';
 import {alpineHeight,readAlpineOptions} from './alpine-recipe';
 import {alpineSceneRecipe,mountAlpineEnvironment,gradeAlpineTree} from './alpine-adapter';
@@ -106,8 +107,9 @@ export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick
   const fieldPresentation=scene.userData.wave1?.presentation;
   const attention={...sceneAttention(recipe,options.environment||{}),...(fieldPresentation?{anchor:new THREE.Vector3(...scene.userData.wave1.plan.eye),direction:new THREE.Vector3(...scene.userData.wave1.plan.target).sub(new THREE.Vector3(...scene.userData.wave1.plan.eye)).normalize(),atmosphere:fieldPresentation.foliageAtmosphere}:{}),sun:directLighting?sun:undefined,composition:compositionMode==='C'?composition:undefined};
   const gradedMaterials=new Set<THREE.Material>();
-  const grade=(material:THREE.Material,kind:'library'|'billboards'|'wood',deciduous=false)=>{if(foundations&&!gradedMaterials.has(material)){installTreeAttention(material,kind,{...attention,deciduous});if(!alpine&&biomeVisualProfile(recipe)?.id==='amazon'&&rainforestV4()&&rainforestV5())installRainforestDepthResponse(material,kind);if(directLighting&&biome&&prettySceneEnabled(biome.id))installPrettyFoliage(material,kind,prettyScenePlan(recipe,biome.id as 'savanna'|'amazon'));if(alpine)gradeAlpineTree(material,alpine.alpinePlan);gradedMaterials.add(material);}};
-  const bark=brushTexture('bark'),woodMaterial=new THREE.MeshStandardMaterial({map:bark,vertexColors:true,roughness:1,wireframe:options.debug==='wireframe'});
+  const grade=(material:THREE.Material,kind:'library'|'billboards'|'wood',deciduous=false)=>{if(foundations&&!gradedMaterials.has(material)){installTreeAttention(material,kind,{...attention,deciduous});if(!alpine&&biomeVisualProfile(recipe)?.id==='amazon'&&rainforestV4()&&rainforestV5())installRainforestDepthResponse(material,kind);if(directLighting&&biome&&prettySceneEnabled(biome.id))installPrettyFoliage(material,kind,prettyScenePlan(recipe,biome.id as 'savanna'|'amazon'));if(alpine)gradeAlpineTree(material,alpine.alpinePlan);if(wave?.id==='prairie'&&recipe.ecoregion?.ECO_ID===389)finishPrairieTreeMaterial(material,kind);gradedMaterials.add(material);}};
+  const prairieFinish=wave?.id==='prairie'&&recipe.ecoregion?.ECO_ID===389;
+  const bark=prairieFinish?prairieBarkTexture():brushTexture('bark'),woodMaterial=new THREE.MeshStandardMaterial({map:bark,vertexColors:true,roughness:1,wireframe:options.debug==='wireframe'});
   grade(woodMaterial,'wood');
   const pickables:THREE.Object3D[]=[],lods:THREE.Group[]=[],cardCounts:number[]=[];
   const debugSkeleton=options.debug==='skeleton';
@@ -123,7 +125,9 @@ export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick
     const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.Float32BufferAttribute(points,3));scene.add(new THREE.LineSegments(geometry,new THREE.LineBasicMaterial({color:'#375c48'})));
   }else for(const far of [false,true]){
     const group=new THREE.Group();lods.push(group);scene.add(group);if(!recipe.trees.length){cardCounts.push(0);clumpCounts.push(0);continue;}
-    const {geometry,faces}=paintedWoodGeometry(recipe.trees.map((t,i)=>({model:{...t.model,segments:t.model.segments.filter(segment=>segment.depth===0||(t.studio&&segment.depth<=(alpine&&Math.hypot(t.position[0]-alpine.alpinePlan.camera.position[0],t.position[2]-alpine.alpinePlan.camera.position[2])>60?1:2))||(t.model.presetId==='acacia'&&segment.depth<=2)||(segment.depth===1&&canopies[i].controls.branchExposure>.28)||(segment.depth>1&&canopies[i].controls.branchExposure>.7))},position:t.position,rotation:t.rotation})),far,mobile);
+    const woodInputs=recipe.trees.map((t,i)=>({model:{...t.model,segments:t.model.segments.filter(segment=>segment.depth===0||(t.studio&&segment.depth<=(alpine&&Math.hypot(t.position[0]-alpine.alpinePlan.camera.position[0],t.position[2]-alpine.alpinePlan.camera.position[2])>60?1:2))||(t.model.presetId==='acacia'&&segment.depth<=2)||(segment.depth===1&&canopies[i].controls.branchExposure>.28)||(segment.depth>1&&canopies[i].controls.branchExposure>.7))},position:t.position,rotation:t.rotation}));
+    const {geometry,faces}=paintedWoodGeometry(woodInputs,far,mobile);
+    if(prairieFinish)prairieWoodUV(geometry,woodInputs,far,mobile);
     faces.forEach(face=>{face.treeIndex=recipe.trees[face.treeIndex].index;});
     const wood=new THREE.Mesh(geometry,woodMaterial);wood.castShadow=true;wood.userData.faces=faces;group.add(wood);pickables.push(wood);
     let libraryCards=0;

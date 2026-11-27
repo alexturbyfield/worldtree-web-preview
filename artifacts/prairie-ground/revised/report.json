@@ -1,0 +1,902 @@
+[
+  {
+    "id": "prairie",
+    "seed": "29",
+    "view": "hero",
+    "file": "artifacts/prairie-ground/revised/prairie-29-hero.png",
+    "width": 640,
+    "height": 360,
+    "camera": {
+      "position": [
+        0,
+        1.7,
+        34
+      ],
+      "target": [
+        0,
+        -16,
+        -190
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 6,
+        "calls": 2,
+        "triangles": 73720,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.10000002384185791
+      },
+      {
+        "frame": 7,
+        "calls": 2,
+        "triangles": 73720,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.19999998807907104
+      },
+      {
+        "frame": 8,
+        "calls": 2,
+        "triangles": 73720,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.10000002384185791
+      }
+    ],
+    "instances": [],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "b7c5dc",
+        "intensity": 0.55,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "97b8ce",
+        "intensity": 0.2,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffe1a7",
+        "intensity": 4,
+        "position": [
+          -70,
+          33,
+          25
+        ],
+        "target": [
+          0,
+          0,
+          -40
+        ],
+        "shadow": {
+          "intensity": 0.7,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -64,
+          "right": 64,
+          "normalBias": 0.035
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "recipe": {
+      "id": "prairie",
+      "biome": 8,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "prairie",
+        "biome": 8,
+        "seed": "29",
+        "phase": 2.7814534923481626,
+        "relief": 1.15,
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "target": [
+            0,
+            -16,
+            -190
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            0,
+            -24
+          ]
+        },
+        "heightMode": "prairie-plain",
+        "eye": [
+          0,
+          1.7,
+          34
+        ],
+        "target": [
+          0,
+          -16,
+          -190
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#a6aebe"
+        }
+      },
+      "trees": 0,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": null,
+    "prairie": {
+      "stage": "A-ground-only",
+      "version": 1,
+      "sourceEcoId": 389,
+      "sourceEcoName": "Central-Southern US mixed grasslands",
+      "sourceBiome": 8,
+      "reference": "prairie-wave3-primary",
+      "communityField": {
+        "resolution": 512,
+        "span": 4096,
+        "channels": [
+          "growth",
+          "synthetic-moisture",
+          "exposure-pigment",
+          "soil"
+        ]
+      },
+      "ecology": "No named grass, flower or woody occurrence claim; this is a presentation study.",
+      "terrain": "Gentle aperiodic synthetic rolls; no mountains, paths or carved staging pad.",
+      "layers": {
+        "season": "independent leaf-on pigment reference",
+        "weather": "clear reference",
+        "timeOfDay": "low warm key reference"
+      },
+      "pending": [
+        "Dimensional grasses and feathered seedheads",
+        "Localized flower communities",
+        "Conditional ecological woody growth",
+        "Final biome artistic approval"
+      ]
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "prairie",
+    "seed": "29",
+    "view": "inspection",
+    "file": "artifacts/prairie-ground/revised/prairie-29-inspection.png",
+    "width": 640,
+    "height": 360,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        0,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 10,
+        "calls": 2,
+        "triangles": 73720,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0
+      },
+      {
+        "frame": 11,
+        "calls": 2,
+        "triangles": 73720,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.10000002384185791
+      },
+      {
+        "frame": 12,
+        "calls": 2,
+        "triangles": 73720,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.10000002384185791
+      }
+    ],
+    "instances": [],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "b7c5dc",
+        "intensity": 0.55,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "97b8ce",
+        "intensity": 0.2,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffe1a7",
+        "intensity": 4,
+        "position": [
+          -70,
+          33,
+          25
+        ],
+        "target": [
+          0,
+          0,
+          -40
+        ],
+        "shadow": {
+          "intensity": 0.7,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -64,
+          "right": 64,
+          "normalBias": 0.035
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "recipe": {
+      "id": "prairie",
+      "biome": 8,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "prairie",
+        "biome": 8,
+        "seed": "29",
+        "phase": 2.7814534923481626,
+        "relief": 1.15,
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "target": [
+            0,
+            -16,
+            -190
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            0,
+            -24
+          ]
+        },
+        "heightMode": "prairie-plain",
+        "eye": [
+          0,
+          1.7,
+          34
+        ],
+        "target": [
+          0,
+          -16,
+          -190
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#a6aebe"
+        }
+      },
+      "trees": 0,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": null,
+    "prairie": {
+      "stage": "A-ground-only",
+      "version": 1,
+      "sourceEcoId": 389,
+      "sourceEcoName": "Central-Southern US mixed grasslands",
+      "sourceBiome": 8,
+      "reference": "prairie-wave3-primary",
+      "communityField": {
+        "resolution": 512,
+        "span": 4096,
+        "channels": [
+          "growth",
+          "synthetic-moisture",
+          "exposure-pigment",
+          "soil"
+        ]
+      },
+      "ecology": "No named grass, flower or woody occurrence claim; this is a presentation study.",
+      "terrain": "Gentle aperiodic synthetic rolls; no mountains, paths or carved staging pad.",
+      "layers": {
+        "season": "independent leaf-on pigment reference",
+        "weather": "clear reference",
+        "timeOfDay": "low warm key reference"
+      },
+      "pending": [
+        "Dimensional grasses and feathered seedheads",
+        "Localized flower communities",
+        "Conditional ecological woody growth",
+        "Final biome artistic approval"
+      ]
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "prairie",
+    "seed": "41",
+    "view": "hero",
+    "file": "artifacts/prairie-ground/revised/prairie-41-hero.png",
+    "width": 640,
+    "height": 360,
+    "camera": {
+      "position": [
+        0,
+        1.7,
+        34
+      ],
+      "target": [
+        0,
+        -16,
+        -190
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 6,
+        "calls": 2,
+        "triangles": 73720,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.10000002384185791
+      },
+      {
+        "frame": 7,
+        "calls": 2,
+        "triangles": 73720,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.19999998807907104
+      },
+      {
+        "frame": 8,
+        "calls": 2,
+        "triangles": 73720,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.19999998807907104
+      }
+    ],
+    "instances": [],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "b7c5dc",
+        "intensity": 0.55,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "97b8ce",
+        "intensity": 0.2,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffe1a7",
+        "intensity": 4,
+        "position": [
+          -70,
+          33,
+          25
+        ],
+        "target": [
+          0,
+          0,
+          -40
+        ],
+        "shadow": {
+          "intensity": 0.7,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -64,
+          "right": 64,
+          "normalBias": 0.035
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "recipe": {
+      "id": "prairie",
+      "biome": 8,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "prairie",
+        "biome": 8,
+        "seed": "41",
+        "phase": 1.1992794284477037,
+        "relief": 1.15,
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "target": [
+            0,
+            -16,
+            -190
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            0,
+            -24
+          ]
+        },
+        "heightMode": "prairie-plain",
+        "eye": [
+          0,
+          1.7,
+          34
+        ],
+        "target": [
+          0,
+          -16,
+          -190
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#a6aebe"
+        }
+      },
+      "trees": 0,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": null,
+    "prairie": {
+      "stage": "A-ground-only",
+      "version": 1,
+      "sourceEcoId": 389,
+      "sourceEcoName": "Central-Southern US mixed grasslands",
+      "sourceBiome": 8,
+      "reference": "prairie-wave3-primary",
+      "communityField": {
+        "resolution": 512,
+        "span": 4096,
+        "channels": [
+          "growth",
+          "synthetic-moisture",
+          "exposure-pigment",
+          "soil"
+        ]
+      },
+      "ecology": "No named grass, flower or woody occurrence claim; this is a presentation study.",
+      "terrain": "Gentle aperiodic synthetic rolls; no mountains, paths or carved staging pad.",
+      "layers": {
+        "season": "independent leaf-on pigment reference",
+        "weather": "clear reference",
+        "timeOfDay": "low warm key reference"
+      },
+      "pending": [
+        "Dimensional grasses and feathered seedheads",
+        "Localized flower communities",
+        "Conditional ecological woody growth",
+        "Final biome artistic approval"
+      ]
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "prairie",
+    "seed": "41",
+    "view": "inspection",
+    "file": "artifacts/prairie-ground/revised/prairie-41-inspection.png",
+    "width": 640,
+    "height": 360,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        0,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 10,
+        "calls": 2,
+        "triangles": 73720,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.10000002384185791
+      },
+      {
+        "frame": 11,
+        "calls": 2,
+        "triangles": 73720,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.10000002384185791
+      },
+      {
+        "frame": 12,
+        "calls": 2,
+        "triangles": 73720,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0
+      }
+    ],
+    "instances": [],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "b7c5dc",
+        "intensity": 0.55,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "97b8ce",
+        "intensity": 0.2,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffe1a7",
+        "intensity": 4,
+        "position": [
+          -70,
+          33,
+          25
+        ],
+        "target": [
+          0,
+          0,
+          -40
+        ],
+        "shadow": {
+          "intensity": 0.7,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -64,
+          "right": 64,
+          "normalBias": 0.035
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "recipe": {
+      "id": "prairie",
+      "biome": 8,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "prairie",
+        "biome": 8,
+        "seed": "41",
+        "phase": 1.1992794284477037,
+        "relief": 1.15,
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "target": [
+            0,
+            -16,
+            -190
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            0,
+            -24
+          ]
+        },
+        "heightMode": "prairie-plain",
+        "eye": [
+          0,
+          1.7,
+          34
+        ],
+        "target": [
+          0,
+          -16,
+          -190
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#a6aebe"
+        }
+      },
+      "trees": 0,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": null,
+    "prairie": {
+      "stage": "A-ground-only",
+      "version": 1,
+      "sourceEcoId": 389,
+      "sourceEcoName": "Central-Southern US mixed grasslands",
+      "sourceBiome": 8,
+      "reference": "prairie-wave3-primary",
+      "communityField": {
+        "resolution": 512,
+        "span": 4096,
+        "channels": [
+          "growth",
+          "synthetic-moisture",
+          "exposure-pigment",
+          "soil"
+        ]
+      },
+      "ecology": "No named grass, flower or woody occurrence claim; this is a presentation study.",
+      "terrain": "Gentle aperiodic synthetic rolls; no mountains, paths or carved staging pad.",
+      "layers": {
+        "season": "independent leaf-on pigment reference",
+        "weather": "clear reference",
+        "timeOfDay": "low warm key reference"
+      },
+      "pending": [
+        "Dimensional grasses and feathered seedheads",
+        "Localized flower communities",
+        "Conditional ecological woody growth",
+        "Final biome artistic approval"
+      ]
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  }
+]

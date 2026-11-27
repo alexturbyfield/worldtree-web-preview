@@ -1,0 +1,37 @@
+{
+  "task": "Prairie branch taper and direction correction",
+  "humanFeedback": {
+    "text": "The branches don't curve so uniformly. They get thin much faster and the branches don't arc.",
+    "appliesTo": "artifacts/prairie-tree-realism/comparison.png",
+    "label": "Explicit correction request, not candidate approval"
+  },
+  "hypothesis": "The inherited oak Catmull-Rom arches and slow radius falloff cause the repeated bow-shaped limbs. Replace them with unequal straight runs and strong early taper.",
+  "files": [
+    "src/lib/forest/prairie-tree-finish.ts",
+    "tests/prairie-tree-finish.test.ts"
+  ],
+  "implementation": "Prairie-only contiguous path deformation, seeded small angular changes, parent-relative attachment transport, faster radius falloff and child radii limited by the supporting parent. Foliage groups move with their owning branch.",
+  "review": {
+    "reviewer": "Primary Codex actual hero and close-up screenshot inspection",
+    "decision": "Retain for human review",
+    "humanApproval": null,
+    "observations": [
+      "Uniform branch arches are removed; wood reads as straighter unequal limbs with slender outer tips.",
+      "The prominent right specimen no longer has thick bow-shaped lower branches.",
+      "Bark detail and connected ring joints remain intact.",
+      "Canopy sprays and clump silhouettes remain visibly stylized; no foliage redesign in this pass."
+    ]
+  },
+  "validation": {
+    "typescript": "passed",
+    "targetedTest": "passed, including taper ratios, chord deviation, continuous joints, finite near/far UVs and source preservation",
+    "cameraUnchanged": true,
+    "renderSettingsUnchanged": true,
+    "triangleCountBefore": 718736,
+    "triangleCountAfter": 718736,
+    "captureErrors": [],
+    "protectedScenes": "No shared assets, material code or renderer edits in this pass; scoped to the prairie finishing function."
+  },
+  "comparison": "artifacts\\prairie-branch-taper\\comparison.png",
+  "noCommitPushDeploy": true
+}

@@ -2,6 +2,14 @@
 
 This is a local experiment/review tool built on the existing renderer and `scripts/studies/visual-quality.cjs`. It stores experiment memory and explicit preferences. **It does not train a model, infer human approval, or automatically replace the main encounter scene with a winner.**
 
+## Prairie rolling-terrain / dressing checkpoint
+
+[Actual before/after and rejected grass](../artifacts/prairie-volume/comparison.png) · [Preview, regional sources and critique](../artifacts/prairie-volume/REPORT.md) · [Decisions](../artifacts/prairie-volume/review.json). Stronger rolling shoulders, seedheads, forbs and sparse shrubs are provisionally retained. Broad brush cards failed as terraces and are disabled by default; dense prairie grass remains unresolved. Seeds29,41 and a frozen holdout inspected;13 protected views unchanged. No human approval, global promotion or deployment.
+
+## Prairie ground gate — not passed
+
+[Actual experiment views](../artifacts/prairie-ground/comparison.png) · [Critique and local preview](../artifacts/prairie-ground/REPORT.md) · [Session decisions](../artifacts/prairie-ground/review.json). Opt-in biome8 groundwork is technically runnable but still flat/lawn-like at human height. Three rounds are spent; no grass/flower stage or holdout started. Continuous terrain fixes are isolated, thirteen protected views are unchanged, and a low grass-mass representation is proposed rather than approved.
+
 ## Current Wave 2 human approval
 
 The user approved the current batch, including the latest temperate yellow-green highlights. [Approval and pinned images](feedback/wave2-current-batch-approved.json). This supersedes earlier agent-only retention labels for the presented artistic baselines; historical rejected evidence remains intact. No deployment, global promotion, ecological verification or mobile performance approval is inferred.

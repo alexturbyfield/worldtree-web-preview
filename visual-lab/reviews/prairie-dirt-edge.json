@@ -1,0 +1,111 @@
+{
+  "task": "Clear dirt sections with grassy textured edges",
+  "humanFeedback": {
+    "actor": "user",
+    "decision": "reject and revert",
+    "text": "Revert this change, commit, push and merge all branches to master",
+    "scope": "Latest dirt-edge/fringe experiment; prior prairie dirt retained"
+  },
+  "hypothesis": "Sharpen the existing coverage field near the camera, interrupt its contour with clump/fibre/vegetation texture detail, and use the identical field for a dimensional short-grass fringe.",
+  "scope": "One prairie dressing/material file; camera, terrain, trees, matte, lighting and existing broad patch field retained.",
+  "implementation": [
+    "Narrow derivative-antialiased coverage boundary replaces the broad near color interpolation.",
+    "World-space clump/fibre and meadow texture perturbations break up the material edge.",
+    "One additional instanced batch of 1080 candidate short clumps is collapsed outside the GPU boundary band; visible count is not read back. Character-footprint candidates remain short.",
+    "Transition sharpness reduces toward distant terrain to avoid cutout soil stamps."
+  ],
+  "review": {
+    "reviewer": "Primary Codex actual 640 hero and 1280 material inspection",
+    "decision": "Retain for human review",
+    "humanApproval": null,
+    "findings": [
+      {
+        "severity": "resolved-major",
+        "evidence": "Near soil now reads as a distinct exposed surface with a ragged grass edge rather than a broad blurred gradient."
+      },
+      {
+        "severity": "minor",
+        "evidence": "Short dimensional fringe is subtle in the wide hero view, and some stretches remain cleaner than the concept."
+      }
+    ],
+    "iterations": [
+      {
+        "evidence": "artifacts/prairie-dirt-edge/first",
+        "decision": "revise",
+        "reason": "Sharper boundary still too clean; distant shapes too cutout-like."
+      },
+      {
+        "evidence": "artifacts/prairie-dirt-edge/after",
+        "decision": "retain provisionally",
+        "reason": "More broken contour and greener short fringe; distant mask softly transitions."
+      }
+    ]
+  },
+  "checks": {
+    "typescript": "passed",
+    "captureErrors": [],
+    "cameraMatched": true,
+    "lightsMatched": true,
+    "renderSettingsMatched": true,
+    "before": [
+      {
+        "frame": 6,
+        "calls": 24,
+        "triangles": 1002290,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.7000000476837158
+      },
+      {
+        "frame": 7,
+        "calls": 24,
+        "triangles": 1002290,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 8,
+        "calls": 24,
+        "triangles": 1002290,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      }
+    ],
+    "after": [
+      {
+        "frame": 6,
+        "calls": 25,
+        "triangles": 1034690,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.6000000238418579
+      },
+      {
+        "frame": 7,
+        "calls": 25,
+        "triangles": 1034690,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 8,
+        "calls": 25,
+        "triangles": 1034690,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      }
+    ],
+    "performanceLimit": "GPU mask adds vertex texture/noise work; no device GPU or mobile approval claimed.",
+    "protected": "Only prairie-specific source modified; no broad regression suite run."
+  },
+  "file": "src/lib/forest/wave3-prairie-dressing.ts",
+  "sourceHash": "fc516b553fc739540b08916ac5d0bbb8910f24f637a1b0c8003ed0cb8cfa8134",
+  "comparison": "artifacts\\prairie-dirt-edge\\comparison.png",
+  "detail": "artifacts\\prairie-dirt-edge\\detail\\prairie-29-hero.png",
+  "noCommitPushDeploy": true,
+  "decision": "reverted by explicit human instruction"
+}

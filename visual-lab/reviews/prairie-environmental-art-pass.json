@@ -1,0 +1,150 @@
+{
+  "task": "prairie-environmental-art-pass",
+  "seed": 29,
+  "reviewer": "Codex actual image inspection",
+  "humanApproval": null,
+  "decision": "revert",
+  "hypothesis": "Narrow folded opaque blade clumps and shared substrate pigments provide dimensional grass without broad brush cards.",
+  "evidence": {
+    "before": "artifacts\\prairie-art-pass\\before\\prairie-29-hero.png",
+    "after": "artifacts\\prairie-art-pass\\after\\prairie-29-hero.png"
+  },
+  "findings": [
+    {
+      "severity": "major",
+      "defect": "Harsh nearly black blade faces and sharp angular silhouettes",
+      "cause": "Hypothesis: double-sided folded geometry normals and lighting contrast are unsuitable for this representation."
+    },
+    {
+      "severity": "major",
+      "defect": "Abrupt coverage discontinuities expose bare central ground and a distant grass wall",
+      "cause": "Confirmed: separate distance placement and geometry fade ranges do not form continuous coverage."
+    }
+  ],
+  "betterThanPrevious": false,
+  "goodEnoughToApprove": false,
+  "metrics": {
+    "before": {
+      "render": [
+        {
+          "frame": 6,
+          "calls": 7,
+          "triangles": 201144,
+          "points": 0,
+          "lines": 0,
+          "cpuSubmissionMs": 0.30000001192092896
+        },
+        {
+          "frame": 7,
+          "calls": 7,
+          "triangles": 201144,
+          "points": 0,
+          "lines": 0,
+          "cpuSubmissionMs": 0.30000001192092896
+        },
+        {
+          "frame": 8,
+          "calls": 7,
+          "triangles": 201144,
+          "points": 0,
+          "lines": 0,
+          "cpuSubmissionMs": 0.30000001192092896
+        }
+      ],
+      "instances": [
+        {
+          "name": "prairie-near-brush-masses",
+          "count": 2300
+        },
+        {
+          "name": "prairie-middle-brush-masses",
+          "count": 4200
+        },
+        {
+          "name": "prairie-curved-fine-grass",
+          "count": 260
+        },
+        {
+          "name": "prairie-dimensional-seedheads",
+          "count": 140
+        },
+        {
+          "name": "prairie-yellow-forb-communities",
+          "count": 160
+        },
+        {
+          "name": "prairie-purple-forb-communities",
+          "count": 120
+        },
+        {
+          "name": "prairie-regional-shrub-growth-forms",
+          "count": 12
+        }
+      ]
+    },
+    "rejected": {
+      "render": [
+        {
+          "frame": 6,
+          "calls": 10,
+          "triangles": 728544,
+          "points": 0,
+          "lines": 0,
+          "cpuSubmissionMs": 0.2999999523162842
+        },
+        {
+          "frame": 7,
+          "calls": 10,
+          "triangles": 728544,
+          "points": 0,
+          "lines": 0,
+          "cpuSubmissionMs": 0.30000001192092896
+        },
+        {
+          "frame": 8,
+          "calls": 10,
+          "triangles": 728544,
+          "points": 0,
+          "lines": 0,
+          "cpuSubmissionMs": 0.19999998807907104
+        }
+      ],
+      "instances": [
+        {
+          "name": "prairie-near-folded-blades",
+          "count": 2000
+        },
+        {
+          "name": "prairie-middle-grass-swaths",
+          "count": 4200
+        },
+        {
+          "name": "prairie-far-silhouette-grass",
+          "count": 1800
+        },
+        {
+          "name": "prairie-dimensional-seedheads",
+          "count": 240
+        },
+        {
+          "name": "prairie-yellow-forb-communities",
+          "count": 160
+        },
+        {
+          "name": "prairie-purple-forb-communities",
+          "count": 120
+        },
+        {
+          "name": "prairie-substrate-pebbles",
+          "count": 160
+        },
+        {
+          "name": "prairie-regional-shrub-growth-forms",
+          "count": 12
+        }
+      ]
+    }
+  },
+  "next": "Investigate thin-leaf normal/transmission response in a small clump diagnostic before another landscape pass.",
+  "constraints": "One implementation pass, one seed, no holdouts or broad regression testing. Baseline source restored; failed source retained with renders."
+}

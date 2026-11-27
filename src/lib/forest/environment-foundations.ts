@@ -89,9 +89,18 @@ export function groundCompositionField(composition:ResolvedEncounterComposition,
   // Capture values rather than live camera references. The field remains attached to the meadow.
   return {settings:{...settings,focalWidth:[...settings.focalWidth]},center:[...center],forward,phase};
 }
-function groundLightingShader(field:ReturnType<typeof groundCompositionField>){
+function groundLightingShader(field:ReturnType<typeof groundCompositionField>,textured=false){
   const p=field.settings,n=(x:number)=>x.toFixed(5),soft=Math.max(.15,p.transitionSoftness);
-  return `vec2 groundLightingWeights(vec3 world){
+  return (textured?`uniform sampler2D groundShadeMap;
+   float glHash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+   float glNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(glHash(i),glHash(i+vec2(1,0)),f.x),mix(glHash(i+vec2(0,1)),glHash(i+1.),f.x),f.y);}
+   float groundLeafShade(vec2 p){
+    vec2 warp=vec2(glNoise(p*.09),glNoise(p*.10+vec2(7,11)))*.7;
+    vec2 a=mat2(.866,-.5,.5,.866)*(p+warp)/22.,b=mat2(.6,.8,-.8,.6)*(p+warp*.65)/31.+vec2(.31,.57),blur=vec2(.008,.006);
+    float first=(texture2D(groundShadeMap,a).r+texture2D(groundShadeMap,a+blur).r+texture2D(groundShadeMap,a-blur).r)/3.;
+    float second=(texture2D(groundShadeMap,b).r+texture2D(groundShadeMap,b+blur).r+texture2D(groundShadeMap,b-blur).r)/3.;
+    return clamp((1.-first)*.8+(1.-second)*.6,0.,1.);
+   }\n`:'' )+`vec2 groundLightingWeights(vec3 world){
     vec2 delta=world.xz-vec2(${field.center.map(n).join(',')});
     vec2 forward=normalize(vec2(${field.forward.map(n).join(',')}));
     vec2 q=vec2(dot(delta,vec2(-forward.y,forward.x)),dot(delta,forward))/vec2(${p.focalWidth.map(n).join(',')});
@@ -99,8 +108,9 @@ function groundLightingShader(field:ReturnType<typeof groundCompositionField>){
     float foreground=smoothstep(-.05,${n(soft+ .4)},-q.y+variation*.45);
     float side=smoothstep(.45,${n(1+soft)},abs(q.x)+variation)*(1.-smoothstep(.5,2.,q.y));
     float leafGroups=.5+.25*sin(world.x*.31+sin(world.z*.23+${n(field.phase)}))+.25*sin(world.z*.39-world.x*.19);
-    float canopyTexture=mix(.73,1.12,smoothstep(.22,.8,leafGroups));
-    float shade=clamp((foreground*${n(p.foregroundDarkness)}+side*${n(p.sideFraming)})*canopyTexture,0.,.64);
+    float canopyTexture=${textured?'mix(.34,1.14,groundLeafShade(world.xz+vec2(variation*1.4,variation*.6)))':'mix(.73,1.12,smoothstep(.22,.8,leafGroups))'};
+    float shade=clamp((foreground*${n(p.foregroundDarkness)}+side*${n(p.sideFraming)})*canopyTexture,0.,${textured?'.44':'.64'});
+    ${textured?'shade*=1.-smoothstep(30.,75.,length(delta+forward*22.));':''}
     float opening=(1.-smoothstep(.35,${n(.9+soft)},abs(q.x)+variation*.5))*(1.-smoothstep(.35,${n(.9+soft)},abs(q.y-.2)+variation*.35));
     return vec2(shade,opening);
   }
@@ -113,20 +123,21 @@ function groundLightingShader(field:ReturnType<typeof groundCompositionField>){
     return bounced*pow(1.-field.x,1.65)*cool*warm;
   }\n`;
 }
-function installGroundLighting(material:T.Material,field:ReturnType<typeof groundCompositionField>,instanced:boolean,debug:boolean,illumination?:ReturnType<typeof resolvePainterlyIllumination>,illuminationDebug=false){
+export function installGroundLighting(material:T.Material,field:ReturnType<typeof groundCompositionField>,instanced:boolean,debug:boolean,illumination?:ReturnType<typeof resolvePainterlyIllumination>,illuminationDebug=false,shadowTexture?:T.Texture){
   const previous=material.onBeforeCompile,key=material.customProgramCacheKey.bind(material);
   material.onBeforeCompile=(shader,renderer)=>{
     previous.call(material,shader,renderer);
+    if(shadowTexture)shader.uniforms.groundShadeMap={value:shadowTexture};
     shader.vertexShader='varying vec3 groundLightingWorld;\n'+shader.vertexShader;
     shader.vertexShader=shader.vertexShader.replace('#include <project_vertex>',`#include <project_vertex>\ngroundLightingWorld=(modelMatrix*${instanced?'instanceMatrix*':''}vec4(transformed,1.)).xyz;`);
-    shader.fragmentShader='varying vec3 groundLightingWorld;\n'+groundLightingShader(field)+(illumination?illuminationShader(illumination):'')+shader.fragmentShader;
+    shader.fragmentShader='varying vec3 groundLightingWorld;\n'+groundLightingShader(field,!!shadowTexture)+(illumination?illuminationShader(illumination):'')+shader.fragmentShader;
     shader.fragmentShader=shader.fragmentShader.replace('#include <opaque_fragment>',debug?`vec2 diagnostic=groundLightingWeights(groundLightingWorld);outgoingLight=mix(vec3(.35,.3,.035),vec3(.008,.065,.08),clamp(diagnostic.x/.4,0.,1.));\n#include <opaque_fragment>`:'outgoingLight=groundLightingApply(outgoingLight,diffuseColor.rgb,groundLightingWorld);\n#include <opaque_fragment>');
     if(illumination)shader.fragmentShader=shader.fragmentShader.replace('#include <opaque_fragment>',illuminationDebug?`float lightField=painterlyIllumination(groundLightingWorld);outgoingLight=mix(vec3(.012,.065,.095),vec3(.55,.38,.045),smoothstep(0.,1.2,lightField));outgoingLight=mix(outgoingLight,vec3(.12,.025,.16),clamp(-lightField*4.,0.,1.));\n#include <opaque_fragment>`:`float lightField=painterlyIllumination(groundLightingWorld);
       vec3 lightTint=mix(vec3(1.),vec3(1.18,1.12,.83),max(0.,lightField)*${illumination.settings.warmth.toFixed(5)});
       outgoingLight*=max(.7,1.+lightField)*lightTint;
       #include <opaque_fragment>`);
   };
-  material.customProgramCacheKey=()=>key()+`|ground-lighting-v2-${instanced}-${debug}-${!!illumination}-${illuminationDebug}`;material.needsUpdate=true;
+  material.customProgramCacheKey=()=>key()+`|ground-lighting-v2-${instanced}-${debug}-${!!illumination}-${illuminationDebug}-${!!shadowTexture}`;material.needsUpdate=true;
 }
 function cloudShader(composition:ResolvedEncounterComposition){
   return `float cloudTransmission(vec3 p){float light=1.;${composition.clouds.map(c=>`light*=1.-${composition.profile.clouds.strength.toFixed(4)}*(1.-smoothstep(${(1-composition.profile.clouds.softness).toFixed(4)},1.,length((p.xz-vec2(${c.x.toFixed(4)},${c.z.toFixed(4)}))/vec2(${c.radiusX.toFixed(4)},${c.radiusZ.toFixed(4)}))));`).join('')}return light;}`;

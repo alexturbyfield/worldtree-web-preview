@@ -1,0 +1,22 @@
+{
+  "task": "Stronger prairie dirt coverage",
+  "userFeedback": "Go farther with the dirt",
+  "hypothesis": "Broaden existing swaths and increase soil separation without relocating patches or changing composition.",
+  "file": "src/lib/forest/wave3-prairie-dressing.ts",
+  "change": "Lower existing soil-mask threshold; increase blend strength; warmer soil pigment and stronger sediment texture contrast. Same warped field and grass-root integration retained.",
+  "reviewer": "Primary Codex actual seed-29 image interpretation",
+  "decision": "Retain for review",
+  "humanApproval": null,
+  "visibleResult": "Warm exposed soil now clearly crosses the central opening and interrupts the surrounding greens. Boundaries remain irregular; shaded fine grain is still soft.",
+  "validation": {
+    "typescript": "passed",
+    "captureErrors": [],
+    "cameraMatched": true,
+    "lightsMatched": true,
+    "calls": 24,
+    "triangles": 1002290,
+    "geometryUnchanged": true
+  },
+  "comparison": "artifacts\\prairie-dirt\\comparison.png",
+  "noCommitPushDeploy": true
+}

@@ -1,3 +1,4 @@
+import {regionalLandCover} from './regional-land-cover';
 import {mapVisual} from './forest/presets';
 import source from '../../data/global/taxa.json';
 import bindings from '../../data/global/ecoregion-associations.json';
@@ -51,6 +52,13 @@ export function resolveVegetation({lat,lon,geography,botanicalArea=null,habitat=
   if(!geography||(!biomeNames[geography.BIOME_NUM]&&![0,98].includes(geography.BIOME_NUM))||!geography.REALM)return result;
   const growth=growthProfile(geography,habitat);result.status=growth.status;result.title=growth.title;result.description=growth.description;result.growthForms=growth.forms.map(([name,archetype,conditional])=>({name,archetype,conditional}));result.evidenceLevel='biome_realm_fallback';
   if(unvalidated.length&&geography.ECO_ID!==0&&![0,98,11].includes(geography.BIOME_NUM)){result.title='Environmental filter evidence is missing';result.description='Species withheld: '+unvalidated.join(', ')+' has not been measured or sourced. The growth forms below are conditional design context, not validated matches.';result.growthForms=result.growthForms.map(f=>({...f,conditional:true}));return result;}
+  const cover=regionalLandCover(geography.ECO_ID,botanicalArea?.code,habitat);
+  if(cover.length){
+   result.landCover=seededOrder(cover,result.seed);
+   result.growthForms.push({name:'Regional riparian tree candidates - wet draws only',archetype:'riparian_canopy',conditional:true});
+   result.description+=' Sourced regional grasses, forbs and shrubs are listed separately; trees require a suitable wet draw or bottomland.';
+   result.sources=[...result.sources,...Array.from(new Set(cover.flatMap(p=>p.sources))).map(url=>({name:'NRCS regional ecological-site vegetation',url,license:'See source; factual vegetation summary'}))];
+  }
   const exact=verifiedAssociations.filter(a=>a.verified&&a.ecoregionId===geography.ECO_ID&&a.habitats.includes(habitat)&&a.evidenceUrls.length>0);
   const exactTaxa=catalog.filter(t=>exact.some(a=>a.taxonId===t.id));
   if(exactTaxa.length){result.evidenceLevel='verified_ecoregion';result.status='species_candidates';result.species=seededOrder(exactTaxa,result.seed).slice(0,12).map(t=>({...t,confidence:'verified',ecoregionVerified:true,habitatVerified:true,ecoregionIds:[...new Set([...t.ecoregionIds,String(geography.ECO_ID)])],habitats:[...new Set([...t.habitats,habitat])],sources:[...new Set([...t.sources,...exact.filter(a=>a.taxonId===t.id).flatMap(a=>a.evidenceUrls)])]}));result.regionalSpeciesCount=exactTaxa.length;result.title='Verified ecoregion associations';result.description='Species associations have explicit ecoregion and habitat evidence. This still does not establish current land cover or abundance.';result.sources=[...sources,...exact.flatMap(a=>a.evidenceUrls.map(url=>({name:'Species–ecoregion association evidence',url,license:'See source'})))];return result;}

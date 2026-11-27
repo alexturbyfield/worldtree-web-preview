@@ -1,0 +1,55 @@
+import * as T from 'three';
+import type {SceneTree} from './recipe';
+import {randomSource} from './random';
+import type {Point} from './tree';
+
+/** Reference-informed approximation, isolated from the approved oak/willow assets.
+ * Preserve branch centerlines, specimen seeds, dimensions and placement. */
+export function finishPrairieTree(tree:SceneTree):SceneTree{
+ const willow=tree.species.scientificName==='Salix nigra',cottonwood=tree.species.scientificName==='Populus deltoides';
+ if(!tree.studio||!willow&&!cottonwood)return tree;
+ const r=randomSource(tree.seed+'|riparian-finish-v1'),study=tree.studio;
+ const segments=study.model.segments.map(s=>{const thickness=s.depth===0?.88:s.depth===1?.62:.56;return {...s,r0:s.r0*thickness,r1:s.r1*thickness,color:s.depth===0?'#716f61':'#847d69'};});
+ const model={...study.model,presetId:willow?'willow':'aspen',segments,palette:{...study.model.palette,bark:'#716f61'}};
+ const fronds=study.fronds.flatMap(f=>[0,1].map(copy=>{
+  const offset=copy?.12+r()*.20:0;
+  const position:Point=[f.position[0]+(r()-.5)*offset,f.position[1]-(willow?offset*.65:0),f.position[2]+(r()-.5)*offset];
+  return {...f,position,width:f.width*(willow?.69:.78),length:f.length*(willow?.96:.78),curve:willow?.22:.15,tile:0,color:willow?'#75926a':'#839674',interior:Math.max(.64,f.interior),normal:[f.normal[0],f.normal[1]*.78+.13,f.normal[2]] as Point};
+ }));
+ return {...tree,model,studio:{...study,model,segments,fronds},species:{...tree.species,visual:{...tree.species.visual,fallback:true,reason:'Reference-informed '+(willow?'black willow':'eastern cottonwood')+' study: slender secondary wood and existing '+(willow?'lanceolate willow':'broad poplar')+' sprays. Retained branching is an approximation, not a measured species reconstruction.'}}};
+}
+
+/** Deep irregular bark ridges affect both pigment and the light-facing normal.
+ * Shader detail avoids new downloads and remains continuous on existing branch UVs. */
+export function finishPrairieTreeMaterial(material:T.Material,kind:'library'|'billboards'|'wood'){
+ if(kind==='library'&&material instanceof T.ShaderMaterial){
+  material.uniforms.shadowPigment.value.set('#2c4438');material.uniforms.midPigment.value.set('#647c4d');material.uniforms.highPigment.value.set('#a9ad6c');
+  material.uniforms.rimStrength.value=.23;material.uniforms.gradientStrength.value=.37;
+  return;
+ }
+ if(kind!=='wood'||!(material instanceof T.MeshStandardMaterial))return;
+ material.bumpMap=material.map;material.bumpScale=.045;material.roughness=.95;
+ const previous=material.onBeforeCompile,key=material.customProgramCacheKey.bind(material);
+ material.onBeforeCompile=function(shader,renderer){
+  previous.call(this,shader,renderer);
+  shader.vertexShader='varying vec2 riparianBarkUv;\n'+shader.vertexShader;
+  shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nriparianBarkUv=uv;');
+  shader.fragmentShader=`varying vec2 riparianBarkUv;
+   float rbHash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+   float rbNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(rbHash(i),rbHash(i+vec2(1,0)),f.x),mix(rbHash(i+vec2(0,1)),rbHash(i+1.),f.x),f.y);}
+   float rbHeight(vec2 p){
+    vec2 q=p*vec2(20.,4.);float warp=rbNoise(q*vec2(.22,.70))*1.45+rbNoise(q*vec2(.6,1.3))*.22;
+    float ridge=smoothstep(.14,.68,abs(sin((q.x+warp)*3.14159)));
+    float plates=.56+.44*rbNoise(q*vec2(1.6,.7));
+    return ridge*plates+rbNoise(q*vec2(2.5,2.2))*.09;
+   }
+  `+shader.fragmentShader;
+  shader.fragmentShader=shader.fragmentShader.replace('#include <metalnessmap_fragment>',`#include <metalnessmap_fragment>
+   float barkRelief=rbHeight(riparianBarkUv);
+   vec3 fissure=vec3(.035,.042,.032),ridge=vec3(.29,.265,.210);
+   diffuseColor.rgb=mix(fissure,ridge,smoothstep(.10,.82,barkRelief));
+   diffuseColor.rgb*=.92+.16*rbNoise(riparianBarkUv*vec2(53.,25.));`);
+  shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_maps>',`normal=perturbNormalArb(-vViewPosition,normal,vec2(dFdx(rbHeight(riparianBarkUv)),dFdy(rbHeight(riparianBarkUv)))*.045,faceDirection);`);
+ };
+ material.customProgramCacheKey=()=>key()+'|prairie-riparian-bark-v1';material.needsUpdate=true;
+}

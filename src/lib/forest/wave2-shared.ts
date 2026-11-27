@@ -8,7 +8,7 @@ import {forestImpostors} from './wave1-impostors';
 import {distantConiferGeometry} from '../studio/conifer-foliage';
 
 export interface ExpansionPlan {
- id:'boreal'|'temperate'|'tundra';biome:number;seed:string;phase:number;relief:number;heightMode?:'tundra-community';
+ id:'boreal'|'temperate'|'tundra'|'prairie';biome:number;seed:string;phase:number;relief:number;heightMode?:'tundra-community'|'prairie-plain';
  camera:{position:[number,number,number];target:[number,number,number]};
  inspection:{position:[number,number,number];target:[number,number,number]};
 }
@@ -22,6 +22,18 @@ export function makeExpansionPlan(id:ExpansionPlan['id'],biome:number,seed:strin
  p.camera.position[1]=expansionHeight(p,0,34)+1.7;p.camera.target[1]=expansionHeight(p,0,-55)+(id==='tundra'?.8:3.5);return p;
 }
 export function expansionHeight(p:ExpansionPlan,x:number,z:number){
+ if(p.heightMode==='prairie-plain'){
+  const side=Math.sin(p.phase)>.0?1:-1;
+  const shoulder=(a:number,b:number,cx:number,cz:number,rx:number,rz:number,h:number)=>{
+   const u=(a-cx)/rx+(expansionCommunity(p,a*.4,b*.4)-.5)*.25,v=(b-cz)/rz;
+   return h*Math.exp(-(u*u+v*v)*1.5);
+  };
+  const roll=(a:number,b:number)=>p.relief*((expansionCommunity(p,a*.14,b*.14)-.5)*13.0+(expansionCommunity(p,a*.035,b*.035)-.5)*18.0+(expansionCommunity(p,a*.65,b*.65)-.5)*.70)
+   +shoulder(a,b,side*(32+Math.cos(p.phase)*7),-20,44,100,3.8)
+   +shoulder(a,b,-side*78,-140,95,165,5.5)
+   +shoulder(a,b,side*160,-480,270,190,8.0);
+  return roll(x,z)-roll(0,34); // Anchor the human-height camera footing.
+ }
  const base=p.relief*(.43*Math.sin(x*.045+p.phase)*Math.cos(z*.036-p.phase)+.21*Math.sin(z*.092+x*.021+p.phase)+.10*Math.sin(x*.13-z*.055));
  if(p.heightMode!=='tundra-community')return base;
  const shoulder=(a:number,b:number)=>(expansionCommunity(p,a,b)-.5)*.62*(1-smooth(100,240,Math.hypot(a,b-34)));
@@ -169,8 +181,13 @@ export function mountExpansionBase(scene:T.Scene,recipe:SceneRecipe,plan:Expansi
    #include <roughnessmap_fragment>
   `);
  };ground.customProgramCacheKey=()=> 'wave2-shared-ground-3|'+plan.id+'|'+!!options.concept+'|'+(options.surfaceArtwork?.texture??'legacy');
- for(const [size,steps,hole]of [[120,160,0],[400,100,60],[2600,130,200]] as const){
-  const g=new T.PlaneGeometry(size,size,steps,steps);g.rotateX(-Math.PI/2);const a=g.attributes.position;for(let i=0;i<a.count;i++)a.setY(i,expansionHeight(plan,a.getX(i),a.getZ(i)));
+ // Prairie's open sightlines expose cracks between independent terrain rings.
+ // One shared grid with nonuniform spacing has no T-junctions or skirt walls.
+ const terrainRings=plan.id==='prairie'?[[14000,190,0]]:[[120,160,0],[400,100,60],[2600,130,200]];
+ for(const [size,steps,hole]of terrainRings){
+  const g=new T.PlaneGeometry(size,size,steps,steps);g.rotateX(-Math.PI/2);const a=g.attributes.position;
+  const prairieAxis=(v:number)=>{const t=Math.abs(v)/(size*.5);return Math.sign(v)*(t<.45?t/.45*120:t<.75?120+(t-.45)/.30*630:750+(t-.75)/.25*6250);};
+  for(let i=0;i<a.count;i++){if(plan.id==='prairie'){a.setX(i,prairieAxis(a.getX(i)));a.setZ(i,prairieAxis(a.getZ(i)));}a.setY(i,expansionHeight(plan,a.getX(i),a.getZ(i)));}
   if(hole){const indices:number[]=[],ix=g.index!;for(let i=0;i<ix.count;i+=3){const ids=[ix.getX(i),ix.getX(i+1),ix.getX(i+2)],x=ids.reduce((s,j)=>s+a.getX(j),0)/3,z=ids.reduce((s,j)=>s+a.getZ(j),0)/3;if(Math.abs(x)<hole&&Math.abs(z)<hole)continue;indices.push(...ids);}g.setIndex(indices);}
   g.computeVertexNormals();const mesh=new T.Mesh(g,ground);mesh.name='expansion-terrain';mesh.receiveShadow=true;group.add(mesh);created.push(mesh);
  }

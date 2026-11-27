@@ -1,0 +1,246 @@
+[
+  {
+    "id": "prairie",
+    "seed": "29",
+    "view": "hero",
+    "file": "artifacts/prairie-ground/baseline/prairie-29-hero.png",
+    "width": 640,
+    "height": 360,
+    "camera": {
+      "position": [
+        0,
+        1.7,
+        34
+      ],
+      "target": [
+        0,
+        -16,
+        -190
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 5,
+        "calls": 2,
+        "triangles": 2060,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.19999998807907104
+      },
+      {
+        "frame": 6,
+        "calls": 2,
+        "triangles": 2060,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0
+      },
+      {
+        "frame": 7,
+        "calls": 2,
+        "triangles": 2060,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.09999996423721313
+      }
+    ],
+    "instances": [],
+    "textures": [],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "e7f3ff",
+        "intensity": 2.3,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "bed4e6",
+        "intensity": 0.95,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffedc2",
+        "intensity": 3.2,
+        "position": [
+          -28,
+          46,
+          24
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": {
+          "intensity": 1,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -64,
+          "right": 64,
+          "normalBias": 0.12
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "concept": null,
+    "prairie": null,
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "prairie",
+    "seed": "29",
+    "view": "inspection",
+    "file": "artifacts/prairie-ground/baseline/prairie-29-inspection.png",
+    "width": 640,
+    "height": 360,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        0,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 10,
+        "calls": 2,
+        "triangles": 2060,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.09999996423721313
+      },
+      {
+        "frame": 11,
+        "calls": 2,
+        "triangles": 2060,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0
+      },
+      {
+        "frame": 12,
+        "calls": 2,
+        "triangles": 2060,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.10000002384185791
+      }
+    ],
+    "instances": [],
+    "textures": [],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "e7f3ff",
+        "intensity": 2.3,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "bed4e6",
+        "intensity": 0.95,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffedc2",
+        "intensity": 3.2,
+        "position": [
+          -28,
+          46,
+          24
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": {
+          "intensity": 1,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -64,
+          "right": 64,
+          "normalBias": 0.12
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "concept": null,
+    "prairie": null,
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  }
+]

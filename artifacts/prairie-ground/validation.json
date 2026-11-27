@@ -1,0 +1,78 @@
+{
+  "protected": [
+    {
+      "name": "puget-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "rainforest-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "rainforest-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "savanna-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "savanna-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "alpine-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "alpine-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "boreal-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "boreal-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "temperate-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "temperate-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "tundra-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "tundra-inspection",
+      "pixelIdentical": true
+    }
+  ],
+  "errors": [],
+  "performance": [
+    {
+      "seed": "29",
+      "calls": 2,
+      "triangles": 73720,
+      "instances": [],
+      "sourceEco": 389,
+      "sourceBiome": 8
+    },
+    {
+      "seed": "41",
+      "calls": 2,
+      "triangles": 73720,
+      "instances": [],
+      "sourceEco": 389,
+      "sourceBiome": 8
+    }
+  ],
+  "gateAPassed": false,
+  "holdoutGenerated": false,
+  "reason": "Human-height images still flat/lawn-like. No recipe frozen as an artistic success; preserve holdout until a representation passes."
+}

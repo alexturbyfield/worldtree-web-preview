@@ -12,8 +12,10 @@
   "baselinePins": [
     {
       "biome": "boreal",
-      "image": "artifacts/wave2-autonomous/retained/boreal-29-hero.png",
-      "sha256": "be13557ef154174ba277c7feff799bdda6f525d603fee4d1b400a1cf8121fb86"
+      "image": "artifacts/wave2-autonomous/boreal-validated/boreal-29-hero.png",
+      "sha256": "f756c766963a55ad4105a6ee1318bc832f400e8eeeb6c369666aff49c9051889",
+      "previousImage": "artifacts/wave2-autonomous/retained/boreal-29-hero.png",
+      "referenceCorrection": "Prior image path predated the final boreal moss correction. This validated frame matches the publicly deployed approved commit 1076523 byte-for-byte; approval scope is unchanged."
     },
     {
       "biome": "temperate",

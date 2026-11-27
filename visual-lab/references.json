@@ -624,6 +624,116 @@
       "priorExperimentRecords": [
         "visual-lab/global-expansion/concept-session.json"
       ]
+    },
+    {
+      "id": "prairie-wave3-primary",
+      "biome": "temperate-prairie-steppe",
+      "biomeId": 8,
+      "category": "primary-composition-and-grassland",
+      "source": {
+        "kind": "user-supplied",
+        "attribution": "User-supplied concept illustration; original creator/provider not verified",
+        "original": "1000011112.png"
+      },
+      "license": {
+        "status": "unverified",
+        "use": "private local visual reference only",
+        "redistributionAllowed": false,
+        "trainingEligible": false
+      },
+      "imagePath": ".codex-attachments/284888ac-a93c-48e2-bd2c-1bfa55e3216f/0d507539-ab84-4810-bab3-93d4f2f89b05/1000011112.png",
+      "imageSha256": "c028389eeee24aa394dfd224df568faaec54bad6859b6c8ab62d4de90cd5aa5a",
+      "available": true,
+      "principle": "Broad overlapping grass values, side framing, fine lit tips and selective flower patches; visible trees and path are conditional or excluded under the written brief.",
+      "positiveCharacteristics": [
+        "Connected grass fabric at multiple heights",
+        "Dark foreground against golden middle distance",
+        "Restrained flower communities",
+        "Cooler distant land"
+      ],
+      "defectsToAvoid": [
+        "Mandatory hero tree",
+        "A continuous artificial path",
+        "Unsupported hills or mountains",
+        "Uniform grass carpet"
+      ],
+      "inspection": {
+        "reviewer": "primary agent",
+        "actualImageContentInterpreted": true,
+        "humanVisualApproval": null
+      }
+    },
+    {
+      "id": "prairie-wave3-secondary-light",
+      "biome": "temperate-prairie-steppe",
+      "biomeId": 8,
+      "category": "secondary-light-and-contact",
+      "source": {
+        "kind": "user-supplied",
+        "attribution": "User-supplied concept illustration; original creator/provider not verified",
+        "original": "1000011110.png"
+      },
+      "license": {
+        "status": "unverified",
+        "use": "private local visual reference only",
+        "redistributionAllowed": false,
+        "trainingEligible": false
+      },
+      "imagePath": ".codex-attachments/284888ac-a93c-48e2-bd2c-1bfa55e3216f/18b0de32-4058-4791-9eef-24672971b318/1000011110.png",
+      "imageSha256": "48ce497315ff0e2676a5e4df55142d0e4f3e87824c4b6d5dcfa69ee2c0d37864",
+      "available": true,
+      "principle": "Warm low sun, cool leaf/rock interiors and rooted surface layering; woodland density and broad central dirt route are not prairie defaults.",
+      "positiveCharacteristics": [
+        "Warm highlights with dark interiors",
+        "Embedded rocks and coherent contact",
+        "Fine substrate detail"
+      ],
+      "defectsToAvoid": [
+        "Copying woodland density",
+        "Unsupported tropical plants",
+        "Converting the grassland into a wooded corridor"
+      ],
+      "inspection": {
+        "reviewer": "primary agent",
+        "actualImageContentInterpreted": true,
+        "humanVisualApproval": null
+      }
+    },
+    {
+      "id": "prairie-wave3-secondary-palette",
+      "biome": "temperate-prairie-steppe",
+      "biomeId": 8,
+      "category": "secondary-palette-and-atmosphere",
+      "source": {
+        "kind": "user-supplied",
+        "attribution": "User-supplied concept illustration; original creator/provider not verified",
+        "original": "1000011111.png"
+      },
+      "license": {
+        "status": "unverified",
+        "use": "private local visual reference only",
+        "redistributionAllowed": false,
+        "trainingEligible": false
+      },
+      "imagePath": ".codex-attachments/284888ac-a93c-48e2-bd2c-1bfa55e3216f/bab7e349-41f2-4f7b-852e-d8e00dc9a9d8/1000011111.png",
+      "imageSha256": "a884549ccda6c82fc568fff45955cfea4ff41da1929ca972523b62d3d3335b03",
+      "available": true,
+      "principle": "Muted shrub greens, straw tufts, purple accents and layered atmospheric distance; coast and rocky relief are not evidence for the prairie site.",
+      "positiveCharacteristics": [
+        "Warm/cool pigment relationships",
+        "Flower color in irregular patches",
+        "Near/middle/far contrast hierarchy"
+      ],
+      "defectsToAvoid": [
+        "Inventing coast or cliffs",
+        "Making rock props the main prairie structure",
+        "Copying depicted woody flora"
+      ],
+      "inspection": {
+        "reviewer": "primary agent",
+        "actualImageContentInterpreted": true,
+        "humanVisualApproval": null
+      }
     }
   ],
   "supplementalSources": [

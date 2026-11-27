@@ -1,0 +1,72 @@
+import * as T from 'three';
+import type {SceneTree} from './recipe';
+import {randomSource} from './random';
+import type {Point,Segment} from './tree';
+
+/** Reference-informed approximation, isolated from the approved oak/willow assets.
+ * Preserve branch centerlines, specimen seeds, dimensions and placement. */
+export function finishPrairieTree(tree:SceneTree):SceneTree{
+ const willow=tree.species.scientificName==='Salix nigra',cottonwood=tree.species.scientificName==='Populus deltoides';
+ if(!tree.studio||!willow&&!cottonwood)return tree;
+ const r=randomSource(tree.seed+'|riparian-finish-v1'),study=tree.studio;
+ const segments:Segment[]=study.model.segments.map(s=>{const thickness=s.depth===0?.88:s.depth===1?.62:.56;return {...s,r0:s.r0*thickness,r1:s.r1*thickness,color:s.depth===0?'#716f61':'#847d69'};});
+ // The inherited oak omits path metadata: independent cylinder frames leave
+ // bright wedge seams. Recover contiguous limbs and share tangent frames.
+ let pathId=0;
+ const same=(a:Point,b:Point)=>a.every((v,i)=>Math.abs(v-b[i])<1e-5);
+ const direction=(s:Segment)=>new T.Vector3(...s.b).sub(new T.Vector3(...s.a)).normalize();
+ for(let i=0;i<segments.length;i++){
+  const seg=segments[i],prev=segments[i-1],next=segments[i+1],before=prev&&prev.depth===seg.depth&&same(prev.b,seg.a),after=next&&next.depth===seg.depth&&same(seg.b,next.a);
+  if(!before)pathId++;
+  const axis=direction(seg);
+  seg.pathId=pathId;seg.tangentA=(before?direction(prev).add(axis).normalize():axis.clone()).toArray() as Point;seg.tangentB=(after?direction(next).add(axis).normalize():axis.clone()).toArray() as Point;
+  seg.capEnd=!after;seg.capStart=false;
+ }
+ const model={...study.model,presetId:willow?'willow':'aspen',segments,palette:{...study.model.palette,bark:'#716f61'}};
+ // Match radii at consecutive joints before the shared renderer builds rings.
+ const joints=new Map<string,{radius:number;count:number}>();
+ for(const seg of segments)for(const [point,radius] of [[seg.a,seg.r0],[seg.b,seg.r1]] as const){const key=seg.pathId+'|'+point.join(',');const j=joints.get(key)??{radius:0,count:0};j.radius+=radius;j.count++;joints.set(key,j);}
+ for(const seg of segments){const a=joints.get(seg.pathId+'|'+seg.a.join(','))!,b=joints.get(seg.pathId+'|'+seg.b.join(','))!;seg.r0=a.radius/a.count;seg.r1=b.radius/b.count;}
+ const fronds=study.fronds.flatMap(f=>[0,1,2].map(copy=>{
+  const offset=copy?.12+r()*.20:0,rotation=new T.Quaternion().fromArray(f.rotation);
+  const twist=new T.Quaternion().setFromAxisAngle(new T.Vector3(0,0,1),(r()-.5)*1.8),tilt=new T.Quaternion().setFromAxisAngle(new T.Vector3(0,1,0),(r()-.5)*.9);rotation.multiply(twist).multiply(tilt);
+  const position:Point=[f.position[0]+(r()-.5)*offset,f.position[1]-(willow?offset*.65:0),f.position[2]+(r()-.5)*offset];
+  return {...f,position,rotation:rotation.toArray() as [number,number,number,number],width:f.width*(willow?.50+r()*.18:.63+r()*.13),length:f.length*(.64+r()*.23),curve:willow?.22:.15,tile:0,color:willow?'#75926a':'#839674',interior:.66+r()*.24,normal:[f.normal[0],f.normal[1]*.78+.13,f.normal[2]] as Point};
+ }));
+ return {...tree,model,studio:{...study,model,segments,fronds},species:{...tree.species,visual:{...tree.species.visual,fallback:true,reason:'Reference-informed '+(willow?'black willow':'eastern cottonwood')+' study: slender secondary wood and existing '+(willow?'lanceolate willow':'broad poplar')+' sprays. Retained branching is an approximation, not a measured species reconstruction.'}}};
+}
+
+/** Dedicated generated material, rather than a repeated analytic stripe shader. */
+export function prairieBarkTexture(){
+ const texture=new T.TextureLoader().load('/assets/prairie/black-willow-bark-v1.webp',()=>window.dispatchEvent(new Event('resize')));
+ texture.colorSpace=T.SRGBColorSpace;texture.wrapS=texture.wrapT=T.RepeatWrapping;texture.anisotropy=4;return texture;
+}
+
+/** Branch-aligned metric UVs. The source retains one continuous path ID per limb. */
+export function prairieWoodUV(geometry:T.BufferGeometry,inputs:{model:SceneTree['model']}[],far:boolean,mobile:boolean){
+ const uv=geometry.getAttribute('uv');let vertex=0;
+ for(const {model} of inputs){
+  const paths=new Map<number,{length:number;repeats:number}>();
+  for(const s of model.segments){
+   if(far&&s.depth>1)continue;
+   const sides=s.pathId===undefined?(far?4:mobile?5:7):far?6:s.depth===0?14:s.depth===1?10:s.depth===2?8:6;
+   const path=paths.get(s.pathId??-1)??{length:0,repeats:Math.max(1,Math.round(2*Math.PI*s.r0/.65))};
+   const length=new T.Vector3(...s.a).distanceTo(new T.Vector3(...s.b));
+   for(let side=0;side<sides;side++)for(const [end,offset] of [[0,0],[1,0],[0,1],[1,0],[1,1],[0,1]]){
+    uv.setXY(vertex++,(side+offset)/sides*path.repeats,(path.length+end*length)/.75);
+   }
+   if(s.capStart)vertex+=sides*3;if(s.capEnd)vertex+=sides*3;
+   path.length+=length;paths.set(s.pathId??-1,path);
+  }
+ }
+ uv.needsUpdate=true;
+}
+
+export function finishPrairieTreeMaterial(material:T.Material,kind:'library'|'billboards'|'wood'){
+ if(kind==='library'&&material instanceof T.ShaderMaterial){
+  material.uniforms.shadowPigment.value.set('#2c4438');material.uniforms.midPigment.value.set('#647c4d');material.uniforms.highPigment.value.set('#a9ad6c');
+  material.uniforms.rimStrength.value=.23;material.uniforms.gradientStrength.value=.37;
+ }else if(kind==='wood'&&material instanceof T.MeshStandardMaterial){
+  material.vertexColors=false;material.color.set('#ffffff');material.bumpMap=material.map;material.bumpScale=.035;material.roughness=1;
+ }
+}
