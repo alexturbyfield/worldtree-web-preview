@@ -36,6 +36,8 @@ Do not overwrite the frozen `before` evidence when checking future changes; pres
 
 The [bounded resolver expansion is complete](BOUNDED-COMPLETION.md): all 14 existing families now have 42 explicit regional envelopes, with a touch-friendly automatic preview picker. This is representative opt-in coverage, not worldwide routing or artistic approval of each transfer. Earlier milestone records below remain preserved.
 
+### Earlier milestones (historical)
+
 The [bounded automatic resolver](BOUNDED-RESOLVER.md) now offers an opt-in transfer within nine audited regional envelopes, with explicit provenance gates and fallback reasons. Its variations remain experimental and unreviewed.
 
 The [prairie extension](BOUNDED-PRAIRIE.md) adds Oklahoma, Pampas and Mongolian steppe envelopes to that same policy (twelve total), preserving the prior rules and withholding unsupported foreign plants and location-conditioned artwork.

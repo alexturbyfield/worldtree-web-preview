@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "sourceCommit": "5125b055609a652dd6a12cb4d2d064e3c64e5949",
+  "branch": "feat/bounded-environment-resolver",
+  "url": "https://worldtree-web-preview-hdjswxsn9-alex-turbyfield.vercel.app",
+  "deploymentId": "dpl_HtKaN7iP6vNGzGJtaiGMeXUP5toV",
+  "environment": "preview",
+  "state": "READY",
+  "build": "Vercel remote build passed",
+  "totalFamilies": 14,
+  "totalRegionalRules": 42,
+  "defaultRoutingChanged": false,
+  "productionChanged": false,
+  "globalArtisticPromotion": false,
+  "artisticApproval": "Not assigned by agent",
+  "deployedBrowserChecks": 10,
+  "deployedBrowserErrors": 0,
+  "devicePerformanceApproval": false
+}
