@@ -1,0 +1,43 @@
+{
+  "date": "2026-11-27T19:53:38.073Z",
+  "humanFeedback": "Cluster is it. One fine adjustment, can we meet the original texture/color with the new brighter colors halfway. I liked it quasi realistic",
+  "retainedNormals": {
+    "crown": 0.45,
+    "cluster": 0.4,
+    "leaf": 0.15
+  },
+  "material": {
+    "originalTextureDriven": 0.5,
+    "brighterA": 0.5,
+    "scope": "Diagnostic clone only; copied existing material lighting hooks preserved"
+  },
+  "review": {
+    "reviewer": "Primary Codex inspected matched before/after",
+    "observation": "Halfway version retains broad cluster illumination while deepening olive body, restoring subtle texture/color variation and reducing pale highlights.",
+    "decision": "retained for review, not final approval",
+    "caveat": "Crown still shows repeated rounded lobes; no shape changes made"
+  },
+  "checks": {
+    "typecheck": "passed",
+    "geometrySignaturesIdentical": true,
+    "counts": [
+      {
+        "realism": 0,
+        "triangles": 29520,
+        "calls": 2
+      },
+      {
+        "realism": 0.5,
+        "triangles": 29520,
+        "calls": 2
+      }
+    ]
+  },
+  "changedFiles": [
+    "src/lib/forest/holm-oak-study.ts",
+    "scripts/studies/holm-normal-study.cjs"
+  ],
+  "evidence": "artifacts/holm-halfway-material/comparison.png",
+  "deployed": false,
+  "committed": false
+}

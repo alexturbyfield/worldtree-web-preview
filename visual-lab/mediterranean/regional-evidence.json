@@ -1,0 +1,229 @@
+{
+  "location": {
+    "lat": 43.72,
+    "lon": 3.58
+  },
+  "region": {
+    "ECO_ID": 799,
+    "ECO_NAME": "Northeast Spain and Southern France Mediterranean forests",
+    "BIOME_NUM": 12,
+    "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub",
+    "REALM": "Palearctic",
+    "COLOR_BIO": "#FE0000",
+    "LICENSE": "CC-BY 4.0"
+  },
+  "botanicalArea": {
+    "code": "FRA",
+    "name": "France"
+  },
+  "species": [
+    {
+      "name": "Juglans hispanica",
+      "sources": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:20002602-1",
+        "https://doi.org/10.34885/egs6-cp24"
+      ],
+      "confidence": "regional"
+    },
+    {
+      "name": "Cormus domestica",
+      "sources": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:722386-1",
+        "https://doi.org/10.34885/egs6-cp24"
+      ],
+      "confidence": "regional"
+    },
+    {
+      "name": "Pinus pinea",
+      "sources": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263221-1",
+        "https://doi.org/10.34885/egs6-cp24"
+      ],
+      "confidence": "regional"
+    },
+    {
+      "name": "× Pyraria irregularis",
+      "sources": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77254028-1",
+        "https://doi.org/10.34885/egs6-cp24"
+      ],
+      "confidence": "regional"
+    },
+    {
+      "name": "Ostrya carpinifolia",
+      "sources": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295664-1",
+        "https://doi.org/10.34885/egs6-cp24"
+      ],
+      "confidence": "regional"
+    },
+    {
+      "name": "Buxus sempervirens",
+      "sources": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:340317-1",
+        "https://doi.org/10.34885/egs6-cp24"
+      ],
+      "confidence": "regional"
+    },
+    {
+      "name": "Fagus sylvatica",
+      "sources": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:305836-2",
+        "https://doi.org/10.34885/egs6-cp24"
+      ],
+      "confidence": "regional"
+    },
+    {
+      "name": "Larix decidua",
+      "sources": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262420-1",
+        "https://doi.org/10.34885/egs6-cp24"
+      ],
+      "confidence": "regional"
+    },
+    {
+      "name": "× Arsorbus thuringiaca",
+      "sources": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77354226-1",
+        "https://doi.org/10.34885/egs6-cp24"
+      ],
+      "confidence": "regional"
+    },
+    {
+      "name": "Erica scoparia",
+      "sources": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:329579-1",
+        "https://doi.org/10.34885/egs6-cp24"
+      ],
+      "confidence": "regional"
+    },
+    {
+      "name": "Laburnum alpinum",
+      "sources": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:501425-1",
+        "https://doi.org/10.34885/egs6-cp24"
+      ],
+      "confidence": "regional"
+    },
+    {
+      "name": "Abies alba",
+      "sources": [
+        "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60468511-2",
+        "https://doi.org/10.34885/egs6-cp24"
+      ],
+      "confidence": "regional"
+    }
+  ],
+  "growthForms": [
+    {
+      "name": "Sclerophyll woodland / scrub",
+      "archetype": "broadleaf_tree",
+      "conditional": false
+    },
+    {
+      "name": "Understory, gaps and non-tree cover",
+      "archetype": "understory",
+      "conditional": false
+    }
+  ],
+  "trees": [
+    {
+      "name": "Fagus sylvatica",
+      "preset": "oak",
+      "studio": "broadleaf",
+      "height": 9.090488403995835
+    },
+    {
+      "name": "Fagus sylvatica",
+      "preset": "oak",
+      "studio": "broadleaf",
+      "height": 9.715422961697346
+    },
+    {
+      "name": "Ostrya carpinifolia",
+      "preset": "oak",
+      "studio": "broadleaf",
+      "height": 9.457749277036976
+    },
+    {
+      "name": "Pinus pinea",
+      "preset": "pine",
+      "height": 20.1151493680463
+    },
+    {
+      "name": "Pinus pinea",
+      "preset": "pine",
+      "height": 17.879577613302757
+    },
+    {
+      "name": "Ostrya carpinifolia",
+      "preset": "oak",
+      "studio": "broadleaf",
+      "height": 12.602184810073021
+    },
+    {
+      "name": "× Arsorbus thuringiaca",
+      "preset": "oak",
+      "studio": "broadleaf",
+      "height": 10.308536733620352
+    },
+    {
+      "name": "Larix decidua",
+      "preset": "douglas-v1",
+      "studio": "conifer",
+      "height": 26.37673723100199
+    },
+    {
+      "name": "Laburnum alpinum",
+      "preset": "oak",
+      "studio": "broadleaf",
+      "height": 11.999937944660541
+    },
+    {
+      "name": "Pinus pinea",
+      "preset": "pine",
+      "height": 22.353620953707598
+    },
+    {
+      "name": "Laburnum alpinum",
+      "preset": "oak",
+      "studio": "broadleaf",
+      "height": 9.646604849585554
+    },
+    {
+      "name": "Cormus domestica",
+      "preset": "oak",
+      "studio": "broadleaf",
+      "height": 8.94903631627611
+    },
+    {
+      "name": "Erica scoparia",
+      "preset": "oak",
+      "studio": "broadleaf",
+      "height": 11.379141171932712
+    },
+    {
+      "name": "Cormus domestica",
+      "preset": "oak",
+      "studio": "broadleaf",
+      "height": 13.250726697778163
+    },
+    {
+      "name": "Buxus sempervirens",
+      "preset": "oak",
+      "studio": "broadleaf",
+      "height": 9.409291275715029
+    },
+    {
+      "name": "Erica scoparia",
+      "preset": "oak",
+      "studio": "broadleaf",
+      "height": 11.931112626829439
+    }
+  ],
+  "limitations": [
+    "Native botanical-country records do not verify presence at a point or membership of an ecoregion.",
+    "Current land cover, elevation, soil, water availability and local habitat are unmeasured.",
+    "No abundance, probability or ecological spawn weights are provided."
+  ]
+}

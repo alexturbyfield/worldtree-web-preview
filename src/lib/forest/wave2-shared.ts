@@ -8,7 +8,7 @@ import {forestImpostors} from './wave1-impostors';
 import {distantConiferGeometry} from '../studio/conifer-foliage';
 
 export interface ExpansionPlan {
- id:'boreal'|'temperate'|'tundra'|'prairie';biome:number;seed:string;phase:number;relief:number;heightMode?:'tundra-community'|'prairie-plain';
+ id:'boreal'|'temperate'|'tundra'|'prairie'|'mediterranean'|'andean'|'tropicalpine';biome:number;seed:string;phase:number;relief:number;heightMode?:'tundra-community'|'prairie-plain'|'woodland-slope';
  camera:{position:[number,number,number];target:[number,number,number]};
  inspection:{position:[number,number,number];target:[number,number,number]};
 }
@@ -22,6 +22,10 @@ export function makeExpansionPlan(id:ExpansionPlan['id'],biome:number,seed:strin
  p.camera.position[1]=expansionHeight(p,0,34)+1.7;p.camera.target[1]=expansionHeight(p,0,-55)+(id==='tundra'?.8:3.5);return p;
 }
 export function expansionHeight(p:ExpansionPlan,x:number,z:number){
+ if(p.heightMode==='woodland-slope'){
+  const at=(a:number,b:number)=>.85*Math.exp(-((a+5)**2/55+(b-24)**2/230))+.48*Math.exp(-((a-7)**2/80+(b-19)**2/320))-.26*Math.exp(-((a-1)**2/30+(b-17)**2/250))-13*(1-Math.exp(-Math.max(0,34-b)/110))+1.1*Math.sin(a*.065+p.phase)*Math.cos(b*.043)+.18*Math.sin(a*.24+b*.13)+2.6*Math.exp(-((a+12)**2/200+(b-8)**2/1400))+6*Math.exp(-((a-65)**2/4500+(b+130)**2/10000));
+  return at(x,z)-at(0,34);
+ }
  if(p.heightMode==='prairie-plain'){
   const side=Math.sin(p.phase)>.0?1:-1;
   const shoulder=(a:number,b:number,cx:number,cz:number,rx:number,rz:number,h:number)=>{

@@ -1,5 +1,46 @@
 # Wildloom Visual Learning Lab
 
+## All developed regional checkpoints accepted
+
+[Human batch approval](feedback/all-developed-regions-approved.json): 15 regional recipe directions cover all 14 existing RESOLVE biome families at prototype level. This supersedes pending artistic-review labels for retained checkpoints; historical critiques remain intact. Regional recipes stay opt-in. Global ecological routing, multi-region robustness and physical-mobile performance remain separate work.
+
+
+## Mediterranean ground/grass surface detail
+
+[Before/after](../artifacts/mediterranean-surface-detail/comparison.png) · [Preview/files/checks](../artifacts/mediterranean-surface-detail/REPORT.md) · [Review](mediterranean/surface-detail-review.json). Shared meadow/sediment sampling adds foreground soil grain and woven grassy color/detail without geometry or placement changes. Dark middle-distance grass speckling and prior soil-mask limitations remain. One fixed-seed material pass; provisional, no human approval or deployment.
+
+## Cork oak — quasi-realistic painterly treatment
+
+[Before/after](../artifacts/cork-halfway-treatment/comparison.png) · [Preview/files/checks](../artifacts/cork-halfway-treatment/REPORT.md) · [Feedback/review](mediterranean/cork-oak/halfway-treatment-review.json). Cork hero now uses a50/50 physically textured/painterly color treatment and0.45/0.40/0.15 crown/cluster/card shading. Shape/alpha/placement and holm oak unchanged. Cork review pending; user approval of the right-hand holm material is recorded separately. Sparse crown remains; no commit/deployment.
+
+## Isolated hierarchical canopy normal experiment
+
+[Cards / current hull / hierarchical blend](../artifacts/holm-hierarchical-normals/comparison.png) · [Live Lab controls](http://127.0.0.1:3121/holm-normals) · [Report](../artifacts/holm-hierarchical-normals/REPORT.md) · [Review](mediterranean/holm-oak/hierarchical-normals-review.json). One diagnostic tree only; crown0.45/cluster0.40/leaf0.15, genuine3D cluster-derived fields. Three captures share silhouette, geometry, lighting and camera;2 calls/29,520 triangles each. No automatic correction or scene promotion; awaiting human review.
+
+## Holm oak — retained A and canopy-hull normals
+
+[Matched before/after](../artifacts/holm-hull-normals/before-after.png) · [Preview/files/checks](../artifacts/holm-hull-normals/REPORT.md) · [Feedback/review](mediterranean/holm-oak/hull-normals-review.json). User selected materialA and requested hull-following normals. Continuous crown normals remove spray lighting seams while retaining geometry and silhouette. Surface detail may now be too subdued; normal treatment awaits review. No commit or deployment.
+
+## Holm-oak material checkpoint — choose A/B/C
+
+[Three actual material options](../artifacts/holm-material-options/comparison.png) · [Preview/files/checks](../artifacts/holm-material-options/REPORT.md) · [Feedback and review](mediterranean/holm-oak/material-options-review.json). User approves the silhouette and rejects muddy material shading. Three material-only treatments preserve geometry, lighting and placement; A recommended, material choice pending. Baseline remains default and restores pixel-identically. No commit or deployment.
+
+## Mediterranean holm-oak reference pass
+
+[Reference/tree](../artifacts/holm-oak-study/reference-comparison.png) · [Silhouette](../artifacts/holm-oak-study/silhouette-comparison.png) · [Scene comparison](../artifacts/holm-oak-study/before-after.png) · [Report/preview](../artifacts/holm-oak-study/REPORT.md) · [Review](mediterranean/holm-oak/review.json). A short-trunk, connected domed evergreen crown and generated holm bark/leaf textures replace the generic Mediterranean background oaks. First upright/yellow-green treatment revised once; final retained provisionally. Cork hero and background identities/placements/seeds preserved. Crown scalloping and simplified light remain unresolved; no human approval, global promotion or deployment.
+
+## Mediterranean cork-oak hero
+
+[Isolated hero](../artifacts/cork-oak-hero/isolated.png) · [Scene comparison](../artifacts/cork-oak-hero/before-after.png) · [Report/preview](../artifacts/cork-oak-hero/REPORT.md) · [Review](mediterranean/cork-oak/review.json). Source-linked regional cork oak replaces only the foreground holm-oak presentation. Low fork, uneven curved/tapered limbs and generated bark/leaf textures; ten background tree records remain identical. Provisional only: crown tufts remain too disconnected/dark and some branch junctions abrupt. No final approval, commit or deployment.
+
+## Mediterranean — corrective Checkpoint 1
+
+[Matched before/after](../artifacts/mediterranean-checkpoint1-r2/before-after.png) · [Concept/current](../artifacts/mediterranean-checkpoint1-r2/concept-comparison.png) · [Report/preview](../artifacts/mediterranean-checkpoint1-r2/REPORT.md) · [Review](mediterranean/checkpoint-1-r2-review.json). One corrective pass opens the valley, replaces oversized shrub leaves and exposes the unchanged matte at21.5% fewer submitted triangles. Retained provisionally by agent inspection only; major middle-ground, tree/rock and soil-projection defects remain. Do not advance automatically to Checkpoint2. Original rejection remains below; no commit, push or deployment.
+
+## Mediterranean reconstruction — rejected Checkpoint 1
+
+[Concept and actual render](../artifacts/mediterranean-checkpoint1/concept-comparison.png) · [Report and local preview](../artifacts/mediterranean-checkpoint1/REPORT.md) · [Plan](mediterranean/CHECKPOINT-1-PLAN.md) · [Rejected findings](mediterranean/checkpoint-1-review.json). One seed and one implementation pass. Foreground canopy/shrub occlusion, enlarged angular leaf representation and weak soil/terrain continuation fail the composition gate. Shared world-space matte loading and reference-mask projection are prototypes, not artistic approval. Preserve the generic default and existing approved biomes; do not proceed to material/lighting checkpoints without review. No commit, push or deployment.
+
 This is a local experiment/review tool built on the existing renderer and `scripts/studies/visual-quality.cjs`. It stores experiment memory and explicit preferences. **It does not train a model, infer human approval, or automatically replace the main encounter scene with a winner.**
 
 ## Prairie rolling-terrain / dressing checkpoint

@@ -734,6 +734,181 @@
         "actualImageContentInterpreted": true,
         "humanVisualApproval": null
       }
+    },
+    {
+      "id": "mediterranean-concept",
+      "biome": "mediterranean",
+      "category": "composition",
+      "source": {
+        "kind": "user-supplied",
+        "attribution": "User-provided reference; original creator and rights not independently verified",
+        "original": "62d2e35c-435b-4995-b757-e6b34d3aafb1"
+      },
+      "license": {
+        "status": "unverified",
+        "use": "local requested reconstruction reference",
+        "redistributionAllowed": false,
+        "trainingEligible": false
+      },
+      "imagePath": "visual-lab/mediterranean/references/concept.png",
+      "available": true,
+      "principle": "Dark diagonal oak framing, pale stone/shrub shoulders and visible rolling valley.",
+      "positiveCharacteristics": [
+        "Connected natural masses",
+        "Clear encounter approach",
+        "Controlled warm/cool depth"
+      ],
+      "defectsToAvoid": [
+        "Foreground occlusion",
+        "Uniform scatter",
+        "Camera-following reference overlay"
+      ]
+    },
+    {
+      "id": "mediterranean-dirt-mask",
+      "biome": "mediterranean",
+      "category": "exposed-soil-shape",
+      "source": {
+        "kind": "user-supplied",
+        "attribution": "User-provided reference; original creator and rights not independently verified",
+        "original": "62d2e35c-435b-4995-b757-e6b34d3aafb1"
+      },
+      "license": {
+        "status": "unverified",
+        "use": "local requested reconstruction reference",
+        "redistributionAllowed": false,
+        "trainingEligible": false
+      },
+      "imagePath": "visual-lab/mediterranean/references/dirt-mask.png",
+      "available": true,
+      "principle": "Winding irregular soil opening, narrowing into the middle distance. Camera reference, not UV mask.",
+      "positiveCharacteristics": [
+        "Connected natural masses",
+        "Clear encounter approach",
+        "Controlled warm/cool depth"
+      ],
+      "defectsToAvoid": [
+        "Foreground occlusion",
+        "Uniform scatter",
+        "Camera-following reference overlay"
+      ]
+    },
+    {
+      "id": "mediterranean-albedo",
+      "biome": "mediterranean",
+      "category": "material-pigments",
+      "source": {
+        "kind": "user-supplied",
+        "attribution": "User-provided reference; original creator and rights not independently verified",
+        "original": "62d2e35c-435b-4995-b757-e6b34d3aafb1"
+      },
+      "license": {
+        "status": "unverified",
+        "use": "local requested reconstruction reference",
+        "redistributionAllowed": false,
+        "trainingEligible": false
+      },
+      "imagePath": "visual-lab/mediterranean/references/albedo.png",
+      "available": true,
+      "principle": "Unlit olive, silver-sage, warm ochre and pale limestone families. Black sky is excluded.",
+      "positiveCharacteristics": [
+        "Connected natural masses",
+        "Clear encounter approach",
+        "Controlled warm/cool depth"
+      ],
+      "defectsToAvoid": [
+        "Foreground occlusion",
+        "Uniform scatter",
+        "Camera-following reference overlay"
+      ]
+    },
+    {
+      "id": "mediterranean-luminance",
+      "biome": "mediterranean",
+      "category": "light-and-value",
+      "source": {
+        "kind": "user-supplied",
+        "attribution": "User-provided reference; original creator and rights not independently verified",
+        "original": "62d2e35c-435b-4995-b757-e6b34d3aafb1"
+      },
+      "license": {
+        "status": "unverified",
+        "use": "local requested reconstruction reference",
+        "redistributionAllowed": false,
+        "trainingEligible": false
+      },
+      "imagePath": "visual-lab/mediterranean/references/luminance.png",
+      "available": true,
+      "principle": "Dark wood/interiors against selective bright stone/vegetation; softer distance. Sky excluded.",
+      "positiveCharacteristics": [
+        "Connected natural masses",
+        "Clear encounter approach",
+        "Controlled warm/cool depth"
+      ],
+      "defectsToAvoid": [
+        "Foreground occlusion",
+        "Uniform scatter",
+        "Camera-following reference overlay"
+      ]
+    },
+    {
+      "id": "andean-puna-concept",
+      "biome": "andean-puna",
+      "category": "composition-terrain-and-plant-communities",
+      "source": {
+        "kind": "user-supplied",
+        "attribution": "User-supplied concept; original creator unverified",
+        "original": ".codex-attachments/a6103112-d0a3-4798-8063-72ea18f47b19/3b77452e-637a-4f70-ba0b-22281d869700/1000011126.png"
+      },
+      "license": {
+        "status": "unverified",
+        "use": "private local visual reference only",
+        "redistributionAllowed": false,
+        "trainingEligible": false
+      },
+      "imagePath": "visual-lab/andean-puna/concept.png",
+      "available": true,
+      "principle": "Sculptural foreground communities frame an open sloping puna valley and layered cold mountain distance",
+      "positiveCharacteristics": [
+        "Warm grass tips against cool rock and distant blue shadows",
+        "Irregular tussock/cushion/shrub communities",
+        "Sheltered woody pocket contrasting with mostly treeless slopes"
+      ],
+      "defectsToAvoid": [
+        "Uniform golden cover",
+        "Flat green terrain",
+        "Unsupported alpine species or precise skyline claims"
+      ]
+    },
+    {
+      "id": "central-american-pine-oak-concept",
+      "biome": "tropicalpine",
+      "category": "composition-tree-architecture-and-forest-floor",
+      "source": {
+        "kind": "user-supplied",
+        "attribution": "User supplied concept; original creator unverified",
+        "original": ".codex-attachments/b809aea0-ff67-4d51-b3ba-8af1839ccacb/56cc17d1-c998-43ad-84c7-b7e60f03f42b/1000011125.png"
+      },
+      "license": {
+        "status": "unverified",
+        "use": "private local visual reference only",
+        "redistributionAllowed": false,
+        "trainingEligible": false
+      },
+      "imagePath": "visual-lab/tropical-pine/concept.png",
+      "available": true,
+      "principle": "Irregular high pine crowns and connected broadleaf layers frame a sunlit litter opening above cool forested distance",
+      "positiveCharacteristics": [
+        "Contrasting tall pine and low broadleaf structure",
+        "Textured light and cool recessed shrubs",
+        "Continuous distant woodland with clear near-middle-far hierarchy"
+      ],
+      "defectsToAvoid": [
+        "Uniform plantation",
+        "Temperate evergreen wall",
+        "Bare horizontal ground bands",
+        "Unverified stream or local flora claims"
+      ]
     }
   ],
   "supplementalSources": [

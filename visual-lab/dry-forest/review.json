@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-27T22:20:36.572Z",
+  "status": "experimental-review-required",
+  "humanApproval": null,
+  "loaded": [
+    "AGENTS.md",
+    "prototype-fast/SKILL.md",
+    "imagegen/SKILL.md",
+    "visual-lab/README.md",
+    "visual-lab/art-direction-policy.json",
+    "docs/visual-quality-workflow.md",
+    "mediterranean-recipe.ts",
+    "mediterranean-adapter.ts",
+    "landscape-matte.ts",
+    "holm muted-color human preference"
+  ],
+  "vision": {
+    "available": true,
+    "reviewer": "Implementing assistant; not independent human review"
+  },
+  "reference": {
+    "path": ".codex-attachments/50a32367-7229-46a1-9811-e93d947ffb65/20a71ab6-760f-49ed-a035-1f4fad353a88/1000011126.png",
+    "observations": [
+      "Dark sculptural side framing against luminous grasses",
+      "Connected near/middle/far landscape masses",
+      "Warm/cool atmospheric depth"
+    ],
+    "conflict": "Supplied reference is alpine, with snow mountains and rosette plants; these were excluded from Costa Rican lowland reconstruction."
+  },
+  "seed": "29",
+  "assets": [
+    {
+      "path": "public/assets/dry-forest/distance.png",
+      "sha256": "c23a85e1c96fb588b311c2e9da31c0b9dd79f4b53afd48c600cb8b0255796314"
+    },
+    {
+      "path": "public/assets/dry-forest/soil-albedo.webp",
+      "sha256": "e33f861c9054aee85eca77f1c260bf8ef3acd6028547e5510fa7ef870844efa8"
+    },
+    {
+      "path": "public/assets/dry-forest/soil-normal.png",
+      "sha256": "a292d45d9e08d0fa9c50b11fc007d3efa0a658c37354675903ff54339061cf77"
+    },
+    {
+      "path": "public/assets/dry-forest/soil-roughness.png",
+      "sha256": "700556a58dfc898467c1ef0185d3ecb319c1c64b70e5d2701c1a4be764807bd4"
+    }
+  ],
+  "iterations": [
+    {
+      "round": 1,
+      "image": "artifacts/dry-forest/rejected-r1.png",
+      "hypothesis": "Spreading branches and woodland matte establish dry forest",
+      "evidence": "Ground dominates, foliage nearly black, distance hidden",
+      "severity": "major",
+      "decision": "reject"
+    },
+    {
+      "round": 2,
+      "image": "artifacts/dry-forest/revised-r2.png",
+      "hypothesis": "Raise matte and enrich ground communities",
+      "evidence": "Background now visible, better tree framing, but canopy still black and blades too broad",
+      "severity": "major",
+      "decision": "revise"
+    },
+    {
+      "round": 3,
+      "image": "artifacts/dry-forest/final.png",
+      "hypothesis": "Remap excessively dark textured foliage into olive pigments, wrap incident light and narrow blades",
+      "evidence": "Readable olive foliage and finer grasses; open soil and speckled canopies remain",
+      "severity": "major",
+      "decision": "retain prototype only; not target quality"
+    }
+  ],
+  "rules": [
+    {
+      "principle": "Normalize borrowed leaf-texture pigment before relighting",
+      "status": "experimentally-supported",
+      "scope": "This prototype only; not a global approved rule",
+      "evidence": "Round 2 versus round 3"
+    },
+    {
+      "principle": "Align transparent matte silhouette to world-space horizon",
+      "status": "experimentally-supported",
+      "limitations": "Restricted viewing cone and fixed light state"
+    }
+  ],
+  "remaining": [
+    "Floor still too open and uniform",
+    "Foliage appears speckled and species leaf texture is provisional oak approximation",
+    "Insufficient connected midground communities",
+    "Peeling bark, vines and thorn morphology need dedicated representation",
+    "Normal and roughness maps inferred from albedo, not physically measured",
+    "2.93M submitted triangles; no mobile approval"
+  ],
+  "ecologySources": [
+    "https://www.acguanacaste.ac.cr/bosque_seco_virtual/especies_bosque_seco.html"
+  ],
+  "regression": "Only opt-in region-gated adapter and new module changed; protected scene captures were not run",
+  "checks": {
+    "typescript": "npx tsc --noEmit --pretty false passed",
+    "render": "No captured browser errors"
+  },
+  "deployment": "None"
+}

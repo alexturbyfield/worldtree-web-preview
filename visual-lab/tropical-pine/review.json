@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-27T23:02:30.178Z",
+  "status": "unfinished-prototype-review-required",
+  "humanApproval": null,
+  "loaded": [
+    "AGENTS.md",
+    "prototype-fast skill",
+    "imagegen skill",
+    "Lab manifest and previous Andean review",
+    "wave2-boreal.ts and boreal tree/needle geometry",
+    "wave2-boreal-floor.ts",
+    "wave2-temperate-concept.ts floor",
+    "Existing oak studies and shared matte loader",
+    "Existing taxa schema and ecological-source distinctions"
+  ],
+  "referenceId": "central-american-pine-oak-concept",
+  "seed": "29",
+  "camera": {
+    "position": [
+      0,
+      1.7,
+      34
+    ],
+    "target": [
+      1,
+      -3,
+      -100
+    ]
+  },
+  "sourceFiles": [
+    "src/lib/forest/tropical-pine.ts",
+    "src/lib/forest/wave1.ts",
+    "src/lib/forest/wave2-shared.ts"
+  ],
+  "assets": [
+    {
+      "path": "public/assets/tropical-pine/bark-albedo.webp",
+      "sha256": "24dcef1be268b0236a77f1b9c578e8f267ea2113450e92e589197e9af2bc0cf9"
+    },
+    {
+      "path": "public/assets/tropical-pine/bark-normal.png",
+      "sha256": "942492abfbfbfc88ffb88a42d854e9df87586181eb9befe4d2a01df8d02b4dfe"
+    },
+    {
+      "path": "public/assets/tropical-pine/bark-roughness.png",
+      "sha256": "61e50e8f84519fba48cd708149b8b8075eedfb262773fec1513c692b5da1c9ce"
+    },
+    {
+      "path": "public/assets/tropical-pine/distance.png",
+      "sha256": "759fa674add5c7bef3b79f82224cf2f42a343cabfdbcfaf2bf627e873c202472"
+    },
+    {
+      "path": "public/assets/tropical-pine/floor-albedo.webp",
+      "sha256": "8a73aad9ff244888dcd498460505bc97afe471cdf3ff605a1ecb5a305ccc60fa"
+    },
+    {
+      "path": "public/assets/tropical-pine/floor-normal.png",
+      "sha256": "755768a875d64b7ebbf7efcbe448f82ef8a60362a137f43fcb8df934f5b6ee48"
+    },
+    {
+      "path": "public/assets/tropical-pine/floor-roughness.png",
+      "sha256": "129c6c227fd1b38f46906ef225604141e15bea3584a726c540f7e6a22652bc1a"
+    },
+    {
+      "path": "public/assets/tropical-pine/moss-albedo.webp",
+      "sha256": "4e14427b4643bc4c0a9c542a472fcfdfa82d6f3e6a7be5fca90ec42df0e3a1d5"
+    },
+    {
+      "path": "public/assets/tropical-pine/moss-normal.png",
+      "sha256": "0ef70d691be74ecafb020fb48199b7314a695ec267ec5a816e1e69fb6ab47178"
+    },
+    {
+      "path": "public/assets/tropical-pine/moss-roughness.png",
+      "sha256": "fa23d4823b66ab6b35a5c9d4561d6e43f7097915889e708c0ef9fe8ca5a9c201"
+    },
+    {
+      "path": "public/assets/tropical-pine/pine-sprays.webp",
+      "sha256": "91741039d2ad19c29bd9669284fd9160ca7240cb4d248f91f1905e6ea5fa561a"
+    },
+    {
+      "path": "public/assets/tropical-pine/rock-albedo.webp",
+      "sha256": "0664b1552682b466f8297796367579b5e64cd9756fd021e1961aab292fda4d83"
+    },
+    {
+      "path": "public/assets/tropical-pine/rock-normal.png",
+      "sha256": "42a879673b00045f55976c50228c7435981203d4c384cd09e9c0f2b77d4936fe"
+    },
+    {
+      "path": "public/assets/tropical-pine/rock-roughness.png",
+      "sha256": "1f64969c3028532feccb808a789b56389b8722107922179b945a6984c7a0ed70"
+    }
+  ],
+  "referenceAnalysis": {
+    "observations": [
+      "Tall irregular pine trunks frame the image while lower oak masses bridge the view",
+      "A narrow litter opening alternates warm sunlight and cool lateral vegetation shade",
+      "Distant ridges remain continuously forested rather than exposed substrate"
+    ],
+    "hypotheses": [
+      "Adapt existing high-crown pine branches with unequal retained bough groups and long-needle artwork",
+      "Reuse rooted moss/stone floor and fern representation with litter material",
+      "Use regional woodland matte and closer middle-distance cover to close horizon gap"
+    ]
+  },
+  "ecology": {
+    "location": {
+      "lat": 14.507672,
+      "lon": -89.435797
+    },
+    "region": "Concepcion Las Minas Guatemala",
+    "sources": [
+      "https://digi.usac.edu.gt/bvirtual/informes/puirna/INF-2019-35.pdf",
+      "https://conap.gob.gt/wp-content/uploads/2021/09/27.-Cobertura-Forestal-Reserva-de-la-Biosfera-Sierra-de-las-Minas_2021.pdf"
+    ],
+    "pines": "Pinus oocarpa and Pinus maximinoi supported by regional field study. Supplementary scene evidence; not promoted to global species catalogue or claimed verified point occurrences.",
+    "oaks": "Quercus spp regional candidates; shared evergreen-oak architecture as visual proxy, not evidence of Holm/cork oak occurrence",
+    "understory": "Unnamed low shrub, grass and fern functional forms",
+    "omissions": [
+      "Alder omitted without established wet habitat",
+      "No stream invented from concept",
+      "Small flowers deferred pending locally relevant flora and phenology evidence"
+    ]
+  },
+  "reused": [
+    "Shared high-crown pine architecture and curved needle sprays",
+    "Existing rooted floor, contact stones and sheltered moss field",
+    "Approved oak branch/spray framework as unverified genus proxy",
+    "Existing dimensional grass, shrub and fern geometry",
+    "Shared world-plane matte compositor"
+  ],
+  "isolation": "Opt-in biome-3 coordinate gate. Shared height branch only selected by new woodland-slope mode; previous branches unchanged.",
+  "iterations": [
+    {
+      "round": 1,
+      "image": "artifacts/tropical-pine/rejected-r1.png",
+      "severity": "major",
+      "decision": "reject",
+      "evidence": "Excessively open sky and bare middle ground; sparse oak clusters"
+    },
+    {
+      "round": 2,
+      "image": "artifacts/tropical-pine/revised-r2.png",
+      "severity": "major",
+      "decision": "revise",
+      "evidence": "Richer fern/shrub floor, but pale disconnected oak masses and bare horizontal band persist"
+    },
+    {
+      "round": 3,
+      "image": "artifacts/tropical-pine/final.png",
+      "severity": "major",
+      "decision": "retain as unfinished prototype only",
+      "evidence": "Fuller connected oak crowns and richer lateral floor; pine foliage sparse, highlights pale, distance connection still incomplete"
+    }
+  ],
+  "vision": {
+    "available": true,
+    "reviewer": "Implementing assistant, no independent review",
+    "sizes": [
+      "640x360",
+      "1280x720"
+    ]
+  },
+  "checks": {
+    "typescript": "npx tsc --noEmit --pretty false passed",
+    "browserErrors": [],
+    "performance": {
+      "frame": 8,
+      "calls": 87,
+      "triangles": 2089088,
+      "points": 0,
+      "lines": 0
+    },
+    "mobileApproval": false,
+    "protectedScenes": "Not captured; shared change guarded by new mode only"
+  },
+  "assetLimitations": [
+    "Four generated material atlas extracts; normal/roughness inferred from luminance, not measured PBR scans",
+    "Generated pine needle atlas is morphological artwork, not verified species anatomy",
+    "Normal/roughness assets supplied for moss; terrain currently uses shared litter normal with blended moss albedo",
+    "Background is regionally conditioned illustration, not measured skyline",
+    "Single reference lighting state"
+  ],
+  "sharedFindings": [
+    {
+      "status": "experimentally-supported",
+      "principle": "Rooted floor, litter and low layered plants transfer between woodland recipes",
+      "scope": "Provisional pine-oak scene only",
+      "evidence": "R1 versus final",
+      "limitation": "No multi-seed or regional generalization validation"
+    },
+    {
+      "status": "rejected",
+      "principle": "Sparse hero oak crowns alone provide forest enclosure",
+      "evidence": "R1/R2 open stand",
+      "reason": "Requires connected broadleaf and shrub masses; tree counts alone insufficient"
+    }
+  ],
+  "remaining": [
+    "Sparse and visibly simplified pine needle massing",
+    "Pale oak highlights and noisy foliage silhouette",
+    "Flat fern leaves and sparse small-scale botanical variety",
+    "Bare gaps before distant wooded matte",
+    "No flowers, stream, alder, unseen-seed validation or mobile testing"
+  ],
+  "next": "Isolated pine crown/needle mass study, followed by canopy value control and midground continuation",
+  "commitPushDeploy": false
+}

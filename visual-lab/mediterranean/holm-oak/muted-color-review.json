@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-27T21:39:55.139Z",
+  "humanFeedback": "Use a more muted color for the holm oak. You had a good version before getting too bright",
+  "change": {
+    "file": "src/lib/forest/holm-oak-study.ts",
+    "A": {
+      "shade": [
+        "#4b6641",
+        "#4b624b"
+      ],
+      "body": [
+        "#8d9b50",
+        "#7d885e"
+      ],
+      "sun": [
+        "#d7d17d",
+        "#abb58a"
+      ]
+    }
+  },
+  "preserved": [
+    "hierarchical normals .45/.40/.15",
+    "50/50 texture/material blend",
+    "geometry",
+    "bark",
+    "lighting",
+    "cork oak",
+    "ground"
+  ],
+  "review": {
+    "reviewer": "Primary Codex actual scene render",
+    "observation": "Holm crowns are cooler gray-olive with less pale yellow in their highlights. Existing broad light/shadow organization remains.",
+    "humanApproval": null
+  },
+  "checks": {
+    "typecheck": "passed",
+    "renderErrors": [],
+    "drawCalls": 18,
+    "triangles": 1822040
+  },
+  "evidence": "artifacts/holm-muted-color/comparison.png",
+  "committed": false,
+  "deployed": false
+}

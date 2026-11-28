@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-27T21:36:11.561Z",
+  "authorization": "Continue. Correct the holm oak to use the latest treatment",
+  "change": "Apply approved isolated hierarchical normals .45/.40/.15 and A/original material midpoint .50 to scene near and far Holm-oak batches",
+  "files": [
+    "src/lib/forest/holm-oak-study.ts"
+  ],
+  "preserved": [
+    "Ground detail pass",
+    "Cork oak",
+    "Tree/card geometry and placements",
+    "Sky/camera/lighting",
+    "Other biomes"
+  ],
+  "checks": {
+    "typecheck": "passed",
+    "targetedTests": 10,
+    "drawCalls": 18,
+    "triangles": 1822040,
+    "errors": [],
+    "isolatedMatchesApprovedPixelIdentically": true
+  },
+  "review": {
+    "reviewer": "Primary Codex actual scene render",
+    "decision": "Retain requested correction",
+    "remaining": "Broader environment composition and dark grass speckling remain unresolved; this is not whole-scene approval"
+  },
+  "evidence": "artifacts/holm-scene-treatment/comparison.png",
+  "committed": false,
+  "deployed": false
+}

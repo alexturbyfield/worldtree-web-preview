@@ -1,0 +1,254 @@
+{
+  "url": "http://localhost:3001/explore?lat=43.72&lon=3.58&habitat=forest&seed=29&density=36&structure=mediterranean-1&appearance=garden&wind=0&expansion=mediterranean",
+  "seed": 29,
+  "width": 640,
+  "height": 360,
+  "results": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          0,
+          1.7,
+          16
+        ],
+        "target": [
+          0,
+          -6.225925925926,
+          -44
+        ],
+        "fov": 47
+      },
+      "counts": {
+        "frame": 8,
+        "calls": 18,
+        "triangles": 1822040,
+        "points": 0,
+        "lines": 0,
+        "geometries": 17,
+        "textures": 12
+      },
+      "cpuSubmissionMs": [
+        0.40000003576278687,
+        0.3999999761581421,
+        0.5
+      ],
+      "instances": [
+        {
+          "name": "cork-oak-hero-leaf-sprays",
+          "count": 900,
+          "triangles": 8
+        },
+        {
+          "name": "mediterranean-existing-curved-grasses",
+          "count": 5200,
+          "triangles": 180
+        },
+        {
+          "name": "mediterranean-small-leaf-near",
+          "count": 110,
+          "triangles": 2394
+        },
+        {
+          "name": "mediterranean-small-leaf-middle",
+          "count": 290,
+          "triangles": 420
+        },
+        {
+          "name": "mediterranean-small-leaf-far",
+          "count": 320,
+          "triangles": 128
+        },
+        {
+          "name": "mediterranean-weathered-limestone-0",
+          "count": 27,
+          "triangles": 396
+        },
+        {
+          "name": "mediterranean-weathered-limestone-1",
+          "count": 27,
+          "triangles": 396
+        },
+        {
+          "name": "mediterranean-weathered-limestone-2",
+          "count": 27,
+          "triangles": 396
+        },
+        {
+          "name": "mediterranean-weathered-limestone-3",
+          "count": 27,
+          "triangles": 396
+        }
+      ],
+      "cork": {
+        "species": {
+          "id": "wcvp:175312",
+          "scientificName": "Quercus suber",
+          "commonName": "Cork oak",
+          "confidence": "regional",
+          "evidenceLevel": "documented_regional_range",
+          "origin": "Documented native botanical country; local presence unverified",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ],
+          "visual": {
+            "presetId": "oak",
+            "fallback": true,
+            "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+          }
+        },
+        "sourceSeed": "1498618003",
+        "position": [
+          -6.16058113493491,
+          -1.3106581996422526,
+          6.729788740584627
+        ],
+        "designHeight": 7.275945514169724,
+        "segments": 588,
+        "sprays": 900,
+        "textures": [
+          "bark-v1.webp",
+          "leaves-v1.webp"
+        ],
+        "status": "experimental hero; no local occurrence or substrate suitability verified",
+        "inspection": "Orbit/elevated views supported; separate hero is not yet connected to the per-tree click inspector"
+      },
+      "holm": {
+        "species": "Quercus ilex",
+        "trees": 10,
+        "architecture": "Short trunk, internally branched connected irregular dome",
+        "textures": [
+          "bark-v1.webp",
+          "leaves-v1.webp"
+        ],
+        "sourceSeeds": [
+          "2217095479",
+          "340898674",
+          "634304431",
+          "83210399",
+          "2217095479",
+          "340898674",
+          "634304431",
+          "83210399",
+          "2217095479",
+          "340898674"
+        ],
+        "normals": "hierarchical .45/.40/.15",
+        "material": "A with 50% original texture-driven color",
+        "scope": "Mediterranean presentation only; no globally approved template"
+      },
+      "metadata": {
+        "checkpoint": 1,
+        "revision": 2,
+        "seed": "29",
+        "reference": "visual-lab/mediterranean/references",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            16
+          ],
+          "target": [
+            0,
+            -6.225925925926,
+            -44
+          ]
+        },
+        "mask": {
+          "source": "corrected camera-space dirt reference",
+          "projection": "Frozen reference camera baked to world-space field",
+          "bounds": {
+            "x": -120,
+            "z": -240,
+            "width": 240,
+            "depth": 280
+          },
+          "resolution": 768
+        },
+        "instances": {
+          "grass": 5200,
+          "shrubs": 720,
+          "rocks": 108,
+          "trees": 11
+        },
+        "ecology": "Regional source Quercus ilex candidates; unnamed dry/silver woody forms, no locally verified species inferred",
+        "terrain": "Synthetic descending garrigue with limestone-compatible shoulders; no DEM",
+        "layers": {
+          "season": "reference leaf-on",
+          "timeOfDay": "warm low directional reference state",
+          "weather": "clear"
+        },
+        "approval": "pending human review"
+      },
+      "matte": {
+        "schemaVersion": 1,
+        "id": "herault-garrigue-v1",
+        "asset": "/assets/mediterranean/herault-garrigue-distance-v1.webp",
+        "conditioning": {
+          "location": {
+            "lat": 43.72,
+            "lon": 3.58
+          },
+          "ecoregionId": 799,
+          "biomeId": 12,
+          "topography": {
+            "source": "Regional limestone-garrigue context (BRGM); no DEM available",
+            "measured": false,
+            "landform": "Low rolling limestone uplands; no high mountains, coastline or landmarks"
+          },
+          "landCover": [
+            "evergreen oak scrub",
+            "olive/silver low shrubs",
+            "pale limestone exposures"
+          ],
+          "seed": "29",
+          "season": "reference leaf-on",
+          "timeOfDay": "warm upper-left low sun",
+          "weather": "clear",
+          "viewAzimuth": 0,
+          "horizonFraction": 0.24
+        },
+        "layers": [
+          {
+            "position": [
+              0,
+              -5,
+              -650
+            ],
+            "size": [
+              1600,
+              500
+            ],
+            "yaw": 0,
+            "opacity": 1
+          }
+        ],
+        "supportedView": {
+          "anchor": [
+            0,
+            1.7,
+            16
+          ],
+          "maxHorizontalDisplacement": 100,
+          "maxElevation": 22,
+          "halfAngleDegrees": 55
+        },
+        "provenance": {
+          "method": "Offline generated RGBA plate, not runtime generation or geospatial imagery",
+          "source": "imagegen generated_images/01a205da-da33-7d33-9ee8-3170650dd5eb",
+          "limitations": [
+            "Exact regional ridges not verified; synthetic illustration conditioned on broad regional geology",
+            "Single light/weather state; asset must be replaced for incompatible lighting",
+            "Finite encounter cone; inspection hides the matte",
+            "Generator seed reproducibility not asserted; asset identity and presentation seed are frozen"
+          ]
+        },
+        "visibility": "World-space static plane; hidden outside declared camera envelope and in elevated inspection. No 360-degree claim."
+      },
+      "matteVisible": true,
+      "error": null
+    }
+  ],
+  "errors": []
+}

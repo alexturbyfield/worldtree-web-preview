@@ -1,0 +1,482 @@
+{
+  "schemaVersion": 1,
+  "id": "mediterranean-reconstruction-checkpoint1",
+  "date": "2026-11-27T18:06:53.688Z",
+  "budget": {
+    "agents": 1,
+    "implementationPasses": 1,
+    "autonomousCorrectionLoops": 0,
+    "seed": "29",
+    "structureSeed": "mediterranean-1",
+    "heldAt": "Checkpoint 1"
+  },
+  "baseline": {
+    "commit": "8a1d39b0d41ff5251525aac5b007b52b76c8c667",
+    "subsequentMaterialWorkbenchPreserved": true,
+    "workingSourceHashes": {
+      "src/lib/forest/landscape-matte.ts": "6a1eab4a1ca036d97e266aee30b693657b1d485f15dd2020c7e0118e1f2131cb",
+      "src/lib/forest/mediterranean-recipe.ts": "e70e6e8ca3356f240210a3e70a345a81b8bb3bec7460078fdc54222a875dfe56",
+      "src/lib/forest/mediterranean-adapter.ts": "e42abd4b3c9ceffdb30b9a5bdcf9156b18c8d97fb935ede86724996798fbcd18",
+      "src/lib/forest/wave1.ts": "2279303a470191c6d7426ec1ad5aebef6ed5cd4629f7d9e1a5cf780e399dfd21",
+      "src/lib/forest/wave2-shared.ts": "0ccbd2f4934837e7e15e054b78b9ad96d4f799b2cd24234856c840d439ce7230",
+      "src/lib/forest/painted-renderer.ts": "6f0f0c5aedf6083f1a08372268145631775f43a960832419e8d4429d4d97a3ab",
+      "tests/mediterranean.test.ts": "26f6c2b1f0113b22827cbf251790d3fc83acdb43e1c650371553bbb7fda95f9e"
+    }
+  },
+  "references": [
+    "mediterranean-concept",
+    "mediterranean-dirt-mask",
+    "mediterranean-albedo",
+    "mediterranean-luminance"
+  ],
+  "review": {
+    "reviewer": "Primary Codex via view_image; actual hero and inspection images, no independent reviewer",
+    "betterThanBaseline": false,
+    "goodEnoughToApprove": false,
+    "decision": "reject current composition; preserve evidence, keep generic default, request new Checkpoint 1 correction authorization",
+    "humanApproval": null,
+    "findings": [
+      {
+        "defect": "Foreground blocks the view and suppresses the matte",
+        "severity": "critical",
+        "evidence": "Hero image is dominated by large leaf sprays and shrub stems; valley/sky occupy small fragmented openings rather than the broad middle/background of the concept.",
+        "cause": "Confirmed geometric canopy/understory projection overlaps the reference viewing corridor; hypothesis: near crown reach and shrub size/density were calibrated in world units without adequate projected occupancy constraints.",
+        "action": "Recompose the existing roles to a tested camera envelope; make the principal oak largely lateral/overhead; reserve the central valley sightline before dressing."
+      },
+      {
+        "defect": "Inadequate shrub/crown representation and flat wood",
+        "severity": "critical",
+        "evidence": "Large angular leaves and exposed crisscross stems read as an intrusive thicket. Foreground trunk is smooth and sparsely articulated; the concept has fine sclerophyll foliage grouped into connected masses and textured bark.",
+        "cause": "Confirmed reused low branchlet geometry was enlarged beyond its useful leaf scale; shared oak sprays are approximate and oversized at the chosen camera distance. Bark representation remains baseline.",
+        "action": "Reject this scaled branchlet construction for Mediterranean shrub masses; use branch-supported compact small-leaf clusters with mass-scale shading and distinct near/far simplification. Do not add density to this version."
+      },
+      {
+        "defect": "Soil/terrain composition and background integration remain weak",
+        "severity": "major",
+        "evidence": "Hero soil is a flat-colored ribbon and rocks are largely hidden. Inspection reveals straight soil extrapolation outside the source frustum and broad undetailed terrain; generated matte cannot establish depth through current occluders.",
+        "cause": "Confirmed simple fallback route extends beyond the projected reference, and available near/mid geometry lacks the reference silhouette hierarchy. Texture matching intentionally deferred, but cannot conceal composition failure.",
+        "action": "Replace straight extrapolation with a bounded terrain-correlated route; inspect the principal rock/shoulder silhouettes without understory; only then evaluate matte horizon overlap."
+      }
+    ]
+  },
+  "learning": [
+    {
+      "principle": "Terrain-rooted reconstruction of camera-space reference masks",
+      "status": "proposed",
+      "evidence": "Sampler/seed tests pass and field stays fixed in world space; final placement not visually accepted",
+      "reusable": true
+    },
+    {
+      "principle": "Explicit context and viewing envelope for offline RGBA landscape mattes",
+      "status": "experimentally supported",
+      "evidence": "Asset loads, real world-plane parallax is implemented and elevated capture hides it; visual integration not accepted",
+      "limitations": "One asset, synthetic regional geography, one golden-hour state, not 360 degrees or measured topography",
+      "reusable": true
+    },
+    {
+      "principle": "Enlarged low branchlet shrubs as dense Mediterranean foreground cover",
+      "status": "rejected",
+      "evidence": "actual hero and inspection images",
+      "reason": "Coarse leaf scale and dense crossed stems obstruct the view and fail the compact shrub-mass silhouette"
+    }
+  ],
+  "runtime": {
+    "url": "http://localhost:3001/explore?lat=43.72&lon=3.58&habitat=forest&seed=29&density=36&structure=mediterranean-1&appearance=garden&wind=0&expansion=mediterranean",
+    "seed": 29,
+    "width": 640,
+    "height": 360,
+    "results": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            16
+          ],
+          "target": [
+            0,
+            -6.225925925926,
+            -44
+          ],
+          "fov": 47
+        },
+        "counts": {
+          "frame": 9,
+          "calls": 17,
+          "triangles": 2098928,
+          "points": 0,
+          "lines": 0,
+          "geometries": 16,
+          "textures": 9
+        },
+        "cpuSubmissionMs": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "instances": [
+          {
+            "name": "mediterranean-existing-curved-grasses",
+            "count": 5200,
+            "triangles": 180
+          },
+          {
+            "name": "mediterranean-woody-shrub-masses-0",
+            "count": 430,
+            "triangles": 510
+          },
+          {
+            "name": "mediterranean-woody-shrub-masses-1",
+            "count": 430,
+            "triangles": 510
+          },
+          {
+            "name": "mediterranean-woody-shrub-masses-2",
+            "count": 430,
+            "triangles": 510
+          },
+          {
+            "name": "mediterranean-woody-shrub-masses-3",
+            "count": 430,
+            "triangles": 510
+          },
+          {
+            "name": "mediterranean-weathered-limestone-0",
+            "count": 27,
+            "triangles": 396
+          },
+          {
+            "name": "mediterranean-weathered-limestone-1",
+            "count": 27,
+            "triangles": 396
+          },
+          {
+            "name": "mediterranean-weathered-limestone-2",
+            "count": 27,
+            "triangles": 396
+          },
+          {
+            "name": "mediterranean-weathered-limestone-3",
+            "count": 27,
+            "triangles": 396
+          }
+        ],
+        "metadata": {
+          "checkpoint": 1,
+          "seed": "29",
+          "reference": "visual-lab/mediterranean/references",
+          "camera": {
+            "position": [
+              0,
+              1.7,
+              16
+            ],
+            "target": [
+              0,
+              -6.225925925926,
+              -44
+            ]
+          },
+          "mask": {
+            "source": "corrected camera-space dirt reference",
+            "projection": "Frozen reference camera baked to world-space field",
+            "bounds": {
+              "x": -120,
+              "z": -240,
+              "width": 240,
+              "depth": 280
+            },
+            "resolution": 768
+          },
+          "instances": {
+            "grass": 5200,
+            "shrubs": 1720,
+            "rocks": 108,
+            "trees": 11
+          },
+          "ecology": "Regional source Quercus ilex candidates; unnamed dry/silver woody forms, no locally verified species inferred",
+          "terrain": "Synthetic descending garrigue with limestone-compatible shoulders; no DEM",
+          "layers": {
+            "season": "reference leaf-on",
+            "timeOfDay": "warm low directional reference state",
+            "weather": "clear"
+          },
+          "approval": "pending human review"
+        },
+        "matte": {
+          "schemaVersion": 1,
+          "id": "herault-garrigue-v1",
+          "asset": "/assets/mediterranean/herault-garrigue-distance-v1.webp",
+          "conditioning": {
+            "location": {
+              "lat": 43.72,
+              "lon": 3.58
+            },
+            "ecoregionId": 799,
+            "biomeId": 12,
+            "topography": {
+              "source": "Regional limestone-garrigue context (BRGM); no DEM available",
+              "measured": false,
+              "landform": "Low rolling limestone uplands; no high mountains, coastline or landmarks"
+            },
+            "landCover": [
+              "evergreen oak scrub",
+              "olive/silver low shrubs",
+              "pale limestone exposures"
+            ],
+            "seed": "29",
+            "season": "reference leaf-on",
+            "timeOfDay": "warm upper-left low sun",
+            "weather": "clear",
+            "viewAzimuth": 0,
+            "horizonFraction": 0.24
+          },
+          "layers": [
+            {
+              "position": [
+                0,
+                -5,
+                -650
+              ],
+              "size": [
+                1600,
+                500
+              ],
+              "yaw": 0,
+              "opacity": 1
+            }
+          ],
+          "supportedView": {
+            "anchor": [
+              0,
+              1.7,
+              16
+            ],
+            "maxHorizontalDisplacement": 100,
+            "maxElevation": 22,
+            "halfAngleDegrees": 55
+          },
+          "provenance": {
+            "method": "Offline generated RGBA plate, not runtime generation or geospatial imagery",
+            "source": "imagegen generated_images/01a205da-da33-7d33-9ee8-3170650dd5eb",
+            "limitations": [
+              "Exact regional ridges not verified; synthetic illustration conditioned on broad regional geology",
+              "Single light/weather state; asset must be replaced for incompatible lighting",
+              "Finite encounter cone; inspection hides the matte",
+              "Generator seed reproducibility not asserted; asset identity and presentation seed are frozen"
+            ]
+          },
+          "visibility": "World-space static plane; hidden outside declared camera envelope and in elevated inspection. No 360-degree claim."
+        },
+        "matteVisible": true,
+        "error": null
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            40,
+            32,
+            48
+          ],
+          "target": [
+            0,
+            -5,
+            -45
+          ],
+          "fov": 47
+        },
+        "counts": {
+          "frame": 13,
+          "calls": 15,
+          "triangles": 2098924,
+          "points": 0,
+          "lines": 0,
+          "geometries": 16,
+          "textures": 9
+        },
+        "cpuSubmissionMs": [
+          0.2999999523162842,
+          0.5,
+          0.40000003576278687
+        ],
+        "instances": [
+          {
+            "name": "mediterranean-existing-curved-grasses",
+            "count": 5200,
+            "triangles": 180
+          },
+          {
+            "name": "mediterranean-woody-shrub-masses-0",
+            "count": 430,
+            "triangles": 510
+          },
+          {
+            "name": "mediterranean-woody-shrub-masses-1",
+            "count": 430,
+            "triangles": 510
+          },
+          {
+            "name": "mediterranean-woody-shrub-masses-2",
+            "count": 430,
+            "triangles": 510
+          },
+          {
+            "name": "mediterranean-woody-shrub-masses-3",
+            "count": 430,
+            "triangles": 510
+          },
+          {
+            "name": "mediterranean-weathered-limestone-0",
+            "count": 27,
+            "triangles": 396
+          },
+          {
+            "name": "mediterranean-weathered-limestone-1",
+            "count": 27,
+            "triangles": 396
+          },
+          {
+            "name": "mediterranean-weathered-limestone-2",
+            "count": 27,
+            "triangles": 396
+          },
+          {
+            "name": "mediterranean-weathered-limestone-3",
+            "count": 27,
+            "triangles": 396
+          }
+        ],
+        "metadata": {
+          "checkpoint": 1,
+          "seed": "29",
+          "reference": "visual-lab/mediterranean/references",
+          "camera": {
+            "position": [
+              0,
+              1.7,
+              16
+            ],
+            "target": [
+              0,
+              -6.225925925926,
+              -44
+            ]
+          },
+          "mask": {
+            "source": "corrected camera-space dirt reference",
+            "projection": "Frozen reference camera baked to world-space field",
+            "bounds": {
+              "x": -120,
+              "z": -240,
+              "width": 240,
+              "depth": 280
+            },
+            "resolution": 768
+          },
+          "instances": {
+            "grass": 5200,
+            "shrubs": 1720,
+            "rocks": 108,
+            "trees": 11
+          },
+          "ecology": "Regional source Quercus ilex candidates; unnamed dry/silver woody forms, no locally verified species inferred",
+          "terrain": "Synthetic descending garrigue with limestone-compatible shoulders; no DEM",
+          "layers": {
+            "season": "reference leaf-on",
+            "timeOfDay": "warm low directional reference state",
+            "weather": "clear"
+          },
+          "approval": "pending human review"
+        },
+        "matte": {
+          "schemaVersion": 1,
+          "id": "herault-garrigue-v1",
+          "asset": "/assets/mediterranean/herault-garrigue-distance-v1.webp",
+          "conditioning": {
+            "location": {
+              "lat": 43.72,
+              "lon": 3.58
+            },
+            "ecoregionId": 799,
+            "biomeId": 12,
+            "topography": {
+              "source": "Regional limestone-garrigue context (BRGM); no DEM available",
+              "measured": false,
+              "landform": "Low rolling limestone uplands; no high mountains, coastline or landmarks"
+            },
+            "landCover": [
+              "evergreen oak scrub",
+              "olive/silver low shrubs",
+              "pale limestone exposures"
+            ],
+            "seed": "29",
+            "season": "reference leaf-on",
+            "timeOfDay": "warm upper-left low sun",
+            "weather": "clear",
+            "viewAzimuth": 0,
+            "horizonFraction": 0.24
+          },
+          "layers": [
+            {
+              "position": [
+                0,
+                -5,
+                -650
+              ],
+              "size": [
+                1600,
+                500
+              ],
+              "yaw": 0,
+              "opacity": 1
+            }
+          ],
+          "supportedView": {
+            "anchor": [
+              0,
+              1.7,
+              16
+            ],
+            "maxHorizontalDisplacement": 100,
+            "maxElevation": 22,
+            "halfAngleDegrees": 55
+          },
+          "provenance": {
+            "method": "Offline generated RGBA plate, not runtime generation or geospatial imagery",
+            "source": "imagegen generated_images/01a205da-da33-7d33-9ee8-3170650dd5eb",
+            "limitations": [
+              "Exact regional ridges not verified; synthetic illustration conditioned on broad regional geology",
+              "Single light/weather state; asset must be replaced for incompatible lighting",
+              "Finite encounter cone; inspection hides the matte",
+              "Generator seed reproducibility not asserted; asset identity and presentation seed are frozen"
+            ]
+          },
+          "visibility": "World-space static plane; hidden outside declared camera envelope and in elevated inspection. No 360-degree claim."
+        },
+        "matteVisible": false,
+        "error": null
+      }
+    ],
+    "errors": [],
+    "tests": {
+      "typecheck": "passed",
+      "focusedTests": 3
+    },
+    "performanceApproval": false
+  },
+  "preservation": {
+    "approvedBiomeRecipeSourcesUntouched": true,
+    "sharedChanges": [
+      "ExpansionPlan type union only",
+      "Explicit local opt-in dispatch",
+      "New candidate pick mapping only"
+    ],
+    "protectedSceneRenders": "Not run in this one-scene exploratory pass; no claim of pixel regression verification",
+    "committed": false,
+    "pushed": false,
+    "deployed": false
+  },
+  "next": "Wait for user review; do not advance to Checkpoints 2 or 3."
+}

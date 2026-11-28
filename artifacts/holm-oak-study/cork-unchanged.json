@@ -1,0 +1,6 @@
+{
+  "backgroundTrees": 10,
+  "corkHeroDeepEqual": true,
+  "backgroundPlacementSpeciesSeedsDeepEqual": true,
+  "newHeroSpecies": "Quercus suber"
+}

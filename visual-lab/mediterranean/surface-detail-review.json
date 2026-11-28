@@ -1,0 +1,74 @@
+{
+  "date": "2026-11-27T20:14:59.334Z",
+  "scope": "One coordinated Mediterranean ground/grass material pass, one fixed seed29",
+  "references": [
+    "mediterranean-concept",
+    "mediterranean-dirt-mask"
+  ],
+  "reusedTechniques": [
+    "Shared world-space terrain/grass pigment sampling",
+    "Existing generated meadow and sediment assets",
+    "Warped multiscale sampling and correlated broad fields",
+    "Distance-dependent detail suppression",
+    "Aligned sediment bump sampling"
+  ],
+  "implementation": {
+    "file": "src/lib/forest/mediterranean-adapter.ts",
+    "textureAssets": [
+      "/assets/alpine-meadow/meadow-ground-v1.png",
+      "/assets/wave1-detail/arid-sediment-v1.webp"
+    ],
+    "unchanged": [
+      "Grass geometry and instancing",
+      "Tree materials/architecture",
+      "Placement",
+      "Dirt coverage field and trajectory",
+      "Lighting",
+      "Camera",
+      "Terrain geometry"
+    ]
+  },
+  "review": {
+    "reviewer": "Primary Codex actual supplied concept and before/after hero images",
+    "betterThanPrevious": true,
+    "goodEnoughForFinalApproval": false,
+    "decision": "retain for human review",
+    "evidence": "Foreground soil exposes grain and small mineral variation; grassy regions and grass roots share stronger woven material detail.",
+    "remaining": [
+      "Dark speckled grass silhouettes in the middle distance remain; material work alone cannot fix them.",
+      "Soil transition still uses the prior projected mask; no claim of repaired path interpretation.",
+      "Ground is still substantially simpler than the concept; fine texture does not replace connected vegetation communities."
+    ],
+    "humanApproval": null
+  },
+  "checks": {
+    "typecheck": "passed",
+    "targetedTests": 7,
+    "browserErrors": [],
+    "initialShaderFailure": "GLSL reserved identifier patch renamed before final successful capture",
+    "before": {
+      "frame": 8,
+      "calls": 18,
+      "triangles": 1822040,
+      "points": 0,
+      "lines": 0,
+      "geometries": 17,
+      "textures": 11
+    },
+    "after": {
+      "frame": 9,
+      "calls": 18,
+      "triangles": 1822040,
+      "points": 0,
+      "lines": 0,
+      "geometries": 17,
+      "textures": 12
+    },
+    "camerasCountsAndInstanceCountsMatch": true,
+    "mobileApproval": false
+  },
+  "evidence": "artifacts/mediterranean-surface-detail/comparison.png",
+  "commit": false,
+  "push": false,
+  "deployed": false
+}

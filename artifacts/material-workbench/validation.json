@@ -1,0 +1,50 @@
+{
+  "before": {
+    "calls": 24,
+    "triangles": 1002290,
+    "geometries": 23,
+    "scene": "1a9a25d4-eca1-417e-8a0b-05a0d9ed2eeb",
+    "camera": [
+      0,
+      1.7,
+      34
+    ]
+  },
+  "edited": {
+    "calls": 24,
+    "triangles": 1002290,
+    "geometries": 23,
+    "scene": "1a9a25d4-eca1-417e-8a0b-05a0d9ed2eeb",
+    "camera": [
+      0,
+      1.7,
+      34
+    ]
+  },
+  "reduced": {
+    "calls": 24,
+    "triangles": 999250,
+    "geometries": 23,
+    "scene": "1a9a25d4-eca1-417e-8a0b-05a0d9ed2eeb",
+    "camera": [
+      0,
+      1.7,
+      34
+    ]
+  },
+  "disabledBaselinePixelIdentical": true,
+  "enabledDefaultsPixelIdentical": true,
+  "wind": "0",
+  "liveInvalidation": true,
+  "resetPixelIdentical": true,
+  "referenceSample": true,
+  "locks": true,
+  "invalidImport": true,
+  "mobileBounds": {
+    "x": 38,
+    "y": 257.734375,
+    "width": 340,
+    "height": 574.265625
+  },
+  "errors": []
+}

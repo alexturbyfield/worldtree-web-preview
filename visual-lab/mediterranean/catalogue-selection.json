@@ -1,0 +1,25 @@
+{
+  "structureSeed": "mediterranean-1",
+  "regionalCandidate": "Quercus ilex",
+  "species": [
+    "Picea abies",
+    "Buxus sempervirens",
+    "Fagus sylvatica",
+    "Ostrya carpinifolia",
+    "Juglans hispanica",
+    "Pinus sylvestris",
+    "Pinus pinea",
+    "Quercus suber",
+    "× Arsorbus thuringiaca",
+    "Betula pendula",
+    "Laburnum alpinum",
+    "Quercus ilex"
+  ],
+  "sourceIndices": [
+    18,
+    29,
+    31,
+    32
+  ],
+  "verification": "Documented native country only, not point occurrence"
+}

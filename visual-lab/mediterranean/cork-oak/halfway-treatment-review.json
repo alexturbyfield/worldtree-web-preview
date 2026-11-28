@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-27T19:57:07.781Z",
+  "humanFeedback": {
+    "text": "Right it is. Can you do a similar treatment to the cork oak",
+    "holmApproval": "Right-hand 50/50 realistic/brighter material with hierarchical normal weights .45/.40/.15; approval of isolated study treatment only",
+    "corkApproval": null
+  },
+  "implementation": {
+    "scope": "Cork-oak hero material and shading only",
+    "normals": "Three normalized sources in hero-local space: 3D crown bounds, bounds of each existing terminal spray group, original transformed card normal. Weights .45/.40/.15.",
+    "material": "50% existing physically lit texture color plus50% warm painterly pigment field driven by the actual directional key",
+    "bark": "Modest pigment lift and reduced bump strength, original generated cork texture retained",
+    "unchanged": [
+      "Branch architecture",
+      "Leaf/card positions",
+      "Alpha texture/opacity",
+      "Camera",
+      "Scene lighting",
+      "Holm oak",
+      "Other environments"
+    ]
+  },
+  "review": {
+    "reviewer": "Primary Codex actual matched 640 images",
+    "result": "Clearer olive foliage and bark; much less muddy than original. Sparse tufted crown and some pale tips remain.",
+    "decision": "Retain for human review",
+    "humanApproval": null
+  },
+  "checks": {
+    "typecheck": "passed",
+    "targetedTests": 7,
+    "geometryUVInstanceTransformHashesIdentical": true,
+    "records": [
+      {
+        "mode": "original",
+        "stats": {
+          "frame": 7,
+          "calls": 2,
+          "triangles": 18048,
+          "points": 0,
+          "lines": 0
+        }
+      },
+      {
+        "mode": "halfway",
+        "stats": {
+          "frame": 11,
+          "calls": 2,
+          "triangles": 18048,
+          "points": 0,
+          "lines": 0
+        }
+      }
+    ],
+    "errors": [],
+    "mobileApproval": false
+  },
+  "evidence": "artifacts/cork-halfway-treatment/comparison.png",
+  "commit": false,
+  "push": false,
+  "deployed": false
+}

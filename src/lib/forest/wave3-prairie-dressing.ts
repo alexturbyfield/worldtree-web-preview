@@ -1,3 +1,4 @@
+import {prairieMaterialUniforms,type PrairieMaterialUniforms} from './prairie-material-bindings';
 import type {RegionalPlant} from '../regional-land-cover';
 import * as T from 'three';
 import {prairieLandscape} from './prairie-landscape';
@@ -11,9 +12,9 @@ type Sample=(x:number,z:number)=>PrairieCommunity;
 type Shader=Parameters<T.MeshStandardMaterial['onBeforeCompile']>[0];
 
 /** One pigment implementation for terrain and every grass root. */
-export function prairiePigment(shader:Shader,field:T.Texture,detail:T.Texture,palette:ExpansionPalette,soil:T.Texture=detail){
- Object.assign(shader.uniforms,{prField:{value:field},prDetail:{value:detail},prSediment:{value:soil},prShade:{value:new T.Color(palette.ground[0])},prBody:{value:new T.Color(palette.ground[1])},prSun:{value:new T.Color(palette.ground[2])},prSoil:{value:new T.Color(palette.soil)}});
- shader.fragmentShader=`uniform sampler2D prField,prDetail,prSediment;uniform vec3 prShade,prBody,prSun,prSoil;
+export function prairiePigment(shader:Shader,field:T.Texture,detail:T.Texture,palette:ExpansionPalette,soil:T.Texture=detail,uniforms:PrairieMaterialUniforms=prairieMaterialUniforms()){
+ Object.assign(shader.uniforms,{prField:{value:field},prDetail:{value:detail},prSediment:{value:soil},prShade:{value:new T.Color(palette.ground[0])},prBody:{value:new T.Color(palette.ground[1])},prSun:{value:new T.Color(palette.ground[2])},prSoil:{value:new T.Color(palette.soil)}},uniforms);
+ shader.fragmentShader=`uniform sampler2D prField,prDetail,prSediment;uniform vec3 prShade,prBody,prSun,prSoil;uniform float prTipIntensity,prDetailStrength,prSoilBlend;
  float prHash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
  float prNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(prHash(i),prHash(i+vec2(1,0)),f.x),mix(prHash(i+vec2(0,1)),prHash(i+1.),f.x),f.y);}
  vec3 prairieRootPigment(vec3 world){
@@ -26,12 +27,13 @@ export function prairiePigment(shader:Shader,field:T.Texture,detail:T.Texture,pa
   c=mix(c,mix(prShade,prBody,.38),f.g*.22);
   c=mix(c,prSun,smoothstep(.38,.70,f.b)*.68);
   vec3 soilPigment=mix(prSoil,prSun,.10+f.b*.12);
+  earth=clamp(earth*prSoilBlend,0.,1.);
   c=mix(c,soilPigment,earth);
   float ink=dot(texture2D(prDetail,p/5.5).rgb,vec3(.2126,.7152,.0722));
   vec2 sedimentUv=mat2(.92,-.39,.39,.92)*(p+warp*.12)/2.7;
   float grit=dot(texture2D(prSediment,sedimentUv).rgb,vec3(.2126,.7152,.0722));
   float textureValue=mix(clamp(sqrt(max(.001,ink)/.22),.82,1.20),clamp(sqrt(max(.001,grit)/.22),.60,1.50),earth);
-  float detail=(1.-smoothstep(28.,180.,distance(cameraPosition.xz,p)))*.75;
+  float detail=(1.-smoothstep(28.,180.,distance(cameraPosition.xz,p)))*prDetailStrength;
   c*=mix(1.,textureValue,detail);
   float depth=distance(cameraPosition.xz,p);
   vec3 straw=mix(prBody,prSun,.52);
@@ -41,10 +43,10 @@ export function prairiePigment(shader:Shader,field:T.Texture,detail:T.Texture,pa
  `+shader.fragmentShader;
 }
 
-function grassMaterial(field:T.Texture,detail:T.Texture,palette:ExpansionPalette,soil:T.Texture,atlas?:T.Texture,flowers=false){
+function grassMaterial(field:T.Texture,detail:T.Texture,palette:ExpansionPalette,soil:T.Texture,uniforms:PrairieMaterialUniforms,atlas?:T.Texture,flowers=false){
  const m=new T.MeshStandardMaterial({...(atlas?{map:atlas}:{}),vertexColors:flowers,side:T.DoubleSide,roughness:1,alphaTest:atlas?.28:0});
  m.onBeforeCompile=(shader,renderer)=>{
-  prairiePigment(shader,field,detail,palette,soil);
+  prairiePigment(shader,field,detail,palette,soil,uniforms);
   shader.vertexShader=`varying vec3 prWorld,prRootN;varying float prHeight,prBladeT;attribute vec3 prairieRootNormal;${atlas?'attribute float brushTile;varying vec2 prAtlasUv,prCardUv;':''}${flowers?'attribute float prairiePetal;varying float prPetal;':''}\n`+shader.vertexShader;
   shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>',`#include <begin_vertex>
    prWorld=(modelMatrix*instanceMatrix*vec4(position,1.)).xyz;
@@ -63,7 +65,7 @@ function grassMaterial(field:T.Texture,detail:T.Texture,palette:ExpansionPalette
    float prTip=smoothstep(.63,.98,prBladeT);
    float prSunPatch=smoothstep(.38,.68,texture2D(prField,clamp(prWorld.xz/4096.+.5,vec2(0.),vec2(1.))).b);
    vec3 prOlive=mix(prRoot,mix(prShade,prBody,.40),.35*smoothstep(.05,.28,prBladeT));
-   diffuseColor.rgb=mix(prOlive,prSun,prTip*(.23+prSunPatch*.22));
+   diffuseColor.rgb=mix(prOlive,prSun,prTip*(.23+prSunPatch*.22)*prTipIntensity);
    ${atlas?'float prStroke=clamp(dot(prBrush.rgb,vec3(.2126,.7152,.0722))/.36,.86,1.23);diffuseColor.rgb*=mix(1.,prStroke,prTip*.35);':''}
    ${flowers?'diffuseColor.rgb=mix(diffuseColor.rgb,vColor.rgb,prPetal);':''}`);
   shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_begin>',`#include <normal_fragment_begin>
@@ -118,7 +120,7 @@ function shrubGeometry(kind='generic'){
 }
 
 /** Dimensional functional forms; no claimed point occurrences or named flora. */
-export function mountPrairieDressing(scene:T.Scene,plan:ExpansionPlan,palette:ExpansionPalette,field:T.Texture,detail:T.Texture,load:(path:string)=>T.Texture,sample:Sample,regionalShrubs=false,plants:RegionalPlant[]=[],soil:T.Texture=detail){
+export function mountPrairieDressing(scene:T.Scene,plan:ExpansionPlan,palette:ExpansionPalette,field:T.Texture,detail:T.Texture,load:(path:string)=>T.Texture,sample:Sample,regionalShrubs=false,plants:RegionalPlant[]=[],soil:T.Texture=detail,uniforms:PrairieMaterialUniforms=prairieMaterialUniforms()){
  const random=randomSource(plan.seed+'|prairie-volume-v1'),group=new T.Group(),created:T.InstancedMesh[]=[],o=new T.Object3D();group.name='prairie-dimensional-communities';scene.add(group);
  const atlas=load('/assets/savanna-brush/painted-tufts-v1.webp');
  function batch(g:T.BufferGeometry,count:number,m:T.MeshStandardMaterial,name:string){const mesh=new T.InstancedMesh(g,m,count);mesh.name=name;mesh.receiveShadow=true;group.add(mesh);created.push(mesh);return mesh;}
@@ -145,14 +147,14 @@ export function mountPrairieDressing(scene:T.Scene,plan:ExpansionPlan,palette:Ex
   mesh.count=placed;
   mesh.geometry.setAttribute('prairieRootNormal',new T.InstancedBufferAttribute(normals,3));mesh.geometry.setAttribute('brushTile',new T.InstancedBufferAttribute(tiles,1));mesh.computeBoundingSphere();
  };
- const near=batch(brushGeometry(true,true,1.35),2300,grassMaterial(field,detail,palette,soil,atlas),'prairie-near-brush-masses');fill(near,'near');
- const mid=batch(brushGeometry(false,true,1.5),4200,grassMaterial(field,detail,palette,soil,atlas),'prairie-middle-brush-masses');fill(mid,'mid');
+ const near=batch(brushGeometry(true,true,1.35),2300,grassMaterial(field,detail,palette,soil,uniforms,atlas),'prairie-near-brush-masses');fill(near,'near');
+ const mid=batch(brushGeometry(false,true,1.5),4200,grassMaterial(field,detail,palette,soil,uniforms,atlas),'prairie-middle-brush-masses');fill(mid,'mid');
  // Retain the failed construction for explicit comparison, but do not leave
  // obvious card terraces enabled merely because they render successfully.
  const brushStudy=typeof location!=='undefined'&&new URLSearchParams(location.search).get('prairieBrush')==='1';near.visible=mid.visible=brushStudy;
- const fine=batch(meadowGeometry(false),260,grassMaterial(field,detail,palette,soil),'prairie-curved-fine-grass');fill(fine,'fine');
- const seed=batch(seedGeometry(),140,grassMaterial(field,detail,palette,soil),'prairie-dimensional-seedheads');fill(seed,'seed');
- for(const purple of [false,true]){const flowers=batch(forbGeometry(purple),purple?120:160,grassMaterial(field,detail,palette,soil,undefined,true),purple?'prairie-purple-forb-communities':'prairie-yellow-forb-communities');fill(flowers,'flower');}
+ const fine=batch(meadowGeometry(false),260,grassMaterial(field,detail,palette,soil,uniforms),'prairie-curved-fine-grass');fill(fine,'fine');
+ const seed=batch(seedGeometry(),140,grassMaterial(field,detail,palette,soil,uniforms),'prairie-dimensional-seedheads');fill(seed,'seed');
+ for(const purple of [false,true]){const flowers=batch(forbGeometry(purple),purple?120:160,grassMaterial(field,detail,palette,soil,uniforms,undefined,true),purple?'prairie-purple-forb-communities':'prairie-yellow-forb-communities');fill(flowers,'flower');}
  const shrubs=batch(shrubGeometry(),regionalShrubs?12:0,new T.MeshStandardMaterial({color:'#657c4d',roughness:1,side:T.DoubleSide}),'prairie-regional-shrub-growth-forms');
  shrubs.castShadow=true;(shrubs.material as T.MeshStandardMaterial).onBeforeCompile=shader=>{shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_begin>','#include <normal_fragment_begin>\nnormal=normalize(normal*.55+mat3(viewMatrix)*vec3(0.,.6,0.));');};
  for(let i=0;i<shrubs.count;i++){
@@ -162,9 +164,9 @@ export function mountPrairieDressing(scene:T.Scene,plan:ExpansionPlan,palette:Ex
  // Own stream leaves all pre-existing decorative transforms unchanged.
  const cr=randomSource(plan.seed+'|prairie-landscape-communities-v1');
  const communities=Array.from({length:18},(_,i)=>({x:(i%2?1:-1)*(i<4?5+cr()*5:9+cr()*65),z:i<4?22-i*3:12-i*10-cr()*10,rx:i<4?3+cr()*3:7+cr()*12,rz:i<4?5+cr()*5:8+cr()*17}));
- const cover=batch(meadowGeometry(false),2100,grassMaterial(field,detail,palette,soil),'prairie-connected-middle-grass');
- const heads=batch(seedGeometry(),380,grassMaterial(field,detail,palette,soil),'prairie-connected-seedhead-communities');
- const blooms=batch(forbGeometry(!plants.some(p=>p.representation==='yellow-forb')),420,grassMaterial(field,detail,palette,soil,undefined,true),'prairie-connected-flowering-swaths');
+ const cover=batch(meadowGeometry(false),2100,grassMaterial(field,detail,palette,soil,uniforms),'prairie-connected-middle-grass');
+ const heads=batch(seedGeometry(),380,grassMaterial(field,detail,palette,soil,uniforms),'prairie-connected-seedhead-communities');
+ const blooms=batch(forbGeometry(!plants.some(p=>p.representation==='yellow-forb')),420,grassMaterial(field,detail,palette,soil,uniforms,undefined,true),'prairie-connected-flowering-swaths');
  cover.userData={regionalPlantCandidates:plants.filter(p=>p.growthForm==='grass').map(p=>p.id),visual:'Shared retained grass growth-form approximation'};
  heads.userData={regionalPlantCandidates:plants.filter(p=>/seedheads/.test(p.representation)).map(p=>p.id),visual:'Shared retained seedhead approximation'};
  blooms.userData={regionalPlantCandidates:plants.filter(p=>p.growthForm==='forb').map(p=>p.id),visual:'Shared yellow-head approximation; no species-accurate sunflower model claimed'};
@@ -201,9 +203,9 @@ export function mountPrairieDressing(scene:T.Scene,plan:ExpansionPlan,palette:Ex
  // middle-distance communities and all tree specimens remain untouched.
  const frame=randomSource(plan.seed+'|prairie-foreground-v1');
  const framePatches=[{x:-2.4,z:31.1,rx:1.7,rz:2.5},{x:3.6,z:29.2,rx:2.2,rz:3.3},{x:-5.2,z:26.5,rx:2.6,rz:4.1},{x:7.1,z:24,rx:3.2,rz:5},{x:-8.7,z:21.8,rx:3.7,rz:5.4}];
- const frameGrass=batch(meadowGeometry(false),1340,grassMaterial(field,detail,palette,soil),'prairie-foreground-layered-grass');
- const frameSeeds=batch(seedGeometry(),100,grassMaterial(field,detail,palette,soil),'prairie-foreground-feathered-seedheads');
- const frameFlowers=batch(forbGeometry(false),110,grassMaterial(field,detail,palette,soil,undefined,true),'prairie-foreground-sunflower-growth-forms');
+ const frameGrass=batch(meadowGeometry(false),1340,grassMaterial(field,detail,palette,soil,uniforms),'prairie-foreground-layered-grass');
+ const frameSeeds=batch(seedGeometry(),100,grassMaterial(field,detail,palette,soil,uniforms),'prairie-foreground-feathered-seedheads');
+ const frameFlowers=batch(forbGeometry(false),110,grassMaterial(field,detail,palette,soil,uniforms,undefined,true),'prairie-foreground-sunflower-growth-forms');
  const frameShrubs=batch(shrubGeometry('leafy-shrub'),regionalShrubs?16:0,new T.MeshStandardMaterial({color:'#60764a',roughness:1,side:T.DoubleSide}),'prairie-foreground-low-shrub-pockets');
  frameShrubs.castShadow=true;(frameShrubs.material as T.MeshStandardMaterial).onBeforeCompile=shader=>{shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_begin>','#include <normal_fragment_begin>\nnormal=normalize(normal*.55+mat3(viewMatrix)*vec3(0.,.6,0.));');};
  const frameStats:{name:string;count:number;lowCover:number;tallRootsInStaging:number}[]=[];

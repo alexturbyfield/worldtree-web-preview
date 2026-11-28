@@ -1,0 +1,100 @@
+{
+  "stats": {
+    "frame": 8,
+    "calls": 73,
+    "triangles": 2930594,
+    "points": 0,
+    "lines": 0
+  },
+  "camera": {
+    "position": [
+      0,
+      1.7,
+      34
+    ],
+    "target": [
+      0,
+      3,
+      -55
+    ]
+  },
+  "meta": {
+    "seed": "29",
+    "region": "ACG Costa Rica regional study",
+    "ecology": {
+      "trees": [
+        "Enterolobium cyclocarpum: regional candidate, approximate spreading architecture",
+        "Bursera simaruba: regional candidate, approximate reddish bark"
+      ],
+      "understory": "Unnamed dry shrub and grass functional forms; no verified local species labels",
+      "flowering": "Disabled; phenology unverified"
+    },
+    "limits": [
+      "Leaf spray texture reused from cork oak as provisional visual representation",
+      "No surveyed topography or point occurrence"
+    ],
+    "approval": "pending"
+  },
+  "ecoregion": {
+    "id": "temperate",
+    "biome": 2,
+    "version": "global-expansion-prototype-1",
+    "plan": {
+      "id": "temperate",
+      "biome": 2,
+      "seed": "29",
+      "phase": 1.894691307875228,
+      "relief": 1.5,
+      "camera": {
+        "position": [
+          0,
+          1.7,
+          34
+        ],
+        "target": [
+          0,
+          3,
+          -55
+        ]
+      },
+      "inspection": {
+        "position": [
+          62,
+          38,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ]
+      },
+      "eye": [
+        0,
+        1.7,
+        34
+      ],
+      "target": [
+        0,
+        3,
+        -55
+      ]
+    },
+    "presentation": {
+      "foliageAtmosphere": {
+        "near": 95,
+        "far": 420,
+        "strength": 0.55,
+        "color": "#c4b7a1"
+      }
+    },
+    "trees": 0,
+    "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+    "layers": {
+      "season": "independent reference state, unresolved",
+      "weather": "clear visual study",
+      "timeOfDay": "warm directional reference state"
+    }
+  },
+  "errors": []
+}

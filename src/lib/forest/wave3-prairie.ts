@@ -1,3 +1,4 @@
+import {prairieMaterialUniforms,bindPrairieMaterials} from './prairie-material-bindings';
 import {installGroundLighting,type groundCompositionField} from './environment-foundations';
 import {finishPrairieTree} from './prairie-tree-finish';
 import * as T from 'three';
@@ -86,10 +87,11 @@ export const prairieStudy={id:'prairie',biome:8,
    bytes.set([f.growth,f.moisture,f.exposure,f.soil].map(v=>Math.round(v*255)),k);
   }
   const field=new T.DataTexture(bytes,resolution,resolution,T.RGBAFormat);field.colorSpace=T.NoColorSpace;field.minFilter=field.magFilter=T.LinearFilter;field.wrapS=field.wrapT=T.ClampToEdgeWrapping;field.generateMipmaps=false;field.needsUpdate=true;
+  const materialUniforms=prairieMaterialUniforms();
   const sediment=base.load('/assets/wave1-detail/arid-sediment-v1.webp');
   const material=base.groundMaterial,before=material.onBeforeCompile;material.bumpMap=sediment;material.bumpScale=.018;
   material.onBeforeCompile=function(shader,renderer){before.call(this,shader,renderer);
-   prairiePigment(shader,field,base.groundTexture,palette,sediment);
+   prairiePigment(shader,field,base.groundTexture,palette,sediment,materialUniforms);
    shader.fragmentShader=shader.fragmentShader.replace('#include <metalnessmap_fragment>','#include <metalnessmap_fragment>\ndiffuseColor.rgb=prairieRootPigment(exWorld);');
   };
   material.customProgramCacheKey=()=> 'prairie-ground-community-v4';material.needsUpdate=true;
@@ -100,7 +102,8 @@ export const prairieStudy={id:'prairie',biome:8,
     const f=prairieCommunity(r.seed,a.getX(i),a.getZ(i));a.setY(i,prairieLandscape(plan,a.getX(i),a.getZ(i)).height+(.12+f.growth*.22)*(1-f.soil)*(1-f.staging*.88));
    }a.needsUpdate=true;o.geometry.computeVertexNormals();o.geometry.computeBoundingSphere();o.castShadow=true;
   });
-  const dressing=mountPrairieDressing(scene,plan,palette,field,base.groundTexture,base.load,(x,z)=>prairieCommunity(r.seed,x,z),Boolean(r.landCover?.some(p=>p.growthForm==='shrub')),r.landCover??[],sediment);
+  const dressing=mountPrairieDressing(scene,plan,palette,field,base.groundTexture,base.load,(x,z)=>prairieCommunity(r.seed,x,z),Boolean(r.landCover?.some(p=>p.growthForm==='shrub')),r.landCover??[],sediment,materialUniforms);
+  const unbindMaterials=bindPrairieMaterials(scene,materialUniforms);
   const shadow=base.load('/assets/prairie/foreground-shadow-v1.webp');
   const groundLight:ReturnType<typeof groundCompositionField>={settings:{foregroundDarkness:.34,sideFraming:.13,focalWidth:[9,20],transitionSoftness:.75,warmth:.08,irregularity:.7},center:[0,12],forward:[0,-1],phase:plan.phase};
   const shadedMaterials=new Set<T.Material>();
@@ -119,5 +122,5 @@ export const prairieStudy={id:'prairie',biome:8,
   scene.children.forEach(o=>{if(o instanceof T.HemisphereLight){o.intensity=.55;o.color.set('#b7c5dc');o.groundColor.set('#8b805e');}});
   scene.fog=new T.Fog('#a6aebe',380,2450);
   scene.userData.prairie={stage:'C-connected-landscape-composition',version:3,sourceEcoId:r.ecoregion?.ECO_ID,sourceEcoName:r.ecoregion?.ECO_NAME,sourceBiome:r.ecoregion?.BIOME_NUM,reference:'prairie-wave3-primary',communityField:{resolution,span,channels:['growth','synthetic-moisture','exposure-pigment','soil']},ecology:'Unnamed grass, forb and shrub functional forms; NRCS regional context, not verified local taxa.',terrain:'Retained near rolls; shallow middle drainage and broad low distant shoulders on continuous terrain. Synthetic presentation, no inferred mountains or raised staging pad.',layers:{season:'independent leaf-on pigment reference',weather:'clear reference',timeOfDay:'low warm key reference'},pending:['Further regional and actual mobile validation','Final biome artistic approval']};
-  base.finish();return()=>{scene.onBeforeRender=previousRender;scene.remove(hillsMesh);hillsMesh.geometry.dispose();hillsMaterial.dispose();dressing();field.dispose();base.dispose();};
+  base.finish();return()=>{unbindMaterials();scene.onBeforeRender=previousRender;scene.remove(hillsMesh);hillsMesh.geometry.dispose();hillsMaterial.dispose();dressing();field.dispose();base.dispose();};
  }};

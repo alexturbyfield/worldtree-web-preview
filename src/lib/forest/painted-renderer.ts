@@ -25,7 +25,7 @@ export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick
   const expansionPickSources=new URLSearchParams(location.search).has('expansion')?new Map(recipe.trees.map(t=>[t.id,t.index])):undefined;
   const alpineOptions=readAlpineOptions(location.search,recipe.seed),alpine=alpineOptions?alpineSceneRecipe(recipe,alpineOptions):undefined;if(alpine)recipe=alpine;
   const wave=alpine?undefined:wave1Study(recipe,location.search);if(wave)recipe=wave.compose(recipe);
-  if(expansionPickSources&&wave&&['boreal','temperate','tundra'].includes(wave.id)){
+  if(expansionPickSources&&wave&&['boreal','temperate','tundra','mediterranean'].includes(wave.id)){
     const canonicalPick=onPick,mapping=new Map(recipe.trees.map(t=>[t.index,expansionPickSources.get(t.id.split('-'+wave.id+'-presentation-')[0])]));
     onPick=index=>canonicalPick(index===null?null:mapping.get(index)??null);
   }

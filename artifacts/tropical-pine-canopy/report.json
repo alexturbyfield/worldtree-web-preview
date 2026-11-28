@@ -1,0 +1,116 @@
+{
+  "stats": {
+    "frame": 8,
+    "calls": 119,
+    "triangles": 2283946,
+    "points": 0,
+    "lines": 0
+  },
+  "camera": {
+    "position": [
+      0,
+      1.7,
+      34
+    ],
+    "target": [
+      1,
+      -3,
+      -100
+    ]
+  },
+  "meta": {
+    "seed": "29",
+    "region": "Concepcion Las Minas, Guatemala regional premontane study",
+    "reference": "visual-lab/tropical-pine/concept.png",
+    "ecology": {
+      "pines": [
+        "Pinus oocarpa",
+        "Pinus maximinoi"
+      ],
+      "evidence": "Regional university field transects, not verified selected-point occurrences",
+      "oaks": "Quercus spp regional growth forms; borrowed oak spray representation not species identification",
+      "understory": "Unnamed low shrub and grass forms; not confirmed local species",
+      "alder": "Omitted; local wet habitat not established",
+      "flowers": "Omitted pending local seasonal support"
+    },
+    "counts": {
+      "pines": 68,
+      "oaks": 15,
+      "overheadShadowTrees": 2,
+      "grass": 2300,
+      "shrubs": 145,
+      "treelineCards": 3
+    },
+    "treeline": "Three world-space pine-oak cutout layers at 80,145,250m behind the stage; original distant forest hills retained",
+    "layers": {
+      "season": "green reference state",
+      "weather": "clear",
+      "timeOfDay": "warm afternoon"
+    },
+    "hydrology": "No flowing stream invented; synthetic moist pockets only",
+    "approval": "pending"
+  },
+  "ecoregion": {
+    "id": "tropicalpine",
+    "biome": 3,
+    "version": "global-expansion-prototype-1",
+    "plan": {
+      "id": "tropicalpine",
+      "biome": 3,
+      "seed": "29",
+      "phase": 5.784633026693105,
+      "relief": 1,
+      "camera": {
+        "position": [
+          0,
+          1.7,
+          34
+        ],
+        "target": [
+          1,
+          -3,
+          -100
+        ]
+      },
+      "inspection": {
+        "position": [
+          62,
+          38,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ]
+      },
+      "heightMode": "woodland-slope",
+      "eye": [
+        0,
+        1.7,
+        34
+      ],
+      "target": [
+        1,
+        -3,
+        -100
+      ]
+    },
+    "presentation": {
+      "foliageAtmosphere": {
+        "near": 95,
+        "far": 420,
+        "strength": 0.55,
+        "color": "#92aaa7"
+      }
+    },
+    "trees": 68,
+    "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+    "layers": {
+      "season": "independent reference state, unresolved",
+      "weather": "clear visual study",
+      "timeOfDay": "warm directional reference state"
+    }
+  },
+  "errors": []
+}

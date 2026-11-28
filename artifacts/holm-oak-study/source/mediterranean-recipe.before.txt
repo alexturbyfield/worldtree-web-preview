@@ -1,0 +1,51 @@
+import {corkOakHero,type CorkScene} from './cork-oak-hero';
+import * as T from 'three';
+import type {SceneRecipe,SceneTree} from './recipe';
+import {randomSource,hashSeed} from './random';
+import {temperateArchitecture} from './wave2-temperate-concept';
+import type {Point} from './tree';
+import type {LandscapeMatteAsset} from './landscape-matte';
+export const mediterraneanReferenceCamera={position:[0,1.7,16] as Point,target:[0,-6.225925925926,-44] as Point};
+export const mediterraneanPalette={ground:['#5b653f','#888d4b','#aaa350'] as [string,string,string],soil:'#ae7849',air:'#9baeb9',sun:'#ffe0af',foliage:['#344533','#747d3e','#b8ba67'] as [string,string,string],texture:'/assets/alpine-meadow/meadow-ground-v1.png'};
+/** Synthetic descending garrigue shoulder, not claimed measured topography. */
+export function mediterraneanHeight(seed:string,x:number,z:number){
+ const phase=hashSeed(seed+'|garrigue-landform')/4294967296*6.283;
+ const h=(a:number,b:number)=>{
+  const d=Math.max(0,16-b),fall=-10.5*(1-Math.exp(-d/48));
+  const shoulders=3.9*(1-Math.exp(-Math.pow(a/18,2)))*Math.exp(-d/420);
+  const right=2.0*Math.exp(-Math.pow((a-10)/12,2)-Math.pow((b+5)/26,2));
+  const middle=5.5*Math.exp(-Math.pow((a+55)/50,2)-Math.pow((b+100)/70,2))+7*Math.exp(-Math.pow((a-110)/95,2)-Math.pow((b+205)/95,2));
+  const rolls=.44*Math.sin(a*.12+phase)*Math.cos(b*.085)+.22*Math.sin(b*.21+a*.17+phase);
+  return fall+shoulders+right+middle+rolls;
+ };return h(x,z)-h(0,16);
+}
+export function mediterraneanCommunity(seed:string,x:number,z:number){const p=hashSeed(seed+'|garrigue-communities')/4294967296*6.283;return T.MathUtils.clamp(.50+.25*Math.sin(x*.12+Math.sin(z*.065+p)*2)+.18*Math.sin(z*.17+x*.055+p),0,1);}
+/** Sample the reference only while constructing a fixed world field. Never follows the live camera. */
+export function referenceSoilSampler(seed:string,mask:{width:number;height:number;pixels:number[]}){
+ const camera=new T.PerspectiveCamera(47,16/9,.2,2500);camera.position.fromArray(mediterraneanReferenceCamera.position);camera.lookAt(...mediterraneanReferenceCamera.target);camera.updateMatrixWorld();const point=new T.Vector3();
+ return (x:number,z:number)=>{point.set(x,mediterraneanHeight(seed,x,z),z).project(camera);const u=(point.x+1)*.5,v=(1-point.y)*.5;
+  if(point.z>=-1&&point.z<=1&&u>=0&&u<=1&&v>=0&&v<=1){const px=u*(mask.width-1),py=v*(mask.height-1),ix=Math.floor(px),iy=Math.floor(py),fx=px-ix,fy=py-iy,at=(a:number,b:number)=>mask.pixels[Math.min(mask.height-1,b)*mask.width+Math.min(mask.width-1,a)]/255;return (at(ix,iy)*(1-fx)+at(ix+1,iy)*fx)*(1-fy)+(at(ix,iy+1)*(1-fx)+at(ix+1,iy+1)*fx)*fy;}
+  return 0; // No invented route outside the frozen reference; prevents inspection ribbons.
+ };
+}
+function shapeOak(source:SceneTree,height:number,radius:number,index:number,seed:string){
+ const study=temperateArchitecture(source,height,radius,index,seed),hero=index===0;
+ const transform=(p:Point):Point=>[p[0]+(hero?3.8:.35)*Math.pow(Math.max(0,p[1]/height),1.15),p[1],p[2]];
+ const tangent=(v:Point|undefined,y:number):Point=>{const t=new T.Vector3(...(v??[0,1,0]));t.x+=(hero?3.8:.35)*1.15*Math.pow(Math.max(0,y/height),.15)/height*t.y;return t.normalize().toArray() as Point;};
+ const segments=study.segments.map(s=>({...s,a:transform(s.a),b:transform(s.b),r0:s.r0*(hero?1.50:1),r1:s.r1*(hero?1.50:1),color:'#614c35',tangentA:tangent(s.tangentA,s.a[1]),tangentB:tangent(s.tangentB,s.b[1])}));
+ // Follow the displaced branch skeleton; keep optical leaf sizes and branch ownership.
+ const fronds=study.fronds.filter((f,i)=>hero||index<4||i%3===0).map(f=>({...f,position:transform(f.position),width:f.width*.48,length:f.length*.48}));
+ const groups=study.groups.map(g=>({...g,center:transform(g.center),anchor:transform(g.anchor)}));
+ const model={...study.model,segments,dimensions:{height:height+1,crownWidth:radius*2+(hero?5:1),crownDepth:radius*2+2},palette:{name:'Mediterranean candidate oak',shadow:'#344533',body:'#747d3e',light:'#b8ba67',bark:'#614c35'}};
+ return {...study,segments,fronds,groups,model};
+}
+export function composeMediterranean(r:SceneRecipe):CorkScene{
+ const source=r.trees.filter(t=>t.species.scientificName==='Quercus ilex'),rng=randomSource(r.seed+'|mediterranean-occurrences'),trees:SceneTree[]=[];
+ // Relative roles, not copied concept coordinates; the seed perturbs spacing, size and yaw.
+ const roles=[[-6.4,7,10.4,4.2],[14,-9,7.9,3.8],[-14,-35,4.8,3.4],[19,-55,5.1,3.8],[-38,-95,4.7,3.4],[44,-125,5.3,4.0],[-70,-165,5.4,3.9],[93,-235,6.0,4.4],[10,-115,3.7,2.7],[-102,-275,6,4.2],[135,-340,7,4.6]];
+ for(let i=0;i<roles.length&&source.length;i++){const t=source[i%source.length],[a,b,h,w]=roles[i],x=a+(rng()-.5)*(i<2?.5:5),z=b+(rng()-.5)*(i<2?.6:8),studio=shapeOak(t,h*(.94+rng()*.12),w*(.94+rng()*.12),i,r.seed);trees.push({...t,id:t.id+'-mediterranean-presentation-'+i,index:i,position:[x,mediterraneanHeight(r.seed,x,z),z],rotation:i===0?0:rng()*6.283,studio,model:studio.model,species:{...t.species,visual:{...t.species.visual,fallback:true,reason:'Regional Quercus ilex candidate; shared oak branch/spray approximation, not a measured species reconstruction or point occurrence.'}}});}
+ const cork=r.trees.find(t=>t.species.scientificName==='Quercus suber');
+ const corkHero=cork&&trees[0]?corkOakHero(cork,trees[0].position):undefined;
+ return {...r,trees:corkHero?trees.slice(1):trees,corkHero,purpose:'visual_laboratory',distribution:'Reference-role composition with deterministic variations using existing candidate oak individuals; no measured tree positions or abundance.',limitations:[...r.limitations,'Garrigue terrain, oak size and unnamed shrub communities are synthetic. Concept-matching layout is not a geographic reconstruction.']};
+}
+export const mediterraneanMatte:LandscapeMatteAsset={schemaVersion:1,id:'herault-garrigue-v1',asset:'/assets/mediterranean/herault-garrigue-distance-v1.webp',conditioning:{location:{lat:43.72,lon:3.58},ecoregionId:799,biomeId:12,topography:{source:'Regional limestone-garrigue context (BRGM); no DEM available',measured:false,landform:'Low rolling limestone uplands; no high mountains, coastline or landmarks'},landCover:['evergreen oak scrub','olive/silver low shrubs','pale limestone exposures'],seed:'29',season:'reference leaf-on',timeOfDay:'warm upper-left low sun',weather:'clear',viewAzimuth:0,horizonFraction:.24},layers:[{position:[0,-5,-650],size:[1600,500],yaw:0,opacity:1}],supportedView:{anchor:[0,1.7,16],maxHorizontalDisplacement:100,maxElevation:22,halfAngleDegrees:55},provenance:{method:'Offline generated RGBA plate, not runtime generation or geospatial imagery',source:'imagegen generated_images/01a205da-da33-7d33-9ee8-3170650dd5eb',limitations:['Exact regional ridges not verified; synthetic illustration conditioned on broad regional geology','Single light/weather state; asset must be replaced for incompatible lighting','Finite encounter cone; inspection hides the matte','Generator seed reproducibility not asserted; asset identity and presentation seed are frozen']}};

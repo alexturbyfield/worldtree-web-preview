@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-27T18:36:45.930Z",
+  "task": "Short cork-oak hero reference pass",
+  "reference": "visual-lab/mediterranean/cork-oak/reference.webp",
+  "sourceHashes": {
+    "src/lib/forest/cork-oak-hero.ts": "9ec23c94bbc11352b3d2bada3a72450ef4dd821b465b7783fd07f3762e12454e",
+    "src/lib/forest/mediterranean-recipe.ts": "1bb81db17ff28f83c9c902f0baf7ebafaa438de08bb9765c65e9d48b87309336",
+    "src/lib/forest/mediterranean-adapter.ts": "35dbe366b86fa86c5d3724b9dc30f3394b5fa4b300e48291dfdff94198e53bea",
+    "tests/mediterranean.test.ts": "2093ea87087f587abec78c32afaa63177e0518b5f05af9a265537baa0d5ed092"
+  },
+  "seed": 29,
+  "camera": {
+    "position": [
+      0,
+      1.7,
+      16
+    ],
+    "target": [
+      0,
+      -6.225925925926,
+      -44
+    ],
+    "fov": 47
+  },
+  "ecology": "Existing regional Quercus suber source candidate, native-country evidence only. Selected-point habitat and substrate compatibility remain unverified; no ecological data changed.",
+  "assets": {
+    "bark": "/assets/cork-oak/bark-v1.webp",
+    "leaves": "/assets/cork-oak/leaves-v1.webp",
+    "generation": "Built-in imagegen; original PNGs and versioned runtime WebP copies retained",
+    "licensing": "Generated texture provenance retained; user reference image rights not independently verified, no training consent inferred"
+  },
+  "intervention": "Local hero representation and material replacement, keeping background trees and environment fixed",
+  "observations": [
+    "Reference has a short thick trunk and low irregular fork; main limbs change direction nonuniformly and taper strongly into fine branches.",
+    "Implemented low trunk, four unequal main paths, secondary/tertiary branching with branch-owned sprays and explicit tangent/radius data.",
+    "Actual main scene, isolated foliage, branch-only and bark views inspected. New bark UVs follow arc length and show plates rather than horizontal stretching.",
+    "Reference crown is more connected and luminous; current sprays still resolve as separated dark tufts. Upper twig tips are too exposed. Some junctions remain abrupt."
+  ],
+  "decision": {
+    "reviewer": "Primary Codex actual image inspection, not independent review",
+    "betterThanPrevious": "Distinct cork-oak identity and bark detail improve; full crown/reference fidelity remains incomplete",
+    "retain": "provisional hero direction only",
+    "humanApproval": null
+  },
+  "technical": {
+    "typecheck": "passed",
+    "targetedTests": 5,
+    "backgroundCheck": "10 background trees deep-equal frozen source geometry/placement/species/seeds",
+    "browserErrors": [],
+    "heroMetadata": {
+      "species": {
+        "id": "wcvp:175312",
+        "scientificName": "Quercus suber",
+        "commonName": "Cork oak",
+        "confidence": "regional",
+        "evidenceLevel": "documented_regional_range",
+        "origin": "Documented native botanical country; local presence unverified",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      "sourceSeed": "1498618003",
+      "position": [
+        -6.16058113493491,
+        -1.3106581996422526,
+        6.729788740584627
+      ],
+      "designHeight": 7.275945514169724,
+      "segments": 588,
+      "sprays": 900,
+      "textures": [
+        "bark-v1.webp",
+        "leaves-v1.webp"
+      ],
+      "status": "experimental hero; no local occurrence or substrate suitability verified",
+      "inspection": "Orbit/elevated views supported; separate hero is not yet connected to the per-tree click inspector"
+    },
+    "sceneStats": {
+      "frame": 9,
+      "calls": 18,
+      "triangles": 1649632,
+      "points": 0,
+      "lines": 0,
+      "geometries": 17,
+      "textures": 11
+    },
+    "deviceApproval": false
+  },
+  "limitations": [
+    "Hero not connected to per-tree click inspector; actual orbit/elevated inspection works",
+    "Hero leaf wind animation deferred; fixed wind-off reference review used",
+    "No holdouts, cross-biome render suite or mobile-device benchmark",
+    "No new ecological claims or globally promoted cork-oak template"
+  ],
+  "learning": [
+    {
+      "principle": "Low fork and unequal directional bends establish species character before foliage",
+      "status": "experimentally supported",
+      "evidence": "branches.png",
+      "limits": "One synthetic specimen, human approval pending"
+    },
+    {
+      "principle": "Longitudinal bark UVs follow branch arc length rather than world height",
+      "status": "experimentally supported",
+      "evidence": "bark.png",
+      "limits": "Single bark texture; generated seamlessness not quantitatively verified"
+    },
+    {
+      "principle": "One terminal spray construction is sufficient for mature connected crown mass",
+      "status": "rejected",
+      "evidence": "isolated.png",
+      "reason": "Crown still splits into tufted islands"
+    }
+  ],
+  "next": "Human review of hero architecture and crown before further changes",
+  "committed": false,
+  "pushed": false,
+  "deployed": false
+}

@@ -1,0 +1,49 @@
+{
+  "date": "2026-11-28T03:49:06.008Z",
+  "request": "Textured foreground canopy shadows and additional ground shape",
+  "interpretation": "Ambiguous shortie interpreted as gentle slope/ground shoulders",
+  "status": "retained-for-human-review",
+  "humanApproval": null,
+  "seed": 29,
+  "baseline": "artifacts/tropical-pine-layers/final.png",
+  "image": "artifacts/tropical-pine-canopy/final.png",
+  "source": [
+    "src/lib/forest/tropical-pine.ts",
+    "src/lib/forest/wave2-shared.ts"
+  ],
+  "hypothesis": "Natural trees just outside the encounter camera cast foliage shadows onto the near floor; gentle local shoulders break the flat opening",
+  "implementation": {
+    "overheadOaks": 2,
+    "shadows": "Actual alpha-tested leaf and branch occluders; no decal, baked ground darkening or screen vignette",
+    "keyDirection": "Unchanged: sun and target translated together to recenter shadow coverage",
+    "shadowIntensity": {
+      "before": 0.68,
+      "after": 0.74
+    },
+    "terrain": "Submetre irregular shoulders and shallow depression in opt-in woodland-slope mode only"
+  },
+  "vision": {
+    "reviewer": "Implementing assistant",
+    "observations": "More textured shade on left foreground and rock/fern bases, luminous central soil remains, low ground shoulder gives a gentle slope",
+    "decision": "retain",
+    "remaining": "Shadow framing is strongest on left; foliage remains coarse and pale"
+  },
+  "checks": {
+    "typescript": "npx tsc --noEmit --pretty false passed",
+    "browserErrors": [],
+    "stats": {
+      "frame": 8,
+      "calls": 119,
+      "triangles": 2283946,
+      "points": 0,
+      "lines": 0
+    },
+    "performanceCaveat": "Off-camera trees add shadow-casting cost not represented by unchanged main-view geometry counters; no device test"
+  },
+  "sharedRule": {
+    "status": "experimentally-supported",
+    "scope": "Fixed-seed tropical pine prototype only",
+    "principle": "Extend real canopy outside camera to provide world-stable foreground shadow texture while preserving a sunlit opening"
+  },
+  "commitPushDeploy": false
+}

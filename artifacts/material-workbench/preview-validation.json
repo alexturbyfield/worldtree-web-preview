@@ -1,0 +1,15 @@
+{
+  "url": "https://worldtree-web-preview-jcyfm3z8w-alex-turbyfield.vercel.app/explore?lat=36.5736504415&lon=-98.3419281896&habitat=grassland&conditional=1&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&expansion=prairie&workbench=1",
+  "status": "READY",
+  "production": false,
+  "mobileViewport": [
+    390,
+    844
+  ],
+  "liveUniformUpdate": true,
+  "exportJSON": true,
+  "persistenceAfterReload": true,
+  "locksRetained": true,
+  "overridesOffOnVisit": true,
+  "errors": []
+}

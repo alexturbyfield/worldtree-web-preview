@@ -1,0 +1,69 @@
+{
+  "date": "2026-11-27T19:48:44.018Z",
+  "scope": "One isolated diagnostic clone of the existing holm oak; existing scene/species treatment unchanged",
+  "seed": 29,
+  "material": "A",
+  "weights": {
+    "crown": 0.45,
+    "cluster": 0.4,
+    "leaf": 0.15
+  },
+  "sources": {
+    "crown": "3D ellipsoidal field fitted to existing cluster-center bounds including half cluster radii; not a camera-facing map or exact convex hull",
+    "cluster": "Curved ellipsoidal field at each original group center/radii, selected by original spray groupId",
+    "leaf": "Original studioGeometry normal including existing per-card grid variation",
+    "space": "All three unit vectors transformed from tree-local to common world space; normalized weighted sum, deterministic crown fallback on cancellation"
+  },
+  "exposure": 1.12,
+  "camera": {
+    "position": [
+      15.445911913458257,
+      2.2232844265173934,
+      4.198656182476784
+    ],
+    "fov": 47
+  },
+  "review": {
+    "reviewer": "Primary Codex actual images of cards, hull and blend",
+    "observation": "Cards fragment the light; current hull loses clump volume; the requested blend restores local volume with less card breakup. Rounded cluster shading and subdued fine detail remain.",
+    "decision": "Stop for human review; no weights tuned or scene promotion",
+    "humanApproval": null
+  },
+  "validation": {
+    "typecheck": "passed",
+    "tests": 10,
+    "ui": "Verified 3 sliders, mode buttons and live normalized-weight update on existing Lab server at3121",
+    "geometryUVIndexHashesIdentical": true,
+    "silhouetteMasksIdentical": true,
+    "stats": [
+      {
+        "mode": "cards",
+        "calls": 2,
+        "triangles": 29520
+      },
+      {
+        "mode": "hull",
+        "calls": 2,
+        "triangles": 29520
+      },
+      {
+        "mode": "blend",
+        "calls": 2,
+        "triangles": 29520
+      }
+    ],
+    "mobileApproval": false
+  },
+  "sourceHashes": {
+    "src/lib/forest/canopy-normal-experiment.ts": "f50bf10a4fd78873477bdd614d84c0280a8f42f247089028b73013a53ac96934",
+    "src/lib/forest/holm-oak-study.ts": "2e710135f8eb1ea3b4fcbff9d6428786880d6abdcce8c3bece85c8e3c2d7a1ac",
+    "scripts/studies/holm-normal-study.cjs": "440b7ddf8c8cbda120ade71a02b3055c148b08f68183c06c59da8ac781f343de",
+    "scripts/studies/visual-learning-lab.cjs": "3251e802d879e3cbfc7157cb6e124c9eefeac110f76fe4297fc9580a36f4b7ea",
+    "tests/canopy-normal-experiment.test.ts": "2f7708c9ec0d2d49cc326e1f12bc9970d458ce18419b4d6bc8f3beff7a014e14"
+  },
+  "evidence": "artifacts/holm-hierarchical-normals/comparison.png",
+  "loops": 0,
+  "deployed": false,
+  "committed": false,
+  "pushed": false
+}
