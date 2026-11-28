@@ -1,0 +1,617 @@
+[
+  {
+    "id": "A",
+    "camera": [
+      6.661338147750939e-16,
+      0.1252664940564987,
+      29
+    ],
+    "direction": [
+      -0.027684362931449883,
+      0.24569134329843836,
+      -0.9689527026007455
+    ],
+    "width": 819,
+    "height": 513,
+    "calls": 17,
+    "triangles": 1297518,
+    "v4": {
+      "understory": [
+        {
+          "name": "seedlings",
+          "instances": 180,
+          "triangles": 10080
+        },
+        {
+          "name": "ferns",
+          "instances": 150,
+          "triangles": 45000
+        },
+        {
+          "name": "palms",
+          "instances": 90,
+          "triangles": 38160
+        },
+        {
+          "name": "shrubs",
+          "instances": 120,
+          "triangles": 17280
+        },
+        {
+          "name": "lianas",
+          "instances": 72,
+          "triangles": 10368
+        },
+        {
+          "name": "epiphytes",
+          "instances": 100,
+          "triangles": 5600
+        }
+      ],
+      "canopyPlacement": "deterministic greedy crown-footprint occupancy; source foliage density unchanged",
+      "limitations": [
+        "Unnamed procedural life-form dressing, not measured occurrence or dedicated botanical assets.",
+        "Shafts are soft planar hints, not volumetric scattering."
+      ]
+    },
+    "counts": [
+      {
+        "name": "rainforest-v4-seedlings",
+        "count": 180
+      },
+      {
+        "name": "rainforest-v4-ferns",
+        "count": 150
+      },
+      {
+        "name": "rainforest-v4-palms",
+        "count": 90
+      },
+      {
+        "name": "rainforest-v4-shrubs",
+        "count": 120
+      },
+      {
+        "name": "rainforest-v4-lianas",
+        "count": 72
+      },
+      {
+        "name": "rainforest-v4-epiphytes",
+        "count": 100
+      }
+    ],
+    "matchesBaseline": true,
+    "errors": []
+  },
+  {
+    "id": "B",
+    "camera": [
+      6.661338147750939e-16,
+      0.1252664940564987,
+      29
+    ],
+    "direction": [
+      -0.027684362931449883,
+      0.24569134329843836,
+      -0.9689527026007455
+    ],
+    "width": 819,
+    "height": 513,
+    "calls": 26,
+    "triangles": 1450298,
+    "v5": {
+      "fullDetailTrees": 64,
+      "lowDetailTrees": 32,
+      "batches": [
+        {
+          "name": "forest-wall",
+          "instances": 108,
+          "triangles": 216
+        },
+        {
+          "name": "lower-understory",
+          "instances": 3,
+          "triangles": 384
+        },
+        {
+          "name": "outer-trunks",
+          "instances": 32,
+          "triangles": 640
+        },
+        {
+          "name": "outer-crowns",
+          "instances": 192,
+          "triangles": 15360
+        },
+        {
+          "name": "ferns",
+          "instances": 220,
+          "triangles": 66000
+        },
+        {
+          "name": "palms",
+          "instances": 120,
+          "triangles": 50880
+        },
+        {
+          "name": "seedlings",
+          "instances": 240,
+          "triangles": 13440
+        },
+        {
+          "name": "foliage-cards",
+          "instances": 850,
+          "triangles": 1700
+        },
+        {
+          "name": "floor-decals",
+          "instances": 520,
+          "triangles": 4160
+        }
+      ],
+      "additionalInstances": 2285,
+      "limitations": [
+        "Encounter-only wall cards hide above 18 m eye height; elevated inspection exposes finite geometry.",
+        "Outer crown masses reuse source species proportions, not full branch architecture.",
+        "Layered depth fog, not volumetric scattering."
+      ]
+    },
+    "v4": {
+      "understory": [
+        {
+          "name": "seedlings",
+          "instances": 180,
+          "triangles": 10080
+        },
+        {
+          "name": "ferns",
+          "instances": 150,
+          "triangles": 45000
+        },
+        {
+          "name": "palms",
+          "instances": 90,
+          "triangles": 38160
+        },
+        {
+          "name": "shrubs",
+          "instances": 120,
+          "triangles": 17280
+        },
+        {
+          "name": "lianas",
+          "instances": 72,
+          "triangles": 10368
+        },
+        {
+          "name": "epiphytes",
+          "instances": 100,
+          "triangles": 5600
+        }
+      ],
+      "canopyPlacement": "deterministic greedy crown-footprint occupancy; source foliage density unchanged",
+      "limitations": [
+        "Unnamed procedural life-form dressing, not measured occurrence or dedicated botanical assets.",
+        "Shafts are soft planar hints, not volumetric scattering."
+      ]
+    },
+    "counts": [
+      {
+        "name": "rainforest-v4-seedlings",
+        "count": 180
+      },
+      {
+        "name": "rainforest-v4-ferns",
+        "count": 150
+      },
+      {
+        "name": "rainforest-v4-palms",
+        "count": 90
+      },
+      {
+        "name": "rainforest-v4-shrubs",
+        "count": 120
+      },
+      {
+        "name": "rainforest-v4-lianas",
+        "count": 72
+      },
+      {
+        "name": "rainforest-v4-epiphytes",
+        "count": 100
+      },
+      {
+        "name": "rainforest-v5-forest-wall",
+        "count": 108
+      },
+      {
+        "name": "rainforest-v5-lower-understory",
+        "count": 3
+      },
+      {
+        "name": "rainforest-v5-outer-trunks",
+        "count": 32
+      },
+      {
+        "name": "rainforest-v5-outer-crowns",
+        "count": 192
+      },
+      {
+        "name": "rainforest-v5-ferns",
+        "count": 220
+      },
+      {
+        "name": "rainforest-v5-palms",
+        "count": 120
+      },
+      {
+        "name": "rainforest-v5-seedlings",
+        "count": 240
+      },
+      {
+        "name": "rainforest-v5-foliage-cards",
+        "count": 850
+      },
+      {
+        "name": "rainforest-v5-floor-decals",
+        "count": 520
+      }
+    ],
+    "backdrop": true,
+    "errors": []
+  },
+  {
+    "id": "C",
+    "camera": [
+      6.661338147750939e-16,
+      0.1252664940564987,
+      29
+    ],
+    "direction": [
+      0.9689527026007455,
+      0.24569134329843828,
+      -0.02768436293144949
+    ],
+    "width": 819,
+    "height": 513,
+    "calls": 22,
+    "triangles": 1388878,
+    "v5": {
+      "fullDetailTrees": 64,
+      "lowDetailTrees": 32,
+      "batches": [
+        {
+          "name": "forest-wall",
+          "instances": 108,
+          "triangles": 216
+        },
+        {
+          "name": "lower-understory",
+          "instances": 3,
+          "triangles": 384
+        },
+        {
+          "name": "outer-trunks",
+          "instances": 32,
+          "triangles": 640
+        },
+        {
+          "name": "outer-crowns",
+          "instances": 192,
+          "triangles": 15360
+        },
+        {
+          "name": "ferns",
+          "instances": 220,
+          "triangles": 66000
+        },
+        {
+          "name": "palms",
+          "instances": 120,
+          "triangles": 50880
+        },
+        {
+          "name": "seedlings",
+          "instances": 240,
+          "triangles": 13440
+        },
+        {
+          "name": "foliage-cards",
+          "instances": 850,
+          "triangles": 1700
+        },
+        {
+          "name": "floor-decals",
+          "instances": 520,
+          "triangles": 4160
+        }
+      ],
+      "additionalInstances": 2285,
+      "limitations": [
+        "Encounter-only wall cards hide above 18 m eye height; elevated inspection exposes finite geometry.",
+        "Outer crown masses reuse source species proportions, not full branch architecture.",
+        "Layered depth fog, not volumetric scattering."
+      ]
+    },
+    "v4": {
+      "understory": [
+        {
+          "name": "seedlings",
+          "instances": 180,
+          "triangles": 10080
+        },
+        {
+          "name": "ferns",
+          "instances": 150,
+          "triangles": 45000
+        },
+        {
+          "name": "palms",
+          "instances": 90,
+          "triangles": 38160
+        },
+        {
+          "name": "shrubs",
+          "instances": 120,
+          "triangles": 17280
+        },
+        {
+          "name": "lianas",
+          "instances": 72,
+          "triangles": 10368
+        },
+        {
+          "name": "epiphytes",
+          "instances": 100,
+          "triangles": 5600
+        }
+      ],
+      "canopyPlacement": "deterministic greedy crown-footprint occupancy; source foliage density unchanged",
+      "limitations": [
+        "Unnamed procedural life-form dressing, not measured occurrence or dedicated botanical assets.",
+        "Shafts are soft planar hints, not volumetric scattering."
+      ]
+    },
+    "counts": [
+      {
+        "name": "rainforest-v4-seedlings",
+        "count": 180
+      },
+      {
+        "name": "rainforest-v4-ferns",
+        "count": 150
+      },
+      {
+        "name": "rainforest-v4-palms",
+        "count": 90
+      },
+      {
+        "name": "rainforest-v4-shrubs",
+        "count": 120
+      },
+      {
+        "name": "rainforest-v4-lianas",
+        "count": 72
+      },
+      {
+        "name": "rainforest-v4-epiphytes",
+        "count": 100
+      },
+      {
+        "name": "rainforest-v5-forest-wall",
+        "count": 108
+      },
+      {
+        "name": "rainforest-v5-lower-understory",
+        "count": 3
+      },
+      {
+        "name": "rainforest-v5-outer-trunks",
+        "count": 32
+      },
+      {
+        "name": "rainforest-v5-outer-crowns",
+        "count": 192
+      },
+      {
+        "name": "rainforest-v5-ferns",
+        "count": 220
+      },
+      {
+        "name": "rainforest-v5-palms",
+        "count": 120
+      },
+      {
+        "name": "rainforest-v5-seedlings",
+        "count": 240
+      },
+      {
+        "name": "rainforest-v5-foliage-cards",
+        "count": 850
+      },
+      {
+        "name": "rainforest-v5-floor-decals",
+        "count": 520
+      }
+    ],
+    "backdrop": true,
+    "errors": []
+  },
+  {
+    "id": "D",
+    "camera": [
+      50,
+      45.99999999999999,
+      60
+    ],
+    "direction": [
+      -0.5360824742268042,
+      -0.4020618556701031,
+      -0.7422680412371135
+    ],
+    "width": 819,
+    "height": 513,
+    "calls": 22,
+    "triangles": 573030,
+    "v5": {
+      "fullDetailTrees": 64,
+      "lowDetailTrees": 32,
+      "batches": [
+        {
+          "name": "forest-wall",
+          "instances": 108,
+          "triangles": 216
+        },
+        {
+          "name": "lower-understory",
+          "instances": 3,
+          "triangles": 384
+        },
+        {
+          "name": "outer-trunks",
+          "instances": 32,
+          "triangles": 640
+        },
+        {
+          "name": "outer-crowns",
+          "instances": 192,
+          "triangles": 15360
+        },
+        {
+          "name": "ferns",
+          "instances": 220,
+          "triangles": 66000
+        },
+        {
+          "name": "palms",
+          "instances": 120,
+          "triangles": 50880
+        },
+        {
+          "name": "seedlings",
+          "instances": 240,
+          "triangles": 13440
+        },
+        {
+          "name": "foliage-cards",
+          "instances": 850,
+          "triangles": 1700
+        },
+        {
+          "name": "floor-decals",
+          "instances": 520,
+          "triangles": 4160
+        }
+      ],
+      "additionalInstances": 2285,
+      "limitations": [
+        "Encounter-only wall cards hide above 18 m eye height; elevated inspection exposes finite geometry.",
+        "Outer crown masses reuse source species proportions, not full branch architecture.",
+        "Layered depth fog, not volumetric scattering."
+      ]
+    },
+    "v4": {
+      "understory": [
+        {
+          "name": "seedlings",
+          "instances": 180,
+          "triangles": 10080
+        },
+        {
+          "name": "ferns",
+          "instances": 150,
+          "triangles": 45000
+        },
+        {
+          "name": "palms",
+          "instances": 90,
+          "triangles": 38160
+        },
+        {
+          "name": "shrubs",
+          "instances": 120,
+          "triangles": 17280
+        },
+        {
+          "name": "lianas",
+          "instances": 72,
+          "triangles": 10368
+        },
+        {
+          "name": "epiphytes",
+          "instances": 100,
+          "triangles": 5600
+        }
+      ],
+      "canopyPlacement": "deterministic greedy crown-footprint occupancy; source foliage density unchanged",
+      "limitations": [
+        "Unnamed procedural life-form dressing, not measured occurrence or dedicated botanical assets.",
+        "Shafts are soft planar hints, not volumetric scattering."
+      ]
+    },
+    "counts": [
+      {
+        "name": "rainforest-v4-seedlings",
+        "count": 180
+      },
+      {
+        "name": "rainforest-v4-ferns",
+        "count": 150
+      },
+      {
+        "name": "rainforest-v4-palms",
+        "count": 90
+      },
+      {
+        "name": "rainforest-v4-shrubs",
+        "count": 120
+      },
+      {
+        "name": "rainforest-v4-lianas",
+        "count": 72
+      },
+      {
+        "name": "rainforest-v4-epiphytes",
+        "count": 100
+      },
+      {
+        "name": "rainforest-v5-forest-wall",
+        "count": 108
+      },
+      {
+        "name": "rainforest-v5-lower-understory",
+        "count": 3
+      },
+      {
+        "name": "rainforest-v5-outer-trunks",
+        "count": 32
+      },
+      {
+        "name": "rainforest-v5-outer-crowns",
+        "count": 192
+      },
+      {
+        "name": "rainforest-v5-ferns",
+        "count": 220
+      },
+      {
+        "name": "rainforest-v5-palms",
+        "count": 120
+      },
+      {
+        "name": "rainforest-v5-seedlings",
+        "count": 240
+      },
+      {
+        "name": "rainforest-v5-foliage-cards",
+        "count": 850
+      },
+      {
+        "name": "rainforest-v5-floor-decals",
+        "count": 520
+      }
+    ],
+    "backdrop": false,
+    "errors": []
+  }
+]

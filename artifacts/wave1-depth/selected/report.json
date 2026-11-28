@@ -1,0 +1,680 @@
+[
+  {
+    "biome": "desert",
+    "seed": "29",
+    "mode": "after",
+    "view": "hero",
+    "file": "artifacts/wave1-depth/selected/desert-29-after-hero.png",
+    "camera": {
+      "position": [
+        -27,
+        3.036333874529917,
+        -36
+      ],
+      "target": [
+        22.49747468305833,
+        2.1363338745299174,
+        13.497474683058321
+      ]
+    },
+    "samples": [
+      {
+        "cpuSubmissionMs": 0.6000000238418579,
+        "frame": 6,
+        "calls": 19,
+        "triangles": 1047072,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.5999999940395355,
+        "frame": 7,
+        "calls": 19,
+        "triangles": 1047072,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.699999988079071,
+        "frame": 8,
+        "calls": 19,
+        "triangles": 1047072,
+        "points": 0,
+        "lines": 0
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 1.1732626222280358,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "renderer": "WebKit WebGL",
+    "matrixDigests": [
+      {
+        "name": "field-jointed-bedrock",
+        "count": 21,
+        "hash": "6b7a11ae0e8516750a0c24c7e94c93e4b8d933bcc137df9ce392186658fb96ed"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 21,
+        "hash": "00c7d9e12acf56e9a6ecd6ac761311cd8d6c039cea8666ef510ee9d2f002ff0b"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "75cedef3c5c728b5e89de5b32eb1d2c0822049a343a961eb98ac2c612caf3d94"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "af3358a545954a75370b370e96ea36072522d503b6b2b4ea49cfca2752fcf55a"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "7a9090fcf20a90de305df687a75c1044c78a204d066df57f5046ff27310e04f5"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "b2b51163971ae1880f1f8cd95670775a69e925b19dab228a500294b880eb90e2"
+      },
+      {
+        "name": "desert-contact-gravel",
+        "count": 2112,
+        "hash": "2f5a0c30aa5b91864f099772dd18a545cd297cd8644d75d259afc010ab331df7"
+      },
+      {
+        "name": "desert-unnamed-open-shrub",
+        "count": 4,
+        "hash": "c73af4cfcbe571c7ac9ca66914b7d97de7c5250fb8fd961daaa816b5734a1044"
+      },
+      {
+        "name": "desert-unnamed-open-shrub",
+        "count": 4,
+        "hash": "98e874a894c63907ae0e9eba9f42b7a9a62d94ce05a12ca407b4471dffe4f666"
+      },
+      {
+        "name": "desert-unnamed-dry-fibres",
+        "count": 242,
+        "hash": "fcfc1df3ab8347961315b4cc0b05dacfe91f99f0d00269e967f7b275b632c45a"
+      },
+      {
+        "name": "depth-dry-grass",
+        "count": 76,
+        "hash": "7ce9aacd4c0979083b2045b941d7f982f37173969cbde95b3c721756601dda0a"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "biome": "desert",
+    "seed": "29",
+    "mode": "after",
+    "view": "inspection",
+    "file": "artifacts/wave1-depth/selected/desert-29-after-inspection.png",
+    "camera": {
+      "position": [
+        38,
+        48.036333874529916,
+        29
+      ],
+      "target": [
+        -2.2512626584708357,
+        0,
+        -11.25126265847084
+      ]
+    },
+    "samples": [
+      {
+        "cpuSubmissionMs": 0.29999998211860657,
+        "frame": 10,
+        "calls": 17,
+        "triangles": 1047068,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.30000001192092896,
+        "frame": 11,
+        "calls": 17,
+        "triangles": 1047068,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.4000000059604645,
+        "frame": 12,
+        "calls": 17,
+        "triangles": 1047068,
+        "points": 0,
+        "lines": 0
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 1.1732626222280358,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "renderer": "WebKit WebGL",
+    "matrixDigests": [
+      {
+        "name": "field-jointed-bedrock",
+        "count": 21,
+        "hash": "6b7a11ae0e8516750a0c24c7e94c93e4b8d933bcc137df9ce392186658fb96ed"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 21,
+        "hash": "00c7d9e12acf56e9a6ecd6ac761311cd8d6c039cea8666ef510ee9d2f002ff0b"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "75cedef3c5c728b5e89de5b32eb1d2c0822049a343a961eb98ac2c612caf3d94"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "af3358a545954a75370b370e96ea36072522d503b6b2b4ea49cfca2752fcf55a"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "7a9090fcf20a90de305df687a75c1044c78a204d066df57f5046ff27310e04f5"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "b2b51163971ae1880f1f8cd95670775a69e925b19dab228a500294b880eb90e2"
+      },
+      {
+        "name": "desert-contact-gravel",
+        "count": 2112,
+        "hash": "2f5a0c30aa5b91864f099772dd18a545cd297cd8644d75d259afc010ab331df7"
+      },
+      {
+        "name": "desert-unnamed-open-shrub",
+        "count": 4,
+        "hash": "c73af4cfcbe571c7ac9ca66914b7d97de7c5250fb8fd961daaa816b5734a1044"
+      },
+      {
+        "name": "desert-unnamed-open-shrub",
+        "count": 4,
+        "hash": "98e874a894c63907ae0e9eba9f42b7a9a62d94ce05a12ca407b4471dffe4f666"
+      },
+      {
+        "name": "desert-unnamed-dry-fibres",
+        "count": 242,
+        "hash": "fcfc1df3ab8347961315b4cc0b05dacfe91f99f0d00269e967f7b275b632c45a"
+      },
+      {
+        "name": "depth-dry-grass",
+        "count": 76,
+        "hash": "7ce9aacd4c0979083b2045b941d7f982f37173969cbde95b3c721756601dda0a"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "biome": "desert",
+    "seed": "41",
+    "mode": "after",
+    "view": "hero",
+    "file": "artifacts/wave1-depth/selected/desert-41-after-hero.png",
+    "camera": {
+      "position": [
+        -63,
+        3.3680408437594105,
+        -81
+      ],
+      "target": [
+        -112.49747468305833,
+        2.46804084375941,
+        -130.49747468305833
+      ]
+    },
+    "samples": [
+      {
+        "cpuSubmissionMs": 0.5999999940395355,
+        "frame": 6,
+        "calls": 19,
+        "triangles": 1045292,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.9000000059604645,
+        "frame": 7,
+        "calls": 19,
+        "triangles": 1045292,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 8.5,
+        "frame": 8,
+        "calls": 19,
+        "triangles": 1045292,
+        "points": 0,
+        "lines": 0
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 1.5758650105426235,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "renderer": "WebKit WebGL",
+    "matrixDigests": [
+      {
+        "name": "field-jointed-bedrock",
+        "count": 21,
+        "hash": "871e5f40e035d559c9ac000d98b2a3c0f917d9afc92b264755067453bd3e75e4"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 21,
+        "hash": "6de52445da004452af829f266d6a34b17129bbf349c2d6874b51f9aa2b3108d6"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "335197ffa4f5b7d63b023ce79f068e42165158d56e05b1c12e3d7ca4e68ea755"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "0556aaabc50d717b85e96ce6c6ee3131100d45bdc7e2fc5eb82274c314ad2cf9"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "54db0106e3a4c89973ac826ee2210cb8c57cf07952d8fcd21e786d5b0b722945"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "45cfc41034b6260cbf551eee34676f7ac4199e93e6e294bccc7c852fd6aa68cb"
+      },
+      {
+        "name": "desert-contact-gravel",
+        "count": 2067,
+        "hash": "e402cc99229f0233963003dedc7263862303269ed06447f1637a274ffc029597"
+      },
+      {
+        "name": "desert-unnamed-open-shrub",
+        "count": 4,
+        "hash": "aaf81afd8dee2531f56d2c3972b66e5d1adc8164f6dff6514f89b727395960f6"
+      },
+      {
+        "name": "desert-unnamed-open-shrub",
+        "count": 4,
+        "hash": "81ed50a7f2edeefb17902e7ecc8faae9045cb8559ff5590e807e200d640dac38"
+      },
+      {
+        "name": "desert-unnamed-dry-fibres",
+        "count": 242,
+        "hash": "37f9aeb1ec38115cbcbc7aa5b4f22e645b7c579d14b4fd0258f95bc68684d591"
+      },
+      {
+        "name": "depth-dry-grass",
+        "count": 64,
+        "hash": "06cdc981d099493581a520fc2073b118c8b4354a1e1b4002359b3c529e1c0478"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "biome": "desert",
+    "seed": "41",
+    "mode": "after",
+    "view": "inspection",
+    "file": "artifacts/wave1-depth/selected/desert-41-after-inspection.png",
+    "camera": {
+      "position": [
+        2,
+        48.36804084375941,
+        -16
+      ],
+      "target": [
+        -87.74873734152916,
+        0,
+        -105.74873734152916
+      ]
+    },
+    "samples": [
+      {
+        "cpuSubmissionMs": 0.5,
+        "frame": 10,
+        "calls": 17,
+        "triangles": 1045288,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.3999999761581421,
+        "frame": 11,
+        "calls": 17,
+        "triangles": 1045288,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.5,
+        "frame": 12,
+        "calls": 17,
+        "triangles": 1045288,
+        "points": 0,
+        "lines": 0
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 1.5758650105426235,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "renderer": "WebKit WebGL",
+    "matrixDigests": [
+      {
+        "name": "field-jointed-bedrock",
+        "count": 21,
+        "hash": "871e5f40e035d559c9ac000d98b2a3c0f917d9afc92b264755067453bd3e75e4"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 21,
+        "hash": "6de52445da004452af829f266d6a34b17129bbf349c2d6874b51f9aa2b3108d6"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "335197ffa4f5b7d63b023ce79f068e42165158d56e05b1c12e3d7ca4e68ea755"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "0556aaabc50d717b85e96ce6c6ee3131100d45bdc7e2fc5eb82274c314ad2cf9"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "54db0106e3a4c89973ac826ee2210cb8c57cf07952d8fcd21e786d5b0b722945"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "45cfc41034b6260cbf551eee34676f7ac4199e93e6e294bccc7c852fd6aa68cb"
+      },
+      {
+        "name": "desert-contact-gravel",
+        "count": 2067,
+        "hash": "e402cc99229f0233963003dedc7263862303269ed06447f1637a274ffc029597"
+      },
+      {
+        "name": "desert-unnamed-open-shrub",
+        "count": 4,
+        "hash": "aaf81afd8dee2531f56d2c3972b66e5d1adc8164f6dff6514f89b727395960f6"
+      },
+      {
+        "name": "desert-unnamed-open-shrub",
+        "count": 4,
+        "hash": "81ed50a7f2edeefb17902e7ecc8faae9045cb8559ff5590e807e200d640dac38"
+      },
+      {
+        "name": "desert-unnamed-dry-fibres",
+        "count": 242,
+        "hash": "37f9aeb1ec38115cbcbc7aa5b4f22e645b7c579d14b4fd0258f95bc68684d591"
+      },
+      {
+        "name": "depth-dry-grass",
+        "count": 64,
+        "hash": "06cdc981d099493581a520fc2073b118c8b4354a1e1b4002359b3c529e1c0478"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "biome": "desert",
+    "seed": "8423",
+    "mode": "after",
+    "view": "hero",
+    "file": "artifacts/wave1-depth/selected/desert-8423-after-hero.png",
+    "camera": {
+      "position": [
+        72,
+        3.235287999631357,
+        81
+      ],
+      "target": [
+        2,
+        2.3352879996313565,
+        81.00000000000001
+      ]
+    },
+    "samples": [
+      {
+        "cpuSubmissionMs": 0.30000001192092896,
+        "frame": 6,
+        "calls": 19,
+        "triangles": 1045424,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.5,
+        "frame": 7,
+        "calls": 19,
+        "triangles": 1045424,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.5999999940395355,
+        "frame": 8,
+        "calls": 19,
+        "triangles": 1045424,
+        "points": 0,
+        "lines": 0
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 1.3896306279055564,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "renderer": "WebKit WebGL",
+    "matrixDigests": [
+      {
+        "name": "field-jointed-bedrock",
+        "count": 21,
+        "hash": "519b1612e934fc6736869d0cf700352522c963d0cba8a665fe180bb352f7e1d8"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 21,
+        "hash": "bdd210cb0963acc029ec359518ad8f171b01f413bd47f519e93a162cb7ad32df"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "bcaf47ba7456190fa276a8b990b0ea778d755865506cbe542ebc4b9989d95811"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "67fe02d63aa568663af7824e03cbaeb7b186843d1cdbbf0665c601b9fd7cdff5"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "49954542812af03a93905e7041f18bbb403b4563d8941384e1138b035a10cd46"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "410654ae2061095bdb1d843f41b58c7d277fdf05c4b7f5d4712bb5f23ee49fac"
+      },
+      {
+        "name": "desert-contact-gravel",
+        "count": 2049,
+        "hash": "2be8ccbd4e6fa59083ab4df4ff82925b59596964c5750f994a05f6a5990e0397"
+      },
+      {
+        "name": "desert-unnamed-open-shrub",
+        "count": 4,
+        "hash": "5681f74a12192d4064f244317b122a1f47dc24366629ccf56328d616a4a302d4"
+      },
+      {
+        "name": "desert-unnamed-open-shrub",
+        "count": 4,
+        "hash": "5ffac32cb7a858e44a3d01f4dda1d71304f1c26287d26af545f2d0889cf2d24d"
+      },
+      {
+        "name": "desert-unnamed-dry-fibres",
+        "count": 242,
+        "hash": "5f4f8f78a432fa42997192e6c7008cb742080dd91a1886831b7ccb7d8e448a4b"
+      },
+      {
+        "name": "depth-dry-grass",
+        "count": 52,
+        "hash": "84fdde0cfe65c78383b7cd150d649f53716b0ac9d1a05998d59decf69b02c73e"
+      }
+    ],
+    "errors": []
+  },
+  {
+    "biome": "desert",
+    "seed": "8423",
+    "mode": "after",
+    "view": "inspection",
+    "file": "artifacts/wave1-depth/selected/desert-8423-after-inspection.png",
+    "camera": {
+      "position": [
+        137,
+        48.23528799963135,
+        146
+      ],
+      "target": [
+        37,
+        0,
+        81
+      ]
+    },
+    "samples": [
+      {
+        "cpuSubmissionMs": 0.29999998211860657,
+        "frame": 10,
+        "calls": 17,
+        "triangles": 1045420,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.4000000059604645,
+        "frame": 11,
+        "calls": 17,
+        "triangles": 1045420,
+        "points": 0,
+        "lines": 0
+      },
+      {
+        "cpuSubmissionMs": 0.20000001788139343,
+        "frame": 12,
+        "calls": 17,
+        "triangles": 1045420,
+        "points": 0,
+        "lines": 0
+      }
+    ],
+    "staging": {
+      "capsuleRadius": 0.35,
+      "bodyHeight": 1.7,
+      "approachRadius": 0.85,
+      "minimumGroundAboveWater": 1.3896306279055564,
+      "rootIntrusions": 0,
+      "shortGrassHeightBound": 0.08,
+      "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+    },
+    "renderer": "WebKit WebGL",
+    "matrixDigests": [
+      {
+        "name": "field-jointed-bedrock",
+        "count": 21,
+        "hash": "519b1612e934fc6736869d0cf700352522c963d0cba8a665fe180bb352f7e1d8"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 21,
+        "hash": "bdd210cb0963acc029ec359518ad8f171b01f413bd47f519e93a162cb7ad32df"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "bcaf47ba7456190fa276a8b990b0ea778d755865506cbe542ebc4b9989d95811"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "67fe02d63aa568663af7824e03cbaeb7b186843d1cdbbf0665c601b9fd7cdff5"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "49954542812af03a93905e7041f18bbb403b4563d8941384e1138b035a10cd46"
+      },
+      {
+        "name": "field-jointed-bedrock",
+        "count": 19,
+        "hash": "410654ae2061095bdb1d843f41b58c7d277fdf05c4b7f5d4712bb5f23ee49fac"
+      },
+      {
+        "name": "desert-contact-gravel",
+        "count": 2049,
+        "hash": "2be8ccbd4e6fa59083ab4df4ff82925b59596964c5750f994a05f6a5990e0397"
+      },
+      {
+        "name": "desert-unnamed-open-shrub",
+        "count": 4,
+        "hash": "5681f74a12192d4064f244317b122a1f47dc24366629ccf56328d616a4a302d4"
+      },
+      {
+        "name": "desert-unnamed-open-shrub",
+        "count": 4,
+        "hash": "5ffac32cb7a858e44a3d01f4dda1d71304f1c26287d26af545f2d0889cf2d24d"
+      },
+      {
+        "name": "desert-unnamed-dry-fibres",
+        "count": 242,
+        "hash": "5f4f8f78a432fa42997192e6c7008cb742080dd91a1886831b7ccb7d8e448a4b"
+      },
+      {
+        "name": "depth-dry-grass",
+        "count": 52,
+        "hash": "84fdde0cfe65c78383b7cd150d649f53716b0ac9d1a05998d59decf69b02c73e"
+      }
+    ],
+    "errors": []
+  }
+]

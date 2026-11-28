@@ -1,0 +1,11 @@
+{
+  "actor": "user",
+  "source": "conversation 2026-11-25",
+  "appliesTo": "previous reference-to-recipe C2, not new R2",
+  "feedback": "This is close; colors better, needs stronger foreground, more vibrancy, rolling golden hills and cool shadows. Generate background hill texture.",
+  "images": [
+    "artifacts/reference-to-recipe-savanna/hero-comparison.png"
+  ],
+  "humanApprovedFullScene": false,
+  "newCandidateReview": null
+}

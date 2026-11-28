@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "id": "herault-garrigue-v1",
+  "asset": "/assets/mediterranean/herault-garrigue-distance-v1.webp",
+  "conditioning": {
+    "location": {
+      "lat": 43.72,
+      "lon": 3.58
+    },
+    "ecoregionId": 799,
+    "biomeId": 12,
+    "topography": {
+      "source": "Regional limestone-garrigue context (BRGM); no DEM available",
+      "measured": false,
+      "landform": "Low rolling limestone uplands; no high mountains, coastline or landmarks"
+    },
+    "landCover": [
+      "evergreen oak scrub",
+      "olive/silver low shrubs",
+      "pale limestone exposures"
+    ],
+    "seed": "29",
+    "season": "reference leaf-on",
+    "timeOfDay": "warm upper-left low sun",
+    "weather": "clear",
+    "viewAzimuth": 0,
+    "horizonFraction": 0.24
+  },
+  "layers": [
+    {
+      "position": [
+        0,
+        -5,
+        -650
+      ],
+      "size": [
+        1600,
+        500
+      ],
+      "yaw": 0,
+      "opacity": 1
+    }
+  ],
+  "supportedView": {
+    "anchor": [
+      0,
+      1.7,
+      16
+    ],
+    "maxHorizontalDisplacement": 100,
+    "maxElevation": 22,
+    "halfAngleDegrees": 55
+  },
+  "provenance": {
+    "method": "Offline generated RGBA plate, not runtime generation or geospatial imagery",
+    "source": "imagegen generated_images/01a205da-da33-7d33-9ee8-3170650dd5eb",
+    "limitations": [
+      "Exact regional ridges not verified; synthetic illustration conditioned on broad regional geology",
+      "Single light/weather state; asset must be replaced for incompatible lighting",
+      "Finite encounter cone; inspection hides the matte",
+      "Generator seed reproducibility not asserted; asset identity and presentation seed are frozen"
+    ]
+  },
+  "visibility": "World-space static plane; hidden outside declared camera envelope and in elevated inspection. No 360-degree claim."
+}

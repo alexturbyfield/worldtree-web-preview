@@ -1,0 +1,10 @@
+{
+  "errors": [],
+  "tapped": "Map layers\nTrees\nLand cover\nSoil\nZoom to Seattle demo\n\nSoilGrids 2.0 · 250 m predictions · 0–5 cm · Seattle subset only; zoom ≥8. 47.61746, -122.39229\n\nSand: 0% → 100% · transparent = no prediction\n\nLand-cover class at selected source pixel: Permanent water\n\nsand: Unavailable\nsilt: Unavailable\nclay: Unavailable\nOrganic carbon: Unavailable\n\nTexture class: not derived in Phase 1; independently predicted fractions may not sum exactly to 100%.\n\nGrass / shrub / tree / moss fractions: unavailable (Copernicus LC100 2015–2019 not imported). Categorical tree cover is not a fractional estimate or a species identification.\n\nSource dates, uncertainty & limits",
+  "unsupportedLocationPassed": true,
+  "mobileHorizontalOverflow": false,
+  "viewport": [
+    390,
+    844
+  ]
+}

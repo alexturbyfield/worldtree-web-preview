@@ -1,0 +1,290 @@
+[
+  {
+    "biome": "desert",
+    "seed": "29",
+    "view": "hero",
+    "cameraIdentical": true,
+    "instanceTransformsIdentical": false,
+    "rockAnchorsIdentical": true,
+    "calls": [
+      11,
+      11
+    ],
+    "triangles": [
+      564028,
+      477028
+    ]
+  },
+  {
+    "biome": "desert",
+    "seed": "29",
+    "view": "inspection",
+    "cameraIdentical": true,
+    "instanceTransformsIdentical": false,
+    "rockAnchorsIdentical": true,
+    "calls": [
+      11,
+      11
+    ],
+    "triangles": [
+      564028,
+      477028
+    ]
+  },
+  {
+    "biome": "mangrove",
+    "seed": "29",
+    "view": "hero",
+    "cameraIdentical": true,
+    "instanceTransformsIdentical": true,
+    "rockAnchorsIdentical": true,
+    "calls": [
+      23,
+      23
+    ],
+    "triangles": [
+      2546486,
+      2546486
+    ]
+  },
+  {
+    "biome": "mangrove",
+    "seed": "29",
+    "view": "inspection",
+    "cameraIdentical": true,
+    "instanceTransformsIdentical": true,
+    "rockAnchorsIdentical": true,
+    "calls": [
+      23,
+      23
+    ],
+    "triangles": [
+      2546486,
+      2546486
+    ]
+  },
+  {
+    "biome": "flooded",
+    "seed": "29",
+    "view": "hero",
+    "cameraIdentical": true,
+    "instanceTransformsIdentical": true,
+    "rockAnchorsIdentical": true,
+    "calls": [
+      21,
+      21
+    ],
+    "triangles": [
+      2182574,
+      2182574
+    ]
+  },
+  {
+    "biome": "flooded",
+    "seed": "29",
+    "view": "inspection",
+    "cameraIdentical": true,
+    "instanceTransformsIdentical": true,
+    "rockAnchorsIdentical": true,
+    "calls": [
+      21,
+      21
+    ],
+    "triangles": [
+      2182574,
+      2182574
+    ]
+  },
+  {
+    "biome": "desert",
+    "seed": "41",
+    "view": "hero",
+    "cameraIdentical": true,
+    "instanceTransformsIdentical": false,
+    "rockAnchorsIdentical": true,
+    "calls": [
+      11,
+      11
+    ],
+    "triangles": [
+      571804,
+      484804
+    ]
+  },
+  {
+    "biome": "desert",
+    "seed": "41",
+    "view": "inspection",
+    "cameraIdentical": true,
+    "instanceTransformsIdentical": false,
+    "rockAnchorsIdentical": true,
+    "calls": [
+      11,
+      11
+    ],
+    "triangles": [
+      571804,
+      484804
+    ]
+  },
+  {
+    "biome": "mangrove",
+    "seed": "41",
+    "view": "hero",
+    "cameraIdentical": true,
+    "instanceTransformsIdentical": true,
+    "rockAnchorsIdentical": true,
+    "calls": [
+      23,
+      23
+    ],
+    "triangles": [
+      2545310,
+      2545310
+    ]
+  },
+  {
+    "biome": "mangrove",
+    "seed": "41",
+    "view": "inspection",
+    "cameraIdentical": true,
+    "instanceTransformsIdentical": true,
+    "rockAnchorsIdentical": true,
+    "calls": [
+      23,
+      23
+    ],
+    "triangles": [
+      2545310,
+      2545310
+    ]
+  },
+  {
+    "biome": "flooded",
+    "seed": "41",
+    "view": "hero",
+    "cameraIdentical": true,
+    "instanceTransformsIdentical": true,
+    "rockAnchorsIdentical": true,
+    "calls": [
+      21,
+      21
+    ],
+    "triangles": [
+      2317918,
+      2317918
+    ]
+  },
+  {
+    "biome": "flooded",
+    "seed": "41",
+    "view": "inspection",
+    "cameraIdentical": true,
+    "instanceTransformsIdentical": true,
+    "rockAnchorsIdentical": true,
+    "calls": [
+      21,
+      21
+    ],
+    "triangles": [
+      2317918,
+      2317918
+    ]
+  },
+  {
+    "biome": "desert",
+    "seed": "1879",
+    "view": "hero",
+    "cameraIdentical": true,
+    "instanceTransformsIdentical": false,
+    "rockAnchorsIdentical": true,
+    "calls": [
+      11,
+      11
+    ],
+    "triangles": [
+      563704,
+      476704
+    ]
+  },
+  {
+    "biome": "desert",
+    "seed": "1879",
+    "view": "inspection",
+    "cameraIdentical": true,
+    "instanceTransformsIdentical": false,
+    "rockAnchorsIdentical": true,
+    "calls": [
+      11,
+      11
+    ],
+    "triangles": [
+      563704,
+      476704
+    ]
+  },
+  {
+    "biome": "mangrove",
+    "seed": "1879",
+    "view": "hero",
+    "cameraIdentical": true,
+    "instanceTransformsIdentical": true,
+    "rockAnchorsIdentical": true,
+    "calls": [
+      23,
+      23
+    ],
+    "triangles": [
+      2573486,
+      2573486
+    ]
+  },
+  {
+    "biome": "mangrove",
+    "seed": "1879",
+    "view": "inspection",
+    "cameraIdentical": true,
+    "instanceTransformsIdentical": true,
+    "rockAnchorsIdentical": true,
+    "calls": [
+      23,
+      23
+    ],
+    "triangles": [
+      2573486,
+      2573486
+    ]
+  },
+  {
+    "biome": "flooded",
+    "seed": "1879",
+    "view": "hero",
+    "cameraIdentical": true,
+    "instanceTransformsIdentical": true,
+    "rockAnchorsIdentical": true,
+    "calls": [
+      21,
+      21
+    ],
+    "triangles": [
+      2517166,
+      2517166
+    ]
+  },
+  {
+    "biome": "flooded",
+    "seed": "1879",
+    "view": "inspection",
+    "cameraIdentical": true,
+    "instanceTransformsIdentical": true,
+    "rockAnchorsIdentical": true,
+    "calls": [
+      21,
+      21
+    ],
+    "triangles": [
+      2517166,
+      2517166
+    ]
+  }
+]

@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "reviewer": {
+    "type": "agent",
+    "actualImageInterpretation": true,
+    "humanApproval": false
+  },
+  "imagesInspected": [
+    "All5 supplied reference JPEGs",
+    "R0/R1/R2/R3 hero renders",
+    "Frozen seed29 hero+inspection",
+    "Training seed contact sheet29/41/73",
+    "All9 palette hero renders",
+    "All3 holdout hero/inspection pairs",
+    "Conifer complete/branch-only and meadow detail",
+    "Protected savanna and pixel regression outputs"
+  ],
+  "spatialScales": [
+    "Actual640x360 images",
+    "160x90-equivalent thumbnails",
+    "Fixed close-camera640x360 diagnostics"
+  ],
+  "judgments": {
+    "valley": {
+      "betterThanR0": true,
+      "goodEnoughForProvisionalArtisticAcceptance": false,
+      "humanApproved": false,
+      "technicalCheckpoint": "R2 frozen; no production promotion",
+      "defects": [
+        {
+          "defect": "Oversimplified mountain geology",
+          "severity": "major",
+          "evidence": "compositions.png, training-seeds.png, holdout-review.png",
+          "cause": "Verified analytic Gaussian ridge family; hypothesis: smooth envelopes lack glacial headwall, spur and exposed-bedrock structure needed by the references.",
+          "action": "New focused terrain representation study, not more vegetation or density.",
+          "decision": "not good enough for approval"
+        },
+        {
+          "defect": "Inspection-view continuation and dressing are weak",
+          "severity": "major",
+          "evidence": "Inspection row shows sparse near dressing and a bright flat distant horizon band.",
+          "cause": "Hypothesis: limited mid-distance ecological dressing and simple atmospheric continuation fail the endless-landscape illusion.",
+          "action": "Review mid-distance layers and geometry continuation after credible geology is established.",
+          "decision": "revise in a new experiment"
+        },
+        {
+          "defect": "Stream and meadow lack reference richness",
+          "severity": "major",
+          "evidence": "Hero stream is a smooth uniform strip; low grass/flower repeats read as a sparse lawn rather than lush varied meadow.",
+          "cause": "Hypothesis: bank shapes/material transitions and medium-scale clump variation are insufficient.",
+          "action": "After terrain approval, refine terrain-water contact and medium-scale plant masses, not uniform density.",
+          "decision": "reject final visual approval"
+        }
+      ],
+      "holdout": "Same visual defects recur; no recipe tuning after holdout."
+    },
+    "overlook": {
+      "betterThanR0": true,
+      "goodEnoughForProvisionalArtisticAcceptance": false,
+      "humanApproved": false,
+      "technicalCheckpoint": "R2 frozen; no production promotion",
+      "defects": [
+        {
+          "defect": "Oversimplified mountain geology",
+          "severity": "major",
+          "evidence": "compositions.png, training-seeds.png, holdout-review.png",
+          "cause": "Verified analytic Gaussian ridge family; hypothesis: smooth envelopes lack glacial headwall, spur and exposed-bedrock structure needed by the references.",
+          "action": "New focused terrain representation study, not more vegetation or density.",
+          "decision": "not good enough for approval"
+        },
+        {
+          "defect": "Inspection-view continuation and dressing are weak",
+          "severity": "major",
+          "evidence": "Inspection row shows sparse near dressing and a bright flat distant horizon band.",
+          "cause": "Hypothesis: limited mid-distance ecological dressing and simple atmospheric continuation fail the endless-landscape illusion.",
+          "action": "Review mid-distance layers and geometry continuation after credible geology is established.",
+          "decision": "revise in a new experiment"
+        },
+        {
+          "defect": "Overlook does not clearly communicate an elevated viewpoint",
+          "severity": "major",
+          "evidence": "Hero still resembles a valley floor despite the physical24m shoulder/drop.",
+          "cause": "Hypothesis: foreground geology and view direction do not expose the drop; framing follows the valley family too closely.",
+          "action": "Explore actual ledge/valley cross-sections and a different camera-to-landform relationship.",
+          "decision": "reject artistic direction as currently implemented"
+        }
+      ],
+      "holdout": "Same visual defects recur; no recipe tuning after holdout."
+    },
+    "treeline": {
+      "betterThanR0": true,
+      "goodEnoughForProvisionalArtisticAcceptance": false,
+      "humanApproved": false,
+      "technicalCheckpoint": "R2 frozen; no production promotion",
+      "defects": [
+        {
+          "defect": "Oversimplified mountain geology",
+          "severity": "major",
+          "evidence": "compositions.png, training-seeds.png, holdout-review.png",
+          "cause": "Verified analytic Gaussian ridge family; hypothesis: smooth envelopes lack glacial headwall, spur and exposed-bedrock structure needed by the references.",
+          "action": "New focused terrain representation study, not more vegetation or density.",
+          "decision": "not good enough for approval"
+        },
+        {
+          "defect": "Inspection-view continuation and dressing are weak",
+          "severity": "major",
+          "evidence": "Inspection row shows sparse near dressing and a bright flat distant horizon band.",
+          "cause": "Hypothesis: limited mid-distance ecological dressing and simple atmospheric continuation fail the endless-landscape illusion.",
+          "action": "Review mid-distance layers and geometry continuation after credible geology is established.",
+          "decision": "revise in a new experiment"
+        },
+        {
+          "defect": "Conifer bodies too geometric and expensive",
+          "severity": "major",
+          "evidence": "conifer-complete.png shows simple tier cores with detached-looking spray accents; hero exceeds550k provisional budget.",
+          "cause": "Verified shared bough generator plus low-poly cores; hypothesis: tier-envelope shape and foliage normals are too generic for reference silhouette quality.",
+          "action": "Isolated conifer representation study and distance-aware branch batching; preserve current source fallback.",
+          "decision": "reject final visual approval"
+        }
+      ],
+      "holdout": "Same visual defects recur; no recipe tuning after holdout."
+    }
+  },
+  "overall": "All three scenes fail the supplied artistic target. Retain the strongest technical checkpoint and negative evidence, not an approved alpine environment.",
+  "stop": "Three authorized correction rounds per family exhausted. R3 rejected, R2 retained as technical fallback. Further scenery changes require a new focused effort/art direction."
+}

@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-27T13:41:09.945Z",
+  "hashes": {
+    "wave2-boreal-floor.ts": "8cf80cea6872647a2d3aa7d99f23b248be44e32440ab3a5f99ff88059d2d2981",
+    "wave2-boreal-geometry.ts": "0be82ad55c5cda425e6c0db7fcadbfd60c85bd19ffa7b7d987157048a650c974",
+    "wave2-boreal.ts": "4070e2c955d67427980e0fda10843e473358f429c61c428c45026519fb9295fd",
+    "wave2-shared.ts": "79b57d913b14aad04da941320f051fb7a7ce120685bb6c0331cda4bef294a2cf",
+    "wave2-temperate-concept.ts": "c1216a73327a7bd92675831538844064df747f6bb8218cbb94b242006df6e0a7",
+    "wave2-temperate-depth.ts": "ec24837ca1561545872de6f3180a0f3bd2f6e4da29bfce3c66ff22c171de829d",
+    "wave2-temperate-surfaces.ts": "bdc8677370b36463768d8fbfd61eb0607394a3aa85fe1097b02cba18aa80f124",
+    "wave2-temperate.ts": "3ec09f3ab82f72dbd6d24d80b96521ee33da7e92361ea8868f6332f1e66df3cb",
+    "wave2-tundra-branchlets.ts": "b1ca699514dd42b1cb5f48e7d1c9a4e7880dcb1e2715457caf80b0c15b821256",
+    "wave2-tundra-heath.ts": "6fafdd838523990dda5360619aee11cadc862b1aa7b51ded342ca04a345e1c0d",
+    "wave2-tundra.ts": "d541508f7652ca4eca48c0ad41838f202134a1cf32594d7df625dd395c6ff1b9",
+    "wave3-prairie-dressing.ts": "eb406a194c03c59e021a8dafc29f6d6c87a175551a5daaf98c17c49b08f1f6fe",
+    "wave3-prairie.ts": "4e17b9e277c32ed685a3bafd8cfa12ffdd2822fae843922c05950232fbc07d6e"
+  }
+}

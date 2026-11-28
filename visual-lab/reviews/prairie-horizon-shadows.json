@@ -1,0 +1,172 @@
+{
+  "task": "Prairie lowered horizon, distant matte and textured foreground shade",
+  "seed": 29,
+  "userProcessPreference": {
+    "instruction": "Prioritize horizon composition, detailed landscape continuation and textured foreground shadow framing across environment art work.",
+    "status": "Explicit user process requirement, recorded in AGENTS.md and existing Lab policy; no biome or candidate approval inferred.",
+    "application": "Evaluate these relationships in every biome; do not automatically add mountains, canopy shadows, mattes or the same camera in all scenes."
+  },
+  "implementation": [
+    "Higher camera aim lowers the horizon in the frame. Eye remains at 1.7m; original terrain and vegetation positions retained.",
+    "Generated low rolling-hill matte integrated behind actual terrain; no mountains or named geographic features inferred. Hidden above 30m and when asset is unavailable.",
+    "Existing ground-composition lighting installer exposed and extended with an optional grayscale shadow texture. Same world-space field applied to terrain and understory. Original untextured defaults unchanged.",
+    "Dedicated soft shadow mask replaces failed regular plant-atlas patterns. Physical directional tree shadows retained separately."
+  ],
+  "assets": [
+    {
+      "file": "public/assets/prairie/distant-hills-v1.webp",
+      "method": "Built-in image_gen, project-generated matte",
+      "generatedSource": "exec-84da7acd-bbba-4dc6-812c-950710b51385.png",
+      "resolution": [
+        2048,
+        683
+      ],
+      "bytes": 257008,
+      "limitations": "Illustrated artistic continuation, not observed topography; forward-facing encounter matte, not a global 360 panorama."
+    },
+    {
+      "file": "public/assets/prairie/foreground-shadow-v1.webp",
+      "method": "Built-in image_gen, project-generated grayscale canopy shadow mask",
+      "generatedSource": "exec-632165b0-f3b1-4ae1-872e-01de361fb0ee.png",
+      "resolution": [
+        1024,
+        1024
+      ],
+      "bytes": 58706,
+      "limitations": "Art-directed world-space supplementary shade, not a measured shadow map. No exact seamless-edge guarantee claimed."
+    }
+  ],
+  "visualReview": {
+    "reviewer": "Primary Codex actual asset, hero, elevated and comparison image inspection",
+    "decision": "Retain for human review",
+    "humanApproval": null,
+    "observations": [
+      "Horizon moves lower and the wide view has more sky and visibly layered golden/cool distant hills.",
+      "Textured foreground shade produces a darker frame around the warm open middle.",
+      "Elevated view no longer shows rows of plant-shaped shadow stamps; the matte is hidden and physical terrain remains continuous.",
+      "Backdrop is still an illustrated supplement; foreground plant forms and shadow strength remain subject to art direction."
+    ],
+    "rejections": [
+      {
+        "evidence": "artifacts/prairie-horizon/rejected-first",
+        "reason": "Matte was occluded; regular plant-atlas shadow grid visible from above."
+      },
+      {
+        "evidence": "artifacts/prairie-horizon/rejected-warped-atlas",
+        "reason": "Warps retained a mechanical pattern, and matte clearance remained insufficient."
+      }
+    ]
+  },
+  "validation": {
+    "typescript": "passed",
+    "targetedShaderTest": "passed: texture opt-in, unchanged default sampler behavior and world-space field",
+    "cameraBefore": {
+      "position": [
+        0,
+        1.7,
+        34
+      ],
+      "target": [
+        0,
+        -16,
+        -190
+      ],
+      "fov": 47
+    },
+    "cameraAfter": {
+      "position": [
+        0,
+        1.7,
+        34
+      ],
+      "target": [
+        0,
+        35,
+        -190
+      ],
+      "fov": 47
+    },
+    "comparisonNote": "Camera aim deliberately changed under user instruction; this is not a fixed-camera lighting-only comparison. Seed, eye, FOV and render settings retained.",
+    "renderSettingsUnchanged": true,
+    "before": [
+      {
+        "frame": 6,
+        "calls": 22,
+        "triangles": 959328,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 7,
+        "calls": 22,
+        "triangles": 959328,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 8,
+        "calls": 22,
+        "triangles": 959328,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.40000003576278687
+      }
+    ],
+    "after": [
+      {
+        "frame": 6,
+        "calls": 24,
+        "triangles": 959332,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 7,
+        "calls": 24,
+        "triangles": 959332,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.6000000238418579
+      },
+      {
+        "frame": 8,
+        "calls": 24,
+        "triangles": 959332,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.699999988079071
+      }
+    ],
+    "captureErrors": 0,
+    "pugetRegression": {
+      "changedPixels": 0,
+      "pixels": 230400,
+      "scope": "Shared renderer before/after; approved Puget encounter camera, seed 29, wind off."
+    },
+    "mobileDeviceApproval": false,
+    "fullProtectedSuite": "Not run; Puget pixel regression and default shader behavior checked."
+  },
+  "comparison": "artifacts\\prairie-horizon\\comparison.png",
+  "inspection": "artifacts\\prairie-horizon\\after\\prairie-29-inspection.png",
+  "files": {
+    "src/lib/forest/wave3-prairie.ts": "d7f5d63aefbebab4439fc24141cd35e825437804a2b2a5bc6fd3e5f24bf5258f",
+    "src/lib/forest/environment-foundations.ts": "37fb4aa94b400aecbe0a260fbb581073fd92facd5362ea9163adccb408ace8d1",
+    "AGENTS.md": "7b36cc811b925ca5cfd098706f21f2aca5a12e5eb4c65ad84b4c43b1ccc31578",
+    "visual-lab/art-direction-policy.json": "bc6e65f9559811961996f559f42380e9a3120b785c536ed1d9cb484e9c8a622e",
+    "public/assets/prairie/distant-hills-v1.webp": "01dfeb55b17157e3e89f1d2220a2c8a42f2f457558ba162a3fd19b849b1a3c07",
+    "public/assets/prairie/foreground-shadow-v1.webp": "a9703247ad6d90e6d97ac720870aca32dfb467cfef0b6b566a01fd15b7e4c1d0",
+    "tests/prairie-ground-lighting.test.ts": "c53d3d080a76841be2e52efc54f2730daa1aa961e5ee7a38f5f761b606669b18"
+  },
+  "noCommitPushDeploy": true,
+  "smallHorizonAdjustment": {
+    "request": "Bring the horizon up a bit higher. Keep this simple",
+    "change": "Camera target Y 35 to 27 only; eye unchanged",
+    "image": "artifacts/prairie-horizon/horizon-up/prairie-29-hero.png",
+    "inspection": "Actual seed-29 screenshot inspected; horizon slightly higher, matte and foreground framing retained",
+    "decision": "retain for review",
+    "humanApproval": null
+  }
+}

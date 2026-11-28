@@ -3,7 +3,7 @@ import vm from 'node:vm';
 import {createHash} from 'node:crypto';
 const origin=new URL(process.argv[2]).origin;
 const get=async path=>{const r=await fetch(origin+path);assert.equal(r.status,200,`${path} HTTP status`);assert.equal(new URL(r.url).origin,origin,`${path} must not redirect to sign-in`);return r;};
-const html=await (await get('/')).text();assert.match(html,/<title>WorldTree/);console.log('Public page: HTTP 200, WorldTree title, no sign-in redirect');
+const html=await (await get('/')).text();assert.match(html,/<title>Wildloom/);console.log('Public page: HTTP 200, Wildloom title, no sign-in redirect');
 for(const path of ['/geo-worker.js','/maplibre-worker.mjs']){const r=await get(path);assert.match(r.headers.get('content-type')??'',/javascript/);console.log(`Worker asset: ${path} HTTP 200, JavaScript MIME type`);}
 const manifest=await (await get('/data/resolve-2017/manifest.json')).json();
 const display=await (await get('/data/resolve-2017/display.geojson')).arrayBuffer();assert.equal(createHash('sha256').update(Buffer.from(display)).digest('hex'),manifest.display_sha256);console.log('Live display geometry: manifest hash verified');

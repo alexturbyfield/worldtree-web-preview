@@ -1,0 +1,52 @@
+{
+  "wave1": {
+    "id": "mangrove",
+    "biome": 14,
+    "version": "connected-field-detail-1",
+    "presentation": {
+      "foliageAtmosphere": {
+        "near": 120,
+        "far": 650,
+        "strength": 0.5,
+        "color": "#72978b"
+      }
+    },
+    "plan": {
+      "biome": "mangrove",
+      "seed": "29",
+      "eye": [
+        -81,
+        2.0179011632673407,
+        -18
+      ],
+      "target": [
+        -151,
+        1.117901163267341,
+        -17.999999999999986
+      ],
+      "heading": 4.71238898038469,
+      "stagingClearance": 0.1718982482405219
+    },
+    "trees": 95,
+    "instances": [],
+    "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+    "layers": {
+      "season": "unresolved",
+      "weather": "clear study",
+      "timeOfDay": "warm directional study"
+    },
+    "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation."
+  },
+  "mangrove": {
+    "version": 2,
+    "pockets": 60,
+    "nearShoreAnchors": 7,
+    "seedlings": 194,
+    "leaves": 996,
+    "litter": 1431,
+    "twigs": 32,
+    "drawCalls": 4,
+    "footprint": "forward 2..7m, abs(side)<1.5m: no plants/twigs; litter below .03m",
+    "ecology": "Unnamed juvenile growth forms and fallen fragments; synthetic moisture/tree/shore association, no species or occurrence claim"
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "id": "prairie-ground-gate-A",
+  "date": "2026-11-27T06:19:04.048979+00:00",
+  "status": "awaiting-representation-checkpoint",
+  "gatePassed": false,
+  "humanApproval": null,
+  "reviewer": "Primary agent, actual image interpretation",
+  "references": [
+    "prairie-wave3-primary",
+    "prairie-wave3-secondary-light",
+    "prairie-wave3-secondary-palette"
+  ],
+  "loaded": [
+    "AGENTS.md",
+    "prototype-fast",
+    "Visual Learning Lab README",
+    "PRAIRIE-CONSTRUCTION-PLAN.md",
+    "Savanna all-rejected representation report",
+    "Retained savanna brush/reed and alpine pigment code"
+  ],
+  "roundBudget": 3,
+  "roundsUsed": 3,
+  "holdoutGenerated": false,
+  "runtimeFiles": [
+    "src/lib/forest/wave1.ts",
+    "src/lib/forest/wave2-shared.ts",
+    "src/lib/forest/wave3-prairie.ts"
+  ],
+  "rounds": [
+    {
+      "id": "candidate",
+      "hypothesis": "Continuous community pigments and gentle terrain can establish prairie before fine vegetation.",
+      "evidence": [
+        "candidate/prairie-29-hero.png",
+        "candidate/prairie-41-hero.png"
+      ],
+      "observed": "Mustard-colored bare-earth reading, low foreground variation and ring-edge streaks.",
+      "decision": "reject as artistic result"
+    },
+    {
+      "id": "revised",
+      "hypothesis": "A shared nonuniform terrain grid fixes cracks; greener pigments separate communities.",
+      "evidence": [
+        "revised/prairie-29-hero.png",
+        "revised/prairie-29-inspection.png"
+      ],
+      "observed": "Continuous terrain and greener substrate improve the technical foundation; human-height view remains flat/lawn-like.",
+      "decision": "retain technical fixes, not artistic approval"
+    },
+    {
+      "id": "flow-revision",
+      "hypothesis": "Meso-scale variation, slightly stronger long rolls, clearer texture detail and explicit sky ordering improve grounded grassland character.",
+      "evidence": [
+        "flow-revision/prairie-29-hero.png",
+        "flow-revision/prairie-41-hero.png",
+        "flow-revision/prairie-29-inspection.png"
+      ],
+      "observed": "Large green/gold communities are visible from elevation, but human-height still compresses them into flat bands. Ground lacks convincing intermediate vegetation volume.",
+      "decision": "retain isolated diagnostic prototype only; Gate A fails"
+    }
+  ],
+  "highestPriorityDefects": [
+    {
+      "severity": "major",
+      "defect": "Human-height surface reads as a low-detail lawn/plane rather than an attractive flowing prairie."
+    },
+    {
+      "severity": "major",
+      "defect": "Value shapes collapse into near-horizontal strips at the low viewpoint; elevated community pattern is not sufficient."
+    },
+    {
+      "severity": "minor",
+      "defect": "Existing sky is reusable, but the overall reference warmth/depth and natural foreground framing are absent at this stage."
+    }
+  ],
+  "nextHypothesis": {
+    "status": "proposed, untested",
+    "intervention": "representation",
+    "description": "A continuous low grass-mass surface with vegetation-scale relief and normals, colored from the same community fields, may supply the missing intermediate shapes before fine blades. Avoid separate strip patches, intersecting cards and arbitrary density increases."
+  },
+  "validation": "validation.json",
+  "sourceHashes": {
+    "src/lib/forest/wave1.ts": "ad6a4381e6187501a7374512e7f27aacda329fc403b026abaf349de4c5179cc0",
+    "src/lib/forest/wave2-shared.ts": "a305ed487e1ad54731890d9de398e49771d941ce34e5ed13a710599a222dcd57",
+    "src/lib/forest/wave3-prairie.ts": "17ab4964af34b59c31e946cee788b409866f2eff66a12df5934650a8a7c7ecf5"
+  }
+}

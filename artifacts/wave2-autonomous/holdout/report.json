@@ -1,0 +1,1866 @@
+[
+  {
+    "id": "temperate",
+    "seed": "7056763",
+    "view": "hero",
+    "file": "artifacts/wave2-autonomous/holdout/temperate-7056763-hero.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        0,
+        1.7200425291092767,
+        34
+      ],
+      "target": [
+        0,
+        2.2509013205303754,
+        -55
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 10,
+        "calls": 12,
+        "triangles": 722862,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.40000003576278687
+      },
+      {
+        "frame": 11,
+        "calls": 12,
+        "triangles": 722862,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.19999998807907104
+      },
+      {
+        "frame": 12,
+        "calls": 12,
+        "triangles": 722862,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      }
+    ],
+    "instances": [
+      {
+        "name": "temperate-curled-leaf-litter",
+        "count": 8683
+      },
+      {
+        "name": "temperate-unnamed-fern-functional-forms",
+        "count": 260
+      },
+      {
+        "name": "temperate-embedded-moss-stone",
+        "count": 34
+      },
+      {
+        "name": "field-source-stand-impostors",
+        "count": 320
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1024,
+        "height": 1024,
+        "bytes": 4194304
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "a4c6df",
+        "intensity": 0.55,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "97b8ce",
+        "intensity": 0.16,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffe2ae",
+        "intensity": 4.1,
+        "position": [
+          -28,
+          70,
+          18
+        ],
+        "target": [
+          0,
+          1,
+          8
+        ],
+        "shadow": {
+          "intensity": 0.66,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -38,
+          "right": 38,
+          "normalBias": 0.035
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "recipe": {
+      "id": "temperate",
+      "biome": 4,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "temperate",
+        "biome": 4,
+        "seed": "7056763",
+        "phase": 0.7817323613306495,
+        "relief": 0.62,
+        "camera": {
+          "position": [
+            0,
+            1.7200425291092767,
+            34
+          ],
+          "target": [
+            0,
+            2.2509013205303754,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.7200425291092767,
+          34
+        ],
+        "target": [
+          0,
+          2.2509013205303754,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#91aaa0"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "biome": "temperate",
+      "version": "connected-woodland-light-3",
+      "architecture": "Species-conditioned scaffold; broad spreading oak, upward beech, slender drooping birch; elliptic leaf rendering approximate",
+      "ecology": "Source regional candidates and unnamed fern/leafy functional forms, not local occurrence evidence",
+      "states": {
+        "season": "leaf-on reference",
+        "weather": "clear reference",
+        "timeOfDay": "warm upper-left directional reference state"
+      },
+      "staging": {
+        "center": [
+          0,
+          26
+        ],
+        "radius": 1.4,
+        "height": 1.8
+      },
+      "trees": 48,
+      "lighting": {
+        "shadowSpanMeters": 76,
+        "key": [
+          -28,
+          70,
+          18
+        ],
+        "target": [
+          0,
+          1,
+          8
+        ],
+        "sun": 4.1,
+        "fill": 0.16,
+        "hemisphere": 0.55,
+        "shadowStrength": 0.66,
+        "selection": "Source-group CPU candidate followed by actual fixed-energy image comparison; visual retention, not human approval"
+      }
+    },
+    "lightDiagnostics": {
+      "compiledMaterials": 2,
+      "actualSunMaterials": 2,
+      "normalDesign": "Readable C2 normals, branch-radial canopy depth occlusion bounded independently from directional orientation",
+      "artisticEffect": "Experimental upper/exterior highlights and cool interior; not human-approved"
+    },
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "temperate",
+    "seed": "7056763",
+    "view": "inspection",
+    "file": "artifacts/wave2-autonomous/holdout/temperate-7056763-inspection.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 14,
+        "calls": 12,
+        "triangles": 722862,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      },
+      {
+        "frame": 15,
+        "calls": 12,
+        "triangles": 722862,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.40000003576278687
+      },
+      {
+        "frame": 16,
+        "calls": 12,
+        "triangles": 722862,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.699999988079071
+      }
+    ],
+    "instances": [
+      {
+        "name": "temperate-curled-leaf-litter",
+        "count": 8683
+      },
+      {
+        "name": "temperate-unnamed-fern-functional-forms",
+        "count": 260
+      },
+      {
+        "name": "temperate-embedded-moss-stone",
+        "count": 34
+      },
+      {
+        "name": "field-source-stand-impostors",
+        "count": 320
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1024,
+        "height": 1024,
+        "bytes": 4194304
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "a4c6df",
+        "intensity": 0.55,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "97b8ce",
+        "intensity": 0.16,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffe2ae",
+        "intensity": 4.1,
+        "position": [
+          -28,
+          70,
+          18
+        ],
+        "target": [
+          0,
+          1,
+          8
+        ],
+        "shadow": {
+          "intensity": 0.66,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -38,
+          "right": 38,
+          "normalBias": 0.035
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "recipe": {
+      "id": "temperate",
+      "biome": 4,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "temperate",
+        "biome": 4,
+        "seed": "7056763",
+        "phase": 0.7817323613306495,
+        "relief": 0.62,
+        "camera": {
+          "position": [
+            0,
+            1.7200425291092767,
+            34
+          ],
+          "target": [
+            0,
+            2.2509013205303754,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.7200425291092767,
+          34
+        ],
+        "target": [
+          0,
+          2.2509013205303754,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#91aaa0"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "biome": "temperate",
+      "version": "connected-woodland-light-3",
+      "architecture": "Species-conditioned scaffold; broad spreading oak, upward beech, slender drooping birch; elliptic leaf rendering approximate",
+      "ecology": "Source regional candidates and unnamed fern/leafy functional forms, not local occurrence evidence",
+      "states": {
+        "season": "leaf-on reference",
+        "weather": "clear reference",
+        "timeOfDay": "warm upper-left directional reference state"
+      },
+      "staging": {
+        "center": [
+          0,
+          26
+        ],
+        "radius": 1.4,
+        "height": 1.8
+      },
+      "trees": 48,
+      "lighting": {
+        "shadowSpanMeters": 76,
+        "key": [
+          -28,
+          70,
+          18
+        ],
+        "target": [
+          0,
+          1,
+          8
+        ],
+        "sun": 4.1,
+        "fill": 0.16,
+        "hemisphere": 0.55,
+        "shadowStrength": 0.66,
+        "selection": "Source-group CPU candidate followed by actual fixed-energy image comparison; visual retention, not human approval"
+      }
+    },
+    "lightDiagnostics": {
+      "compiledMaterials": 2,
+      "actualSunMaterials": 2,
+      "normalDesign": "Readable C2 normals, branch-radial canopy depth occlusion bounded independently from directional orientation",
+      "artisticEffect": "Experimental upper/exterior highlights and cool interior; not human-approved"
+    },
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "tundra",
+    "seed": "5554973",
+    "view": "hero",
+    "file": "artifacts/wave2-autonomous/holdout/tundra-5554973-hero.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        0,
+        1.8005651873173467,
+        34
+      ],
+      "target": [
+        0,
+        -2.327160889007216,
+        -55
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 7,
+        "calls": 16,
+        "triangles": 1049564,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 8,
+        "calls": 16,
+        "triangles": 1049564,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      },
+      {
+        "frame": 9,
+        "calls": 16,
+        "triangles": 1049564,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      }
+    ],
+    "instances": [
+      {
+        "name": "tundra-true-branchlet-near-0",
+        "count": 345
+      },
+      {
+        "name": "tundra-true-branchlet-near-1",
+        "count": 348
+      },
+      {
+        "name": "tundra-true-branchlet-near-2",
+        "count": 357
+      },
+      {
+        "name": "tundra-true-branchlet-middle-0",
+        "count": 504
+      },
+      {
+        "name": "tundra-true-branchlet-middle-1",
+        "count": 545
+      },
+      {
+        "name": "tundra-true-branchlet-middle-2",
+        "count": 501
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-0",
+        "count": 14
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-1",
+        "count": 14
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-2",
+        "count": 14
+      },
+      {
+        "name": "tundra-rare-stalks",
+        "count": 376
+      },
+      {
+        "name": "tundra-pale-functional-seedheads",
+        "count": 376
+      },
+      {
+        "name": "tundra-curved-short-sedge-functional-form",
+        "count": 376
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "a4c6df",
+        "intensity": 0.7,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "97b8ce",
+        "intensity": 0.27,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffe2aa",
+        "intensity": 3,
+        "position": [
+          48,
+          38,
+          18
+        ],
+        "target": [
+          0,
+          0,
+          -15
+        ],
+        "shadow": {
+          "intensity": 0.68,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -64,
+          "right": 64,
+          "normalBias": 0.035
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "recipe": {
+      "id": "tundra",
+      "biome": 11,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "tundra",
+        "biome": 11,
+        "seed": "5554973",
+        "phase": 1.8097561362472652,
+        "relief": 2.1,
+        "camera": {
+          "position": [
+            0,
+            1.8005651873173467,
+            34
+          ],
+          "target": [
+            0,
+            -2.327160889007216,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.8005651873173467,
+          34
+        ],
+        "target": [
+          0,
+          -2.327160889007216,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#a8bec3"
+        }
+      },
+      "trees": 0,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "Independent reference pigment state: warm russet heath, local phenology unverified",
+        "weather": "Independent clear reference state",
+        "timeOfDay": "Independent low warm sun reference state"
+      }
+    },
+    "concept": {
+      "biome": "tundra",
+      "representation": "True irregular twig-tube dwarf shrubs with small curved leaves; separate near/middle geometry LOD, continuous low substrate and short curved sedge functional forms. No atlas or crossed planes.",
+      "ecology": "Unnamed dwarf-shrub and seedhead functional forms; no verified local taxon or phenology asserted",
+      "terrainEvidence": "Existing shallow synthetic base relief; rejected cover-field shoulders disabled",
+      "sparseArcticHabitat": false,
+      "referenceLighting": "Warm key from upper right, independent time-of-day layer",
+      "seasonalState": "Russet reference state, not permanent biome identity",
+      "cameraChange": "Retains C3 concept-fit camera exactly: 1.7m eye with target lowered2.5m",
+      "counts": {
+        "lowHeath": 2600,
+        "nearBranchlets": 1050,
+        "middleBranchlets": 1550,
+        "rocks": 42,
+        "seedheads": 376
+      }
+    },
+    "dressing": {
+      "instances": {
+        "lowHeath": 2600,
+        "nearBranchlets": 1050,
+        "middleBranchlets": 1550,
+        "rocks": 42,
+        "seedheads": 376
+      },
+      "identity": "Unnamed dwarf-shrub/lichen/seedhead functional study; local flora unverified",
+      "seasonalState": "Russet pigment reference state independent of biome identity",
+      "staging": "Low substrate only inside character approach",
+      "hardApproachClearance": {
+        "halfWidth": 0.9,
+        "conservativeHorizontalRadius": "1.9 × specimen scale",
+        "adjustedRocks": 0,
+        "minimumMeters": 2.486334889855838
+      },
+      "groundOnly": false,
+      "communitySkeletons": [
+        [
+          {
+            "x": -2.178787813556846,
+            "z": 33,
+            "width": 0.7473015499068424,
+            "height": 0.9001118908519857,
+            "id": 0
+          },
+          {
+            "x": -1.7407225530943835,
+            "z": 29,
+            "width": 0.8574927219888195,
+            "height": 0.6444471551221795,
+            "id": 0
+          },
+          {
+            "x": -5.6304392846301194,
+            "z": 21,
+            "width": 2.099455385375768,
+            "height": 0.9546998097444885,
+            "id": 0
+          },
+          {
+            "x": -2.891652242280543,
+            "z": 9,
+            "width": 2.2474677321268244,
+            "height": 0.9576062673586421,
+            "id": 0
+          },
+          {
+            "x": -9.476963194645942,
+            "z": -9,
+            "width": 2.0260294164065273,
+            "height": 0.5717793710296974,
+            "id": 0
+          },
+          {
+            "x": -5.067743031866848,
+            "z": -31,
+            "width": 2.2411690724780784,
+            "height": 0.6896105872932822,
+            "id": 0
+          }
+        ],
+        [
+          {
+            "x": 3.1496207648888235,
+            "z": 33.5,
+            "width": 1.0616867839125916,
+            "height": 0.9140813328674995,
+            "id": 1
+          },
+          {
+            "x": 2.7016058173147033,
+            "z": 28,
+            "width": 0.8771747364313343,
+            "height": 0.8418173801735975,
+            "id": 1
+          },
+          {
+            "x": 7.539438833110035,
+            "z": 19,
+            "width": 1.3775739894947037,
+            "height": 0.7787105010007509,
+            "id": 1
+          },
+          {
+            "x": 6.806110463105142,
+            "z": 6,
+            "width": 1.3968129912624134,
+            "height": 0.962797429249622,
+            "id": 1
+          },
+          {
+            "x": 13.025962922535836,
+            "z": -11,
+            "width": 1.7947159455157817,
+            "height": 0.7114095460972749,
+            "id": 1
+          },
+          {
+            "x": 4.566966201923788,
+            "z": -33,
+            "width": 1.8024418801302091,
+            "height": 0.6932344129192644,
+            "id": 1
+          }
+        ],
+        [
+          {
+            "x": -8.710881023691037,
+            "z": 11,
+            "width": 1.093778785399627,
+            "height": 0.9841837789164857,
+            "id": 2
+          },
+          {
+            "x": -4.545297287753783,
+            "z": 3,
+            "width": 0.6997907380922698,
+            "height": 0.928013568976894,
+            "id": 2
+          },
+          {
+            "x": 0.9495095832273366,
+            "z": -5,
+            "width": 2.0555611710296944,
+            "height": 0.6893400406232104,
+            "id": 2
+          },
+          {
+            "x": 5.577923748455942,
+            "z": -16,
+            "width": 1.789295768085867,
+            "height": 0.6835750989033841,
+            "id": 2
+          },
+          {
+            "x": -0.12949344012886288,
+            "z": -32,
+            "width": 1.6928824577713386,
+            "height": 0.9960099688149058,
+            "id": 2
+          },
+          {
+            "x": 9.58719930704683,
+            "z": -50,
+            "width": 2.071021582186222,
+            "height": 0.5775945623638109,
+            "id": 2
+          }
+        ]
+      ],
+      "randomStreams": [
+        "true-heath",
+        "tundra-geology",
+        "tundra-seedheads",
+        "tundra-orientation"
+      ]
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        29
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "tundra",
+    "seed": "5554973",
+    "view": "inspection",
+    "file": "artifacts/wave2-autonomous/holdout/tundra-5554973-inspection.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 11,
+        "calls": 16,
+        "triangles": 1049564,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      },
+      {
+        "frame": 12,
+        "calls": 16,
+        "triangles": 1049564,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      },
+      {
+        "frame": 13,
+        "calls": 16,
+        "triangles": 1049564,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      }
+    ],
+    "instances": [
+      {
+        "name": "tundra-true-branchlet-near-0",
+        "count": 345
+      },
+      {
+        "name": "tundra-true-branchlet-near-1",
+        "count": 348
+      },
+      {
+        "name": "tundra-true-branchlet-near-2",
+        "count": 357
+      },
+      {
+        "name": "tundra-true-branchlet-middle-0",
+        "count": 504
+      },
+      {
+        "name": "tundra-true-branchlet-middle-1",
+        "count": 545
+      },
+      {
+        "name": "tundra-true-branchlet-middle-2",
+        "count": 501
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-0",
+        "count": 14
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-1",
+        "count": 14
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-2",
+        "count": 14
+      },
+      {
+        "name": "tundra-rare-stalks",
+        "count": 376
+      },
+      {
+        "name": "tundra-pale-functional-seedheads",
+        "count": 376
+      },
+      {
+        "name": "tundra-curved-short-sedge-functional-form",
+        "count": 376
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "a4c6df",
+        "intensity": 0.7,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "97b8ce",
+        "intensity": 0.27,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffe2aa",
+        "intensity": 3,
+        "position": [
+          48,
+          38,
+          18
+        ],
+        "target": [
+          0,
+          0,
+          -15
+        ],
+        "shadow": {
+          "intensity": 0.68,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -64,
+          "right": 64,
+          "normalBias": 0.035
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "recipe": {
+      "id": "tundra",
+      "biome": 11,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "tundra",
+        "biome": 11,
+        "seed": "5554973",
+        "phase": 1.8097561362472652,
+        "relief": 2.1,
+        "camera": {
+          "position": [
+            0,
+            1.8005651873173467,
+            34
+          ],
+          "target": [
+            0,
+            -2.327160889007216,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.8005651873173467,
+          34
+        ],
+        "target": [
+          0,
+          -2.327160889007216,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#a8bec3"
+        }
+      },
+      "trees": 0,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "Independent reference pigment state: warm russet heath, local phenology unverified",
+        "weather": "Independent clear reference state",
+        "timeOfDay": "Independent low warm sun reference state"
+      }
+    },
+    "concept": {
+      "biome": "tundra",
+      "representation": "True irregular twig-tube dwarf shrubs with small curved leaves; separate near/middle geometry LOD, continuous low substrate and short curved sedge functional forms. No atlas or crossed planes.",
+      "ecology": "Unnamed dwarf-shrub and seedhead functional forms; no verified local taxon or phenology asserted",
+      "terrainEvidence": "Existing shallow synthetic base relief; rejected cover-field shoulders disabled",
+      "sparseArcticHabitat": false,
+      "referenceLighting": "Warm key from upper right, independent time-of-day layer",
+      "seasonalState": "Russet reference state, not permanent biome identity",
+      "cameraChange": "Retains C3 concept-fit camera exactly: 1.7m eye with target lowered2.5m",
+      "counts": {
+        "lowHeath": 2600,
+        "nearBranchlets": 1050,
+        "middleBranchlets": 1550,
+        "rocks": 42,
+        "seedheads": 376
+      }
+    },
+    "dressing": {
+      "instances": {
+        "lowHeath": 2600,
+        "nearBranchlets": 1050,
+        "middleBranchlets": 1550,
+        "rocks": 42,
+        "seedheads": 376
+      },
+      "identity": "Unnamed dwarf-shrub/lichen/seedhead functional study; local flora unverified",
+      "seasonalState": "Russet pigment reference state independent of biome identity",
+      "staging": "Low substrate only inside character approach",
+      "hardApproachClearance": {
+        "halfWidth": 0.9,
+        "conservativeHorizontalRadius": "1.9 × specimen scale",
+        "adjustedRocks": 0,
+        "minimumMeters": 2.486334889855838
+      },
+      "groundOnly": false,
+      "communitySkeletons": [
+        [
+          {
+            "x": -2.178787813556846,
+            "z": 33,
+            "width": 0.7473015499068424,
+            "height": 0.9001118908519857,
+            "id": 0
+          },
+          {
+            "x": -1.7407225530943835,
+            "z": 29,
+            "width": 0.8574927219888195,
+            "height": 0.6444471551221795,
+            "id": 0
+          },
+          {
+            "x": -5.6304392846301194,
+            "z": 21,
+            "width": 2.099455385375768,
+            "height": 0.9546998097444885,
+            "id": 0
+          },
+          {
+            "x": -2.891652242280543,
+            "z": 9,
+            "width": 2.2474677321268244,
+            "height": 0.9576062673586421,
+            "id": 0
+          },
+          {
+            "x": -9.476963194645942,
+            "z": -9,
+            "width": 2.0260294164065273,
+            "height": 0.5717793710296974,
+            "id": 0
+          },
+          {
+            "x": -5.067743031866848,
+            "z": -31,
+            "width": 2.2411690724780784,
+            "height": 0.6896105872932822,
+            "id": 0
+          }
+        ],
+        [
+          {
+            "x": 3.1496207648888235,
+            "z": 33.5,
+            "width": 1.0616867839125916,
+            "height": 0.9140813328674995,
+            "id": 1
+          },
+          {
+            "x": 2.7016058173147033,
+            "z": 28,
+            "width": 0.8771747364313343,
+            "height": 0.8418173801735975,
+            "id": 1
+          },
+          {
+            "x": 7.539438833110035,
+            "z": 19,
+            "width": 1.3775739894947037,
+            "height": 0.7787105010007509,
+            "id": 1
+          },
+          {
+            "x": 6.806110463105142,
+            "z": 6,
+            "width": 1.3968129912624134,
+            "height": 0.962797429249622,
+            "id": 1
+          },
+          {
+            "x": 13.025962922535836,
+            "z": -11,
+            "width": 1.7947159455157817,
+            "height": 0.7114095460972749,
+            "id": 1
+          },
+          {
+            "x": 4.566966201923788,
+            "z": -33,
+            "width": 1.8024418801302091,
+            "height": 0.6932344129192644,
+            "id": 1
+          }
+        ],
+        [
+          {
+            "x": -8.710881023691037,
+            "z": 11,
+            "width": 1.093778785399627,
+            "height": 0.9841837789164857,
+            "id": 2
+          },
+          {
+            "x": -4.545297287753783,
+            "z": 3,
+            "width": 0.6997907380922698,
+            "height": 0.928013568976894,
+            "id": 2
+          },
+          {
+            "x": 0.9495095832273366,
+            "z": -5,
+            "width": 2.0555611710296944,
+            "height": 0.6893400406232104,
+            "id": 2
+          },
+          {
+            "x": 5.577923748455942,
+            "z": -16,
+            "width": 1.789295768085867,
+            "height": 0.6835750989033841,
+            "id": 2
+          },
+          {
+            "x": -0.12949344012886288,
+            "z": -32,
+            "width": 1.6928824577713386,
+            "height": 0.9960099688149058,
+            "id": 2
+          },
+          {
+            "x": 9.58719930704683,
+            "z": -50,
+            "width": 2.071021582186222,
+            "height": 0.5775945623638109,
+            "id": 2
+          }
+        ]
+      ],
+      "randomStreams": [
+        "true-heath",
+        "tundra-geology",
+        "tundra-seedheads",
+        "tundra-orientation"
+      ]
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        29
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "boreal",
+    "seed": "8553620",
+    "view": "hero",
+    "file": "artifacts/wave2-autonomous/boreal-holdout-repair/boreal-8553620-hero.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        0,
+        1.7513054495538667,
+        34
+      ],
+      "target": [
+        0,
+        3.1210337265761208,
+        -30
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 6,
+        "calls": 15,
+        "triangles": 711748,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.699999988079071
+      },
+      {
+        "frame": 7,
+        "calls": 15,
+        "triangles": 711748,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 8,
+        "calls": 15,
+        "triangles": 711748,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      }
+    ],
+    "instances": [
+      {
+        "name": "boreal-distant-attached-boughs",
+        "count": 420
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1024,
+        "height": 1024,
+        "bytes": 5592405
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "acc8d7",
+        "intensity": 0.74,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "97b8ce",
+        "intensity": 0.34,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffe3a8",
+        "intensity": 3.5,
+        "position": [
+          -28,
+          34,
+          -8
+        ],
+        "target": [
+          0,
+          1,
+          -20
+        ],
+        "shadow": {
+          "intensity": 0.66,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -64,
+          "right": 64,
+          "normalBias": 0.04
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "recipe": {
+      "id": "boreal",
+      "biome": 6,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "boreal",
+        "biome": 6,
+        "seed": "8553620",
+        "phase": 0.9837818391709805,
+        "relief": 0.65,
+        "camera": {
+          "position": [
+            0,
+            1.7513054495538667,
+            34
+          ],
+          "target": [
+            0,
+            3.1210337265761208,
+            -30
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.7513054495538667,
+          34
+        ],
+        "target": [
+          0,
+          3.1210337265761208,
+          -30
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#9aafa6"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "id": "boreal",
+      "version": 3,
+      "trees": 48,
+      "architecture": "Genus-conditional leader, paired rolled alpha-tested lobes attached to drooping bough chains",
+      "needleArtwork": "Generated spruce spray atlas is a painterly needle-texture approximation; pine/larch family differences remain structural, not verified species anatomy",
+      "ecology": "Regional candidates; unnamed moss/heath; local occurrence unverified",
+      "referenceState": {
+        "season": "green with provisional warm low foliage",
+        "weather": "clear",
+        "timeOfDay": "warm upper-left reference light"
+      },
+      "staging": "Low cover remains; no hard anchors in approach"
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "boreal",
+    "seed": "8553620",
+    "view": "inspection",
+    "file": "artifacts/wave2-autonomous/boreal-holdout-repair/boreal-8553620-inspection.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 10,
+        "calls": 15,
+        "triangles": 711748,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.800000011920929
+      },
+      {
+        "frame": 11,
+        "calls": 15,
+        "triangles": 711748,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.800000011920929
+      },
+      {
+        "frame": 12,
+        "calls": 15,
+        "triangles": 711748,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      }
+    ],
+    "instances": [
+      {
+        "name": "boreal-distant-attached-boughs",
+        "count": 420
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1024,
+        "height": 1024,
+        "bytes": 5592405
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "acc8d7",
+        "intensity": 0.74,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "97b8ce",
+        "intensity": 0.34,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffe3a8",
+        "intensity": 3.5,
+        "position": [
+          -28,
+          34,
+          -8
+        ],
+        "target": [
+          0,
+          1,
+          -20
+        ],
+        "shadow": {
+          "intensity": 0.66,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -64,
+          "right": 64,
+          "normalBias": 0.04
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "recipe": {
+      "id": "boreal",
+      "biome": 6,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "boreal",
+        "biome": 6,
+        "seed": "8553620",
+        "phase": 0.9837818391709805,
+        "relief": 0.65,
+        "camera": {
+          "position": [
+            0,
+            1.7513054495538667,
+            34
+          ],
+          "target": [
+            0,
+            3.1210337265761208,
+            -30
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.7513054495538667,
+          34
+        ],
+        "target": [
+          0,
+          3.1210337265761208,
+          -30
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#9aafa6"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "id": "boreal",
+      "version": 3,
+      "trees": 48,
+      "architecture": "Genus-conditional leader, paired rolled alpha-tested lobes attached to drooping bough chains",
+      "needleArtwork": "Generated spruce spray atlas is a painterly needle-texture approximation; pine/larch family differences remain structural, not verified species anatomy",
+      "ecology": "Regional candidates; unnamed moss/heath; local occurrence unverified",
+      "referenceState": {
+        "season": "green with provisional warm low foliage",
+        "weather": "clear",
+        "timeOfDay": "warm upper-left reference light"
+      },
+      "staging": "Low cover remains; no hard anchors in approach"
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  }
+]

@@ -1,0 +1,71 @@
+import * as T from 'three';
+import type {SceneRecipe} from './recipe';
+import {hashSeed} from './random';
+import {makeExpansionPlan,mountExpansionBase,type ExpansionPalette} from './wave2-shared';
+
+const clamp=(v:number)=>Math.max(0,Math.min(1,v));
+const smooth=(a:number,b:number,v:number)=>{const t=clamp((v-a)/(b-a));return t*t*(3-2*t);};
+function noise(x:number,z:number){
+ const hash=(a:number,b:number)=>{const v=Math.sin(a*127.1+b*311.7)*43758.5453;return v-Math.floor(v);};
+ const i=Math.floor(x),j=Math.floor(z),u=smooth(0,1,x-i),v=smooth(0,1,z-j);
+ return (hash(i,j)*(1-u)+hash(i+1,j)*u)*(1-v)+(hash(i,j+1)*(1-u)+hash(i+1,j+1)*u)*v;
+}
+
+/** Engine-neutral synthetic community description. No moisture/soil measurement
+ * or regional grass species is inferred from these presentation fields. */
+export function prairieCommunity(seed:string,x:number,z:number){
+ const phase=hashSeed(seed+'|prairie-communities-v1')/4294967296*37;
+ const warp=noise(x*.012+phase,z*.013)*26;
+ const flow=noise((x+z*.35+warp)*.024+phase,z*.013+phase*.3);
+ const moisture=noise(x*.017+phase*.7,z*.022+warp*.01);
+ const patch=noise(x*.065+phase,z*.048+warp*.03);
+ const growth=clamp(.30+moisture*.42+flow*.30-patch*.16);
+ const soil=smooth(.67,.86,patch)*(1-moisture*.55);
+ const exposure=clamp(flow*.60+(1-moisture)*.15+patch*.25);
+ const staging=(1-smooth(1.0,4.8,Math.abs(x)))*(1-smooth(2.5,9,Math.abs(z-26)));
+ return {growth,moisture,soil,exposure,flow,staging};
+}
+
+export function prairiePlan(r:SceneRecipe){
+ const p=makeExpansionPlan('prairie',8,r.seed,1.15);p.heightMode='prairie-plain';
+ p.camera={position:[0,1.7,34],target:[0,-16,-190]};p.inspection={position:[62,38,76],target:[0,0,-24]};return p;
+}
+const palette:ExpansionPalette={ground:['#385d4b','#748a56','#e7cb85'],soil:'#594d3d',air:'#a6aebe',sun:'#ffe1a7',foliage:['#385d4b','#748a56','#e7cb85'],texture:'/assets/alpine-meadow/meadow-ground-v1.png'};
+
+/** Gate A only: ground, community pigments and long-distance continuity. */
+export const prairieStudy={id:'prairie',biome:8,
+ compose:(r:SceneRecipe):SceneRecipe=>({...r,trees:[],purpose:'visual_laboratory',distribution:'Opt-in ground-only prairie construction study; canonical source retained, woody plants not categorically excluded from the biome.',limitations:[...r.limitations,'Prairie terrain and community fields are synthetic art direction, not observed soils, elevation or population data. No named grass/forb species asserted.']}),
+ camera:(r:SceneRecipe)=>prairiePlan(r).camera,
+ mount:(scene:T.Scene,r:SceneRecipe,sun:T.DirectionalLight,fill:T.DirectionalLight)=>{
+  const plan=prairiePlan(r),base=mountExpansionBase(scene,r,plan,sun,fill,palette,{concept:true,canopy:false,sunDirection:[-70,33,25],surfaceArtwork:{texture:palette.texture!,worldScale:5.5}});
+  const sky=scene.getObjectByName('expansion-existing-sky');
+  if(sky instanceof T.Mesh){sky.renderOrder=-100;(sky.material as T.MeshBasicMaterial).depthTest=false;}
+  const resolution=512,span=4096,bytes=new Uint8Array(resolution*resolution*4);
+  for(let j=0;j<resolution;j++)for(let i=0;i<resolution;i++){
+   const f=prairieCommunity(r.seed,((i+.5)/resolution-.5)*span,((j+.5)/resolution-.5)*span),k=(j*resolution+i)*4;
+   bytes.set([f.growth,f.moisture,f.exposure,f.soil].map(v=>Math.round(v*255)),k);
+  }
+  const field=new T.DataTexture(bytes,resolution,resolution,T.RGBAFormat);field.colorSpace=T.NoColorSpace;field.minFilter=field.magFilter=T.LinearFilter;field.wrapS=field.wrapT=T.ClampToEdgeWrapping;field.generateMipmaps=false;field.needsUpdate=true;
+  const material=base.groundMaterial,before=material.onBeforeCompile;
+  material.onBeforeCompile=function(shader,renderer){before.call(this,shader,renderer);
+   shader.uniforms.prairieField={value:field};shader.fragmentShader='uniform sampler2D prairieField;\n'+shader.fragmentShader;
+   // Existing artwork supplies restrained small detail. A single field will
+   // also drive the next grass stage, avoiding disconnected tufts and soil.
+   shader.fragmentShader=shader.fragmentShader.replace('vec3 exMaterialTint=',`vec4 prCommunity=texture2D(prairieField,clamp(exWorld.xz/${span.toFixed(1)}+.5,vec2(0.),vec2(1.)));
+    float prInk=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));
+    float prDistance=distance(cameraPosition.xz,exWorld.xz);
+    vec3 prGrass=mix(exShade,exBody,clamp(prCommunity.r*.8+.15,0.,1.));
+    prGrass=mix(prGrass,vec3(.265,.320,.210),prCommunity.g*.28);
+    prGrass=mix(prGrass,exSun,smoothstep(.38,.70,prCommunity.b)*.92);
+    prGrass=mix(prGrass,exSoil,prCommunity.a*.78);
+    float prDetail=(1.-smoothstep(28.,180.,prDistance))*.65;
+    diffuseColor.rgb=prGrass*mix(1.,clamp(sqrt(max(.001,prInk)/.22),.70,1.30),prDetail);
+    vec3 exMaterialTint=`);
+  };
+  material.customProgramCacheKey=()=> 'prairie-ground-community-v1';material.needsUpdate=true;
+  sun.target.position.set(0,0,-40);sun.intensity=4.0;sun.shadow.intensity=.7;fill.intensity=.20;
+  scene.children.forEach(o=>{if(o instanceof T.HemisphereLight){o.intensity=.55;o.color.set('#b7c5dc');o.groundColor.set('#8b805e');}});
+  scene.fog=new T.Fog('#a6aebe',260,2200);
+  scene.userData.prairie={stage:'A-ground-only',version:1,sourceEcoId:r.ecoregion?.ECO_ID,sourceEcoName:r.ecoregion?.ECO_NAME,sourceBiome:r.ecoregion?.BIOME_NUM,reference:'prairie-wave3-primary',communityField:{resolution,span,channels:['growth','synthetic-moisture','exposure-pigment','soil']},ecology:'No named grass, flower or woody occurrence claim; this is a presentation study.',terrain:'Gentle aperiodic synthetic rolls; no mountains, paths or carved staging pad.',layers:{season:'independent leaf-on pigment reference',weather:'clear reference',timeOfDay:'low warm key reference'},pending:['Dimensional grasses and feathered seedheads','Localized flower communities','Conditional ecological woody growth','Final biome artistic approval']};
+  base.finish();return()=>{field.dispose();base.dispose();};
+ }};

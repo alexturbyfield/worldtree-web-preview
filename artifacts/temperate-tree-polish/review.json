@@ -1,0 +1,60 @@
+{
+  "id": "temperate-tree-polish-2026-11-26",
+  "date": "2026-11-27T04:01:36.828246+00:00",
+  "reviewer": "primary agent; actual screenshot visual-content interpretation available; not independent review",
+  "humanApproval": null,
+  "scope": "Opt-in Wave 2 temperate tree foliage and bark only. Sparse birch interpreted as birches in this woodland; Iceland scene untouched.",
+  "loaded": [
+    "AGENTS.md",
+    "visual-lab/README.md",
+    "foliage-study",
+    "visual-review",
+    "mobile-budget",
+    "wave2 concept sheet",
+    "autonomous retained captures"
+  ],
+  "baseline": "artifacts/temperate-tree-polish/before/source.json",
+  "reference": "visual-lab/global-expansion/references/wave2-concept-sheet.png",
+  "decisions": [
+    {
+      "hypothesis": "Wrong atlas family creates flower/needle-shaped broadleaf silhouettes",
+      "evidence": "12-way tile assignment includes flowers 4-7 and needles 8-11; matched leaf-fix image has readable broadleaf sprays",
+      "decision": "retain correction to source design tile 0",
+      "severity": "major"
+    },
+    {
+      "hypothesis": "Aligned oversized sprays read as flat sheets; birch crowns too fragmented",
+      "evidence": "before/detail view contains large intersecting leaf sheets; smaller rotated branch-owned sprays and five-lane birch sprays improve breakup in hero views",
+      "decision": "retain provisionally; close-up scale and shading remain imperfect",
+      "severity": "major"
+    },
+    {
+      "hypothesis": "Double bark pigment, generic green attention grade and cylinder joints conceal trunk character",
+      "evidence": "shader inspection confirms custom albedo followed by vertex multiplication in baseline; joint gaps visible in bark-before; final uses single albedo, tangent-continuous rings and readable local diffuse bounce",
+      "decision": "retain",
+      "severity": "major"
+    },
+    {
+      "hypothesis": "Near beech/hornbeam bark remains too featureless after lighting repair",
+      "evidence": "albedo-only screenshot and genus attribute confirm smooth genus profile; added meso weathering, scars and pale lichen rather than oak fissures",
+      "decision": "retain pending final human review",
+      "severity": "minor"
+    }
+  ],
+  "preservation": "Structural stream consumption fixed at original 72 draws per leaf group; independent leaf stream; exact original branch endpoints/radii, tree transforms, species and seeds checked at 29 and 41",
+  "limits": [
+    "No human artistic approval",
+    "Leaf sprays remain approximate; close-up scale/flatness still visible",
+    "Simplified branch attachment and distant forest continuation remain outside this polish",
+    "No mobile device or GPU frame-time approval",
+    "No changes to separate Iceland birch forest"
+  ],
+  "runtimeFiles": [
+    "src/lib/forest/wave2-temperate-concept.ts",
+    "src/lib/forest/wave2-temperate-surfaces.ts"
+  ],
+  "sourceHashes": {
+    "src/lib/forest/wave2-temperate-concept.ts": "9700ff6f73fc9dfe09c277b29c1f47e3cb7f6151ad9cb68ac1138b3450cbf278",
+    "src/lib/forest/wave2-temperate-surfaces.ts": "62305a98c094c2f094996a402e12ee50eb6e1d97d04ada8701921765323aeec4"
+  }
+}

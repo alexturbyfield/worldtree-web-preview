@@ -1,0 +1,106 @@
+{
+  "stats": {
+    "frame": 8,
+    "calls": 21,
+    "triangles": 2268504,
+    "points": 0,
+    "lines": 0
+  },
+  "camera": {
+    "position": [
+      0,
+      1.7,
+      34
+    ],
+    "target": [
+      3,
+      -12,
+      -150
+    ]
+  },
+  "meta": {
+    "seed": "29",
+    "region": "Cordillera Blanca / Huascaran regional puna study",
+    "reference": "visual-lab/andean-puna/concept.png",
+    "ecology": {
+      "system": "Central Andean puna; no páramo frailejones",
+      "trees": "Polylepis regional candidate, restricted sheltered grove, local occurrence unverified",
+      "rosettes": "Puya regional candidate, juvenile growth-form approximation, flowering omitted",
+      "lowCover": "Unnamed cushion and low leathery growth forms; regional functional placeholders"
+    },
+    "fields": "Synthetic slope/moisture/soil fields, not observed environmental data",
+    "instances": {
+      "grass": [
+        1700,
+        4300
+      ],
+      "rocks": 360,
+      "cushions": 550,
+      "rosettes": 13,
+      "trees": 4
+    },
+    "approval": "pending"
+  },
+  "ecoregion": {
+    "id": "andean",
+    "biome": 10,
+    "version": "global-expansion-prototype-1",
+    "plan": {
+      "id": "andean",
+      "biome": 10,
+      "seed": "29",
+      "phase": 5.947905025707223,
+      "relief": 1,
+      "camera": {
+        "position": [
+          0,
+          1.7,
+          34
+        ],
+        "target": [
+          3,
+          -12,
+          -150
+        ]
+      },
+      "inspection": {
+        "position": [
+          62,
+          38,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ]
+      },
+      "eye": [
+        0,
+        1.7,
+        34
+      ],
+      "target": [
+        3,
+        -12,
+        -150
+      ]
+    },
+    "presentation": {
+      "foliageAtmosphere": {
+        "near": 95,
+        "far": 420,
+        "strength": 0.55,
+        "color": "#9cabbc"
+      }
+    },
+    "trees": 0,
+    "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+    "layers": {
+      "season": "independent reference state, unresolved",
+      "weather": "clear visual study",
+      "timeOfDay": "warm directional reference state"
+    }
+  },
+  "errors": []
+}

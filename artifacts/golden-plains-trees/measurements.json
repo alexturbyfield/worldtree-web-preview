@@ -1,0 +1,1556 @@
+{
+  "performance": [
+    {
+      "label": "plains-retained-R2",
+      "frames": [
+        {
+          "view": "hero",
+          "camera": {
+            "position": [
+              0,
+              0.21041739075620725,
+              34
+            ],
+            "quaternion": [
+              0.024969864063644317,
+              0.01850322795785242,
+              -0.0004622464236711974,
+              0.9995168446664752
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "performance": {
+            "calls": 10,
+            "triangles": 186340,
+            "cpuSubmissionMs": [
+              0.699999988079071,
+              0.4000000059604645,
+              0.29999998211860657
+            ],
+            "synchronousCompletionMs": [],
+            "pixelRatio": 1,
+            "textureObjects": 10,
+            "geometryObjects": 13,
+            "antialias": false
+          },
+          "textureAudit": [
+            {
+              "width": 1254,
+              "height": 1254,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8386752,
+              "source": "/assets/savanna-recipe/painted-fibre-v1.webp"
+            },
+            {
+              "width": 1774,
+              "height": 887,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8392203,
+              "source": "/assets/puget-v1/sky-matte-v1.webp"
+            },
+            {
+              "width": 2048,
+              "height": 2048,
+              "mipmaps": true,
+              "estimatedRGBABytes": 22369621,
+              "source": "/assets/puget-v1/grass.png"
+            },
+            {
+              "width": 64,
+              "height": 64,
+              "mipmaps": false,
+              "estimatedRGBABytes": 16384,
+              "source": "generated canvas"
+            },
+            {
+              "width": 1024,
+              "height": 512,
+              "mipmaps": false,
+              "estimatedRGBABytes": 2097152,
+              "source": "generated canvas"
+            },
+            {
+              "width": 2172,
+              "height": 724,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8386816,
+              "source": "/assets/savanna-hills/golden-ridges-v1.webp"
+            }
+          ],
+          "guard": {
+            "before": "a85b1c91",
+            "after": "a85b1c91",
+            "match": true,
+            "scope": "Declared ground/distant presentation, added hill continuation, decorative grass and rock targets; existing terrain vertices, primary trees, sky, lights and fog guarded."
+          },
+          "layout": {
+            "count": 2695,
+            "matrixDigest": "244237d3"
+          },
+          "errors": []
+        },
+        {
+          "view": "inspection",
+          "camera": {
+            "position": [
+              34,
+              23,
+              44
+            ],
+            "quaternion": [
+              -0.11289019307845702,
+              0.2798418085648005,
+              0.033156062656846556,
+              0.9528090270326922
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "performance": {
+            "calls": 10,
+            "triangles": 186340,
+            "cpuSubmissionMs": [
+              0.4000000059604645,
+              0.30000001192092896,
+              0.699999988079071
+            ],
+            "synchronousCompletionMs": [],
+            "pixelRatio": 1,
+            "textureObjects": 10,
+            "geometryObjects": 13,
+            "antialias": false
+          },
+          "textureAudit": [
+            {
+              "width": 1254,
+              "height": 1254,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8386752,
+              "source": "/assets/savanna-recipe/painted-fibre-v1.webp"
+            },
+            {
+              "width": 1774,
+              "height": 887,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8392203,
+              "source": "/assets/puget-v1/sky-matte-v1.webp"
+            },
+            {
+              "width": 2048,
+              "height": 2048,
+              "mipmaps": true,
+              "estimatedRGBABytes": 22369621,
+              "source": "/assets/puget-v1/grass.png"
+            },
+            {
+              "width": 64,
+              "height": 64,
+              "mipmaps": false,
+              "estimatedRGBABytes": 16384,
+              "source": "generated canvas"
+            },
+            {
+              "width": 1024,
+              "height": 512,
+              "mipmaps": false,
+              "estimatedRGBABytes": 2097152,
+              "source": "generated canvas"
+            },
+            {
+              "width": 2172,
+              "height": 724,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8386816,
+              "source": "/assets/savanna-hills/golden-ridges-v1.webp"
+            }
+          ],
+          "guard": {
+            "before": "a85b1c91",
+            "after": "a85b1c91",
+            "match": true,
+            "scope": "Declared ground/distant presentation, added hill continuation, decorative grass and rock targets; existing terrain vertices, primary trees, sky, lights and fog guarded."
+          },
+          "layout": {
+            "count": 2695,
+            "matrixDigest": "244237d3"
+          },
+          "errors": []
+        }
+      ],
+      "overdraw": null
+    },
+    {
+      "label": "plains-stage2-revised",
+      "frames": [
+        {
+          "view": "hero",
+          "camera": {
+            "position": [
+              0,
+              0.21041739075620725,
+              34
+            ],
+            "quaternion": [
+              0.024969864063644317,
+              0.01850322795785242,
+              -0.0004622464236711974,
+              0.9995168446664752
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "performance": {
+            "calls": 10,
+            "triangles": 98980,
+            "cpuSubmissionMs": [
+              0.5,
+              0.5,
+              0.30000001192092896
+            ],
+            "synchronousCompletionMs": [
+              0.5,
+              0.5,
+              0.30000001192092896
+            ],
+            "pixelRatio": 1
+          },
+          "guard": {
+            "before": "beb4f681",
+            "after": "beb4f681",
+            "match": true,
+            "scope": "Declared ground/distant presentation, added hill continuation, decorative grass and rock targets; existing terrain vertices, primary trees, sky, lights and fog guarded."
+          },
+          "layout": {
+            "count": 2695,
+            "matrixDigest": "66230351"
+          },
+          "deterministic": true,
+          "errors": []
+        },
+        {
+          "view": "inspection",
+          "camera": {
+            "position": [
+              34,
+              23,
+              44
+            ],
+            "quaternion": [
+              -0.11289019307845702,
+              0.2798418085648005,
+              0.033156062656846556,
+              0.9528090270326922
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "performance": {
+            "calls": 10,
+            "triangles": 98980,
+            "cpuSubmissionMs": [
+              0.4000000059604645,
+              0.30000001192092896,
+              2.199999988079071
+            ],
+            "synchronousCompletionMs": [
+              0.4000000059604645,
+              0.30000001192092896,
+              2.199999988079071
+            ],
+            "pixelRatio": 1
+          },
+          "guard": {
+            "before": "beb4f681",
+            "after": "beb4f681",
+            "match": true,
+            "scope": "Declared ground/distant presentation, added hill continuation, decorative grass and rock targets; existing terrain vertices, primary trees, sky, lights and fog guarded."
+          },
+          "layout": {
+            "count": 2695,
+            "matrixDigest": "66230351"
+          },
+          "deterministic": true,
+          "errors": []
+        }
+      ],
+      "overdraw": null
+    },
+    {
+      "label": "tree-r2-A",
+      "frames": [
+        {
+          "view": "hero",
+          "camera": {
+            "position": [
+              0,
+              0.21041739075620725,
+              34
+            ],
+            "quaternion": [
+              0.024969864063644317,
+              0.01850322795785242,
+              -0.0004622464236711974,
+              0.9995168446664752
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "performance": {
+            "calls": 11,
+            "triangles": 109548,
+            "cpuSubmissionMs": [
+              0.5999999940395355,
+              0.5,
+              0.4000000059604645
+            ],
+            "synchronousCompletionMs": [
+              0.5999999940395355,
+              0.5,
+              0.5
+            ],
+            "pixelRatio": 1
+          },
+          "tree": {
+            "candidate": "A",
+            "heroId": "tree-12-open-savanna-0",
+            "position": [
+              -16.19757185038179,
+              -0.4439749342178131,
+              -2.032205734634772
+            ],
+            "seed": "171073434",
+            "appearanceSeed": "3394320064",
+            "dimensions": {
+              "height": 9.171116070320005,
+              "crownWidth": 18.69065697776473,
+              "crownDepth": 19.48437236674555
+            },
+            "segments": 880,
+            "groups": 196,
+            "sprays": 784,
+            "profileVersion": "branch-grammar-1"
+          },
+          "guard": {
+            "before": "981b8cee",
+            "after": "981b8cee",
+            "match": true,
+            "scope": "Declared ground/distant presentation, added hill continuation, decorative grass and rock targets; existing terrain vertices, primary trees, sky, lights and fog guarded."
+          },
+          "layout": {
+            "count": 2695,
+            "matrixDigest": "66230351"
+          },
+          "deterministic": true,
+          "errors": []
+        },
+        {
+          "view": "inspection",
+          "camera": {
+            "position": [
+              34,
+              23,
+              44
+            ],
+            "quaternion": [
+              -0.11289019307845702,
+              0.2798418085648005,
+              0.033156062656846556,
+              0.9528090270326922
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "performance": {
+            "calls": 11,
+            "triangles": 109548,
+            "cpuSubmissionMs": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "synchronousCompletionMs": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "pixelRatio": 1
+          },
+          "tree": {
+            "candidate": "A",
+            "heroId": "tree-12-open-savanna-0",
+            "position": [
+              -16.19757185038179,
+              -0.4439749342178131,
+              -2.032205734634772
+            ],
+            "seed": "171073434",
+            "appearanceSeed": "3394320064",
+            "dimensions": {
+              "height": 9.171116070320005,
+              "crownWidth": 18.69065697776473,
+              "crownDepth": 19.48437236674555
+            },
+            "segments": 880,
+            "groups": 196,
+            "sprays": 784,
+            "profileVersion": "branch-grammar-1"
+          },
+          "guard": {
+            "before": "981b8cee",
+            "after": "981b8cee",
+            "match": true,
+            "scope": "Declared ground/distant presentation, added hill continuation, decorative grass and rock targets; existing terrain vertices, primary trees, sky, lights and fog guarded."
+          },
+          "layout": {
+            "count": 2695,
+            "matrixDigest": "66230351"
+          },
+          "deterministic": true,
+          "errors": []
+        }
+      ],
+      "overdraw": {
+        "mode": "overdraw",
+        "width": 320,
+        "height": 180,
+        "meanAlphaLayersPerOccupiedPixel": 6.574115876598946,
+        "meanQuadLayersPerScreenPixel": 0.5848263888888889,
+        "alphaRejectedFraction": 0.7406340913138989,
+        "coverage": 0.023072916666666665,
+        "peakLayers": 24,
+        "saturatedPixels": 0,
+        "texture": {
+          "width": 512,
+          "height": 384
+        },
+        "method": "Depth-disabled additive raster proxy, alpha-tested versus whole spray surfaces. 8-bit counts cap at255; not hardware fragment counters or normal depth-tested cost."
+      }
+    },
+    {
+      "label": "tree-r2-B",
+      "frames": [
+        {
+          "view": "hero",
+          "camera": {
+            "position": [
+              0,
+              0.21041739075620725,
+              34
+            ],
+            "quaternion": [
+              0.024969864063644317,
+              0.01850322795785242,
+              -0.0004622464236711974,
+              0.9995168446664752
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "performance": {
+            "calls": 11,
+            "triangles": 106072,
+            "cpuSubmissionMs": [
+              0.5999999940395355,
+              0.30000001192092896,
+              0.4000000059604645
+            ],
+            "synchronousCompletionMs": [
+              0.5999999940395355,
+              0.30000001192092896,
+              0.4000000059604645
+            ],
+            "pixelRatio": 1
+          },
+          "tree": {
+            "candidate": "B",
+            "heroId": "tree-12-open-savanna-0",
+            "position": [
+              -16.19757185038179,
+              -0.4439749342178131,
+              -2.032205734634772
+            ],
+            "seed": "171073434",
+            "appearanceSeed": "3394320064",
+            "dimensions": {
+              "height": 9.450911184933426,
+              "crownWidth": 19.359588253655602,
+              "crownDepth": 19.87953695014899
+            },
+            "segments": 610,
+            "groups": 132,
+            "sprays": 528,
+            "profileVersion": "branch-grammar-1"
+          },
+          "guard": {
+            "before": "3308c2b8",
+            "after": "3308c2b8",
+            "match": true,
+            "scope": "Declared ground/distant presentation, added hill continuation, decorative grass and rock targets; existing terrain vertices, primary trees, sky, lights and fog guarded."
+          },
+          "layout": {
+            "count": 2695,
+            "matrixDigest": "66230351"
+          },
+          "deterministic": true,
+          "errors": []
+        },
+        {
+          "view": "inspection",
+          "camera": {
+            "position": [
+              34,
+              23,
+              44
+            ],
+            "quaternion": [
+              -0.11289019307845702,
+              0.2798418085648005,
+              0.033156062656846556,
+              0.9528090270326922
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "performance": {
+            "calls": 11,
+            "triangles": 106072,
+            "cpuSubmissionMs": [
+              0.5,
+              0.30000001192092896,
+              0.3999999761581421
+            ],
+            "synchronousCompletionMs": [
+              0.5,
+              0.30000001192092896,
+              0.3999999761581421
+            ],
+            "pixelRatio": 1
+          },
+          "tree": {
+            "candidate": "B",
+            "heroId": "tree-12-open-savanna-0",
+            "position": [
+              -16.19757185038179,
+              -0.4439749342178131,
+              -2.032205734634772
+            ],
+            "seed": "171073434",
+            "appearanceSeed": "3394320064",
+            "dimensions": {
+              "height": 9.450911184933426,
+              "crownWidth": 19.359588253655602,
+              "crownDepth": 19.87953695014899
+            },
+            "segments": 610,
+            "groups": 132,
+            "sprays": 528,
+            "profileVersion": "branch-grammar-1"
+          },
+          "guard": {
+            "before": "3308c2b8",
+            "after": "3308c2b8",
+            "match": true,
+            "scope": "Declared ground/distant presentation, added hill continuation, decorative grass and rock targets; existing terrain vertices, primary trees, sky, lights and fog guarded."
+          },
+          "layout": {
+            "count": 2695,
+            "matrixDigest": "66230351"
+          },
+          "deterministic": true,
+          "errors": []
+        }
+      ],
+      "overdraw": {
+        "mode": "overdraw",
+        "width": 320,
+        "height": 180,
+        "meanAlphaLayersPerOccupiedPixel": 4.5484496124031,
+        "meanQuadLayersPerScreenPixel": 0.3248611111111111,
+        "alphaRejectedFraction": 0.7491449337323642,
+        "coverage": 0.017916666666666668,
+        "peakLayers": 24,
+        "saturatedPixels": 0,
+        "texture": {
+          "width": 512,
+          "height": 384
+        },
+        "method": "Depth-disabled additive raster proxy, alpha-tested versus whole spray surfaces. 8-bit counts cap at255; not hardware fragment counters or normal depth-tested cost."
+      }
+    },
+    {
+      "label": "tree-r2-C",
+      "frames": [
+        {
+          "view": "hero",
+          "camera": {
+            "position": [
+              0,
+              0.21041739075620725,
+              34
+            ],
+            "quaternion": [
+              0.024969864063644317,
+              0.01850322795785242,
+              -0.0004622464236711974,
+              0.9995168446664752
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "performance": {
+            "calls": 11,
+            "triangles": 107962,
+            "cpuSubmissionMs": [
+              0.5999999940395355,
+              0.4000000059604645,
+              0.5
+            ],
+            "synchronousCompletionMs": [
+              0.5999999940395355,
+              0.4000000059604645,
+              0.5
+            ],
+            "pixelRatio": 1
+          },
+          "tree": {
+            "candidate": "C",
+            "heroId": "tree-12-open-savanna-0",
+            "position": [
+              -16.19757185038179,
+              -0.4439749342178131,
+              -2.032205734634772
+            ],
+            "seed": "171073434",
+            "appearanceSeed": "3394320064",
+            "dimensions": {
+              "height": 9.732045504625129,
+              "crownWidth": 20.078506598175768,
+              "crownDepth": 18.531047451876056
+            },
+            "segments": 740,
+            "groups": 153,
+            "sprays": 612,
+            "profileVersion": "branch-grammar-1"
+          },
+          "guard": {
+            "before": "443fb2f3",
+            "after": "443fb2f3",
+            "match": true,
+            "scope": "Declared ground/distant presentation, added hill continuation, decorative grass and rock targets; existing terrain vertices, primary trees, sky, lights and fog guarded."
+          },
+          "layout": {
+            "count": 2695,
+            "matrixDigest": "66230351"
+          },
+          "deterministic": true,
+          "errors": []
+        },
+        {
+          "view": "inspection",
+          "camera": {
+            "position": [
+              34,
+              23,
+              44
+            ],
+            "quaternion": [
+              -0.11289019307845702,
+              0.2798418085648005,
+              0.033156062656846556,
+              0.9528090270326922
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "performance": {
+            "calls": 11,
+            "triangles": 107962,
+            "cpuSubmissionMs": [
+              0.4000000059604645,
+              1.0999999940395355,
+              0.4000000059604645
+            ],
+            "synchronousCompletionMs": [
+              0.4000000059604645,
+              1.199999988079071,
+              0.4000000059604645
+            ],
+            "pixelRatio": 1
+          },
+          "tree": {
+            "candidate": "C",
+            "heroId": "tree-12-open-savanna-0",
+            "position": [
+              -16.19757185038179,
+              -0.4439749342178131,
+              -2.032205734634772
+            ],
+            "seed": "171073434",
+            "appearanceSeed": "3394320064",
+            "dimensions": {
+              "height": 9.732045504625129,
+              "crownWidth": 20.078506598175768,
+              "crownDepth": 18.531047451876056
+            },
+            "segments": 740,
+            "groups": 153,
+            "sprays": 612,
+            "profileVersion": "branch-grammar-1"
+          },
+          "guard": {
+            "before": "443fb2f3",
+            "after": "443fb2f3",
+            "match": true,
+            "scope": "Declared ground/distant presentation, added hill continuation, decorative grass and rock targets; existing terrain vertices, primary trees, sky, lights and fog guarded."
+          },
+          "layout": {
+            "count": 2695,
+            "matrixDigest": "66230351"
+          },
+          "deterministic": true,
+          "errors": []
+        }
+      ],
+      "overdraw": {
+        "mode": "overdraw",
+        "width": 320,
+        "height": 180,
+        "meanAlphaLayersPerOccupiedPixel": 3.9786324786324787,
+        "meanQuadLayersPerScreenPixel": 0.4384722222222222,
+        "alphaRejectedFraction": 0.7419623059866962,
+        "coverage": 0.0284375,
+        "peakLayers": 15,
+        "saturatedPixels": 0,
+        "texture": {
+          "width": 512,
+          "height": 384
+        },
+        "method": "Depth-disabled additive raster proxy, alpha-tested versus whole spray surfaces. 8-bit counts cap at255; not hardware fragment counters or normal depth-tested cost."
+      }
+    },
+    {
+      "label": "plains-final-A-29",
+      "frames": [
+        {
+          "view": "hero",
+          "camera": {
+            "position": [
+              0,
+              0.21041739075620725,
+              34
+            ],
+            "quaternion": [
+              0.024969864063644317,
+              0.01850322795785242,
+              -0.0004622464236711974,
+              0.9995168446664752
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "performance": {
+            "calls": 11,
+            "triangles": 110708,
+            "cpuSubmissionMs": [
+              0.699999988079071,
+              0.5999999940395355,
+              0.5
+            ],
+            "synchronousCompletionMs": [
+              0.699999988079071,
+              0.5999999940395355,
+              0.5
+            ],
+            "pixelRatio": 1,
+            "textureObjects": 11,
+            "geometryObjects": 14,
+            "antialias": false
+          },
+          "tree": {
+            "candidate": "A",
+            "heroId": "tree-12-open-savanna-0",
+            "position": [
+              -16.19757185038179,
+              -0.4439749342178131,
+              -2.032205734634772
+            ],
+            "seed": "171073434",
+            "appearanceSeed": "3394320064",
+            "dimensions": {
+              "height": 9.171116070320005,
+              "crownWidth": 18.62206002052872,
+              "crownDepth": 19.378051087256488
+            },
+            "segments": 930,
+            "groups": 206,
+            "sprays": 824,
+            "profileVersion": "branch-grammar-1"
+          },
+          "textureAudit": [
+            {
+              "width": 1254,
+              "height": 1254,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8386752,
+              "source": "/assets/savanna-recipe/painted-fibre-v1.webp"
+            },
+            {
+              "width": 1774,
+              "height": 887,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8392203,
+              "source": "/assets/puget-v1/sky-matte-v1.webp"
+            },
+            {
+              "width": 2048,
+              "height": 2048,
+              "mipmaps": true,
+              "estimatedRGBABytes": 22369621,
+              "source": "/assets/puget-v1/grass.png"
+            },
+            {
+              "width": 64,
+              "height": 64,
+              "mipmaps": false,
+              "estimatedRGBABytes": 16384,
+              "source": "generated canvas"
+            },
+            {
+              "width": 512,
+              "height": 384,
+              "mipmaps": true,
+              "estimatedRGBABytes": 1048576,
+              "source": "generated canvas"
+            },
+            {
+              "width": 1024,
+              "height": 512,
+              "mipmaps": false,
+              "estimatedRGBABytes": 2097152,
+              "source": "generated canvas"
+            },
+            {
+              "width": 2172,
+              "height": 724,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8386816,
+              "source": "/assets/savanna-hills/golden-ridges-v1.webp"
+            }
+          ],
+          "guard": {
+            "before": "e6881fe4",
+            "after": "e6881fe4",
+            "match": true,
+            "scope": "Declared ground/distant presentation, added hill continuation, decorative grass and rock targets; existing terrain vertices, primary trees, sky, lights and fog guarded."
+          },
+          "layout": {
+            "count": 2695,
+            "matrixDigest": "66230351"
+          },
+          "deterministic": true,
+          "errors": []
+        },
+        {
+          "view": "inspection",
+          "camera": {
+            "position": [
+              34,
+              23,
+              44
+            ],
+            "quaternion": [
+              -0.11289019307845702,
+              0.2798418085648005,
+              0.033156062656846556,
+              0.9528090270326922
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "performance": {
+            "calls": 11,
+            "triangles": 110708,
+            "cpuSubmissionMs": [
+              0.5,
+              1.4000000059604645,
+              0.3999999761581421
+            ],
+            "synchronousCompletionMs": [
+              0.5,
+              1.4000000059604645,
+              0.5
+            ],
+            "pixelRatio": 1,
+            "textureObjects": 11,
+            "geometryObjects": 14,
+            "antialias": false
+          },
+          "tree": {
+            "candidate": "A",
+            "heroId": "tree-12-open-savanna-0",
+            "position": [
+              -16.19757185038179,
+              -0.4439749342178131,
+              -2.032205734634772
+            ],
+            "seed": "171073434",
+            "appearanceSeed": "3394320064",
+            "dimensions": {
+              "height": 9.171116070320005,
+              "crownWidth": 18.62206002052872,
+              "crownDepth": 19.378051087256488
+            },
+            "segments": 930,
+            "groups": 206,
+            "sprays": 824,
+            "profileVersion": "branch-grammar-1"
+          },
+          "textureAudit": [
+            {
+              "width": 1254,
+              "height": 1254,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8386752,
+              "source": "/assets/savanna-recipe/painted-fibre-v1.webp"
+            },
+            {
+              "width": 1774,
+              "height": 887,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8392203,
+              "source": "/assets/puget-v1/sky-matte-v1.webp"
+            },
+            {
+              "width": 2048,
+              "height": 2048,
+              "mipmaps": true,
+              "estimatedRGBABytes": 22369621,
+              "source": "/assets/puget-v1/grass.png"
+            },
+            {
+              "width": 64,
+              "height": 64,
+              "mipmaps": false,
+              "estimatedRGBABytes": 16384,
+              "source": "generated canvas"
+            },
+            {
+              "width": 512,
+              "height": 384,
+              "mipmaps": true,
+              "estimatedRGBABytes": 1048576,
+              "source": "generated canvas"
+            },
+            {
+              "width": 1024,
+              "height": 512,
+              "mipmaps": false,
+              "estimatedRGBABytes": 2097152,
+              "source": "generated canvas"
+            },
+            {
+              "width": 2172,
+              "height": 724,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8386816,
+              "source": "/assets/savanna-hills/golden-ridges-v1.webp"
+            }
+          ],
+          "guard": {
+            "before": "e6881fe4",
+            "after": "e6881fe4",
+            "match": true,
+            "scope": "Declared ground/distant presentation, added hill continuation, decorative grass and rock targets; existing terrain vertices, primary trees, sky, lights and fog guarded."
+          },
+          "layout": {
+            "count": 2695,
+            "matrixDigest": "66230351"
+          },
+          "deterministic": true,
+          "errors": []
+        }
+      ],
+      "overdraw": {
+        "mode": "overdraw",
+        "width": 320,
+        "height": 180,
+        "meanAlphaLayersPerOccupiedPixel": 6.730713245997089,
+        "meanQuadLayersPerScreenPixel": 0.6182291666666667,
+        "alphaRejectedFraction": 0.7402976691940466,
+        "coverage": 0.023854166666666666,
+        "peakLayers": 23,
+        "saturatedPixels": 0,
+        "texture": {
+          "width": 512,
+          "height": 384
+        },
+        "method": "Depth-disabled additive raster proxy, alpha-tested versus whole spray surfaces. 8-bit counts cap at255; not hardware fragment counters or normal depth-tested cost."
+      }
+    },
+    {
+      "label": "plains-final-A-41",
+      "frames": [
+        {
+          "view": "hero",
+          "camera": {
+            "position": [
+              0,
+              1.1788332948589335,
+              34
+            ],
+            "quaternion": [
+              0.015611043329352575,
+              0.018506744686680933,
+              -0.0002889943225312114,
+              0.9997068131255046
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "performance": {
+            "calls": 11,
+            "triangles": 111230,
+            "cpuSubmissionMs": [
+              0.699999988079071,
+              0.5,
+              0.5
+            ],
+            "synchronousCompletionMs": [
+              0.699999988079071,
+              0.5,
+              0.5
+            ],
+            "pixelRatio": 1,
+            "textureObjects": 11,
+            "geometryObjects": 14,
+            "antialias": false
+          },
+          "tree": {
+            "candidate": "A",
+            "heroId": "tree-32-open-savanna-0",
+            "position": [
+              -15.584351040888578,
+              -0.14444900624670085,
+              -1.2527983547188342
+            ],
+            "seed": "1943941216",
+            "appearanceSeed": "3796688730",
+            "dimensions": {
+              "height": 9.309248131394153,
+              "crownWidth": 19.483183918012244,
+              "crownDepth": 18.56310409706544
+            },
+            "segments": 970,
+            "groups": 222,
+            "sprays": 888,
+            "profileVersion": "branch-grammar-1"
+          },
+          "textureAudit": [
+            {
+              "width": 1254,
+              "height": 1254,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8386752,
+              "source": "/assets/savanna-recipe/painted-fibre-v1.webp"
+            },
+            {
+              "width": 1774,
+              "height": 887,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8392203,
+              "source": "/assets/puget-v1/sky-matte-v1.webp"
+            },
+            {
+              "width": 2048,
+              "height": 2048,
+              "mipmaps": true,
+              "estimatedRGBABytes": 22369621,
+              "source": "/assets/puget-v1/grass.png"
+            },
+            {
+              "width": 64,
+              "height": 64,
+              "mipmaps": false,
+              "estimatedRGBABytes": 16384,
+              "source": "generated canvas"
+            },
+            {
+              "width": 512,
+              "height": 384,
+              "mipmaps": true,
+              "estimatedRGBABytes": 1048576,
+              "source": "generated canvas"
+            },
+            {
+              "width": 1024,
+              "height": 512,
+              "mipmaps": false,
+              "estimatedRGBABytes": 2097152,
+              "source": "generated canvas"
+            },
+            {
+              "width": 2172,
+              "height": 724,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8386816,
+              "source": "/assets/savanna-hills/golden-ridges-v1.webp"
+            }
+          ],
+          "guard": {
+            "before": "9368b55d",
+            "after": "9368b55d",
+            "match": true,
+            "scope": "Declared ground/distant presentation, added hill continuation, decorative grass and rock targets; existing terrain vertices, primary trees, sky, lights and fog guarded."
+          },
+          "layout": {
+            "count": 2695,
+            "matrixDigest": "15125f72"
+          },
+          "deterministic": true,
+          "errors": []
+        },
+        {
+          "view": "inspection",
+          "camera": {
+            "position": [
+              34,
+              23,
+              44
+            ],
+            "quaternion": [
+              -0.11289019307845702,
+              0.2798418085648005,
+              0.033156062656846556,
+              0.9528090270326922
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "performance": {
+            "calls": 11,
+            "triangles": 111230,
+            "cpuSubmissionMs": [
+              0.5,
+              0.20000001788139343,
+              0.8999999761581421
+            ],
+            "synchronousCompletionMs": [
+              0.5,
+              0.20000001788139343,
+              0.8999999761581421
+            ],
+            "pixelRatio": 1,
+            "textureObjects": 11,
+            "geometryObjects": 14,
+            "antialias": false
+          },
+          "tree": {
+            "candidate": "A",
+            "heroId": "tree-32-open-savanna-0",
+            "position": [
+              -15.584351040888578,
+              -0.14444900624670085,
+              -1.2527983547188342
+            ],
+            "seed": "1943941216",
+            "appearanceSeed": "3796688730",
+            "dimensions": {
+              "height": 9.309248131394153,
+              "crownWidth": 19.483183918012244,
+              "crownDepth": 18.56310409706544
+            },
+            "segments": 970,
+            "groups": 222,
+            "sprays": 888,
+            "profileVersion": "branch-grammar-1"
+          },
+          "textureAudit": [
+            {
+              "width": 1254,
+              "height": 1254,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8386752,
+              "source": "/assets/savanna-recipe/painted-fibre-v1.webp"
+            },
+            {
+              "width": 1774,
+              "height": 887,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8392203,
+              "source": "/assets/puget-v1/sky-matte-v1.webp"
+            },
+            {
+              "width": 2048,
+              "height": 2048,
+              "mipmaps": true,
+              "estimatedRGBABytes": 22369621,
+              "source": "/assets/puget-v1/grass.png"
+            },
+            {
+              "width": 64,
+              "height": 64,
+              "mipmaps": false,
+              "estimatedRGBABytes": 16384,
+              "source": "generated canvas"
+            },
+            {
+              "width": 512,
+              "height": 384,
+              "mipmaps": true,
+              "estimatedRGBABytes": 1048576,
+              "source": "generated canvas"
+            },
+            {
+              "width": 1024,
+              "height": 512,
+              "mipmaps": false,
+              "estimatedRGBABytes": 2097152,
+              "source": "generated canvas"
+            },
+            {
+              "width": 2172,
+              "height": 724,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8386816,
+              "source": "/assets/savanna-hills/golden-ridges-v1.webp"
+            }
+          ],
+          "guard": {
+            "before": "9368b55d",
+            "after": "9368b55d",
+            "match": true,
+            "scope": "Declared ground/distant presentation, added hill continuation, decorative grass and rock targets; existing terrain vertices, primary trees, sky, lights and fog guarded."
+          },
+          "layout": {
+            "count": 2695,
+            "matrixDigest": "15125f72"
+          },
+          "deterministic": true,
+          "errors": []
+        }
+      ],
+      "overdraw": {
+        "mode": "overdraw",
+        "width": 320,
+        "height": 180,
+        "meanAlphaLayersPerOccupiedPixel": 7.357088122605364,
+        "meanQuadLayersPerScreenPixel": 0.6486631944444444,
+        "alphaRejectedFraction": 0.7430345528999278,
+        "coverage": 0.02265625,
+        "peakLayers": 25,
+        "saturatedPixels": 0,
+        "texture": {
+          "width": 512,
+          "height": 384
+        },
+        "method": "Depth-disabled additive raster proxy, alpha-tested versus whole spray surfaces. 8-bit counts cap at255; not hardware fragment counters or normal depth-tested cost."
+      }
+    },
+    {
+      "label": "plains-final-A-73",
+      "frames": [
+        {
+          "view": "hero",
+          "camera": {
+            "position": [
+              0,
+              3.337687396021777,
+              34
+            ],
+            "quaternion": [
+              -0.0016502412547528434,
+              0.018508975750738472,
+              0.000030549550300308646,
+              0.9998273318864535
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "performance": {
+            "calls": 11,
+            "triangles": 110962,
+            "cpuSubmissionMs": [
+              0.7999999821186066,
+              0.7000000178813934,
+              0.5999999940395355
+            ],
+            "synchronousCompletionMs": [
+              0.7999999821186066,
+              0.7000000178813934,
+              0.5999999940395355
+            ],
+            "pixelRatio": 1,
+            "textureObjects": 11,
+            "geometryObjects": 14,
+            "antialias": false
+          },
+          "tree": {
+            "candidate": "A",
+            "heroId": "tree-24-open-savanna-0",
+            "position": [
+              -16.95316794887185,
+              0.45719127720626507,
+              -2.193507043644786
+            ],
+            "seed": "337466243",
+            "appearanceSeed": "3796835825",
+            "dimensions": {
+              "height": 9.354756288143868,
+              "crownWidth": 20.706089920855145,
+              "crownDepth": 20.294373546370984
+            },
+            "segments": 940,
+            "groups": 214,
+            "sprays": 856,
+            "profileVersion": "branch-grammar-1"
+          },
+          "textureAudit": [
+            {
+              "width": 1254,
+              "height": 1254,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8386752,
+              "source": "/assets/savanna-recipe/painted-fibre-v1.webp"
+            },
+            {
+              "width": 1774,
+              "height": 887,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8392203,
+              "source": "/assets/puget-v1/sky-matte-v1.webp"
+            },
+            {
+              "width": 2048,
+              "height": 2048,
+              "mipmaps": true,
+              "estimatedRGBABytes": 22369621,
+              "source": "/assets/puget-v1/grass.png"
+            },
+            {
+              "width": 64,
+              "height": 64,
+              "mipmaps": false,
+              "estimatedRGBABytes": 16384,
+              "source": "generated canvas"
+            },
+            {
+              "width": 512,
+              "height": 384,
+              "mipmaps": true,
+              "estimatedRGBABytes": 1048576,
+              "source": "generated canvas"
+            },
+            {
+              "width": 1024,
+              "height": 512,
+              "mipmaps": false,
+              "estimatedRGBABytes": 2097152,
+              "source": "generated canvas"
+            },
+            {
+              "width": 2172,
+              "height": 724,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8386816,
+              "source": "/assets/savanna-hills/golden-ridges-v1.webp"
+            }
+          ],
+          "guard": {
+            "before": "99c03a15",
+            "after": "99c03a15",
+            "match": true,
+            "scope": "Declared ground/distant presentation, added hill continuation, decorative grass and rock targets; existing terrain vertices, primary trees, sky, lights and fog guarded."
+          },
+          "layout": {
+            "count": 2695,
+            "matrixDigest": "5796aadf"
+          },
+          "deterministic": true,
+          "errors": []
+        },
+        {
+          "view": "inspection",
+          "camera": {
+            "position": [
+              34,
+              23,
+              44
+            ],
+            "quaternion": [
+              -0.11289019307845702,
+              0.2798418085648005,
+              0.033156062656846556,
+              0.9528090270326922
+            ],
+            "aspect": 1.7777777777777777,
+            "fov": 47
+          },
+          "performance": {
+            "calls": 11,
+            "triangles": 110962,
+            "cpuSubmissionMs": [
+              0.5,
+              2.5999999940395355,
+              0.5
+            ],
+            "synchronousCompletionMs": [
+              0.5,
+              2.5999999940395355,
+              0.5
+            ],
+            "pixelRatio": 1,
+            "textureObjects": 11,
+            "geometryObjects": 14,
+            "antialias": false
+          },
+          "tree": {
+            "candidate": "A",
+            "heroId": "tree-24-open-savanna-0",
+            "position": [
+              -16.95316794887185,
+              0.45719127720626507,
+              -2.193507043644786
+            ],
+            "seed": "337466243",
+            "appearanceSeed": "3796835825",
+            "dimensions": {
+              "height": 9.354756288143868,
+              "crownWidth": 20.706089920855145,
+              "crownDepth": 20.294373546370984
+            },
+            "segments": 940,
+            "groups": 214,
+            "sprays": 856,
+            "profileVersion": "branch-grammar-1"
+          },
+          "textureAudit": [
+            {
+              "width": 1254,
+              "height": 1254,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8386752,
+              "source": "/assets/savanna-recipe/painted-fibre-v1.webp"
+            },
+            {
+              "width": 1774,
+              "height": 887,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8392203,
+              "source": "/assets/puget-v1/sky-matte-v1.webp"
+            },
+            {
+              "width": 2048,
+              "height": 2048,
+              "mipmaps": true,
+              "estimatedRGBABytes": 22369621,
+              "source": "/assets/puget-v1/grass.png"
+            },
+            {
+              "width": 64,
+              "height": 64,
+              "mipmaps": false,
+              "estimatedRGBABytes": 16384,
+              "source": "generated canvas"
+            },
+            {
+              "width": 512,
+              "height": 384,
+              "mipmaps": true,
+              "estimatedRGBABytes": 1048576,
+              "source": "generated canvas"
+            },
+            {
+              "width": 1024,
+              "height": 512,
+              "mipmaps": false,
+              "estimatedRGBABytes": 2097152,
+              "source": "generated canvas"
+            },
+            {
+              "width": 2172,
+              "height": 724,
+              "mipmaps": true,
+              "estimatedRGBABytes": 8386816,
+              "source": "/assets/savanna-hills/golden-ridges-v1.webp"
+            }
+          ],
+          "guard": {
+            "before": "99c03a15",
+            "after": "99c03a15",
+            "match": true,
+            "scope": "Declared ground/distant presentation, added hill continuation, decorative grass and rock targets; existing terrain vertices, primary trees, sky, lights and fog guarded."
+          },
+          "layout": {
+            "count": 2695,
+            "matrixDigest": "5796aadf"
+          },
+          "deterministic": true,
+          "errors": []
+        }
+      ],
+      "overdraw": {
+        "mode": "overdraw",
+        "width": 320,
+        "height": 180,
+        "meanAlphaLayersPerOccupiedPixel": 6.595521343596921,
+        "meanQuadLayersPerScreenPixel": 0.6258159722222222,
+        "alphaRejectedFraction": 0.7385358004827032,
+        "coverage": 0.024809027777777777,
+        "peakLayers": 36,
+        "saturatedPixels": 0,
+        "texture": {
+          "width": 512,
+          "height": 384
+        },
+        "method": "Depth-disabled additive raster proxy, alpha-tested versus whole spray surfaces. 8-bit counts cap at255; not hardware fragment counters or normal depth-tested cost."
+      }
+    }
+  ],
+  "protectedImages": [
+    {
+      "biome": "savanna",
+      "view": "hero",
+      "byteIdentical": true,
+      "baseline": "artifacts/visual-quality/recipe-A1-baseline/savanna-hero.png",
+      "after": "artifacts/visual-quality/plains-protected/savanna-hero.png"
+    },
+    {
+      "biome": "savanna",
+      "view": "inspection",
+      "byteIdentical": true,
+      "baseline": "artifacts/visual-quality/recipe-A1-baseline/savanna-inspection.png",
+      "after": "artifacts/visual-quality/plains-protected/savanna-inspection.png"
+    },
+    {
+      "biome": "puget",
+      "view": "hero",
+      "byteIdentical": true,
+      "baseline": "artifacts/visual-quality/lab-initial/puget-hero.png",
+      "after": "artifacts/visual-quality/plains-protected/puget-hero.png"
+    },
+    {
+      "biome": "rainforest",
+      "view": "hero",
+      "byteIdentical": true,
+      "baseline": "artifacts/visual-quality/lab-initial/rainforest-hero.png",
+      "after": "artifacts/visual-quality/plains-protected/rainforest-hero.png"
+    },
+    {
+      "biome": "rainforest",
+      "view": "inspection",
+      "byteIdentical": true,
+      "baseline": "artifacts/visual-quality/lab-initial/rainforest-inspection.png",
+      "after": "artifacts/visual-quality/plains-protected/rainforest-inspection.png"
+    }
+  ],
+  "retainedR2Exact": true,
+  "selectedARepeatExact": true,
+  "finalARepeatExact": true,
+  "limitations": [
+    "Overdraw is an isolated depth-disabled additive proxy, not GPU hardware counters.",
+    "Wall-time gl.finish probes are not mobile FPS.",
+    "Texture bytes estimate RGBA8 plus mip chain, not actual driver allocation.",
+    "Fixed camera images and source-model attachment checks cannot approve aesthetics."
+  ]
+}

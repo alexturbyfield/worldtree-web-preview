@@ -1,0 +1,97 @@
+{
+  "task": "Prairie landscape composition and distance",
+  "seed": 29,
+  "loaded": [
+    "AGENTS.md supplied instructions",
+    "prototype-fast skill",
+    "prairie construction plan",
+    "previous rejected grass review",
+    "actual primary concept and before/after hero/elevated images"
+  ],
+  "reviewer": "Codex primary-agent image interpretation",
+  "humanApproval": null,
+  "decision": "retain experimental prototype for review, target not met",
+  "hypothesis": "Connected habitat swaths and continuous low shoulders supply middle/far hierarchy without replacing grass.",
+  "observations": [
+    "Hero: left skyline has overlapping landforms; low shrub groups establish a connected left middle margin.",
+    "Hero: right near rise still obscures middle and far development; foreground remains smooth and sparse.",
+    "Inspection: added communities and shoulders remain attached to continuous terrain; coarse broad terrain shading predates this change."
+  ],
+  "severity": "major remaining composition gap",
+  "sourceFiles": [
+    "src/lib/forest/prairie-landscape.ts",
+    "src/lib/forest/wave3-prairie.ts",
+    "src/lib/forest/wave3-prairie-dressing.ts"
+  ],
+  "newSourceHash": "faab7a2d7ec1b7745b778a663d47750c26339a156980e73afedf97200809526b",
+  "comparison": "artifacts\\prairie-composition\\comparison.png",
+  "checks": {
+    "typescript": "npx tsc --noEmit passed",
+    "captureErrors": 0,
+    "cameraUnchanged": true,
+    "renderSettingsUnchanged": true,
+    "before": [
+      {
+        "frame": 6,
+        "calls": 7,
+        "triangles": 201144,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.19999998807907104
+      },
+      {
+        "frame": 7,
+        "calls": 7,
+        "triangles": 201144,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.19999998807907104
+      },
+      {
+        "frame": 8,
+        "calls": 7,
+        "triangles": 201144,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      }
+    ],
+    "after": [
+      {
+        "frame": 6,
+        "calls": 12,
+        "triangles": 693034,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 7,
+        "calls": 12,
+        "triangles": 693034,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      },
+      {
+        "frame": 8,
+        "calls": 12,
+        "triangles": 693034,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      }
+    ],
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "limitations": "No mobile test, holdouts or broad regressions; clearance detector is not character physics."
+  },
+  "nextRecommendation": "Review whether to lower the occluding middle crest while preserving the near footing and camera; no further correction performed."
+}

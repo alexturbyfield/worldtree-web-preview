@@ -1,0 +1,231 @@
+import {prettySceneEnabled,prettyScenePlan,installPrettyFoliage} from './pretty-scene';
+import {rainforestV5,installRainforestDepthResponse} from './rainforest-depth';
+import {rainforestV4} from './composition-archetype';
+import {biomeCompositionProfile,biomeVisualProfile,composeBiomeEncounter,type BiomeRecipe} from './biome-visual';
+import {installTreeAttention,sceneAttention,pugetCompositionProfile,resolveEncounterComposition,type EnvironmentOptions} from './environment-foundations';
+import {dressEncounter,encounterCamera,type EncounterRecipe} from './encounter';
+import {libraryFoliageBatch,libraryPickClumps} from './library';
+import * as THREE from 'three';
+import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
+import type {SceneRecipe} from './recipe';
+import {terrainHeight} from './recipe';
+import {treeExperiment,treeStudyRendering} from './tree-experiment';
+import {brushTexture,paintedWoodGeometry} from './paint-assets';
+import {generateCanopy,defaultCanopy} from './canopy';
+import {generateCanopyBillboards,transformCanopyNormal} from './canopy-billboards';
+import {batchCanopyBillboards,canopyBillboardMaterial,installCanopyShader} from './canopy-billboard-material';
+import type {PaintedTree} from './painterly';
+import type {BenchmarkResult,CameraView,RenderOptions,RenderStats} from './render-types';
+
+export function mountPaintedForest(host:HTMLDivElement,recipe:SceneRecipe,onPick:(index:number|null)=>void,onStats:(stats:RenderStats)=>void,onError:(message:string)=>void,view?:CameraView,options:RenderOptions&{environment?:false|EnvironmentOptions}={}) {
+  const biome=biomeVisualProfile(recipe);
+  if(biome?.id==='amazon'&&rainforestV4()&&new URLSearchParams(location.search).get('camera')==='inspection'&&!(recipe as BiomeRecipe).encounter){
+    const inspection=composeBiomeEncounter(recipe,biome);recipe={...inspection,encounter:{...inspection.encounter!,camera:'inspection'}} as BiomeRecipe;
+  }
+  const start=performance.now(),lab=!!options.lab,coarse=matchMedia('(pointer: coarse)').matches||host.clientWidth<600;
+  const renderer=new THREE.WebGLRenderer({antialias:false,powerPreference:'low-power'});
+  const gl=renderer.getContext(),debugInfo=gl.getExtension('WEBGL_debug_renderer_info');
+  const rendererName=String(debugInfo?gl.getParameter(debugInfo.UNMASKED_RENDERER_WEBGL):gl.getParameter(gl.RENDERER));
+  const software=/swiftshader|llvmpipe|software|softpipe/i.test(rendererName),mobile=coarse||(!lab&&software);
+  const quality=software?(coarse?'mobile / software':lab?'studio / software':'software economy'):mobile?'mobile':'desktop';
+  const performanceMode=recipe.renderMode==='performance';
+  const maxPixelRatio=lab?(coarse?1.25:1.75):software?(performanceMode?.55:.65):coarse?(performanceMode?.85:1):1.75;
+  renderer.setPixelRatio(Math.min(devicePixelRatio,maxPixelRatio));
+  renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=false;renderer.shadowMap.needsUpdate=true;
+  renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.12;
+  renderer.domElement.setAttribute('aria-label','Interactive painterly trees. Drag to orbit, pinch to zoom, tap a tree to inspect.');renderer.domElement.setAttribute('role','img');host.appendChild(renderer.domElement);
+  const scene=new THREE.Scene();scene.background=new THREE.Color(lab?'#e3e9dd':'#dde7de');scene.fog=new THREE.Fog(lab?'#e3e9dd':'#dde7de',lab?110:95,lab?260:230);
+  const camera=new THREE.PerspectiveCamera(lab?38:47,1,.2,350),controls=new OrbitControls(camera,renderer.domElement);
+  const model=recipe.trees[0]?.model,treeHeight=model?.dimensions.height??18;
+  camera.position.set(...(lab?[treeHeight*1.05,treeHeight*.65,treeHeight*1.5]:[58,39,70]) as [number,number,number]);
+  controls.target.set(0,lab?treeHeight*.43:9,0);controls.enableDamping=true;controls.dampingFactor=.1;controls.minDistance=lab?.8:12;controls.maxDistance=lab?90:175;controls.maxPolarAngle=Math.PI*.49;controls.minPolarAngle=.08;
+  controls.touches.ONE=THREE.TOUCH.ROTATE;controls.touches.TWO=THREE.TOUCH.DOLLY_PAN;
+  view??=(recipe as BiomeRecipe).biomeVisualId==='amazon'&&rainforestV4()&&(recipe as BiomeRecipe).encounter?.camera==='inspection'?{position:[50,46,60],target:[-2,7,-12]}:encounterCamera(recipe as EncounterRecipe);
+  if(view){camera.position.set(...view.position);controls.target.set(...view.target);}
+  // Amazon-only: V3's maxPolarAngle forced its upward-looking human camera to ~10 m.
+  if((recipe as BiomeRecipe).biomeVisualId==='amazon'&&rainforestV4()&&(recipe as BiomeRecipe).encounter?.camera==='human'){
+    controls.maxPolarAngle=Math.PI*.65;camera.position.set(0,terrainHeight(0,29,recipe.seed)+1.7,29);controls.target.set(-1,9,-6);
+  }
+  scene.add(new THREE.HemisphereLight('#e7f3ff','#b8c5a3',2.3));
+  const fill=new THREE.DirectionalLight('#bed4e6',.95);fill.position.set(30,18,-35);scene.add(fill);
+  const sun=new THREE.DirectionalLight('#ffedc2',3.2);sun.position.set(-28,46,24);sun.castShadow=true;
+  const extent=lab?24:64;Object.assign(sun.shadow.camera,{left:-extent,right:extent,top:extent,bottom:-extent,far:150});sun.shadow.mapSize.set(mobile?1024:2048,mobile?1024:2048);sun.shadow.normalBias=.12;sun.shadow.bias=-.0003;scene.add(sun);scene.add(sun.target);
+  const arid=recipe.ecoregion?.BIOME_NUM===13,ice=recipe.ecoregion?.ECO_ID===0;
+  if(lab){
+    const ground=new THREE.Mesh(new THREE.CylinderGeometry(10,10.5,.5,64),new THREE.MeshStandardMaterial({color:'#a7ae83',roughness:1}));ground.position.y=-.25;ground.receiveShadow=true;scene.add(ground);
+    const floor=new THREE.Mesh(new THREE.PlaneGeometry(200,200),new THREE.MeshStandardMaterial({color:'#e3e7d7',roughness:1}));floor.rotation.x=-Math.PI/2;floor.position.y=-.55;floor.receiveShadow=true;scene.add(floor);
+  }else{
+    const geometry=new THREE.PlaneGeometry(100,100,32,32);geometry.rotateX(-Math.PI/2);const p=geometry.getAttribute('position'),colors:number[]=[];
+    const soil=new THREE.Color(ice?'#dce2df':arid?'#baa47a':'#929e68'),path=new THREE.Color(ice?'#c5d0cc':arid?'#c9b384':'#bdaf84');
+    for(let i=0;i<p.count;i++){const x=p.getX(i),z=p.getZ(i);p.setY(i,terrainHeight(x,z,recipe.seed));const t=Math.max(0,1-Math.abs(x-3*Math.sin(z*.045))/3);const c=soil.clone().lerp(path,t).multiplyScalar(.96+Math.sin(x*.13+z*.19)*.045);colors.push(c.r,c.g,c.b);}
+    geometry.setAttribute('color',new THREE.Float32BufferAttribute(colors,3));geometry.computeVertexNormals();
+    const ground=new THREE.Mesh(geometry,new THREE.MeshStandardMaterial({vertexColors:true,roughness:1}));ground.receiveShadow=true;scene.add(ground);
+    const edge=new THREE.Mesh(new THREE.BoxGeometry(100,3,100),new THREE.MeshStandardMaterial({color:ice?'#aab7b1':'#7a7154',roughness:1}));edge.position.y=-3;scene.add(edge);
+  }
+  const foundations=!!(recipe as EncounterRecipe).encounter&&options.environment!==false;
+  const compositionMode=new URLSearchParams(location.search).get('composition')??'C';
+  const anchored=foundations&&(recipe as EncounterRecipe).encounter?.camera==='human';
+  if(anchored&&compositionMode!=='A'&&options.environment!==false&&options.environment?.composition!==false){
+    camera.aspect=host.clientWidth/Math.max(1,host.clientHeight);camera.updateProjectionMatrix();controls.update();camera.updateMatrixWorld();
+    const profile=options.environment?.composition||biomeCompositionProfile(recipe);
+    if(new URLSearchParams(location.search).get('foregroundTrees')!=='legacy'){
+      const forward=camera.getWorldDirection(new THREE.Vector3()).setY(0).normalize(),minimum=profile.framing.treeClearance??18;
+      const excluded:number[]=[];
+      const trees=recipe.trees.filter(tree=>{const center=new THREE.Vector3(...tree.position).sub(camera.position),crownReach=Math.max(tree.model.dimensions.crownWidth,tree.model.dimensions.crownDepth)*.5;const keep=center.dot(forward)-crownReach>=minimum;if(!keep)excluded.push(tree.index);return keep;});
+      // Render-only exclusion: never mutate the canonical recipe or relocate an individual.
+      recipe={...recipe,trees};scene.userData.foregroundTreeRule={minimumCrownDistance:minimum,excluded,visible:trees.map(t=>t.index)};
+    }
+    scene.userData.composition=resolveEncounterComposition(recipe,camera,profile);scene.userData.compositionMode=compositionMode;
+  }
+  const disposeEncounter=dressEncounter(scene,recipe as EncounterRecipe,mobile,foundations);
+  if(scene.userData.environmentArt){sun.color.set('#ffe1a4');sun.intensity=4.1;fill.color.set('#779cb9');fill.intensity=.42;scene.children.forEach(o=>{if(o instanceof THREE.HemisphereLight)o.intensity=1.15;});scene.fog=new THREE.Fog('#c5d9cc',76,175);}
+  const lighting=new URLSearchParams(location.search).get('lighting')??'final';
+  const directLighting=foundations&&lighting!=='baseline';
+  if(directLighting){sun.position.set(-36,38,22);sun.color.set('#ffe0a8');sun.intensity=4.8;fill.intensity=.18;scene.children.forEach(o=>{if(o instanceof THREE.HemisphereLight){o.color.set('#a3c4df');o.groundColor.set('#52726a');o.intensity=.75;}});}
+  const composition=scene.userData.composition as ReturnType<typeof resolveEncounterComposition>|undefined;
+  if(composition&&compositionMode==='C'){
+    const light=composition.profile.light;sun.position.set(...light.position);sun.color.set(light.color);sun.intensity=light.intensity;sun.shadow.radius=light.shadowSoftness;sun.shadow.intensity=light.shadowStrength;
+    if(scene.userData.groundCompositionLighting){sun.shadow.intensity=Math.min(light.shadowStrength,.72);scene.children.forEach(o=>{if(o instanceof THREE.HemisphereLight){o.intensity=Math.max(light.ambientIntensity,.85);o.groundColor.set('#6c8f75');}});}
+    scene.children.forEach(o=>{if(o instanceof THREE.HemisphereLight){o.color.set(light.ambientColor);o.intensity=scene.userData.groundCompositionLighting?Math.max(light.ambientIntensity,.85):light.ambientIntensity;if(scene.userData.biomeVisual)o.groundColor.set(scene.userData.biomeVisual.profile.light.shadowColor);}});
+  }
+  const requestedTree=new URLSearchParams(location.search).get('treeStudy'),experiment=biome?.id==='savanna'?treeExperiment(recipe,requestedTree,scene.userData.prettyScene?.hero.id):{recipe};recipe=experiment.recipe;
+  if(experiment.hero)scene.userData.treeStudy={candidate:requestedTree,heroId:experiment.hero.id,position:experiment.hero.position,seed:experiment.hero.seed,appearanceSeed:experiment.hero.appearanceSeed,dimensions:experiment.hero.model.dimensions,segments:experiment.hero.model.segments.length,groups:experiment.hero.studio?.groups.length??0,sprays:experiment.hero.studio?.fronds.length??0,profileVersion:'branch-grammar-1'};
+  const attention={...sceneAttention(recipe,options.environment||{}),sun:directLighting?sun:undefined,composition:compositionMode==='C'?composition:undefined};
+  const gradedMaterials=new Set<THREE.Material>();
+  const grade=(material:THREE.Material,kind:'library'|'billboards'|'wood',deciduous=false)=>{if(foundations&&!gradedMaterials.has(material)){installTreeAttention(material,kind,{...attention,deciduous});if(biomeVisualProfile(recipe)?.id==='amazon'&&rainforestV4()&&rainforestV5())installRainforestDepthResponse(material,kind);if(directLighting&&biome&&prettySceneEnabled(biome.id))installPrettyFoliage(material,kind,prettyScenePlan(recipe,biome.id as 'savanna'|'amazon'));gradedMaterials.add(material);}};
+  const bark=brushTexture('bark'),woodMaterial=new THREE.MeshStandardMaterial({map:bark,vertexColors:true,roughness:1,wireframe:options.debug==='wireframe'});
+  grade(woodMaterial,'wood');
+  const pickables:THREE.Object3D[]=[],lods:THREE.Group[]=[],cardCounts:number[]=[];
+  const debugSkeleton=options.debug==='skeleton';
+  const foliageResources:ReturnType<typeof canopyBillboardMaterial>[]=[];
+  const canopies=recipe.trees.map(t=>t.studio?{controls:defaultCanopy,clumps:libraryPickClumps(t.studio),coarseClumps:libraryPickClumps(t.studio)}:t.canopy??generateCanopy(t.model as PaintedTree)),clumpCounts:number[]=[];
+  const libraryResources:ReturnType<typeof libraryFoliageBatch>[]=[],libraryMaterials=new Map<string,THREE.ShaderMaterial>();
+  let diagnosticFoliage:THREE.Mesh|undefined;
+  const libraryGroups=new Map<string,typeof recipe.trees>();
+  for(const tree of recipe.trees)if(tree.studio){const id=tree.studio.model.presetId,list=libraryGroups.get(id)??[];list.push(tree);libraryGroups.set(id,list);}
+  const allCards=recipe.trees.flatMap((t,i)=>t.studio?[]:generateCanopyBillboards(canopies[i].clumps,t.model.presetId,t.seed,t.appearanceSeed??recipe.appearanceSeed,false,performanceMode,canopies[i].controls.surfaceLeafDetail).map(card=>({t,card})));
+  if(debugSkeleton){
+    const points:number[]=[];for(const t of recipe.trees)for(const segment of t.model.segments)for(const p of [segment.a,segment.b])points.push(p[0]+t.position[0],p[1]+t.position[1],p[2]+t.position[2]);
+    const geometry=new THREE.BufferGeometry();geometry.setAttribute('position',new THREE.Float32BufferAttribute(points,3));scene.add(new THREE.LineSegments(geometry,new THREE.LineBasicMaterial({color:'#375c48'})));
+  }else for(const far of [false,true]){
+    const group=new THREE.Group();lods.push(group);scene.add(group);if(!recipe.trees.length){cardCounts.push(0);clumpCounts.push(0);continue;}
+    const {geometry,faces}=paintedWoodGeometry(recipe.trees.map((t,i)=>({model:{...t.model,segments:t.model.segments.filter(segment=>segment.depth===0||(t.studio&&segment.depth<=2)||(t.model.presetId==='acacia'&&segment.depth<=2)||(segment.depth===1&&canopies[i].controls.branchExposure>.28)||(segment.depth>1&&canopies[i].controls.branchExposure>.7))},position:t.position,rotation:t.rotation})),far,mobile);
+    faces.forEach(face=>{face.treeIndex=recipe.trees[face.treeIndex].index;});
+    const wood=new THREE.Mesh(geometry,woodMaterial);wood.castShadow=true;wood.userData.faces=faces;group.add(wood);pickables.push(wood);
+    let libraryCards=0;
+    for(const [id,trees] of libraryGroups){
+      const resource=libraryFoliageBatch(trees,id,recipe.appearanceSeed,mobile,far||performanceMode,options.debug==='wireframe',libraryMaterials.get(id));
+      grade(resource.mesh.material,'library',!/(douglas|pine|spruce|cedar|ponderosa)/.test(id));
+      if(directLighting){
+        const depth=new THREE.MeshDepthMaterial({depthPacking:THREE.RGBADepthPacking,map:resource.texture,alphaTest:.34,side:THREE.DoubleSide});
+        depth.onBeforeCompile=shader=>{shader.uniforms.shadowAtlas={value:resource.texture};shader.vertexShader='attribute vec4 tileRect;varying vec2 shadowAtlasUv;\n'+shader.vertexShader;shader.vertexShader=shader.vertexShader.replace('#include <uv_vertex>','#include <uv_vertex>\nshadowAtlasUv=tileRect.xy+uv*tileRect.zw;');shader.fragmentShader='uniform sampler2D shadowAtlas;varying vec2 shadowAtlasUv;\n'+shader.fragmentShader;shader.fragmentShader=shader.fragmentShader.replace('void main() {','void main() { if(texture2D(shadowAtlas,shadowAtlasUv).a<.34)discard;');};
+        depth.customProgramCacheKey=()=> 'wildloom-canopy-shadow-v1';resource.mesh.customDepthMaterial=depth;resource.mesh.castShadow=true;
+      }
+      libraryMaterials.set(id,resource.mesh.material);libraryResources.push(resource);resource.mesh.userData.foliageBillboards=true;group.add(resource.mesh);libraryCards+=resource.cards;
+      if(!far&&experiment.hero?.studio&&trees.some(t=>t.id===experiment.hero!.id)){diagnosticFoliage=new THREE.Mesh(resource.mesh.geometry,resource.mesh.material);resource.mesh.material.uniforms.shadowPigment.value.set(treeStudyRendering.shadow);resource.mesh.material.uniforms.midPigment.value.set(treeStudyRendering.body);resource.mesh.material.uniforms.sage.value=treeStudyRendering.sage;resource.mesh.material.uniforms.rimStrength.value=treeStudyRendering.rim;resource.mesh.material.uniforms.highPigment.value.set(treeStudyRendering.highlight);if(requestedTree==='C2'&&directLighting){const m=resource.mesh.material;m.uniforms.shadowPigment.value.set('#283D30');m.uniforms.midPigment.value.set('#879347');m.uniforms.highPigment.value.set('#C6B85B');m.uniforms.rimStrength.value=.38;const previous=m.onBeforeCompile;m.onBeforeCompile=function(shader,renderer){previous.call(this,shader,renderer);shader.fragmentShader=shader.fragmentShader.replace('gl_FragColor=vec4(shaded,1.);',`float crownH=smoothstep(.24,.85,attentionHeight);float crownFace=smoothstep(.12,.82,actualNdotL);shaded=mix(shaded,shaded*vec3(1.23,1.12,.82),crownH*crownFace*.55);gl_FragColor=vec4(shaded,1.);`);};m.customProgramCacheKey=()=> 'c2-connected-crown-1';}}
+    }
+    // The ellipsoids remain data only. Final Painterly/Performance contain NO solid canopy meshes.
+    clumpCounts.push(0);
+    const resource=canopyBillboardMaterial(recipe.appearanceSeed,performanceMode||mobile,options.debug==='wireframe',foliageResources[0],far);foliageResources.push(resource);
+    grade(resource.material,'billboards');
+    const data=far?recipe.trees.flatMap((t,i)=>t.studio?[]:generateCanopyBillboards(canopies[i].coarseClumps,t.model.presetId,t.seed,t.appearanceSeed??recipe.appearanceSeed,true,performanceMode,canopies[i].controls.surfaceLeafDetail).map(card=>({t,card}))):allCards;
+    const cards=data.map(d=>d.card);cardCounts.push(cards.length+libraryCards);if(!cards.length)continue;
+    const world=new THREE.Matrix4();
+    const worldCards=data.map(({t,card})=>{
+      const scaffold=(far?canopies[recipe.trees.indexOf(t)].coarseClumps:canopies[recipe.trees.indexOf(t)].clumps)[card.scaffoldId],c=Math.cos(t.rotation),sn=Math.sin(t.rotation),offset=new THREE.Vector3(...card.position).sub(new THREE.Vector3(...scaffold.position)).applyAxisAngle(new THREE.Vector3(0,1,0),t.rotation);
+      const position:typeof card.position=[scaffold.position[0]*c-scaffold.position[2]*sn+t.position[0]+offset.x,scaffold.position[1]+t.position[1]+offset.y,scaffold.position[0]*sn+scaffold.position[2]*c+t.position[2]+offset.z];
+      const rotation=new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(0,1,0),t.rotation).multiply(new THREE.Quaternion(...card.rotation));world.makeRotationY(t.rotation);
+      return {...card,position,rotation:rotation.toArray(),normal:transformCanopyNormal(card.normal,world)};
+    });
+    const cardGeometry=batchCanopyBillboards(worldCards),mesh=new THREE.Mesh(cardGeometry,resource.material);
+    if(!far&&experiment.hero&&!experiment.hero.studio)diagnosticFoliage=new THREE.Mesh(batchCanopyBillboards(worldCards.filter((_,i)=>data[i].t.id===experiment.hero!.id)),resource.material);
+    mesh.userData.foliageBillboards=true;group.add(mesh);
+    if(options.debug==='cards'){
+      const outlineMaterial=new THREE.MeshBasicMaterial({color:'#d89239',wireframe:true,depthTest:false});installCanopyShader(outlineMaterial,resource.time,resource.amplitude,far?.68:.38);
+      const outlines=new THREE.Mesh(cardGeometry,outlineMaterial);outlines.renderOrder=4;outlines.frustumCulled=false;group.add(outlines);
+    }
+  }
+  if(experiment.hero&&diagnosticFoliage){const diag=new THREE.Group();diag.name='tree-study-diagnostics';diag.visible=false;const geometry=paintedWoodGeometry([{model:experiment.hero.model,position:experiment.hero.position,rotation:experiment.hero.rotation}],false,mobile).geometry,branch=new THREE.Mesh(geometry,woodMaterial);branch.name='tree-study-branches';diagnosticFoliage.name='tree-study-foliage';diag.add(branch,diagnosticFoliage);scene.add(diag);}
+  const ring=new THREE.Mesh(new THREE.RingGeometry(.95,1.22,32),new THREE.MeshBasicMaterial({color:'#ffdb8b',side:THREE.DoubleSide,depthTest:false}));ring.rotation.x=-Math.PI/2;ring.visible=false;ring.renderOrder=10;scene.add(ring);
+  let dirty=true,frame=0,stopped=false,lastReport=0,lastFar=false,frameCount=0,lastWindFrame=0;
+  const windEnabled=(recipe.wind??true)&&(allCards.length>0||libraryGroups.size>0)&&!debugSkeleton&&!matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const buildMs=performance.now()-start;
+  let measurement:{start:number;previous:number;intervals:number[];cpu:number[];resolve:(r:BenchmarkResult|null)=>void}|null=null;
+  renderer.debug.onShaderError=()=>{stopped=true;measurement?.resolve(null);measurement=null;onError('The painterly material could not compile on this graphics driver. Use the Diagram renderer to try the original simpler material.');};
+  const change=()=>{dirty=true;};controls.addEventListener('change',change);
+  let fitted=false;
+  const resize=()=>{if(!host.clientWidth||!host.clientHeight)return;camera.aspect=host.clientWidth/host.clientHeight;camera.updateProjectionMatrix();renderer.setSize(host.clientWidth,host.clientHeight);
+    if(lab&&!view&&!fitted&&model){
+      const d=model.dimensions;
+      const vertical=THREE.MathUtils.degToRad(camera.fov),horizontal=2*Math.atan(Math.tan(vertical/2)*camera.aspect);
+      const distance=(Math.max(d.height/2/Math.tan(vertical/2),Math.max(d.crownWidth,d.crownDepth)/2/Math.tan(horizontal/2))+Math.min(d.crownWidth,d.crownDepth)*.4)*1.08;
+      controls.maxDistance=Math.max(100,distance*1.8);controls.target.set(0,d.height*.48,0);camera.position.copy(controls.target).add(new THREE.Vector3(.62,.24,1).normalize().multiplyScalar(distance));fitted=true;
+    }dirty=true;};
+  const observer=new ResizeObserver(resize);observer.observe(host);resize();controls.update();
+  // Opt-in reference recipe fixes the old savanna camera's elevated OrbitControls clamp.
+  // Apply after population construction so documented trees and composition selection do not change.
+  if(scene.userData.recipeEye&&new URLSearchParams(location.search).get('labCandidate')?.startsWith('r-')){
+    const eye=scene.userData.recipeEye;controls.maxPolarAngle=Math.PI*.65;camera.position.fromArray(eye.position);controls.target.fromArray(eye.target);controls.update();
+  }
+  const ray=new THREE.Raycaster(),pointers=new Set<number>();let down:{x:number;y:number}|null=null;
+  const pointerDown=(e:PointerEvent)=>{pointers.add(e.pointerId);down=pointers.size===1?{x:e.clientX,y:e.clientY}:null;};
+  const pointerCancel=(e:PointerEvent)=>{pointers.delete(e.pointerId);down=null;};
+  const pointerUp=(e:PointerEvent)=>{
+    pointers.delete(e.pointerId);if(!down||Math.hypot(e.clientX-down.x,e.clientY-down.y)>7){down=null;return;}down=null;
+    const r=renderer.domElement.getBoundingClientRect();ray.setFromCamera(new THREE.Vector2((e.clientX-r.left)/r.width*2-1,-(e.clientY-r.top)/r.height*2+1),camera);
+    const woodHit=ray.intersectObjects(pickables.filter(o=>o.parent?.visible),false)[0];
+    let nearest=woodHit?.distance??Infinity,index:number|null=woodHit?woodHit.object.userData.faces?.find((f:{end:number})=>(woodHit.faceIndex??0)<f.end)?.treeIndex??null:null;
+    // Analytic invisible-scaffold picking remains stable while the shader tilts card corners.
+    const scaffoldWorld=new THREE.Matrix4(),q=new THREE.Quaternion(),localRay=new THREE.Ray(),hitPoint=new THREE.Vector3(),sphere=new THREE.Sphere(new THREE.Vector3(),1.12);
+    recipe.trees.forEach((t,i)=>{
+      for(const clump of lastFar?canopies[i].coarseClumps:canopies[i].clumps){
+        const [x,y,z]=clump.position,c=Math.cos(t.rotation),sn=Math.sin(t.rotation);scaffoldWorld.compose(new THREE.Vector3(x*c-z*sn+t.position[0],y+t.position[1],x*sn+z*c+t.position[2]),q.setFromAxisAngle(new THREE.Vector3(0,1,0),clump.rotation+t.rotation),new THREE.Vector3(...clump.scale));
+        localRay.copy(ray.ray).applyMatrix4(scaffoldWorld.clone().invert());
+        if(localRay.intersectSphere(sphere,hitPoint)){hitPoint.applyMatrix4(scaffoldWorld);const distance=ray.ray.origin.distanceTo(hitPoint);if(distance<nearest){nearest=distance;index=t.index;}}
+      }
+    });onPick(index);
+  };
+  const lost=(e:Event)=>{e.preventDefault();measurement?.resolve(null);measurement=null;stopped=true;onError('The WebGL context was lost. Reload to restore the scene; its seeds and ecological recipe are preserved.');};
+  renderer.domElement.addEventListener('pointerdown',pointerDown);renderer.domElement.addEventListener('pointerup',pointerUp);renderer.domElement.addEventListener('pointercancel',pointerCancel);renderer.domElement.addEventListener('webglcontextlost',lost);
+  let lastArtRevision=-1;
+  function animate(){
+    if(scene.userData.recipeShadowDirty){renderer.shadowMap.needsUpdate=true;scene.userData.recipeShadowDirty=false;}
+    if(lastArtRevision!==(scene.userData.artRevision??0)){lastArtRevision=scene.userData.artRevision??0;dirty=true;}
+    if(stopped)return;frame=requestAnimationFrame(animate);controls.update();const elapsed=performance.now();const windDue=windEnabled&&elapsed-lastWindFrame>(mobile?50:33);if(!dirty&&!measurement&&!windDue)return;dirty=false;lastWindFrame=elapsed;
+    foliageResources.forEach(r=>{r.time.value=(elapsed-start)/1000;r.amplitude.value=windEnabled?.045:0;});
+    libraryMaterials.forEach(m=>{m.uniforms.windTime.value=(elapsed-start)/1000;m.uniforms.windAmplitude.value=windEnabled?.045:0;});
+    const far=!lab&&camera.position.distanceTo(controls.target)>(mobile?76:125);lods.forEach((g,i)=>g.visible=far?i===1:i===0);
+    if(far!==lastFar){renderer.shadowMap.needsUpdate=true;lastFar=far;}
+    const now=performance.now(),renderStart=now;renderer.render(scene,camera);if(stopped)return;const cpu=performance.now()-renderStart;frameCount++;
+    if(now-lastReport>180||frameCount===1){lastReport=now;onStats({calls:renderer.info.render.calls,triangles:renderer.info.render.triangles,quality,lod:far?'distant':'detailed',frames:frameCount,camera:camera.position.toArray().map(n=>n.toFixed(2)).join(','),buildMs,renderCpuMs:cpu,geometries:renderer.info.memory.geometries,textureCount:renderer.info.memory.textures,foliageCards:cardCounts[far?1:0]??0,foliageMasses:clumpCounts[far?1:0]??0,wind:windEnabled,atlasSize:foliageResources[0]?`${foliageResources[0].atlas.width} × ${foliageResources[0].atlas.height}`:undefined});}
+    if(measurement){
+      if(measurement.previous)measurement.intervals.push(now-measurement.previous);measurement.previous=now;measurement.cpu.push(cpu);
+      if(now-measurement.start>=5000){
+        const m=measurement;measurement=null;controls.autoRotate=false;const times=[...m.intervals].sort((a,b)=>a-b),duration=now-m.start;
+        m.resolve({durationMs:duration,frames:m.intervals.length,fps:m.intervals.length/(duration/1000),medianFrameMs:times[Math.floor(times.length*.5)]??0,p95FrameMs:times[Math.floor(times.length*.95)]??0,meanRenderCpuMs:m.cpu.reduce((a,b)=>a+b,0)/m.cpu.length,calls:renderer.info.render.calls,triangles:renderer.info.render.triangles,quality,renderer:rendererName,viewport:`${host.clientWidth} × ${host.clientHeight}`,pixelRatio:renderer.getPixelRatio(),foliageCards:cardCounts[lastFar?1:0]??0,foliageMasses:clumpCounts[lastFar?1:0]??0,method:'5 second continuous orbit; browser frame intervals and CPU render submission time. Not a GPU timer or physical-device benchmark.'});
+      }
+    }
+  }animate();
+  return {
+    focusFoliage(){
+      const t=recipe.trees[0];if(!t||!allCards.length)return;
+      const candidates=allCards.filter(d=>d.t.index===t.index&&d.card.position[1]<treeHeight*.7&&d.card.position[1]>treeHeight*.16);
+      const chosen=[...(candidates.length?candidates:allCards)].sort((a,b)=>Math.hypot(...b.card.position.filter((_,i)=>i!==1))-Math.hypot(...a.card.position.filter((_,i)=>i!==1)))[0];
+      const card=chosen.card,q=new THREE.Quaternion(...card.rotation),center=new THREE.Vector3(...card.position).add(new THREE.Vector3(card.size[0]*.48,0,0).applyQuaternion(q));
+      const normal=new THREE.Vector3(0,0,1).applyQuaternion(q);if(normal.y<0)normal.negate();normal.add(new THREE.Vector3(center.x,0,center.z).normalize().multiplyScalar(.2)).normalize();
+      controls.target.copy(center);camera.position.copy(center).addScaledVector(normal,Math.max(2.2,card.size[0]*1.75));controls.update();dirty=true;
+    },
+    frameTree(){fitted=false;view=undefined;resize();controls.update();dirty=true;},
+    view():CameraView{return {position:camera.position.toArray() as CameraView['position'],target:controls.target.toArray() as CameraView['target']};},
+    highlight(index:number|null){const tree=recipe.trees.find(t=>t.index===index);ring.visible=!!tree;if(tree){ring.position.set(...tree.position);ring.position.y+=.13;}dirty=true;},
+    focus(index:number){const t=recipe.trees.find(t=>t.index===index);if(!t)return;controls.target.set(t.position[0],t.position[1]+t.model.dimensions.height*.45,t.position[2]);camera.position.set(t.position[0]+16,t.position[1]+t.model.dimensions.height*.7,t.position[2]+24);controls.update();dirty=true;},
+    benchmark():Promise<BenchmarkResult|null>{if(stopped||measurement)return Promise.resolve(null);return new Promise(resolve=>{measurement={start:performance.now(),previous:0,intervals:[],cpu:[],resolve};controls.autoRotate=true;controls.autoRotateSpeed=2;dirty=true;});},
+    dispose(){
+      disposeEncounter();stopped=true;measurement?.resolve(null);cancelAnimationFrame(frame);observer.disconnect();controls.dispose();
+      renderer.domElement.removeEventListener('pointerdown',pointerDown);renderer.domElement.removeEventListener('pointerup',pointerUp);renderer.domElement.removeEventListener('pointercancel',pointerCancel);renderer.domElement.removeEventListener('webglcontextlost',lost);
+      const geometries=new Set<THREE.BufferGeometry>(),allMaterials=new Set<THREE.Material>([woodMaterial,...foliageResources.map(r=>r.material)]);
+      scene.traverse(o=>{if(o instanceof THREE.Mesh||o instanceof THREE.LineSegments){geometries.add(o.geometry);if(o instanceof THREE.Mesh&&o.customDepthMaterial)allMaterials.add(o.customDepthMaterial);(Array.isArray(o.material)?o.material:[o.material]).forEach(m=>allMaterials.add(m));}if(o instanceof THREE.InstancedMesh)o.dispose();});
+      geometries.forEach(g=>g.dispose());allMaterials.forEach(m=>m.dispose());new Set([bark,...foliageResources.map(r=>r.texture),...libraryResources.map(r=>r.texture)]).forEach(t=>t.dispose());sun.shadow.dispose();renderer.dispose();renderer.forceContextLoss();renderer.domElement.remove();
+    },
+  };
+}

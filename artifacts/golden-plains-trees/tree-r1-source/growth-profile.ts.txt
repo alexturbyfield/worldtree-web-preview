@@ -1,0 +1,34 @@
+import {Vector3,Quaternion,Box3,Color} from 'three';
+import {HierarchyBuilder} from './hierarchy';
+import {generatePainterlyTree} from '../forest/painterly';
+import {randomSource} from '../forest/random';
+import type {Point,Segment} from '../forest/tree';
+import type {StudioSettings,StudioStudy,FoliageGroup,StudioFrond} from './groups';
+
+/** Engine-neutral metre/radian controls. Species/age variants supply data, not renderer branches. */
+export interface TreeGrowthProfile {name:string;height:number;radius:number;trunk:{radius:number;flare:number;taper:number;lean:number[];forkHeight:number;leaders:number;leaderSpread:number};scaffold:{count:number;reach:number;levels:number[];wind:number[];gap:number};secondary:{count:number;reach:number;fan:number};terminal:{count:number;reach:number;fan:number};foliage:{width:number;length:number;sprays:number;occupancy:number;shadow:string;body:string;light:string}}
+export function growthProfileStudy(id:string,p:TreeGrowthProfile,q:StudioSettings):StudioStudy{
+ const r=randomSource(q.structure+'|growth-profile-1'),paint=randomSource(q.appearance+'|spray-pigment'),segments:Segment[]=[],groups:FoliageGroup[]=[],fronds:StudioFrond[]=[];
+ const h=p.height*(.96+r()*.08),radius=p.radius*(.95+r()*.1),phase=r()*6.283,lean=new Vector3(...p.trunk.lean),builder=new HierarchyBuilder(segments,{persistence:.28,phototropism:.03,gravitropism:.02,curvature:.08,tertiaryFrequency:.5});
+ const root=builder.add([new Vector3(),lean.clone().multiplyScalar(.3).setY(h*p.trunk.forkHeight*.5),lean.clone().setY(h*p.trunk.forkHeight)],p.trunk.radius,0,p.trunk.taper);
+ const leaders=[root];if(p.trunk.leaders>1){leaders.length=0;for(let i=0;i<p.trunk.leaders;i++){const a=phase+i*Math.PI*2/p.trunk.leaders,start=builder.sample(root,.94).point,end=start.clone().add(new Vector3(Math.cos(a)*p.trunk.leaderSpread,h*.27,Math.sin(a)*p.trunk.leaderSpread));leaders.push(builder.add([start,start.clone().lerp(end,.5),end],p.trunk.radius*.65,1,.7,{path:root,u:.94}));}}
+ const spray=(path:ReturnType<HierarchyBuilder['add']>,u:number)=>{
+  const sample=builder.sample(path,u),anchor=sample.point,group:FoliageGroup={id:groups.length,anchor:anchor.toArray() as Point,center:anchor.toArray() as Point,radii:[p.foliage.width*.65,.4,p.foliage.length*.65],branchIndex:path.first+Math.min(path.steps-1,Math.floor(u*path.steps)),branchId:path.id,parentBranchId:path.parentId,axis:sample.tangent.toArray() as Point};groups.push(group);
+  for(let k=0;k<p.foliage.sprays;k++){const az=Math.atan2(sample.tangent.x,sample.tangent.z)+(k-1.5)*.65+(paint()-.5)*.4,tilt=(paint()-.5)*.48,rotation=new Quaternion().setFromAxisAngle(new Vector3(0,1,0),az).multiply(new Quaternion().setFromAxisAngle(new Vector3(1,0,0),-Math.PI/2+tilt)),normal=new Vector3(0,0,1).applyQuaternion(rotation),position=anchor.clone().add(new Vector3(Math.cos(az)*.18,.12+(k%2)*.13,Math.sin(az)*.18));
+   const tint=new Color(p.foliage.body).lerp(new Color(p.foliage.light),paint()*.18).offsetHSL((paint()-.5)*.015,0,(paint()-.5)*.025);
+   fronds.push({position:position.toArray() as Point,rotation:rotation.toArray(),width:p.foliage.width*(.85+paint()*.3),length:p.foliage.length*(.85+paint()*.3),curve:.12,droop:0,tile:k%2,color:'#'+tint.getHexString(),normal:normal.toArray() as Point,interior:.78+(k%2)*.12,groupId:group.id,essential:k===0});
+  }
+ };
+ for(let i=0;i<p.scaffold.count;i++){
+  const parent=leaders[i%leaders.length],u=.58+(i/Math.max(1,p.scaffold.count-1))*.35,start=builder.sample(parent,u).point,angle=phase+i*Math.PI*2/p.scaffold.count+(r()-.5)*.24,level=p.scaffold.levels[i%p.scaffold.levels.length],reach=radius*p.scaffold.reach*(.87+r()*.2),end=start.clone().add(new Vector3(Math.cos(angle)*reach,0,Math.sin(angle)*reach)).add(new Vector3(...p.scaffold.wind).multiplyScalar(.55));end.y=h*level;
+  const main=builder.add([start,start.clone().lerp(end,.46).add(new Vector3(0,.4,0)),end],p.trunk.radius*.6,1,.86,{path:parent,u});
+  for(let j=0;j<p.secondary.count;j++){const v=.55+j*.15,from=builder.sample(main,v).point,a=angle+(j-(p.secondary.count-1)/2)*p.secondary.fan,tip=end.clone().add(new Vector3(Math.cos(a)*radius*p.secondary.reach,.18+(r()-.5)*.35,Math.sin(a)*radius*p.secondary.reach)).add(new Vector3(...p.scaffold.wind).multiplyScalar(.3));const second=builder.add([from,from.clone().lerp(tip,.5).add(new Vector3(0,.2,0)),tip],p.trunk.radius*.22,2,.9,{path:main,u:v});
+   for(let k=0;k<p.terminal.count;k++){if(k===1&&r()<p.scaffold.gap)continue;const v=.65+k*.13,base=builder.sample(second,v).point,a2=a+(k-1)*p.terminal.fan,tip2=tip.clone().add(new Vector3(Math.cos(a2)*radius*p.terminal.reach,.25+(r()-.5)*.35,Math.sin(a2)*radius*p.terminal.reach)),twig=builder.add([base,base.clone().lerp(tip2,.5),tip2],p.trunk.radius*.075,3,.95,{path:second,u:v});for(const t of [.42,.72,.96])if(t===.96||r()<p.foliage.occupancy)spray(twig,t);}
+  }
+ }
+ for(const s of segments)if(s.depth===0){s.r0*=1+(p.trunk.flare-1)*Math.exp(-s.a[1]*2);s.r1*=1+(p.trunk.flare-1)*Math.exp(-s.b[1]*2);}
+ const bounds=new Box3();for(const s of segments){bounds.expandByPoint(new Vector3(...s.a));bounds.expandByPoint(new Vector3(...s.b));}for(const f of fronds){const half=new Vector3(f.width*.55,.45,f.length*.55),c=new Vector3(...f.position);bounds.expandByPoint(c.clone().add(half));bounds.expandByPoint(c.clone().sub(half));}const size=bounds.getSize(new Vector3());
+ const original=generatePainterlyTree({presetId:id,structuralSeed:q.structure,appearanceSeed:q.appearance});
+ const model={...original,segments,foliage:[],palette:{...original.palette,shadow:p.foliage.shadow,body:p.foliage.body,light:p.foliage.light},parameters:{...original.parameters,height:h,crownRadius:radius,trunkRadius:p.trunk.radius},dimensions:{height:bounds.max.y,crownWidth:size.x,crownDepth:size.z}};
+ return {kind:'broadleaf',model,segments,groups,fronds,scale:1,offset:[0,0,0]};
+}

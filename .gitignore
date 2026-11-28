@@ -15,3 +15,20 @@ playwright-report/
 *.tsbuildinfo
 public/geo-worker.js
 public/maplibre-worker.mjs
+
+# Private reference-image derivatives remain local; no redistribution license recorded.
+artifacts/golden-plains-trees/reference-comparison.png
+artifacts/savanna-golden-hills/reference-checkpoint.png
+artifacts/savanna-representation-study/reference-flow-thumbnail.png
+artifacts/savanna-representation-study/reference-wide-thumbnail.png
+artifacts/visual-quality/rainforest-concept-reference.png
+
+# User-supplied visual targets: Lab records specify local-only reference use.
+visual-lab/global-expansion/references/wave2-concept-sheet.png
+visual-lab/mediterranean/references/
+visual-lab/mediterranean/cork-oak/reference.webp
+visual-lab/mediterranean/holm-oak/reference.webp
+visual-lab/mediterranean/holm-oak/reference-silhouette.png
+visual-lab/andean-puna/concept.png
+visual-lab/dry-forest/corrected-concept.png
+visual-lab/tropical-pine/concept.png

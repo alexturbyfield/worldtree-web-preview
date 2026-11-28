@@ -1,0 +1,9 @@
+from pathlib import Path
+p=Path('src/lib/forest/savanna-recipe.ts');s=p.read_text().replace("height=(x:number,z:number)=>terrainHeight(x,z,seed)){", "height=(x:number,z:number)=>terrainHeight(x,z,seed),placementAllowed=(_x:number,_z:number)=>true){").replace("if(Math.abs(nx)>48||Math.abs(nz)>48||", "if(!placementAllowed(nx,nz)||Math.abs(nx)>48||Math.abs(nz)>48||");p.write_text(s)
+p=Path('src/lib/forest/alpine-adapter.ts');s=p.read_text().replace(" const clearance=clearVegetation", " const allowed=(x:number,z:number)=>{const f=alpineFields(p,x,z);return f.rock<=.65&&f.slope<=.8&&(!p.water||f.drainDistance>=1.1);};\n const clearance=clearVegetation").replace("(x,z)=>alpineHeight(p,x,z));", "(x,z)=>alpineHeight(p,x,z),allowed);")
+s=s.replace(" setPalette(p.palette);scene.userData", " const ecology={tested:0,violations:0};for(const batch of plantBatches){if(batch.kind!=='grass'&&batch.kind!=='flower')continue;for(let i=0;i<batch.mesh.count;i++){batch.mesh.getMatrixAt(i,o.matrix);o.matrix.decompose(o.position,o.quaternion,o.scale);ecology.tested++;if(!allowed(o.position.x,o.position.z))ecology.violations++;}}\n setPalette(p.palette);scene.userData")
+s=s.replace("plan:p,clearance,flowerClearance,", "plan:p,clearance,flowerClearance,ecology,")
+p.write_text(s)
+p=Path('src/lib/forest/painted-renderer.ts');s=p.read_text().replace("  const ring=new THREE.Mesh", "  if(alpine)scene.userData.alpineSetLOD=(far:boolean)=>lods.forEach((g,i)=>g.visible=far?i===1:i===0);\n  const ring=new THREE.Mesh");p.write_text(s)
+p=Path('scripts/studies/visual-quality.cjs');s=p.read_text().replace("const {r,s,c}=window.__visual;if(s.userData.recipeShadowDirty)", "const {r,s,c}=window.__visual;if(s.userData.alpineSetLOD)s.userData.alpineSetLOD(view==='inspection');if(s.userData.recipeShadowDirty)")
+p.write_text(s)

@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-27T22:31:00.351Z",
+  "reference": "visual-lab/dry-forest/corrected-concept.png",
+  "supersedesReferenceOnly": "Previous alpine concept was supplied by mistake; preserve previous experiment as historical evidence",
+  "status": "unfinished-prototype-human-review",
+  "humanApproval": null,
+  "visionReviewer": "Implementing assistant, actual 640x360 and 1280x720 screenshots inspected; no independent reviewer",
+  "seed": "29",
+  "camera": {
+    "position": [
+      0,
+      1.7,
+      34
+    ],
+    "target": [
+      0,
+      2.3,
+      -55
+    ]
+  },
+  "artDiagnosis": [
+    {
+      "principle": "Interlocking broad crowns enclose a narrow illuminated opening",
+      "previous": "Open plain dominated by soil",
+      "result": "More enclosed but leaf repetition remains major"
+    },
+    {
+      "principle": "Fine dry groundcover interlocks with litter, stones and woody shrubs",
+      "previous": "Sparse discrete objects",
+      "result": "Connected lateral communities; still coarse and insufficiently lit"
+    },
+    {
+      "principle": "Distant woodland should continue through layered tree silhouettes",
+      "previous": "Broad pale backdrop exposed",
+      "result": "More physical midground trees, but pale matte remains visibly separate"
+    }
+  ],
+  "iterations": [
+    {
+      "image": "artifacts/dry-forest-corrected/round1.png",
+      "decision": "revise",
+      "evidence": "Better enclosure, but generated broad sprays form opaque flat patches and pink spheres resemble beads"
+    },
+    {
+      "image": "artifacts/dry-forest-corrected/round2.png",
+      "decision": "revise",
+      "evidence": "Compound geometry restores gaps but crown too high and sparse; provisional rock material rejected"
+    },
+    {
+      "image": "artifacts/dry-forest-corrected/final.png",
+      "decision": "retain structural prototype only, not artistic approval",
+      "evidence": "Broader lower canopy frames opening, new sediment stone texture, smaller litter; mechanical foliage and coarse grass remain"
+    }
+  ],
+  "sourceHash": "5554f625b90f0a003a2910376b35e67f5a878369454b64e41c1cfaee8c497adc",
+  "newAssets": [
+    "public/assets/dry-forest/gumbo-bark-v2.webp",
+    "public/assets/dry-forest/guanacaste-leaf-v2.webp"
+  ],
+  "assetCaution": "Generated guanacaste leaf study did not resolve true bipinnate morphology well enough; retained only as provisional secondary foliage. Primary guanacaste approximation uses dimensional leaflet geometry instead.",
+  "existingAssets": [
+    "public/assets/dry-forest/soil-albedo.webp",
+    "public/assets/dry-forest/soil-normal.png",
+    "public/assets/dry-forest/soil-roughness.png",
+    "public/assets/dry-forest/distance.png"
+  ],
+  "ecology": {
+    "region": "ACG Costa Rica regional candidates, not confirmed occurrences",
+    "flowering": "drySeason=flowering enables regional Tabebuia rosea approximation; exact timing varies locally; no month assigned",
+    "sources": [
+      "https://www.acguanacaste.ac.cr/arboretum/4815-roble-de-sabana",
+      "https://www.acguanacaste.ac.cr/paginas-de-especies/plantas/283-bignoniaceae/3553-i-tabebuia-rosea-i-bignoniaceae-2"
+    ],
+    "understory": "Unnamed ecological growth-form placeholders, not invented named local species"
+  },
+  "checks": {
+    "typescript": "npx tsc --noEmit --pretty false passed",
+    "browserErrors": [],
+    "drawCalls": 129,
+    "submittedTriangles": 2886634,
+    "mobileApproval": false,
+    "protectedCapture": "Not run; changes confined to opt-in dry-forest module and new assets"
+  },
+  "sharedRules": [
+    {
+      "status": "experimentally-supported",
+      "scope": "Structural prototype only",
+      "principle": "Canopy enclosure requires low branch trajectories and layered tree occupancy, not only more distant tree counts",
+      "evidence": "final.png compared with before.png"
+    },
+    {
+      "status": "rejected",
+      "principle": "Use generated opaque leafy sprays as a substitute for compound-leaf structure",
+      "reason": "Flat patches and incorrect botanical structure",
+      "evidence": "round1.png"
+    }
+  ],
+  "next": "Isolated hero foliage study focused on nonrepetitive branching-owned clusters and crown-scale light; then integrate groundcover palette and backdrop",
+  "commitPushDeploy": false
+}

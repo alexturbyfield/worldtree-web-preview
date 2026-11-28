@@ -1,0 +1,164 @@
+[
+  {
+    "biome": "desert",
+    "kind": "concept",
+    "regions": [
+      {
+        "name": "background",
+        "meanDisplayLuminance": 0.5124549608220187,
+        "meanHSV_saturation": 0.5111040228746456,
+        "warmMinusBlue": 0.34401866515838847,
+        "darkFractionBelow03": 0.1569471153846154
+      },
+      {
+        "name": "middle",
+        "meanDisplayLuminance": 0.548196862952487,
+        "meanHSV_saturation": 0.596899887456875,
+        "warmMinusBlue": 0.4668903657617131,
+        "darkFractionBelow03": 0.12651442307692307
+      },
+      {
+        "name": "foreground",
+        "meanDisplayLuminance": 0.42239143575367427,
+        "meanHSV_saturation": 0.5282032056615084,
+        "warmMinusBlue": 0.34509757965700305,
+        "darkFractionBelow03": 0.28607421875
+      }
+    ]
+  },
+  {
+    "biome": "desert",
+    "kind": "baseline",
+    "regions": [
+      {
+        "name": "background",
+        "meanDisplayLuminance": 0.5708472589743318,
+        "meanHSV_saturation": 0.48054374972795394,
+        "warmMinusBlue": 0.18674283559571572,
+        "darkFractionBelow03": 0.1076923076923077
+      },
+      {
+        "name": "middle",
+        "meanDisplayLuminance": 0.5424272792232332,
+        "meanHSV_saturation": 0.5470822550611721,
+        "warmMinusBlue": 0.363100867269973,
+        "darkFractionBelow03": 0.15927884615384616
+      },
+      {
+        "name": "foreground",
+        "meanDisplayLuminance": 0.46568891611520163,
+        "meanHSV_saturation": 0.6183536683999985,
+        "warmMinusBlue": 0.40477542892155904,
+        "darkFractionBelow03": 0.0582421875
+      }
+    ]
+  },
+  {
+    "biome": "mangrove",
+    "kind": "concept",
+    "regions": [
+      {
+        "name": "background",
+        "meanDisplayLuminance": 0.35607127026772717,
+        "meanHSV_saturation": 0.4535633165090513,
+        "warmMinusBlue": 0.18394127073899297,
+        "darkFractionBelow03": 0.4422596153846154
+      },
+      {
+        "name": "middle",
+        "meanDisplayLuminance": 0.37244609306183923,
+        "meanHSV_saturation": 0.5012251989955347,
+        "warmMinusBlue": 0.19411387631968535,
+        "darkFractionBelow03": 0.4019951923076923
+      },
+      {
+        "name": "foreground",
+        "meanDisplayLuminance": 0.31816872192095835,
+        "meanHSV_saturation": 0.5258324382481496,
+        "warmMinusBlue": 0.19612814031863324,
+        "darkFractionBelow03": 0.52162109375
+      }
+    ]
+  },
+  {
+    "biome": "mangrove",
+    "kind": "baseline",
+    "regions": [
+      {
+        "name": "background",
+        "meanDisplayLuminance": 0.37956649183634694,
+        "meanHSV_saturation": 0.5044822996696949,
+        "warmMinusBlue": 0.0902127639517197,
+        "darkFractionBelow03": 0.3451682692307692
+      },
+      {
+        "name": "middle",
+        "meanDisplayLuminance": 0.3195389741138606,
+        "meanHSV_saturation": 0.49006881884809106,
+        "warmMinusBlue": 0.13978252262436405,
+        "darkFractionBelow03": 0.5185817307692308
+      },
+      {
+        "name": "foreground",
+        "meanDisplayLuminance": 0.28137082127756274,
+        "meanHSV_saturation": 0.5535999457591861,
+        "warmMinusBlue": 0.18576616115194297,
+        "darkFractionBelow03": 0.56509765625
+      }
+    ]
+  },
+  {
+    "biome": "flooded",
+    "kind": "concept",
+    "regions": [
+      {
+        "name": "background",
+        "meanDisplayLuminance": 0.4832395406108636,
+        "meanHSV_saturation": 0.6100001002607389,
+        "warmMinusBlue": 0.3420895550528472,
+        "darkFractionBelow03": 0.1491826923076923
+      },
+      {
+        "name": "middle",
+        "meanDisplayLuminance": 0.4029303893665163,
+        "meanHSV_saturation": 0.6682015596933979,
+        "warmMinusBlue": 0.3185720211161252,
+        "darkFractionBelow03": 0.26605769230769233
+      },
+      {
+        "name": "foreground",
+        "meanDisplayLuminance": 0.32445754577205405,
+        "meanHSV_saturation": 0.6459420610674412,
+        "warmMinusBlue": 0.25815655637263174,
+        "darkFractionBelow03": 0.51453125
+      }
+    ]
+  },
+  {
+    "biome": "flooded",
+    "kind": "baseline",
+    "regions": [
+      {
+        "name": "background",
+        "meanDisplayLuminance": 0.4751869688536924,
+        "meanHSV_saturation": 0.5111700329661797,
+        "warmMinusBlue": 0.0042039969834163525,
+        "darkFractionBelow03": 0.28754807692307693
+      },
+      {
+        "name": "middle",
+        "meanDisplayLuminance": 0.3559901578242811,
+        "meanHSV_saturation": 0.6038367659203638,
+        "warmMinusBlue": 0.18864526772238144,
+        "darkFractionBelow03": 0.45884615384615385
+      },
+      {
+        "name": "foreground",
+        "meanDisplayLuminance": 0.25395369938725937,
+        "meanHSV_saturation": 0.5353436076987412,
+        "warmMinusBlue": 0.10596629901954388,
+        "darkFractionBelow03": 0.79
+      }
+    ]
+  }
+]

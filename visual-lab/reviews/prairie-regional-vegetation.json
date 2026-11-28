@@ -1,0 +1,92 @@
+{
+  "task": "Prairie regional vegetation and tree evidence",
+  "scope": "ECO389 + botanical country OKL only; forest, grassland and wetland regional candidate contexts. No new verified point occurrences or accepted-taxonomy records.",
+  "sources": [
+    "https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY014OK",
+    "https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY095OK"
+  ],
+  "plants": {
+    "grass": 4,
+    "forb": 1,
+    "shrub": 3,
+    "conditionalTree": 3,
+    "treeRenderEligible": [
+      "Populus deltoides",
+      "Salix nigra"
+    ],
+    "excludedTree": "Juniperus virginiana: woody encroachment under fire suppression, not reference-state planting"
+  },
+  "changes": [
+    "Sourced regional land-cover records exposed in both existing UI panels and JSON exports.",
+    "Three differentiated regional shrub approximations and source-linked grass/seedhead/flower communities; retained grass representation.",
+    "Conditional tree option uses source-labelled broadleaf approximations, up to six individuals outside staging.",
+    "Scene controls preserve the prairie opt-in query."
+  ],
+  "files": {
+    "data/prairie-land-cover.json": "5a1e8163f4132d9119bff7131721a31e8014d0e3f804dfe6c06ee7bd8bbfb176",
+    "src/lib/regional-land-cover.ts": "b2b7cfed4a64df3a4aff49df05ef8a704f085d6f92044902b68697f46a5e6884",
+    "src/lib/global-types.ts": "72921b1471731e5637a6bb15be8a2a88a3fe7e014bcae38fb97ae8bf925f1c20",
+    "src/lib/vegetation.ts": "d62afe33586da6ed8254429aa21e5bb4dd1420eb6d7b81a7484e67a7a95c06cd",
+    "src/lib/forest/recipe.ts": "688b1127aef6f98e96dba8bab1a9470b749c511fe9cfbcdf0318ce86d9b5b367",
+    "src/lib/forest/wave3-prairie.ts": "46ecec843baa50867f683064a2936d1304598abc72c37fc6131d7677548225fd",
+    "src/lib/forest/wave3-prairie-dressing.ts": "a5f982c072bf4eba9b45f28339863efcb9b483630c869c9c00192a583f2eb616",
+    "src/components/LandCoverCandidates.tsx": "9483e9ae91166f1a6e723a0a6d5921b50442cd33da85e0310fe5025c25c836c0",
+    "src/components/Explorer.tsx": "69536de2edf2207fe18df9b56b402cf7880fdcac9f3c5b8232692621ddc1c90e",
+    "src/components/ForestExplorer.tsx": "6f062b82323fa89e95da58d1509bc17f566a830e0f8926f635cc47a89508374e",
+    "tests/prairie-land-cover.test.ts": "0b145477c7c19a5b27f7c1f17c9bd3528ee24807bbef25ca5c8ac6d1936ae2c8"
+  },
+  "visualReview": {
+    "reviewer": "Primary Codex actual before/after image inspection",
+    "decision": "Retain experimental additions for human review",
+    "humanApproval": null,
+    "findings": [
+      "More substantial foreground/middle shrub framing, with distinguishable sage versus green leafy treatments.",
+      "Conditional trees create visible woody landmarks while retaining an open horizon.",
+      "Shrubs remain too angular and branch-like; tree models are generic broadleaf approximations and do not yet match cottonwood/willow architecture.",
+      "Near-right hill and broad smooth substrate still dominate composition."
+    ],
+    "comparison": "artifacts\\prairie-vegetation\\comparison.png"
+  },
+  "validation": {
+    "typescript": "passed",
+    "newTargetedTests": "2 passed",
+    "resolverAndNewTests": "33 passed, 1 failed: existing stale expectation of 400 taxa versus 402; git HEAD catalogue also has 402",
+    "ui": "11 regional cards rendered; conditional option preserves expansion=prairie; 0 page errors",
+    "hero": [
+      {
+        "frame": 6,
+        "calls": 14,
+        "triangles": 647906,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 7,
+        "calls": 14,
+        "triangles": 647906,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.2999999523162842
+      },
+      {
+        "frame": 8,
+        "calls": 14,
+        "triangles": 647906,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      }
+    ],
+    "conditionalHero": {
+      "frame": 4,
+      "calls": 16,
+      "triangles": 700610,
+      "points": 0,
+      "lines": 0
+    },
+    "protectedScenes": "No protected recipe edited; scope guards tested. Full protected screenshot suite not run.",
+    "mobileApproval": false
+  },
+  "noCommitPushDeploy": true
+}

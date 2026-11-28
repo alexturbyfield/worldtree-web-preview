@@ -1,0 +1,128 @@
+{
+  "sourceFreezeIntact": true,
+  "protected": [
+    {
+      "name": "puget-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "rainforest-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "rainforest-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "savanna-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "savanna-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "alpine-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "alpine-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "boreal-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "boreal-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "temperate-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "temperate-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "tundra-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "tundra-inspection",
+      "pixelIdentical": true
+    }
+  ],
+  "holdout": "8924519",
+  "errors": [],
+  "performance": [
+    {
+      "seed": "29",
+      "calls": 7,
+      "triangles": 201144,
+      "activeInstances": {
+        "prairie-curved-fine-grass": 260,
+        "prairie-dimensional-seedheads": 140,
+        "prairie-yellow-forb-communities": 160,
+        "prairie-purple-forb-communities": 120,
+        "prairie-regional-shrub-growth-forms": 12
+      },
+      "rejectedComparisonInstances": {
+        "prairie-near-brush-masses": 2300,
+        "prairie-middle-brush-masses": 4200,
+        "prairie-curved-fine-grass": 260,
+        "prairie-dimensional-seedheads": 140,
+        "prairie-yellow-forb-communities": 160,
+        "prairie-purple-forb-communities": 120,
+        "prairie-regional-shrub-growth-forms": 12
+      },
+      "sourceEco": 389
+    },
+    {
+      "seed": "41",
+      "calls": 7,
+      "triangles": 201144,
+      "activeInstances": {
+        "prairie-curved-fine-grass": 260,
+        "prairie-dimensional-seedheads": 140,
+        "prairie-yellow-forb-communities": 160,
+        "prairie-purple-forb-communities": 120,
+        "prairie-regional-shrub-growth-forms": 12
+      },
+      "rejectedComparisonInstances": {
+        "prairie-near-brush-masses": 2300,
+        "prairie-middle-brush-masses": 4200,
+        "prairie-curved-fine-grass": 260,
+        "prairie-dimensional-seedheads": 140,
+        "prairie-yellow-forb-communities": 160,
+        "prairie-purple-forb-communities": 120,
+        "prairie-regional-shrub-growth-forms": 12
+      },
+      "sourceEco": 389
+    },
+    {
+      "seed": "8924519",
+      "calls": 7,
+      "triangles": 201144,
+      "activeInstances": {
+        "prairie-curved-fine-grass": 260,
+        "prairie-dimensional-seedheads": 140,
+        "prairie-yellow-forb-communities": 160,
+        "prairie-purple-forb-communities": 120,
+        "prairie-regional-shrub-growth-forms": 12
+      },
+      "rejectedComparisonInstances": {
+        "prairie-near-brush-masses": 2300,
+        "prairie-middle-brush-masses": 4200,
+        "prairie-curved-fine-grass": 260,
+        "prairie-dimensional-seedheads": 140,
+        "prairie-yellow-forb-communities": 160,
+        "prairie-purple-forb-communities": 120,
+        "prairie-regional-shrub-growth-forms": 12
+      },
+      "sourceEco": 389
+    }
+  ],
+  "approval": "No human approval or mobile performance approval. Terrain/dressing checkpoint only; dense grass representation still unresolved."
+}

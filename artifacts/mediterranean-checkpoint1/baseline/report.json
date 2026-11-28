@@ -1,0 +1,145 @@
+[
+  {
+    "id": "mediterranean",
+    "seed": "29",
+    "view": "hero",
+    "file": "artifacts/mediterranean-checkpoint1/baseline/mediterranean-29-hero.png",
+    "width": 640,
+    "height": 360,
+    "camera": {
+      "position": [
+        0,
+        1.7,
+        16
+      ],
+      "target": [
+        0,
+        -9,
+        -65
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 5,
+        "calls": 6,
+        "triangles": 218990,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      },
+      {
+        "frame": 6,
+        "calls": 6,
+        "triangles": 218990,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.10000002384185791
+      },
+      {
+        "frame": 7,
+        "calls": 6,
+        "triangles": 218990,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.19999998807907104
+      }
+    ],
+    "instances": [],
+    "textures": [
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      },
+      {
+        "width": 1024,
+        "height": 512,
+        "bytes": 2097152
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "e7f3ff",
+        "intensity": 2.3,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "bed4e6",
+        "intensity": 0.95,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffedc2",
+        "intensity": 3.2,
+        "position": [
+          -28,
+          46,
+          24
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": {
+          "intensity": 1,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -64,
+          "right": 64,
+          "normalBias": 0.12
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "concept": null,
+    "prairie": null,
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  }
+]

@@ -1,0 +1,1734 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-25T18:00:28.226Z",
+  "humanPreference": "visual-lab/feedback/dense-c-tufts.json",
+  "scope": "One density/placement experiment based on user preferred C; no tree, sky, lighting or protected-biome changes",
+  "source": "src/lib/forest/savanna-recipe.ts",
+  "sourceHash": "02e660800f8beabaaeb3a534382cc999a5fccdc106e8e02185f22ee7c29e6e09",
+  "baselinePixelIdenticalToPriorC": true,
+  "sourceSnapshot": "retained-source.ts.txt",
+  "worldSeed": "29",
+  "parameters": {
+    "candidate": "r-fidelity-tuft-c-dense",
+    "treeStudy": "C",
+    "midInstances": 4000,
+    "nearInstances": 850,
+    "totalGrassInstances": 4850,
+    "nearBounds": {
+      "x": [
+        -15,
+        15
+      ],
+      "z": [
+        10,
+        36
+      ]
+    },
+    "opening": "Soft irregularly populated clearing centered about x-.5 z25, near height and density falloff; no new path",
+    "geometry": "Same preferred C tuft geometry, existing coarse midgrass LOD",
+    "palette": "Unchanged ground-shared pigments and lit tips",
+    "placement": "Seeded low-frequency overlapping swaths, smooth opening mask"
+  },
+  "review": {
+    "actor": "agent",
+    "visionAvailable": true,
+    "actualPNGsInspected": [
+      "hero",
+      "inspection",
+      "grass-detail"
+    ],
+    "betterForUserDensityRequest": true,
+    "finalHumanApproval": false,
+    "decision": "retain opt-in dense version for review",
+    "evidence": "comparison.png",
+    "remainingDefects": [
+      "Close blades still appear somewhat reed-like/ribbon-like, inherited from preferred C.",
+      "Elevated view still emphasizes terrain; dense geometry is concentrated in encounter foreground.",
+      "Cost increased3.83x in triangles; phone performance not measured."
+    ]
+  },
+  "baseline": [
+    {
+      "biome": "savanna",
+      "view": "hero",
+      "tier": 1,
+      "width": 640,
+      "height": 360,
+      "variant": "current",
+      "camera": {
+        "position": [
+          0,
+          0.21041739075620725,
+          34
+        ],
+        "quaternion": [
+          0.024969864063644317,
+          0.01850322795785242,
+          -0.0004622464236711974,
+          0.9995168446664752
+        ],
+        "aspect": 1.7777777777777777,
+        "fov": 47
+      },
+      "performance": {
+        "calls": 11,
+        "triangles": 108922,
+        "cpuSubmissionMs": [
+          0.7000000178813934,
+          0.3999999761581421,
+          0.4000000059604645
+        ],
+        "synchronousCompletionMs": [
+          0.7000000178813934,
+          0.3999999761581421,
+          0.4000000059604645
+        ],
+        "pixelRatio": 1,
+        "textureObjects": 11,
+        "geometryObjects": 14,
+        "antialias": false
+      },
+      "instances": [
+        {
+          "name": "biome-grass",
+          "count": 2800,
+          "visible": false,
+          "tiles": null,
+          "scaleRange": [
+            0.42099133133888245,
+            2.864253282546997
+          ]
+        },
+        {
+          "name": "biome-shrub",
+          "count": 35,
+          "visible": false,
+          "tiles": null,
+          "scaleRange": [
+            1.0798401672026348,
+            2.1186607247296667
+          ]
+        },
+        {
+          "name": "biome-understory",
+          "count": 0,
+          "visible": false,
+          "tiles": null,
+          "scaleRange": [
+            null,
+            0
+          ]
+        },
+        {
+          "name": "pretty-savanna-grass",
+          "count": 11000,
+          "visible": false,
+          "tiles": 3,
+          "scaleRange": [
+            0.2870888991085412,
+            2.65032504054978
+          ]
+        },
+        {
+          "name": "lab-savanna-grass",
+          "count": 850,
+          "visible": true,
+          "tiles": null,
+          "scaleRange": [
+            0.10374250262975693,
+            1.4492042064666748
+          ]
+        },
+        {
+          "name": "lab-savanna-rocks",
+          "count": 15,
+          "visible": true,
+          "tiles": null,
+          "scaleRange": [
+            0.17692375449519962,
+            1.0877213458756805
+          ]
+        },
+        {
+          "name": "lab-savanna-grass",
+          "count": 150,
+          "visible": true,
+          "tiles": null,
+          "scaleRange": [
+            0.44051632285118103,
+            1.1247891187667847
+          ]
+        }
+      ],
+      "plan": {
+        "version": 1,
+        "seed": "29",
+        "biome": "savanna",
+        "patches": [
+          {
+            "x": -4.493090440519154,
+            "z": 28.43000444676727,
+            "rx": 7.581593108130619,
+            "rz": 10.071669114055112,
+            "angle": 2.285271060152518,
+            "strength": 1
+          },
+          {
+            "x": 6.456158130429685,
+            "z": 27.209757453529164,
+            "rx": 7.515211374266073,
+            "rz": 7.0275033744983375,
+            "angle": 1.8256222142759573,
+            "strength": 0.8548365871189162
+          },
+          {
+            "x": -12.583992624655366,
+            "z": 26.280338981654495,
+            "rx": 7.410130577161908,
+            "rz": 10.043338727205992,
+            "angle": 0.3010566157364583,
+            "strength": 0.7985320944106207
+          },
+          {
+            "x": 17.315777130890638,
+            "z": 18.718063696287572,
+            "rx": 5.152385007822886,
+            "rz": 8.88388560875319,
+            "angle": 1.677087850217777,
+            "strength": 1
+          },
+          {
+            "x": -25.45339873014018,
+            "z": 7.263550580013543,
+            "rx": 5.126184181543067,
+            "rz": 6.382954746019095,
+            "angle": 0.7828021187131955,
+            "strength": 0.7269650102127344
+          },
+          {
+            "x": 29.058562750462443,
+            "z": -5.64303207793273,
+            "rx": 6.933315245900303,
+            "rz": 10.330069652060047,
+            "angle": 1.677164640250676,
+            "strength": 0.9399228765396401
+          },
+          {
+            "x": -26.194409865885973,
+            "z": -20.183647024212405,
+            "rx": 7.608973474241793,
+            "rz": 10.051379956072196,
+            "angle": 2.478642305332482,
+            "strength": 1
+          },
+          {
+            "x": 15.275082778185606,
+            "z": -30.331746279727668,
+            "rx": 7.407501591136679,
+            "rz": 6.229568859795108,
+            "angle": 1.4766902614366844,
+            "strength": 0.6855999986408279
+          },
+          {
+            "x": -34.68169624917209,
+            "z": -34.011841278290376,
+            "rx": 7.023297636304051,
+            "rz": 10.683982367860153,
+            "angle": 0.355532302010309,
+            "strength": 0.9135892545804382
+          },
+          {
+            "x": 36.93799715535715,
+            "z": -40.22378891031258,
+            "rx": 5.464575080899522,
+            "rz": 6.483926919987425,
+            "angle": 0.8436906087917794,
+            "strength": 1
+          },
+          {
+            "x": -5.320991814602166,
+            "z": -43.08390223397873,
+            "rx": 7.281652988865972,
+            "rz": 8.724085556110367,
+            "angle": 0.23891892601226647,
+            "strength": 0.8442433476215229
+          }
+        ],
+        "clearing": {
+          "x": 3,
+          "z": -4,
+          "rx": 12,
+          "rz": 20
+        },
+        "hero": {
+          "id": "tree-12-open-savanna-0",
+          "x": -16.19757185038179,
+          "z": -2.032205734634772,
+          "height": 12.551968278424592,
+          "radius": 13
+        },
+        "palette": {
+          "soil": "#ad995c",
+          "vegetation": "#b8a766",
+          "shade": "#657568",
+          "sun": "#d0bd7c"
+        },
+        "batches": [
+          {
+            "name": "biome-shrub",
+            "instances": 35,
+            "triangles": 630
+          },
+          {
+            "name": "pretty-savanna-grass",
+            "instances": 11000,
+            "triangles": 44000
+          }
+        ],
+        "additionalDrawCalls": 1,
+        "notes": [
+          "Presentation dressing only; no source trees or ecological records modified.",
+          "World-space plant masses and correlated ground albedo; no screen vignette.",
+          "Existing hero tree receives selective sun-facing crown highlights."
+        ]
+      },
+      "lab": {
+        "schemaVersion": 1,
+        "generatorVersion": "recipe-golden-1",
+        "experiment": "R",
+        "candidate": "r-fidelity-tuft-c",
+        "worldSeed": "29",
+        "presentationSeed": "reference-recipe-1",
+        "parameters": {
+          "revision": 10,
+          "tileMeters": 27,
+          "textureContrast": 0.42,
+          "macroContrast": 1.65,
+          "grassInstances": 2800,
+          "grassHeight": 1.25,
+          "bladeWidth": 0.12,
+          "foregroundClusterCount": 3,
+          "rockInstancesPerCluster": 5,
+          "shadowStrength": 0.72,
+          "seeds": [
+            "29",
+            "41",
+            "73"
+          ],
+          "presentationSeed": "reference-recipe-1",
+          "cameraHeight": 1.7,
+          "alphaToCoverage": false,
+          "golden": {
+            "revision": 2,
+            "grassInstances": 2200,
+            "frameGrass": 480,
+            "backdropRadius": 145,
+            "backdropHeight": 80,
+            "terrainContinuation": 330,
+            "artDirection": "asymmetric weathered foreground; honey-gold middle; irregular blue-green shadow rolls; illustrated hill continuity"
+          },
+          "valueField": "warm-near-gold-middle-v1",
+          "grassRepresentation": "curved-smooth-tuft-c",
+          "frameInstances": 150,
+          "tuftProfile": {
+            "name": "Broken arched highlight tufts",
+            "blades": 7,
+            "width": 0.032,
+            "height": 1.65,
+            "bend": 1.05,
+            "spread": 0.65,
+            "highlight": 0.45
+          }
+        },
+        "recipeId": "savanna-reference-recipe-1",
+        "coverageMode": "ground-and-geometry",
+        "targetLayout": {
+          "count": 1015,
+          "matrixDigest": "f376ceea"
+        },
+        "unchangedSystems": {
+          "before": "9f5e54b8",
+          "after": "9f5e54b8",
+          "match": true,
+          "scope": "Declared ground/distant presentation, added hill continuation, decorative grass and rock targets; existing terrain vertices, primary trees, sky, lights and fog guarded."
+        },
+        "deterministicReproduction": true
+      },
+      "treeStudy": {
+        "candidate": "C",
+        "heroId": "tree-12-open-savanna-0",
+        "position": [
+          -16.19757185038179,
+          -0.4439749342178131,
+          -2.032205734634772
+        ],
+        "seed": "171073434",
+        "appearanceSeed": "3394320064",
+        "dimensions": {
+          "height": 9.732045504625129,
+          "crownWidth": 20.078506598175768,
+          "crownDepth": 18.531047451876056
+        },
+        "segments": 740,
+        "groups": 153,
+        "sprays": 612,
+        "profileVersion": "branch-grammar-1"
+      },
+      "textureAudit": [
+        {
+          "width": 1254,
+          "height": 1254,
+          "mipmaps": true,
+          "estimatedRGBABytes": 8386752,
+          "source": "/assets/savanna-recipe/painted-fibre-v1.webp"
+        },
+        {
+          "width": 1774,
+          "height": 887,
+          "mipmaps": true,
+          "estimatedRGBABytes": 8392203,
+          "source": "/assets/puget-v1/sky-matte-v1.webp"
+        },
+        {
+          "width": 2048,
+          "height": 2048,
+          "mipmaps": true,
+          "estimatedRGBABytes": 22369621,
+          "source": "/assets/puget-v1/grass.png"
+        },
+        {
+          "width": 64,
+          "height": 64,
+          "mipmaps": false,
+          "estimatedRGBABytes": 16384,
+          "source": "generated canvas"
+        },
+        {
+          "width": 512,
+          "height": 384,
+          "mipmaps": true,
+          "estimatedRGBABytes": 1048576,
+          "source": "generated canvas"
+        },
+        {
+          "width": 1024,
+          "height": 512,
+          "mipmaps": false,
+          "estimatedRGBABytes": 2097152,
+          "source": "generated canvas"
+        },
+        {
+          "width": 2172,
+          "height": 724,
+          "mipmaps": true,
+          "estimatedRGBABytes": 8386816,
+          "source": "/assets/savanna-hills/golden-ridges-v1.webp"
+        }
+      ],
+      "renderSettings": {
+        "exposure": 1.12,
+        "toneMapping": 4,
+        "shadowType": 1
+      },
+      "renderer": "WebKit WebGL",
+      "errors": [],
+      "coverage": {
+        "available": true,
+        "region": "lower half",
+        "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+        "fraction": 0.16446180555555556,
+        "nearBlackFraction": 0.0003166895386889053,
+        "horizontalBands": [
+          3468,
+          3374,
+          3486,
+          1191,
+          153,
+          60,
+          135,
+          31,
+          73,
+          1225,
+          2619,
+          3131
+        ]
+      },
+      "findings": [],
+      "limitations": [
+        "Metrics flag potential failures; they cannot establish artistic quality.",
+        "Coverage mask omits terrain occlusion; near-black statistics include legitimate shadows.",
+        "Faceting, continuity and conspicuous repetition require vision inspection; no RGB-only artistic approval."
+      ]
+    },
+    {
+      "biome": "savanna",
+      "view": "inspection",
+      "tier": 1,
+      "width": 640,
+      "height": 360,
+      "variant": "current",
+      "camera": {
+        "position": [
+          34,
+          23,
+          44
+        ],
+        "quaternion": [
+          -0.11289019307845702,
+          0.2798418085648005,
+          0.033156062656846556,
+          0.9528090270326922
+        ],
+        "aspect": 1.7777777777777777,
+        "fov": 47
+      },
+      "performance": {
+        "calls": 11,
+        "triangles": 108922,
+        "cpuSubmissionMs": [
+          0.5,
+          0.19999998807907104,
+          0.30000001192092896
+        ],
+        "synchronousCompletionMs": [
+          0.5999999940395355,
+          0.19999998807907104,
+          0.30000001192092896
+        ],
+        "pixelRatio": 1,
+        "textureObjects": 11,
+        "geometryObjects": 14,
+        "antialias": false
+      },
+      "instances": [
+        {
+          "name": "biome-grass",
+          "count": 2800,
+          "visible": false,
+          "tiles": null,
+          "scaleRange": [
+            0.42099133133888245,
+            2.864253282546997
+          ]
+        },
+        {
+          "name": "biome-shrub",
+          "count": 35,
+          "visible": false,
+          "tiles": null,
+          "scaleRange": [
+            1.0798401672026348,
+            2.1186607247296667
+          ]
+        },
+        {
+          "name": "biome-understory",
+          "count": 0,
+          "visible": false,
+          "tiles": null,
+          "scaleRange": [
+            null,
+            0
+          ]
+        },
+        {
+          "name": "pretty-savanna-grass",
+          "count": 11000,
+          "visible": false,
+          "tiles": 3,
+          "scaleRange": [
+            0.2870888991085412,
+            2.65032504054978
+          ]
+        },
+        {
+          "name": "lab-savanna-grass",
+          "count": 850,
+          "visible": true,
+          "tiles": null,
+          "scaleRange": [
+            0.10374250262975693,
+            1.4492042064666748
+          ]
+        },
+        {
+          "name": "lab-savanna-rocks",
+          "count": 15,
+          "visible": true,
+          "tiles": null,
+          "scaleRange": [
+            0.17692375449519962,
+            1.0877213458756805
+          ]
+        },
+        {
+          "name": "lab-savanna-grass",
+          "count": 150,
+          "visible": true,
+          "tiles": null,
+          "scaleRange": [
+            0.44051632285118103,
+            1.1247891187667847
+          ]
+        }
+      ],
+      "plan": {
+        "version": 1,
+        "seed": "29",
+        "biome": "savanna",
+        "patches": [
+          {
+            "x": -4.493090440519154,
+            "z": 28.43000444676727,
+            "rx": 7.581593108130619,
+            "rz": 10.071669114055112,
+            "angle": 2.285271060152518,
+            "strength": 1
+          },
+          {
+            "x": 6.456158130429685,
+            "z": 27.209757453529164,
+            "rx": 7.515211374266073,
+            "rz": 7.0275033744983375,
+            "angle": 1.8256222142759573,
+            "strength": 0.8548365871189162
+          },
+          {
+            "x": -12.583992624655366,
+            "z": 26.280338981654495,
+            "rx": 7.410130577161908,
+            "rz": 10.043338727205992,
+            "angle": 0.3010566157364583,
+            "strength": 0.7985320944106207
+          },
+          {
+            "x": 17.315777130890638,
+            "z": 18.718063696287572,
+            "rx": 5.152385007822886,
+            "rz": 8.88388560875319,
+            "angle": 1.677087850217777,
+            "strength": 1
+          },
+          {
+            "x": -25.45339873014018,
+            "z": 7.263550580013543,
+            "rx": 5.126184181543067,
+            "rz": 6.382954746019095,
+            "angle": 0.7828021187131955,
+            "strength": 0.7269650102127344
+          },
+          {
+            "x": 29.058562750462443,
+            "z": -5.64303207793273,
+            "rx": 6.933315245900303,
+            "rz": 10.330069652060047,
+            "angle": 1.677164640250676,
+            "strength": 0.9399228765396401
+          },
+          {
+            "x": -26.194409865885973,
+            "z": -20.183647024212405,
+            "rx": 7.608973474241793,
+            "rz": 10.051379956072196,
+            "angle": 2.478642305332482,
+            "strength": 1
+          },
+          {
+            "x": 15.275082778185606,
+            "z": -30.331746279727668,
+            "rx": 7.407501591136679,
+            "rz": 6.229568859795108,
+            "angle": 1.4766902614366844,
+            "strength": 0.6855999986408279
+          },
+          {
+            "x": -34.68169624917209,
+            "z": -34.011841278290376,
+            "rx": 7.023297636304051,
+            "rz": 10.683982367860153,
+            "angle": 0.355532302010309,
+            "strength": 0.9135892545804382
+          },
+          {
+            "x": 36.93799715535715,
+            "z": -40.22378891031258,
+            "rx": 5.464575080899522,
+            "rz": 6.483926919987425,
+            "angle": 0.8436906087917794,
+            "strength": 1
+          },
+          {
+            "x": -5.320991814602166,
+            "z": -43.08390223397873,
+            "rx": 7.281652988865972,
+            "rz": 8.724085556110367,
+            "angle": 0.23891892601226647,
+            "strength": 0.8442433476215229
+          }
+        ],
+        "clearing": {
+          "x": 3,
+          "z": -4,
+          "rx": 12,
+          "rz": 20
+        },
+        "hero": {
+          "id": "tree-12-open-savanna-0",
+          "x": -16.19757185038179,
+          "z": -2.032205734634772,
+          "height": 12.551968278424592,
+          "radius": 13
+        },
+        "palette": {
+          "soil": "#ad995c",
+          "vegetation": "#b8a766",
+          "shade": "#657568",
+          "sun": "#d0bd7c"
+        },
+        "batches": [
+          {
+            "name": "biome-shrub",
+            "instances": 35,
+            "triangles": 630
+          },
+          {
+            "name": "pretty-savanna-grass",
+            "instances": 11000,
+            "triangles": 44000
+          }
+        ],
+        "additionalDrawCalls": 1,
+        "notes": [
+          "Presentation dressing only; no source trees or ecological records modified.",
+          "World-space plant masses and correlated ground albedo; no screen vignette.",
+          "Existing hero tree receives selective sun-facing crown highlights."
+        ]
+      },
+      "lab": {
+        "schemaVersion": 1,
+        "generatorVersion": "recipe-golden-1",
+        "experiment": "R",
+        "candidate": "r-fidelity-tuft-c",
+        "worldSeed": "29",
+        "presentationSeed": "reference-recipe-1",
+        "parameters": {
+          "revision": 10,
+          "tileMeters": 27,
+          "textureContrast": 0.42,
+          "macroContrast": 1.65,
+          "grassInstances": 2800,
+          "grassHeight": 1.25,
+          "bladeWidth": 0.12,
+          "foregroundClusterCount": 3,
+          "rockInstancesPerCluster": 5,
+          "shadowStrength": 0.72,
+          "seeds": [
+            "29",
+            "41",
+            "73"
+          ],
+          "presentationSeed": "reference-recipe-1",
+          "cameraHeight": 1.7,
+          "alphaToCoverage": false,
+          "golden": {
+            "revision": 2,
+            "grassInstances": 2200,
+            "frameGrass": 480,
+            "backdropRadius": 145,
+            "backdropHeight": 80,
+            "terrainContinuation": 330,
+            "artDirection": "asymmetric weathered foreground; honey-gold middle; irregular blue-green shadow rolls; illustrated hill continuity"
+          },
+          "valueField": "warm-near-gold-middle-v1",
+          "grassRepresentation": "curved-smooth-tuft-c",
+          "frameInstances": 150,
+          "tuftProfile": {
+            "name": "Broken arched highlight tufts",
+            "blades": 7,
+            "width": 0.032,
+            "height": 1.65,
+            "bend": 1.05,
+            "spread": 0.65,
+            "highlight": 0.45
+          }
+        },
+        "recipeId": "savanna-reference-recipe-1",
+        "coverageMode": "ground-and-geometry",
+        "targetLayout": {
+          "count": 1015,
+          "matrixDigest": "f376ceea"
+        },
+        "unchangedSystems": {
+          "before": "9f5e54b8",
+          "after": "9f5e54b8",
+          "match": true,
+          "scope": "Declared ground/distant presentation, added hill continuation, decorative grass and rock targets; existing terrain vertices, primary trees, sky, lights and fog guarded."
+        },
+        "deterministicReproduction": true
+      },
+      "treeStudy": {
+        "candidate": "C",
+        "heroId": "tree-12-open-savanna-0",
+        "position": [
+          -16.19757185038179,
+          -0.4439749342178131,
+          -2.032205734634772
+        ],
+        "seed": "171073434",
+        "appearanceSeed": "3394320064",
+        "dimensions": {
+          "height": 9.732045504625129,
+          "crownWidth": 20.078506598175768,
+          "crownDepth": 18.531047451876056
+        },
+        "segments": 740,
+        "groups": 153,
+        "sprays": 612,
+        "profileVersion": "branch-grammar-1"
+      },
+      "textureAudit": [
+        {
+          "width": 1254,
+          "height": 1254,
+          "mipmaps": true,
+          "estimatedRGBABytes": 8386752,
+          "source": "/assets/savanna-recipe/painted-fibre-v1.webp"
+        },
+        {
+          "width": 1774,
+          "height": 887,
+          "mipmaps": true,
+          "estimatedRGBABytes": 8392203,
+          "source": "/assets/puget-v1/sky-matte-v1.webp"
+        },
+        {
+          "width": 2048,
+          "height": 2048,
+          "mipmaps": true,
+          "estimatedRGBABytes": 22369621,
+          "source": "/assets/puget-v1/grass.png"
+        },
+        {
+          "width": 64,
+          "height": 64,
+          "mipmaps": false,
+          "estimatedRGBABytes": 16384,
+          "source": "generated canvas"
+        },
+        {
+          "width": 512,
+          "height": 384,
+          "mipmaps": true,
+          "estimatedRGBABytes": 1048576,
+          "source": "generated canvas"
+        },
+        {
+          "width": 1024,
+          "height": 512,
+          "mipmaps": false,
+          "estimatedRGBABytes": 2097152,
+          "source": "generated canvas"
+        },
+        {
+          "width": 2172,
+          "height": 724,
+          "mipmaps": true,
+          "estimatedRGBABytes": 8386816,
+          "source": "/assets/savanna-hills/golden-ridges-v1.webp"
+        }
+      ],
+      "renderSettings": {
+        "exposure": 1.12,
+        "toneMapping": 4,
+        "shadowType": 1
+      },
+      "renderer": "WebKit WebGL",
+      "errors": [],
+      "coverage": {
+        "available": true,
+        "region": "lower half",
+        "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+        "fraction": 0.025069444444444443,
+        "nearBlackFraction": 0.00034626038781163435,
+        "horizontalBands": [
+          84,
+          1014,
+          351,
+          609,
+          247,
+          50,
+          57,
+          80,
+          92,
+          114,
+          110,
+          80
+        ]
+      },
+      "findings": [
+        {
+          "severity": "major",
+          "defect": "Insufficient projected lower-half vegetation coverage",
+          "measurements": {
+            "coverage": 0.025069444444444443,
+            "threshold": 0.15
+          }
+        }
+      ],
+      "limitations": [
+        "Metrics flag potential failures; they cannot establish artistic quality.",
+        "Coverage mask omits terrain occlusion; near-black statistics include legitimate shadows.",
+        "Faceting, continuity and conspicuous repetition require vision inspection; no RGB-only artistic approval."
+      ]
+    }
+  ],
+  "dense": [
+    {
+      "biome": "savanna",
+      "view": "hero",
+      "tier": 1,
+      "width": 640,
+      "height": 360,
+      "variant": "current",
+      "camera": {
+        "position": [
+          0,
+          0.21041739075620725,
+          34
+        ],
+        "quaternion": [
+          0.024969864063644317,
+          0.01850322795785242,
+          -0.0004622464236711974,
+          0.9995168446664752
+        ],
+        "aspect": 1.7777777777777777,
+        "fov": 47
+      },
+      "performance": {
+        "calls": 11,
+        "triangles": 416922,
+        "cpuSubmissionMs": [
+          0.29999998211860657,
+          0.20000001788139343,
+          0.29999998211860657
+        ],
+        "synchronousCompletionMs": [
+          0.29999998211860657,
+          0.20000001788139343,
+          0.29999998211860657
+        ],
+        "pixelRatio": 1,
+        "textureObjects": 11,
+        "geometryObjects": 15,
+        "antialias": false
+      },
+      "instances": [
+        {
+          "name": "biome-grass",
+          "count": 2800,
+          "visible": false,
+          "tiles": null,
+          "scaleRange": [
+            0.42099133133888245,
+            2.864253282546997
+          ]
+        },
+        {
+          "name": "biome-shrub",
+          "count": 35,
+          "visible": false,
+          "tiles": null,
+          "scaleRange": [
+            1.0798401672026348,
+            2.1186607247296667
+          ]
+        },
+        {
+          "name": "biome-understory",
+          "count": 0,
+          "visible": false,
+          "tiles": null,
+          "scaleRange": [
+            null,
+            0
+          ]
+        },
+        {
+          "name": "pretty-savanna-grass",
+          "count": 11000,
+          "visible": false,
+          "tiles": 3,
+          "scaleRange": [
+            0.2870888991085412,
+            2.65032504054978
+          ]
+        },
+        {
+          "name": "lab-savanna-grass",
+          "count": 4000,
+          "visible": true,
+          "tiles": null,
+          "scaleRange": [
+            0.09891406446695328,
+            1.4422314167022705
+          ]
+        },
+        {
+          "name": "lab-savanna-rocks",
+          "count": 15,
+          "visible": true,
+          "tiles": null,
+          "scaleRange": [
+            0.17692375449519962,
+            1.0877213458756805
+          ]
+        },
+        {
+          "name": "lab-savanna-grass",
+          "count": 850,
+          "visible": true,
+          "tiles": null,
+          "scaleRange": [
+            0.3453589975833893,
+            1.1123193502426147
+          ]
+        }
+      ],
+      "plan": {
+        "version": 1,
+        "seed": "29",
+        "biome": "savanna",
+        "patches": [
+          {
+            "x": -4.493090440519154,
+            "z": 28.43000444676727,
+            "rx": 7.581593108130619,
+            "rz": 10.071669114055112,
+            "angle": 2.285271060152518,
+            "strength": 1
+          },
+          {
+            "x": 6.456158130429685,
+            "z": 27.209757453529164,
+            "rx": 7.515211374266073,
+            "rz": 7.0275033744983375,
+            "angle": 1.8256222142759573,
+            "strength": 0.8548365871189162
+          },
+          {
+            "x": -12.583992624655366,
+            "z": 26.280338981654495,
+            "rx": 7.410130577161908,
+            "rz": 10.043338727205992,
+            "angle": 0.3010566157364583,
+            "strength": 0.7985320944106207
+          },
+          {
+            "x": 17.315777130890638,
+            "z": 18.718063696287572,
+            "rx": 5.152385007822886,
+            "rz": 8.88388560875319,
+            "angle": 1.677087850217777,
+            "strength": 1
+          },
+          {
+            "x": -25.45339873014018,
+            "z": 7.263550580013543,
+            "rx": 5.126184181543067,
+            "rz": 6.382954746019095,
+            "angle": 0.7828021187131955,
+            "strength": 0.7269650102127344
+          },
+          {
+            "x": 29.058562750462443,
+            "z": -5.64303207793273,
+            "rx": 6.933315245900303,
+            "rz": 10.330069652060047,
+            "angle": 1.677164640250676,
+            "strength": 0.9399228765396401
+          },
+          {
+            "x": -26.194409865885973,
+            "z": -20.183647024212405,
+            "rx": 7.608973474241793,
+            "rz": 10.051379956072196,
+            "angle": 2.478642305332482,
+            "strength": 1
+          },
+          {
+            "x": 15.275082778185606,
+            "z": -30.331746279727668,
+            "rx": 7.407501591136679,
+            "rz": 6.229568859795108,
+            "angle": 1.4766902614366844,
+            "strength": 0.6855999986408279
+          },
+          {
+            "x": -34.68169624917209,
+            "z": -34.011841278290376,
+            "rx": 7.023297636304051,
+            "rz": 10.683982367860153,
+            "angle": 0.355532302010309,
+            "strength": 0.9135892545804382
+          },
+          {
+            "x": 36.93799715535715,
+            "z": -40.22378891031258,
+            "rx": 5.464575080899522,
+            "rz": 6.483926919987425,
+            "angle": 0.8436906087917794,
+            "strength": 1
+          },
+          {
+            "x": -5.320991814602166,
+            "z": -43.08390223397873,
+            "rx": 7.281652988865972,
+            "rz": 8.724085556110367,
+            "angle": 0.23891892601226647,
+            "strength": 0.8442433476215229
+          }
+        ],
+        "clearing": {
+          "x": 3,
+          "z": -4,
+          "rx": 12,
+          "rz": 20
+        },
+        "hero": {
+          "id": "tree-12-open-savanna-0",
+          "x": -16.19757185038179,
+          "z": -2.032205734634772,
+          "height": 12.551968278424592,
+          "radius": 13
+        },
+        "palette": {
+          "soil": "#ad995c",
+          "vegetation": "#b8a766",
+          "shade": "#657568",
+          "sun": "#d0bd7c"
+        },
+        "batches": [
+          {
+            "name": "biome-shrub",
+            "instances": 35,
+            "triangles": 630
+          },
+          {
+            "name": "pretty-savanna-grass",
+            "instances": 11000,
+            "triangles": 44000
+          }
+        ],
+        "additionalDrawCalls": 1,
+        "notes": [
+          "Presentation dressing only; no source trees or ecological records modified.",
+          "World-space plant masses and correlated ground albedo; no screen vignette.",
+          "Existing hero tree receives selective sun-facing crown highlights."
+        ]
+      },
+      "lab": {
+        "schemaVersion": 1,
+        "generatorVersion": "recipe-golden-1",
+        "experiment": "R",
+        "candidate": "r-fidelity-tuft-c-dense",
+        "worldSeed": "29",
+        "presentationSeed": "reference-recipe-1",
+        "parameters": {
+          "revision": 10,
+          "tileMeters": 27,
+          "textureContrast": 0.42,
+          "macroContrast": 1.65,
+          "grassInstances": 2800,
+          "grassHeight": 1.25,
+          "bladeWidth": 0.12,
+          "foregroundClusterCount": 3,
+          "rockInstancesPerCluster": 5,
+          "shadowStrength": 0.72,
+          "seeds": [
+            "29",
+            "41",
+            "73"
+          ],
+          "presentationSeed": "reference-recipe-1",
+          "cameraHeight": 1.7,
+          "alphaToCoverage": false,
+          "golden": {
+            "revision": 2,
+            "grassInstances": 2200,
+            "frameGrass": 480,
+            "backdropRadius": 145,
+            "backdropHeight": 80,
+            "terrainContinuation": 330,
+            "artDirection": "asymmetric weathered foreground; honey-gold middle; irregular blue-green shadow rolls; illustrated hill continuity"
+          },
+          "valueField": "warm-near-gold-middle-v1",
+          "grassRepresentation": "curved-smooth-tuft-c",
+          "frameInstances": 850,
+          "tuftProfile": {
+            "name": "Broken arched highlight tufts",
+            "blades": 7,
+            "width": 0.032,
+            "height": 1.65,
+            "bend": 1.05,
+            "spread": 0.65,
+            "highlight": 0.45
+          },
+          "densityTreatment": "irregular-swaths-open-encounter",
+          "midInstances": 4000,
+          "nearInstances": 850
+        },
+        "recipeId": "savanna-reference-recipe-1",
+        "coverageMode": "ground-and-geometry",
+        "targetLayout": {
+          "count": 4865,
+          "matrixDigest": "d470f4e6"
+        },
+        "unchangedSystems": {
+          "before": "9f5e54b8",
+          "after": "9f5e54b8",
+          "match": true,
+          "scope": "Declared ground/distant presentation, added hill continuation, decorative grass and rock targets; existing terrain vertices, primary trees, sky, lights and fog guarded."
+        },
+        "deterministicReproduction": true
+      },
+      "treeStudy": {
+        "candidate": "C",
+        "heroId": "tree-12-open-savanna-0",
+        "position": [
+          -16.19757185038179,
+          -0.4439749342178131,
+          -2.032205734634772
+        ],
+        "seed": "171073434",
+        "appearanceSeed": "3394320064",
+        "dimensions": {
+          "height": 9.732045504625129,
+          "crownWidth": 20.078506598175768,
+          "crownDepth": 18.531047451876056
+        },
+        "segments": 740,
+        "groups": 153,
+        "sprays": 612,
+        "profileVersion": "branch-grammar-1"
+      },
+      "textureAudit": [
+        {
+          "width": 1254,
+          "height": 1254,
+          "mipmaps": true,
+          "estimatedRGBABytes": 8386752,
+          "source": "/assets/savanna-recipe/painted-fibre-v1.webp"
+        },
+        {
+          "width": 1774,
+          "height": 887,
+          "mipmaps": true,
+          "estimatedRGBABytes": 8392203,
+          "source": "/assets/puget-v1/sky-matte-v1.webp"
+        },
+        {
+          "width": 2048,
+          "height": 2048,
+          "mipmaps": true,
+          "estimatedRGBABytes": 22369621,
+          "source": "/assets/puget-v1/grass.png"
+        },
+        {
+          "width": 64,
+          "height": 64,
+          "mipmaps": false,
+          "estimatedRGBABytes": 16384,
+          "source": "generated canvas"
+        },
+        {
+          "width": 512,
+          "height": 384,
+          "mipmaps": true,
+          "estimatedRGBABytes": 1048576,
+          "source": "generated canvas"
+        },
+        {
+          "width": 1024,
+          "height": 512,
+          "mipmaps": false,
+          "estimatedRGBABytes": 2097152,
+          "source": "generated canvas"
+        },
+        {
+          "width": 2172,
+          "height": 724,
+          "mipmaps": true,
+          "estimatedRGBABytes": 8386816,
+          "source": "/assets/savanna-hills/golden-ridges-v1.webp"
+        }
+      ],
+      "renderSettings": {
+        "exposure": 1.12,
+        "toneMapping": 4,
+        "shadowType": 1
+      },
+      "renderer": "WebKit WebGL",
+      "errors": [],
+      "coverage": {
+        "available": true,
+        "region": "lower half",
+        "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+        "fraction": 0.5298871527777778,
+        "nearBlackFraction": 0.00011467326310961125,
+        "horizontalBands": [
+          5873,
+          6402,
+          5700,
+          5485,
+          6088,
+          3744,
+          2821,
+          3813,
+          4206,
+          5183,
+          5706,
+          6022
+        ]
+      },
+      "findings": [],
+      "limitations": [
+        "Metrics flag potential failures; they cannot establish artistic quality.",
+        "Coverage mask omits terrain occlusion; near-black statistics include legitimate shadows.",
+        "Faceting, continuity and conspicuous repetition require vision inspection; no RGB-only artistic approval."
+      ]
+    },
+    {
+      "biome": "savanna",
+      "view": "inspection",
+      "tier": 1,
+      "width": 640,
+      "height": 360,
+      "variant": "current",
+      "camera": {
+        "position": [
+          34,
+          23,
+          44
+        ],
+        "quaternion": [
+          -0.11289019307845702,
+          0.2798418085648005,
+          0.033156062656846556,
+          0.9528090270326922
+        ],
+        "aspect": 1.7777777777777777,
+        "fov": 47
+      },
+      "performance": {
+        "calls": 11,
+        "triangles": 416922,
+        "cpuSubmissionMs": [
+          0.5,
+          0.19999998807907104,
+          0.30000001192092896
+        ],
+        "synchronousCompletionMs": [
+          0.5,
+          0.19999998807907104,
+          0.30000001192092896
+        ],
+        "pixelRatio": 1,
+        "textureObjects": 11,
+        "geometryObjects": 15,
+        "antialias": false
+      },
+      "instances": [
+        {
+          "name": "biome-grass",
+          "count": 2800,
+          "visible": false,
+          "tiles": null,
+          "scaleRange": [
+            0.42099133133888245,
+            2.864253282546997
+          ]
+        },
+        {
+          "name": "biome-shrub",
+          "count": 35,
+          "visible": false,
+          "tiles": null,
+          "scaleRange": [
+            1.0798401672026348,
+            2.1186607247296667
+          ]
+        },
+        {
+          "name": "biome-understory",
+          "count": 0,
+          "visible": false,
+          "tiles": null,
+          "scaleRange": [
+            null,
+            0
+          ]
+        },
+        {
+          "name": "pretty-savanna-grass",
+          "count": 11000,
+          "visible": false,
+          "tiles": 3,
+          "scaleRange": [
+            0.2870888991085412,
+            2.65032504054978
+          ]
+        },
+        {
+          "name": "lab-savanna-grass",
+          "count": 4000,
+          "visible": true,
+          "tiles": null,
+          "scaleRange": [
+            0.09891406446695328,
+            1.4422314167022705
+          ]
+        },
+        {
+          "name": "lab-savanna-rocks",
+          "count": 15,
+          "visible": true,
+          "tiles": null,
+          "scaleRange": [
+            0.17692375449519962,
+            1.0877213458756805
+          ]
+        },
+        {
+          "name": "lab-savanna-grass",
+          "count": 850,
+          "visible": true,
+          "tiles": null,
+          "scaleRange": [
+            0.3453589975833893,
+            1.1123193502426147
+          ]
+        }
+      ],
+      "plan": {
+        "version": 1,
+        "seed": "29",
+        "biome": "savanna",
+        "patches": [
+          {
+            "x": -4.493090440519154,
+            "z": 28.43000444676727,
+            "rx": 7.581593108130619,
+            "rz": 10.071669114055112,
+            "angle": 2.285271060152518,
+            "strength": 1
+          },
+          {
+            "x": 6.456158130429685,
+            "z": 27.209757453529164,
+            "rx": 7.515211374266073,
+            "rz": 7.0275033744983375,
+            "angle": 1.8256222142759573,
+            "strength": 0.8548365871189162
+          },
+          {
+            "x": -12.583992624655366,
+            "z": 26.280338981654495,
+            "rx": 7.410130577161908,
+            "rz": 10.043338727205992,
+            "angle": 0.3010566157364583,
+            "strength": 0.7985320944106207
+          },
+          {
+            "x": 17.315777130890638,
+            "z": 18.718063696287572,
+            "rx": 5.152385007822886,
+            "rz": 8.88388560875319,
+            "angle": 1.677087850217777,
+            "strength": 1
+          },
+          {
+            "x": -25.45339873014018,
+            "z": 7.263550580013543,
+            "rx": 5.126184181543067,
+            "rz": 6.382954746019095,
+            "angle": 0.7828021187131955,
+            "strength": 0.7269650102127344
+          },
+          {
+            "x": 29.058562750462443,
+            "z": -5.64303207793273,
+            "rx": 6.933315245900303,
+            "rz": 10.330069652060047,
+            "angle": 1.677164640250676,
+            "strength": 0.9399228765396401
+          },
+          {
+            "x": -26.194409865885973,
+            "z": -20.183647024212405,
+            "rx": 7.608973474241793,
+            "rz": 10.051379956072196,
+            "angle": 2.478642305332482,
+            "strength": 1
+          },
+          {
+            "x": 15.275082778185606,
+            "z": -30.331746279727668,
+            "rx": 7.407501591136679,
+            "rz": 6.229568859795108,
+            "angle": 1.4766902614366844,
+            "strength": 0.6855999986408279
+          },
+          {
+            "x": -34.68169624917209,
+            "z": -34.011841278290376,
+            "rx": 7.023297636304051,
+            "rz": 10.683982367860153,
+            "angle": 0.355532302010309,
+            "strength": 0.9135892545804382
+          },
+          {
+            "x": 36.93799715535715,
+            "z": -40.22378891031258,
+            "rx": 5.464575080899522,
+            "rz": 6.483926919987425,
+            "angle": 0.8436906087917794,
+            "strength": 1
+          },
+          {
+            "x": -5.320991814602166,
+            "z": -43.08390223397873,
+            "rx": 7.281652988865972,
+            "rz": 8.724085556110367,
+            "angle": 0.23891892601226647,
+            "strength": 0.8442433476215229
+          }
+        ],
+        "clearing": {
+          "x": 3,
+          "z": -4,
+          "rx": 12,
+          "rz": 20
+        },
+        "hero": {
+          "id": "tree-12-open-savanna-0",
+          "x": -16.19757185038179,
+          "z": -2.032205734634772,
+          "height": 12.551968278424592,
+          "radius": 13
+        },
+        "palette": {
+          "soil": "#ad995c",
+          "vegetation": "#b8a766",
+          "shade": "#657568",
+          "sun": "#d0bd7c"
+        },
+        "batches": [
+          {
+            "name": "biome-shrub",
+            "instances": 35,
+            "triangles": 630
+          },
+          {
+            "name": "pretty-savanna-grass",
+            "instances": 11000,
+            "triangles": 44000
+          }
+        ],
+        "additionalDrawCalls": 1,
+        "notes": [
+          "Presentation dressing only; no source trees or ecological records modified.",
+          "World-space plant masses and correlated ground albedo; no screen vignette.",
+          "Existing hero tree receives selective sun-facing crown highlights."
+        ]
+      },
+      "lab": {
+        "schemaVersion": 1,
+        "generatorVersion": "recipe-golden-1",
+        "experiment": "R",
+        "candidate": "r-fidelity-tuft-c-dense",
+        "worldSeed": "29",
+        "presentationSeed": "reference-recipe-1",
+        "parameters": {
+          "revision": 10,
+          "tileMeters": 27,
+          "textureContrast": 0.42,
+          "macroContrast": 1.65,
+          "grassInstances": 2800,
+          "grassHeight": 1.25,
+          "bladeWidth": 0.12,
+          "foregroundClusterCount": 3,
+          "rockInstancesPerCluster": 5,
+          "shadowStrength": 0.72,
+          "seeds": [
+            "29",
+            "41",
+            "73"
+          ],
+          "presentationSeed": "reference-recipe-1",
+          "cameraHeight": 1.7,
+          "alphaToCoverage": false,
+          "golden": {
+            "revision": 2,
+            "grassInstances": 2200,
+            "frameGrass": 480,
+            "backdropRadius": 145,
+            "backdropHeight": 80,
+            "terrainContinuation": 330,
+            "artDirection": "asymmetric weathered foreground; honey-gold middle; irregular blue-green shadow rolls; illustrated hill continuity"
+          },
+          "valueField": "warm-near-gold-middle-v1",
+          "grassRepresentation": "curved-smooth-tuft-c",
+          "frameInstances": 850,
+          "tuftProfile": {
+            "name": "Broken arched highlight tufts",
+            "blades": 7,
+            "width": 0.032,
+            "height": 1.65,
+            "bend": 1.05,
+            "spread": 0.65,
+            "highlight": 0.45
+          },
+          "densityTreatment": "irregular-swaths-open-encounter",
+          "midInstances": 4000,
+          "nearInstances": 850
+        },
+        "recipeId": "savanna-reference-recipe-1",
+        "coverageMode": "ground-and-geometry",
+        "targetLayout": {
+          "count": 4865,
+          "matrixDigest": "d470f4e6"
+        },
+        "unchangedSystems": {
+          "before": "9f5e54b8",
+          "after": "9f5e54b8",
+          "match": true,
+          "scope": "Declared ground/distant presentation, added hill continuation, decorative grass and rock targets; existing terrain vertices, primary trees, sky, lights and fog guarded."
+        },
+        "deterministicReproduction": true
+      },
+      "treeStudy": {
+        "candidate": "C",
+        "heroId": "tree-12-open-savanna-0",
+        "position": [
+          -16.19757185038179,
+          -0.4439749342178131,
+          -2.032205734634772
+        ],
+        "seed": "171073434",
+        "appearanceSeed": "3394320064",
+        "dimensions": {
+          "height": 9.732045504625129,
+          "crownWidth": 20.078506598175768,
+          "crownDepth": 18.531047451876056
+        },
+        "segments": 740,
+        "groups": 153,
+        "sprays": 612,
+        "profileVersion": "branch-grammar-1"
+      },
+      "textureAudit": [
+        {
+          "width": 1254,
+          "height": 1254,
+          "mipmaps": true,
+          "estimatedRGBABytes": 8386752,
+          "source": "/assets/savanna-recipe/painted-fibre-v1.webp"
+        },
+        {
+          "width": 1774,
+          "height": 887,
+          "mipmaps": true,
+          "estimatedRGBABytes": 8392203,
+          "source": "/assets/puget-v1/sky-matte-v1.webp"
+        },
+        {
+          "width": 2048,
+          "height": 2048,
+          "mipmaps": true,
+          "estimatedRGBABytes": 22369621,
+          "source": "/assets/puget-v1/grass.png"
+        },
+        {
+          "width": 64,
+          "height": 64,
+          "mipmaps": false,
+          "estimatedRGBABytes": 16384,
+          "source": "generated canvas"
+        },
+        {
+          "width": 512,
+          "height": 384,
+          "mipmaps": true,
+          "estimatedRGBABytes": 1048576,
+          "source": "generated canvas"
+        },
+        {
+          "width": 1024,
+          "height": 512,
+          "mipmaps": false,
+          "estimatedRGBABytes": 2097152,
+          "source": "generated canvas"
+        },
+        {
+          "width": 2172,
+          "height": 724,
+          "mipmaps": true,
+          "estimatedRGBABytes": 8386816,
+          "source": "/assets/savanna-hills/golden-ridges-v1.webp"
+        }
+      ],
+      "renderSettings": {
+        "exposure": 1.12,
+        "toneMapping": 4,
+        "shadowType": 1
+      },
+      "renderer": "WebKit WebGL",
+      "errors": [],
+      "coverage": {
+        "available": true,
+        "region": "lower half",
+        "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+        "fraction": 0.09943576388888889,
+        "nearBlackFraction": 0.00043649061545176777,
+        "horizontalBands": [
+          1549,
+          1670,
+          1925,
+          1604,
+          1198,
+          1193,
+          577,
+          402,
+          309,
+          433,
+          367,
+          228
+        ]
+      },
+      "findings": [
+        {
+          "severity": "major",
+          "defect": "Insufficient projected lower-half vegetation coverage",
+          "measurements": {
+            "coverage": 0.09943576388888889,
+            "threshold": 0.15
+          }
+        }
+      ],
+      "limitations": [
+        "Metrics flag potential failures; they cannot establish artistic quality.",
+        "Coverage mask omits terrain occlusion; near-black statistics include legitimate shadows.",
+        "Faceting, continuity and conspicuous repetition require vision inspection; no RGB-only artistic approval."
+      ]
+    }
+  ],
+  "tests": [
+    "npx tsc --noEmit passed",
+    "Layout reproduction and unchanged-system guards recorded in capture reports"
+  ],
+  "budget": {
+    "iterations": 1,
+    "stopped": "Requested dense effect is visible; no further artistic iteration."
+  }
+}

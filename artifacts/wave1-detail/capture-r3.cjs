@@ -1,0 +1,3 @@
+const h=require('../../scripts/studies/visual-quality.cjs');(async()=>{await h.startSession();try{Object.assign(h.config.scenes,{desert:'lat=34&lon=-116.15&habitat=forest&wave1=desert&fieldStudy=rebuild',mangrove:'lat=25.2&lon=-80.9&habitat=coastal&wave1=mangrove&fieldStudy=rebuild',flooded:'lat=26.209957419&lon=-80.9383825925&habitat=wetland&conditional=1&wave1=flooded&fieldStudy=rebuild'});h.config.inspection={position:[70,50,85],target:[0,1,-25]};await h.capture({label:'wave1-detail-r3',scenes:['desert','mangrove','flooded'],recipeEye:true,masks:false,closePage:true});}finally{await h.closeSession()}})().catch(e=>{console.error(e);process.exitCode=1});
+
+

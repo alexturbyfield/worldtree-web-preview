@@ -1,0 +1,24 @@
+{
+  "visionContentInspected": true,
+  "reference": "1000011014.png",
+  "baseline": "artifacts/golden-plains-trees/diagnostics-C.png",
+  "observations": [
+    {
+      "stage": "crown",
+      "reference": "Connected irregular lobes build a raised umbrella; upper surfaces catch warm light while supported underside branches stay readable.",
+      "baseline": "Fork is distinctive, but crown islands are wafer-thin with large gaps and dark uniform upper planes.",
+      "hypothesis": "Bridge interior scaffold with owned shoots, rising secondary/terminal branches and vertically staggered inclined sprays."
+    },
+    {
+      "stage": "ground",
+      "reference": "Amber/olive foreground shadow masses cradle luminous gold middle plains, followed by straw and sage distance. Illuminated foreground tips prevent a dark curtain.",
+      "hypothesis": "Shared world-space pigment fields with irregular longitudinal progression and warm tip values; retain restrained relief."
+    },
+    {
+      "stage": "grass",
+      "reference": "Curving overlapping ribbons form directional swaths; fine heads are selective, rocks nest within vegetation.",
+      "hypothesis": "Closed folded cross-sections, curved tapered stems and clustered root footprints, opaque instancing, shared terrain pigment."
+    }
+  ],
+  "approval": "proposed, not visually approved"
+}

@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-27T21:48:42.483419+00:00",
+  "actor": "user",
+  "text": "This is approved. Tell me how more important regions are left",
+  "scope": "Latest holm-oak muted color and reduced highlights shown in 320x180 scene screenshot; not global biome/geographic approval",
+  "image": "artifacts/holm-cork-palette/tiny-hero.png",
+  "materialFile": "src/lib/forest/holm-oak-study.ts",
+  "commitPushDeployAuthorized": false
+}

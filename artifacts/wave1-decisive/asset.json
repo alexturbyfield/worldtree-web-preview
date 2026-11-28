@@ -1,0 +1,21 @@
+{
+  "path": "public/assets/wave1-detail/arid-sediment-v1.webp",
+  "source": "Built-in OpenAI imagegen; independently generated albedo, not a cropped concept",
+  "dimensions": [
+    1254,
+    1254
+  ],
+  "requestedDimensions": [
+    2048,
+    2048
+  ],
+  "actualDimensionCaveat": "Actual1254 square, not claimed2K",
+  "sha256": "67ff274ba29d736c58a2e5578bc8915289e37f5a93e3f68cb0147ea004c0ae84",
+  "colorSpace": "sRGB",
+  "mipmaps": true,
+  "anisotropy": 4,
+  "tileMetres": 3.8,
+  "decodedRgbaMipMiB": 7.99822998046875,
+  "preview": "artifacts/wave1-decisive/arid-3x3.png",
+  "inspection": "Actual3x3 preview inspected. No hard seam apparent at960px; repeating diagonal mineral distribution remains visible. Macro fields reduce rather than eliminate repetition."
+}

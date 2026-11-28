@@ -1,0 +1,6 @@
+Rolling mountain shape correction
+Source: src/lib/forest/landscape-detail.ts only.
+Replaced vertical triangle curtains with three shallow, 67m-deep landform meshes, each 72x16 cells. Five seeded broad, overlapping hill masses form rounded shoulders and saddles; the nearest two layers have lower profiles and staggered depths. These are illustrative foothills, not site elevation data.
+Existing painted mountain texture, palette depth blends, sky, trees, grass, ecological selection, camera, vignette, illumination and physical shadow settings preserved. Comparison uses seed29 / structure grove-1 / appearance garden and the same anchored human camera.
+TypeScript passed; browser/shader errors absent. Tree geometry and sky fingerprints, camera, exposure, shadow strength, ground/illumination/environment data match. Draw calls remain 18. Added 6528 triangles for real backdrop depth; no new texture allocations or per-frame geometry rebuilding. GPU performance not benchmarked.
+Preview current encounter with &ridgeShape=rolling (default). &ridgeShape=old retains the jagged curtain comparison. No deployment.

@@ -1,0 +1,236 @@
+[
+  {
+    "biome": "mangrove",
+    "view": "hero",
+    "tier": 1,
+    "width": 640,
+    "height": 360,
+    "variant": "current",
+    "camera": {
+      "position": [
+        0,
+        2.05,
+        31
+      ],
+      "quaternion": [
+        -0.00037857057010793325,
+        0.015146299694104859,
+        0.0000057346015476251695,
+        0.9998852165408857
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "performance": {
+      "calls": 12,
+      "triangles": 1451862,
+      "cpuSubmissionMs": [
+        1.399999976158142,
+        0.6000000238418579,
+        0.699999988079071
+      ],
+      "synchronousCompletionMs": [],
+      "pixelRatio": 1,
+      "textureObjects": 8,
+      "geometryObjects": 8,
+      "antialias": false
+    },
+    "instances": [
+      {
+        "name": "mangrove-shore-root-debris",
+        "count": 346,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.1858243248002433,
+          0.5677395120851718
+        ]
+      },
+      {
+        "name": "mangrove-distant-canopy-masses",
+        "count": 46,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          3.024197816848755,
+          5.941234588623047
+        ]
+      }
+    ],
+    "textureAudit": [
+      {
+        "width": 1774,
+        "height": 887,
+        "mipmaps": true,
+        "estimatedRGBABytes": 8392203,
+        "source": "/assets/puget-v1/sky-matte-v1.webp"
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "mipmaps": true,
+        "estimatedRGBABytes": 22369621,
+        "source": "/assets/puget-v1/forest-floor.png"
+      },
+      {
+        "width": 512,
+        "height": 256,
+        "mipmaps": false,
+        "estimatedRGBABytes": 524288,
+        "source": "generated canvas"
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "mipmaps": false,
+        "estimatedRGBABytes": 16384,
+        "source": "generated canvas"
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "mipmaps": true,
+        "estimatedRGBABytes": 1048576,
+        "source": "generated canvas"
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "renderer": "WebKit WebGL",
+    "errors": [],
+    "coverage": {
+      "available": false,
+      "region": "lower half",
+      "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+      "fraction": null,
+      "nearBlackFraction": null,
+      "horizontalBands": null
+    },
+    "findings": [],
+    "limitations": [
+      "Metrics flag potential failures; they cannot establish artistic quality.",
+      "Coverage mask omits terrain occlusion; near-black statistics include legitimate shadows.",
+      "Faceting, continuity and conspicuous repetition require vision inspection; no RGB-only artistic approval."
+    ]
+  },
+  {
+    "biome": "mangrove",
+    "view": "inspection",
+    "tier": 1,
+    "width": 640,
+    "height": 360,
+    "variant": "current",
+    "camera": {
+      "position": [
+        70,
+        50,
+        85
+      ],
+      "quaternion": [
+        -0.17164577003343667,
+        0.2750834768545333,
+        0.04998336618883981,
+        0.9446525676118614
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "performance": {
+      "calls": 12,
+      "triangles": 1451862,
+      "cpuSubmissionMs": [
+        1.0999999940395355,
+        1,
+        0.7000000178813934
+      ],
+      "synchronousCompletionMs": [],
+      "pixelRatio": 1,
+      "textureObjects": 8,
+      "geometryObjects": 8,
+      "antialias": false
+    },
+    "instances": [
+      {
+        "name": "mangrove-shore-root-debris",
+        "count": 346,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.1858243248002433,
+          0.5677395120851718
+        ]
+      },
+      {
+        "name": "mangrove-distant-canopy-masses",
+        "count": 46,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          3.024197816848755,
+          5.941234588623047
+        ]
+      }
+    ],
+    "textureAudit": [
+      {
+        "width": 1774,
+        "height": 887,
+        "mipmaps": true,
+        "estimatedRGBABytes": 8392203,
+        "source": "/assets/puget-v1/sky-matte-v1.webp"
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "mipmaps": true,
+        "estimatedRGBABytes": 22369621,
+        "source": "/assets/puget-v1/forest-floor.png"
+      },
+      {
+        "width": 512,
+        "height": 256,
+        "mipmaps": false,
+        "estimatedRGBABytes": 524288,
+        "source": "generated canvas"
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "mipmaps": false,
+        "estimatedRGBABytes": 16384,
+        "source": "generated canvas"
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "mipmaps": true,
+        "estimatedRGBABytes": 1048576,
+        "source": "generated canvas"
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "renderer": "WebKit WebGL",
+    "errors": [],
+    "coverage": {
+      "available": false,
+      "region": "lower half",
+      "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+      "fraction": null,
+      "nearBlackFraction": null,
+      "horizontalBands": null
+    },
+    "findings": [],
+    "limitations": [
+      "Metrics flag potential failures; they cannot establish artistic quality.",
+      "Coverage mask omits terrain occlusion; near-black statistics include legitimate shadows.",
+      "Faceting, continuity and conspicuous repetition require vision inspection; no RGB-only artistic approval."
+    ]
+  }
+]

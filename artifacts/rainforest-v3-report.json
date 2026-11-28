@@ -1,0 +1,34 @@
+{
+  "before": {
+    "calls": 19,
+    "triangles": 714124
+  },
+  "after": {
+    "calls": 19,
+    "triangles": 596624
+  },
+  "species": {
+    "Swietenia macrophylla": 12,
+    "Hevea brasiliensis": 4,
+    "Cecropia peltata": 5,
+    "Euterpe precatoria": 3,
+    "Theobroma cacao": 12
+  },
+  "strata": {
+    "emergent": 2,
+    "main-canopy": 14,
+    "subcanopy": 8,
+    "understory": 12
+  },
+  "groundInstances": {
+    "grass": 480,
+    "shrub": 140,
+    "understory": 160
+  },
+  "unchanged": [
+    "Puget and savanna captured PNGs byte-identical",
+    "Amazon encounter camera and lighting configuration",
+    "Fog and sky"
+  ],
+  "errors": []
+}

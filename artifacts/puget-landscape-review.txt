@@ -1,0 +1,15 @@
+Puget landscape depth / ground detail — first comparison
+
+A: approved encounter, unchanged; byte-identical to puget-illumination-verified-B.png.
+B: three seeded irregular control-point ridges, distinct blue-green layers, vertex tonal breakup on nearer layer, no extra fog.
+C: B plus 2048x2048 toroidally wrapped procedural brush/blade texture, mipmapping, trilinear minification, linear magnification and anisotropy 4. Independent broad world-space pigment wash; existing instancing batches use seeded grouped acceptance and varied proportions. Existing clearing mask remains authoritative.
+
+Files: src/lib/forest/landscape-detail.ts; small hooks in encounter.ts and environment-foundations.ts. No tree, ecological record, physical light/shadow, vignette or illumination change. Palette sets are exposed by landscapePalette; landscapeGrass accepts a palette/size/seed. No additional rocks, paths or props.
+
+Validation: TypeScript passed. Browser/shader errors absent in A/B/C. Camera, exposure, shadow strength, illumination field, vignette, tree-position fingerprint and sky hash match. Texture generation is deterministic and opposite edge texels match exactly (max edge error 0).
+Counters A: 17 calls, 575981 triangles. B: 18 calls, 576245 triangles. C: 18 calls, 560785 triangles. These are static desktop Chromium SwiftShader counters, not GPU timing or Android FPS. Ground uses existing three instancing batches; changed instance count accounts for C reduction. One additional ridge draw call; no per-blade mesh allocations.
+
+Outputs: puget-landscape-comparison.png; puget-landscape-grass-close.png is a native-pixel crop from C (no camera/lighting change or synthetic detail enhancement). puget-landscape-grass-texture.png is the actual 2048px procedural source texture.
+Critical review: ridge silhouettes are clearer but the nearest large peaks are too angular/graphic and partially hide the farther layers. Texture is seamless and reusable, but surface detail is too soft after material remapping at normal encounter distance; the crop makes this limitation inspectable. These are first-pass issues, not approval claims. Stop after this comparison; no automatic polishing or deployment.
+
+Preview current Puget encounter URL with &landscape=A, B, or C. Default C. Retain &composition=C&groundLighting=B&illumination=on. Seed 29, structure grove-1, appearance garden, density36. Baseline A remains available.

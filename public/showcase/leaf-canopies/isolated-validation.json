@@ -1,0 +1,66 @@
+{
+  "views": [
+    {
+      "before": true,
+      "view": 0,
+      "calls": 1,
+      "triangles": 196,
+      "cards": 50,
+      "opaqueScaffoldMeshes": 1,
+      "centralCoverage": 1,
+      "luminanceP10": 83.6638,
+      "luminanceP90": 124.1528,
+      "structuralHash": "ed09949d3bd9534b5e6a8470587e2e779723a3333ceb15132a37d15426eb1b89"
+    },
+    {
+      "before": false,
+      "view": 0,
+      "calls": 1,
+      "triangles": 100,
+      "cards": 50,
+      "opaqueScaffoldMeshes": 0,
+      "centralCoverage": 0.9991396414587467,
+      "luminanceP10": 46.96459999999999,
+      "luminanceP90": 117.68379999999999,
+      "structuralHash": "ed09949d3bd9534b5e6a8470587e2e779723a3333ceb15132a37d15426eb1b89"
+    },
+    {
+      "before": false,
+      "view": 1,
+      "calls": 1,
+      "triangles": 100,
+      "cards": 50,
+      "opaqueScaffoldMeshes": 0,
+      "centralCoverage": 0.9985075413059892,
+      "luminanceP10": 38.837399999999995,
+      "luminanceP90": 73.1964,
+      "structuralHash": "ed09949d3bd9534b5e6a8470587e2e779723a3333ceb15132a37d15426eb1b89"
+    },
+    {
+      "before": false,
+      "view": 2,
+      "calls": 1,
+      "triangles": 100,
+      "cards": 50,
+      "opaqueScaffoldMeshes": 0,
+      "centralCoverage": 0.994714940389444,
+      "luminanceP10": 47.9068,
+      "luminanceP90": 83.044,
+      "structuralHash": "ed09949d3bd9534b5e6a8470587e2e779723a3333ceb15132a37d15426eb1b89"
+    },
+    {
+      "before": false,
+      "view": 3,
+      "calls": 1,
+      "triangles": 100,
+      "cards": 50,
+      "opaqueScaffoldMeshes": 0,
+      "centralCoverage": 0.9997717416115042,
+      "luminanceP10": 60.504799999999996,
+      "luminanceP90": 109.11699999999999,
+      "structuralHash": "ed09949d3bd9534b5e6a8470587e2e779723a3333ceb15132a37d15426eb1b89"
+    }
+  ],
+  "errors": [],
+  "policy": "Coverage measures the central projected ellipse only, not every silhouette pixel. Four 90-degree views. Brightness percentiles check volume contrast, not photometric botanical accuracy. Identical geometry hash after reload."
+}

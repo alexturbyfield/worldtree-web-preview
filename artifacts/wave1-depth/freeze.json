@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-26T18:16:43.508Z",
+  "development": [
+    29,
+    41
+  ],
+  "holdout": 8423,
+  "sourceHashes": {
+    "src/lib/forest/wave1-depth-texture.ts": "8c2b4d875f50c63f94e07b176e5fd5c06ac566ed66e18953e25eaa0693771d7c",
+    "src/lib/forest/wave1-desert-direction.ts": "ff0b1805fc634838601ab208ac70b687411a5116faca28d89b25d70f1408b85a",
+    "src/lib/forest/wave1-rebuild.ts": "bdcb7f9d07b6843f5b3f3bfae043bc22c4e3fd78e0ea56a512da76a267d48db0",
+    "src/lib/forest/wave1-fields.ts": "3b75c341d19bcf56d8681750577d0e58a42c848ef628c0aa850e61f58f27e1cb",
+    "src/lib/forest/wave1-water.ts": "a41be61219232b2033b94abda2d7767964bcfc8b9798eb81fa748a576a3d2f35",
+    "public/assets/wave1-detail/desert-distance-v1.webp": "f54c66be1d0ede9171192ff62b463c6ef234a69eed6fa5a54ebd45837ec782ca"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "biome": 14,
+  "references": [
+    {
+      "id": "mg-usgs-everglades-proproots",
+      "source": "https://www.usgs.gov/media/images/prop-roots-red-mangrove-trees-everglades-national-park",
+      "image": "reference-usgs-roots.jpg",
+      "license": "Public Domain, explicitly stated by USGS",
+      "author": "Michael Johannes Osland, USGS",
+      "observedWithVision": true,
+      "artisticPrinciples": [
+        "A dense pale root lattice separates dark reflective water from green canopy.",
+        "Water opening is low and horizontal, enclosed by irregular banks.",
+        "Connected near/middle vegetation matters more than isolated specimen trees."
+      ],
+      "avoid": [
+        "Uniformly spaced trunks",
+        "Straight canal geometry",
+        "Floating roots",
+        "Black cutout vegetation"
+      ]
+    }
+  ]
+}

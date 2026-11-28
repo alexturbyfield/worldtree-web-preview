@@ -1,0 +1,1460 @@
+[
+  {
+    "id": "boreal",
+    "seed": "29",
+    "view": "hero",
+    "file": "artifacts/wave2-autonomous/boreal-validated/boreal-29-hero.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        0,
+        1.6436058218259575,
+        34
+      ],
+      "target": [
+        0,
+        3.3126993447811843,
+        -30
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 6,
+        "calls": 15,
+        "triangles": 691432,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.2999999523162842
+      },
+      {
+        "frame": 7,
+        "calls": 15,
+        "triangles": 691432,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      },
+      {
+        "frame": 8,
+        "calls": 15,
+        "triangles": 691432,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.40000003576278687
+      }
+    ],
+    "instances": [
+      {
+        "name": "boreal-distant-attached-boughs",
+        "count": 420
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1024,
+        "height": 1024,
+        "bytes": 5592405
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "acc8d7",
+        "intensity": 0.74,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "97b8ce",
+        "intensity": 0.34,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffe3a8",
+        "intensity": 3.5,
+        "position": [
+          -28,
+          34,
+          -8
+        ],
+        "target": [
+          0,
+          1,
+          -20
+        ],
+        "shadow": {
+          "intensity": 0.66,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -64,
+          "right": 64,
+          "normalBias": 0.04
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "recipe": {
+      "id": "boreal",
+      "biome": 6,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "boreal",
+        "biome": 6,
+        "seed": "29",
+        "phase": 6.217533754060308,
+        "relief": 0.65,
+        "camera": {
+          "position": [
+            0,
+            1.6436058218259575,
+            34
+          ],
+          "target": [
+            0,
+            3.3126993447811843,
+            -30
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.6436058218259575,
+          34
+        ],
+        "target": [
+          0,
+          3.3126993447811843,
+          -30
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#9aafa6"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "id": "boreal",
+      "version": 3,
+      "trees": 48,
+      "architecture": "Genus-conditional leader, paired rolled alpha-tested lobes attached to drooping bough chains",
+      "needleArtwork": "Generated spruce spray atlas is a painterly needle-texture approximation; pine/larch family differences remain structural, not verified species anatomy",
+      "ecology": "Regional candidates; unnamed moss/heath; local occurrence unverified",
+      "referenceState": {
+        "season": "green with provisional warm low foliage",
+        "weather": "clear",
+        "timeOfDay": "warm upper-left reference light"
+      },
+      "staging": "Low cover remains; no hard anchors in approach"
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "boreal",
+    "seed": "29",
+    "view": "inspection",
+    "file": "artifacts/wave2-autonomous/boreal-validated/boreal-29-inspection.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 10,
+        "calls": 15,
+        "triangles": 691432,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 1.100000023841858
+      },
+      {
+        "frame": 11,
+        "calls": 15,
+        "triangles": 691432,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 12,
+        "calls": 15,
+        "triangles": 691432,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      }
+    ],
+    "instances": [
+      {
+        "name": "boreal-distant-attached-boughs",
+        "count": 420
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1024,
+        "height": 1024,
+        "bytes": 5592405
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "acc8d7",
+        "intensity": 0.74,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "97b8ce",
+        "intensity": 0.34,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffe3a8",
+        "intensity": 3.5,
+        "position": [
+          -28,
+          34,
+          -8
+        ],
+        "target": [
+          0,
+          1,
+          -20
+        ],
+        "shadow": {
+          "intensity": 0.66,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -64,
+          "right": 64,
+          "normalBias": 0.04
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "recipe": {
+      "id": "boreal",
+      "biome": 6,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "boreal",
+        "biome": 6,
+        "seed": "29",
+        "phase": 6.217533754060308,
+        "relief": 0.65,
+        "camera": {
+          "position": [
+            0,
+            1.6436058218259575,
+            34
+          ],
+          "target": [
+            0,
+            3.3126993447811843,
+            -30
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.6436058218259575,
+          34
+        ],
+        "target": [
+          0,
+          3.3126993447811843,
+          -30
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#9aafa6"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "id": "boreal",
+      "version": 3,
+      "trees": 48,
+      "architecture": "Genus-conditional leader, paired rolled alpha-tested lobes attached to drooping bough chains",
+      "needleArtwork": "Generated spruce spray atlas is a painterly needle-texture approximation; pine/larch family differences remain structural, not verified species anatomy",
+      "ecology": "Regional candidates; unnamed moss/heath; local occurrence unverified",
+      "referenceState": {
+        "season": "green with provisional warm low foliage",
+        "weather": "clear",
+        "timeOfDay": "warm upper-left reference light"
+      },
+      "staging": "Low cover remains; no hard anchors in approach"
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "boreal",
+    "seed": "41",
+    "view": "hero",
+    "file": "artifacts/wave2-autonomous/boreal-validated/boreal-41-hero.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        0,
+        1.591092254136895,
+        34
+      ],
+      "target": [
+        0,
+        3.2380820709357976,
+        -30
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 6,
+        "calls": 15,
+        "triangles": 698486,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 7,
+        "calls": 15,
+        "triangles": 698486,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      },
+      {
+        "frame": 8,
+        "calls": 15,
+        "triangles": 698486,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.40000003576278687
+      }
+    ],
+    "instances": [
+      {
+        "name": "boreal-distant-attached-boughs",
+        "count": 420
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1024,
+        "height": 1024,
+        "bytes": 5592405
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "acc8d7",
+        "intensity": 0.74,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "97b8ce",
+        "intensity": 0.34,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffe3a8",
+        "intensity": 3.5,
+        "position": [
+          -28,
+          34,
+          -8
+        ],
+        "target": [
+          0,
+          1,
+          -20
+        ],
+        "shadow": {
+          "intensity": 0.66,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -64,
+          "right": 64,
+          "normalBias": 0.04
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "recipe": {
+      "id": "boreal",
+      "biome": 6,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "boreal",
+        "biome": 6,
+        "seed": "41",
+        "phase": 2.6452059000147714,
+        "relief": 0.65,
+        "camera": {
+          "position": [
+            0,
+            1.591092254136895,
+            34
+          ],
+          "target": [
+            0,
+            3.2380820709357976,
+            -30
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.591092254136895,
+          34
+        ],
+        "target": [
+          0,
+          3.2380820709357976,
+          -30
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#9aafa6"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "id": "boreal",
+      "version": 3,
+      "trees": 48,
+      "architecture": "Genus-conditional leader, paired rolled alpha-tested lobes attached to drooping bough chains",
+      "needleArtwork": "Generated spruce spray atlas is a painterly needle-texture approximation; pine/larch family differences remain structural, not verified species anatomy",
+      "ecology": "Regional candidates; unnamed moss/heath; local occurrence unverified",
+      "referenceState": {
+        "season": "green with provisional warm low foliage",
+        "weather": "clear",
+        "timeOfDay": "warm upper-left reference light"
+      },
+      "staging": "Low cover remains; no hard anchors in approach"
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "boreal",
+    "seed": "41",
+    "view": "inspection",
+    "file": "artifacts/wave2-autonomous/boreal-validated/boreal-41-inspection.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 10,
+        "calls": 15,
+        "triangles": 698486,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.8999999761581421
+      },
+      {
+        "frame": 11,
+        "calls": 15,
+        "triangles": 698486,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 12,
+        "calls": 15,
+        "triangles": 698486,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      }
+    ],
+    "instances": [
+      {
+        "name": "boreal-distant-attached-boughs",
+        "count": 420
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1024,
+        "height": 1024,
+        "bytes": 5592405
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "acc8d7",
+        "intensity": 0.74,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "97b8ce",
+        "intensity": 0.34,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffe3a8",
+        "intensity": 3.5,
+        "position": [
+          -28,
+          34,
+          -8
+        ],
+        "target": [
+          0,
+          1,
+          -20
+        ],
+        "shadow": {
+          "intensity": 0.66,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -64,
+          "right": 64,
+          "normalBias": 0.04
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "recipe": {
+      "id": "boreal",
+      "biome": 6,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "boreal",
+        "biome": 6,
+        "seed": "41",
+        "phase": 2.6452059000147714,
+        "relief": 0.65,
+        "camera": {
+          "position": [
+            0,
+            1.591092254136895,
+            34
+          ],
+          "target": [
+            0,
+            3.2380820709357976,
+            -30
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.591092254136895,
+          34
+        ],
+        "target": [
+          0,
+          3.2380820709357976,
+          -30
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#9aafa6"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "id": "boreal",
+      "version": 3,
+      "trees": 48,
+      "architecture": "Genus-conditional leader, paired rolled alpha-tested lobes attached to drooping bough chains",
+      "needleArtwork": "Generated spruce spray atlas is a painterly needle-texture approximation; pine/larch family differences remain structural, not verified species anatomy",
+      "ecology": "Regional candidates; unnamed moss/heath; local occurrence unverified",
+      "referenceState": {
+        "season": "green with provisional warm low foliage",
+        "weather": "clear",
+        "timeOfDay": "warm upper-left reference light"
+      },
+      "staging": "Low cover remains; no hard anchors in approach"
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "boreal",
+    "seed": "73",
+    "view": "hero",
+    "file": "artifacts/wave2-autonomous/boreal-validated/boreal-73-hero.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        0,
+        1.7371205746731846,
+        34
+      ],
+      "target": [
+        0,
+        3.152120083518543,
+        -30
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 6,
+        "calls": 15,
+        "triangles": 675468,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      },
+      {
+        "frame": 7,
+        "calls": 15,
+        "triangles": 675468,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.40000003576278687
+      },
+      {
+        "frame": 8,
+        "calls": 15,
+        "triangles": 675468,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.2999999523162842
+      }
+    ],
+    "instances": [
+      {
+        "name": "boreal-distant-attached-boughs",
+        "count": 420
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1024,
+        "height": 1024,
+        "bytes": 5592405
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "acc8d7",
+        "intensity": 0.74,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "97b8ce",
+        "intensity": 0.34,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffe3a8",
+        "intensity": 3.5,
+        "position": [
+          -28,
+          34,
+          -8
+        ],
+        "target": [
+          0,
+          1,
+          -20
+        ],
+        "shadow": {
+          "intensity": 0.66,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -64,
+          "right": 64,
+          "normalBias": 0.04
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "recipe": {
+      "id": "boreal",
+      "biome": 6,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "boreal",
+        "biome": 6,
+        "seed": "73",
+        "phase": 0.8829416451721374,
+        "relief": 0.65,
+        "camera": {
+          "position": [
+            0,
+            1.7371205746731846,
+            34
+          ],
+          "target": [
+            0,
+            3.152120083518543,
+            -30
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.7371205746731846,
+          34
+        ],
+        "target": [
+          0,
+          3.152120083518543,
+          -30
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#9aafa6"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "id": "boreal",
+      "version": 3,
+      "trees": 48,
+      "architecture": "Genus-conditional leader, paired rolled alpha-tested lobes attached to drooping bough chains",
+      "needleArtwork": "Generated spruce spray atlas is a painterly needle-texture approximation; pine/larch family differences remain structural, not verified species anatomy",
+      "ecology": "Regional candidates; unnamed moss/heath; local occurrence unverified",
+      "referenceState": {
+        "season": "green with provisional warm low foliage",
+        "weather": "clear",
+        "timeOfDay": "warm upper-left reference light"
+      },
+      "staging": "Low cover remains; no hard anchors in approach"
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "boreal",
+    "seed": "73",
+    "view": "inspection",
+    "file": "artifacts/wave2-autonomous/boreal-validated/boreal-73-inspection.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 10,
+        "calls": 15,
+        "triangles": 675468,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 1.199999988079071
+      },
+      {
+        "frame": 11,
+        "calls": 15,
+        "triangles": 675468,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 12,
+        "calls": 15,
+        "triangles": 675468,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      }
+    ],
+    "instances": [
+      {
+        "name": "boreal-distant-attached-boughs",
+        "count": 420
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      },
+      {
+        "name": "boreal-weathered-rootbed-stone",
+        "count": 8
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1024,
+        "height": 1024,
+        "bytes": 5592405
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "bytes": 16384
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "bytes": 1048576
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "acc8d7",
+        "intensity": 0.74,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "97b8ce",
+        "intensity": 0.34,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffe3a8",
+        "intensity": 3.5,
+        "position": [
+          -28,
+          34,
+          -8
+        ],
+        "target": [
+          0,
+          1,
+          -20
+        ],
+        "shadow": {
+          "intensity": 0.66,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -64,
+          "right": 64,
+          "normalBias": 0.04
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "recipe": {
+      "id": "boreal",
+      "biome": 6,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "boreal",
+        "biome": 6,
+        "seed": "73",
+        "phase": 0.8829416451721374,
+        "relief": 0.65,
+        "camera": {
+          "position": [
+            0,
+            1.7371205746731846,
+            34
+          ],
+          "target": [
+            0,
+            3.152120083518543,
+            -30
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          1.7371205746731846,
+          34
+        ],
+        "target": [
+          0,
+          3.152120083518543,
+          -30
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#9aafa6"
+        }
+      },
+      "trees": 48,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": {
+      "id": "boreal",
+      "version": 3,
+      "trees": 48,
+      "architecture": "Genus-conditional leader, paired rolled alpha-tested lobes attached to drooping bough chains",
+      "needleArtwork": "Generated spruce spray atlas is a painterly needle-texture approximation; pine/larch family differences remain structural, not verified species anatomy",
+      "ecology": "Regional candidates; unnamed moss/heath; local occurrence unverified",
+      "referenceState": {
+        "season": "green with provisional warm low foliage",
+        "weather": "clear",
+        "timeOfDay": "warm upper-left reference light"
+      },
+      "staging": "Low cover remains; no hard anchors in approach"
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  }
+]

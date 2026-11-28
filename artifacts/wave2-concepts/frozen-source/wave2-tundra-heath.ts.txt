@@ -1,0 +1,134 @@
+import * as T from 'three';
+import {expansionHeight,type ExpansionPlan} from './wave2-shared';
+import {randomSource} from './random';
+
+/** Synthetic study habitats; no measured soil, exposure or verified local flora inferred. */
+function habitat(p:ExpansionPlan,x:number,z:number){
+ const noise=(x:number,z:number)=>{const hash=(a:number,b:number)=>{const v=Math.sin(a*127.1+b*311.7)*43758.5453;return v-Math.floor(v);},ix=Math.floor(x),iz=Math.floor(z),a=x-ix,b=z-iz,u=a*a*(3-2*a),v=b*b*(3-2*b);return(hash(ix,iz)*(1-u)+hash(ix+1,iz)*u)*(1-v)+(hash(ix,iz+1)*(1-u)+hash(ix+1,iz+1)*u)*v;};
+ const warp=noise(x*.025+p.phase,z*.025)*18;
+ const ribbon=noise(x*.052+z*.014+p.phase,z*.018+warp*.045)*.72+noise(x*.13+warp*.07,z*.065)*.28;
+ const mineral=noise(x*.07+warp*.05,z*.042-p.phase)*.7+noise(x*.23,z*.17)*.3;
+ const shelter=.5+.25*Math.sin(z*.071-x*.029+p.phase)+.20*Math.sin(x*.043+z*.047);
+ return {ribbon,mineral,shelter,staging:Math.hypot(x,z-29)<.58};
+}
+const shaderFields=`
+float thHash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+float thNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(thHash(i),thHash(i+vec2(1.,0.)),f.x),mix(thHash(i+vec2(0.,1.)),thHash(i+vec2(1.)),f.x),f.y);}
+vec3 thPigment(vec2 w){
+ float warp=thNoise(w*.025+vec2(thPhase,0.))*18.;
+ float ribbon=thNoise(vec2(w.x*.052+w.y*.014+thPhase,w.y*.018+warp*.045))*.72+thNoise(vec2(w.x*.13+warp*.07,w.y*.065))*.28;
+ float mineral=thNoise(vec2(w.x*.07+warp*.05,w.y*.042-thPhase))*.7+thNoise(w*vec2(.23,.17))*.3;
+ vec3 olive=mix(vec3(.11,.15,.066),vec3(.34,.31,.095),smoothstep(.20,.73,ribbon));
+ vec3 russet=mix(vec3(.17,.035,.018),vec3(.35,.085,.025),smoothstep(.23,.83,ribbon));
+ vec3 pigment=mix(olive,russet,smoothstep(.47,.72,ribbon)*(1.-thSparse));
+ pigment=mix(pigment,vec3(.25,.23,.16),smoothstep(.60,.85,mineral)*.60);
+ return mix(pigment,vec3(.28,.30,.25),thSparse*.75);
+}
+`;
+function pigmentMaterial(p:ExpansionPlan,sparse:boolean,leaves=false,texture?:T.Texture){
+ const m=new T.MeshStandardMaterial({color:0xffffff,roughness:.93,side:leaves?T.DoubleSide:T.FrontSide,map:texture});
+ m.onBeforeCompile=s=>{
+  s.uniforms.thPhase={value:p.phase};s.uniforms.thSparse={value:sparse?1:0};
+  s.vertexShader='varying vec3 thWorld;varying float thLocalHeight;\n'+s.vertexShader;
+  s.vertexShader=s.vertexShader.replace('#include <worldpos_vertex>',`#include <worldpos_vertex>
+   vec4 thPosition=vec4(transformed,1.);
+   #ifdef USE_INSTANCING
+   thPosition=instanceMatrix*thPosition;
+   #endif
+   thWorld=(modelMatrix*thPosition).xyz;thLocalHeight=position.y;
+  `);
+  s.fragmentShader='varying vec3 thWorld;varying float thLocalHeight;uniform float thPhase,thSparse;\n'+shaderFields+s.fragmentShader;
+  s.fragmentShader=s.fragmentShader.replace('#include <map_fragment>',leaves?'':`#ifdef USE_MAP
+   vec3 thDetail=texture2D(map,thWorld.xz/3.1).rgb;
+   float thInk=dot(thDetail,vec3(.2126,.7152,.0722));
+   diffuseColor.rgb*=clamp(.73+sqrt(thInk)*.45,.72,1.13);
+   #endif`);
+  s.fragmentShader=s.fragmentShader.replace('#include <roughnessmap_fragment>',`
+   vec3 thColor=thPigment(thWorld.xz);
+   float thFine=thNoise(thWorld.xz*${leaves?'3.8':'2.5'});
+   thColor*=mix(.84,1.12,thFine);
+   ${leaves?'thColor=mix(thColor,vec3(.38,.28,.075),smoothstep(.08,.40,thLocalHeight)*.27*(1.-thSparse));':''}
+   diffuseColor.rgb*=thColor;
+   #include <roughnessmap_fragment>
+  `);
+ };
+ m.customProgramCacheKey=()=>`concept-tundra-heath-1-${leaves}-${sparse}`;
+ return m;
+}
+
+/** Low plantlets with dimensional diamond leaves; no alpha cards or savanna blade geometry. */
+function heathGeometry(){
+ const pos:number[]=[],indices:number[]=[];
+ const leaf=(cx:number,cy:number,cz:number,a:number,len:number,width:number)=>{
+  const start=pos.length/3,dx=Math.cos(a),dz=Math.sin(a),sx=-dz,sz=dx;
+  for(const [along,across,y]of [[0,0,0],[.48,-1,.018],[.48,0,.035],[.48,1,.018],[1,0,.015]])pos.push(cx+dx*len*along+sx*width*across,cy+y,cz+dz*len*along+sz*width*across);
+  indices.push(start,start+1,start+2,start,start+2,start+3,start+1,start+4,start+2,start+2,start+4,start+3);
+ };
+ for(let arm=0;arm<6;arm++){
+  const a=arm*2.399,reach=.36+(arm%3)*.095,dy=.18+(arm%4)*.045;
+  const stem=pos.length/3;pos.push(0,.015,0,.008,.015,.008,Math.cos(a)*reach,dy,Math.sin(a)*reach,Math.cos(a)*reach+.006,dy,Math.sin(a)*reach+.006);indices.push(stem,stem+1,stem+2,stem+1,stem+3,stem+2);
+  for(let j=0;j<4;j++){const t=j/4,x=Math.cos(a)*reach*t,z=Math.sin(a)*reach*t,y=.025+dy*Math.sin(t*1.7);leaf(x,y,z,a+(j%2?1:-1)*.8,.18+(arm%2)*.035,.054+(j%2)*.014);}
+  leaf(Math.cos(a)*reach,dy+.015,Math.sin(a)*reach,a,.20,.065);
+ }
+ const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(pos,3));g.setIndex(indices);g.computeVertexNormals();return g;
+}
+function stoneGeometry(seed:string){
+ const random=randomSource(seed),g=new T.SphereGeometry(1,28,18),p=g.attributes.position,phase=random()*6.28;
+ for(let i=0;i<p.count;i++){const x=p.getX(i),y=p.getY(i),z=p.getZ(i),d=1+.09*Math.sin(x*8+z*6+phase)+.04*Math.sin(y*16-x*9);p.setXYZ(i,x*d,y*d*.63+.04*Math.sin(x*5+z*3),z*d*(.88+.08*Math.sin(x*3)));}
+ g.computeVertexNormals();return g;
+}
+
+/** Dedicated low-heath artwork on short bowed, rooted planes; each palette has its own batch. */
+function heathMatGeometry(cell:number){
+ const positions:number[]=[],uvs:number[]=[],indices:number[]=[],left=cell%2*.5+.012,right=left+.476,bottom=cell<2?.588:.085,top=cell<2?.925:.445;
+ for(let plane=0;plane<3;plane++){
+  const angle=plane*Math.PI/3,start=positions.length/3;
+  for(let row=0;row<3;row++)for(let col=0;col<5;col++){
+   const u=col/4,v=row/2,x=(u-.5)*1.5,z=Math.sin(u*Math.PI)*Math.sin(v*Math.PI/2)*.13;
+   positions.push(Math.cos(angle)*x-Math.sin(angle)*z,-.12+v*.68,Math.sin(angle)*x+Math.cos(angle)*z);
+   uvs.push(left+(right-left)*u,bottom+(top-bottom)*v);
+  }
+  for(let row=0;row<2;row++)for(let col=0;col<4;col++){const a=start+row*5+col;indices.push(a,a+1,a+5,a+1,a+6,a+5);}
+ }
+ const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(positions,3));g.setAttribute('uv',new T.Float32BufferAttribute(uvs,2));g.setIndex(indices);g.computeVertexNormals();return g;
+}
+
+export function mountTundraHeath(scene:T.Scene,plan:ExpansionPlan,sparse:boolean,load:(path:string)=>T.Texture){
+ const group=new T.Group();group.name='concept-tundra-low-heath';scene.add(group);
+ const texture=load('/assets/wave1-detail/arid-sediment-v1.webp'),ground=pigmentMaterial(plan,sparse,false,texture);
+ const oldMaterials=new Set<T.Material>();scene.traverse(o=>{if(o instanceof T.Mesh&&o.name==='expansion-terrain'){for(const m of Array.isArray(o.material)?o.material:[o.material])oldMaterials.add(m);o.material=ground;}});
+ const r=randomSource(plan.seed+'|concept-heath'),points:{x:number;z:number;scale:number}[]=[];
+ for(let attempt=0;attempt<45000&&points.length<(sparse?950:6200);attempt++){
+  const near=r()<.67,x=(r()-.5)*(near?65:240),z=near?40-r()*90:40-r()*260,h=habitat(plan,x,z);
+  if(h.staging||r()>(sparse?.12:.60)*(1-h.mineral*.45)*(0.6+h.shelter*.5))continue;
+  points.push({x,z,scale:(near?1.08:1.85)*(0.7+r()*.9)});
+ }
+ const atlas=load('/assets/wave2-concepts/heath-mats-v1.png');atlas.wrapS=atlas.wrapT=T.ClampToEdgeWrapping;
+ const o=new T.Object3D();
+ for(let cell=0;cell<4;cell++){
+  const selected=points.filter(p=>{const h=habitat(plan,p.x,p.z);const choice=sparse?2:h.ribbon>.61?1:h.ribbon<.38?2:h.shelter>.55?0:3;return choice===cell;});
+  const material=new T.MeshStandardMaterial({map:atlas,alphaTest:.63,side:T.DoubleSide,roughness:.96,color:'#f4f0df'});
+  // Preserve the generated small-leaf pigments; terrain coordinates only control broad light, not a global olive multiplier.
+  material.onBeforeCompile=s=>{s.vertexShader='varying float heathHeight;\n'+s.vertexShader;s.vertexShader=s.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nheathHeight=position.y;');s.fragmentShader='varying float heathHeight;\n'+s.fragmentShader;s.fragmentShader=s.fragmentShader.replace('#include <color_fragment>','#include <color_fragment>\ndiffuseColor.rgb*=mix(.83,1.08,smoothstep(-.02,.55,heathHeight));');s.fragmentShader=s.fragmentShader.replace('#include <alphatest_fragment>','diffuseColor.a*=smoothstep(-.07,.13,heathHeight);\n#include <alphatest_fragment>');s.fragmentShader=s.fragmentShader.replace('#include <normal_fragment_maps>','#include <normal_fragment_maps>\nnormal=normalize(mat3(viewMatrix)*vec3(0.,1.,0.)*.8+normal*.3);');};
+  material.customProgramCacheKey=()=> 'tundra-dedicated-heath-cards-2';
+  const vegetation=new T.InstancedMesh(heathMatGeometry(cell),material,selected.length);vegetation.name='tundra-dedicated-heath-mats-'+cell;
+  selected.forEach((p,i)=>{const distance=Math.hypot(p.x,p.z-29),heightScale=Math.min(1,Math.max(.30,(distance-.4)/1.6));o.position.set(p.x,expansionHeight(plan,p.x,p.z),p.z);o.rotation.set((r()-.5)*.06,r()*6.28,(r()-.5)*.06);o.scale.set(p.scale,p.scale*(.58+r()*.27)*heightScale,p.scale);o.updateMatrix();vegetation.setMatrixAt(i,o.matrix);});vegetation.receiveShadow=true;vegetation.castShadow=false;vegetation.computeBoundingSphere();group.add(vegetation);
+ }
+ const stones:{x:number;z:number;scale:number}[]=[];
+ for(let i=0;i<120;i++){const x=(r()-.5)*145,z=40-r()*190,h=habitat(plan,x,z);if(h.staging||h.mineral<.53)continue;stones.push({x,z,scale:.20+r()**2*1.6});}
+ for(const side of [-1,1])stones.push({x:side*(3.2+r()*2.3),z:27+r()*3,scale:.75+r()*.5});
+ for(let kind=0;kind<3;kind++){
+  const material=new T.MeshStandardMaterial({roughness:.94,map:texture});material.onBeforeCompile=s=>{s.fragmentShader=s.fragmentShader.replace('#include <map_fragment>',`#ifdef USE_MAP
+   vec3 mineralDetail=texture2D(map,vMapUv).rgb;float mineralValue=dot(mineralDetail,vec3(.2126,.7152,.0722));
+   diffuseColor.rgb*=clamp(.58+sqrt(mineralValue)*.55,.55,1.12);
+   #endif`);};
+  const rock=new T.InstancedMesh(stoneGeometry(plan.seed+'|stone'+kind),material,Math.ceil(stones.length/3));rock.name='tundra-embedded-mineral-stone-'+kind;
+  let n=0;stones.forEach((p,i)=>{if(i%3!==kind)return;o.position.set(p.x,expansionHeight(plan,p.x,p.z)+p.scale*.20,p.z);o.rotation.set((r()-.5)*.3,r()*6.28,(r()-.5)*.35);o.scale.set(p.scale*(1+r()*.6),p.scale,p.scale);o.updateMatrix();rock.setMatrixAt(n,o.matrix);rock.setColorAt(n,new T.Color('#969c92').lerp(new T.Color('#b4b59f'),r()*.7));n++;});rock.count=n;rock.castShadow=rock.receiveShadow=true;rock.computeBoundingSphere();group.add(rock);
+ }
+ // Sparse unnamed pale heads: no regional sedge identity or season asserted.
+ const stem=new T.CylinderGeometry(.002,.003,.32,3),head=new T.IcosahedronGeometry(.025,0),stemPositions:{x:number;z:number}[]=[];
+ for(let i=0;i<(sparse?30:420);i++){const x=(r()-.5)*38,z=35-r()*45,h=habitat(plan,x,z);if(!h.staging&&h.shelter>.51&&h.mineral<.70)stemPositions.push({x,z});}
+ for(const [geo,name,mat,y]of [[stem,'tundra-rare-stalks',new T.MeshStandardMaterial({color:'#a99961',roughness:1}),.15],[head,'tundra-pale-functional-seedheads',new T.MeshStandardMaterial({color:'#d8d1b2',roughness:.9}),.32]] as const){const mesh=new T.InstancedMesh(geo,mat,stemPositions.length);stemPositions.forEach((p,i)=>{o.position.set(p.x,expansionHeight(plan,p.x,p.z)+y,p.z);o.rotation.set(.12,r()*6.28,.16);o.scale.setScalar(.7+r()*.6);o.updateMatrix();mesh.setMatrixAt(i,o.matrix);});mesh.name=name;mesh.computeBoundingSphere();group.add(mesh);}
+ scene.userData.expansionDressing={instances:{lowHeath:points.length,rocks:stones.length,seedheads:stemPositions.length},identity:'Unnamed dwarf-shrub/lichen/seedhead functional study; local flora unverified',seasonalState:'Russet pigment reference state independent of biome identity',staging:'Low substrate only inside character approach'};
+ return()=>{scene.remove(group);ground.dispose();oldMaterials.forEach(m=>m.dispose());group.traverse(o=>{if(o instanceof T.Mesh){o.geometry.dispose();for(const m of Array.isArray(o.material)?o.material:[o.material])m.dispose();}});};
+}

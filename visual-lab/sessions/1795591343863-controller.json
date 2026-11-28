@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "name": "savanna-representation-study",
+  "maxRounds": 3,
+  "rounds": [
+    {
+      "id": "S-r1",
+      "experiment": "S",
+      "status": "reviewed",
+      "meaningfulImprovement": false,
+      "reason": "The constructions are distinct, but first implementation quality prevents judging them as successful grassland. A is flattened leaf-like debris, B exposes a patterned field basis, and C has rectangular canopy seams. Keep the baseline; make one implementation revision rather than increasing density."
+    },
+    {
+      "id": "S-r2",
+      "experiment": "S",
+      "status": "reviewed",
+      "meaningfulImprovement": false,
+      "reason": "All six revised candidate frames were actually inspected, followed by native 160x90 thumbnails and 320x130 foreground crops alongside two supplied concepts. The hybrid has the most useful construction direction, but none is an attractive grassland or an overall improvement worth adopting. Keep the original scene and stop at the requested checkpoint after one revision per representation."
+    }
+  ],
+  "visionAvailable": true
+}

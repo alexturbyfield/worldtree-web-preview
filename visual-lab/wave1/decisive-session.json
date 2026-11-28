@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "id": "wave1-decisive-art-direction",
+  "status": "desert recomposition provisionally retained; wetland candidate rejected",
+  "humanDirection": {
+    "source": "Wildloom Wave 1: Decisive Art Direction Pass",
+    "priorDesert": "Explicitly rejected as an empty plane with primitive rocks; anchor/size/distribution/terrain/vegetation changes authorized",
+    "wetlands": "Preserve layouts and camera; substantial material/light improvement required",
+    "finalApproval": false
+  },
+  "loaded": ["AGENTS.md operating rules", "Visual Learning Lab workflow/policy and split-session findings", "approved concept images through actual vision inspection", "prototype-fast skill", "visual-review skill", "imagegen skill", "installed Next use-client guide", "existing field/water/material/vegetation adapters"],
+  "baseline": "artifacts/wave1-split retained checkpoint, freshly recaptured with artPass=split",
+  "visualDiagnosis": [
+    "Desert lacks intermediate/large foreground masses; fine marks cannot rescue the empty thumbnail composition.",
+    "Wetland palette mixing weakened substrate texture; the concepts need material/moisture variation supporting clear illumination.",
+    "Rock silhouettes and plant/ground contact must work before polishing detail."
+  ],
+  "interventions": {
+    "desert": "Representation and composition: implicit eroded/jointed masses, new asymmetric shoulders and receding exposures, low-relief drainage, world-space generated sediment albedo, terrain-aligned sparse existing growth forms",
+    "wetlands": "Material/lighting only; no geometry, placement, water optics or camera changes"
+  },
+  "cycles": [
+    {"round": 1, "hypothesis": "Large asymmetric implicit rock shoulders will change the desert thumbnail organization", "evidence": "artifacts/wave1-decisive/r1", "decision": "retain composition direction; revise overly smooth/swollen rock surfaces; wetland changes too subtle"},
+    {"round": 2, "hypothesis": "Joint faces, bounded normal relief and generated substrate supply missing geological/surface hierarchy", "evidence": "artifacts/wave1-decisive/r2", "decision": "retain desert substrate improvement; near joint faces still need readable orientation; wetlands still insufficient"},
+    {"round": 3, "hypothesis": "Facing geological joints and stronger wetland pigment/moisture fields improve readability", "evidence": "artifacts/wave1-decisive/r3 and final", "decision": "retain desert after repairing sub-voxel through-cut holes; reject wetland material fields after elevated inspection reveals cloudy blob patterns"}
+  ],
+  "technicalRepair": {
+    "issue": "Thin SDF through-cut aliased into sky-facing holes",
+    "action": "Replaced it with a resolved surface groove before recipe freeze",
+    "evidence": "Finite, deterministic closed-surface test; final desert screenshots",
+    "notAnArtisticSuccessClaim": true
+  },
+  "selection": {
+    "desert": {"candidate": "artPass=decisive", "betterThanPrior": true, "goodEnoughForFinalApproval": false, "actor": "agent", "reason": "Immediately visible foreground rock framing, textured approach and shallow relief; rock weathering and shrub foliage still inadequate"},
+    "mangrove": {"candidate": "retained split presentation", "newCandidateRejected": true, "reason": "Hero change too small, elevated moisture/pigment fields become broad cloudy patterns; do not sacrifice the prior result"},
+    "flooded": {"candidate": "retained split presentation", "newCandidateRejected": true, "reason": "Material fields become overly cloudy; grass still reads as repeated angular fans; decisive improvement not demonstrated"}
+  },
+  "rollback": {
+    "record": "artifacts/wave1-decisive/retention.json",
+    "timing": "After frozen holdout review",
+    "action": "Selectively reverted whole wetland candidate to prior presentation; no new tuning against holdout",
+    "proof": "artifacts/wave1-decisive/rollback-checks.json: four freshly recaptured wetland views pixel-identical to prior",
+    "rejectedReplay": "artPass=decisive&wetStudy=rejected"
+  },
+  "vision": {
+    "available": true,
+    "reviewer": "root agent using actual view_image interpretation; no independent review this session",
+    "inspected": ["supplied concept comparison", "R1/R2/R3 desert hero", "wetland candidate hero views", "arid3x3 asset preview", "thumbnail-comparison.png", "hero-seeds.png", "inspection-seeds.png"],
+    "desertFindings": ["Foreground occupancy changes decisively at thumbnail scale", "Smooth bulges and dark geological interiors still look too simplified", "Foreground shrubs remain skeletal; middle distance still sparse"],
+    "wetlandFindings": ["Changes are not decisive at thumbnail scale", "Elevated material patterns are an artistic regression", "Prior scenes retained rather than accepting latest renders automatically"]
+  },
+  "rules": [
+    {"id": "foreground-mass-before-detail", "status": "experimentally-supported", "principle": "Place readable asymmetric large and medium foreground forms before relying on fine surface detail", "evidence": "thumbnail-comparison.png and hero-seeds.png", "scope": "Desert compositional experiment; not final approved rock rendering"},
+    {"id": "implicit-eroded-rock", "status": "proposed", "principle": "Implicit blended masses cut by joints avoid regular block primitives", "evidence": "Final desert hero/inspection", "limits": "Still too smooth and swollen; no global geological promotion"},
+    {"id": "generated-substrate-plus-macro-fields", "status": "experimentally-supported", "principle": "Pinned painterly local detail can support calm broad terrain values without new props", "evidence": "R1 versusR2 desert, arid3x3 preview", "limits": "Diagonal tile structure remains; actual asset1254 square; memory cost recorded"},
+    {"id": "strong-moisture-noise", "status": "rejected", "principle": "Stronger material variation is not automatically richer substrate", "evidence": "Rejected elevated wetland views", "failure": "Low-frequency noise reads as cloudy repeated pigment patches across broad terrain"},
+    {"id": "sub-voxel-geological-cuts", "status": "rejected", "principle": "Thin implicit cuts below the meshing sample interval can create visible holes", "evidence": "R3 early image and closed-surface test", "scope": "Marching-tetrahedra resolution; use resolved grooves or explicit geometry"}
+  ],
+  "validation": {
+    "developmentSeeds": [29, 41],
+    "frozenHoldout": 6131,
+    "freeze": "artifacts/wave1-decisive/freeze.json",
+    "holdoutTuned": false,
+    "matchedPairs": "artifacts/wave1-decisive/matched-checks.json",
+    "stagingAndShaderAudit": "artifacts/wave1-decisive/verification.json",
+    "protectedRegressions": "artifacts/wave1-decisive/regression.json",
+    "tests": "TypeScript and10 targeted tests passed; no full suite/build or mobile approval"
+  },
+  "asset": "artifacts/wave1-decisive/asset.json",
+  "scope": {"newSpecies": false, "unsupportedMountains": false, "waterShaderChanged": false, "globalPromotion": false, "humanApprovedBestChanged": false, "committed": false, "pushed": false, "deployed": false},
+  "stopReason": "Three bounded correction rounds; desert composition milestone reached for review, wetland progress stalled and regression rejected",
+  "report": "artifacts/wave1-decisive/REPORT.md"
+}

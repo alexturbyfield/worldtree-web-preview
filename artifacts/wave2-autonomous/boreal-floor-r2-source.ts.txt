@@ -1,0 +1,112 @@
+import * as T from 'three';
+import type {SceneRecipe} from './recipe';
+import type {ExpansionPlan} from './wave2-shared';
+import {expansionHeight} from './wave2-shared';
+import {randomSource} from './random';
+import {erodedMass} from './wave1-desert-direction';
+
+interface Rock{position:T.Vector3;scale:T.Vector3;rotation:number;variant:number}
+interface Surface{positions:number[];colors:number[];indices:number[]}
+const surface=():Surface=>({positions:[],colors:[],indices:[]});
+function geometry(s:Surface){const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(s.positions,3));g.setAttribute('color',new T.Float32BufferAttribute(s.colors,3));g.setIndex(s.indices);g.computeVertexNormals();g.computeBoundingSphere();return g;}
+const clear=(x:number,z:number)=>Math.abs(x)<2.0&&z>20&&z<34;
+function addTube(s:Surface,path:T.Vector3[],radius:number,color:T.Color){
+ const first=s.positions.length/3;
+ for(let j=0;j<path.length;j++){
+  const direction=path[Math.min(path.length-1,j+1)].clone().sub(path[Math.max(0,j-1)]).normalize(),q=new T.Quaternion().setFromUnitVectors(new T.Vector3(0,1,0),direction),t=j/(path.length-1),r=radius*Math.pow(1-t,.8)+.009;
+  for(let k=0;k<7;k++){const angle=k/7*6.283,p=new T.Vector3(Math.cos(angle)*r,0,Math.sin(angle)*r).applyQuaternion(q).add(path[j]);s.positions.push(...p.toArray());const pigment=color.clone().multiplyScalar(.9+.1*Math.sin(angle+.7));s.colors.push(pigment.r,pigment.g,pigment.b);}
+ }
+ for(let j=0;j<path.length-1;j++)for(let k=0;k<7;k++){const a=first+j*7+k,b=first+j*7+(k+1)%7;s.indices.push(a,b,a+7,b,b+7,a+7);}
+}
+function stoneMaterial(map:T.Texture){
+ const material=new T.MeshStandardMaterial({map,roughness:.98,vertexColors:true});
+ material.onBeforeCompile=shader=>{
+  shader.vertexShader='varying vec3 bfWorld;varying vec3 bfNormal;\n'+shader.vertexShader;
+  shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>',`#include <begin_vertex>
+   vec4 bfPoint=vec4(transformed,1.);vec3 bfN=normal;
+   #ifdef USE_INSTANCING
+    bfPoint=instanceMatrix*bfPoint;bfN=mat3(instanceMatrix)*bfN;
+   #endif
+   bfWorld=(modelMatrix*bfPoint).xyz;bfNormal=normalize(mat3(modelMatrix)*bfN);
+  `);
+  shader.fragmentShader='varying vec3 bfWorld;varying vec3 bfNormal;\n'+shader.fragmentShader;
+  shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>',`
+   vec3 bfWeights=pow(abs(normalize(bfNormal)),vec3(3.));bfWeights/=max(.001,bfWeights.x+bfWeights.y+bfWeights.z);
+   vec3 bfStone=texture2D(map,bfWorld.yz*.85).rgb*bfWeights.x+texture2D(map,bfWorld.xz*.85).rgb*bfWeights.y+texture2D(map,bfWorld.xy*.85).rgb*bfWeights.z;
+   float bfGrain=dot(bfStone,vec3(.2126,.7152,.0722));
+   // Linear-space mineral reflectance must be coordinated with dark organic duff;
+   // the previous .20-.54 range clipped to white under the actual direct key.
+   diffuseColor.rgb*=mix(vec3(.055,.072,.077),vec3(.17,.19,.17),clamp(sqrt(max(0.,bfGrain))*1.45,.12,1.));
+  `);
+  shader.fragmentShader=shader.fragmentShader.replace('#include <roughnessmap_fragment>','#include <roughnessmap_fragment>\nroughnessFactor=clamp(.98-bfGrain*.12,.84,.98);');
+  shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_maps>',`#include <normal_fragment_maps>
+   float bfRelief=bfGrain*.009;
+   vec3 bfQ0=dFdx(-vViewPosition),bfQ1=dFdy(-vViewPosition),bfR1=cross(bfQ1,normal),bfR2=cross(normal,bfQ0);
+   float bfDet=dot(bfQ0,bfR1);
+   vec3 bfGradient=(bfR1*dFdx(bfRelief)+bfR2*dFdy(bfRelief))*sign(bfDet)/max(abs(bfDet),.00001);
+   normal=normalize(normal-clamp(bfGradient,vec3(-.12),vec3(.12)));
+  `);
+ };
+ material.customProgramCacheKey=()=> 'boreal-weathered-mineral-2';return material;
+}
+
+/** Living floor: material carries continuous moss/duff; geometry only supplies rooted relief and contact silhouettes. */
+export function mountLivingBorealFloor(scene:T.Scene,plan:ExpansionPlan,recipe:SceneRecipe,groundMaterial:T.Material,load:(path:string)=>T.Texture){
+ const group=new T.Group();group.name='boreal-living-root-beds';scene.add(group);const r=randomSource(plan.seed+'|rooted-floor-v1'),roots=surface(),margins=surface(),caps=surface(),rocks:Rock[]=[],o=new T.Object3D();
+ const treeBases=recipe.trees.filter(t=>Math.hypot(t.position[0],t.position[2]-34)<50);
+ const ribbon=(cx:number,cz:number,angle:number,length:number,width:number,phase:number)=>{
+  const start=margins.positions.length/3,rows=13,across=6;
+  for(let j=0;j<=rows;j++){const t=j/rows,along=(t-.5)*length,bend=Math.sin(t*3.5+phase)*width*.5,shape=Math.sin(t*Math.PI),w=width*(.7+.2*Math.sin(t*8+phase))*shape;
+   for(let k=0;k<=across;k++){const v=k/across*2-1,x=cx+Math.cos(angle)*along-Math.sin(angle)*(bend+v*w),z=cz+Math.sin(angle)*along+Math.cos(angle)*(bend+v*w),rise=.11*Math.pow(Math.max(0,1-v*v),1.4)*shape*(.8+.2*Math.sin(t*12+phase)),height=expansionHeight(plan,x,z)+.006+(clear(x,z)?0:rise);margins.positions.push(x,height,z);margins.colors.push(1,1,1);}
+  }
+  for(let j=0;j<rows;j++)for(let k=0;k<across;k++){const a=start+j*(across+1)+k;margins.indices.push(a,a+across+1,a+1,a+1,a+across+1,a+across+2);}
+ };
+ treeBases.forEach((tree,i)=>{
+  const [tx,,tz]=tree.position,tr=randomSource(tree.seed+'|rootbed'),radius=tree.model.parameters.trunkRadius;
+  for(let arm=0;arm<5;arm++){
+   const angle=arm/5*6.283+tr()*1.0,length=1.7+tr()*2.3,path:T.Vector3[]=[];
+   for(let j=0;j<=7;j++){const t=j/7,reach=.24+t*length,x=tx+Math.cos(angle+t*.22)*reach,z=tz+Math.sin(angle+t*.22)*reach;if(clear(x,z))continue;const y=expansionHeight(plan,x,z)+radius*.21*(1-t)+.02;path.push(new T.Vector3(x,y,z));}
+   if(path.length>2)addTube(roots,path,radius*(.32+tr()*.10),new T.Color('#78644c').lerp(new T.Color('#a28b62'),tr()*.30));
+  }
+  if(i<13)ribbon(tx+(tr()-.5)*2.4,tz+(tr()-.5)*2.4,tr()*6.283,3+tr()*3,1.0+tr()*.9,tr()*6.283);
+ });
+ // Embedded weathered anchors belong to the same root/substrate beds, not independent scatter.
+ for(let i=0;i<24;i++){
+  const near=i<6,side=i%2?1:-1,x=near?side*(4.1+r()*3.7):(r()-.5)*48,z=near?29-Math.floor(i/2)*7+r()*1.5:20-r()*50;
+  if(clear(x,z))continue;const size=near?(.85+r()*.85):(.23+r()*.7),scale=new T.Vector3(size*(1.10+r()*.45),size*(.67+r()*.17),size*(.85+r()*.3));
+  const px=z>20&&z<34?side*Math.max(Math.abs(x),2.4+scale.x*1.25):x;
+  rocks.push({position:new T.Vector3(px,expansionHeight(plan,px,z)-size*.27,z),scale,rotation:r()*6.283,variant:i%3});
+  if(i<10)ribbon(px+side*.6,z+.25,r()*6.283,2.7+r()*2,1.0+r()*.7,r()*6.283);
+ }
+ const rockMat=stoneMaterial(load('/assets/wave1-detail/desert-granite-v1.webp'));
+ for(let variant=0;variant<3;variant++){
+  const g=erodedMass(plan.seed+'|forest-erratic-'+variant,22,10+variant),list=rocks.filter(t=>t.variant===variant),mesh=new T.InstancedMesh(g,rockMat,list.length);mesh.name='boreal-weathered-rootbed-stone';
+  for(const [i,rock] of list.entries()){
+   o.position.copy(rock.position);o.rotation.set(0,rock.rotation,0);o.scale.copy(rock.scale);o.updateMatrix();mesh.setMatrixAt(i,o.matrix);
+   const positions=g.attributes.position,normals=g.attributes.normal,matrix=o.matrix,normalMatrix=new T.Matrix3().getNormalMatrix(matrix),indices=g.index;const count=indices?.count??positions.count;
+   for(let j=0;j<count;j+=3){const ids=[0,1,2].map(k=>indices?indices.getX(j+k):j+k),v=ids.map(id=>new T.Vector3().fromBufferAttribute(positions,id).applyMatrix4(matrix)),n=ids.map(id=>new T.Vector3().fromBufferAttribute(normals,id).applyMatrix3(normalMatrix).normalize()),avg=(n[0].y+n[1].y+n[2].y)/3,cx=(v[0].x+v[1].x+v[2].x)/3,cz=(v[0].z+v[1].z+v[2].z)/3,coverage=.42+.14*Math.sin(cx*2.6+Math.sin(cz*1.9))+.13*Math.sin(cz*2.1-cx*.7);
+    if(avg<coverage)continue;const start=caps.positions.length/3;for(let k=0;k<3;k++){v[k].addScaledVector(n[k],.012);caps.positions.push(...v[k].toArray());caps.colors.push(1,1,1);}caps.indices.push(start,start+1,start+2);
+   }
+  }
+  mesh.castShadow=mesh.receiveShadow=true;mesh.computeBoundingSphere();group.add(mesh);
+ }
+ const mossMargins=new T.Mesh(geometry(margins),groundMaterial);mossMargins.name='boreal-connected-moss-rootbanks';mossMargins.receiveShadow=true;group.add(mossMargins);
+ const mossCaps=new T.Mesh(geometry(caps),groundMaterial);mossCaps.name='boreal-rootbed-stone-moss';mossCaps.receiveShadow=true;group.add(mossCaps);
+ const wood=new T.Mesh(geometry(roots),new T.MeshStandardMaterial({vertexColors:true,roughness:.97}));wood.name='boreal-root-ribs';wood.castShadow=wood.receiveShadow=true;group.add(wood);
+ // Selected patchy dwarf shoots, never an evenly scattered leaf carpet.
+ const leaves=surface(),stems=surface();let shoots=0;
+ for(let patch=0;patch<8;patch++){
+  const rock=rocks[patch],pr=randomSource(plan.seed+'|low-heath-bed-'+patch),center=rock.position.clone().add(new T.Vector3((pr()-.5)*2.3,0,(pr()-.5)*1.5)),warm=patch===0||patch===5;
+  for(let shoot=0;shoot<13;shoot++){
+   const x=center.x+(pr()-.5)*1.5,z=center.z+(pr()-.5)*1.3;if(clear(x,z))continue;const h=.18+pr()*.30,angle=pr()*6.283,base=new T.Vector3(x,expansionHeight(plan,x,z),z),tip=base.clone().add(new T.Vector3(Math.cos(angle)*h*.30,h,Math.sin(angle)*h*.30));addTube(stems,[base,tip],.008,new T.Color('#655d3c'));shoots++;
+   for(let leaf=0;leaf<8;leaf++){const t=.28+leaf*.085,angle2=angle+leaf*2.399,len=.075+pr()*.045,width=len*.40,start=leaves.positions.length/3,center2=base.clone().lerp(tip,t),axis=new T.Vector3(Math.cos(angle2),.22,Math.sin(angle2)).normalize(),side=new T.Vector3(-axis.z,0,axis.x),pigment=new T.Color(warm?'#9c5834':'#59773e').lerp(new T.Color('#b5b36a'),pr()*.26);
+    for(let row=0;row<=3;row++){const a=row/3,w=Math.sin(a*Math.PI)*width;for(const v of [-1,0,1]){const p=center2.clone().addScaledVector(axis,a*len).addScaledVector(side,w*v);p.y+=Math.sin(a*Math.PI)*width*(1-Math.abs(v)*.7);leaves.positions.push(...p.toArray());const c=pigment.clone().multiplyScalar(v===0?1:.91);leaves.colors.push(c.r,c.g,c.b);}}
+    for(let row=0;row<3;row++)for(let k=0;k<2;k++){const a=start+row*3+k;leaves.indices.push(a,a+3,a+1,a+1,a+3,a+4);}
+   }
+  }
+ }
+ const leafMesh=new T.Mesh(geometry(leaves),new T.MeshStandardMaterial({vertexColors:true,side:T.DoubleSide,roughness:1}));leafMesh.name='boreal-localized-unnamed-heath';leafMesh.receiveShadow=true;group.add(leafMesh);
+ const stemMesh=new T.Mesh(geometry(stems),new T.MeshStandardMaterial({vertexColors:true,roughness:1}));stemMesh.name='boreal-low-heath-stems';stemMesh.receiveShadow=true;group.add(stemMesh);
+ scene.userData.borealFloor={version:'rooted-living-floor-1',rocks:rocks.length,rootedTrees:treeBases.length,shoots,representation:'Continuous artwork-led substrate with shared-material moss rootbanks, weathered embedded stones and source-linked root ribs',ecology:'Unnamed dwarf-shrub functional forms, provisional warm seasonal pigment; no local plant identity claimed',staging:'No hard rock anchors/root centerlines or tall shoots in central approach'};
+ return()=>{scene.remove(group);const mats=new Set<T.Material>();group.traverse(obj=>{if(obj instanceof T.Mesh){obj.geometry.dispose();for(const mat of Array.isArray(obj.material)?obj.material:[obj.material])if(mat!==groundMaterial)mats.add(mat);}});mats.forEach(m=>m.dispose());};
+}

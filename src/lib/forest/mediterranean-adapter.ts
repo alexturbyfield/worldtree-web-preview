@@ -1,0 +1,105 @@
+import {installHolmOakMaterials} from './holm-oak-study';
+import {mountCorkOakHero,type CorkScene} from './cork-oak-hero';
+import * as T from 'three';
+import type {SceneRecipe} from './recipe';
+import {randomSource} from './random';
+import {makeExpansionPlan,mountExpansionBase} from './wave2-shared';
+import {rockGeometry} from './savanna-recipe';
+import {weatherRockGeometry} from './wave1-desert-detail';
+import {meadowGeometry,meadowMaterial} from './wave1-meadow-detail';
+import {mediterraneanShrubGeometry} from './mediterranean-shrub';
+import {mountLandscapeMatte} from './landscape-matte';
+import {composeMediterranean,mediterraneanHeight,mediterraneanCommunity,mediterraneanPalette as palette,mediterraneanReferenceCamera,mediterraneanMatte,referenceSoilSampler} from './mediterranean-recipe';
+const bounds={x:-120,z:-240,width:240,depth:280};
+const pigment=`uniform sampler2D medField,medGrassDetail,medSediment;uniform float medSurfaceStrength;uniform vec3 medShade,medBody,medDry,medSoil;
+ vec4 medSample(vec3 p){vec2 uv=(p.xz-vec2(-120.,-240.))/vec2(240.,280.);vec4 f=texture2D(medField,clamp(uv,vec2(0.),vec2(1.)));f.r*=step(0.,uv.x)*step(uv.x,1.)*step(0.,uv.y)*step(uv.y,1.);return f;}
+ vec3 medPigment(vec3 p){vec4 f=medSample(p);vec3 c=mix(medShade,medBody,.35+f.g*.65);c=mix(c,medDry,f.b*.38);return mix(c,medSoil,smoothstep(.24,.72,f.r));}
+
+ float medHash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+ float medNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(medHash(i),medHash(i+vec2(1,0)),f.x),mix(medHash(i+vec2(0,1)),medHash(i+1.),f.x),f.y);}
+ vec2 medSoilUv(vec2 p){vec2 warp=vec2(medNoise(p*.16),medNoise(p*.13+vec2(19,7)))-.5;return mat2(.92,-.39,.39,.92)*(p+warp*.45)/3.4;}
+ vec3 medSurfacePigment(vec3 p){
+  vec4 f=medSample(p);float soil=smoothstep(.24,.72,f.r);
+  vec2 uv=medSoilUv(p.xz);vec3 sediment=texture2D(medSediment,uv).rgb;
+  float grit=dot(sediment,vec3(.2126,.7152,.0722));
+  float fine=dot(texture2D(medSediment,uv*2.57+vec2(.37,.61)).rgb,vec3(.2126,.7152,.0722));
+  float grass=dot(texture2D(medGrassDetail,p.xz/4.7).rgb,vec3(.2126,.7152,.0722));
+  float medPatch=medNoise(p.xz*.12+vec2(f.g*2.,f.b)),flow=medNoise(vec2(p.x*.31+p.z*.12,p.z*.14)+medPatch);
+  vec3 body=mix(medShade,medBody,.35+f.g*.65);body=mix(body,medDry,.15+f.b*.23);
+  body*=mix(.86,1.12,medPatch)*mix(.91,1.09,flow);
+  vec3 earth=mix(medSoil,sediment,.40);
+  earth=mix(earth,earth*vec3(.88,.94,1.04),medPatch*.25);
+  vec3 c=mix(body,earth,soil);
+  float nearDetail=1.-smoothstep(22.,150.,distance(cameraPosition.xz,p.xz));
+  float grassTexture=clamp(1.+(grass-.20)*3.0,.68,1.34);
+  float soilTexture=clamp(1.+(grit-.29)*3.2+(fine-.29)*.60,.62,1.45);
+  c*=mix(1.,mix(grassTexture,soilTexture,soil),nearDetail*.90);
+  return mix(medPigment(p),c,medSurfaceStrength);
+ }
+`;
+export const mediterraneanStudy={id:'mediterranean',biome:12,compose:composeMediterranean,camera:()=>mediterraneanReferenceCamera,
+ mount:(scene:T.Scene,r:SceneRecipe,sun:T.DirectionalLight,fill:T.DirectionalLight)=>{
+  const plan=makeExpansionPlan('mediterranean',12,r.seed,1);plan.camera=mediterraneanReferenceCamera;plan.inspection={position:[40,32,48],target:[0,-5,-45]};
+  const base=mountExpansionBase(scene,r,plan,sun,fill,palette,{canopy:false,concept:true,sunDirection:[-30,38,24],surfaceArtwork:{texture:palette.texture!,worldScale:4}});
+  const surfaceEnabled=new URLSearchParams(location.search).get('groundDetail')!=='original',sediment=base.load('/assets/wave1-detail/arid-sediment-v1.webp');
+  const resolution=768,bytes=new Uint8Array(resolution*resolution*4),field=new T.DataTexture(bytes,resolution,resolution,T.RGBAFormat);field.colorSpace=T.NoColorSpace;field.minFilter=field.magFilter=T.LinearFilter;field.generateMipmaps=false;
+  const uniforms={medGrassDetail:{value:base.groundTexture},medSediment:{value:sediment},medSurfaceStrength:{value:surfaceEnabled?1:0},medField:{value:field},medShade:{value:new T.Color(palette.ground[0])},medBody:{value:new T.Color(palette.ground[1])},medDry:{value:new T.Color(palette.ground[2])},medSoil:{value:new T.Color(palette.soil)}};
+  const ground=base.groundMaterial,oldCompile=ground.onBeforeCompile;if(surfaceEnabled){ground.bumpMap=sediment;ground.bumpScale=.025;}
+  ground.onBeforeCompile=function(shader,renderer){oldCompile.call(this,shader,renderer);Object.assign(shader.uniforms,uniforms);shader.fragmentShader=pigment+shader.fragmentShader;if(surfaceEnabled)shader.fragmentShader=shader.fragmentShader.replaceAll('(exWorld.xz/4.000)','medSoilUv(exWorld.xz)');shader.fragmentShader=shader.fragmentShader.replace('#include <metalnessmap_fragment>',`#include <metalnessmap_fragment>
+   float medInk=dot(texture2D(map,exWorld.xz/4.).rgb,vec3(.2126,.7152,.0722));
+   diffuseColor.rgb=mix(medPigment(exWorld)*clamp(.83+sqrt(max(.001,medInk))*.44,.82,1.12),medSurfacePigment(exWorld),medSurfaceStrength);
+   roughnessFactor=mix(roughnessFactor,.92+.07*medNoise(exWorld.xz*2.),medSurfaceStrength);
+  `);};ground.customProgramCacheKey=()=> 'mediterranean-shared-surface-detail-v1|'+surfaceEnabled;ground.needsUpdate=true;
+  scene.traverse(o=>{if(o instanceof T.Mesh&&o.name==='expansion-terrain'){const a=o.geometry.attributes.position;for(let i=0;i<a.count;i++)a.setY(i,mediterraneanHeight(r.seed,a.getX(i),a.getZ(i)));o.geometry.computeVertexNormals();o.geometry.computeBoundingSphere();o.castShadow=true;}});
+  const sky=scene.getObjectByName('expansion-existing-sky');if(sky instanceof T.Mesh){sky.renderOrder=-100;(sky.material as T.MeshBasicMaterial).depthTest=false;}
+  const matte=mountLandscapeMatte(scene,mediterraneanMatte,base.load);
+  const hero=(r as CorkScene).corkHero;const disposeHero=hero?mountCorkOakHero(scene,hero,base.load):()=>{};
+  const group=new T.Group();group.name='mediterranean-composition-dressing';scene.add(group);const created:T.InstancedMesh[]=[],o=new T.Object3D(),rng=randomSource(r.seed+'|mediterranean-communities');let disposed=false;
+  const batch=(geometry:T.BufferGeometry,material:T.MeshStandardMaterial,count:number,name:string)=>{const m=new T.InstancedMesh(geometry,material,count);m.name=name;m.receiveShadow=true;group.add(m);created.push(m);return m;};
+  const place=(mesh:T.InstancedMesh,index:number,x:number,z:number,sx:number,sy:number,sz:number,rotation=rng()*Math.PI*2,bury=.03)=>{o.position.set(x,mediterraneanHeight(r.seed,x,z)-bury,z);o.rotation.set(0,rotation,0);o.scale.set(sx,sy,sz);o.updateMatrix();mesh.setMatrixAt(index,o.matrix);};
+  const groundVegetationMaterial=(grass:boolean)=>{const m=grass?meadowMaterial(false):new T.MeshStandardMaterial({color:'#ffffff',side:T.DoubleSide,roughness:1});const before=m.onBeforeCompile;
+   m.onBeforeCompile=function(shader,renderer){before.call(this,shader,renderer);Object.assign(shader.uniforms,uniforms);shader.vertexShader='varying vec3 medWorld;varying float medTip;\n'+shader.vertexShader;shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>',`#include <begin_vertex>\nmedWorld=(modelMatrix*instanceMatrix*vec4(position,1.)).xyz;medTip=position.y;`);shader.fragmentShader='varying vec3 medWorld;varying float medTip;\n'+pigment+shader.fragmentShader;
+    shader.fragmentShader=shader.fragmentShader.replace('#include <metalnessmap_fragment>',`#include <metalnessmap_fragment>
+      vec4 f=medSample(medWorld);vec3 medRoot=medSurfacePigment(medWorld);
+      diffuseColor.rgb=${grass?'mix(medRoot,mix(medBody,medDry,.72),smoothstep(.15,.70,medTip)*.48)':'mix(mix(medShade,medBody,f.g*.4),vec3(.32,.38,.27),f.b*.65)'};
+    `);
+   };m.customProgramCacheKey=()=> 'mediterranean-shared-surface-detail-v1|'+grass;return m;
+  };
+  const build=(soil:(x:number,z:number)=>number)=>{
+   for(let j=0;j<resolution;j++)for(let i=0;i<resolution;i++){const x=bounds.x+(i+.5)/resolution*bounds.width,z=bounds.z+(j+.5)/resolution*bounds.depth,c=mediterraneanCommunity(r.seed,x,z),silver=mediterraneanCommunity(r.seed,x+53,z-71);bytes.set([Math.round(soil(x,z)*255),Math.round(c*255),Math.round(silver*255),255],(j*resolution+i)*4);}field.needsUpdate=true;
+   const grass=batch(meadowGeometry(false),groundVegetationMaterial(true),5200,'mediterranean-existing-curved-grasses');
+   let n=0;for(let k=0;k<grass.count*25&&n<grass.count;k++){const near=rng()<.8,x=(rng()-.5)*(near?55:230),z=near?17-rng()*86:-45-rng()*180,c=mediterraneanCommunity(r.seed,x,z);if(soil(x,z)>.40||rng()>.15+c*.8)continue;const stage=Math.abs(x)<.85&&z>12&&z<15,size=.6+rng()*.6;place(grass,n++,x,z,size,stage?.22:.65+rng()*.65,size);}grass.count=n;grass.computeBoundingSphere();
+   let shrubCount=0;
+   for(const detail of ['near','middle','far'] as const){
+    const near=detail==='near',far=detail==='far',geometry=mediterraneanShrubGeometry(r.seed+'|garrigue-small-leaf|'+detail,detail),material=new T.MeshStandardMaterial({side:T.DoubleSide,roughness:1});
+    material.onBeforeCompile=shader=>{Object.assign(shader.uniforms,uniforms);shader.vertexShader='attribute float medLeaf,medCavity;varying float medIsLeaf,medOcclusion;varying vec3 medWorld;\n'+shader.vertexShader;shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\nmedWorld=(modelMatrix*instanceMatrix*vec4(position,1.)).xyz;medIsLeaf=medLeaf;medOcclusion=medCavity;');shader.fragmentShader='varying float medIsLeaf,medOcclusion;varying vec3 medWorld;\n'+pigment+shader.fragmentShader;shader.fragmentShader=shader.fragmentShader.replace('#include <metalnessmap_fragment>',`#include <metalnessmap_fragment>
+      vec4 f=medSample(medWorld);vec3 albedo=mix(medShade,vec3(.28,.33,.23),f.b*.82);
+      diffuseColor.rgb=mix(vec3(.065,.045,.028),albedo,medIsLeaf)*medOcclusion;
+    `);};material.customProgramCacheKey=()=> 'garrigue-small-leaf-shrub-2';
+    const shrubs=batch(geometry,material,near?110:far?320:290,'mediterranean-small-leaf-'+detail);let placed=0;
+    for(let k=0;k<15000&&placed<shrubs.count;k++){
+     const x=(rng()-.5)*(near?42:far?420:180),z=near?11-rng()*42:far?-100-rng()*240:-22-rng()*110,c=mediterraneanCommunity(r.seed,x,z);
+     const soilClearance=Math.max(soil(x,z),soil(x-.8,z),soil(x+.8,z));
+     if(soilClearance>.22||c<.34||rng()>c||Math.abs(x)<2.0&&z>3)continue;
+     // Grounded lateral communities, not a wall across the valley viewing corridor.
+     const depth=16-z,central=Math.abs(x)/depth<.24;
+     if(near&&central&&z>-18)continue;
+     const scale=(near?.70:far?1.10:.85)+rng()*(near?.55:far?.80:.60);
+     place(shrubs,placed++,x,z,scale,scale*(central?.70:.95),scale);
+    }
+    shrubs.count=placed;shrubCount+=placed;shrubs.castShadow=!far;shrubs.computeBoundingSphere();
+   }
+   const anchors=[[-3.4,12,1.65],[-4.6,8.0,1.65],[-3.6,3,1.1],[3.8,11,1.05],[2.9,5,.8],[-7,-12,1.8],[10,-20,2.2],[-20,-58,3.4],[35,-110,4.4]];
+   let rocks=0;for(let variant=0;variant<4;variant++){const material=new T.MeshStandardMaterial({color:'#b9aa96',roughness:.95});const mesh=batch(weatherRockGeometry(rockGeometry(true),variant),material,anchors.length*3,'mediterranean-weathered-limestone-'+variant);let placed=0;
+    for(let cluster=0;cluster<anchors.length;cluster++){const [x,z,size]=anchors[cluster];for(let part=0;part<3;part++){const angle=rng()*6.283,offset=part?size*(.5+rng()*.6):0,xx=x+Math.cos(angle)*offset,zz=z+Math.sin(angle)*offset,s=size*(part?.20+rng()*.32:.75+rng()*.15);if(Math.abs(xx)<1.1&&zz>10||soil(xx,zz)>.7&&part)continue;place(mesh,placed++,xx,zz,s*(1+rng()*.4),s*(.6+rng()*.28),s,angle,s*.17);}}
+    mesh.count=placed;rocks+=placed;mesh.castShadow=true;mesh.computeBoundingSphere();
+   }
+   scene.userData.mediterranean={checkpoint:1,revision:2,seed:r.seed,reference:'visual-lab/mediterranean/references',camera:mediterraneanReferenceCamera,mask:{source:'corrected camera-space dirt reference',projection:'Frozen reference camera baked to world-space field',bounds,resolution},instances:{grass:grass.count,shrubs:shrubCount,rocks,trees:r.trees.length+(hero?1:0)},ecology:'Regional source Quercus ilex candidates; unnamed dry/silver woody forms, no locally verified species inferred',terrain:'Synthetic descending garrigue with limestone-compatible shoulders; no DEM',layers:{season:'reference leaf-on',timeOfDay:'warm low directional reference state',weather:'clear'},approval:'pending human review'};
+   scene.userData.recipeShadowDirty=true;base.finish();
+  };
+  fetch('/assets/mediterranean/reference-soil-mask.json').then(response=>{if(!response.ok)throw Error('Reference soil mask unavailable');return response.json();}).then(mask=>{if(!disposed)build(referenceSoilSampler(r.seed,mask));}).catch(error=>{if(!disposed){scene.userData.mediterraneanError=String(error);base.finish();}});
+  const disposeHolm=installHolmOakMaterials(scene,r.trees,base.load);
+  const beforeRender=scene.onBeforeRender;let woodReady=false;scene.onBeforeRender=function(...args){beforeRender.apply(this,args);if(!woodReady){woodReady=true;scene.traverse(o=>{if(o instanceof T.Mesh&&o.castShadow)o.receiveShadow=true;});}};
+  sun.target.position.set(0,0,-5);sun.intensity=3.8;sun.shadow.intensity=.8;sun.shadow.normalBias=.025;sun.shadow.mapSize.set(2048,2048);Object.assign(sun.shadow.camera,{left:-28,right:28,top:28,bottom:-28,far:140});sun.shadow.camera.updateProjectionMatrix();fill.intensity=.18;scene.children.forEach(o=>{if(o instanceof T.HemisphereLight){o.color.set('#a6bfd2');o.groundColor.set('#aa9060');o.intensity=.52;}});scene.fog=new T.Fog(palette.air,240,1900);
+  return()=>{disposed=true;scene.onBeforeRender=beforeRender;disposeHolm();matte();disposeHero();scene.remove(group);created.forEach(m=>{m.geometry.dispose();(m.material as T.Material).dispose();});field.dispose();base.dispose();};
+ }};

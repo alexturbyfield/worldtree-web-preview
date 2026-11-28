@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "reviewer": {
+    "type": "agent",
+    "actualImageContentInspected": true,
+    "humanApproval": false
+  },
+  "judgments": {
+    "C2": {
+      "betterThanPrevious": true,
+      "goodEnoughToApprove": false,
+      "reason": "Connected, raised umbrella replaces separated pads without losing C fork. Dark interior dominance, jagged leaf breakup and thin distal wood still fall short of the reference."
+    },
+    "worldValueField": {
+      "betterThanPrevious": "modest/scoped",
+      "goodEnoughToApprove": false,
+      "reason": "Warmer near values and luminous middle survive changed camera/seed, but the ground remains too exposed and the transition is subtle at seed29."
+    },
+    "solidGrass": {
+      "betterThanPrevious": false,
+      "goodEnoughToApprove": false,
+      "reason": "Angular chips revised into narrower curves, but close view still looks like stiff folded ribbons and cost nearly doubles the scene."
+    }
+  },
+  "findings": [
+    {
+      "defect": "Insufficient physical foreground grass fidelity",
+      "severity": "major",
+      "visualEvidence": "grass-rejected.png close view shows broad straight-edged folded ribbons; retained hero still has isolated tiny fragments and large undressed floor regions.",
+      "cause": "Verified two-segment geometry generated coarse angular diamonds; four-segment revision still has flat triangle normals. Hypothesis: insufficient trajectory and cross-section diversity prevents soft connected clump silhouettes.",
+      "action": "Reject both solid prototypes; retain existing grass and develop one isolated smooth curved clump before repopulation.",
+      "decision": "reject"
+    },
+    {
+      "defect": "Canopy is connected but dark and noisy",
+      "severity": "major",
+      "visualEvidence": "tree-diagnostics.png: C2 is full and raised, with lower fork window; dark interior occupies most of the crown and thin sprays break its upper contour into sharp slivers.",
+      "cause": "Hypothesis: inclined spray surfaces expose many dark undersides while alpha-atlas overlap and insufficient crown-scale light organization keep the upper value mass dark.",
+      "action": "Retain architecture provisionally; next crown study should compare smooth crown-scale normals/irradiance organization using this same C2 branch scaffold.",
+      "decision": "revise later, do not promote to approved"
+    },
+    {
+      "defect": "Foreground still reads more as exposed textured terrain than flowing grassland",
+      "severity": "major",
+      "visualEvidence": "comparison.png and thumbnail-review.png: palette/depth improve modestly, but near rocks have limited vegetation overlap and the central plane carries nearly all the landscape character.",
+      "cause": "Hypothesis: near dressing is concentrated around a few rock anchors and geometry does not yet provide coherent swath silhouettes.",
+      "action": "Keep ground-first field as support, not a finished landscape; resolve foreground clump representation before increasing placement or density.",
+      "decision": "retain provisionally"
+    }
+  ],
+  "scaleEvaluations": {
+    "thumbnail": "C2 reads as one umbrella and preserves open sky/plain; values still flatter and less golden than concept. Seed73 foreground shadow remains strong but not pure black.",
+    "normal": "Raised connected crown and depth field improve baseline. The cheaper grass fallback remains visibly sparse; rocks remain angular/simple.",
+    "detail": "New grass has parallax and closed cross sections but still looks ribbon-like; no meaningful fidelity gain for its cost. C2 has distinguishable lit olive tips and cool interiors but too much high-frequency breakup."
+  },
+  "robustness": {
+    "seeds": [
+      29,
+      41,
+      73
+    ],
+    "heroAndInspectionInspected": true,
+    "notes": "Seed41 grass line at right remains conspicuous; seed73 hero tree shifts farther toward left edge with preserved ecological placement. No new artificial scene boundary is apparent in captured savanna views; not an exhaustive orbit guarantee."
+  },
+  "stopReason": "Three scoped rounds complete. Stronger representation and crown illumination need a new focused study; no final visual approval."
+}

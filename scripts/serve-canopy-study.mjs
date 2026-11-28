@@ -1,0 +1,3 @@
+import {createServer} from 'node:http';
+import {readFile} from 'node:fs/promises';
+createServer(async(req,res)=>{res.setHeader('Cache-Control','no-store');if(req.url?.startsWith('/study.js')){res.setHeader('Content-Type','application/javascript');res.end(await readFile('.vercel/canopy-study.js'));}else{res.setHeader('Content-Type','text/html');res.end('<!doctype html><meta name="viewport" content="width=device-width,initial-scale=1"><title>Wildloom isolated canopy study</title><script src="/study.js" defer></script>');}}).listen(3002,'127.0.0.1',()=>console.log('Isolated canopy study: http://127.0.0.1:3002'));

@@ -1,0 +1,50 @@
+{
+  "date": "2026-11-27T21:43:40.618Z",
+  "humanFeedback": "The dark is too dark, too. I want colors like the current cork oak",
+  "change": {
+    "file": "src/lib/forest/holm-oak-study.ts",
+    "palette": {
+      "shade": "#7c8954",
+      "body": "#99a45d",
+      "highlight": "#c3c77d"
+    },
+    "sourceShadow": "#65764c",
+    "sourceBody": "#89975c",
+    "confirmedCause": "Existing tree-attention lighting multiplies palette shading by a deep cool fill after material color calculation.",
+    "localShadowResponse": {
+      "before": [
+        0.32,
+        0.48,
+        0.55
+      ],
+      "after": [
+        0.65,
+        0.73,
+        0.57
+      ]
+    },
+    "scope": "Holm-oak materials only; no global ambient/exposure or lighting changes"
+  },
+  "preserved": [
+    "Geometry",
+    "Normals",
+    "50/50 material blend",
+    "Cork oak",
+    "Ground and grass",
+    "Scene lighting"
+  ],
+  "review": {
+    "reviewer": "Primary Codex actual scene image",
+    "observation": "Undersides now read as lighter olive rather than deep blue-green; highlights retain muted golden-green. Clump pattern remains.",
+    "humanApproval": null
+  },
+  "checks": {
+    "typecheck": "passed",
+    "renderErrors": [],
+    "drawCalls": 18,
+    "triangles": 1822040
+  },
+  "evidence": "artifacts/holm-cork-palette/comparison.png",
+  "commit": false,
+  "deployed": false
+}

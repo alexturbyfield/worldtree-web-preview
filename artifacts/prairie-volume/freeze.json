@@ -1,0 +1,9 @@
+{
+  "date": "2026-11-27T11:40:38.626Z",
+  "holdout": "8924519",
+  "files": {
+    "src/lib/forest/wave2-shared.ts": "79b57d913b14aad04da941320f051fb7a7ce120685bb6c0331cda4bef294a2cf",
+    "src/lib/forest/wave3-prairie.ts": "f4428962f7b46b415b2c4fe1825f0f9180614c265965d9a3d5a52ab725243b25",
+    "src/lib/forest/wave3-prairie-dressing.ts": "ac60ed0cc7cfe7201a26c6fde3bc5069aa2782816a80eee6bef11e5ac68e2894"
+  }
+}

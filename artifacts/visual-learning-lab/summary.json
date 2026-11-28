@@ -1,0 +1,345 @@
+{
+  "visionInspectionUsed": true,
+  "modelTrainingOccurred": false,
+  "humanPreferences": 0,
+  "controller": {
+    "schemaVersion": 1,
+    "maxRounds": 3,
+    "rounds": [
+      {
+        "id": "A-r1",
+        "experiment": "A",
+        "status": "reviewed",
+        "meaningfulImprovement": false,
+        "reason": "All pass technical gates, but none meets the reference-led grass quality bar. Radial blade templates and coarse segment curvature are the likely causes; this is a hypothesis supported by the geometry code and visible spike forms. Retain the previous best."
+      },
+      {
+        "id": "B-r1",
+        "experiment": "B",
+        "status": "reviewed",
+        "meaningfulImprovement": false,
+        "reason": "Placement changes cannot repair the angular shared plant geometry or create missing leaf-litter richness. All retain the inherited world boundary. No variant is approval quality; retain the baseline rather than interpreting more vegetation as success."
+      }
+    ],
+    "visionAvailable": true
+  },
+  "continuation": {
+    "allowed": false,
+    "reason": "Two rounds without meaningful improvement"
+  },
+  "pugetByteIdentical": true,
+  "experiments": [
+    {
+      "id": "A-r1",
+      "scope": "targeted parameter family in a fixed scene; not whole-scene approval",
+      "status": "all-rejected",
+      "ranking": [
+        "a3",
+        "a1",
+        "a2"
+      ],
+      "retained": "baseline",
+      "baselineRestoredByteIdentical": true,
+      "baseline": {
+        "calls": 8,
+        "triangles": 57350
+      },
+      "candidates": [
+        {
+          "id": "a1",
+          "parameters": {
+            "geometry": "ribbons",
+            "count": 2100,
+            "blades": 5,
+            "segments": 3,
+            "bladeWidth": 0.13,
+            "bend": 0.48,
+            "height": 1.6,
+            "heightVariation": 0.65,
+            "width": 1.4,
+            "broadFraction": 0.5,
+            "densityFloor": 0.34,
+            "normalWrap": 0.7,
+            "tip": "#dfc27a",
+            "base": "#747445"
+          },
+          "criticalFailure": false,
+          "heroCoverage": 0.4558506944444444,
+          "sunlitNearBlackFraction": 0.004857966241251544,
+          "calls": 8,
+          "triangles": 76350,
+          "cpuSubmissionMs": [
+            0.5,
+            0.29999999701976776,
+            0.20000000298023224
+          ],
+          "unchangedSystems": true,
+          "deterministic": true,
+          "vision": {
+            "id": "a1",
+            "betterThanPrevious": true,
+            "goodEnough": false,
+            "reason": "Reads as grass rather than fern-like cards, but broad radial spikes and a flat olive-gold response are too artificial for the reference.",
+            "assessment": {
+              "biomeIdentity": "Grass identity improves",
+              "composition": "Opening and acacia unchanged",
+              "silhouette": "Broad pointed radial clumps look agave-like",
+              "vegetation": "Too stiff and repeated",
+              "groundRichness": "Coverage improves but center remains flat",
+              "terrain": "Unchanged simple historical hill",
+              "depth": "Near/middle/far structure retained",
+              "lighting": "No black clumps, but olive flatness remains",
+              "repetition": "Same radial spike pattern repeats",
+              "overallAppeal": "Relative improvement, not approval quality"
+            }
+          }
+        },
+        {
+          "id": "a2",
+          "parameters": {
+            "geometry": "atlas",
+            "count": 7500,
+            "blades": 0,
+            "segments": 0,
+            "bladeWidth": 0,
+            "bend": 0,
+            "height": 1.25,
+            "heightVariation": 0.5,
+            "width": 1.7,
+            "broadFraction": 0.68,
+            "densityFloor": 0.48,
+            "normalWrap": 0.85,
+            "tip": "#e3ca8c",
+            "base": "#99925a"
+          },
+          "criticalFailure": false,
+          "heroCoverage": 0.6581857638888889,
+          "sunlitNearBlackFraction": 0.0001384083044982699,
+          "calls": 8,
+          "triangles": 43350,
+          "cpuSubmissionMs": [
+            0.4000000059604645,
+            0.20000000298023224,
+            0.09999999403953552
+          ],
+          "unchangedSystems": true,
+          "deterministic": true,
+          "vision": {
+            "id": "a2",
+            "betterThanPrevious": false,
+            "goodEnough": false,
+            "reason": "Lower triangle cost is a technical gain, but pale skeletal atlas forms look like weeds or debris and are less attractive than the retained baseline.",
+            "assessment": {
+              "biomeIdentity": "Weak golden-grass identity",
+              "composition": "Unchanged clear center",
+              "silhouette": "Pale branching card forms",
+              "vegetation": "Skeletal, weed-like",
+              "groundRichness": "Visible isolated debris inside opening",
+              "terrain": "Unchanged",
+              "depth": "Layering unchanged",
+              "lighting": "Overly pale vegetation despite acceptable dark-pixel metric",
+              "repetition": "Obvious repeated cards",
+              "overallAppeal": "Reject despite numerical efficiency"
+            }
+          }
+        },
+        {
+          "id": "a3",
+          "parameters": {
+            "geometry": "ribbons",
+            "count": 2100,
+            "blades": 7,
+            "segments": 2,
+            "bladeWidth": 0.075,
+            "bend": 0.7,
+            "height": 1.9,
+            "heightVariation": 0.9,
+            "width": 1.6,
+            "broadFraction": 0.6,
+            "densityFloor": 0.4,
+            "normalWrap": 0.65,
+            "tip": "#e6ca84",
+            "base": "#788052"
+          },
+          "criticalFailure": false,
+          "heroCoverage": 0.5046440972222223,
+          "sunlitNearBlackFraction": 0.002716444939750644,
+          "calls": 8,
+          "triangles": 72150,
+          "cpuSubmissionMs": [
+            0.5,
+            0.10000000894069672,
+            0.19999998807907104
+          ],
+          "unchangedSystems": true,
+          "deterministic": true,
+          "vision": {
+            "id": "a3",
+            "betterThanPrevious": true,
+            "goodEnough": false,
+            "reason": "The strongest relative grass treatment, with finer blades and clearer masses, but still uniformly pointed, rigid and too olive compared with the references.",
+            "assessment": {
+              "biomeIdentity": "Best grass silhouette of the three",
+              "composition": "Focal opening remains readable",
+              "silhouette": "Fine blades are still sharply segmented",
+              "vegetation": "Radial tufts lack coherent flowing lean",
+              "groundRichness": "Dense edges, sparse center",
+              "terrain": "Unchanged",
+              "depth": "Foreground mass stronger",
+              "lighting": "Readable golden/olive blades, insufficient subtle color hierarchy",
+              "repetition": "Template orientation and repeated radial form remain visible",
+              "overallAppeal": "Rank first; reject as not good enough"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "B-r1",
+      "scope": "targeted parameter family in a fixed scene; not whole-scene approval",
+      "status": "all-rejected",
+      "ranking": [
+        "b3",
+        "b2",
+        "b1"
+      ],
+      "retained": "baseline",
+      "baselineRestoredByteIdentical": true,
+      "baseline": {
+        "calls": 26,
+        "triangles": 1450298
+      },
+      "candidates": [
+        {
+          "id": "b1",
+          "parameters": {
+            "spread": 1.15,
+            "fernScale": 0.62,
+            "palmScale": 0.5,
+            "broadleafScale": 0.95,
+            "heightVariation": 0.4,
+            "foregroundScale": 1.05,
+            "litterScale": 1.1,
+            "gap": 1.1
+          },
+          "criticalFailure": false,
+          "heroCoverage": 0.1352951388888889,
+          "sunlitNearBlackFraction": null,
+          "calls": 26,
+          "triangles": 1450298,
+          "cpuSubmissionMs": [
+            0.5999999940395355,
+            0.29999999701976776,
+            0.29999999701976776
+          ],
+          "unchangedSystems": true,
+          "deterministic": true,
+          "vision": {
+            "id": "b1",
+            "betterThanPrevious": false,
+            "goodEnough": false,
+            "reason": "Low plants reduce angular foreground clutter, but framing becomes weak and the large brown floor looks even barer.",
+            "assessment": {
+              "biomeIdentity": "Canopy identity preserved",
+              "composition": "Center remains readable but poorly framed",
+              "silhouette": "Low islands too inconspicuous",
+              "vegetation": "Little convincing layered understory",
+              "groundRichness": "Large empty brown region persists",
+              "terrain": "Inspection boundary unchanged",
+              "depth": "Upper forest remains strong",
+              "lighting": "Existing pools preserved",
+              "repetition": "No circular stamps return",
+              "overallAppeal": "Not a meaningful improvement"
+            }
+          }
+        },
+        {
+          "id": "b2",
+          "parameters": {
+            "spread": 0.85,
+            "fernScale": 1.05,
+            "palmScale": 0.72,
+            "broadleafScale": 1.15,
+            "heightVariation": 0.65,
+            "foregroundScale": 1.35,
+            "litterScale": 1.25,
+            "gap": 1.05
+          },
+          "criticalFailure": false,
+          "heroCoverage": 0.16541666666666666,
+          "sunlitNearBlackFraction": null,
+          "calls": 26,
+          "triangles": 1450298,
+          "cpuSubmissionMs": [
+            0.3999999910593033,
+            0.29999999701976776,
+            0.20000000298023224
+          ],
+          "unchangedSystems": true,
+          "deterministic": true,
+          "vision": {
+            "id": "b2",
+            "betterThanPrevious": false,
+            "goodEnough": false,
+            "reason": "Stronger edge massing introduces oversized angular foreground fronds without making the central floor natural; lower-detail assets dominate the image.",
+            "assessment": {
+              "biomeIdentity": "Dense rainforest canopy preserved",
+              "composition": "Foreground foliage competes with the opening",
+              "silhouette": "Large clipped angular fronds are distracting",
+              "vegetation": "More mass is not more botanical plausibility",
+              "groundRichness": "Leaf litter still subtle",
+              "terrain": "Finite inspection edge remains",
+              "depth": "Some stronger foreground separation",
+              "lighting": "Dark foreground geometry needs material/shape work",
+              "repetition": "Repeated shrub/fern forms visible",
+              "overallAppeal": "Reject; density alone does not fix asset quality"
+            }
+          }
+        },
+        {
+          "id": "b3",
+          "parameters": {
+            "spread": 1.45,
+            "fernScale": 0.78,
+            "palmScale": 0.58,
+            "broadleafScale": 0.85,
+            "heightVariation": 0.8,
+            "foregroundScale": 1.2,
+            "litterScale": 0.8,
+            "gap": 1.2
+          },
+          "criticalFailure": false,
+          "heroCoverage": 0.2117534722222222,
+          "sunlitNearBlackFraction": null,
+          "calls": 26,
+          "triangles": 1450298,
+          "cpuSubmissionMs": [
+            0.6000000089406967,
+            0.19999998807907104,
+            0.10000000894069672
+          ],
+          "unchangedSystems": true,
+          "deterministic": true,
+          "vision": {
+            "id": "b3",
+            "betterThanPrevious": true,
+            "goodEnough": false,
+            "reason": "Best relative framing and patch variation of the three, but the bare floor, angular foliage and inherited inspection boundary prevent approval.",
+            "assessment": {
+              "biomeIdentity": "Rainforest identity remains strong",
+              "composition": "Slightly improved asymmetric framing",
+              "silhouette": "Recognizable but coarse foreground fronds",
+              "vegetation": "More irregular sizes, still generic life-form geometry",
+              "groundRichness": "Still too smooth and brown against the leaf-litter reference",
+              "terrain": "Exposed environment edge unchanged",
+              "depth": "Layered canopy preserved",
+              "lighting": "Existing selective lighting retained",
+              "repetition": "No circle regression; repeated plant silhouettes remain",
+              "overallAppeal": "Small relative improvement, not good enough"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

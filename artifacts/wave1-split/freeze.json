@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-26T13:54:17.726Z",
+  "training": [
+    29,
+    41
+  ],
+  "holdout": 1879,
+  "sourceHashes": {
+    "src/lib/forest/wave1-wet-lighting.ts": "5d3cac12c61457791d16cd5a47120609aacfbe06f86b1bdf77cb4fbe5f538b34",
+    "src/lib/forest/wave1-desert-detail.ts": "004a388095c64bc31245cddcd8a73637d7a4f4a83c9c78fff519c0c2d655deae",
+    "src/lib/forest/wave1-rebuild.ts": "a71415e172ee56fc9ed5254e87d44c01fc3b220042ca5a0bc246fc6b5c29eff3",
+    "src/lib/forest/wave1-fields.ts": "3b75c341d19bcf56d8681750577d0e58a42c848ef628c0aa850e61f58f27e1cb",
+    "src/lib/forest/wave1-water.ts": "a41be61219232b2033b94abda2d7767964bcfc8b9798eb81fa748a576a3d2f35"
+  },
+  "status": "frozen for multi-seed review; no final approval"
+}

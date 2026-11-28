@@ -1,0 +1,11 @@
+{
+  "sourceHash": "051d6a04571274c39fb5fe2320bdf1d918687359c05e878b81da9f08b3c456aa",
+  "frozenAt": "2026-11-26T04:00:41.502159+00:00",
+  "training": [
+    "29",
+    "41"
+  ],
+  "holdout": "5189",
+  "oldHoldout": "5171 revealed and retained as negative evidence; never treated as unseen",
+  "revision": "Rollback obvious crossed-sine gravel stamping visible in training29 inspection; no new artistic experiment or tuning to holdout."
+}

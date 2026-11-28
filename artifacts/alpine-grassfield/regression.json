@@ -1,0 +1,37 @@
+[
+  {
+    "before": "conifer-protected-final/puget-hero",
+    "after": "grassfield-protected/puget-hero",
+    "pixelIdentical": true
+  },
+  {
+    "before": "conifer-protected-final/rainforest-hero",
+    "after": "grassfield-protected/rainforest-hero",
+    "pixelIdentical": true
+  },
+  {
+    "before": "conifer-protected-final/rainforest-inspection",
+    "after": "grassfield-protected/rainforest-inspection",
+    "pixelIdentical": true
+  },
+  {
+    "before": "conifer-savanna-final/savanna-hero",
+    "after": "grassfield-savanna/savanna-hero",
+    "pixelIdentical": true
+  },
+  {
+    "before": "conifer-savanna-final/savanna-inspection",
+    "after": "grassfield-savanna/savanna-inspection",
+    "pixelIdentical": true
+  },
+  {
+    "before": "grassfield-before/alpine-hero",
+    "after": "grassfield-fallback/alpine-hero",
+    "pixelIdentical": true
+  },
+  {
+    "before": "grassfield-before/alpine-inspection",
+    "after": "grassfield-fallback/alpine-inspection",
+    "pixelIdentical": true
+  }
+]

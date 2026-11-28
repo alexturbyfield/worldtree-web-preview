@@ -1,0 +1,27 @@
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "8C16C5D57F10D62DC2A517118605F9B80B61B329DFB15B5CCB7DC3A238E9A37D",
+    "Path": "C:\\Users\\aturb\\Documents\\Codex\\2026-11-21\\worldtree-build-and-deploy-mobile-web\\src\\lib\\forest\\wave1-desert.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "63FD042E830B86952450FC3CF19653BC21E8749EA2A64906A47F3F4D746E9F85",
+    "Path": "C:\\Users\\aturb\\Documents\\Codex\\2026-11-21\\worldtree-build-and-deploy-mobile-web\\src\\lib\\forest\\wave1-flooded.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "D49ABDBBA88F3E94C89AF2B145C31FA0A9D953AA587928B8C925B4BEA029F5E1",
+    "Path": "C:\\Users\\aturb\\Documents\\Codex\\2026-11-21\\worldtree-build-and-deploy-mobile-web\\src\\lib\\forest\\wave1-mangrove.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "716E94FC62335425D7122DA98CDA684961C897923F77507C99CBD13AB10B86BA",
+    "Path": "C:\\Users\\aturb\\Documents\\Codex\\2026-11-21\\worldtree-build-and-deploy-mobile-web\\src\\lib\\forest\\wave1-water.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "2F0B83E4D8DAE5DCE60A34AE70AE94E7E2EB85F65C329B64B9525DEFFA6387A6",
+    "Path": "C:\\Users\\aturb\\Documents\\Codex\\2026-11-21\\worldtree-build-and-deploy-mobile-web\\src\\lib\\forest\\wave1.ts"
+  }
+]

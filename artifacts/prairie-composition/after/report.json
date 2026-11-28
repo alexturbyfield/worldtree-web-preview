@@ -1,0 +1,622 @@
+[
+  {
+    "id": "prairie",
+    "seed": "29",
+    "view": "hero",
+    "file": "artifacts/prairie-composition/after/prairie-29-hero.png",
+    "width": 640,
+    "height": 360,
+    "camera": {
+      "position": [
+        0,
+        1.7,
+        34
+      ],
+      "target": [
+        0,
+        -16,
+        -190
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 6,
+        "calls": 12,
+        "triangles": 693034,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 7,
+        "calls": 12,
+        "triangles": 693034,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      },
+      {
+        "frame": 8,
+        "calls": 12,
+        "triangles": 693034,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      }
+    ],
+    "instances": [
+      {
+        "name": "prairie-near-brush-masses",
+        "count": 2300
+      },
+      {
+        "name": "prairie-middle-brush-masses",
+        "count": 4200
+      },
+      {
+        "name": "prairie-curved-fine-grass",
+        "count": 260
+      },
+      {
+        "name": "prairie-dimensional-seedheads",
+        "count": 140
+      },
+      {
+        "name": "prairie-yellow-forb-communities",
+        "count": 160
+      },
+      {
+        "name": "prairie-purple-forb-communities",
+        "count": 120
+      },
+      {
+        "name": "prairie-regional-shrub-growth-forms",
+        "count": 12
+      },
+      {
+        "name": "prairie-connected-middle-grass",
+        "count": 1759
+      },
+      {
+        "name": "prairie-connected-seedhead-communities",
+        "count": 314
+      },
+      {
+        "name": "prairie-connected-flowering-swaths",
+        "count": 329
+      },
+      {
+        "name": "prairie-regional-middle-thickets",
+        "count": 107
+      },
+      {
+        "name": "prairie-low-substrate-stones",
+        "count": 44
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "b7c5dc",
+        "intensity": 0.55,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "97b8ce",
+        "intensity": 0.2,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffe1a7",
+        "intensity": 4,
+        "position": [
+          -70,
+          33,
+          25
+        ],
+        "target": [
+          0,
+          0,
+          -40
+        ],
+        "shadow": {
+          "intensity": 0.7,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -64,
+          "right": 64,
+          "normalBias": 0.035
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "recipe": {
+      "id": "prairie",
+      "biome": 8,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "prairie",
+        "biome": 8,
+        "seed": "29",
+        "phase": 2.7814534923481626,
+        "relief": 1.15,
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "target": [
+            0,
+            -16,
+            -190
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            0,
+            -24
+          ]
+        },
+        "heightMode": "prairie-plain",
+        "eye": [
+          0,
+          1.7,
+          34
+        ],
+        "target": [
+          0,
+          -16,
+          -190
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#a6aebe"
+        }
+      },
+      "trees": 0,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": null,
+    "prairie": {
+      "stage": "C-connected-landscape-composition",
+      "version": 3,
+      "sourceEcoId": 389,
+      "sourceEcoName": "Central-Southern US mixed grasslands",
+      "sourceBiome": 8,
+      "reference": "prairie-wave3-primary",
+      "communityField": {
+        "resolution": 512,
+        "span": 4096,
+        "channels": [
+          "growth",
+          "synthetic-moisture",
+          "exposure-pigment",
+          "soil"
+        ]
+      },
+      "ecology": "Unnamed grass, forb and shrub functional forms; NRCS regional context, not verified local taxa.",
+      "terrain": "Retained near rolls; shallow middle drainage and broad low distant shoulders on continuous terrain. Synthetic presentation, no inferred mountains or raised staging pad.",
+      "layers": {
+        "season": "independent leaf-on pigment reference",
+        "weather": "clear reference",
+        "timeOfDay": "low warm key reference"
+      },
+      "pending": [
+        "Further regional and actual mobile validation",
+        "Final biome artistic approval"
+      ]
+    },
+    "dressing": {
+      "instances": {
+        "prairie-near-brush-masses": 2300,
+        "prairie-middle-brush-masses": 4200,
+        "prairie-curved-fine-grass": 260,
+        "prairie-dimensional-seedheads": 140,
+        "prairie-yellow-forb-communities": 160,
+        "prairie-purple-forb-communities": 120,
+        "prairie-regional-shrub-growth-forms": 12,
+        "prairie-connected-middle-grass": 1759,
+        "prairie-connected-seedhead-communities": 314,
+        "prairie-connected-flowering-swaths": 329,
+        "prairie-regional-middle-thickets": 107,
+        "prairie-low-substrate-stones": 44
+      },
+      "activeInstances": {
+        "prairie-curved-fine-grass": 260,
+        "prairie-dimensional-seedheads": 140,
+        "prairie-yellow-forb-communities": 160,
+        "prairie-purple-forb-communities": 120,
+        "prairie-regional-shrub-growth-forms": 12,
+        "prairie-connected-middle-grass": 1759,
+        "prairie-connected-seedhead-communities": 314,
+        "prairie-connected-flowering-swaths": 329,
+        "prairie-regional-middle-thickets": 107,
+        "prairie-low-substrate-stones": 44
+      },
+      "rejectedBrushDefault": true,
+      "ecology": "Unnamed functional-form study: grasses, seedheads, forbs and sparse low shrubs. Regional NRCS evidence informs roles, not point occurrences.",
+      "source": "https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY014OK",
+      "shadows": "No per-grass-card cast shadows; terrain-directed receiving and smooth root normals.",
+      "mobileApproval": false
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "prairie",
+    "seed": "29",
+    "view": "inspection",
+    "file": "artifacts/prairie-composition/after/prairie-29-inspection.png",
+    "width": 640,
+    "height": 360,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        0,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 10,
+        "calls": 12,
+        "triangles": 693034,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      },
+      {
+        "frame": 11,
+        "calls": 12,
+        "triangles": 693034,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.6000000238418579
+      },
+      {
+        "frame": 12,
+        "calls": 12,
+        "triangles": 693034,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      }
+    ],
+    "instances": [
+      {
+        "name": "prairie-near-brush-masses",
+        "count": 2300
+      },
+      {
+        "name": "prairie-middle-brush-masses",
+        "count": 4200
+      },
+      {
+        "name": "prairie-curved-fine-grass",
+        "count": 260
+      },
+      {
+        "name": "prairie-dimensional-seedheads",
+        "count": 140
+      },
+      {
+        "name": "prairie-yellow-forb-communities",
+        "count": 160
+      },
+      {
+        "name": "prairie-purple-forb-communities",
+        "count": 120
+      },
+      {
+        "name": "prairie-regional-shrub-growth-forms",
+        "count": 12
+      },
+      {
+        "name": "prairie-connected-middle-grass",
+        "count": 1759
+      },
+      {
+        "name": "prairie-connected-seedhead-communities",
+        "count": 314
+      },
+      {
+        "name": "prairie-connected-flowering-swaths",
+        "count": 329
+      },
+      {
+        "name": "prairie-regional-middle-thickets",
+        "count": 107
+      },
+      {
+        "name": "prairie-low-substrate-stones",
+        "count": 44
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      }
+    ],
+    "lights": [
+      {
+        "type": "HemisphereLight",
+        "color": "b7c5dc",
+        "intensity": 0.55,
+        "position": [
+          0,
+          1,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "97b8ce",
+        "intensity": 0.2,
+        "position": [
+          30,
+          18,
+          -35
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "shadow": null
+      },
+      {
+        "type": "DirectionalLight",
+        "color": "ffe1a7",
+        "intensity": 4,
+        "position": [
+          -70,
+          33,
+          25
+        ],
+        "target": [
+          0,
+          0,
+          -40
+        ],
+        "shadow": {
+          "intensity": 0.7,
+          "map": [
+            1024,
+            1024
+          ],
+          "left": -64,
+          "right": 64,
+          "normalBias": 0.035
+        }
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "recipe": {
+      "id": "prairie",
+      "biome": 8,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "prairie",
+        "biome": 8,
+        "seed": "29",
+        "phase": 2.7814534923481626,
+        "relief": 1.15,
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "target": [
+            0,
+            -16,
+            -190
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            0,
+            -24
+          ]
+        },
+        "heightMode": "prairie-plain",
+        "eye": [
+          0,
+          1.7,
+          34
+        ],
+        "target": [
+          0,
+          -16,
+          -190
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#a6aebe"
+        }
+      },
+      "trees": 0,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "concept": null,
+    "prairie": {
+      "stage": "C-connected-landscape-composition",
+      "version": 3,
+      "sourceEcoId": 389,
+      "sourceEcoName": "Central-Southern US mixed grasslands",
+      "sourceBiome": 8,
+      "reference": "prairie-wave3-primary",
+      "communityField": {
+        "resolution": 512,
+        "span": 4096,
+        "channels": [
+          "growth",
+          "synthetic-moisture",
+          "exposure-pigment",
+          "soil"
+        ]
+      },
+      "ecology": "Unnamed grass, forb and shrub functional forms; NRCS regional context, not verified local taxa.",
+      "terrain": "Retained near rolls; shallow middle drainage and broad low distant shoulders on continuous terrain. Synthetic presentation, no inferred mountains or raised staging pad.",
+      "layers": {
+        "season": "independent leaf-on pigment reference",
+        "weather": "clear reference",
+        "timeOfDay": "low warm key reference"
+      },
+      "pending": [
+        "Further regional and actual mobile validation",
+        "Final biome artistic approval"
+      ]
+    },
+    "dressing": {
+      "instances": {
+        "prairie-near-brush-masses": 2300,
+        "prairie-middle-brush-masses": 4200,
+        "prairie-curved-fine-grass": 260,
+        "prairie-dimensional-seedheads": 140,
+        "prairie-yellow-forb-communities": 160,
+        "prairie-purple-forb-communities": 120,
+        "prairie-regional-shrub-growth-forms": 12,
+        "prairie-connected-middle-grass": 1759,
+        "prairie-connected-seedhead-communities": 314,
+        "prairie-connected-flowering-swaths": 329,
+        "prairie-regional-middle-thickets": 107,
+        "prairie-low-substrate-stones": 44
+      },
+      "activeInstances": {
+        "prairie-curved-fine-grass": 260,
+        "prairie-dimensional-seedheads": 140,
+        "prairie-yellow-forb-communities": 160,
+        "prairie-purple-forb-communities": 120,
+        "prairie-regional-shrub-growth-forms": 12,
+        "prairie-connected-middle-grass": 1759,
+        "prairie-connected-seedhead-communities": 314,
+        "prairie-connected-flowering-swaths": 329,
+        "prairie-regional-middle-thickets": 107,
+        "prairie-low-substrate-stones": 44
+      },
+      "rejectedBrushDefault": true,
+      "ecology": "Unnamed functional-form study: grasses, seedheads, forbs and sparse low shrubs. Regional NRCS evidence informs roles, not point occurrences.",
+      "source": "https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY014OK",
+      "shadows": "No per-grass-card cast shadows; terrain-directed receiving and smooth root normals.",
+      "mobileApproval": false
+    },
+    "lightDiagnostics": null,
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  }
+]

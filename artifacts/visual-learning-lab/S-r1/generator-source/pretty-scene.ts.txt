@@ -1,0 +1,97 @@
+import {installVisualLab} from './visual-lab';
+import * as T from 'three';
+import {randomSource} from './random';
+import {terrainHeight,type SceneRecipe} from './recipe';
+
+type Biome='savanna'|'amazon';
+type Patch={x:number;z:number;rx:number;rz:number;angle:number;strength:number};
+export interface PrettyScenePlan {
+ version:1;seed:string;biome:Biome;patches:Patch[];
+ clearing:{x:number;z:number;rx:number;rz:number};
+ hero:{id:string;x:number;z:number;height:number;radius:number};
+ palette:{soil:string;vegetation:string;shade:string;sun:string};
+}
+export function prettySceneEnabled(id:string){return (id==='savanna'||id==='amazon')&&(typeof location==='undefined'||new URLSearchParams(location.search).get('pretty')!=='off');}
+/** Plain, serializable presentation data. Never changes source trees, ecology or seeds. */
+export function prettyScenePlan(recipe:SceneRecipe,biome:Biome):PrettyScenePlan{
+ const r=randomSource(recipe.seed+'|pretty-patches-1|'+biome),forest=biome==='amazon';
+ const anchors=forest?[[-8,25],[11,23],[-14,14],[13,7],[-9,-9],[12,-18],[-23,-22],[24,-30],[-13,-38],[9,-40]]:[[-5,29],[7,26],[-13,27],[18,20],[-26,8],[30,-7],[-27,-20],[16,-30],[-35,-35],[36,-39],[-6,-43]];
+ const hero=[...recipe.trees].filter(t=>t.position[0]<-3&&t.position[2]<26).sort((a,b)=>Math.hypot(a.position[0]+(forest?7:16),a.position[2]-(forest?22:-1))-Math.hypot(b.position[0]+(forest?7:16),b.position[2]-(forest?22:-1)))[0]??recipe.trees[0];
+ return {version:1,seed:recipe.seed,biome,patches:anchors.map(([x,z],i)=>({x:x+(r()-.5)*2,z:z+(r()-.5)*3,rx:(forest?3.4:5)+r()*3,rz:(forest?4:6)+r()*5,angle:r()*Math.PI,strength:i%3===0?1:.65+r()*.3})),clearing:{x:forest?0:3,z:forest?2:-4,rx:forest?5.2:12,rz:forest?10:20},hero:{id:hero?.id??'',x:hero?.position[0]??-12,z:hero?.position[2]??0,height:hero?.model.dimensions.height??20,radius:forest?7:13},palette:forest?{soil:'#5c4934',vegetation:'#4c6542',shade:'#294d47',sun:'#b8a35f'}:{soil:'#ad995c',vegetation:'#b8a766',shade:'#657568',sun:'#d0bd7c'}};
+}
+export function patchDensity(plan:PrettyScenePlan,x:number,z:number){
+ let density=0;
+ for(const p of plan.patches){const c=Math.cos(p.angle),s=Math.sin(p.angle),dx=x-p.x,dz=z-p.z,u=(dx*c+dz*s)/p.rx,v=(-dx*s+dz*c)/p.rz;density=Math.max(density,Math.exp(-(u*u+v*v)*1.6)*p.strength);}
+ const f=plan.clearing,opening=Math.hypot((x-f.x)/f.rx,(z-f.z)/f.rz),approach=Math.hypot(x/(plan.biome==='amazon'?3.2:5),(z-25)/11);
+ if(plan.biome==='savanna')return (.38+density*.62)*(.5+.5*T.MathUtils.smoothstep(opening,.4,1.2));
+ return density*T.MathUtils.smoothstep(opening,.78,1.4)*T.MathUtils.smoothstep(approach,.75,1.2);
+}
+function fieldShader(plan:PrettyScenePlan){return `
+ float prettyMass(vec2 p){float d=0.;${plan.patches.map(p=>`{vec2 q=p-vec2(${p.x.toFixed(4)},${p.z.toFixed(4)});q=mat2(${Math.cos(p.angle).toFixed(4)},${(-Math.sin(p.angle)).toFixed(4)},${Math.sin(p.angle).toFixed(4)},${Math.cos(p.angle).toFixed(4)})*q/vec2(${p.rx.toFixed(4)},${p.rz.toFixed(4)});d=max(d,exp(-dot(q,q)*1.6)*${p.strength.toFixed(4)});}`).join('')}return d;}
+ float prettyOpening(vec2 p){vec2 q=(p-vec2(${plan.clearing.x}.,${plan.clearing.z}.))/vec2(${plan.clearing.rx.toFixed(4)},${plan.clearing.rz.toFixed(4)});return exp(-dot(q,q)*.8);}
+ `;}
+const color=(hex:string)=>`vec3(${new T.Color(hex).toArray().map(n=>n.toFixed(5)).join(',')})`;
+
+export function installPrettyFoliage(material:T.Material,kind:string,plan:PrettyScenePlan){
+ if(kind!=='library')return;
+ const previous=material.onBeforeCompile,key=material.customProgramCacheKey.bind(material),hero=plan.hero,forest=plan.biome==='amazon';
+ material.onBeforeCompile=function(shader,renderer){previous.call(this,shader,renderer);
+  if(!forest){if(shader.uniforms.attentionAir)shader.uniforms.attentionAir.value=new T.Color('#bac1b6').convertLinearToSRGB();shader.fragmentShader=shader.fragmentShader.replace('smoothstep(76.,175.,atmosphereDepth)','smoothstep(110.,260.,atmosphereDepth)');}
+  shader.fragmentShader=shader.fragmentShader.replace('gl_FragColor=vec4(shaded,1.);',`
+ float heroWeight=exp(-dot((attentionWorld.xz-vec2(${hero.x.toFixed(4)},${hero.z.toFixed(4)}))/${hero.radius.toFixed(4)},(attentionWorld.xz-vec2(${hero.x.toFixed(4)},${hero.z.toFixed(4)}))/${hero.radius.toFixed(4)})*1.5);
+ float crownSun=heroWeight*smoothstep(.5,.92,attentionHeight)*smoothstep(.12,.8,actualNdotL);
+ float pigmentValue=dot(shaded,vec3(.2126,.7152,.0722));
+ shaded=mix(shaded,vec3(pigmentValue)*vec3(.83,1.02,.89),${forest?'.18':'.28'});
+ shaded*=mix(vec3(${forest?'.78,.96,1.02':'.89,.94,.84'}),vec3(1.21,1.11,.84),crownSun*.85);
+ gl_FragColor=vec4(shaded,1.);`);};
+ material.customProgramCacheKey=()=>key()+'|pretty-1-'+plan.biome;
+}
+
+/** Repositions existing decorative batches, adds only shared cards and a small distant landform. */
+export function mountPrettyScene(scene:T.Scene,recipe:SceneRecipe,biome:Biome,ground:T.Mesh<T.BufferGeometry,T.MeshStandardMaterial>){
+ const plan=prettyScenePlan(recipe,biome),forest=biome==='amazon',r=randomSource(recipe.seed+'|pretty-dressing-1|'+biome),o=new T.Object3D(),textures:T.Texture[]=[];
+ let disposed=false;
+ const place=()=>{for(let i=0;i<150;i++){const p=plan.patches[Math.floor(r()*plan.patches.length)],broad=!forest&&r()<.55,x=broad?(r()-.5)*96:p.x+(r()-.5)*p.rx*3,z=broad?-48+r()*89:p.z+(r()-.5)*p.rz*3;if(Math.abs(x)<48&&Math.abs(z)<48&&r()<patchDensity(plan,x,z))return [x,z];}return [forest?-17:-25,-25];};
+ const batches:{name:string;instances:number;triangles:number}[]=[];
+ const arrange=(mesh:T.InstancedMesh,size:number)=>{for(let i=0;i<mesh.count;i++){const [x,z]=place(),mass=patchDensity(plan,x,z),s=size*(.65+r()*.6),front=T.MathUtils.smoothstep(z,9,28);o.position.set(x,terrainHeight(x,z,recipe.seed)-.015,z);o.rotation.set((r()-.5)*.16,r()*Math.PI*2,(r()-.5)*.12);o.scale.set(s*(forest?1.3:1),s*(.7+mass*.4+front*.2),s);o.updateMatrix();mesh.setMatrixAt(i,o.matrix);mesh.setColorAt(i,new T.Color(plan.palette.vegetation).lerp(new T.Color(plan.palette.sun),r()*.35).lerp(new T.Color('#ffffff'),forest?.43:.22));}mesh.instanceMatrix.needsUpdate=true;mesh.computeBoundingSphere();batches.push({name:mesh.name,instances:mesh.count,triangles:mesh.count*(mesh.geometry.index?.count??mesh.geometry.getAttribute('position').count)/3});};
+ if(forest){
+  // The atlas includes dark, opaque humus islands. Alpha-test alone preserved their circular borders.
+  // Keep the leaf/root albedo fragments, not the dark substrate: terrain supplies continuous soil.
+  const litter=scene.getObjectByName('rainforest-v5-floor-decals') as T.InstancedMesh;
+  if(litter){const mat=litter.material as T.MeshStandardMaterial,previous=mat.onBeforeCompile,key=mat.customProgramCacheKey.bind(mat);mat.color.set('#d8c8a3');
+   mat.onBeforeCompile=function(shader,renderer){previous.call(this,shader,renderer);shader.fragmentShader=shader.fragmentShader.replace('diffuseColor *= sampledDiffuseColor;',`float litterValue=dot(sampledDiffuseColor.rgb,vec3(.2126,.7152,.0722));
+    sampledDiffuseColor.a*=smoothstep(.045,.095,litterValue);
+    diffuseColor *= sampledDiffuseColor;`);};mat.customProgramCacheKey=()=>key()+'|leaf-fragments-1';
+   for(let i=0;i<litter.count;i++){litter.getMatrixAt(i,o.matrix);o.matrix.decompose(o.position,o.quaternion,o.scale);o.scale.x*=.72;o.scale.z*=.45+(i%5)*.16;o.updateMatrix();litter.setMatrixAt(i,o.matrix);}litter.instanceMatrix.needsUpdate=true;litter.computeBoundingSphere();
+   scene.userData.visualQuality={...scene.userData.visualQuality,floorDecals:{mode:'leaf-root-fragments',linearAlbedoCutoff:[.045,.095],instances:litter.count}};
+  }
+  scene.traverse(node=>{if(!(node instanceof T.InstancedMesh))return;
+   if(/rainforest-v[45]-(ferns|palms|seedlings|shrubs|foliage-cards)$/.test(node.name))arrange(node,node.name.includes('palms')?.68:node.name.includes('ferns')?.8:node.name.includes('shrubs')?1.05:1.05);
+  });
+ }else{
+  const old=scene.getObjectByName('biome-grass');if(old)old.visible=false;
+  const shrub=scene.getObjectByName('biome-shrub') as T.InstancedMesh;if(shrub)arrange(shrub,1.5);
+  const map=new T.TextureLoader().load('/assets/puget-v1/grass.png',()=>{if(!disposed)scene.userData.artRevision=(scene.userData.artRevision??0)+1;});map.colorSpace=T.SRGBColorSpace;map.anisotropy=4;textures.push(map);
+  const geometry=new T.BufferGeometry(),positions:number[]=[],uvs:number[]=[],normals:number[]=[];
+  for(const angle of [0,Math.PI/2])for(const [x,y,u,v] of [[-.5,0,0,0],[.5,0,1,0],[-.5,1,0,1],[.5,0,1,0],[.5,1,1,1],[-.5,1,0,1]]){positions.push(x*Math.cos(angle),y,x*Math.sin(angle));uvs.push(u,v);normals.push(-Math.sin(angle),0,Math.cos(angle));}
+  geometry.setAttribute('position',new T.Float32BufferAttribute(positions,3));geometry.setAttribute('uv',new T.Float32BufferAttribute(uvs,2));geometry.setAttribute('normal',new T.Float32BufferAttribute(normals,3));const count=11000,tiles=Float32Array.from({length:count},()=>Math.floor(r()*3));geometry.setAttribute('prettyTile',new T.InstancedBufferAttribute(tiles,1));
+  const material=new T.MeshStandardMaterial({map,side:T.DoubleSide,alphaTest:.4,roughness:1});
+  material.onBeforeCompile=shader=>{shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_begin>','#include <normal_fragment_begin>\nnormal=normalize(normal+normalize(mat3(viewMatrix)*vec3(0.,1.,0.))*.95);').replace('#include <color_fragment>','#include <color_fragment>\nfloat bladeValue=dot(diffuseColor.rgb,vec3(.2126,.7152,.0722));diffuseColor.rgb=bladeValue*vec3(1.8,1.42,.68);');shader.vertexShader='attribute float prettyTile;varying vec2 prettyUv;\n'+shader.vertexShader;shader.vertexShader=shader.vertexShader.replace('#include <uv_vertex>','#include <uv_vertex>\nprettyUv=vec2((prettyTile+uv.x)/4.,uv.y);');shader.fragmentShader='varying vec2 prettyUv;\n'+shader.fragmentShader;shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>',T.ShaderChunk.map_fragment.replace('texture2D( map, vMapUv )','texture2D( map, prettyUv )'));};material.customProgramCacheKey=()=> 'pretty-grass-1';
+  const grass=new T.InstancedMesh(geometry,material,count);grass.name='pretty-savanna-grass';grass.receiveShadow=true;scene.add(grass);arrange(grass,1.65);
+  for(let i=0;i<count;i++){grass.getMatrixAt(i,o.matrix);o.matrix.decompose(o.position,o.quaternion,o.scale);const c=plan.clearing,opening=Math.hypot((o.position.x-c.x)/c.rx,(o.position.z-c.z)/c.rz);o.scale.x*=1.25;o.scale.z*=1.25;o.scale.y*=.32+.68*T.MathUtils.smoothstep(opening,.35,1.2);o.updateMatrix();grass.setMatrixAt(i,o.matrix);grass.setColorAt(i,new T.Color('#f4e7c8').lerp(new T.Color('#d9c68f'),r()*.5));}grass.instanceMatrix.needsUpdate=true;grass.computeBoundingSphere();
+  // Keep the historical biome terrain: both proposed new ridges failed visual review.
+
+ }
+ // The same correlated masses control ground albedo and plant distribution; texture detail survives.
+ const previous=ground.material.onBeforeCompile,key=ground.material.customProgramCacheKey.bind(ground.material);
+ ground.material.onBeforeCompile=function(shader,renderer){previous.call(this,shader,renderer);shader.fragmentShader=fieldShader(plan)+'\n'+shader.fragmentShader;shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>',`#include <color_fragment>
+ float prettyPatch=prettyMass(biomeWorld.xz),prettyFocal=prettyOpening(biomeWorld.xz);
+ float detail=clamp(dot(diffuseColor.rgb,vec3(.2126,.7152,.0722))*3.,.65,1.35);
+ vec3 substrate=mix(${color(plan.palette.soil)},${color(plan.palette.vegetation)},prettyPatch*.82);
+ substrate=mix(substrate,${color(plan.palette.sun)},prettyFocal*${forest?'.32':'.24'});
+ diffuseColor.rgb=substrate*mix(1.,detail,${forest?'.62':'.3'});`);
+ shader.fragmentShader=shader.fragmentShader.replace('#include <opaque_fragment>',`outgoingLight*=mix(vec3(.82,.97,1.04),vec3(1.65,1.42,1.04),prettyFocal*.8);\n#include <opaque_fragment>`);};ground.material.customProgramCacheKey=()=>key()+'|pretty-ground-1-'+biome;
+ scene.userData.prettyScene={...plan,batches,additionalDrawCalls:forest?0:1,notes:['Presentation dressing only; no source trees or ecological records modified.','World-space plant masses and correlated ground albedo; no screen vignette.','Existing hero tree receives selective sun-facing crown highlights.']};
+ const disposeLab=installVisualLab(scene,recipe,biome,plan);
+ return()=>{disposeLab();disposed=true;textures.forEach(t=>t.dispose());};
+}

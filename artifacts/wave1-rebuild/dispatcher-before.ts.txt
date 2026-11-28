@@ -1,0 +1,6 @@
+import {desertStudy} from './wave1-desert';
+import {mangroveStudy} from './wave1-mangrove';
+import {floodedStudy} from './wave1-flooded';
+import type {SceneRecipe} from './recipe';
+/** Opt-in presentation only; RESOLVE gate cannot be bypassed by a query string. */
+export function wave1Study(recipe:SceneRecipe,search:string){const id=new URLSearchParams(search).get('wave1');return [desertStudy,mangroveStudy,floodedStudy].find(s=>s.id===id&&recipe.ecoregion?.BIOME_NUM===s.biome);}

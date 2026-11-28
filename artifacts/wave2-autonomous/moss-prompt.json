@@ -1,0 +1,10 @@
+{
+  "mode": "built-in image_gen",
+  "prompt": "A production terrain albedo texture for a painterly forest game, seamless square 2048x2048 with exactly matching opposite edges, top-down orthographic view of a continuous living moss carpet, about 2 metres across. Entire surface predominantly natural fresh forest moss, varied compact velvety and tiny feathery growth, rich EMERALD and soft SAGE GREEN body pigments, luminous pale yellow-green growing tips, cooler deep green crevices. Intricate fine structure forms broad soft coherent moss cushions. Very little brown: only a few tiny needle fragments and minute humus crevices. NO large duff areas, NO bare soil region, NO paths, NO leaves larger than tiny fragments, NO stones, NO ferns, no flowers. Beautiful intricate painterly naturalism, restrained fine contrast, not photographic noise. Even neutral diffuse lighting for BASE COLOR ONLY: no baked sunlight, cast shadows, vignette, perspective, borders or labels. Opaque full-frame seamless moss material designed to blend with separately rendered leaf litter and soil.",
+  "asset": "public/assets/wave2-autonomous/forest-moss-v1.png",
+  "actualResolution": [
+    1254,
+    1254
+  ],
+  "status": "experimental artwork, not scene render"
+}

@@ -1,8 +1,10 @@
+import {regionalLandCover} from './regional-land-cover';
+import {mapVisual} from './forest/presets';
 import source from '../../data/global/taxa.json';
 import bindings from '../../data/global/ecoregion-associations.json';
 import {recommend,validateCoordinates} from './catalog';
 import {biomeNames,type EcoProperties} from './geography';
-import type {BotanicalArea,EcoregionAssociation,EnvironmentFilters,Taxon,VegetationHabitat,VegetationProfile} from './global-types';
+import type {BotanicalArea,EcoregionAssociation,EnvironmentFilters,Taxon,TreeSpecies,VegetationHabitat,VegetationProfile} from './global-types';
 export const taxa=source as Taxon[];
 export const associations=bindings as EcoregionAssociation[];
 export const defaultEnvironment:EnvironmentFilters={moisture:'any',elevationM:null,coastal:'any',seasonality:'any'};
@@ -32,7 +34,7 @@ function growthProfile(geo:EcoProperties,habitat:VegetationHabitat) {
   if(b===11)return {status:'naturally_treeless' as const,title:'Predominantly treeless tundra',description:'Tundra supports low vegetation. Tree-line ecotones and sheltered river valleys need local evidence; no forest palette is inferred.',forms:[['Low shrubs, sedges and mosses','tundra_groundcover',false]] as [string,string,boolean][]};
   if(habitat==='urban')return {status:'growth_form_fallback' as const,title:'Designed planting · local evidence needed',description:'A biome is not an urban planting inventory. These design forms require local climate, water, soil and invasive-species checks.',forms:(b===13?[['Water-limited planting / non-woody cover','arid_groundcover',true]]:[['Climate-adapted planted canopy','planted_canopy',true],['Low planting and open ground','urban_understory',true]]) as [string,string,boolean][]};
   if(b===13)return {status:'open_vegetation' as const,title:'Desert / xeric vegetation',description:'No forest is inferred. Sparse woody plants, oases and riparian patches need habitat and water evidence.',forms:[['Sparse drought-adapted shrubs','xeric_shrub',false],['Woody oasis or river vegetation only if documented','sparse_dryland_tree',true]] as [string,string,boolean][]};
-  if([7,8,9,10].includes(b))return {status:'open_vegetation' as const,title:b===7?'Open savanna / grassland':b===9?'Flooded grassland mosaic':b===10?'Montane open vegetation':'Temperate grassland / steppe',description:'An open vegetation matrix is the default. Trees are conditional patches, not a continuous forest or a verified local species list.',forms:[['Grass, sedge or low-shrub matrix','open_groundcover',false],...(b===7?[['Scattered canopy only with local habitat evidence','savanna_canopy',true]]:[])] as [string,string,boolean][]};
+  if([7,8,9,10].includes(b))return {status:'open_vegetation' as const,title:b===7?'Open savanna / grassland':b===9?'Flooded grassland mosaic':b===10?'Montane open vegetation':'Temperate grassland / steppe',description:'An open vegetation matrix is the default. Trees are conditional patches, not a continuous forest or a verified local species list.',forms:[['Grass, sedge or low-shrub matrix','open_groundcover',false],...(b===7?[['Scattered canopy only with local habitat evidence','savanna_canopy',true]]:b===9?[['Conditional wooded wetland margins or raised tree islands; local hydrology unverified','riparian_canopy',true]]:[])] as [string,string,boolean][]};
   if(habitat==='alpine')return {status:'growth_form_fallback' as const,title:'Elevation-dependent vegetation',description:'Elevation and tree line have not been measured. High-elevation forms are conditional; lowland tree candidates are withheld.',forms:[['Low shrubs and alpine groundcover','alpine_groundcover',true],['Stunted tree-line forms below the local tree line','krummholz',true]] as [string,string,boolean][]};
   if(habitat==='wetland')return {status:'growth_form_fallback' as const,title:'Wetland / riparian habitat is conditional',description:'Terrestrial ecoregions do not identify a wetland or riverbank at this coordinate. Verify inundation, soil and freshwater conditions first.',forms:[['Sedges, reeds or riparian shrubs','wetland_understory',true],['Flood-tolerant canopy only with habitat evidence','riparian_canopy',true]] as [string,string,boolean][]};
   if(habitat==='coastal')return {status:'growth_form_fallback' as const,title:b===14?'Mangrove ecological context':'Coastal habitat is conditional',description:b===14?'The ecoregion is classified as mangrove. Salinity, tidal position and species presence still require local evidence.':'Distance to coast, salt exposure and tidal conditions are unmeasured. No mangroves or coastal species are inferred from latitude.',forms:(b===14?[['Tidal mangrove canopy and roots','mangrove',false]]:[['Salt- and wind-exposed low vegetation','coastal_scrub',true]]) as [string,string,boolean][]};
@@ -50,11 +52,24 @@ export function resolveVegetation({lat,lon,geography,botanicalArea=null,habitat=
   if(!geography||(!biomeNames[geography.BIOME_NUM]&&![0,98].includes(geography.BIOME_NUM))||!geography.REALM)return result;
   const growth=growthProfile(geography,habitat);result.status=growth.status;result.title=growth.title;result.description=growth.description;result.growthForms=growth.forms.map(([name,archetype,conditional])=>({name,archetype,conditional}));result.evidenceLevel='biome_realm_fallback';
   if(unvalidated.length&&geography.ECO_ID!==0&&![0,98,11].includes(geography.BIOME_NUM)){result.title='Environmental filter evidence is missing';result.description='Species withheld: '+unvalidated.join(', ')+' has not been measured or sourced. The growth forms below are conditional design context, not validated matches.';result.growthForms=result.growthForms.map(f=>({...f,conditional:true}));return result;}
+  const cover=regionalLandCover(geography.ECO_ID,botanicalArea?.code,habitat);
+  if(cover.length){
+   result.landCover=seededOrder(cover,result.seed);
+   result.growthForms.push({name:'Regional riparian tree candidates - wet draws only',archetype:'riparian_canopy',conditional:true});
+   result.description+=' Sourced regional grasses, forbs and shrubs are listed separately; trees require a suitable wet draw or bottomland.';
+   result.sources=[...result.sources,...Array.from(new Set(cover.flatMap(p=>p.sources))).map(url=>({name:'NRCS regional ecological-site vegetation',url,license:'See source; factual vegetation summary'}))];
+  }
   const exact=verifiedAssociations.filter(a=>a.verified&&a.ecoregionId===geography.ECO_ID&&a.habitats.includes(habitat)&&a.evidenceUrls.length>0);
   const exactTaxa=catalog.filter(t=>exact.some(a=>a.taxonId===t.id));
   if(exactTaxa.length){result.evidenceLevel='verified_ecoregion';result.status='species_candidates';result.species=seededOrder(exactTaxa,result.seed).slice(0,12).map(t=>({...t,confidence:'verified',ecoregionVerified:true,habitatVerified:true,ecoregionIds:[...new Set([...t.ecoregionIds,String(geography.ECO_ID)])],habitats:[...new Set([...t.habitats,habitat])],sources:[...new Set([...t.sources,...exact.filter(a=>a.taxonId===t.id).flatMap(a=>a.evidenceUrls)])]}));result.regionalSpeciesCount=exactTaxa.length;result.title='Verified ecoregion associations';result.description='Species associations have explicit ecoregion and habitat evidence. This still does not establish current land cover or abundance.';result.sources=[...sources,...exact.flatMap(a=>a.evidenceUrls.map(url=>({name:'Species–ecoregion association evidence',url,license:'See source'})))];return result;}
   if(geography.ECO_ID===0||[0,98,11].includes(geography.BIOME_NUM))return result;
 
+  // Native-country mangrove candidates supported by existing visual profiles; never point occurrence.
+  if(geography.BIOME_NUM===14&&habitat==='coastal'&&botanicalArea){
+    const supported=new Set(['red-mangrove','avicennia','stilt-mangrove']);
+    const regional=catalog.filter(t=>t.accepted&&t.nativeAreaCodes.includes(botanicalArea.code)&&climateCompatible(t.climate,14)&&supported.has(mapVisual(t.scientificName,t.assetArchetype).presetId));
+    if(regional.length){result.evidenceLevel='documented_regional_range';result.status='species_candidates';result.regionalSpeciesCount=regional.length;result.species=seededOrder(regional,result.seed).slice(0,12);result.title=`Documented regional mangrove candidates · ${botanicalArea.name}`;result.description='Existing catalogue taxa native to the botanical country with a supported mangrove growth profile. Local occurrence, salinity and tidal position remain unverified.';}
+  }
   if(habitat==='forest'&&forestBiomes.has(geography.BIOME_NUM)&&botanicalArea){
     // Native country and broad-climate evidence remain separate from local habitat validation.
     const regional=catalog.filter(t=>t.accepted&&t.nativeAreaCodes.includes(botanicalArea.code)&&climateCompatible(t.climate,geography.BIOME_NUM));
@@ -64,4 +79,10 @@ export function resolveVegetation({lat,lon,geography,botanicalArea=null,habitat=
   return result;
 }
 export function searchTaxa(query:string,source=taxa){const q=query.trim().toLocaleLowerCase();return q?source.filter(t=>[t.scientificName,...t.commonNames,...t.synonyms].some(n=>n.toLocaleLowerCase().includes(q))):source;}
-export function exportProfile(profile:VegetationProfile){return JSON.stringify(profile,null,2)+'\n';}
+export function exportProfile(profile:VegetationProfile){
+  const species:TreeSpecies[]=profile.species.map(({heightMeters,...taxon})=>{
+    const knownHeight=heightMeters??taxon.matureHeightM;
+    return knownHeight===null||knownHeight===undefined?taxon:{...taxon,heightMeters:knownHeight};
+  });
+  return JSON.stringify({...profile,species},null,2)+'\n';
+}

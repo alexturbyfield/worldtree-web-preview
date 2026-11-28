@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 1,
+  "id": "wave1-environment-detail",
+  "date": "2026-11-26T13:26:20.783Z",
+  "status": "provisional development checkpoint; no final biome approval",
+  "loaded": [
+    "AGENTS.md",
+    "docs/visual-quality-workflow.md",
+    "visual-lab/README.md",
+    "visual-lab/art-direction-policy.json",
+    "visual-lab/wave1/rebuild-session.json",
+    "existing reference analyses/rejected captures",
+    "prototype-fast skill",
+    "visual-review skill",
+    "imagegen skill"
+  ],
+  "authorization": {
+    "quote": "The user has reviewed the latest comparison and considers the layouts good enough to develop further. This is authorization to proceed with visual refinement, not final biome approval.",
+    "source": "Latest Environment Detail and Water Composition user task",
+    "budget": "User explicitly directs progress-based iteration rather than an arbitrary limit; R1–R7 decisions preserved. Stopped for review after frozen validation; no automatic new experiment.",
+    "prohibited": [
+      "commit",
+      "push",
+      "deploy",
+      "Wave2",
+      "global promotion"
+    ]
+  },
+  "humanFeedback": [
+    {
+      "actor": "human",
+      "decision": "approve structural layouts for development only",
+      "scope": "artifacts/wave1-rebuild retained layouts",
+      "finalApproval": false
+    }
+  ],
+  "reviewCapability": {
+    "actualVision": true,
+    "root": "Actual final concepts/seeds/inspection/before-after/waterQA sheets interpreted via view_image",
+    "independent": "artifacts/wave1-detail/independent-review.json: separate critique-only agent inspected12 actual images atR5; did not inspect later corrections",
+    "notEquivalent": [
+      "capture success",
+      "image metadata",
+      "pixel metrics",
+      "artistic approval"
+    ]
+  },
+  "freeze": {
+    "date": "2026-11-26T13:19:06.024Z",
+    "training": [
+      29,
+      41
+    ],
+    "holdout": 1237,
+    "sourceHashes": {
+      "src/lib/forest/wave1-fields.ts": "3b75c341d19bcf56d8681750577d0e58a42c848ef628c0aa850e61f58f27e1cb",
+      "src/lib/forest/wave1-rebuild.ts": "b97d586a29ef8ec1ed7dd51ee8e4879ac4e43e1d9e751b3b7efd709bf65457aa",
+      "src/lib/forest/wave1-impostors.ts": "7146aad9f9021d57a10848dc2b90c36ddcff8a6030d703cfc5d6cfdf9798c740",
+      "src/lib/forest/wave1-water.ts": "a41be61219232b2033b94abda2d7767964bcfc8b9798eb81fa748a576a3d2f35",
+      "src/lib/forest/wave1-ground-detail.ts": "c70a3a65cb1031f4309f31ede6c7a49cf852f4130f80ac3898fd97fedc7bdcfa",
+      "src/lib/forest/wave1-desert-detail.ts": "20a4cbbc1c45dc40e81fd41fc92a8885d75b7322eae146b90744b4d120faf2f4",
+      "src/lib/forest/wave1-mangrove-detail.ts": "93243d427284605c98644984d7e77e0f1db202af4b7394c18e46ea48b47e7833",
+      "src/lib/forest/wave1-meadow-detail.ts": "2891ea5c82f7456623548e395dad106a06cf6a2bcba96d2d9214421314d9ae01",
+      "src/lib/forest/environment-foundations.ts": "4a0e1286670abf0959b3a7a478a608ab3f7ad4ce63cff1e49a59a4d9e295c231",
+      "src/lib/forest/painted-renderer.ts": "604e95e996a2308c1c8bce4811f8bf0751be216a56735b5ad979d8c4d12f2457",
+      "src/lib/forest/wave1.ts": "4facb76740809cb8598113e302a82411243bdc9bc953c7c9e10e11a5c03b06ba",
+      "src/lib/vegetation.ts": "173b715d10aa54add0ac2d40ad89b417c7a8cfdd62c3e6bb42a8d08521b922c1",
+      "public/assets/wave1-detail/tidal-mud-v1.webp": "e1f42cc3bc3dca8713ad934f1803b5e35fade9e45fbdbe20daea47613c0d112b"
+    },
+    "status": "Frozen for final seed and review capture, not final biome approval"
+  },
+  "holdout": {
+    "seed": 1237,
+    "frozenBeforeGeneration": true,
+    "tunedAfterEvaluation": false,
+    "findings": "All scenes render and dry approach checks pass; flooded holdout has weaker ecological massing/water opening. No holdout tuning."
+  },
+  "references": {
+    "desert": ".codex-attachments/e97cc808-5cc4-4a8d-8112-5971ec4a638c/d8c2f236-d851-4cee-8b7d-e90370ec72a3/1000011078.png",
+    "mangrove": ".codex-attachments/e97cc808-5cc4-4a8d-8112-5971ec4a638c/f7213038-9a0f-4c0c-b3da-323d6cd7bfec/1000011080.png",
+    "flooded": ".codex-attachments/e97cc808-5cc4-4a8d-8112-5971ec4a638c/38620747-464e-4437-a47d-8842aa806c4f/1000011079.png"
+  },
+  "rights": "User concepts remain private references with original licenses unverified; no redistribution/training consent inferred.",
+  "asset": {
+    "path": "public/assets/wave1-detail/tidal-mud-v1.webp",
+    "source": "OpenAI built-in imagegen; independently generated painterly tidal mud/litter albedo",
+    "dimensions": [
+      1254,
+      1254
+    ],
+    "requestedSize": "2048; actual output1254, not claimed2K",
+    "sha256": "e1f42cc3bc3dca8713ad934f1803b5e35fade9e45fbdbe20daea47613c0d112b",
+    "colorSpace": "sRGB",
+    "repeatMetres": 3.6,
+    "mipmaps": true,
+    "anisotropy": 4,
+    "rgbaMipEstimateMiB": 7.99822998046875,
+    "preview": "artifacts/wave1-detail/tidal-mud-3x3.png",
+    "inspection": "3x3 preview visually inspected; no obvious boundary seam at preview scale. Repeated litter motifs remain possible."
+  },
+  "history": [
+    {
+      "round": "R1",
+      "decision": "revise",
+      "hypothesis": "Detail helpers plus water/camera objective",
+      "evidence": "Water increases, but rock micro-normal peppering and weak occupancy remain.",
+      "approval": "agent judgment only",
+      "sourceEvidence": "artifacts/wave1-detail",
+      "renderEvidence": "artifacts/visual-quality/wave1-detail-r1"
+    },
+    {
+      "round": "R2",
+      "decision": "mixed",
+      "hypothesis": "Remove rock derivative bump; mirrored sky repeat experiment",
+      "evidence": "Pepper correction retained. Mirrored sky produces obvious cloud symmetry and is rejected.",
+      "approval": "agent judgment only",
+      "sourceEvidence": "artifacts/wave1-detail",
+      "renderEvidence": "artifacts/visual-quality/wave1-detail-r2"
+    },
+    {
+      "round": "R3",
+      "decision": "revise",
+      "hypothesis": "Near-side water scoring, visible angular shore pockets, mineral plates",
+      "evidence": "Water/juvenile silhouettes improve. Foreground cover remains weak; no layout restart.",
+      "approval": "agent judgment only",
+      "sourceEvidence": "artifacts/wave1-detail",
+      "renderEvidence": "artifacts/visual-quality/wave1-detail-r3"
+    },
+    {
+      "round": "R4",
+      "decision": "mixed",
+      "hypothesis": "Near-bank depth, short cover, swaths, cool desert sediment",
+      "evidence": "Wetland occupancy improves. Gray desert basin and diagonal zebra bands rejected.",
+      "approval": "agent judgment only",
+      "sourceEvidence": "artifacts/wave1-detail",
+      "renderEvidence": "artifacts/visual-quality/wave1-detail-r4"
+    },
+    {
+      "round": "R5",
+      "decision": "retain provisionally",
+      "hypothesis": "Warmer irregular desert patches, generated mud, corrected sky seam",
+      "evidence": "Meaningful material/foreground improvement; independent reviewer still rejects final approval.",
+      "approval": "agent judgment only",
+      "sourceEvidence": "artifacts/wave1-detail",
+      "renderEvidence": "artifacts/visual-quality/wave1-detail-r5"
+    },
+    {
+      "round": "R6",
+      "decision": "retain provisionally",
+      "hypothesis": "Sparse branching desert forms; narrower grass and retained face normals",
+      "evidence": "Intermediate desert detail and grass dimensionality improve, but silhouettes still below target.",
+      "approval": "agent judgment only",
+      "sourceEvidence": "artifacts/wave1-detail",
+      "renderEvidence": "artifacts/visual-quality/wave1-detail-r6"
+    },
+    {
+      "round": "R7 and diagnostics",
+      "decision": "retain provisionally",
+      "hypothesis": "Cylindrical far billboards, near/far grass programs, diffuse thin-leaf response, coherent shadow reception",
+      "evidence": "Edge-on inspection card lines fixed. Seed41 near-black grass decreases from16.0% to0% in the same semantic mask. Seed29 retains3.7% near-black overlap under actual tree shade. Final wet darkening is applied after generated albedo.",
+      "approval": "agent judgment only",
+      "sourceEvidence": "artifacts/wave1-detail",
+      "renderEvidence": "artifacts/visual-quality/wave1-detail-r7"
+    }
+  ],
+  "reviews": {
+    "desert": {
+      "betterThanBaseline": true,
+      "goodEnoughToApprove": false,
+      "decision": "Retain material development provisionally; reject as final reference-quality scene",
+      "defects": [
+        {
+          "severity": "major",
+          "evidence": "Hero views retain a dominant almost bare sand foreground. Eight shrubs remain tiny at this camera; the concept has readable intermediate-scale plants at rock bases.",
+          "hypothesis": "Scale and silhouette construction, rather than plant count, remain inadequate.",
+          "action": "Develop one readable low branching shrub silhouette around existing rock flanks; do not add an arbitrary dense blanket."
+        },
+        {
+          "severity": "major",
+          "evidence": "Large rocks still read as broad regular blocks; surface fractures improve texture more than silhouette.",
+          "hypothesis": "Bevelled box joint construction cannot supply convincing multi-scale geological masses alone.",
+          "action": "Test a fractured multi-block rock construction in isolation before integrating it."
+        }
+      ]
+    },
+    "mangrove": {
+      "betterThanBaseline": true,
+      "goodEnoughToApprove": false,
+      "decision": "Retain visible water, sediment and juvenile pockets for continued development",
+      "defects": [
+        {
+          "severity": "major",
+          "evidence": "All hero seeds retain a broad smooth brown approach and a clean soil-water edge; foreground detail is weaker than concept wet litter/root transitions.",
+          "hypothesis": "Shallow transmission uses analytic sediment rather than the terrain albedo; shoreline-scale material and cover transitions remain insufficient.",
+          "action": "Coordinate actual substrate detail with shallow transmission and place low litter/seedling patches along existing wetness contours."
+        },
+        {
+          "severity": "major",
+          "evidence": "Separate crowns and thin root lines leave large sky gaps, especially seed29. Concept crowns and roots interlock into layered framing.",
+          "hypothesis": "Existing near-tree architecture and crown grouping need a representation-level test.",
+          "action": "Retain layouts and species resolver; compare crown/root mass connectivity on one fixed source tree."
+        },
+        {
+          "severity": "minor",
+          "evidence": "Inspection water retains fine regular ripple bands and the distant horizon separates into pale horizontal layers.",
+          "hypothesis": "Analytic ripple periodicity and terrain/sky/fog transition remain visible.",
+          "action": "Test multi-scale ripple normals and far-field blend independently."
+        }
+      ]
+    },
+    "flooded": {
+      "betterThanBaseline": true,
+      "goodEnoughToApprove": false,
+      "decision": "Retain the more legible wetland; do not approve grass representation as final",
+      "defects": [
+        {
+          "severity": "major",
+          "evidence": "Side grass shows repeated radial fans and wide angular/sword-like faces; concept grass has flowing soft overlapping silhouettes.",
+          "hypothesis": "One repeated ribbon clump and large near scaling limit silhouette variety.",
+          "action": "Prototype a small set of asymmetric clump constructions using the shared pigment field, rather than increasing density."
+        },
+        {
+          "severity": "major",
+          "evidence": "Inspection reveals sparsely dressed islands; holdout1237 retains a broad calm foreground and a comparatively thin middle-distance water opening.",
+          "hypothesis": "Local cover and camera scoring do not yet balance projected water, vegetation occlusion and staging together.",
+          "action": "Next experiment should score actual projected occupied water and connected short-cover masses; do not tune this frozen holdout."
+        },
+        {
+          "severity": "minor",
+          "evidence": "Water margins remain sharp and fine periodic ripples are visible from inspection.",
+          "hypothesis": "Analytic water substrate lacks local sediment/plant detail.",
+          "action": "Reuse the mangrove shallow-substrate investigation, without green tint."
+        }
+      ]
+    }
+  },
+  "rules": [
+    {
+      "id": "visible-water-with-dry-approach",
+      "status": "experimentally-supported",
+      "principle": "Select an existing dry encounter margin using projected middle/side water visibility, while retaining continuous hydrological fields.",
+      "evidence": "field-checks.json plus actual hero/inspection seeds29,41,1237",
+      "limitations": "Terrain proxy can disagree with vegetation-occluded pixels; holdout flooded still weaker artistically.",
+      "reuse": "Camera scoring and world-space wetness coordination; not biome-specific color."
+    },
+    {
+      "id": "shore-detail-after-wetness",
+      "status": "experimentally-supported",
+      "principle": "Apply wet pigment/roughness to the final substrate albedo and derive wetness from terrain height.",
+      "evidence": "Generated mud and final mangrove29 capture",
+      "limitations": "Visible shore boundary still too clean; not a validated complete shoreline solution.",
+      "reuse": "Wet substrate adapter; no universal palette."
+    },
+    {
+      "id": "thin-leaf-diffuse-response",
+      "status": "experimentally-supported",
+      "principle": "Fix leaf normals and directional diffuse response before compensating with exposure or density.",
+      "evidence": "41-diagnostics.json, 41-shadow-reception.png, meadow-before-leaf-scattering.ts.txt",
+      "limitations": "Art-directed thin-leaf diffuse term is not a full transmission model; mobile untested.",
+      "reuse": "Opaque instanced narrow foliage, with species/material-specific calibration."
+    },
+    {
+      "id": "sparse-shrub-silhouette",
+      "status": "proposed",
+      "principle": "A sparse environment still needs readable intermediate biological forms around geological anchors.",
+      "evidence": "Concept comparison; current eight low shrubs remain too small in hero renders.",
+      "limitations": "Current implementation not strong enough to promote.",
+      "reuse": "Scale hierarchy is general; xeric growth form is biome-specific."
+    },
+    {
+      "id": "mirrored-sky-repeat",
+      "status": "rejected",
+      "principle": "Mirroring a panorama is not a valid seamless continuation when cloud symmetry becomes apparent.",
+      "evidence": "R2/R3 cloud symmetry captures",
+      "limitations": "Final retained study uses original panorama with seam feathering behind encounter.",
+      "reuse": "Check image symmetry in any illustrated continuation."
+    },
+    {
+      "id": "anisotropic-desert-wash",
+      "status": "rejected",
+      "principle": "Strong stretched material fields can become zebra-like stripes rather than natural runoff.",
+      "evidence": "desert-r4-hero.png and desert-r4-inspection.png",
+      "limitations": "R5 irregular warm patches retained instead.",
+      "reuse": "Correlated material fields need actual multi-view inspection."
+    }
+  ],
+  "validation": "artifacts/wave1-detail/validation.json",
+  "fieldChecks": "artifacts/wave1-detail/field-checks.json",
+  "waterQA": "artifacts/wave1-detail/water-qa.json",
+  "regression": "artifacts/wave1-detail/regression.json",
+  "tests": {
+    "typescript": "npx tsc --noEmit passed",
+    "targeted": "14/14 targeted Wave1 detail/fields/dispatch/mangrove/flooded tests passed",
+    "diffCheck": "git diff --check passed (line-ending warnings)",
+    "notRun": [
+      "full test suite",
+      "full build",
+      "mobile device performance"
+    ]
+  },
+  "bestKnown": "This frozen opt-in study retained provisionally. Generic and earlier Wave1 fallback preserved; no human-approved best pointer changed.",
+  "next": "A focused representation checkpoint for geological silhouette / grass clump diversity / wet shoreline integration, without rebuilding retained topology."
+}

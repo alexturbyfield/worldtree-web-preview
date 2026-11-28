@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "references": [
+    {
+      "id": "wave1-desert-usgs-granite",
+      "biome": 13,
+      "category": "Mojave alluvial fan, granite and xeric vegetation composition",
+      "source": "https://www.usgs.gov/media/images/joshua-tree-national-park-0",
+      "imagePath": "visual-lab/wave1/desert/usgs-joshua-reference.jpg",
+      "license": {
+        "status": "Public Domain",
+        "credit": "Phil Stoffer / USGS",
+        "evidence": "Sources/Usage explicitly states Public Domain on the primary image page."
+      },
+      "artisticPrinciple": "Interlocking weathered granite anchors rise from a broad sediment fan; low irregular dry vegetation links near/mid scale while a broken distant ridge separates from clear sky.",
+      "positive": [
+        "Fractured overlapping rock surfaces",
+        "Sparse but connected dry low vegetation",
+        "Broad pale substrate with local gravel/value variation",
+        "Layered distant ridge, expansive sky"
+      ],
+      "avoid": [
+        "Smooth clay boulders",
+        "Miniature conifers used as xeric shrubs",
+        "Regular substrate stamps",
+        "Inventing Joshua-tree occurrence from a reference photograph"
+      ]
+    }
+  ]
+}

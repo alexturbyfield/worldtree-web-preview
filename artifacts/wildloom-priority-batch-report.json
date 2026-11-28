@@ -1,0 +1,131 @@
+{
+  "checkpoint": "5afb2d9",
+  "rankingMethod": "491 existing forest ecoregion audit points, seed 29, count actual 12-entry resolved candidate palettes; exclude registry taxa with existing dedicated presets. Not abundance or verified local occurrence.",
+  "ecologicalCaveat": "Known country/climate-only filtering admits mangroves to inland palettes. Suitability records and resolver intentionally unchanged.",
+  "checks": "Prior species unchanged; deterministic repeated output; appearance seed preserves geometry; registry IDs verified.",
+  "rows": [
+    {
+      "id": "avicennia",
+      "scientificName": "Avicennia marina",
+      "taxonId": "wcvp:18454",
+      "designHeight": 7.660134975516847,
+      "renderingStatus": "Dedicated procedural V1; provisional visual design",
+      "sampledPalettes": 99,
+      "foliageSurfaces": 900
+    },
+    {
+      "id": "red-mangrove",
+      "scientificName": "Rhizophora mangle",
+      "taxonId": "wcvp:2523199",
+      "designHeight": 11.371067493211074,
+      "renderingStatus": "Dedicated procedural V1; provisional visual design",
+      "sampledPalettes": 87,
+      "foliageSurfaces": 900
+    },
+    {
+      "id": "stilt-mangrove",
+      "scientificName": "Rhizophora stylosa",
+      "taxonId": "wcvp:2523185",
+      "designHeight": 17.06978167387732,
+      "renderingStatus": "Dedicated procedural V1; provisional visual design",
+      "sampledPalettes": 65,
+      "foliageSurfaces": 1008
+    },
+    {
+      "id": "cacao",
+      "scientificName": "Theobroma cacao",
+      "taxonId": "wcvp:2519807",
+      "designHeight": 6.493015245306319,
+      "renderingStatus": "Dedicated procedural V1; provisional visual design",
+      "sampledPalettes": 41,
+      "foliageSurfaces": 576
+    },
+    {
+      "id": "rubber",
+      "scientificName": "Hevea brasiliensis",
+      "taxonId": "wcvp:98927",
+      "designHeight": 22.346441019038082,
+      "renderingStatus": "Dedicated procedural V1; provisional visual design",
+      "sampledPalettes": 40,
+      "foliageSurfaces": 900
+    }
+  ],
+  "V2Backlog": {
+    "avicennia": [
+      "Pneumatophore field is a small design sample, with no tidal substrate or buried root network.",
+      "Refine gray bark and smaller leathery leaf surface detail.",
+      "Pencil roots currently form an overly regular radial sample; replace with habitat-conditional irregular patches in V2."
+    ],
+    "red-mangrove": [
+      "Root/limb joins use intersecting shared-batch rings; refine junction blending.",
+      "Mature canopy and propagules remain unmodeled."
+    ],
+    "stilt-mangrove": [
+      "Differentiate mature root density and leaf details further from R. mangle.",
+      "Current slender high crown needs review against mature coastal specimens."
+    ],
+    "cacao": [
+      "Refine a more explicit jorquette and hanging leaf flushes; pods and cauliflorous flowers absent."
+    ],
+    "rubber": [
+      "Refine trifoliate leaf attachment and mature crown irregularity; bark remains generic.",
+      "Current ascending V1 crown is more open than the desired mature rounded canopy."
+    ],
+    "global": [
+      "Repair mangrove habitat gating separately before interpreting palette frequency ecologically.",
+      "No physical-device frame-time or overdraw measurements in this pass.",
+      "First gallery review: crowns retain some repeated ascending spray shapes; refine primary/secondary rhythm and mature crown continuity without increasing leaf counts."
+    ]
+  },
+  "botanicalReferences": [
+    "https://mangrove.nus.edu.sg/guidebooks/text/1043.htm",
+    "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A30061148-2/general-information",
+    "https://plantuse.plantnet.org/en/Theobroma_cacao_%28PROSEA%29"
+  ],
+  "capture": {
+    "errors": [],
+    "common": {
+      "min": [
+        -3.376631736755371,
+        -0.009992563165724277,
+        -3.0934410095214844
+      ],
+      "max": [
+        4.3550310134887695,
+        10.858928680419922,
+        4.421872138977051
+      ]
+    },
+    "ground": {
+      "calls": 11,
+      "triangles": 137090,
+      "roots": [
+        {
+          "id": "avicennia",
+          "x": 292.2888423798148,
+          "y": 768.7412784980568
+        },
+        {
+          "id": "red-mangrove",
+          "x": 667.9402980299016,
+          "y": 770.1896149824229
+        },
+        {
+          "id": "stilt-mangrove",
+          "x": 1073.125791384998,
+          "y": 771.7518209159698
+        },
+        {
+          "id": "cacao",
+          "x": 1432.092858994918,
+          "y": 773.1358301960767
+        },
+        {
+          "id": "rubber",
+          "x": 1830.6128678711848,
+          "y": 774.6723371360179
+        }
+      ]
+    }
+  }
+}

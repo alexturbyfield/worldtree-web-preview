@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-25",
+  "actor": "human",
+  "input": "explicit conversation",
+  "preferredCandidate": "C sparse crown",
+  "rejectedDirection": "C2 fuller canopy",
+  "reason": "The tree looked better sparse.",
+  "scope": "Canopy sparsity preference; not approval of final grass scene",
+  "requestedExperiment": "Quick taller painterly grass-tuft iterations, terrain-blended roots and highlighted tops",
+  "evidence": {
+    "sparse": "artifacts/c-fidelity/tree-diagnostics.png",
+    "full": "artifacts/c-fidelity/comparison.png"
+  },
+  "experimentRecord": "artifacts/tall-tufts/record.json",
+  "budget": {
+    "quickTuftTrials": 3,
+    "authorizedBy": "current explicit task"
+  },
+  "finalVisualApproval": false
+}

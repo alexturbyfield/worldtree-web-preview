@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-28T04:19:33.961Z",
+  "request": "Midground tree branches are very dark",
+  "seed": 29,
+  "status": "retained-for-human-review",
+  "humanApproval": null,
+  "source": "src/lib/forest/tropical-pine.ts",
+  "baseline": "artifacts/tropical-pine-dapple/final.png",
+  "image": "artifacts/tropical-pine-branch-values/final.png",
+  "hypothesis": "Lift low bark-albedo values and reduce excessive relief contrast on woodland specimens beyond nearest framing tree",
+  "implementation": "Separate middle pine wood material; localized oak wood bindings. Warm low-value albedo ramp, lower normal/bump strength; light and geometry unchanged.",
+  "iterations": [
+    {
+      "image": "artifacts/tropical-pine-branch-values/far-only.png",
+      "decision": "revise",
+      "observation": "28m range excluded prominent nearer branch forks; change too subtle"
+    },
+    {
+      "image": "artifacts/tropical-pine-branch-values/final.png",
+      "decision": "retain modest improvement for user review",
+      "observation": "Warmer, lighter bark in nearer woodland trees, nearest left trunk remains dark framing. Thin branch silhouettes and deep canopy shadows remain dark.",
+      "range": 18
+    }
+  ],
+  "visionReviewer": "Implementing assistant; actual fixed-seed images inspected",
+  "checks": {
+    "typescript": "npx tsc --noEmit --pretty false passed before numeric range calibration",
+    "browserErrors": [],
+    "stats": {
+      "frame": 8,
+      "calls": 123,
+      "triangles": 2310906,
+      "points": 0,
+      "lines": 0
+    },
+    "mobileApproval": false
+  },
+  "commitPushDeploy": false
+}

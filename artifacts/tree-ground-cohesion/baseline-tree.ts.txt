@@ -1,0 +1,16 @@
+import type {SceneRecipe} from './recipe';
+import {speciesV1Study,type SpeciesDesign} from '../studio/species-v1';
+import {librarySettings} from './library';
+import profiles from '../../../visual-lab/acacia-architectures.json';
+/** Replace only a selected visual model. Ecological identity, location and individual seeds are retained. */
+export function treeExperiment(recipe:SceneRecipe,requested:string|null,heroId?:string){
+ if(!requested||!['baseline','A','B','C','C2'].includes(requested))return {recipe};
+ const hero=recipe.trees.find(t=>t.id===heroId)??recipe.trees.find(t=>t.model.presetId==='acacia');if(!hero)return {recipe};
+ if(requested==='baseline')return {recipe,hero};
+ const p=profiles.profiles[requested as keyof typeof profiles.profiles],q=librarySettings('acacia',hero.seed,hero.appearanceSeed??recipe.appearanceSeed);
+ const design:SpeciesDesign={name:'Umbrella visual study',scientificName:'Visual profile, not occurrence data',height:p.height,radius:p.radius,trunk:p.trunk.radius,base:p.trunk.forkHeight,branches:p.scaffold.count,form:'emergent',bark:'#81705a',conifer:false,visualGrammar:p};
+ const studio=speciesV1Study('acacia',q,()=>[],design),replacement={...hero,model:studio.model,studio};
+ return {recipe:{...recipe,trees:recipe.trees.map(t=>t.id===hero.id?replacement:t)},hero:replacement};
+}
+
+export const treeStudyRendering=profiles.rendering;

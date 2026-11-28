@@ -1,0 +1,47 @@
+{
+  "date": "2026-11-28T04:15:00.906Z",
+  "request": "More texture and visible sun gaps in foreground canopy shadow",
+  "status": "retained-for-human-review",
+  "humanApproval": null,
+  "seed": 29,
+  "image": "artifacts/tropical-pine-dapple/final.png",
+  "baseline": "artifacts/tropical-pine-full-canopy/final.png",
+  "source": "src/lib/forest/tropical-pine.ts",
+  "hypothesis": "Coherent openings must continue through overlapping overhead crowns to let direct sunlight reach the floor",
+  "implementation": "Prune only off-camera overhead leaf sprays using a world-space multiscale gap field projected along frozen reference sunlight onto terrain. Actual geometry absence produces real shadow-map light gaps; no screen-space paint or extra light.",
+  "light": "Key intensity/direction, fill, camera and ground materials unchanged",
+  "iterations": [
+    {
+      "image": "artifacts/tropical-pine-dapple/rejected-subtle.png",
+      "decision": "reject",
+      "observation": "Subtle thinning left foreground nearly as uniformly shaded as baseline",
+      "threshold": 0.54,
+      "padding": 0.45
+    },
+    {
+      "image": "artifacts/tropical-pine-dapple/final.png",
+      "decision": "retain",
+      "observation": "Visible warm sun patches and broken leaf/branch shade across near soil and left rock, with broad canopy framing remaining",
+      "threshold": 0.44,
+      "padding": 0.75
+    }
+  ],
+  "visionReviewer": "Implementing assistant; actual fixed-camera screenshots inspected",
+  "knownLimits": [
+    "Pruning is art-directed for this frozen reference light, not an inferred ecological canopy architecture",
+    "Secondary viewpoints and other light states not validated",
+    "Right dense fern mass still receives broader shade"
+  ],
+  "checks": {
+    "browserErrors": [],
+    "stats": {
+      "frame": 8,
+      "calls": 123,
+      "triangles": 2310906,
+      "points": 0,
+      "lines": 0
+    },
+    "mobileApproval": false
+  },
+  "commitPushDeploy": false
+}

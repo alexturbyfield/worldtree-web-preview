@@ -1,0 +1,64 @@
+Wildloom Pretty Scene — Pass 1, seed 29
+
+Comparison: comparison.png (savanna top, rainforest bottom; before / after / rotated elevated inspection).
+All fixed encounter pairs use identical camera transforms, seed, 819 x 513 render resolution,
+and 1600 x 1050 browser viewport. Inspection moves the same scene to [34,23,44], looking at [-2,7,-12].
+
+Files changed
+src/lib/forest/pretty-scene.ts: bounded shared patch plan, density sampling, correlated ground albedo,
+existing decorative batch placement, selective hero crown response, grass atlas batch, distant escarpment.
+src/lib/forest/biome-visual.ts: non-Puget opt-in/fallback hooks and coordinated ambient/sun/shadow colors.
+src/lib/forest/painted-renderer.ts: shared selective foliage response after existing directional sunlight.
+scripts/studies/capture-pretty-pass1.cjs: reproducible before/after/inspection captures and counters.
+This directory: comparison, individual captures and complete serialized parameter/performance reports.
+
+Major parameters
+Serializable deterministic patch plan; independent presentation seed suffix. No source trees, ecological
+selection, tree architecture, structural seeds or species data changed. No new textures or dependencies.
+World-space elliptical masses with seeded angle, radii and strength coordinate plants and ground color.
+Savanna: 9 patches, radii roughly 5-8 m x 6-11 m; clear ellipse center [3,-4], radii [12,20] m.
+Rainforest: 10 patches, radii roughly 3.4-6.4 m x 4-9 m; clear ellipse center [0,2], radii [5.2,10] m.
+Both protect the near approach as well as the encounter opening. Asymmetric foreground and lateral
+plant masses supply physical framing; no screen-space vignette was added.
+Savanna: 4,200 alpha-tested grass cards; 35 existing shrubs redistributed. Existing 2,800 procedural
+grass instances retained but hidden. One batched grass draw, one 108-triangle escarpment mesh.
+Rainforest: redistribute 2,142 existing fern, palm, shrub, broadleaf and foliage-card instances.
+Existing epiphytes, lianas, litter/root decals, forest-wall depth layers and tree placement stay in place.
+Hero features: existing left acacia (12.55 m tall) and left buttressed rainforest canopy tree (44.57 m).
+Sun-facing upper crown accents have 13 m / 7 m horizontal influence, preserving shaded interiors.
+Sun color #ffe7bc; hemisphere fill savanna .62, rainforest .68. Existing physical shadows retained.
+Savanna ground palette soil #9a7951, vegetation #8f964f, sun #c8b36c, cool shade #657568.
+Rainforest ground palette soil #5c4934, vegetation #4c6542, sun #b8a35f, cool shade #294d47.
+Savanna atmospheric near/far 95/280 m; foliage atmosphere 110/260 m. Rainforest retains V5 depth fog.
+
+Measured performance (Chromium headless / SwiftShader, pixel ratio .65, static 1024-square shadows)
+                         Draw calls   Triangles   Active decorative GPU instances
+Savanna before            8           63,750      2,835
+Savanna after             9           30,258      4,235
+Savanna inspection        9           30,258      4,235
+Rainforest before        26        1,450,298      2,997
+Rainforest after         26        1,450,298      2,997
+Rainforest inspection    22        1,433,698      2,997 (some backdrop instances hidden)
+Instance totals exclude batched detailed tree foliage. Rainforest keeps 64 detailed trees and 32
+existing simplified outer trees. Savanna keeps its 7 existing acacias.
+Three synchronous CPU render-submission samples: savanna .3-.5 ms, rainforest .8-5.8 ms encounter.
+These are submission times, not GPU frame times or FPS; no physical mobile benchmark was performed.
+Full individual measurements and exact plans are in before-report.json and after-report.json.
+
+Checks
+Targeted TypeScript check passed. Both serializable plans deterministic at seed 29, clearing density
+zero, source recipe unmodified. No page/shader errors reported by captures. Approved Puget screenshot
+byte-identical (puget-check.json and puget-preserved.png). No broad test suite or deployment.
+
+Review caveats — this is the first prototype, not approved final art
+The savanna's card grass reads too short/dark and leaves the near ground under-framed. Its escarpment
+is visibly faceted and needs a more convincing material/depth treatment. The rainforest floor is
+warmer and calmer but existing decal silhouettes now stand out against it; the elevated inspection
+still exposes the finite forest because encounter-only backdrop layers hide above 18 m eye height.
+Selected crown accents remain subtle; foreground foliage is still coarse. No second visual iteration
+was made after the comparison. These are review findings, not changes already implemented.
+
+Preview
+Run npm run dev -- --port 3001. Existing savanna and rainforest encounter URLs enable the pass by
+default; append pretty=off to restore the previous presentation. pretty=on explicitly enables it.
+The current local server is on port 3001. Live Vercel preview remains the previous committed V5 build.

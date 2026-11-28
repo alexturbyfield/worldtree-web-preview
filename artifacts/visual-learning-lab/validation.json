@@ -1,0 +1,19 @@
+{
+  "targetedTypeScript": "passed",
+  "focusedTests": 8,
+  "sourceSnapshotsVerified": true,
+  "visionUsed": true,
+  "candidatesInspected": 6,
+  "candidatesApproved": 0,
+  "humanPreferenceEntries": 0,
+  "baselineRestoredByteIdentical": {
+    "A": true,
+    "B": true
+  },
+  "nonTargetInvariants": true,
+  "candidateLayoutsDeterministic": true,
+  "camerasAndRenderSettingsMatched": true,
+  "pugetByteIdentical": true,
+  "modelTrainingOccurred": false,
+  "deployed": false
+}

@@ -1,0 +1,818 @@
+[
+  {
+    "name": "savanna-after",
+    "url": "http://localhost:3001/explore?lat=-2.3&lon=35.2&habitat=grassland&conditional=1&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human&composition=C&groundLighting=B&illumination=on&pretty=on",
+    "camera": [
+      -0.0008636562301815864,
+      5.497448580548599,
+      33.976681281785154
+    ],
+    "direction": [
+      -0.036993397489654564,
+      -0.0314107590781284,
+      -0.9988217322206744
+    ],
+    "width": 819,
+    "height": 513,
+    "pixelRatio": 0.65,
+    "calls": 9,
+    "triangles": 30258,
+    "renderSubmissionMs": [
+      0.5,
+      0.29999999701976776,
+      0.5
+    ],
+    "shadowSize": [
+      1024,
+      1024
+    ],
+    "plan": {
+      "version": 1,
+      "seed": "29",
+      "biome": "savanna",
+      "patches": [
+        {
+          "x": -12.493090440519154,
+          "z": 26.43000444676727,
+          "rx": 7.581593108130619,
+          "rz": 10.071669114055112,
+          "angle": 2.285271060152518,
+          "strength": 1
+        },
+        {
+          "x": 17.456158130429685,
+          "z": 21.209757453529164,
+          "rx": 7.515211374266073,
+          "rz": 7.0275033744983375,
+          "angle": 1.8256222142759573,
+          "strength": 0.8548365871189162
+        },
+        {
+          "x": -25.583992624655366,
+          "z": 7.280338981654495,
+          "rx": 7.410130577161908,
+          "rz": 10.043338727205992,
+          "angle": 0.3010566157364583,
+          "strength": 0.7985320944106207
+        },
+        {
+          "x": 29.315777130890638,
+          "z": -8.281936303712428,
+          "rx": 5.152385007822886,
+          "rz": 8.88388560875319,
+          "angle": 1.677087850217777,
+          "strength": 1
+        },
+        {
+          "x": -26.45339873014018,
+          "z": -20.736449419986457,
+          "rx": 5.126184181543067,
+          "rz": 6.382954746019095,
+          "angle": 0.7828021187131955,
+          "strength": 0.7269650102127344
+        },
+        {
+          "x": 15.058562750462443,
+          "z": -28.64303207793273,
+          "rx": 6.933315245900303,
+          "rz": 10.330069652060047,
+          "angle": 1.677164640250676,
+          "strength": 0.9399228765396401
+        },
+        {
+          "x": -34.19440986588597,
+          "z": -35.183647024212405,
+          "rx": 7.608973474241793,
+          "rz": 10.051379956072196,
+          "angle": 2.478642305332482,
+          "strength": 1
+        },
+        {
+          "x": 35.275082778185606,
+          "z": -39.33174627972767,
+          "rx": 7.407501591136679,
+          "rz": 6.229568859795108,
+          "angle": 1.4766902614366844,
+          "strength": 0.6855999986408279
+        },
+        {
+          "x": -5.6816962491720915,
+          "z": -42.011841278290376,
+          "rx": 7.023297636304051,
+          "rz": 10.683982367860153,
+          "angle": 0.355532302010309,
+          "strength": 0.9135892545804382
+        }
+      ],
+      "clearing": {
+        "x": 3,
+        "z": -4,
+        "rx": 12,
+        "rz": 20
+      },
+      "hero": {
+        "id": "tree-12-open-savanna-0",
+        "x": -16.19757185038179,
+        "z": -2.032205734634772,
+        "height": 12.551968278424592,
+        "radius": 13
+      },
+      "palette": {
+        "soil": "#9a7951",
+        "vegetation": "#8f964f",
+        "shade": "#657568",
+        "sun": "#c8b36c"
+      },
+      "batches": [
+        {
+          "name": "biome-shrub",
+          "instances": 35,
+          "triangles": 630
+        },
+        {
+          "name": "pretty-savanna-grass",
+          "instances": 4200,
+          "triangles": 16800
+        }
+      ],
+      "additionalDrawCalls": 2,
+      "notes": [
+        "Presentation dressing only; no source trees or ecological records modified.",
+        "World-space plant masses and correlated ground albedo; no screen vignette.",
+        "Existing hero tree receives selective sun-facing crown highlights."
+      ]
+    },
+    "instances": [
+      {
+        "name": "biome-grass",
+        "count": 2800
+      },
+      {
+        "name": "biome-shrub",
+        "count": 35
+      },
+      {
+        "name": "biome-understory",
+        "count": 0
+      },
+      {
+        "name": "pretty-savanna-grass",
+        "count": 4200
+      }
+    ],
+    "errors": []
+  },
+  {
+    "name": "savanna-inspection",
+    "url": "http://localhost:3001/explore?lat=-2.3&lon=35.2&habitat=grassland&conditional=1&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human&composition=C&groundLighting=B&illumination=on&pretty=on",
+    "camera": [
+      34,
+      23,
+      44
+    ],
+    "direction": [
+      -0.5257856140532874,
+      -0.2336824951347944,
+      -0.8178887329717806
+    ],
+    "width": 819,
+    "height": 513,
+    "pixelRatio": 0.65,
+    "calls": 9,
+    "triangles": 30258,
+    "renderSubmissionMs": [
+      0.5,
+      0.20000000298023224,
+      0.29999999701976776
+    ],
+    "shadowSize": [
+      1024,
+      1024
+    ],
+    "plan": {
+      "version": 1,
+      "seed": "29",
+      "biome": "savanna",
+      "patches": [
+        {
+          "x": -12.493090440519154,
+          "z": 26.43000444676727,
+          "rx": 7.581593108130619,
+          "rz": 10.071669114055112,
+          "angle": 2.285271060152518,
+          "strength": 1
+        },
+        {
+          "x": 17.456158130429685,
+          "z": 21.209757453529164,
+          "rx": 7.515211374266073,
+          "rz": 7.0275033744983375,
+          "angle": 1.8256222142759573,
+          "strength": 0.8548365871189162
+        },
+        {
+          "x": -25.583992624655366,
+          "z": 7.280338981654495,
+          "rx": 7.410130577161908,
+          "rz": 10.043338727205992,
+          "angle": 0.3010566157364583,
+          "strength": 0.7985320944106207
+        },
+        {
+          "x": 29.315777130890638,
+          "z": -8.281936303712428,
+          "rx": 5.152385007822886,
+          "rz": 8.88388560875319,
+          "angle": 1.677087850217777,
+          "strength": 1
+        },
+        {
+          "x": -26.45339873014018,
+          "z": -20.736449419986457,
+          "rx": 5.126184181543067,
+          "rz": 6.382954746019095,
+          "angle": 0.7828021187131955,
+          "strength": 0.7269650102127344
+        },
+        {
+          "x": 15.058562750462443,
+          "z": -28.64303207793273,
+          "rx": 6.933315245900303,
+          "rz": 10.330069652060047,
+          "angle": 1.677164640250676,
+          "strength": 0.9399228765396401
+        },
+        {
+          "x": -34.19440986588597,
+          "z": -35.183647024212405,
+          "rx": 7.608973474241793,
+          "rz": 10.051379956072196,
+          "angle": 2.478642305332482,
+          "strength": 1
+        },
+        {
+          "x": 35.275082778185606,
+          "z": -39.33174627972767,
+          "rx": 7.407501591136679,
+          "rz": 6.229568859795108,
+          "angle": 1.4766902614366844,
+          "strength": 0.6855999986408279
+        },
+        {
+          "x": -5.6816962491720915,
+          "z": -42.011841278290376,
+          "rx": 7.023297636304051,
+          "rz": 10.683982367860153,
+          "angle": 0.355532302010309,
+          "strength": 0.9135892545804382
+        }
+      ],
+      "clearing": {
+        "x": 3,
+        "z": -4,
+        "rx": 12,
+        "rz": 20
+      },
+      "hero": {
+        "id": "tree-12-open-savanna-0",
+        "x": -16.19757185038179,
+        "z": -2.032205734634772,
+        "height": 12.551968278424592,
+        "radius": 13
+      },
+      "palette": {
+        "soil": "#9a7951",
+        "vegetation": "#8f964f",
+        "shade": "#657568",
+        "sun": "#c8b36c"
+      },
+      "batches": [
+        {
+          "name": "biome-shrub",
+          "instances": 35,
+          "triangles": 630
+        },
+        {
+          "name": "pretty-savanna-grass",
+          "instances": 4200,
+          "triangles": 16800
+        }
+      ],
+      "additionalDrawCalls": 2,
+      "notes": [
+        "Presentation dressing only; no source trees or ecological records modified.",
+        "World-space plant masses and correlated ground albedo; no screen vignette.",
+        "Existing hero tree receives selective sun-facing crown highlights."
+      ]
+    },
+    "instances": [
+      {
+        "name": "biome-grass",
+        "count": 2800
+      },
+      {
+        "name": "biome-shrub",
+        "count": 35
+      },
+      {
+        "name": "biome-understory",
+        "count": 0
+      },
+      {
+        "name": "pretty-savanna-grass",
+        "count": 4200
+      }
+    ],
+    "errors": []
+  },
+  {
+    "name": "rainforest-after",
+    "url": "http://localhost:3001/explore?lat=-3.12&lon=-60.02&habitat=forest&rainforest=v5&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human&composition=C&groundLighting=B&illumination=on&pretty=on",
+    "camera": [
+      6.661338147750939e-16,
+      0.1252664940564987,
+      29
+    ],
+    "direction": [
+      -0.027684362931449883,
+      0.24569134329843836,
+      -0.9689527026007455
+    ],
+    "width": 819,
+    "height": 513,
+    "pixelRatio": 0.65,
+    "calls": 26,
+    "triangles": 1450298,
+    "renderSubmissionMs": [
+      1,
+      0.7999999970197678,
+      5.800000011920929
+    ],
+    "shadowSize": [
+      1024,
+      1024
+    ],
+    "plan": {
+      "version": 1,
+      "seed": "29",
+      "biome": "amazon",
+      "patches": [
+        {
+          "x": -7.474262269679457,
+          "z": 25.146856451872736,
+          "rx": 4.776911700936035,
+          "rz": 4.014598583802581,
+          "angle": 2.2925648390762583,
+          "strength": 1
+        },
+        {
+          "x": 11.50813211640343,
+          "z": 22.804316052235663,
+          "rx": 5.27384305568412,
+          "rz": 4.465539207216352,
+          "angle": 0.8362483114987959,
+          "strength": 0.8513344333041459
+        },
+        {
+          "x": -13.828441318124533,
+          "z": 14.01363337924704,
+          "rx": 4.417599946353585,
+          "rz": 7.84930528816767,
+          "angle": 1.2638841751747223,
+          "strength": 0.7289387081982568
+        },
+        {
+          "x": 12.490529390051961,
+          "z": 6.291361234616488,
+          "rx": 4.663569895643741,
+          "rz": 6.4267300649080426,
+          "angle": 0.5006193859268628,
+          "strength": 1
+        },
+        {
+          "x": -9.181880057323724,
+          "z": -9.43924593902193,
+          "rx": 4.5063112819101665,
+          "rz": 4.253507108427584,
+          "angle": 1.1863644789682186,
+          "strength": 0.9337446396937594
+        },
+        {
+          "x": 12.335725219920278,
+          "z": -19.062799621839076,
+          "rx": 4.9363897762727,
+          "rz": 5.935283322818577,
+          "angle": 1.2995129898178628,
+          "strength": 0.9464705148944632
+        },
+        {
+          "x": -22.551449765916914,
+          "z": -20.963698260486126,
+          "rx": 5.9606655376032,
+          "rz": 5.14310416392982,
+          "angle": 1.4525552123207273,
+          "strength": 1
+        },
+        {
+          "x": 23.206250787712634,
+          "z": -28.51563147548586,
+          "rx": 5.803511204523966,
+          "rz": 6.613535071723163,
+          "angle": 1.7993588022194262,
+          "strength": 0.8152130283880978
+        },
+        {
+          "x": -13.647162456065416,
+          "z": -38.26495222887024,
+          "rx": 3.7312559369951486,
+          "rz": 6.449437752366066,
+          "angle": 0.5227721634903961,
+          "strength": 0.7242652726126835
+        },
+        {
+          "x": 9.668001220561564,
+          "z": -40.83829581318423,
+          "rx": 4.330703045567498,
+          "rz": 7.157645479077473,
+          "angle": 0.31137582555011023,
+          "strength": 1
+        }
+      ],
+      "clearing": {
+        "x": 0,
+        "z": 2,
+        "rx": 5.2,
+        "rz": 10
+      },
+      "hero": {
+        "id": "tree-27-rainforest-interior-0",
+        "x": -6.837556634750217,
+        "z": 23.171510669402778,
+        "height": 44.57468932784929,
+        "radius": 7
+      },
+      "palette": {
+        "soil": "#5c4934",
+        "vegetation": "#4c6542",
+        "shade": "#294d47",
+        "sun": "#b8a35f"
+      },
+      "batches": [
+        {
+          "name": "rainforest-v4-seedlings",
+          "instances": 180,
+          "triangles": 10080
+        },
+        {
+          "name": "rainforest-v4-ferns",
+          "instances": 150,
+          "triangles": 45000
+        },
+        {
+          "name": "rainforest-v4-palms",
+          "instances": 90,
+          "triangles": 38160
+        },
+        {
+          "name": "rainforest-v4-shrubs",
+          "instances": 120,
+          "triangles": 17280
+        },
+        {
+          "name": "rainforest-v5-ferns",
+          "instances": 220,
+          "triangles": 66000
+        },
+        {
+          "name": "rainforest-v5-palms",
+          "instances": 120,
+          "triangles": 50880
+        },
+        {
+          "name": "rainforest-v5-seedlings",
+          "instances": 240,
+          "triangles": 13440
+        },
+        {
+          "name": "rainforest-v5-foliage-cards",
+          "instances": 850,
+          "triangles": 1700
+        }
+      ],
+      "additionalDrawCalls": 0,
+      "notes": [
+        "Presentation dressing only; no source trees or ecological records modified.",
+        "World-space plant masses and correlated ground albedo; no screen vignette.",
+        "Existing hero tree receives selective sun-facing crown highlights."
+      ]
+    },
+    "instances": [
+      {
+        "name": "rainforest-v4-seedlings",
+        "count": 180
+      },
+      {
+        "name": "rainforest-v4-ferns",
+        "count": 150
+      },
+      {
+        "name": "rainforest-v4-palms",
+        "count": 90
+      },
+      {
+        "name": "rainforest-v4-shrubs",
+        "count": 120
+      },
+      {
+        "name": "rainforest-v4-lianas",
+        "count": 72
+      },
+      {
+        "name": "rainforest-v4-epiphytes",
+        "count": 100
+      },
+      {
+        "name": "rainforest-v5-forest-wall",
+        "count": 108
+      },
+      {
+        "name": "rainforest-v5-lower-understory",
+        "count": 3
+      },
+      {
+        "name": "rainforest-v5-outer-trunks",
+        "count": 32
+      },
+      {
+        "name": "rainforest-v5-outer-crowns",
+        "count": 192
+      },
+      {
+        "name": "rainforest-v5-ferns",
+        "count": 220
+      },
+      {
+        "name": "rainforest-v5-palms",
+        "count": 120
+      },
+      {
+        "name": "rainforest-v5-seedlings",
+        "count": 240
+      },
+      {
+        "name": "rainforest-v5-foliage-cards",
+        "count": 850
+      },
+      {
+        "name": "rainforest-v5-floor-decals",
+        "count": 520
+      }
+    ],
+    "errors": []
+  },
+  {
+    "name": "rainforest-inspection",
+    "url": "http://localhost:3001/explore?lat=-3.12&lon=-60.02&habitat=forest&rainforest=v5&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human&composition=C&groundLighting=B&illumination=on&pretty=on",
+    "camera": [
+      34,
+      23,
+      44
+    ],
+    "direction": [
+      -0.5257856140532874,
+      -0.2336824951347944,
+      -0.8178887329717806
+    ],
+    "width": 819,
+    "height": 513,
+    "pixelRatio": 0.65,
+    "calls": 22,
+    "triangles": 1433698,
+    "renderSubmissionMs": [
+      0.7999999970197678,
+      0.4000000059604645,
+      14.599999994039536
+    ],
+    "shadowSize": [
+      1024,
+      1024
+    ],
+    "plan": {
+      "version": 1,
+      "seed": "29",
+      "biome": "amazon",
+      "patches": [
+        {
+          "x": -7.474262269679457,
+          "z": 25.146856451872736,
+          "rx": 4.776911700936035,
+          "rz": 4.014598583802581,
+          "angle": 2.2925648390762583,
+          "strength": 1
+        },
+        {
+          "x": 11.50813211640343,
+          "z": 22.804316052235663,
+          "rx": 5.27384305568412,
+          "rz": 4.465539207216352,
+          "angle": 0.8362483114987959,
+          "strength": 0.8513344333041459
+        },
+        {
+          "x": -13.828441318124533,
+          "z": 14.01363337924704,
+          "rx": 4.417599946353585,
+          "rz": 7.84930528816767,
+          "angle": 1.2638841751747223,
+          "strength": 0.7289387081982568
+        },
+        {
+          "x": 12.490529390051961,
+          "z": 6.291361234616488,
+          "rx": 4.663569895643741,
+          "rz": 6.4267300649080426,
+          "angle": 0.5006193859268628,
+          "strength": 1
+        },
+        {
+          "x": -9.181880057323724,
+          "z": -9.43924593902193,
+          "rx": 4.5063112819101665,
+          "rz": 4.253507108427584,
+          "angle": 1.1863644789682186,
+          "strength": 0.9337446396937594
+        },
+        {
+          "x": 12.335725219920278,
+          "z": -19.062799621839076,
+          "rx": 4.9363897762727,
+          "rz": 5.935283322818577,
+          "angle": 1.2995129898178628,
+          "strength": 0.9464705148944632
+        },
+        {
+          "x": -22.551449765916914,
+          "z": -20.963698260486126,
+          "rx": 5.9606655376032,
+          "rz": 5.14310416392982,
+          "angle": 1.4525552123207273,
+          "strength": 1
+        },
+        {
+          "x": 23.206250787712634,
+          "z": -28.51563147548586,
+          "rx": 5.803511204523966,
+          "rz": 6.613535071723163,
+          "angle": 1.7993588022194262,
+          "strength": 0.8152130283880978
+        },
+        {
+          "x": -13.647162456065416,
+          "z": -38.26495222887024,
+          "rx": 3.7312559369951486,
+          "rz": 6.449437752366066,
+          "angle": 0.5227721634903961,
+          "strength": 0.7242652726126835
+        },
+        {
+          "x": 9.668001220561564,
+          "z": -40.83829581318423,
+          "rx": 4.330703045567498,
+          "rz": 7.157645479077473,
+          "angle": 0.31137582555011023,
+          "strength": 1
+        }
+      ],
+      "clearing": {
+        "x": 0,
+        "z": 2,
+        "rx": 5.2,
+        "rz": 10
+      },
+      "hero": {
+        "id": "tree-27-rainforest-interior-0",
+        "x": -6.837556634750217,
+        "z": 23.171510669402778,
+        "height": 44.57468932784929,
+        "radius": 7
+      },
+      "palette": {
+        "soil": "#5c4934",
+        "vegetation": "#4c6542",
+        "shade": "#294d47",
+        "sun": "#b8a35f"
+      },
+      "batches": [
+        {
+          "name": "rainforest-v4-seedlings",
+          "instances": 180,
+          "triangles": 10080
+        },
+        {
+          "name": "rainforest-v4-ferns",
+          "instances": 150,
+          "triangles": 45000
+        },
+        {
+          "name": "rainforest-v4-palms",
+          "instances": 90,
+          "triangles": 38160
+        },
+        {
+          "name": "rainforest-v4-shrubs",
+          "instances": 120,
+          "triangles": 17280
+        },
+        {
+          "name": "rainforest-v5-ferns",
+          "instances": 220,
+          "triangles": 66000
+        },
+        {
+          "name": "rainforest-v5-palms",
+          "instances": 120,
+          "triangles": 50880
+        },
+        {
+          "name": "rainforest-v5-seedlings",
+          "instances": 240,
+          "triangles": 13440
+        },
+        {
+          "name": "rainforest-v5-foliage-cards",
+          "instances": 850,
+          "triangles": 1700
+        }
+      ],
+      "additionalDrawCalls": 0,
+      "notes": [
+        "Presentation dressing only; no source trees or ecological records modified.",
+        "World-space plant masses and correlated ground albedo; no screen vignette.",
+        "Existing hero tree receives selective sun-facing crown highlights."
+      ]
+    },
+    "instances": [
+      {
+        "name": "rainforest-v4-seedlings",
+        "count": 180
+      },
+      {
+        "name": "rainforest-v4-ferns",
+        "count": 150
+      },
+      {
+        "name": "rainforest-v4-palms",
+        "count": 90
+      },
+      {
+        "name": "rainforest-v4-shrubs",
+        "count": 120
+      },
+      {
+        "name": "rainforest-v4-lianas",
+        "count": 72
+      },
+      {
+        "name": "rainforest-v4-epiphytes",
+        "count": 100
+      },
+      {
+        "name": "rainforest-v5-forest-wall",
+        "count": 108
+      },
+      {
+        "name": "rainforest-v5-lower-understory",
+        "count": 3
+      },
+      {
+        "name": "rainforest-v5-outer-trunks",
+        "count": 32
+      },
+      {
+        "name": "rainforest-v5-outer-crowns",
+        "count": 192
+      },
+      {
+        "name": "rainforest-v5-ferns",
+        "count": 220
+      },
+      {
+        "name": "rainforest-v5-palms",
+        "count": 120
+      },
+      {
+        "name": "rainforest-v5-seedlings",
+        "count": 240
+      },
+      {
+        "name": "rainforest-v5-foliage-cards",
+        "count": 850
+      },
+      {
+        "name": "rainforest-v5-floor-decals",
+        "count": 520
+      }
+    ],
+    "errors": []
+  }
+]

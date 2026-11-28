@@ -1,0 +1,53 @@
+{
+  "eye": {
+    "position": [
+      0,
+      1.7147654075940282,
+      34
+    ],
+    "target": [
+      0,
+      2.1224894886788106,
+      -55
+    ]
+  },
+  "wood": [
+    {
+      "type": "HemisphereLight",
+      "intensity": 0.55
+    },
+    {
+      "type": "DirectionalLight",
+      "intensity": 0.16,
+      "mapSize": [
+        512,
+        512
+      ]
+    },
+    {
+      "type": "DirectionalLight",
+      "intensity": 4.1,
+      "mapSize": [
+        1024,
+        1024
+      ]
+    }
+  ],
+  "woodMeshes": [
+    {
+      "name": "temperate-integrated-root-contact",
+      "receiveShadow": true,
+      "castShadow": true
+    },
+    {
+      "name": "",
+      "receiveShadow": false,
+      "castShadow": true
+    },
+    {
+      "name": "",
+      "receiveShadow": false,
+      "castShadow": true
+    }
+  ]
+}

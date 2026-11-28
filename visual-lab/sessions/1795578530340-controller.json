@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "maxRounds": 3,
+  "rounds": [
+    {
+      "id": "A-r1",
+      "experiment": "A",
+      "status": "reviewed",
+      "meaningfulImprovement": false,
+      "reason": "All pass technical gates, but none meets the reference-led grass quality bar. Radial blade templates and coarse segment curvature are the likely causes; this is a hypothesis supported by the geometry code and visible spike forms. Retain the previous best."
+    },
+    {
+      "id": "B-r1",
+      "experiment": "B",
+      "status": "reviewed",
+      "meaningfulImprovement": false,
+      "reason": "Placement changes cannot repair the angular shared plant geometry or create missing leaf-litter richness. All retain the inherited world boundary. No variant is approval quality; retain the baseline rather than interpreting more vegetation as success."
+    }
+  ],
+  "visionAvailable": true
+}

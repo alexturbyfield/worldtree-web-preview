@@ -1,0 +1,12 @@
+{
+  "url": "http://127.0.0.1:3121/holm-normals",
+  "sliders": 3,
+  "initialWeights": [
+    0.45,
+    0.4,
+    0.15
+  ],
+  "liveWeightUpdate": true,
+  "modeButtons": true,
+  "errors": []
+}

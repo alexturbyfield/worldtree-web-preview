@@ -1,0 +1,138 @@
+import * as T from 'three';
+import type {SceneRecipe,SceneTree} from './recipe';
+import type {Point,Segment} from './tree';
+import {paintedWoodGeometry} from './paint-assets';
+import {randomSource,hashSeed} from './random';
+import {expansionHeight,expansionFields,type ExpansionPlan} from './wave2-shared';
+
+const grain=/*glsl*/`
+float twHash(vec2 p){return fract(sin(dot(p,vec2(127.1,311.7)))*43758.5453);}
+float twNoise(vec2 p){vec2 i=floor(p),f=fract(p);f=f*f*(3.-2.*f);return mix(mix(twHash(i),twHash(i+vec2(1,0)),f.x),mix(twHash(i+vec2(0,1)),twHash(i+vec2(1,1)),f.x),f.y);}
+`;
+const genus=(tree:SceneTree)=>/Betula/i.test(tree.species.scientificName??'')?1:/Fagus|Carpinus/i.test(tree.species.scientificName??'')?2:0;
+
+/** Low radial roots join the unchanged, source-linked trunks to the ground.
+ * No tropical buttress fins, no additional tree placements, one batched mesh. */
+function rootMesh(recipe:SceneRecipe,plan:ExpansionPlan){
+ const near=recipe.trees.filter(t=>Math.hypot(t.position[0],t.position[2]-34)<48),models=near.map(tree=>{
+  const r=randomSource(tree.seed+'|woodland-root-contact'),segments:Segment[]=[],trunk=tree.model.parameters.trunkRadius,angle0=r()*6.283;
+  for(let k=0;k<5;k++){
+   const a=angle0+k*2.399+(r()-.5)*.3,reach=(1.3+r()*.9)*(genus(tree)===1?.70:1),dir=new T.Vector3(Math.cos(a),0,Math.sin(a)),start=dir.clone().multiplyScalar(trunk*.55);start.y=.23+trunk*.22;
+   const end=dir.clone().multiplyScalar(reach),cos=Math.cos(tree.rotation),sin=Math.sin(tree.rotation),wx=end.x*cos-end.z*sin+tree.position[0],wz=end.x*sin+end.z*cos+tree.position[2];end.y=expansionHeight(plan,wx,wz)-tree.position[1]-.04;
+   const mid=start.clone().lerp(end,.5);mid.y=.10;const curve=new T.CatmullRomCurve3([start,mid,end]);
+   for(let j=0;j<5;j++){const u=j/5,v=(j+1)/5;segments.push({a:curve.getPoint(u).toArray() as Point,b:curve.getPoint(v).toArray() as Point,r0:trunk*.42*Math.pow(1-u,1.4)+.008,r1:trunk*.42*Math.pow(1-v,1.4)+.008,depth:0,role:'root',color:'#64644a'});}
+  }
+  return {model:{...tree.model,segments},position:tree.position,rotation:tree.rotation};
+ });
+ const resource=paintedWoodGeometry(models,false,false),material=new T.MeshStandardMaterial({vertexColors:true,roughness:.94}),mesh=new T.Mesh(resource.geometry,material);
+ mesh.name='temperate-integrated-root-contact';mesh.userData.faces=resource.faces.map(f=>({...f,treeIndex:near[f.treeIndex].index}));mesh.castShadow=mesh.receiveShadow=true;return mesh;
+}
+
+/** Opt-in source-genus bark shading; the shared renderer and protected species
+ * materials remain untouched. These are stylized surfaces, not measured traits. */
+export function mountTemperateSurfaces(scene:T.Scene,recipe:SceneRecipe,plan:ExpansionPlan){
+ const roots=rootMesh(recipe,plan);scene.add(roots);const previous=scene.onBeforeRender,byIndex=new Map(recipe.trees.map(t=>[t.index,t]));let installed=false;
+ const diagnostics={woodBatches:0,rootTriangles:roots.geometry.getAttribute('position').count/3,model:'Source-genus bark + low root contact; synthetic microstructure, not field measurement'};scene.userData.temperateSurfaces=diagnostics;
+ scene.onBeforeRender=function(...args){previous.apply(this,args);if(installed)return;installed=true;const materials=new Set<T.Material>();
+  scene.traverse(object=>{
+   if(!(object instanceof T.Mesh)||!Array.isArray(object.userData.faces)||!(object.material instanceof T.MeshStandardMaterial))return;
+   const mesh=object,geometry=mesh.geometry,count=geometry.getAttribute('position').count,profile=new Float32Array(count*4);let first=0;
+   for(const face of mesh.userData.faces as {end:number;treeIndex:number}[]){const tree=byIndex.get(face.treeIndex);if(!tree)continue;const end=Math.min(count,face.end*3),phase=(hashSeed(tree.seed+'|bark')%1000)/31;
+    for(let i=first;i<end;i++)profile.set([genus(tree),tree.position[1],phase,mesh===roots?1:0],i*4);first=end;
+   }
+   geometry.setAttribute('twBarkProfile',new T.Float32BufferAttribute(profile,4));diagnostics.woodBatches++;
+   const material=object.material;if(materials.has(material))return;materials.add(material);const before=material.onBeforeCompile,key=material.customProgramCacheKey;
+   material.onBeforeCompile=function(shader,renderer){before.call(this,shader,renderer);
+    // The generic attention grade pushes shaded wood toward green. Keep bark
+    // pigment distinct from leaf pigment; normal fog still handles distance.
+    shader.fragmentShader=shader.fragmentShader.replace('outgoingLight=attentionGrade(outgoingLight);','');
+    shader.vertexShader='attribute vec4 twBarkProfile;varying vec4 twProfile;varying vec3 twWorld;varying vec2 twUv;\n'+shader.vertexShader;
+    shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>','#include <begin_vertex>\ntwProfile=twBarkProfile;twUv=uv;twWorld=(modelMatrix*vec4(transformed,1.)).xyz;');
+    shader.fragmentShader='varying vec4 twProfile;varying vec3 twWorld;varying vec2 twUv;\n'+grain+shader.fragmentShader;
+    // This local material supplies a complete albedo. Applying the already
+    // darkened batch vertex pigment afterwards crushed bark into black poles.
+    shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>','');
+    shader.fragmentShader=shader.fragmentShader.replace('#include <color_fragment>',`
+     float twY=twWorld.y-twProfile.y,twSeed=twProfile.z;
+     float twBroad=twNoise(vec2(twUv.x*13.+twSeed,twY*1.8));
+     float twFine=twNoise(vec2(twUv.x*110.+twBroad*3.,twY*15.));
+     float twGroove=1.-smoothstep(.28,.46,twBroad);
+     float twBirch=1.-step(.35,abs(twProfile.x-1.));
+     float twBeech=1.-step(.35,abs(twProfile.x-2.));
+     vec3 twOak=mix(vec3(.075,.052,.033),vec3(.43,.32,.21),smoothstep(.18,.78,twFine*.22+twBroad*.78))*(1.-twGroove*.56);
+     vec3 twBeechColor=mix(vec3(.24,.27,.23),vec3(.39,.41,.35),twBroad*.52+twFine*.10);
+     vec2 twCell=floor(vec2(twUv.x*23.+twSeed,twY*8.));
+     float twLenticel=step(.66,twHash(twCell))*smoothstep(.14,.27,fract(twY*8.))*(1.-smoothstep(.35,.48,fract(twY*8.)));
+     vec3 twBirchColor=mix(vec3(.58,.61,.52),vec3(.76,.77,.68),twFine*.20+twBroad*.55)*(1.-twLenticel*.64);
+     vec3 twBark=mix(mix(twOak,twBirchColor,twBirch),twBeechColor,twBeech);
+     float twScar=exp(-pow((twY-(1.4+fract(twSeed)*2.))/ .16,2.)-pow((twUv.x-(.2+fract(twSeed*.2)*.6))/.07,2.));
+     twBark*=1.-twScar*.55;
+     float twBase=1.-smoothstep(.03,.62,twY);
+     float twMoss=twBase*smoothstep(.34,.72,twNoise(twWorld.xz*5.+twSeed))*.63;
+     twBark=mix(twBark,vec3(.12,.18,.065),twMoss);
+     twBark=mix(twBark,twOak*.72+vec3(.018,.026,.012),twProfile.w*.80);
+     diffuseColor.rgb=twBark;
+    `);
+    // Restrained diffuse sky/forest bounce keeps shaded bark readable beneath
+    // the canopy. It follows the bark albedo; direct sun/shadows remain intact.
+    shader.fragmentShader=shader.fragmentShader.replace('#include <lights_fragment_end>',`#include <lights_fragment_end>
+     reflectedLight.indirectDiffuse+=diffuseColor.rgb*vec3(.16,.18,.19);
+    `);
+    shader.fragmentShader=shader.fragmentShader.replace('#include <roughnessmap_fragment>',`#include <roughnessmap_fragment>
+     roughnessFactor=clamp(.96-twBeech*.10-twBase*.07,.76,.99);
+    `);
+    shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_maps>',`#include <normal_fragment_maps>
+     float twHeight=(twBroad*.85+twFine*.15)*(1.-twBirch*.75-twBeech*.70)*.035;
+     vec3 twSx=dFdx(-vViewPosition),twSy=dFdy(-vViewPosition),twR1=cross(twSy,normal),twR2=cross(normal,twSx);
+     float twDet=dot(twSx,twR1);
+     normal=normalize(abs(twDet)*normal-sign(twDet)*(dFdx(twHeight)*twR1+dFdy(twHeight)*twR2));
+    `);
+   };material.customProgramCacheKey=()=>key.call(material)+'|temperate-genus-bark-v2';material.needsUpdate=true;
+  });
+ };
+ return()=>{scene.onBeforeRender=previous;scene.remove(roots);roots.geometry.dispose();(roots.material as T.Material).dispose();};
+}
+
+/** Ground communities share actual projected branch-group shelter. This is a
+ * low-resolution optical-depth proxy, not measured canopy or physical shadows.
+ * Geometry and the directional shadow map remain authoritative for lighting. */
+export function installTemperateMossCommunities(scene:T.Scene,recipe:SceneRecipe,plan:ExpansionPlan,ground:T.MeshStandardMaterial,moss:T.Texture,sun:T.DirectionalLight){
+ const size=128,minX=-48,minZ=-60,spanX=96,spanZ=105,tau=new Float32Array(size*size),roof=new Float32Array(size*size),direction=sun.position.clone().sub(sun.target.position).normalize(),dy=Math.max(.2,direction.y);
+ let sourceGroups=0;
+ for(const tree of recipe.trees){const c=Math.cos(tree.rotation),s=Math.sin(tree.rotation);
+  for(const group of tree.studio?.groups??[]){const p=group.center,x=p[0]*c-p[2]*s+tree.position[0],z=p[0]*s+p[2]*c+tree.position[2],y=p[1]+tree.position[1],floor=expansionHeight(plan,x,z),drop=Math.max(0,y-floor);
+   const px=x-direction.x*drop/dy,pz=z-direction.z*drop/dy,rx=Math.max(.7,group.radii[0]+Math.abs(direction.x)*group.radii[1]/dy),rz=Math.max(.7,group.radii[2]+Math.abs(direction.z)*group.radii[1]/dy);
+   const x0=Math.max(0,Math.floor((px-rx*1.7-minX)/spanX*size)),x1=Math.min(size-1,Math.ceil((px+rx*1.7-minX)/spanX*size)),z0=Math.max(0,Math.floor((pz-rz*1.7-minZ)/spanZ*size)),z1=Math.min(size-1,Math.ceil((pz+rz*1.7-minZ)/spanZ*size));
+   if(x0<=x1&&z0<=z1)sourceGroups++;
+   for(let j=z0;j<=z1;j++)for(let i=x0;i<=x1;i++){const dx=(minX+(i+.5)/size*spanX-px)/rx,dz=(minZ+(j+.5)/size*spanZ-pz)/rz;tau[j*size+i]+=.24*Math.exp(-2.4*(dx*dx+dz*dz));}
+   // Moss responds to persistent crown shelter as well as this instant's key.
+   // Keep that vertical roof occupancy distinct from directional optical cover.
+   const roofX=Math.max(.7,group.radii[0]),roofZ=Math.max(.7,group.radii[2]),ax=Math.max(0,Math.floor((x-roofX*1.7-minX)/spanX*size)),bx=Math.min(size-1,Math.ceil((x+roofX*1.7-minX)/spanX*size)),az=Math.max(0,Math.floor((z-roofZ*1.7-minZ)/spanZ*size)),bz=Math.min(size-1,Math.ceil((z+roofZ*1.7-minZ)/spanZ*size));
+   for(let j=az;j<=bz;j++)for(let i=ax;i<=bx;i++){const dx=(minX+(i+.5)/size*spanX-x)/roofX,dz=(minZ+(j+.5)/size*spanZ-z)/roofZ;roof[j*size+i]+=.24*Math.exp(-2.4*(dx*dx+dz*dz));}
+  }
+ }
+ const pixels=new Uint8Array(size*size*4);let total=0,maximum=0;
+ for(let j=0;j<size;j++)for(let i=0;i<size;i++){const k=j*size+i,x=minX+(i+.5)/size*spanX,z=minZ+(j+.5)/size*spanZ,f=expansionFields(plan,x,z),cover=1-Math.exp(-tau[k]*.85);pixels[k*4]=Math.round(cover*255);pixels[k*4+1]=Math.round(f.moisture*255);pixels[k*4+2]=Math.round((1-Math.exp(-roof[k]*.85))*255);pixels[k*4+3]=255;total+=cover;maximum=Math.max(maximum,cover);}
+ const field=new T.DataTexture(pixels,size,size,T.RGBAFormat);field.minFilter=field.magFilter=T.LinearFilter;field.wrapS=field.wrapT=T.ClampToEdgeWrapping;field.generateMipmaps=false;field.colorSpace=T.NoColorSpace;field.needsUpdate=true;
+ const before=ground.onBeforeCompile,key=ground.customProgramCacheKey;
+ ground.onBeforeCompile=function(shader,renderer){before.call(this,shader,renderer);Object.assign(shader.uniforms,{twCanopyField:{value:field},twMossMap:{value:moss}});
+  shader.fragmentShader='uniform sampler2D twCanopyField,twMossMap;\n'+grain+shader.fragmentShader;
+  shader.fragmentShader=shader.fragmentShader.replace('#include <roughnessmap_fragment>',`
+   vec2 twCommunityUv=(exWorld.xz-vec2(${minX.toFixed(1)},${minZ.toFixed(1)}))/vec2(${spanX.toFixed(1)},${spanZ.toFixed(1)});
+   vec3 twShelter=texture2D(twCanopyField,clamp(twCommunityUv,vec2(0.),vec2(1.))).rgb;
+   float twWithin=step(0.,twCommunityUv.x)*step(twCommunityUv.x,1.)*step(0.,twCommunityUv.y)*step(twCommunityUv.y,1.);
+   float twEdgeBreak=twNoise(exWorld.xz*.34+vec2(twShelter.z*3.,twShelter.y));
+   // Growth depends on persistent vertical shelter, not the current sun state.
+   // R remains an illumination diagnostic; changing time must not move moss.
+   float twSuitability=twShelter.z*.88*.68+twShelter.y*.32+(twEdgeBreak-.5)*.17;
+   float twMossCover=smoothstep(.35,.64,twSuitability)*twWithin*.91;
+   vec3 twMoss=texture2D(twMossMap,exWorld.xz/2.4).rgb;
+   diffuseColor.rgb=mix(diffuseColor.rgb,twMoss,twMossCover);
+   #include <roughnessmap_fragment>
+   roughnessFactor=mix(roughnessFactor,.94,twMossCover);
+  `);
+ };ground.customProgramCacheKey=()=>key.call(ground)+'|temperate-crown-shelter-moss-v1';ground.needsUpdate=true;
+ const center=Math.floor((26-minZ)/spanZ*size)*size+Math.floor((0-minX)/spanX*size);
+ scene.userData.temperateMossCommunity={sourceGroups,resolution:[size,size],bounds:[minX,minZ,spanX,spanZ],meanProjectedCover:total/(size*size),maxProjectedCover:maximum,stagingProjectedCover:pixels[center*4]/255,source:'Source branch-group vertical shelter + synthetic moisture/substrate edge field; no local botanical claim. Projected key cover is an illumination diagnostic only.',effect:'Albedo community blend only; growth mask independent of time of day; original physical ground shadows retained'};
+ return()=>{field.dispose();};
+}

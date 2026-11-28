@@ -1,0 +1,682 @@
+[
+  {
+    "biome": "savanna",
+    "view": "hero",
+    "tier": 1,
+    "width": 640,
+    "height": 360,
+    "variant": "historical",
+    "camera": {
+      "position": [
+        -0.0008636562301815864,
+        5.497448580548599,
+        33.976681281785154
+      ],
+      "quaternion": [
+        -0.015704626550489452,
+        0.018506717552622953,
+        0.0002907267512371061,
+        0.9997053473840646
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "performance": {
+      "calls": 8,
+      "triangles": 63750,
+      "cpuSubmissionMs": [
+        0.4000000059604645,
+        0.29999999701976776,
+        0.29999999701976776
+      ],
+      "pixelRatio": 1
+    },
+    "instances": [
+      {
+        "name": "biome-grass",
+        "count": 2800,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.42099133133888245,
+          2.864253282546997
+        ]
+      },
+      {
+        "name": "biome-shrub",
+        "count": 35,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          1.026165246963501,
+          4.31019401550293
+        ]
+      },
+      {
+        "name": "biome-understory",
+        "count": 0,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          null,
+          0
+        ]
+      }
+    ],
+    "renderer": "WebKit WebGL",
+    "errors": [],
+    "coverage": {
+      "available": true,
+      "region": "lower half",
+      "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+      "fraction": 0.14580729166666667,
+      "nearBlackFraction": 0.0659641602667143,
+      "horizontalBands": [
+        4083,
+        2615,
+        1977,
+        620,
+        364,
+        433,
+        110,
+        119,
+        393,
+        1073,
+        1162,
+        3848
+      ]
+    },
+    "findings": [
+      {
+        "severity": "major",
+        "defect": "Insufficient projected lower-half vegetation coverage",
+        "measurements": {
+          "coverage": 0.14580729166666667,
+          "threshold": 0.15
+        }
+      }
+    ],
+    "limitations": [
+      "Metrics flag potential failures; they cannot establish artistic quality.",
+      "Coverage mask omits terrain occlusion; near-black statistics include legitimate shadows.",
+      "Faceting, continuity and conspicuous repetition require vision inspection; no RGB-only artistic approval."
+    ]
+  },
+  {
+    "biome": "savanna",
+    "view": "inspection",
+    "tier": 1,
+    "width": 640,
+    "height": 360,
+    "variant": "historical",
+    "camera": {
+      "position": [
+        34,
+        23,
+        44
+      ],
+      "quaternion": [
+        -0.11289019307845702,
+        0.2798418085648005,
+        0.033156062656846556,
+        0.9528090270326922
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "performance": {
+      "calls": 8,
+      "triangles": 63750,
+      "cpuSubmissionMs": [
+        0.3999999910593033,
+        0.29999999701976776,
+        0.20000000298023224
+      ],
+      "pixelRatio": 1
+    },
+    "instances": [
+      {
+        "name": "biome-grass",
+        "count": 2800,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.42099133133888245,
+          2.864253282546997
+        ]
+      },
+      {
+        "name": "biome-shrub",
+        "count": 35,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          1.026165246963501,
+          4.31019401550293
+        ]
+      },
+      {
+        "name": "biome-understory",
+        "count": 0,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          null,
+          0
+        ]
+      }
+    ],
+    "renderer": "WebKit WebGL",
+    "errors": [],
+    "coverage": {
+      "available": true,
+      "region": "lower half",
+      "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+      "fraction": 0.18395833333333333,
+      "nearBlackFraction": 0.0746979992449981,
+      "horizontalBands": [
+        5119,
+        3971,
+        3450,
+        1564,
+        1283,
+        786,
+        369,
+        930,
+        2872,
+        806,
+        42,
+        0
+      ]
+    },
+    "findings": [],
+    "limitations": [
+      "Metrics flag potential failures; they cannot establish artistic quality.",
+      "Coverage mask omits terrain occlusion; near-black statistics include legitimate shadows.",
+      "Faceting, continuity and conspicuous repetition require vision inspection; no RGB-only artistic approval."
+    ]
+  },
+  {
+    "biome": "rainforest",
+    "view": "hero",
+    "tier": 1,
+    "width": 640,
+    "height": 360,
+    "variant": "historical",
+    "camera": {
+      "position": [
+        6.661338147750939e-16,
+        0.1252664940564987,
+        29
+      ],
+      "quaternion": [
+        0.12378536973294182,
+        0.014171483327660637,
+        -0.0017680016816925947,
+        0.992206241398645
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "performance": {
+      "calls": 26,
+      "triangles": 1450298,
+      "cpuSubmissionMs": [
+        2.800000011920929,
+        2.5999999940395355,
+        1.9000000059604645
+      ],
+      "pixelRatio": 1
+    },
+    "instances": [
+      {
+        "name": "rainforest-v4-seedlings",
+        "count": 180,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.5504584312438965,
+          1.613011360168457
+        ]
+      },
+      {
+        "name": "rainforest-v4-ferns",
+        "count": 150,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.5676220655441284,
+          1.5862470865249634
+        ]
+      },
+      {
+        "name": "rainforest-v4-palms",
+        "count": 90,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.5613826513290405,
+          1.588858723640442
+        ]
+      },
+      {
+        "name": "rainforest-v4-shrubs",
+        "count": 120,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.5506123900413513,
+          1.6116598844528198
+        ]
+      },
+      {
+        "name": "rainforest-v4-lianas",
+        "count": 72,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          6.281315326690674,
+          25.79508399963379
+        ]
+      },
+      {
+        "name": "rainforest-v4-epiphytes",
+        "count": 100,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.35155478021788383,
+          0.7939302116176221
+        ]
+      },
+      {
+        "name": "rainforest-v5-forest-wall",
+        "count": 108,
+        "visible": true,
+        "tiles": 4,
+        "scaleRange": [
+          13.543059349060059,
+          65.59628295898438
+        ]
+      },
+      {
+        "name": "rainforest-v5-lower-understory",
+        "count": 3,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          17,
+          17
+        ]
+      },
+      {
+        "name": "rainforest-v5-outer-trunks",
+        "count": 32,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          22.773921966552734,
+          44.22627258300781
+        ]
+      },
+      {
+        "name": "rainforest-v5-outer-crowns",
+        "count": 192,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          3.0835578441619873,
+          5.981924057006836
+        ]
+      },
+      {
+        "name": "rainforest-v5-ferns",
+        "count": 220,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.5206853747367859,
+          1.193809986114502
+        ]
+      },
+      {
+        "name": "rainforest-v5-palms",
+        "count": 120,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.5525893568992615,
+          1.2732452154159546
+        ]
+      },
+      {
+        "name": "rainforest-v5-seedlings",
+        "count": 240,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.7803171873092651,
+          1.7982486486434937
+        ]
+      },
+      {
+        "name": "rainforest-v5-foliage-cards",
+        "count": 850,
+        "visible": true,
+        "tiles": 6,
+        "scaleRange": [
+          0.6056633591651917,
+          1.6996666193008423
+        ]
+      },
+      {
+        "name": "rainforest-v5-floor-decals",
+        "count": 520,
+        "visible": true,
+        "tiles": 4,
+        "scaleRange": [
+          1,
+          1
+        ]
+      }
+    ],
+    "backdrop": true,
+    "renderer": "WebKit WebGL",
+    "errors": [],
+    "coverage": {
+      "available": true,
+      "region": "lower half",
+      "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+      "fraction": 0.2834201388888889,
+      "nearBlackFraction": 0.5654211332312404,
+      "horizontalBands": [
+        3533,
+        3161,
+        3847,
+        1647,
+        922,
+        652,
+        692,
+        826,
+        1972,
+        4160,
+        4927,
+        6311
+      ]
+    },
+    "findings": [
+      {
+        "severity": "minor",
+        "defect": "Near-black pixels overlap vegetation silhouette mask",
+        "measurements": {
+          "fraction": 0.5654211332312404,
+          "threshold": 0.2,
+          "note": "Includes real shadows and possible occluders; visual review must distinguish legitimate shade."
+        }
+      },
+      {
+        "severity": "major",
+        "defect": "Repeated single-atlas floor stamps require repetition review",
+        "measurements": {
+          "count": 520,
+          "tiles": 4,
+          "scaleRange": [
+            1,
+            1
+          ],
+          "albedoMask": null
+        }
+      }
+    ],
+    "limitations": [
+      "Metrics flag potential failures; they cannot establish artistic quality.",
+      "Coverage mask omits terrain occlusion; near-black statistics include legitimate shadows.",
+      "Faceting, continuity and conspicuous repetition require vision inspection; no RGB-only artistic approval."
+    ]
+  },
+  {
+    "biome": "rainforest",
+    "view": "inspection",
+    "tier": 1,
+    "width": 640,
+    "height": 360,
+    "variant": "historical",
+    "camera": {
+      "position": [
+        34,
+        23,
+        44
+      ],
+      "quaternion": [
+        -0.11289019307845702,
+        0.2798418085648005,
+        0.033156062656846556,
+        0.9528090270326922
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "performance": {
+      "calls": 22,
+      "triangles": 1433698,
+      "cpuSubmissionMs": [
+        0.5999999940395355,
+        0.20000000298023224,
+        0.20000000298023224
+      ],
+      "pixelRatio": 1
+    },
+    "instances": [
+      {
+        "name": "rainforest-v4-seedlings",
+        "count": 180,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.5504584312438965,
+          1.613011360168457
+        ]
+      },
+      {
+        "name": "rainforest-v4-ferns",
+        "count": 150,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.5676220655441284,
+          1.5862470865249634
+        ]
+      },
+      {
+        "name": "rainforest-v4-palms",
+        "count": 90,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.5613826513290405,
+          1.588858723640442
+        ]
+      },
+      {
+        "name": "rainforest-v4-shrubs",
+        "count": 120,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.5506123900413513,
+          1.6116598844528198
+        ]
+      },
+      {
+        "name": "rainforest-v4-lianas",
+        "count": 72,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          6.281315326690674,
+          25.79508399963379
+        ]
+      },
+      {
+        "name": "rainforest-v4-epiphytes",
+        "count": 100,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.35155478021788383,
+          0.7939302116176221
+        ]
+      },
+      {
+        "name": "rainforest-v5-forest-wall",
+        "count": 108,
+        "visible": false,
+        "tiles": 4,
+        "scaleRange": [
+          13.543059349060059,
+          65.59628295898438
+        ]
+      },
+      {
+        "name": "rainforest-v5-lower-understory",
+        "count": 3,
+        "visible": false,
+        "tiles": null,
+        "scaleRange": [
+          17,
+          17
+        ]
+      },
+      {
+        "name": "rainforest-v5-outer-trunks",
+        "count": 32,
+        "visible": false,
+        "tiles": null,
+        "scaleRange": [
+          22.773921966552734,
+          44.22627258300781
+        ]
+      },
+      {
+        "name": "rainforest-v5-outer-crowns",
+        "count": 192,
+        "visible": false,
+        "tiles": null,
+        "scaleRange": [
+          3.0835578441619873,
+          5.981924057006836
+        ]
+      },
+      {
+        "name": "rainforest-v5-ferns",
+        "count": 220,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.5206853747367859,
+          1.193809986114502
+        ]
+      },
+      {
+        "name": "rainforest-v5-palms",
+        "count": 120,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.5525893568992615,
+          1.2732452154159546
+        ]
+      },
+      {
+        "name": "rainforest-v5-seedlings",
+        "count": 240,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.7803171873092651,
+          1.7982486486434937
+        ]
+      },
+      {
+        "name": "rainforest-v5-foliage-cards",
+        "count": 850,
+        "visible": true,
+        "tiles": 6,
+        "scaleRange": [
+          0.6056633591651917,
+          1.6996666193008423
+        ]
+      },
+      {
+        "name": "rainforest-v5-floor-decals",
+        "count": 520,
+        "visible": true,
+        "tiles": 4,
+        "scaleRange": [
+          1,
+          1
+        ]
+      }
+    ],
+    "backdrop": false,
+    "renderer": "WebKit WebGL",
+    "errors": [],
+    "coverage": {
+      "available": true,
+      "region": "lower half",
+      "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+      "fraction": 0.248046875,
+      "nearBlackFraction": 0.25403324584426945,
+      "horizontalBands": [
+        1065,
+        1751,
+        2605,
+        2903,
+        3529,
+        2583,
+        2742,
+        3406,
+        3508,
+        3199,
+        1284,
+        0
+      ]
+    },
+    "findings": [
+      {
+        "severity": "minor",
+        "defect": "Near-black pixels overlap vegetation silhouette mask",
+        "measurements": {
+          "fraction": 0.25403324584426945,
+          "threshold": 0.2,
+          "note": "Includes real shadows and possible occluders; visual review must distinguish legitimate shade."
+        }
+      },
+      {
+        "severity": "major",
+        "defect": "Repeated single-atlas floor stamps require repetition review",
+        "measurements": {
+          "count": 520,
+          "tiles": 4,
+          "scaleRange": [
+            1,
+            1
+          ],
+          "albedoMask": null
+        }
+      },
+      {
+        "severity": "major",
+        "defect": "Forest continuation disabled at inspection height",
+        "measurements": {
+          "backdropVisible": false
+        }
+      }
+    ],
+    "limitations": [
+      "Metrics flag potential failures; they cannot establish artistic quality.",
+      "Coverage mask omits terrain occlusion; near-black statistics include legitimate shadows.",
+      "Faceting, continuity and conspicuous repetition require vision inspection; no RGB-only artistic approval."
+    ]
+  }
+]

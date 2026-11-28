@@ -1,0 +1,150 @@
+{
+  "seed": 29,
+  "width": 640,
+  "height": 360,
+  "results": [
+    {
+      "mode": "cards",
+      "weights": {
+        "crown": 0.45,
+        "cluster": 0.4,
+        "leaf": 0.15
+      },
+      "stats": {
+        "frame": 7,
+        "calls": 2,
+        "triangles": 29520,
+        "points": 0,
+        "lines": 0
+      },
+      "signatures": [
+        "c132d9c63ec9bfd407fa3a4610620b2192f067009f9c60c577ab5a734e7910e1",
+        "901f2840ebd3ee734d0b4f80a0f98a6611a5856a139d92e21ca8f3f742894fcd",
+        331200,
+        33120,
+        "6958b552c3a962f33f44a02ea72fd42382ffcbba77745443ca6b8a90ca6bbcd7",
+        "6bbbd3e88a04ee28aa47b6785f76b23df5b09bddb7fbd2f5fa8b08256f51cc48",
+        554400,
+        55440
+      ],
+      "camera": {
+        "position": [
+          15.445911913458257,
+          2.2232844265173934,
+          4.198656182476784
+        ],
+        "fov": 47
+      },
+      "exposure": 1.12,
+      "field": {
+        "center": [
+          0.0063670444888428435,
+          4.655442772915428,
+          0.10230784385570901
+        ],
+        "radii": [
+          4.74789200389172,
+          2.494990006345881,
+          4.23823007380849
+        ],
+        "source": "Existing 3D cluster centers and radii, tree-local coordinates; no camera inputs"
+      }
+    },
+    {
+      "mode": "hull",
+      "weights": {
+        "crown": 0.45,
+        "cluster": 0.4,
+        "leaf": 0.15
+      },
+      "stats": {
+        "frame": 11,
+        "calls": 2,
+        "triangles": 29520,
+        "points": 0,
+        "lines": 0
+      },
+      "signatures": [
+        "c132d9c63ec9bfd407fa3a4610620b2192f067009f9c60c577ab5a734e7910e1",
+        "901f2840ebd3ee734d0b4f80a0f98a6611a5856a139d92e21ca8f3f742894fcd",
+        331200,
+        33120,
+        "6958b552c3a962f33f44a02ea72fd42382ffcbba77745443ca6b8a90ca6bbcd7",
+        "6bbbd3e88a04ee28aa47b6785f76b23df5b09bddb7fbd2f5fa8b08256f51cc48",
+        554400,
+        55440
+      ],
+      "camera": {
+        "position": [
+          15.445911913458257,
+          2.2232844265173934,
+          4.198656182476784
+        ],
+        "fov": 47
+      },
+      "exposure": 1.12,
+      "field": {
+        "center": [
+          0.0063670444888428435,
+          4.655442772915428,
+          0.10230784385570901
+        ],
+        "radii": [
+          4.74789200389172,
+          2.494990006345881,
+          4.23823007380849
+        ],
+        "source": "Existing 3D cluster centers and radii, tree-local coordinates; no camera inputs"
+      }
+    },
+    {
+      "mode": "blend",
+      "weights": {
+        "crown": 0.45,
+        "cluster": 0.4,
+        "leaf": 0.15
+      },
+      "stats": {
+        "frame": 14,
+        "calls": 2,
+        "triangles": 29520,
+        "points": 0,
+        "lines": 0
+      },
+      "signatures": [
+        "c132d9c63ec9bfd407fa3a4610620b2192f067009f9c60c577ab5a734e7910e1",
+        "901f2840ebd3ee734d0b4f80a0f98a6611a5856a139d92e21ca8f3f742894fcd",
+        331200,
+        33120,
+        "6958b552c3a962f33f44a02ea72fd42382ffcbba77745443ca6b8a90ca6bbcd7",
+        "6bbbd3e88a04ee28aa47b6785f76b23df5b09bddb7fbd2f5fa8b08256f51cc48",
+        554400,
+        55440
+      ],
+      "camera": {
+        "position": [
+          15.445911913458257,
+          2.2232844265173934,
+          4.198656182476784
+        ],
+        "fov": 47
+      },
+      "exposure": 1.12,
+      "field": {
+        "center": [
+          0.0063670444888428435,
+          4.655442772915428,
+          0.10230784385570901
+        ],
+        "radii": [
+          4.74789200389172,
+          2.494990006345881,
+          4.23823007380849
+        ],
+        "source": "Existing 3D cluster centers and radii, tree-local coordinates; no camera inputs"
+      }
+    }
+  ],
+  "geometryUVIndexHashesIdentical": true,
+  "silhouetteMasksIdentical": true
+}

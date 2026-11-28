@@ -1,0 +1,86 @@
+import * as T from 'three';
+import type {SceneTree} from './recipe';
+import type {FieldPlan} from './wave1-fields';
+import {hashSeed} from './random';
+
+/** Presentation only: same source individual, branch architecture, position and seed. */
+export function finishFloodedTree(tree:SceneTree,near:boolean):SceneTree{
+ if(!tree.studio)return tree;
+ const studio={...tree.studio,fronds:tree.studio.fronds
+  .filter(f=>near||f.essential||f.groupId%3===0)
+  .map(f=>({...f,width:f.width*(near?(f.interior>.5?1.06:1.16):1.55),length:f.length*(near?1.10:1.50),curve:f.curve*1.08}))};
+ return {...tree,studio,model:near?tree.model:{...tree.model,segments:tree.model.segments.filter(s=>s.depth<=2)}};
+}
+
+const fract=(x:number)=>x-Math.floor(x),mix=(a:number,b:number,t:number)=>a+(b-a)*t;
+function noise(x:number,z:number){
+ const hash=(x:number,y:number)=>{let a=fract(x*.1031),b=fract(y*.11369);const d=a*(b+19.19)+b*(a+19.19);a+=d;b+=d;return fract(a*b);};
+ const ix=Math.floor(x),iz=Math.floor(z);let u=fract(x),v=fract(z);u=u*u*(3-2*u);v=v*v*(3-2*v);
+ return mix(mix(hash(ix,iz),hash(ix+1,iz),u),mix(hash(ix,iz+1),hash(ix+1,iz+1),u),v);
+}
+const smooth=(a:number,b:number,x:number)=>{const t=T.MathUtils.clamp((x-a)/(b-a),0,1);return t*t*(3-2*t);};
+function phase(plan:FieldPlan){return (hashSeed(plan.seed+'|wetland-soil')%10000)*.001;}
+/** Identical world-space patch field used by ground pigment and actual grass thinning. */
+export function floodedSoilMask(plan:FieldPlan,x:number,z:number){
+ const dx=x-plan.eye[0],dz=z-plan.eye[2],p=phase(plan),warp=noise(x*.09+p,z*.09-p)*3;
+ const n=noise(x*.26+warp+p,z*.19+warp-p)*.75+noise(x*.68-p,z*.47+p)*.25;
+ return smooth(.33,.57,n)*(1-smooth(23,62,Math.hypot(dx,dz)));
+}
+
+export function installFloodedFinish(scene:T.Scene,plan:FieldPlan,loaded:()=>void){
+ const soil=new T.TextureLoader().load('/assets/wave1-detail/tidal-mud-v1.webp',loaded,undefined,loaded);
+ soil.colorSpace=T.SRGBColorSpace;soil.wrapS=soil.wrapT=T.RepeatWrapping;soil.anisotropy=4;
+ const old=scene.onBeforeRender;let installed=false;
+ scene.onBeforeRender=function(...args){old.apply(this,args);if(installed)return;installed=true;
+  let thinned=0;const seen=new Set<T.Material>();
+  scene.traverse(o=>{if(!(o instanceof T.Mesh))return;
+   const ground=o.name==='connected-field-terrain',grass=/field-(dimensional|distant)-meadow/.test(o.name);
+   if(grass&&o instanceof T.InstancedMesh){
+    const m=new T.Matrix4(),scale=new T.Vector3();
+    for(let i=0;i<o.count;i++){o.getMatrixAt(i,m);const x=m.elements[12],z=m.elements[14],mask=floodedSoilMask(plan,x,z);
+     if(mask<.3)continue;
+     // Exposed sediment has short, sparse rooted growth, never upright grass poking through it.
+     const amount=mix(1,.14,smooth(.3,.9,mask));scale.set(amount,amount,amount);m.scale(scale);o.setMatrixAt(i,m);thinned++;
+    }o.instanceMatrix.needsUpdate=true;o.computeBoundingSphere();
+   }
+   for(const mat of Array.isArray(o.material)?o.material:[o.material]){
+    if(seen.has(mat))continue;seen.add(mat);
+    if(mat instanceof T.ShaderMaterial&&mat.uniforms.shadowPigment){
+     mat.uniforms.shadowPigment.value.set('#294735');mat.uniforms.midPigment.value.set('#62763c');mat.uniforms.highPigment.value.set('#b7b462');mat.uniforms.rimStrength.value=.18;mat.uniforms.gradientStrength.value=.65;
+     const previous=mat.onBeforeCompile,key=mat.customProgramCacheKey.bind(mat);
+     mat.onBeforeCompile=(shader,renderer)=>{previous.call(mat,shader,renderer);
+      shader.fragmentShader=shader.fragmentShader.replace('(sqrt(max(ink,0.))-.45)*.22','(sqrt(max(ink,0.))-.45)*.10')
+       .replace('fqCrownSun*.65','fqCrownSun*.24')
+       .replace('.68+.62*sqrt(max(ink,0.))','.82+.30*sqrt(max(ink,0.))');
+     };mat.customProgramCacheKey=()=>key()+'|flooded-coherent-crown-1';mat.needsUpdate=true;
+    }
+    if(!ground||!(mat instanceof T.MeshStandardMaterial))continue;
+    const previous=mat.onBeforeCompile,key=mat.customProgramCacheKey.bind(mat);
+    mat.onBeforeCompile=(shader,renderer)=>{previous.call(mat,shader,renderer);shader.uniforms.fsSoil={value:soil};
+     shader.fragmentShader='uniform sampler2D fsSoil;\n'+shader.fragmentShader;
+     shader.fragmentShader=shader.fragmentShader.replace('#include <roughnessmap_fragment>',`
+      vec2 fsP=fqWorld.xz;float fsPhase=${phase(plan).toFixed(6)};
+      float fsWarp=fqN(fsP*.09+vec2(fsPhase,-fsPhase))*3.;
+      float fsRegion=fqN(fsP*vec2(.26,.19)+vec2(fsWarp+fsPhase,fsWarp-fsPhase))*.75+fqN(fsP*vec2(.68,.47)+vec2(-fsPhase,fsPhase))*.25;
+      float fsMask=smoothstep(.33,.57,fsRegion)*(1.-smoothstep(23.,62.,distance(fsP,vec2(${plan.eye[0]},${plan.eye[2]}))));
+      vec3 fsAlbedo=texture2D(fsSoil,fsP/2.8).rgb;
+      float fsFine=dot(texture2D(fsSoil,mat2(.8,-.6,.6,.8)*fsP/1.3).rgb,vec3(.2126,.7152,.0722));
+      float fsWet=1.-smoothstep(.015,.20,fqWorld.y);
+      vec3 fsEarth=fsAlbedo*vec3(1.16,.96,.78)*(.80+fsFine*1.5);
+      fsEarth=mix(fsEarth,fsEarth*vec3(.55,.65,.74),fsWet*.65);
+      diffuseColor.rgb=mix(diffuseColor.rgb,fsEarth,fsMask);
+      #include <roughnessmap_fragment>
+      roughnessFactor=mix(roughnessFactor,mix(.48,.96,1.-fsWet),fsMask);
+     `);
+     shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_maps>',`#include <normal_fragment_maps>
+      float fsHeight=dot(texture2D(fsSoil,fqWorld.xz/2.8).rgb,vec3(.2126,.7152,.0722))*.012*fsMask;
+      vec3 fsQ0=dFdx(-vViewPosition),fsQ1=dFdy(-vViewPosition),fsR1=cross(fsQ1,normal),fsR2=cross(normal,fsQ0);
+      float fsDet=dot(fsQ0,fsR1);
+      vec3 fsGrad=(fsR1*dFdx(fsHeight)+fsR2*dFdy(fsHeight))*sign(fsDet)/max(abs(fsDet),.00001);
+      normal=normalize(normal-clamp(fsGrad,vec3(-.20),vec3(.20)));`);
+    };mat.customProgramCacheKey=()=>key()+'|flooded-exposed-sediment-1';mat.needsUpdate=true;
+   }
+  });scene.userData.floodedFinish={seed:plan.seed,thinnedClumps:thinned,soil:'Existing generated tidal sediment, world-space shared mask; no water/terrain/camera changes',trees:'Original source individuals with connected spray coverage, retained secondary branches and restrained crown highlights'};
+ };
+ return()=>soil.dispose();
+}

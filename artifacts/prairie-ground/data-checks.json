@@ -1,0 +1,8 @@
+{
+  "optInAndBiomeGuard": true,
+  "rockIceGuard": true,
+  "sourceUnchanged": true,
+  "deterministic": true,
+  "cameraFootingAnchored": true,
+  "syntheticFieldValuesBounded": true
+}

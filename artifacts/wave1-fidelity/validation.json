@@ -1,0 +1,442 @@
+{
+  "matched": [
+    {
+      "biome": "desert",
+      "view": "hero",
+      "cameraIdentical": true,
+      "calls": [
+        19,
+        19
+      ],
+      "triangles": [
+        938144,
+        897240
+      ],
+      "cpuSubmissionMs": {
+        "before": [
+          0.699999988079071,
+          0.800000011920929,
+          0.699999988079071
+        ],
+        "after": [
+          0.5,
+          0.3999999761581421,
+          0.5
+        ]
+      },
+      "instances": [
+        {
+          "name": "field-jointed-bedrock",
+          "count": 2
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 17
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 3
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 15
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 3
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 16
+        },
+        {
+          "name": "desert-contact-gravel",
+          "count": 2067
+        },
+        {
+          "name": "desert-unnamed-open-shrub",
+          "count": 4
+        },
+        {
+          "name": "desert-unnamed-open-shrub",
+          "count": 4
+        },
+        {
+          "name": "desert-unnamed-dry-fibres",
+          "count": 242
+        },
+        {
+          "name": "depth-dry-grass",
+          "count": 56
+        }
+      ],
+      "wetlandTransformsIdentical": null,
+      "staging": {
+        "capsuleRadius": 0.35,
+        "bodyHeight": 1.7,
+        "approachRadius": 0.85,
+        "minimumGroundAboveWater": 1.1732626222280358,
+        "rootIntrusions": 0,
+        "shortGrassHeightBound": 0.08,
+        "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+      },
+      "trees": 0
+    },
+    {
+      "biome": "desert",
+      "view": "inspection",
+      "cameraIdentical": true,
+      "calls": [
+        17,
+        17
+      ],
+      "triangles": [
+        938140,
+        897236
+      ],
+      "cpuSubmissionMs": {
+        "before": [
+          0.5999999940395355,
+          0.30000001192092896,
+          0.3999999761581421
+        ],
+        "after": [
+          0.4000000059604645,
+          0.29999998211860657,
+          0.20000001788139343
+        ]
+      },
+      "instances": [
+        {
+          "name": "field-jointed-bedrock",
+          "count": 2
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 17
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 3
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 15
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 3
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 16
+        },
+        {
+          "name": "desert-contact-gravel",
+          "count": 2067
+        },
+        {
+          "name": "desert-unnamed-open-shrub",
+          "count": 4
+        },
+        {
+          "name": "desert-unnamed-open-shrub",
+          "count": 4
+        },
+        {
+          "name": "desert-unnamed-dry-fibres",
+          "count": 242
+        },
+        {
+          "name": "depth-dry-grass",
+          "count": 56
+        }
+      ],
+      "wetlandTransformsIdentical": null,
+      "staging": {
+        "capsuleRadius": 0.35,
+        "bodyHeight": 1.7,
+        "approachRadius": 0.85,
+        "minimumGroundAboveWater": 1.1732626222280358,
+        "rootIntrusions": 0,
+        "shortGrassHeightBound": 0.08,
+        "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+      },
+      "trees": 0
+    },
+    {
+      "biome": "mangrove",
+      "view": "hero",
+      "cameraIdentical": true,
+      "calls": [
+        25,
+        25
+      ],
+      "triangles": [
+        2656622,
+        2656622
+      ],
+      "cpuSubmissionMs": {
+        "before": [
+          0.800000011920929,
+          0.699999988079071,
+          0.9000000059604645
+        ],
+        "after": [
+          0.7999999821186066,
+          0.7000000178813934,
+          0.7999999821186066
+        ]
+      },
+      "instances": [
+        {
+          "name": "field-source-stand-impostors",
+          "count": 650
+        },
+        {
+          "name": "mangrove-unnamed-juvenile-leaves",
+          "count": 1026
+        },
+        {
+          "name": "mangrove-unnamed-juvenile-stems",
+          "count": 209
+        },
+        {
+          "name": "mangrove-low-folded-leaf-litter",
+          "count": 1532
+        },
+        {
+          "name": "mangrove-fallen-shore-twigs",
+          "count": 44
+        },
+        {
+          "name": "depth-washed-gravel",
+          "count": 1889
+        }
+      ],
+      "wetlandTransformsIdentical": true,
+      "staging": {
+        "capsuleRadius": 0.35,
+        "bodyHeight": 1.7,
+        "approachRadius": 0.85,
+        "minimumGroundAboveWater": 0.2607121371096338,
+        "rootIntrusions": 0,
+        "shortGrassHeightBound": 0.08,
+        "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+      },
+      "trees": 95
+    },
+    {
+      "biome": "mangrove",
+      "view": "inspection",
+      "cameraIdentical": true,
+      "calls": [
+        25,
+        25
+      ],
+      "triangles": [
+        2656622,
+        2656622
+      ],
+      "cpuSubmissionMs": {
+        "before": [
+          0.7999999821186066,
+          0.7000000178813934,
+          0.699999988079071
+        ],
+        "after": [
+          0.699999988079071,
+          0.7000000178813934,
+          0.699999988079071
+        ]
+      },
+      "instances": [
+        {
+          "name": "field-source-stand-impostors",
+          "count": 650
+        },
+        {
+          "name": "mangrove-unnamed-juvenile-leaves",
+          "count": 1026
+        },
+        {
+          "name": "mangrove-unnamed-juvenile-stems",
+          "count": 209
+        },
+        {
+          "name": "mangrove-low-folded-leaf-litter",
+          "count": 1532
+        },
+        {
+          "name": "mangrove-fallen-shore-twigs",
+          "count": 44
+        },
+        {
+          "name": "depth-washed-gravel",
+          "count": 1889
+        }
+      ],
+      "wetlandTransformsIdentical": true,
+      "staging": {
+        "capsuleRadius": 0.35,
+        "bodyHeight": 1.7,
+        "approachRadius": 0.85,
+        "minimumGroundAboveWater": 0.2607121371096338,
+        "rootIntrusions": 0,
+        "shortGrassHeightBound": 0.08,
+        "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+      },
+      "trees": 95
+    },
+    {
+      "biome": "flooded",
+      "view": "hero",
+      "cameraIdentical": true,
+      "calls": [
+        21,
+        21
+      ],
+      "triangles": [
+        2182574,
+        2182574
+      ],
+      "cpuSubmissionMs": {
+        "before": [
+          1,
+          0.800000011920929,
+          0.699999988079071
+        ],
+        "after": [
+          0.800000011920929,
+          0.800000011920929,
+          0.8999999761581421
+        ]
+      },
+      "instances": [
+        {
+          "name": "field-source-stand-impostors",
+          "count": 100
+        },
+        {
+          "name": "field-dimensional-meadow",
+          "count": 2310
+        },
+        {
+          "name": "field-distant-meadow",
+          "count": 11841
+        },
+        {
+          "name": "field-sparse-unnamed-seedheads",
+          "count": 23
+        }
+      ],
+      "wetlandTransformsIdentical": true,
+      "staging": {
+        "capsuleRadius": 0.35,
+        "bodyHeight": 1.7,
+        "approachRadius": 0.85,
+        "minimumGroundAboveWater": 0.14770435479323532,
+        "rootIntrusions": 0,
+        "shortGrassHeightBound": 0.08,
+        "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+      },
+      "trees": 24
+    },
+    {
+      "biome": "flooded",
+      "view": "inspection",
+      "cameraIdentical": true,
+      "calls": [
+        21,
+        21
+      ],
+      "triangles": [
+        2182574,
+        2182574
+      ],
+      "cpuSubmissionMs": {
+        "before": [
+          1.4000000059604645,
+          1,
+          0.9000000059604645
+        ],
+        "after": [
+          1.600000023841858,
+          0.7999999821186066,
+          0.9000000059604645
+        ]
+      },
+      "instances": [
+        {
+          "name": "field-source-stand-impostors",
+          "count": 100
+        },
+        {
+          "name": "field-dimensional-meadow",
+          "count": 2310
+        },
+        {
+          "name": "field-distant-meadow",
+          "count": 11841
+        },
+        {
+          "name": "field-sparse-unnamed-seedheads",
+          "count": 23
+        }
+      ],
+      "wetlandTransformsIdentical": true,
+      "staging": {
+        "capsuleRadius": 0.35,
+        "bodyHeight": 1.7,
+        "approachRadius": 0.85,
+        "minimumGroundAboveWater": 0.14770435479323532,
+        "rootIntrusions": 0,
+        "shortGrassHeightBound": 0.08,
+        "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+      },
+      "trees": 24
+    }
+  ],
+  "holdout": 27139,
+  "sourceMatchesRecordedCheckpoint": true,
+  "artisticRecipeUnchangedAfterHoldout": true,
+  "typeOnlyAmendment": {
+    "date": "2026-11-26T19:29:49.805Z",
+    "file": "src/lib/forest/wave1-fidelity.ts",
+    "reason": "ArrayLike<number> assertions fix TypeScript inference for copied geometry buffers. Type assertions erase; no runtime code, parameters, artistic recipe or holdout tuning changed.",
+    "before": "9fce00599557df949716996186d88b412dd008badd12d519b22f201cd3f78ee1",
+    "after": "bb6e7f8e5887019d40377e9b48ed8ee1a4eb920c3cf91a8ed24999fcbff5ff5a"
+  },
+  "renderErrors": 0,
+  "protected": [
+    {
+      "name": "puget-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "rainforest-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "rainforest-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "savanna-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "savanna-inspection",
+      "pixelIdentical": true
+    },
+    {
+      "name": "alpine-hero",
+      "pixelIdentical": true
+    },
+    {
+      "name": "alpine-inspection",
+      "pixelIdentical": true
+    }
+  ],
+  "limits": "Software WebGL submission timings, not GPU/device frame time. Scene water shader unchanged. RGB strips are not material-ID or irradiance measurements."
+}

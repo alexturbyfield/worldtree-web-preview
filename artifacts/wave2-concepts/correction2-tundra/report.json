@@ -1,0 +1,378 @@
+[
+  {
+    "id": "tundra",
+    "seed": "29",
+    "view": "hero",
+    "file": "artifacts/wave2-concepts/correction2-tundra/tundra-29-hero.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        0,
+        2.7718088878891134,
+        34
+      ],
+      "target": [
+        0,
+        -0.3027073286348059,
+        -55
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 7,
+        "calls": 13,
+        "triangles": 466016,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      },
+      {
+        "frame": 8,
+        "calls": 13,
+        "triangles": 466016,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      },
+      {
+        "frame": 9,
+        "calls": 13,
+        "triangles": 466016,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.19999998807907104
+      }
+    ],
+    "instances": [
+      {
+        "name": "tundra-dedicated-heath-mats-0",
+        "count": 1402
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-1",
+        "count": 3062
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-2",
+        "count": 636
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-3",
+        "count": 1100
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-0",
+        "count": 21
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-1",
+        "count": 21
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-2",
+        "count": 20
+      },
+      {
+        "name": "tundra-rare-stalks",
+        "count": 171
+      },
+      {
+        "name": "tundra-pale-functional-seedheads",
+        "count": 171
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      }
+    ],
+    "recipe": {
+      "id": "tundra",
+      "biome": 11,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "tundra",
+        "biome": 11,
+        "seed": "29",
+        "phase": 4.389788291205383,
+        "relief": 2.1,
+        "camera": {
+          "position": [
+            0,
+            2.7718088878891134,
+            34
+          ],
+          "target": [
+            0,
+            -0.3027073286348059,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          2.7718088878891134,
+          34
+        ],
+        "target": [
+          0,
+          -0.3027073286348059,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#a8bec3"
+        }
+      },
+      "trees": 0,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "Independent reference pigment state: warm russet heath, local phenology unverified",
+        "weather": "Independent clear reference state",
+        "timeOfDay": "Independent low warm sun reference state"
+      }
+    },
+    "concept": {
+      "biome": "tundra",
+      "representation": "Continuous mineral/heath pigments with dedicated generated low-shrub atlas on curved rooted mats; C1 flat-leaf geometry rejected",
+      "ecology": "Unnamed dwarf-shrub and seedhead functional forms; no verified local taxon or phenology asserted",
+      "sparseArcticHabitat": false,
+      "referenceLighting": "Warm key from upper right, independent time-of-day layer",
+      "seasonalState": "Russet reference state, not permanent biome identity",
+      "counts": {
+        "lowHeath": 6200,
+        "rocks": 62,
+        "seedheads": 171
+      }
+    },
+    "dressing": {
+      "instances": {
+        "lowHeath": 6200,
+        "rocks": 62,
+        "seedheads": 171
+      },
+      "identity": "Unnamed dwarf-shrub/lichen/seedhead functional study; local flora unverified",
+      "seasonalState": "Russet pigment reference state independent of biome identity",
+      "staging": "Low substrate only inside character approach"
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  },
+  {
+    "id": "tundra",
+    "seed": "29",
+    "view": "inspection",
+    "file": "artifacts/wave2-concepts/correction2-tundra/tundra-29-inspection.png",
+    "width": 640,
+    "height": 427,
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ],
+      "fov": 47
+    },
+    "times": [
+      {
+        "frame": 11,
+        "calls": 13,
+        "triangles": 466016,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      },
+      {
+        "frame": 12,
+        "calls": 13,
+        "triangles": 466016,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.19999998807907104
+      },
+      {
+        "frame": 13,
+        "calls": 13,
+        "triangles": 466016,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.699999988079071
+      }
+    ],
+    "instances": [
+      {
+        "name": "tundra-dedicated-heath-mats-0",
+        "count": 1402
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-1",
+        "count": 3062
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-2",
+        "count": 636
+      },
+      {
+        "name": "tundra-dedicated-heath-mats-3",
+        "count": 1100
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-0",
+        "count": 21
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-1",
+        "count": 21
+      },
+      {
+        "name": "tundra-embedded-mineral-stone-2",
+        "count": 20
+      },
+      {
+        "name": "tundra-rare-stalks",
+        "count": 171
+      },
+      {
+        "name": "tundra-pale-functional-seedheads",
+        "count": 171
+      }
+    ],
+    "textures": [
+      {
+        "width": 1774,
+        "height": 887,
+        "bytes": 8392203
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "bytes": 8386752
+      }
+    ],
+    "recipe": {
+      "id": "tundra",
+      "biome": 11,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "tundra",
+        "biome": 11,
+        "seed": "29",
+        "phase": 4.389788291205383,
+        "relief": 2.1,
+        "camera": {
+          "position": [
+            0,
+            2.7718088878891134,
+            34
+          ],
+          "target": [
+            0,
+            -0.3027073286348059,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          2.7718088878891134,
+          34
+        ],
+        "target": [
+          0,
+          -0.3027073286348059,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#a8bec3"
+        }
+      },
+      "trees": 0,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "Independent reference pigment state: warm russet heath, local phenology unverified",
+        "weather": "Independent clear reference state",
+        "timeOfDay": "Independent low warm sun reference state"
+      }
+    },
+    "concept": {
+      "biome": "tundra",
+      "representation": "Continuous mineral/heath pigments with dedicated generated low-shrub atlas on curved rooted mats; C1 flat-leaf geometry rejected",
+      "ecology": "Unnamed dwarf-shrub and seedhead functional forms; no verified local taxon or phenology asserted",
+      "sparseArcticHabitat": false,
+      "referenceLighting": "Warm key from upper right, independent time-of-day layer",
+      "seasonalState": "Russet reference state, not permanent biome identity",
+      "counts": {
+        "lowHeath": 6200,
+        "rocks": 62,
+        "seedheads": 171
+      }
+    },
+    "dressing": {
+      "instances": {
+        "lowHeath": 6200,
+        "rocks": 62,
+        "seedheads": 171
+      },
+      "identity": "Unnamed dwarf-shrub/lichen/seedhead functional study; local flora unverified",
+      "seasonalState": "Russet pigment reference state independent of biome identity",
+      "staging": "Low substrate only inside character approach"
+    },
+    "renderer": "WebKit WebGL",
+    "errors": []
+  }
+]

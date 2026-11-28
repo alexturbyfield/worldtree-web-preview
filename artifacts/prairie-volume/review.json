@@ -1,0 +1,99 @@
+{
+  "id": "prairie-volume-and-regional-dressing",
+  "date": "2026-11-27T11:44:35.667759+00:00",
+  "parent": "prairie-ground-gate-A",
+  "authorization": "User: Continue. Add shape to the ground to create rolling ground. Find extra elements to add to the scene based off of concept art and elements from the area.",
+  "scope": "New explicitly authorized representation/terrain/dressing study; prior failed ground study remains unchanged as historical evidence.",
+  "reviewer": "Primary agent; actual reference, hero, elevated and holdout images interpreted. No independent review.",
+  "humanApproval": null,
+  "status": "terrain-and-dressing-retained-provisionally; dense-grass-representation-rejected",
+  "roundsUsed": 3,
+  "rounds": [
+    {
+      "id": "first-working",
+      "hypothesis": "Stronger rolls plus a continuous low surface and source-integrated grass/flora supply missing volume.",
+      "evidence": "first-working/prairie-29-hero.png",
+      "finding": "Human view still too bare; grass distribution distant and staging height mask too broad. Initial flower shader type mismatch fixed before artistic review.",
+      "decision": "revise"
+    },
+    {
+      "id": "framing",
+      "hypothesis": "Natural broad shoulders plus redirected existing instances along near sides improve silhouette and stage visibility.",
+      "evidence": [
+        "framing/prairie-29-hero.png",
+        "framing/prairie-41-hero.png"
+      ],
+      "finding": "Rolling slopes and flower pockets visibly improve, but broad brush cards read as repeated short terraces.",
+      "decision": "retain terrain/dressing; reject grass shape as final"
+    },
+    {
+      "id": "texture-polish",
+      "hypothesis": "Recovering atlas contrast might restore painted grass volume; replace arrow-like seedheads with fine branching panicles.",
+      "evidence": "texture-polish/prairie-29-hero.png",
+      "finding": "Extra contrast makes card boundaries more conspicuous. New seedheads and shrub illumination are preferable.",
+      "decision": "reject stronger grass contrast; retain seed/shrub improvements"
+    }
+  ],
+  "rollback": {
+    "evidence": "final/prairie-29-hero.png",
+    "decision": "Disable failed near/middle brush-card batches by default, preserving them under prairieBrush=1 for explicit negative comparison. Retain terrain, continuous low surface, actual curved grass, fine seedheads, forbs and sparse shrubs. This rollback is not another correction round."
+  },
+  "holdout": {
+    "seed": "8924519",
+    "frozenBeforeGeneration": true,
+    "sourceRetunedAfter": false,
+    "evidence": [
+      "final/prairie-8924519-hero.png",
+      "final/prairie-8924519-inspection.png"
+    ],
+    "finding": "Rolling shape and flora variation survive. Foreground remains lawn-like and one shoulder closes more of the distant view. Record as limitation, not artistic approval."
+  },
+  "remaining": [
+    {
+      "severity": "major",
+      "defect": "No accepted dense prairie-grass representation. Broad brush cards fail at this view and are off by default."
+    },
+    {
+      "severity": "major",
+      "defect": "Near surface is still too lawn-like and too sparsely dimensional relative to concept."
+    },
+    {
+      "severity": "minor",
+      "defect": "Forbs/shrubs are simplified functional forms, not production botanical assets."
+    },
+    {
+      "severity": "minor",
+      "defect": "Holdout shoulder reduces long-distance openness; source was not retuned after seeing it."
+    }
+  ],
+  "reusableRules": [
+    {
+      "status": "experimentally supported",
+      "principle": "Terrain shoulders and vegetation-height falloff should be judged together at human height; elevated views can conceal a barren foreground.",
+      "evidence": [
+        "first-working/prairie-29-hero.png",
+        "framing/prairie-29-hero.png"
+      ]
+    },
+    {
+      "status": "experimentally supported",
+      "principle": "Keep one pigment sampler for grass roots and the ground, but do not treat matching color as proof of a good silhouette.",
+      "evidence": [
+        "framing/prairie-29-hero.png",
+        "texture-polish/prairie-29-hero.png"
+      ]
+    },
+    {
+      "status": "rejected",
+      "principle": "A broad soft brush atlas is automatically a suitable grass representation in another biome.",
+      "evidence": [
+        "texture-polish/prairie-29-hero.png",
+        "final/prairie-29-hero.png"
+      ],
+      "reason": "Repeated flat terraces remain apparent despite correct alpha and root pigment. More contrast worsens them."
+    }
+  ],
+  "ecology": "visual-lab/global-expansion/prairie-regional-evidence.json",
+  "validation": "validation.json",
+  "approval": "No human artistic approval, global promotion, commit, push or deployment."
+}

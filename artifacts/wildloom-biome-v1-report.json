@@ -1,0 +1,103 @@
+[
+  {
+    "id": "puget",
+    "url": "http://localhost:3001/explore?lat=47.6062&lon=-122.3321&habitat=forest&conditional=0&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human&composition=C&groundLighting=B&illumination=on",
+    "calls": 19,
+    "triangles": 675089,
+    "profile": "puget-legacy",
+    "camera": [
+      0.01045391827706954,
+      7.707058230656985,
+      34.282255793480886
+    ],
+    "ecoregion": "Puget lowland forests",
+    "evidence": "documented_regional_range",
+    "conditional": false,
+    "trees": 43,
+    "used": [
+      "Oemleria cerasiformis",
+      "Pinus ponderosa",
+      "Frangula purshiana",
+      "Tsuga heterophylla",
+      "Populus tremuloides",
+      "Picea sitchensis",
+      "Acer macrophyllum",
+      "Pseudotsuga menziesii",
+      "Abies amabilis",
+      "Purshia tridentata",
+      "Thuja plicata"
+    ],
+    "eligible": [
+      "Purshia tridentata",
+      "Acer macrophyllum",
+      "Frangula purshiana",
+      "Physocarpus capitatus",
+      "Pinus ponderosa",
+      "Abies amabilis",
+      "Oemleria cerasiformis",
+      "Populus tremuloides",
+      "Tsuga heterophylla",
+      "Pseudotsuga menziesii",
+      "Picea sitchensis",
+      "Thuja plicata"
+    ],
+    "errors": []
+  },
+  {
+    "id": "savanna",
+    "url": "http://localhost:3001/explore?lat=-2.3&lon=35.2&habitat=grassland&conditional=1&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human&composition=C&groundLighting=B&illumination=on",
+    "calls": 8,
+    "triangles": 28970,
+    "profile": "savanna",
+    "camera": [
+      -0.0008636562301815864,
+      5.497448580548599,
+      33.976681281785154
+    ],
+    "ecoregion": "Southern Acacia-Commiphora bushlands and thickets",
+    "evidence": "biome_realm_fallback",
+    "conditional": true,
+    "trees": 7,
+    "used": [
+      "Scattered canopy only with local habitat evidence"
+    ],
+    "eligible": [
+      null
+    ],
+    "errors": []
+  },
+  {
+    "id": "amazon",
+    "url": "http://localhost:3001/explore?lat=-3.12&lon=-60.02&habitat=forest&conditional=0&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human&composition=C&groundLighting=B&illumination=on",
+    "calls": 19,
+    "triangles": 564810,
+    "profile": "amazon",
+    "camera": [
+      0.01505488815939593,
+      10.116934086272849,
+      29.526921085578856
+    ],
+    "ecoregion": "Japurá-Solimões-Negro moist forests",
+    "evidence": "documented_regional_range",
+    "conditional": false,
+    "trees": 36,
+    "used": [
+      "Hevea brasiliensis",
+      "Cecropia peltata",
+      "Euterpe precatoria",
+      "Swietenia macrophylla",
+      "Theobroma cacao"
+    ],
+    "eligible": [
+      "Swietenia macrophylla",
+      "Hevea brasiliensis",
+      "Swartzia lanata",
+      "Euterpe precatoria",
+      "Cecropia peltata",
+      "Rhizophora mangle",
+      "Theobroma cacao",
+      "Bertholletia excelsa"
+    ],
+    "errors": []
+  }
+]

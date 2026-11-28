@@ -1,0 +1,12 @@
+{
+  "mode": "built-in image_gen",
+  "prompt": "Use case: stylized-concept. Asset type: wide panoramic landscape backdrop strip for a 3D East African savanna game, ideally 3:1 landscape, with REAL TRANSPARENT SKY above the irregular hill silhouette. Paint ONLY a beautiful layered chain of distant rolling savanna hills and weathered escarpments, with opaque land reaching the entire bottom edge. NOT a full scene: no foreground, no trees, no grass blades, no rocks in foreground, no people/animals/buildings/paths, no clouds or sky color. Composition within this material asset: several asymmetrical gently rising golden ochre foothills at the bottom, curving cool teal/blue-green valley shadows, overlapping sage and blue-violet ridges behind, a restrained distant flat-topped weathered escarpment offset from center. Low rolling profiles, NOT sharp alpine mountains. Warm selective upper-left sunlight, rich honey and straw gold on broad convex slopes, deep yet readable cool blue-green shadow bowls. Beautiful painterly cinematic oil/gouache landscape style with broad confident connected shapes and restrained geological brush detail, coherent with lush illustrated golden savanna concept art. Highest contrast in lower foothills, cooler narrower palette in far ridges. No gray-green wash, muddy brown monotone, neon yellow, black shadows, repetitive scallops, artificial polygons, or grain. Natural irregular silhouette, no rectangular border, upper third mostly transparent. Left/right land edges should have compatible height/color for repeated panoramic use; avoid a conspicuous isolated landmark. This will be wrapped around real 3D terrain; do not include a ground plane or perspective horizon line separate from the hills. Bottom fully opaque continuous land, top transparent alpha above the skyline, no text or frames.",
+  "asset": "public/assets/savanna-hills/golden-ridges-v1.webp",
+  "nativeSize": [
+    2172,
+    724
+  ],
+  "alpha": true,
+  "usage": "Illustrated distant hill ring, not a replacement sky. Painted upper-left illumination is baked artwork; foreground and apron retain physical lighting.",
+  "repetition": "Mirrored repeat four times around a 360-degree ring; raw opposite edges do not match. R1 Repeat seam was rejected; mirrored sampling fixes tested seams but can repeat geology and reverse baked light."
+}

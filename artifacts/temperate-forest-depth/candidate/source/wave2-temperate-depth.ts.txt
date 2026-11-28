@@ -1,0 +1,88 @@
+import * as T from 'three';
+import type {SceneRecipe,SceneTree} from './recipe';
+import type {Point} from './tree';
+import {libraryFoliageBatch} from './library';
+import {paintedWoodGeometry} from './paint-assets';
+import {randomSource} from './random';
+import {expansionHeight,type ExpansionPlan} from './wave2-shared';
+
+/** Presentation copies of eligible source trees, not additional occurrence data.
+ * Keep the canonical trees and their inspection identities entirely unchanged. */
+function specimen(source:SceneTree,position:Point,scale:number,index:number):SceneTree{
+ const study=source.studio!,point=(p:Point)=>p.map(v=>v*scale) as Point;
+ const segments=source.model.segments.map(s=>({...s,a:point(s.a),b:point(s.b),r0:s.r0*scale,r1:s.r1*scale}));
+ const model={...study.model,segments,parameters:{...study.model.parameters,height:study.model.parameters.height*scale,trunkRadius:study.model.parameters.trunkRadius*scale},dimensions:{height:study.model.dimensions.height*scale,crownWidth:study.model.dimensions.crownWidth*scale,crownDepth:study.model.dimensions.crownDepth*scale}};
+ return {...source,index,position,rotation:index*2.399,model,studio:{...study,model,segments,scale:study.scale*scale}};
+}
+
+function stand(trees:SceneTree[],appearance:string,bounce=false){
+ const group=new T.Group(),resources:ReturnType<typeof libraryFoliageBatch>[]=[],species=new Set(trees.map(t=>t.model.presetId));
+ for(const id of species){const f=libraryFoliageBatch(trees.filter(t=>t.model.presetId===id),id,appearance,true,true);
+  f.mesh.name='temperate-depth-source-foliage';
+  f.mesh.userData.temperateDepthFoliage=true;
+  f.mesh.material.uniforms.shadowPigment.value.set('#203e32');f.mesh.material.uniforms.midPigment.value.set(bounce?'#4b6740':'#36543c');f.mesh.material.uniforms.highPigment.value.set('#9caa65');
+  f.mesh.material.uniforms.rimStrength.value=.12;f.mesh.material.uniforms.gradientStrength.value=.35;
+  group.add(f.mesh);resources.push(f);
+ }
+ const wood=paintedWoodGeometry(trees.map(t=>({model:t.model,position:t.position,rotation:t.rotation})),true,true).geometry,material=new T.MeshLambertMaterial({vertexColors:true,color:'#a99a80'}),trunks=new T.Mesh(wood,material);trunks.name='temperate-depth-source-stems';group.add(trunks);
+ return {group,dispose:()=>{for(const f of resources){f.mesh.geometry.dispose();f.mesh.material.dispose();f.texture.dispose();}wood.dispose();material.dispose();}};
+}
+
+/** A layered forest interior rather than a ring of isolated full-height trees.
+ * Four mixed-height stand patches are baked with the existing foliage renderer;
+ * real source-linked saplings bridge them to the near stand. No painted horizon,
+ * new species, screen-space vignette, or modifications to mature-tree records. */
+export function mountTemperateDepth(scene:T.Scene,recipe:SceneRecipe,plan:ExpansionPlan){
+ const sources=recipe.trees.filter(t=>t.studio);if(!sources.length)return()=>{};
+ const r=randomSource(recipe.seed+'|temperate-depth-v1'),root=new T.Group();root.name='temperate-layered-forest-depth';scene.add(root);
+ const saplings:SceneTree[]=[];
+ for(let i=0;i<22;i++){
+  const z=23-i*3.3+(r()-.5)*5,x=(i%2?1:-1)*(5.8+r()*10),source=sources[(i*7)%sources.length],scale=(2.3+r()*3.0)/source.model.dimensions.height;
+  saplings.push(specimen(source,[x,expansionHeight(plan,x,z)-.05,z],scale,1000+i));
+ }
+ const near=stand(saplings,recipe.appearanceSeed,true);near.group.name='temperate-source-linked-saplings';root.add(near.group);
+ const tiles:number[]=[],count=210,geo=new T.PlaneGeometry(1,1),mat=new T.MeshBasicMaterial({alphaTest:.28,side:T.DoubleSide,fog:true}),o=new T.Object3D();
+ for(let i=0;i<count;i++)tiles.push(Math.floor(r()*4));geo.setAttribute('forestTile',new T.InstancedBufferAttribute(new Float32Array(tiles),1));
+ mat.onBeforeCompile=shader=>{
+  shader.vertexShader='attribute float forestTile;\n'+shader.vertexShader;
+  shader.vertexShader=shader.vertexShader.replace('#include <uv_vertex>','#include <uv_vertex>\n#ifdef USE_MAP\nvMapUv=(uv+vec2(mod(forestTile,2.),floor(forestTile/2.)))/2.;\n#endif');
+  shader.vertexShader=shader.vertexShader.replace('#include <project_vertex>',`
+   vec3 forestCenter=(modelMatrix*instanceMatrix*vec4(0.,0.,0.,1.)).xyz;
+   vec3 forestView=normalize(cameraPosition-forestCenter),forestRight=normalize(vec3(forestView.z,0.,-forestView.x));
+   vec3 forestWorld=forestCenter+forestRight*position.x*length(instanceMatrix[0].xyz)+vec3(0.,position.y*length(instanceMatrix[1].xyz),0.);
+   vec4 mvPosition=viewMatrix*vec4(forestWorld,1.);gl_Position=projectionMatrix*mvPosition;`);
+ };mat.customProgramCacheKey=()=> 'temperate-mixed-height-forest-patches-v1';
+ const wall=new T.InstancedMesh(geo,mat,count);wall.name='temperate-source-baked-forest-patches';
+ for(let i=0;i<count;i++){
+  // Three staggered, uneven rings overlap from every azimuth; their lower
+  // foliage starts at terrain height rather than exposing a shared trunk band.
+  const layer=i%3,angle=i*2.399+r()*.28,rad=38+layer*37+r()*26,x=Math.sin(angle)*rad,z=26+Math.cos(angle)*rad,h=13+r()*9;
+  o.position.set(x,expansionHeight(plan,x,z)+h*.5-.25,z);o.scale.set(h*1.65,h,1);o.updateMatrix();wall.setMatrixAt(i,o.matrix);
+  wall.setColorAt(i,new T.Color('#788c76').lerp(new T.Color('#9aa899'),layer*.28+r()*.12));
+ }
+ wall.computeBoundingSphere();root.add(wall);
+ let target:T.WebGLRenderTarget|undefined,baking=false;
+ wall.onBeforeRender=renderer=>{
+  if(target||baking)return;baking=true;
+  const rt=new T.WebGLRenderTarget(2048,2048),oldTarget=renderer.getRenderTarget(),viewport=renderer.getViewport(new T.Vector4()),scissor=renderer.getScissor(new T.Vector4()),scissorTest=renderer.getScissorTest(),clear=renderer.getClearColor(new T.Color()),alpha=renderer.getClearAlpha();
+  try{
+   renderer.setRenderTarget(rt);renderer.setScissorTest(false);renderer.setClearColor(0,0);renderer.clear();
+   const camera=new T.OrthographicCamera(-15,15,10,-10,.1,100);camera.position.set(0,10,40);camera.lookAt(0,10,0);camera.updateMatrixWorld();
+   for(let tile=0;tile<4;tile++){
+    const patch=new T.Scene(),rand=randomSource(recipe.seed+'|forest-patch-'+tile),trees:SceneTree[]=[];
+    // Upper, intermediate and low regeneration overlap vertically. The low
+    // crowns use the same regional broadleaf source, not a generic shrub taxon.
+    for(let j=0;j<26;j++){
+     const source=sources[(tile*13+j*7)%sources.length],low=j>=12,height=low?.8+rand()*5.0:8+rand()*11,x=(rand()-.5)*34,z=low?3+rand()*4:-4+rand()*7;
+     trees.push(specimen(source,[x,low?-.12:0,z],height/source.model.dimensions.height,tile*100+j));
+    }
+    const resource=stand(trees,recipe.appearanceSeed);patch.add(resource.group);
+    scene.children.forEach(light=>{if(light instanceof T.Light)patch.add(light.clone());});
+    renderer.setViewport((tile%2)*1024,Math.floor(tile/2)*1024,1024,1024);renderer.setScissor((tile%2)*1024,Math.floor(tile/2)*1024,1024,1024);renderer.setScissorTest(true);renderer.render(patch,camera);resource.dispose();
+   }
+   target=rt;mat.map=rt.texture;mat.needsUpdate=true;
+  }finally{renderer.setRenderTarget(oldTarget);renderer.setViewport(viewport);renderer.setScissor(scissor);renderer.setScissorTest(scissorTest);renderer.setClearColor(clear,alpha);baking=false;}
+ };
+ scene.userData.temperateDepth={saplings:saplings.length,forestPatches:count,atlas:[2048,2048],source:'Scaled presentation copies of existing eligible broadleaf sources; not measured regeneration or local occurrence evidence',limitations:'Source-baked patch foliage has a fixed reference key; cylindrical cards approximate distant parallax and inspection.'};
+ return()=>{scene.remove(root);near.dispose();target?.dispose();geo.dispose();mat.dispose();};
+}

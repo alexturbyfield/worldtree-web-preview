@@ -1,0 +1,60 @@
+Wildloom EncounterCompositionProfile — first Puget experiment
+
+Visuals: puget-composition-A.png, puget-composition-B.png, puget-composition-C.png;
+side-by-side puget-composition-comparison.png. Same seed 29, same human-height camera, exposure 1.12.
+A: previous lighting and composition. B: profile vegetation/focal clearing only, A's lighting unchanged.
+C: same B vegetation, profile sun/ambient/shadow controls, selected crown emphasis, separate soft cloud regions,
+and gradual background palette control. All capture error arrays are empty.
+
+Files changed: src/lib/forest/environment-foundations.ts, src/lib/forest/painted-renderer.ts,
+src/lib/forest/encounter.ts. Added scripts/studies/capture-composition.cjs. No dependencies or new assets.
+API: pugetCompositionProfile(seed) returns EncounterCompositionProfile. Set its fields and pass it as
+mountPaintedForest(..., {environment:{composition:profile}}). composition:false disables the new layer.
+Profile defines screen-space focal center/radius and center/edge density; foreground/edge density and
+cluster scale; warm sun position/color/intensity; cool ambient color/intensity; tree-shadow softness/strength;
+optional cloud count/strength/softness; focal tree count/strength; background near/far/saturation/contrast.
+
+Focal projection: five rays from the fixed encounter camera intersect the seeded terrain; a soft world-space
+ellipse approximates the projected region. Screen coordinates use 0..1, top-left origin.
+Default region: center [0.5,0.73], radius [0.29,0.13]. Resolved clearing: {'x': -1.385160085303234, 'z': -3.3993223031872475, 'radiusX': 14.477595530140524, 'radiusZ': 22.745678956979457}.
+The footprint is resolved once per mount and stays fixed during orbit. Re-mount to reproject after changing
+profile or viewport. Density and clustering are deterministic world-space masks; no screen-space vignette.
+Foreground shrubs and instanced grass prefer framing edges; the focal center rejects decorative vegetation.
+No new fern/species/prop geometry was introduced. Existing tree and rock placements stay fixed across A/B/C.
+
+Focal tree ranking uses camera-space position, projected crown-width silhouette proxy, approximate sun-facing
+position and seeded tie-breaks; screen separation avoids selecting overlapping focal crowns.
+Selected tree indices: [30, 27, 23] (0-based). Gold emphasizes lit upper/exterior foliage;
+existing pigments and interior variation are retained. Soft world-space crown volumes may influence nearby
+crossing foliage; this first version does not perform silhouette rasterization or visibility/occlusion analysis.
+
+Tree shadows remain the real alpha-masked static shadow map. PCF radius and shadow intensity are configurable.
+Two independently seeded soft cloud-transmission regions modulate direct irradiance on ground, instanced grass
+and custom crown materials. They do not replace or bake tree shadows and create no draw calls or textures.
+C removes the preceding ground albedo corner/center tints and the old clearing-light aperture; the profile
+uses vegetation, physical tree shadows and the separately identified cloud masks instead. A/B preserve
+previous presentation for an honest vegetation-only comparison. Fog is unchanged at 76–175m; profile background
+contrast/saturation ramps are separate, world-depth-based and do not fog the foreground.
+
+Ecological boundary: the profile never selects species or writes to recipe trees, models, seeds or population.
+A/B/C retain the pre-existing human encounter layout. That legacy staging is an artistic display layout,
+not surveyed locations. Inspection now returns the original procedural recipe unchanged rather than applying
+legacy encounter staging. Use the existing inspection link for that scene; orbit behavior remains available.
+Pure checks confirm inspection recipe identity, original recipe immutability, unchanged model/species references,
+deterministic profile resolution, zero focal-center density and stable masks after camera movement.
+Capture checks confirm exactly matching camera arrays, tree position-buffer fingerprints and sky bitmap hashes
+across A/B/C. Tree architecture, leaf atlases, ecological data, UI, sky and clouds are not edited.
+
+Measured steady frame: A 17 calls / 701528 triangles; B/C 17 calls / 713359 triangles.
+Grass remains three GPU-instanced draws. C instances: [{'name': 'foundation-grass-near', 'count': 1997, 'triangles': 7988}, {'name': 'foundation-grass-far', 'count': 640, 'triangles': 1280}, {'name': 'foundation-short-sward', 'count': 7007, 'triangles': 21021}].
+Desktop Chromium ANGLE SwiftShader, pixel ratio .65, existing static shadows; no physical mobile FPS measured.
+Profile construction is once per mount; no per-frame scatter or ray projection. Fragment cost adds a bounded
+maximum of three optional soft cloud regions and four focal volumes. Default is two regions / three trees.
+TypeScript and targeted determinism/preservation checks passed. No broad suites or deployment performed.
+
+Preview: http://localhost:3001/explore?lat=47.6062&lon=-122.3321&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human&composition=C
+Change composition=C to A or B. Change camera=human to camera=inspection for the original procedural scene.
+Reproduce captures: node scripts/studies/capture-composition.cjs
+Baseline source checkpoint: artifacts/composition-baseline-source/*.ts.txt.
+Caveats: framing is restrained with existing grass-like shrub geometry; the screen region is approximated by an
+ellipse on uneven terrain; focal crown selection is a cheap geometric proxy. Stop here for visual review.

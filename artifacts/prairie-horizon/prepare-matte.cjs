@@ -1,0 +1,1 @@
+const sharp=require('sharp');sharp('C:/Users/aturb/.codex/generated_images/01a205da-da33-7d33-9ee8-3170650dd5eb/exec-84da7acd-bbba-4dc6-812c-950710b51385.png').resize({width:2048,withoutEnlargement:true}).webp({quality:92}).toFile('public/assets/prairie/distant-hills-v1.webp').then(x=>console.log(x));

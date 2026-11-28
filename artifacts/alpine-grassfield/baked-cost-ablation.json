@@ -1,0 +1,55 @@
+{
+  "method": "Three fixed-camera render+one-pixel synchronous readbacks per case after warmup; wall time includes readback, not GPU timer. After atlas2, later visibility ablations keep anisotropy2.",
+  "results": [
+    {
+      "mode": "full8",
+      "times": [
+        521.8000000119209,
+        520.5999999940395,
+        529.5
+      ],
+      "calls": 12,
+      "triangles": 501884
+    },
+    {
+      "mode": "atlas2",
+      "times": [
+        479.19999998807907,
+        479.5,
+        485.2999999821186
+      ],
+      "calls": 12,
+      "triangles": 501884
+    },
+    {
+      "mode": "no-brush",
+      "times": [
+        146.2999999821186,
+        143.90000000596046,
+        144.40000000596046
+      ],
+      "calls": 11,
+      "triangles": 401660
+    },
+    {
+      "mode": "no-flowers",
+      "times": [
+        435.09999999403954,
+        435.80000001192093,
+        440.5
+      ],
+      "calls": 11,
+      "triangles": 479420
+    },
+    {
+      "mode": "ground-only",
+      "times": [
+        95.69999998807907,
+        95.90000000596046,
+        97.09999999403954
+      ],
+      "calls": 9,
+      "triangles": 337484
+    }
+  ]
+}

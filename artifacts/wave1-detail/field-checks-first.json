@@ -1,0 +1,62 @@
+[
+  {
+    "biome": "mangrove",
+    "seed": "29",
+    "stagingMinimumHeight": 0.1718982482405219,
+    "terrainSamples": 351,
+    "waterSamples": 157,
+    "visibleWaterSamples": 157,
+    "visibleWaterFraction": 0.4472934472934473,
+    "findings": []
+  },
+  {
+    "biome": "mangrove",
+    "seed": "41",
+    "stagingMinimumHeight": 0.3598221332910909,
+    "terrainSamples": 351,
+    "waterSamples": 192,
+    "visibleWaterSamples": 189,
+    "visibleWaterFraction": 0.5384615384615384,
+    "findings": []
+  },
+  {
+    "biome": "mangrove",
+    "seed": "997",
+    "stagingMinimumHeight": 0.43540280406687243,
+    "terrainSamples": 351,
+    "waterSamples": 130,
+    "visibleWaterSamples": 129,
+    "visibleWaterFraction": 0.36752136752136755,
+    "findings": []
+  },
+  {
+    "biome": "flooded",
+    "seed": "29",
+    "stagingMinimumHeight": 0.3305213145384381,
+    "terrainSamples": 351,
+    "waterSamples": 213,
+    "visibleWaterSamples": 213,
+    "visibleWaterFraction": 0.6068376068376068,
+    "findings": []
+  },
+  {
+    "biome": "flooded",
+    "seed": "41",
+    "stagingMinimumHeight": 0.3269696682848464,
+    "terrainSamples": 351,
+    "waterSamples": 169,
+    "visibleWaterSamples": 169,
+    "visibleWaterFraction": 0.48148148148148145,
+    "findings": []
+  },
+  {
+    "biome": "flooded",
+    "seed": "997",
+    "stagingMinimumHeight": 0.3310641297809657,
+    "terrainSamples": 351,
+    "waterSamples": 235,
+    "visibleWaterSamples": 235,
+    "visibleWaterFraction": 0.6695156695156695,
+    "findings": []
+  }
+]

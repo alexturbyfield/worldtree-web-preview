@@ -1,0 +1,81 @@
+import {installSavannaRepresentations} from './savanna-representations';
+import * as T from 'three';
+import profiles from './visual-lab-profiles.json';
+import {randomSource} from './random';
+import {terrainHeight,type SceneRecipe} from './recipe';
+
+type Grass=(typeof profiles.experiments.A.candidates)[number]['parameters'];
+type Ground=(typeof profiles.experiments.B.candidates)[number]['parameters'];
+type Plan={patches:{x:number;z:number;rx:number;rz:number;angle:number;strength:number}[];clearing:{x:number;z:number;rx:number;rz:number}};
+const isGround=(name:string)=>/rainforest-v[45]-(ferns|palms|seedlings|shrubs|foliage-cards|floor-decals)$/.test(name);
+
+/** Runtime experiment adapter only. Baseline remains the default; ecology and non-target meshes are untouched. */
+export function installVisualLab(scene:T.Scene,recipe:SceneRecipe,biome:'savanna'|'amazon',plan:Plan){
+ const experiment=biome==='savanna'?'A':'B',catalog=profiles.experiments[experiment],baselineGrass=scene.getObjectByName('pretty-savanna-grass') as T.InstancedMesh|undefined;
+ const saved:{mesh:T.InstancedMesh;matrix:T.BufferAttribute;color:T.BufferAttribute|null}[]=[];
+ if(experiment==='B')scene.traverse(o=>{if(o instanceof T.InstancedMesh&&isGround(o.name))saved.push({mesh:o,matrix:o.instanceMatrix.clone(),color:o.instanceColor?.clone()??null});});
+ let candidateGrass:T.InstancedMesh|undefined;
+ const target=(name:string)=>experiment==='A'?['pretty-savanna-grass','lab-savanna-grass'].includes(name):isGround(name);
+ const fingerprint=(materialTargets=new Set<string>())=>{
+  const rows:unknown[]=[scene.fog?JSON.stringify(scene.fog.toJSON()):null];
+  scene.traverse(o=>{if(target(o.name))return;if(o instanceof T.Light)rows.push([o.type,o.position.toArray(),o.color.getHex(),o.intensity]);
+   if(o instanceof T.Mesh){const g=o.geometry,p=g.getAttribute('position'),mat=Array.isArray(o.material)?o.material:[o.material];rows.push([o.name,g.uuid,p.count,p.version,o.position.toArray(),o.quaternion.toArray(),o.scale.toArray(),materialTargets.has(o.uuid)?['declared ground-material target']:mat.map(m=>[m.uuid,(m as T.MeshStandardMaterial).color?.getHex(),m.opacity])]);if(o instanceof T.InstancedMesh)rows.push(Array.from(o.instanceMatrix.array));}
+  });let hash=2166136261;for(const c of JSON.stringify(rows))hash=Math.imul(hash^c.charCodeAt(0),16777619);return (hash>>>0).toString(16);
+ };
+ const restore=()=>{if(baselineGrass)baselineGrass.visible=true;if(candidateGrass){scene.remove(candidateGrass);candidateGrass.geometry.dispose();(candidateGrass.material as T.Material).dispose();candidateGrass.dispose();candidateGrass=undefined;}for(const s of saved){s.mesh.instanceMatrix.copy(s.matrix);s.mesh.instanceMatrix.needsUpdate=true;if(s.color&&s.mesh.instanceColor){s.mesh.instanceColor.copy(s.color);s.mesh.instanceColor.needsUpdate=true;}s.mesh.computeBoundingSphere();}};
+ const apply=(id:string='baseline')=>{
+  const chosen=id==='baseline'?null:catalog.candidates.find(c=>c.id===id);if(id!=='baseline'&&!chosen)throw Error(`Unknown ${experiment} candidate ${id}`);
+  const before=fingerprint();restore();
+  if(chosen&&experiment==='A'&&baselineGrass){baselineGrass.visible=false;candidateGrass=grassCandidate(baselineGrass,recipe,plan,chosen.parameters as Grass);scene.add(candidateGrass);}
+  if(chosen&&experiment==='B')groundCandidate(saved,recipe,plan,chosen.parameters as Ground);
+  const after=fingerprint(),cells=Array(144).fill(0),coordinates=new Set<string>();let count=0,snapped=0,digest=2166136261;
+  scene.traverse(o=>{if(!(o instanceof T.InstancedMesh)||!target(o.name)||!o.visible)return;const a=o.instanceMatrix.array;for(let i=0;i<o.count;i++){const x=a[i*16+12],z=a[i*16+14];count++;cells[Math.max(0,Math.min(11,Math.floor((x+50)/100*12)))+12*Math.max(0,Math.min(11,Math.floor((z+50)/100*12)))]++;coordinates.add(x.toFixed(3)+','+z.toFixed(3));if(Math.abs(x-Math.round(x))<.015&&Math.abs(z-Math.round(z))<.015)snapped++;}for(const n of a)digest=Math.imul(digest^Math.round(n*10000),16777619);});
+  const mean=count/144,cv=Math.sqrt(cells.reduce((sum,n)=>sum+(n-mean)**2,0)/144)/Math.max(1,mean);
+  scene.userData.visualLab={schemaVersion:1,generatorVersion:profiles.generatorVersion,experiment,candidate:id,worldSeed:recipe.seed,presentationSeed:chosen?catalog.presentationSeed:'pretty-dressing-1|'+biome,retainedLitterSeed:experiment==='B'?'rainforest-depth-v5':null,parameters:chosen?.parameters??null,targetLayout:{count,occupancyCV:cv,gridAlignedFraction:snapped/Math.max(1,count),duplicatePositionFraction:1-coordinates.size/Math.max(1,count),matrixDigest:(digest>>>0).toString(16)},unchangedSystems:{before,after,match:before===after,scope:'Non-target geometry identities/attribute versions, instance transforms, material identities/colors and lights; not a full per-vertex cryptographic proof.'}};
+  scene.userData.artRevision=(scene.userData.artRevision??0)+1;
+ };
+ const representation=biome==='savanna'?installSavannaRepresentations(scene,recipe,fingerprint):undefined;
+ const dispatch=(id:string='baseline')=>{if(representation?.accepts(id)){restore();representation.apply(id);}else{representation?.reset();apply(id);}};
+ scene.userData.labApply=dispatch;
+ const requested=typeof location==='undefined'?null:new URLSearchParams(location.search).get('labCandidate');
+ if(requested&&(catalog.candidates.some(c=>c.id===requested)||representation?.accepts(requested)))dispatch(requested);
+ return()=>{representation?.dispose();restore();delete scene.userData.labApply;};
+}
+
+function grassCandidate(base:T.InstancedMesh,recipe:SceneRecipe,plan:Plan,p:Grass){
+ const atlas=p.geometry==='atlas',geometry=atlas?base.geometry.clone():ribbonGeometry(p),material=(base.material as T.MeshStandardMaterial).clone(),previous=(base.material as T.MeshStandardMaterial).onBeforeCompile;
+ material.map=atlas?material.map:null;material.vertexColors=!atlas;material.alphaTest=atlas?.4:0;
+ material.onBeforeCompile=function(shader,renderer){previous.call(this,shader,renderer);shader.fragmentShader=shader.fragmentShader.replace('vec3(0.,1.,0.))*.95','vec3(0.,1.,0.))*'+p.normalWrap.toFixed(4));if(!atlas)shader.fragmentShader=shader.fragmentShader.replace('diffuseColor.rgb=bladeValue*vec3(1.8,1.42,.68);','diffuseColor.rgb*=vec3(1.07,1.02,.9);');};material.customProgramCacheKey=()=> 'lab-grass-'+JSON.stringify(p);
+ const tiles=Float32Array.from({length:p.count},(_,i)=>i%2);geometry.setAttribute('prettyTile',new T.InstancedBufferAttribute(tiles,1));
+ const mesh=new T.InstancedMesh(geometry,material,p.count),o=new T.Object3D();mesh.name='lab-savanna-grass';mesh.receiveShadow=true;
+ for(let i=0;i<p.count;i++){
+  const r=randomSource(recipe.seed+'|grass-study-1|'+i);let x=0,z=0;
+  for(let trial=0;trial<80;trial++){const patch=plan.patches[Math.floor(r()*plan.patches.length)],broad=r()<p.broadFraction;x=broad?(r()-.5)*96:patch.x+(r()-.5)*patch.rx*3;z=broad?-48+r()*89:patch.z+(r()-.5)*patch.rz*3;if(Math.abs(x)>48||Math.abs(z)>48)continue;const mass=Math.exp(-Math.pow((x-patch.x)/patch.rx,2)-Math.pow((z-patch.z)/patch.rz,2));if(r()<p.densityFloor+(1-p.densityFloor)*mass)break;}
+  const c=plan.clearing,gap=Math.hypot((x-c.x)/c.rx,(z-c.z)/c.rz),height=p.height*(1+(r()-.5)*p.heightVariation)*(.38+.62*T.MathUtils.smoothstep(gap,.4,1.1));
+  o.position.set(x,terrainHeight(x,z,recipe.seed)-.02,z);o.rotation.set((r()-.5)*.12,r()*Math.PI*2,(r()-.5)*.1);o.scale.set(p.width*(.8+r()*.4),height,p.width*(.8+r()*.4));o.updateMatrix();mesh.setMatrixAt(i,o.matrix);mesh.setColorAt(i,new T.Color('#ffffff').lerp(new T.Color(atlas?'#e9d9ad':'#cfc895'),r()*.25));
+ }mesh.computeBoundingSphere();return mesh;
+}
+
+function ribbonGeometry(p:Grass){
+ const vertices:number[]=[],colors:number[]=[],uv:number[]=[];
+ for(let blade=0;blade<p.blades;blade++){
+  const a=blade*2.399,rad=.12+(blade%3)*.18,dir=new T.Vector3(Math.cos(a),0,Math.sin(a)),side=new T.Vector3(-dir.z,0,dir.x);
+  const point=(t:number,sign:number)=>dir.clone().multiplyScalar(rad+p.bend*t*t).addScaledVector(side,p.bladeWidth*Math.pow(1-t,.75)*sign).setY(t*(.8+(blade%3)*.12));
+  const vertex=(t:number,sign:number)=>{vertices.push(...point(t,sign).toArray());colors.push(...new T.Color(p.base).lerp(new T.Color(p.tip),t*.9).toArray());uv.push((sign+1)/2,t);};
+  for(let j=0;j<p.segments;j++){const t=j/p.segments,u=(j+1)/p.segments;vertex(t,-1);vertex(t,1);vertex(u,-1);vertex(t,1);vertex(u,1);vertex(u,-1);}
+ }
+ const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(vertices,3));g.setAttribute('color',new T.Float32BufferAttribute(colors,3));g.setAttribute('uv',new T.Float32BufferAttribute(uv,2));g.computeVertexNormals();return g;
+}
+
+function groundCandidate(saved:{mesh:T.InstancedMesh}[],recipe:SceneRecipe,plan:Plan,p:Ground){
+ const o=new T.Object3D();
+ for(const {mesh} of saved){
+  if(mesh.name.endsWith('floor-decals')){for(let i=0;i<mesh.count;i++){mesh.getMatrixAt(i,o.matrix);o.matrix.decompose(o.position,o.quaternion,o.scale);o.scale.x*=p.litterScale;o.scale.z*=p.litterScale;o.updateMatrix();mesh.setMatrixAt(i,o.matrix);}mesh.instanceMatrix.needsUpdate=true;mesh.computeBoundingSphere();continue;}
+  for(let i=0;i<mesh.count;i++){
+   const r=randomSource(recipe.seed+'|forest-floor-study-1|'+mesh.name+'|'+i);let x=0,z=0;
+   for(let trial=0;trial<100;trial++){const patch=plan.patches[Math.floor(r()*plan.patches.length)],angle=r()*Math.PI*2,rad=Math.sqrt(r());x=patch.x+Math.cos(angle)*rad*patch.rx*p.spread;z=patch.z+Math.sin(angle)*rad*patch.rz*p.spread;const c=plan.clearing,gap=Math.hypot((x-c.x)/c.rx,(z-c.z)/c.rz),approach=Math.hypot(x/3.2,(z-25)/11);if(gap>p.gap&&approach>1&&Math.abs(x)<48&&Math.abs(z)<48)break;}
+   const size=(mesh.name.includes('palms')?p.palmScale:mesh.name.includes('ferns')?p.fernScale:p.broadleafScale)*(1+(r()-.5)*p.heightVariation)*(z>16?p.foregroundScale:1);
+   o.position.set(x,terrainHeight(x,z,recipe.seed)-.015,z);o.rotation.set((r()-.5)*.1,r()*Math.PI*2,(r()-.5)*.1);o.scale.set(size*1.3,size*(mesh.name.includes('seedlings')?.75:1),size);o.updateMatrix();mesh.setMatrixAt(i,o.matrix);
+  }mesh.instanceMatrix.needsUpdate=true;mesh.computeBoundingSphere();
+ }
+}

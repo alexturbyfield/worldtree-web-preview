@@ -1,0 +1,51 @@
+[
+  {
+    "name": "puget-hero",
+    "before": "artifacts/visual-quality/wave1-protected-before/puget-hero.png",
+    "after": "artifacts/visual-quality/wave1-protected-depth/puget-hero.png",
+    "changedPixels": 0,
+    "pixelIdentical": true
+  },
+  {
+    "name": "rainforest-hero",
+    "before": "artifacts/visual-quality/wave1-protected-before/rainforest-hero.png",
+    "after": "artifacts/visual-quality/wave1-protected-depth/rainforest-hero.png",
+    "changedPixels": 0,
+    "pixelIdentical": true
+  },
+  {
+    "name": "rainforest-inspection",
+    "before": "artifacts/visual-quality/wave1-protected-before/rainforest-inspection.png",
+    "after": "artifacts/visual-quality/wave1-protected-depth/rainforest-inspection.png",
+    "changedPixels": 0,
+    "pixelIdentical": true
+  },
+  {
+    "name": "savanna-hero",
+    "before": "artifacts/visual-quality/wave1-savanna-before/savanna-hero.png",
+    "after": "artifacts/visual-quality/wave1-savanna-depth/savanna-hero.png",
+    "changedPixels": 0,
+    "pixelIdentical": true
+  },
+  {
+    "name": "savanna-inspection",
+    "before": "artifacts/visual-quality/wave1-savanna-before/savanna-inspection.png",
+    "after": "artifacts/visual-quality/wave1-savanna-depth/savanna-inspection.png",
+    "changedPixels": 0,
+    "pixelIdentical": true
+  },
+  {
+    "name": "alpine-hero",
+    "before": "artifacts/visual-quality/wave1-alpine-before/alpine-hero.png",
+    "after": "artifacts/visual-quality/wave1-alpine-depth/alpine-hero.png",
+    "changedPixels": 0,
+    "pixelIdentical": true
+  },
+  {
+    "name": "alpine-inspection",
+    "before": "artifacts/visual-quality/wave1-alpine-before/alpine-inspection.png",
+    "after": "artifacts/visual-quality/wave1-alpine-depth/alpine-inspection.png",
+    "changedPixels": 0,
+    "pixelIdentical": true
+  }
+]

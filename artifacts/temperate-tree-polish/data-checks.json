@@ -1,0 +1,26 @@
+[
+  {
+    "seed": "29",
+    "sourceUnchanged": true,
+    "deterministic": true,
+    "branchPositionsAndRadiiUnchanged": true,
+    "treePlacementsUnchanged": true,
+    "wrongAtlasCells": 0,
+    "trees": 48,
+    "birches": 12,
+    "frondsBefore": 53136,
+    "frondsAfter": 63072
+  },
+  {
+    "seed": "41",
+    "sourceUnchanged": true,
+    "deterministic": true,
+    "branchPositionsAndRadiiUnchanged": true,
+    "treePlacementsUnchanged": true,
+    "wrongAtlasCells": 0,
+    "trees": 48,
+    "birches": 18,
+    "frondsBefore": 54216,
+    "frondsAfter": 69120
+  }
+]

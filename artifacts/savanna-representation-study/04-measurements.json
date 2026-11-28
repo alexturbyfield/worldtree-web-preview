@@ -1,0 +1,533 @@
+{
+  "diagnosisFreezeVerified": true,
+  "metrics": [
+    {
+      "id": "baseline",
+      "source": "artifacts/visual-quality/lab-S-r2-baseline/savanna-hero.png",
+      "scales": [
+        {
+          "resolution": [
+            160,
+            90
+          ],
+          "roi": "lower 48%; reference content/camera differ, so descriptive calibration only",
+          "meanLuminance": 0.4932945872188551,
+          "luminanceStdDev": 0.11616526489241975,
+          "meanGradient": 0.0607900537124961,
+          "edgeFractionAbove008": 0.26748040988547317
+        },
+        {
+          "resolution": [
+            640,
+            360
+          ],
+          "roi": "lower 48%; reference content/camera differ, so descriptive calibration only",
+          "meanLuminance": 0.49131672068899884,
+          "luminanceStdDev": 0.16858543454057906,
+          "meanGradient": 0.09241285198603723,
+          "edgeFractionAbove008": 0.44398614090084143
+        }
+      ]
+    },
+    {
+      "id": "sa",
+      "source": "artifacts/visual-quality/lab-S-r2-sa/savanna-hero.png",
+      "scales": [
+        {
+          "resolution": [
+            160,
+            90
+          ],
+          "roi": "lower 48%; reference content/camera differ, so descriptive calibration only",
+          "meanLuminance": 0.5097816629436542,
+          "luminanceStdDev": 0.11878507797950599,
+          "meanGradient": 0.06366483774509328,
+          "edgeFractionAbove008": 0.33001808318264014
+        },
+        {
+          "resolution": [
+            640,
+            360
+          ],
+          "roi": "lower 48%; reference content/camera differ, so descriptive calibration only",
+          "meanLuminance": 0.5077744313496526,
+          "luminanceStdDev": 0.14249543507759288,
+          "meanGradient": 0.042980934617026255,
+          "edgeFractionAbove008": 0.19693303268620874
+        }
+      ]
+    },
+    {
+      "id": "sb",
+      "source": "artifacts/visual-quality/lab-S-r2-sb/savanna-hero.png",
+      "scales": [
+        {
+          "resolution": [
+            160,
+            90
+          ],
+          "roi": "lower 48%; reference content/camera differ, so descriptive calibration only",
+          "meanLuminance": 0.5123239176683326,
+          "luminanceStdDev": 0.06925235359239093,
+          "meanGradient": 0.017843007742946695,
+          "edgeFractionAbove008": 0.044454490657022304
+        },
+        {
+          "resolution": [
+            640,
+            360
+          ],
+          "roi": "lower 48%; reference content/camera differ, so descriptive calibration only",
+          "meanLuminance": 0.5106288695934666,
+          "luminanceStdDev": 0.07688641571181944,
+          "meanGradient": 0.010766165362806496,
+          "edgeFractionAbove008": 0.04373132413059818
+        }
+      ]
+    },
+    {
+      "id": "sc",
+      "source": "artifacts/visual-quality/lab-S-r2-sc/savanna-hero.png",
+      "scales": [
+        {
+          "resolution": [
+            160,
+            90
+          ],
+          "roi": "lower 48%; reference content/camera differ, so descriptive calibration only",
+          "meanLuminance": 0.514057893959267,
+          "luminanceStdDev": 0.09129892254098408,
+          "meanGradient": 0.039794614891519295,
+          "edgeFractionAbove008": 0.16018685955394815
+        },
+        {
+          "resolution": [
+            640,
+            360
+          ],
+          "roi": "lower 48%; reference content/camera differ, so descriptive calibration only",
+          "meanLuminance": 0.5119958401998774,
+          "luminanceStdDev": 0.10689015967988325,
+          "meanGradient": 0.026473729867356716,
+          "edgeFractionAbove008": 0.11004784688995216
+        }
+      ]
+    },
+    {
+      "id": "reference-wide",
+      "source": ".codex-attachments/0cd44ce1-629d-4f8a-9bd2-2061fb7f1332/0d727cc7-0268-4165-98a5-d7a54546ce02/1000011014.png",
+      "scales": [
+        {
+          "resolution": [
+            160,
+            90
+          ],
+          "roi": "lower 48%; reference content/camera differ, so descriptive calibration only",
+          "meanLuminance": 0.5279643055703298,
+          "luminanceStdDev": 0.13552226901552952,
+          "meanGradient": 0.05245242212771708,
+          "edgeFractionAbove008": 0.19107896323086196
+        },
+        {
+          "resolution": [
+            640,
+            360
+          ],
+          "roi": "lower 48%; reference content/camera differ, so descriptive calibration only",
+          "meanLuminance": 0.5240842849116745,
+          "luminanceStdDev": 0.1453221583552226,
+          "meanGradient": 0.040430476731651434,
+          "edgeFractionAbove008": 0.12049716768410053
+        }
+      ]
+    },
+    {
+      "id": "reference-flow",
+      "source": ".codex-attachments/0cd44ce1-629d-4f8a-9bd2-2061fb7f1332/268a9f8a-a89e-46f8-8243-3f84016fa18d/1000011015.png",
+      "scales": [
+        {
+          "resolution": [
+            160,
+            90
+          ],
+          "roi": "lower 48%; reference content/camera differ, so descriptive calibration only",
+          "meanLuminance": 0.47595876561594985,
+          "luminanceStdDev": 0.12786115082398472,
+          "meanGradient": 0.03939358978915956,
+          "edgeFractionAbove008": 0.06735985533453888
+        },
+        {
+          "resolution": [
+            640,
+            360
+          ],
+          "roi": "lower 48%; reference content/camera differ, so descriptive calibration only",
+          "meanLuminance": 0.4727591843275381,
+          "luminanceStdDev": 0.1349519269547297,
+          "meanGradient": 0.034034258484888745,
+          "edgeFractionAbove008": 0.07191699206218262
+        }
+      ]
+    }
+  ],
+  "performance": [
+    {
+      "id": "baseline",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 8,
+          "triangles": 57350,
+          "cpuSubmissionMs": [
+            0.3999999910593033,
+            0.30000001192092896,
+            0.29999999701976776
+          ],
+          "synchronousCompletionMs": [
+            0.3999999910593033,
+            0.30000001192092896,
+            0.29999999701976776
+          ],
+          "targetInstances": 11000,
+          "visibleInstances": [
+            {
+              "name": "biome-shrub",
+              "count": 35
+            },
+            {
+              "name": "biome-understory",
+              "count": 0
+            },
+            {
+              "name": "pretty-savanna-grass",
+              "count": 11000
+            }
+          ],
+          "deterministic": true,
+          "invariantMatch": true,
+          "errors": []
+        },
+        {
+          "view": "inspection",
+          "calls": 8,
+          "triangles": 57350,
+          "cpuSubmissionMs": [
+            0.4000000059604645,
+            0.19999998807907104,
+            0.09999999403953552
+          ],
+          "synchronousCompletionMs": [
+            0.4000000059604645,
+            0.29999999701976776,
+            0.09999999403953552
+          ],
+          "targetInstances": 11000,
+          "visibleInstances": [
+            {
+              "name": "biome-shrub",
+              "count": 35
+            },
+            {
+              "name": "biome-understory",
+              "count": 0
+            },
+            {
+              "name": "pretty-savanna-grass",
+              "count": 11000
+            }
+          ],
+          "deterministic": true,
+          "invariantMatch": true,
+          "errors": []
+        }
+      ],
+      "objectiveFindings": []
+    },
+    {
+      "id": "sa",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 9,
+          "triangles": 58710,
+          "cpuSubmissionMs": [
+            0.5,
+            0.29999999701976776,
+            0.20000000298023224
+          ],
+          "synchronousCompletionMs": [
+            0.5,
+            0.29999999701976776,
+            0.20000000298023224
+          ],
+          "targetInstances": 580,
+          "visibleInstances": [
+            {
+              "name": "biome-shrub",
+              "count": 35
+            },
+            {
+              "name": "biome-understory",
+              "count": 0
+            },
+            {
+              "name": "lab-savanna-grass",
+              "count": 400
+            },
+            {
+              "name": "lab-savanna-grass",
+              "count": 180
+            }
+          ],
+          "deterministic": true,
+          "invariantMatch": true,
+          "errors": []
+        },
+        {
+          "view": "inspection",
+          "calls": 9,
+          "triangles": 58710,
+          "cpuSubmissionMs": [
+            0.4000000059604645,
+            0.19999998807907104,
+            0.20000000298023224
+          ],
+          "synchronousCompletionMs": [
+            0.4000000059604645,
+            0.19999998807907104,
+            0.20000000298023224
+          ],
+          "targetInstances": 580,
+          "visibleInstances": [
+            {
+              "name": "biome-shrub",
+              "count": 35
+            },
+            {
+              "name": "biome-understory",
+              "count": 0
+            },
+            {
+              "name": "lab-savanna-grass",
+              "count": 400
+            },
+            {
+              "name": "lab-savanna-grass",
+              "count": 180
+            }
+          ],
+          "deterministic": true,
+          "invariantMatch": true,
+          "errors": []
+        }
+      ],
+      "objectiveFindings": []
+    },
+    {
+      "id": "sb",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 8,
+          "triangles": 21150,
+          "cpuSubmissionMs": [
+            0.4000000059604645,
+            0,
+            0.09999999403953552
+          ],
+          "synchronousCompletionMs": [
+            0.5,
+            0.10000000894069672,
+            0.09999999403953552
+          ],
+          "targetInstances": 650,
+          "visibleInstances": [
+            {
+              "name": "biome-shrub",
+              "count": 35
+            },
+            {
+              "name": "biome-understory",
+              "count": 0
+            },
+            {
+              "name": "lab-savanna-grass",
+              "count": 650
+            }
+          ],
+          "deterministic": true,
+          "invariantMatch": true,
+          "errors": []
+        },
+        {
+          "view": "inspection",
+          "calls": 8,
+          "triangles": 21150,
+          "cpuSubmissionMs": [
+            0.29999999701976776,
+            0.09999999403953552,
+            0.20000000298023224
+          ],
+          "synchronousCompletionMs": [
+            0.4000000059604645,
+            0.09999999403953552,
+            0.20000000298023224
+          ],
+          "targetInstances": 650,
+          "visibleInstances": [
+            {
+              "name": "biome-shrub",
+              "count": 35
+            },
+            {
+              "name": "biome-understory",
+              "count": 0
+            },
+            {
+              "name": "lab-savanna-grass",
+              "count": 650
+            }
+          ],
+          "deterministic": true,
+          "invariantMatch": true,
+          "errors": []
+        }
+      ],
+      "objectiveFindings": [
+        {
+          "severity": "info",
+          "defect": "Insufficient projected lower-half vegetation coverage",
+          "measurements": {
+            "coverage": 0.0209375,
+            "threshold": 0.15
+          },
+          "note": "Raw geometry mask excludes the declared grassland material; require multiscale surface/vision review.",
+          "inherited": false,
+          "view": "hero"
+        },
+        {
+          "severity": "info",
+          "defect": "Insufficient projected lower-half vegetation coverage",
+          "measurements": {
+            "coverage": 0.014383680555555556,
+            "threshold": 0.15
+          },
+          "note": "Raw geometry mask excludes the declared grassland material; require multiscale surface/vision review.",
+          "inherited": false,
+          "view": "inspection"
+        },
+        {
+          "severity": "major",
+          "defect": "Near-black vegetation in the reviewed sunlit ROI",
+          "measurements": {
+            "roi": [
+              0.65,
+              0.65,
+              0.98,
+              0.98
+            ],
+            "maskPixels": 72,
+            "nearBlackFraction": 0.2222222222222222,
+            "method": "Actual vegetation silhouette inside a manually reviewed approximate sunlit ROI; not a physical sunlight classification"
+          },
+          "inherited": false,
+          "view": "inspection"
+        }
+      ]
+    },
+    {
+      "id": "sc",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 11,
+          "triangles": 80870,
+          "cpuSubmissionMs": [
+            0.7000000029802322,
+            0.29999999701976776,
+            0.4000000059604645
+          ],
+          "synchronousCompletionMs": [
+            0.7000000029802322,
+            0.29999999701976776,
+            0.4000000059604645
+          ],
+          "targetInstances": 800,
+          "visibleInstances": [
+            {
+              "name": "biome-shrub",
+              "count": 35
+            },
+            {
+              "name": "biome-understory",
+              "count": 0
+            },
+            {
+              "name": "lab-savanna-grass",
+              "count": 160
+            },
+            {
+              "name": "lab-savanna-grass",
+              "count": 90
+            },
+            {
+              "name": "lab-savanna-grass",
+              "count": 550
+            }
+          ],
+          "deterministic": true,
+          "invariantMatch": true,
+          "errors": []
+        },
+        {
+          "view": "inspection",
+          "calls": 11,
+          "triangles": 80870,
+          "cpuSubmissionMs": [
+            0.7000000029802322,
+            0.29999999701976776,
+            0.4000000059604645
+          ],
+          "synchronousCompletionMs": [
+            0.7000000029802322,
+            0.29999999701976776,
+            0.4000000059604645
+          ],
+          "targetInstances": 800,
+          "visibleInstances": [
+            {
+              "name": "biome-shrub",
+              "count": 35
+            },
+            {
+              "name": "biome-understory",
+              "count": 0
+            },
+            {
+              "name": "lab-savanna-grass",
+              "count": 160
+            },
+            {
+              "name": "lab-savanna-grass",
+              "count": 90
+            },
+            {
+              "name": "lab-savanna-grass",
+              "count": 550
+            }
+          ],
+          "deterministic": true,
+          "invariantMatch": true,
+          "errors": []
+        }
+      ],
+      "objectiveFindings": []
+    }
+  ],
+  "limitations": [
+    "No artistic approval from metrics.",
+    "Geometry mask excludes grassland substrate; inspect ground visually.",
+    "Submission and synchronous completion are wall times, not GPU timers or a mobile benchmark.",
+    "Reference and render content differ; edge density is descriptive, not a universal aesthetic score."
+  ]
+}

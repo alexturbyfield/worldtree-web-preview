@@ -1,0 +1,17 @@
+{
+  "mode": "built-in image_gen",
+  "assets": [
+    {
+      "id": "boreal-floor-v1",
+      "prompt": "Production game terrain base-color texture, square 2048x2048. Genuine seamless repeating top-down boreal forest floor ALBEDO, matching left/right and top/bottom edges. Intricate tiny moss cushions interwoven with brown conifer needle duff, weathered bark crumbs, tiny fine roots, a few minute muted decomposing leaf fragments. A beautiful painterly naturalistic material appropriate to a sheltered spruce/pine forest, rich soft moss greens, muted emerald and olive, warm ochre moss tips, umber organic substrate. Soft irregular connected moss/duff transitions, small-scale varied structure with restrained contrast. Depict roughly 2 metres square of ground; no large plants, no fern silhouettes, no boulders, no mushrooms, no flowers, no path. Flat even diffuse material capture, no baked shadows, no sun patches, no directional lighting, no perspective, no vignette, no dominant landmark, no text or border. Painterly detail should remain readable but support broad coherent terrain color masses rather than noisy green specks. Full-frame opaque texture only."
+    },
+    {
+      "id": "temperate-floor-v1",
+      "prompt": "Production game terrain base-color texture, square 2048x2048. Genuine seamless repeating top-down temperate broadleaf woodland floor ALBEDO with matching opposite edges. Rich intimate surface texture: overlapping curled decomposing small broad leaves in muted warm tan, brown and ochre, dark organic earth, thin roots, minute bark fragments and irregular soft green moss infiltrating the litter. Painterly botanical naturalism, beautifully layered physical surface detail but restrained local contrast. Roughly 2 metres square of ground, varied fragment sizes and orientations with organic continuity; no large recognizable leaf repeated as a landmark, no rocks larger than pebbles, no tall vegetation or fern silhouettes, no flowers, no paths. Warm umber/tan litter and cool green moss, never a uniform orange carpet. Even diffuse lighting, no cast shadows, no baked sunlight pools, no vignette, no perspective, no objects, no text or border. Full-frame opaque texture only."
+    },
+    {
+      "id": "tundra-floor-v1",
+      "prompt": "Production game terrain base-color texture, square 2048x2048. Genuine seamless repeating top-down tundra ground ALBEDO with matching left/right and top/bottom edges. Intricate continuous low moss and crusty pale sage/cream lichen interlocking with fine mineral grit, small weathered gray pebbles, restrained olive and gold tiny organic leaves and muted dark humus. Rich painterly naturalism like an exquisite environmental concept floor, but flat even diffuse albedo without baked sun or shadows. Depict about 2 metres square, fine connected biological texture, soft irregular transitions, balanced mineral and vegetated detail. Low-contrast olive, sage, warm straw, cool gray and restrained earthy pigments; no bright orange, no desert sand expanse. No tall grass, no broadleaf plant silhouettes, no flowers, no snow, no water, no large stones, no branches, no path, no circles or tiled patch stamps, no perspective, no border or labels. Full-frame opaque seamless material texture only."
+    }
+  ]
+}

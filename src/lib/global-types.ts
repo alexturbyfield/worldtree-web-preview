@@ -1,3 +1,4 @@
+import type {RegionalPlant} from './regional-land-cover';
 import type { EcoProperties } from './geography';
 import type { TreeCandidate } from './catalog';
 
@@ -10,6 +11,8 @@ export interface Taxon {
   ipniId: string | null; powoId: string; commonNames: string[]; commonNameEvidence: string; synonyms: string[];
   nativeRange: string; nativeAreaCodes: string[]; growthForm: string; climate: string;
   leafHabit: string | null; matureHeightM: [number,number] | null; role: string; archetype: string;
+  /** Canonical game-export height range; omitted when not sourced. */
+  heightMeters?: [number,number];
   archetypeEvidence: string; sourceId: string; evidenceUrl: string; taxonomyConfidence: string;
   rangeConfidence: string; ecoregionVerified: boolean; habitatVerified: boolean;
   taxonId:string; nativeRegions:string[]; ecoregionIds:string[]; biomeIds:number[]; habitats:string[];
@@ -21,6 +24,7 @@ export interface VegetationProfile {
   habitat: VegetationHabitat; seed: string; evidenceLevel: EvidenceLevel;
   status: 'species_candidates' | 'growth_form_fallback' | 'naturally_treeless' | 'open_vegetation' | 'insufficient_data';
   title: string; description: string; growthForms: {name:string;archetype:string;conditional:boolean}[];
+  landCover?: RegionalPlant[];
   species: Taxon[]; regionalSpeciesCount: number; provisionalCandidates: TreeCandidate[];
   limitations: string[]; sources: {name:string;url:string;license:string}[];
   procedural: {method:string;paletteLimit:number;spawnWeights:null;abundance:null};

@@ -1,0 +1,419 @@
+{
+  "schemaVersion": 1,
+  "id": "savanna-reference-recipe-1",
+  "biome": "savanna",
+  "provenance": {
+    "references": [
+      "savanna-composition",
+      "savanna-grass",
+      "savanna-light",
+      "savanna-geology"
+    ],
+    "negativeExamples": [
+      "artifacts/visual-learning-lab/S-r1/record.json",
+      "artifacts/visual-learning-lab/S-r2/record.json"
+    ],
+    "sourceVersion": "recipe-1"
+  },
+  "hypothesis": "A directional painted substrate establishes connected grassland values first; shared pigment and growth fields then coordinate vegetation height, soil exposure and rock-contact framing. Local geometry decorates a landscape that already reads coherently without it.",
+  "systemsChanged": [
+    "terrain material",
+    "existing distant-landform material",
+    "decorative grass representation/distribution",
+    "foreground rock dressing",
+    "shared localized surface-light response"
+  ],
+  "parameters": {
+    "revision": 4,
+    "tileMeters": 27,
+    "textureContrast": 0.42,
+    "macroContrast": 1.65,
+    "grassInstances": 5200,
+    "grassHeight": 0.75,
+    "bladeWidth": 0.055,
+    "foregroundClusterCount": 3,
+    "rockInstancesPerCluster": 5,
+    "shadowStrength": 0.72,
+    "seeds": [
+      "29",
+      "41",
+      "73"
+    ],
+    "presentationSeed": "reference-recipe-1"
+  },
+  "rules": [
+    {
+      "id": "R1",
+      "principle": "Connected large values precede detailed objects.",
+      "referenceEvidence": [
+        {
+          "referenceId": "savanna-composition",
+          "observation": "An expansive golden middle field connects foreground vegetation and scattered acacias; cooler shapes interrupt it broadly rather than as tiny dark outlines."
+        }
+      ],
+      "intendedEffect": "Readable land masses at thumbnail scale.",
+      "systems": [
+        "terrain pigment",
+        "localized light"
+      ],
+      "implementation": "Proposed: elongated low-frequency world-space pigment/light fields with restrained painted detail.",
+      "evaluation": "Inspect 160x90 and blurred frames; vegetation-free ground must retain grassland character and a readable opening.",
+      "confidence": "high",
+      "biomeConstraints": "Dry golden grass, muted olive shade; maintain open savanna.",
+      "reuse": "Universal value hierarchy; change ecological palette and characteristic forms.",
+      "status": "experimentally-supported",
+      "evidence": [
+        {
+          "experiment": "A-3",
+          "images": [
+            "artifacts/visual-quality/recipe-A-3-r-control/savanna-hero.png",
+            "artifacts/visual-quality/recipe-A-3-r-control/savanna-inspection.png",
+            "artifacts/visual-quality/recipe-A-3-r-ground/savanna-hero.png",
+            "artifacts/visual-quality/recipe-A-3-r-ground/savanna-inspection.png"
+          ],
+          "scope": "Ground-only foundation relative to retained ground control; not proof that these implementations solve full composition or generalize to all biomes."
+        }
+      ],
+      "humanApproval": null
+    },
+    {
+      "id": "R2",
+      "principle": "Light and shade form related directional masses, not unrelated object outlines.",
+      "referenceEvidence": [
+        {
+          "referenceId": "savanna-light",
+          "observation": "Golden tops and cooler shaded interiors recur across grass, rock and tree framing while the open middle remains luminous."
+        }
+      ],
+      "intendedEffect": "Warm/cool separation and coherent focal emphasis.",
+      "systems": [
+        "ground response",
+        "vegetation response",
+        "physical shadows"
+      ],
+      "implementation": "Proposed: preserve sun and tree shadow maps; coordinate restrained surface warmth through one world-space field. Grass does not cast individual card shadows.",
+      "evaluation": "Compare shadowed bases, lit tips and rock contact; reject uniform yellow tint or black bases.",
+      "confidence": "high",
+      "biomeConstraints": "Dry grass must not become neon; existing sky and primary tree lighting retained.",
+      "reuse": "Shared lighting relationships generalize; golden savanna pigment does not.",
+      "status": "proposed",
+      "evidence": [],
+      "humanApproval": null
+    },
+    {
+      "id": "R3",
+      "principle": "Large, medium and fine frequencies have distinct compositional work.",
+      "referenceEvidence": [
+        {
+          "referenceId": "savanna-grass",
+          "observation": "Connected wind-swept groups remain visible when individual blades disappear; a few foreground blades and crests carry sharper detail."
+        }
+      ],
+      "intendedEffect": "Richness without granular clutter.",
+      "systems": [
+        "painted surface",
+        "vegetation geometry",
+        "distance suppression"
+      ],
+      "implementation": "Proposed: albedo brush masses, correlated growth envelopes, fine flexible ribbons selected near camera and silhouettes; no crossed opaque mound surfaces.",
+      "evaluation": "Review thumbnail, 640px and native crop; compare edge energy descriptively, never minimize it as an aesthetic score.",
+      "confidence": "high",
+      "biomeConstraints": "No skeletal pale fans or radial agave-like repetition.",
+      "reuse": "Frequency hierarchy universal; blade form specific to grassland.",
+      "status": "experimentally-supported",
+      "evidence": [
+        {
+          "experiment": "A-3",
+          "images": [
+            "artifacts/visual-quality/recipe-A-3-r-control/savanna-hero.png",
+            "artifacts/visual-quality/recipe-A-3-r-control/savanna-inspection.png",
+            "artifacts/visual-quality/recipe-A-3-r-ground/savanna-hero.png",
+            "artifacts/visual-quality/recipe-A-3-r-ground/savanna-inspection.png"
+          ],
+          "scope": "Ground-only foundation relative to retained ground control; not proof that these implementations solve full composition or generalize to all biomes."
+        }
+      ],
+      "humanApproval": null
+    },
+    {
+      "id": "R4",
+      "principle": "Plant bases and substrate belong to one continuous pigment/value field.",
+      "referenceEvidence": [
+        {
+          "referenceId": "savanna-grass",
+          "observation": "Cool bases merge into nearby ground while straw tops distinguish grass groups. Exposed earth occurs as soft transitions rather than a cleared stage."
+        }
+      ],
+      "intendedEffect": "Remove pasted-on vegetation and exclusion-mask clearing.",
+      "systems": [
+        "surface palette",
+        "growth density",
+        "soil exposure"
+      ],
+      "implementation": "Proposed: shared world sampling for terrain and blade base; gradual height reduction through focal area, soft soil coverage near geological anchors.",
+      "evaluation": "Check a sparse center and dense edge side by side; reject binary bare ovals and black root outlines.",
+      "confidence": "high",
+      "biomeConstraints": "Opening remains low-growing grassland, not a new path.",
+      "reuse": "Universal coordination; soil/grass palettes biome-specific.",
+      "status": "proposed",
+      "evidence": [],
+      "humanApproval": null
+    },
+    {
+      "id": "R5",
+      "principle": "Terrain flow and vegetation lean support related, irregular directional sweeps.",
+      "referenceEvidence": [
+        {
+          "referenceId": "savanna-grass",
+          "observation": "Curving grass ribbons overlap through the foreground and gently turn around open regions without forming equal rows."
+        }
+      ],
+      "intendedEffect": "Soft rolling visual rhythm.",
+      "systems": [
+        "surface coordinates",
+        "growth height",
+        "blade lean"
+      ],
+      "implementation": "Proposed: smoothly varying seeded wind/growth coordinates shared by painted detail and instance layout; keep existing terrain heights.",
+      "evaluation": "Inspection view must avoid stripes, rectangular islands, gridded stamping and repetitive scallops.",
+      "confidence": "medium",
+      "biomeConstraints": "Do not turn savanna into uniformly groomed turf.",
+      "reuse": "Correlated ecological flow reusable; its scale/orientation must follow local terrain and biome.",
+      "status": "proposed",
+      "evidence": [],
+      "humanApproval": null
+    },
+    {
+      "id": "R6",
+      "principle": "Foreground anchors carry weight through clustering, overlap and contact.",
+      "referenceEvidence": [
+        {
+          "referenceId": "savanna-composition",
+          "observation": "A few broad rocks overlap grass and dark soil, creating an asymmetric foreground mass rather than evenly distributed decorative pebbles."
+        }
+      ],
+      "intendedEffect": "Natural framing and scale cues while leaving the encounter visible.",
+      "systems": [
+        "rock geometry",
+        "terrain placement",
+        "soil/contact fields",
+        "grass overlap"
+      ],
+      "implementation": "Proposed: seeded parent clusters on terrain shoulders outside the focal opening, partially buried weathered rocks and overlapping growth; no copied image positions.",
+      "evaluation": "Read clusters as geological anchors at thumbnail size; inspect terrain contact and vegetation intersection.",
+      "confidence": "high",
+      "biomeConstraints": "Modest weathered outcrop clusters, no arbitrary landmarks or new biome geology assertions.",
+      "reuse": "Hierarchical anchored dressing universal; geology/material must be regional.",
+      "status": "proposed",
+      "evidence": [],
+      "humanApproval": null
+    },
+    {
+      "id": "R7",
+      "principle": "Depth progressively compresses contrast, detail and palette.",
+      "referenceEvidence": [
+        {
+          "referenceId": "savanna-composition",
+          "observation": "Foreground gold/olive contrasts give way to quieter cool blue-green distant geological layers beneath expansive sky."
+        }
+      ],
+      "intendedEffect": "Connect near land to distant landscape without foreground wash.",
+      "systems": [
+        "distant-landform material",
+        "ground distance response",
+        "vegetation detail"
+      ],
+      "implementation": "Proposed: grade existing landform material by world height/distance, and suppress fine surface/geometry contrast with depth; retain sky asset.",
+      "evaluation": "Hero and inspection must not expose an unshaded beige wall or abrupt grass-detail cutoff.",
+      "confidence": "high",
+      "biomeConstraints": "Preserve long-distance visibility and open sky, no rainforest fog.",
+      "reuse": "Depth organization universal; cool arid atmosphere is regional.",
+      "status": "proposed",
+      "evidence": [],
+      "humanApproval": null
+    },
+    {
+      "id": "R8",
+      "principle": "Painterly cohesion comes from shared edge and shape decisions, not a global filter.",
+      "referenceEvidence": [
+        {
+          "referenceId": "savanna-light",
+          "observation": "Sky, grass swathes and distant forms share selective soft edges and restrained fine accents while retaining distinct material identities."
+        }
+      ],
+      "intendedEffect": "Land and illustrated sky feel authored together.",
+      "systems": [
+        "ground brush detail",
+        "geometry silhouette",
+        "material contrast"
+      ],
+      "implementation": "Proposed: use diffuse painterly surface artwork, smooth vegetation normals and selective fine geometry; no bloom or screen filter.",
+      "evaluation": "Compare land and sky at normal/thumbnail scale; reject abrupt faceted masses and equally sharp edges everywhere.",
+      "confidence": "high",
+      "biomeConstraints": "Preserve current sky and primary trees in this experiment.",
+      "reuse": "Painterly edge hierarchy reusable, textures and silhouettes remain biome-dependent.",
+      "status": "proposed",
+      "evidence": [],
+      "humanApproval": null
+    }
+  ],
+  "experiments": [
+    {
+      "id": "A-1",
+      "principleIds": [
+        "R1",
+        "R3",
+        "R4",
+        "R7"
+      ],
+      "implementation": "Generated painterly fibre albedo plus continuous world pigment fields; no grass geometry, existing terrain/distant material only.",
+      "captures": [
+        "artifacts/visual-quality/recipe-A1-baseline/savanna-hero.png",
+        "artifacts/visual-quality/recipe-A1-baseline/savanna-inspection.png",
+        "artifacts/visual-quality/recipe-A1-r-control/savanna-hero.png",
+        "artifacts/visual-quality/recipe-A1-r-control/savanna-inspection.png",
+        "artifacts/visual-quality/recipe-A1-r-ground/savanna-hero.png",
+        "artifacts/visual-quality/recipe-A1-r-ground/savanna-inspection.png"
+      ],
+      "seeds": [
+        "29"
+      ],
+      "parameters": {
+        "revision": 1,
+        "tileMeters": 18,
+        "textureContrast": 0.42,
+        "macroContrast": 0.65,
+        "grassInstances": 7200,
+        "grassHeight": 0.75,
+        "bladeWidth": 0.055,
+        "foregroundClusterCount": 3,
+        "rockInstancesPerCluster": 5,
+        "shadowStrength": 0.72,
+        "seeds": [
+          "29",
+          "41",
+          "73"
+        ],
+        "presentationSeed": "reference-recipe-1"
+      },
+      "sourceVersion": {
+        "src/lib/forest/savanna-recipe.ts": "af7be5e47272a7a6f7e47cf4c42090649bf5756ab0884c2a08150f0fc8a126f3",
+        "src/lib/forest/visual-lab.ts": "dbdbfa71b4cd08cf42819d2bed85ef26f6589d22a47b8d0067e4b37f39b1ae6b",
+        "visual-lab/savanna-recipe.json": "85c8165772887bdd7d101caf346483ec514849c249ef201546a800fcc011f0ef",
+        "visual-lab/recipe.schema.json": "f226449b48615522fce8b184eb4ddb15510959df8efb56441475fd6031373b9c",
+        "scripts/studies/visual-quality.cjs": "efaa57cc1d081b521bc0c4336ecb0b53f93e28953a684a8e3b24e168819ef403",
+        "asset": "f7668bc9fee9ac97038dce34aeef7b31b9a1fb92069f63e4df06069acc6e1de5"
+      },
+      "demonstrated": "Connected brushed surface reads more like grass than retained bare ochre; distant material is less disconnected. Broad composition still insufficient.",
+      "improved": true,
+      "failure": "Insufficient value/temperature hierarchy; gate not passed.",
+      "reusable": "Ground-first isolation exposes palette problems that geometry would conceal.",
+      "specific": "Dry golden painted fibre texture is savanna-specific.",
+      "humanFeedbackNeeded": "No approval requested yet; complete a stronger broad-value test first.",
+      "decision": "revise"
+    },
+    {
+      "id": "A-2",
+      "principleIds": [
+        "R1",
+        "R2",
+        "R3"
+      ],
+      "implementation": "Increased palette/field contrast within the ground-only recipe, preserving all geometry and lights.",
+      "captures": [
+        "artifacts/visual-quality/recipe-A-2-r-control/savanna-hero.png",
+        "artifacts/visual-quality/recipe-A-2-r-control/savanna-inspection.png",
+        "artifacts/visual-quality/recipe-A-2-r-ground/savanna-hero.png",
+        "artifacts/visual-quality/recipe-A-2-r-ground/savanna-inspection.png"
+      ],
+      "seeds": [
+        "29"
+      ],
+      "parameters": {
+        "revision": 2,
+        "tileMeters": 18,
+        "textureContrast": 0.42,
+        "macroContrast": 1.65,
+        "grassInstances": 7200,
+        "grassHeight": 0.75,
+        "bladeWidth": 0.055,
+        "foregroundClusterCount": 3,
+        "rockInstancesPerCluster": 5,
+        "shadowStrength": 0.72,
+        "seeds": [
+          "29",
+          "41",
+          "73"
+        ],
+        "presentationSeed": "reference-recipe-1"
+      },
+      "sourceVersion": {
+        "src/lib/forest/savanna-recipe.ts": "1dc1707823186bcc2495b912d208818ce5d9a729e644e24718c36758adc46ad7",
+        "src/lib/forest/visual-lab.ts": "dbdbfa71b4cd08cf42819d2bed85ef26f6589d22a47b8d0067e4b37f39b1ae6b",
+        "visual-lab/savanna-recipe.json": "ddeb192d77f42f3444918e4d0e561a6939b596ffffe0f2134ceb157dfa12dbad",
+        "visual-lab/recipe.schema.json": "f226449b48615522fce8b184eb4ddb15510959df8efb56441475fd6031373b9c",
+        "scripts/studies/visual-quality.cjs": "efaa57cc1d081b521bc0c4336ecb0b53f93e28953a684a8e3b24e168819ef403",
+        "asset": "f7668bc9fee9ac97038dce34aeef7b31b9a1fb92069f63e4df06069acc6e1de5"
+      },
+      "demonstrated": "Slightly stronger value organization; continuous painted surface remains better than the control, but not yet a sufficient ground foundation.",
+      "improved": true,
+      "failure": "Broad foreground framing still weak.",
+      "reusable": "Changing detail alone does not organize value masses.",
+      "specific": "Dry straw/sage palette and brush rhythm.",
+      "humanFeedbackNeeded": "Gate remains unapproved; no geometry yet.",
+      "decision": "revise"
+    },
+    {
+      "id": "A-3",
+      "principleIds": [
+        "R1",
+        "R3",
+        "R4",
+        "R7"
+      ],
+      "implementation": "Broader painterly surface scale and coherent cool near pigment with a warm open middle; all terrain vertices and physical lights unchanged.",
+      "captures": [
+        "artifacts/visual-quality/recipe-A-3-r-control/savanna-hero.png",
+        "artifacts/visual-quality/recipe-A-3-r-control/savanna-inspection.png",
+        "artifacts/visual-quality/recipe-A-3-r-ground/savanna-hero.png",
+        "artifacts/visual-quality/recipe-A-3-r-ground/savanna-inspection.png"
+      ],
+      "seeds": [
+        "29"
+      ],
+      "parameters": {
+        "revision": 3,
+        "tileMeters": 27,
+        "textureContrast": 0.42,
+        "macroContrast": 1.65,
+        "grassInstances": 7200,
+        "grassHeight": 0.75,
+        "bladeWidth": 0.055,
+        "foregroundClusterCount": 3,
+        "rockInstancesPerCluster": 5,
+        "shadowStrength": 0.72,
+        "seeds": [
+          "29",
+          "41",
+          "73"
+        ],
+        "presentationSeed": "reference-recipe-1"
+      },
+      "sourceVersion": {
+        "src/lib/forest/savanna-recipe.ts": "d02d484230e7465499cc82dfdf6fa5ec9c192e02cbadff7eadbb769034c14b04",
+        "src/lib/forest/visual-lab.ts": "dbdbfa71b4cd08cf42819d2bed85ef26f6589d22a47b8d0067e4b37f39b1ae6b",
+        "visual-lab/savanna-recipe.json": "8466ee61f5b34d346e153d48a84ad13eec5115049fa5272465e841cc64a2e11d",
+        "visual-lab/recipe.schema.json": "f226449b48615522fce8b184eb4ddb15510959df8efb56441475fd6031373b9c",
+        "scripts/studies/visual-quality.cjs": "efaa57cc1d081b521bc0c4336ecb0b53f93e28953a684a8e3b24e168819ef403",
+        "asset": "f7668bc9fee9ac97038dce34aeef7b31b9a1fb92069f63e4df06069acc6e1de5"
+      },
+      "demonstrated": "Actual ground-only hero/inspection show connected grass-like brushed texture, warmer middle and cooler near values; no circular stamps, card seams or dark vegetation clutter. This is sufficiently coherent to test the next layer, not a claim of final scene beauty.",
+      "improved": true,
+      "failure": "Overall scene remains far from the concept; primary tree silhouette and smooth horizon are not solved by this material.",
+      "reusable": "A continuous surface can establish vegetation identity and value coordination before geometry. This support is limited to this gate and view pair.",
+      "specific": "Generated dry-grass brush texture, straw/sage palette and current 27m scale.",
+      "humanFeedbackNeeded": "Human has not approved the material or scene.",
+      "decision": "accept-provisionally"
+    }
+  ]
+}

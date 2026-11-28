@@ -1,0 +1,70 @@
+{
+  "date": "2026-11-27T23:34:05.436Z",
+  "request": "Denser tree collection and multiple background-card layers matching concept treeline",
+  "seed": 29,
+  "status": "retained-for-human-review",
+  "humanApproval": null,
+  "visionReviewer": "Implementing assistant; inspected actual fixed-camera 640x360 render",
+  "baseline": "artifacts/tropical-pine/final.png",
+  "image": "artifacts/tropical-pine-layers/final.png",
+  "source": "src/lib/forest/tropical-pine.ts",
+  "sourceHash": "02235883b6cf6b3b24d3f5627e5a6653109a489032ad30fcf054176bdd35a9a9",
+  "asset": "public/assets/tropical-pine/treeline-v1.png",
+  "assetHash": "6aa882991b5234ae58545cea07e08575b9f0a4f0684df63856d5327af93ee250",
+  "implementation": {
+    "pines": {
+      "before": 42,
+      "after": 68
+    },
+    "layers": [
+      {
+        "z": -80,
+        "width": 200,
+        "height": 65
+      },
+      {
+        "z": -145,
+        "width": 280,
+        "height": 80
+      },
+      {
+        "z": -250,
+        "width": 420,
+        "height": 110
+      }
+    ],
+    "method": "World-space transparent woodland cutouts, staggered placement, small yaw variation and shared distance fog; existing far hill matte preserved",
+    "camera": "unchanged",
+    "foreground": "unchanged"
+  },
+  "critique": {
+    "severityBefore": "major",
+    "hypothesis": "Depth-separated continuous woodland bands behind a denser physical stand close the bare horizon gap",
+    "observed": "Continuous taller wooded silhouettes fill most bare background and sky gaps; foreground character opening remains clear",
+    "decision": "retain",
+    "remaining": [
+      "Pale oak highlights",
+      "Coarse foreground foliage",
+      "Single source asset can repeat under larger camera moves",
+      "Background cards only support declared encounter cone"
+    ]
+  },
+  "checks": {
+    "typescript": "npx tsc --noEmit --pretty false passed",
+    "browserErrors": [],
+    "stats": {
+      "frame": 8,
+      "calls": 119,
+      "triangles": 2283946,
+      "points": 0,
+      "lines": 0
+    },
+    "mobileApproval": false
+  },
+  "rule": {
+    "status": "experimentally-supported",
+    "principle": "Multiple wooded depth layers can bridge simplified middle vegetation to a detailed far landscape",
+    "scope": "This fixed-seed experimental view only; not globally approved"
+  },
+  "commitPushDeploy": false
+}

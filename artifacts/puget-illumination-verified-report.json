@@ -1,0 +1,597 @@
+[
+  {
+    "mode": "A",
+    "calls": 17,
+    "triangles": 575981,
+    "camera": [
+      0.01045391827706954,
+      7.707058230656985,
+      34.282255793480886
+    ],
+    "exposure": 1.12,
+    "pixelRatio": 0.65,
+    "illumination": null,
+    "groundLighting": {
+      "settings": {
+        "foregroundDarkness": 0.46,
+        "sideFraming": 0.38,
+        "focalWidth": [
+          23,
+          29
+        ],
+        "transitionSoftness": 0.8,
+        "warmth": 0.16,
+        "irregularity": 0.55
+      },
+      "center": [
+        -1.385160085303234,
+        -3.3993223031872475
+      ],
+      "forward": [
+        -0.03701166050988026,
+        -0.9993148337667671
+      ],
+      "phase": 0.019,
+      "debug": false
+    },
+    "shadowStrength": 0.72,
+    "environment": {
+      "groundTile": "2048 × 2048 × 3 painted materials",
+      "grassAtlas": "2048 × 2048",
+      "instances": [
+        {
+          "name": "foundation-grass-near",
+          "count": 1987,
+          "triangles": 7948
+        },
+        {
+          "name": "foundation-grass-far",
+          "count": 637,
+          "triangles": 1274
+        },
+        {
+          "name": "foundation-short-sward",
+          "count": 7007,
+          "triangles": 21021
+        }
+      ],
+      "grassDrawCalls": 3,
+      "grassAlphaTest": 0.38,
+      "grassCastsShadows": false,
+      "grassDistance": "Crossed cards fade 32–46 m; 30% single-card subset fades in 30–44 m, out 68–88 m.",
+      "clearing": "Elliptical reserved area; 2.5% residual acceptance before soil and vegetation masks."
+    },
+    "composition": {
+      "profile": {
+        "version": "encounter-composition-v1",
+        "seed": "29",
+        "illumination": {
+          "enabled": true,
+          "focalStrength": 0.9,
+          "focalWidth": [
+            19,
+            20
+          ],
+          "softness": 0.8,
+          "warmth": 0.5,
+          "irregularity": 0.35,
+          "patchCount": 3,
+          "patchStrength": 0.38,
+          "crownStrength": 0.5
+        },
+        "focal": {
+          "screenCenter": [
+            0.5,
+            0.73
+          ],
+          "screenRadius": [
+            0.29,
+            0.13
+          ],
+          "centerDensity": 0,
+          "edgeDensity": 0.8
+        },
+        "framing": {
+          "density": 1.25,
+          "foregroundDensity": 1.6,
+          "clusterScale": 3.5,
+          "treeClearance": 18
+        },
+        "light": {
+          "position": [
+            -36,
+            38,
+            22
+          ],
+          "color": "#ffe0a8",
+          "intensity": 4.8,
+          "ambientColor": "#a3c4df",
+          "ambientIntensity": 0.75,
+          "shadowSoftness": 2,
+          "shadowStrength": 0.9
+        },
+        "clouds": {
+          "enabled": true,
+          "count": 2,
+          "strength": 0.28,
+          "softness": 0.65
+        },
+        "emphasis": {
+          "count": 3,
+          "strength": 0.75
+        },
+        "background": {
+          "near": 57,
+          "far": 110,
+          "saturation": 0.7,
+          "contrast": 0.82
+        }
+      },
+      "clearing": {
+        "x": -1.385160085303234,
+        "z": -3.3993223031872475,
+        "radiusX": 14.477595530140524,
+        "radiusZ": 22.745678956979457
+      },
+      "selected": [
+        {
+          "index": 30,
+          "score": 0.2270477557238333
+        },
+        {
+          "index": 27,
+          "score": 0.20178279904266067
+        },
+        {
+          "index": 23,
+          "score": 0.20012659503942876
+        }
+      ],
+      "clouds": [
+        {
+          "x": -13.029461825057389,
+          "z": -13.405205476272997,
+          "radiusX": 19.284050875343382,
+          "radiusZ": 10.717581765726209
+        },
+        {
+          "x": 16.6803275570036,
+          "z": -1.3387982667779141,
+          "radiusX": 16.608023930341005,
+          "radiusZ": 14.861281547695398
+        }
+      ]
+    },
+    "treeFingerprint": 3059476551,
+    "skyFingerprint": "0ff0ddedf73922f994d15ec8988d137349de5846a37520093a80cc26ce2e8687",
+    "errors": []
+  },
+  {
+    "mode": "B",
+    "calls": 17,
+    "triangles": 575981,
+    "camera": [
+      0.01045391827706954,
+      7.707058230656985,
+      34.282255793480886
+    ],
+    "exposure": 1.12,
+    "pixelRatio": 0.65,
+    "illumination": {
+      "settings": {
+        "enabled": true,
+        "focalStrength": 0.9,
+        "focalWidth": [
+          19,
+          20
+        ],
+        "softness": 0.8,
+        "warmth": 0.5,
+        "irregularity": 0.35,
+        "patchCount": 3,
+        "patchStrength": 0.38,
+        "crownStrength": 0.5
+      },
+      "center": [
+        -1.5702183878526352,
+        -8.395896472021082
+      ],
+      "forward": [
+        -0.03701166050988026,
+        -0.9993148337667671
+      ],
+      "phase": 1.9675044404001771,
+      "patches": [
+        {
+          "x": -1.2184666496247303,
+          "z": -17.003887953220943,
+          "width": 9.64872198132798,
+          "depth": 7.7757672884035856,
+          "weight": 1
+        },
+        {
+          "x": -18.680035091798032,
+          "z": -6.519810613229016,
+          "width": 9.641431422904134,
+          "depth": 6.657245128881186,
+          "weight": -0.65
+        },
+        {
+          "x": 1.2553900872811425,
+          "z": -4.595863059147337,
+          "width": 8.038932930212468,
+          "depth": 8.23695415747352,
+          "weight": 1
+        }
+      ]
+    },
+    "groundLighting": {
+      "settings": {
+        "foregroundDarkness": 0.46,
+        "sideFraming": 0.38,
+        "focalWidth": [
+          23,
+          29
+        ],
+        "transitionSoftness": 0.8,
+        "warmth": 0.16,
+        "irregularity": 0.55
+      },
+      "center": [
+        -1.385160085303234,
+        -3.3993223031872475
+      ],
+      "forward": [
+        -0.03701166050988026,
+        -0.9993148337667671
+      ],
+      "phase": 0.019,
+      "debug": false
+    },
+    "shadowStrength": 0.72,
+    "environment": {
+      "groundTile": "2048 × 2048 × 3 painted materials",
+      "grassAtlas": "2048 × 2048",
+      "instances": [
+        {
+          "name": "foundation-grass-near",
+          "count": 1987,
+          "triangles": 7948
+        },
+        {
+          "name": "foundation-grass-far",
+          "count": 637,
+          "triangles": 1274
+        },
+        {
+          "name": "foundation-short-sward",
+          "count": 7007,
+          "triangles": 21021
+        }
+      ],
+      "grassDrawCalls": 3,
+      "grassAlphaTest": 0.38,
+      "grassCastsShadows": false,
+      "grassDistance": "Crossed cards fade 32–46 m; 30% single-card subset fades in 30–44 m, out 68–88 m.",
+      "clearing": "Elliptical reserved area; 2.5% residual acceptance before soil and vegetation masks."
+    },
+    "composition": {
+      "profile": {
+        "version": "encounter-composition-v1",
+        "seed": "29",
+        "illumination": {
+          "enabled": true,
+          "focalStrength": 0.9,
+          "focalWidth": [
+            19,
+            20
+          ],
+          "softness": 0.8,
+          "warmth": 0.5,
+          "irregularity": 0.35,
+          "patchCount": 3,
+          "patchStrength": 0.38,
+          "crownStrength": 0.5
+        },
+        "focal": {
+          "screenCenter": [
+            0.5,
+            0.73
+          ],
+          "screenRadius": [
+            0.29,
+            0.13
+          ],
+          "centerDensity": 0,
+          "edgeDensity": 0.8
+        },
+        "framing": {
+          "density": 1.25,
+          "foregroundDensity": 1.6,
+          "clusterScale": 3.5,
+          "treeClearance": 18
+        },
+        "light": {
+          "position": [
+            -36,
+            38,
+            22
+          ],
+          "color": "#ffe0a8",
+          "intensity": 4.8,
+          "ambientColor": "#a3c4df",
+          "ambientIntensity": 0.75,
+          "shadowSoftness": 2,
+          "shadowStrength": 0.9
+        },
+        "clouds": {
+          "enabled": true,
+          "count": 2,
+          "strength": 0.28,
+          "softness": 0.65
+        },
+        "emphasis": {
+          "count": 3,
+          "strength": 0.75
+        },
+        "background": {
+          "near": 57,
+          "far": 110,
+          "saturation": 0.7,
+          "contrast": 0.82
+        }
+      },
+      "clearing": {
+        "x": -1.385160085303234,
+        "z": -3.3993223031872475,
+        "radiusX": 14.477595530140524,
+        "radiusZ": 22.745678956979457
+      },
+      "selected": [
+        {
+          "index": 30,
+          "score": 0.2270477557238333
+        },
+        {
+          "index": 27,
+          "score": 0.20178279904266067
+        },
+        {
+          "index": 23,
+          "score": 0.20012659503942876
+        }
+      ],
+      "clouds": [
+        {
+          "x": -13.029461825057389,
+          "z": -13.405205476272997,
+          "radiusX": 19.284050875343382,
+          "radiusZ": 10.717581765726209
+        },
+        {
+          "x": 16.6803275570036,
+          "z": -1.3387982667779141,
+          "radiusX": 16.608023930341005,
+          "radiusZ": 14.861281547695398
+        }
+      ]
+    },
+    "treeFingerprint": 3059476551,
+    "skyFingerprint": "0ff0ddedf73922f994d15ec8988d137349de5846a37520093a80cc26ce2e8687",
+    "errors": []
+  },
+  {
+    "mode": "debug",
+    "calls": 17,
+    "triangles": 575981,
+    "camera": [
+      0.01045391827706954,
+      7.707058230656985,
+      34.282255793480886
+    ],
+    "exposure": 1.12,
+    "pixelRatio": 0.65,
+    "illumination": {
+      "settings": {
+        "enabled": true,
+        "focalStrength": 0.9,
+        "focalWidth": [
+          19,
+          20
+        ],
+        "softness": 0.8,
+        "warmth": 0.5,
+        "irregularity": 0.35,
+        "patchCount": 3,
+        "patchStrength": 0.38,
+        "crownStrength": 0.5
+      },
+      "center": [
+        -1.5702183878526352,
+        -8.395896472021082
+      ],
+      "forward": [
+        -0.03701166050988026,
+        -0.9993148337667671
+      ],
+      "phase": 1.9675044404001771,
+      "patches": [
+        {
+          "x": -1.2184666496247303,
+          "z": -17.003887953220943,
+          "width": 9.64872198132798,
+          "depth": 7.7757672884035856,
+          "weight": 1
+        },
+        {
+          "x": -18.680035091798032,
+          "z": -6.519810613229016,
+          "width": 9.641431422904134,
+          "depth": 6.657245128881186,
+          "weight": -0.65
+        },
+        {
+          "x": 1.2553900872811425,
+          "z": -4.595863059147337,
+          "width": 8.038932930212468,
+          "depth": 8.23695415747352,
+          "weight": 1
+        }
+      ]
+    },
+    "groundLighting": {
+      "settings": {
+        "foregroundDarkness": 0.46,
+        "sideFraming": 0.38,
+        "focalWidth": [
+          23,
+          29
+        ],
+        "transitionSoftness": 0.8,
+        "warmth": 0.16,
+        "irregularity": 0.55
+      },
+      "center": [
+        -1.385160085303234,
+        -3.3993223031872475
+      ],
+      "forward": [
+        -0.03701166050988026,
+        -0.9993148337667671
+      ],
+      "phase": 0.019,
+      "debug": false
+    },
+    "shadowStrength": 0.72,
+    "environment": {
+      "groundTile": "2048 × 2048 × 3 painted materials",
+      "grassAtlas": "2048 × 2048",
+      "instances": [
+        {
+          "name": "foundation-grass-near",
+          "count": 1987,
+          "triangles": 7948
+        },
+        {
+          "name": "foundation-grass-far",
+          "count": 637,
+          "triangles": 1274
+        },
+        {
+          "name": "foundation-short-sward",
+          "count": 7007,
+          "triangles": 21021
+        }
+      ],
+      "grassDrawCalls": 3,
+      "grassAlphaTest": 0.38,
+      "grassCastsShadows": false,
+      "grassDistance": "Crossed cards fade 32–46 m; 30% single-card subset fades in 30–44 m, out 68–88 m.",
+      "clearing": "Elliptical reserved area; 2.5% residual acceptance before soil and vegetation masks."
+    },
+    "composition": {
+      "profile": {
+        "version": "encounter-composition-v1",
+        "seed": "29",
+        "illumination": {
+          "enabled": true,
+          "focalStrength": 0.9,
+          "focalWidth": [
+            19,
+            20
+          ],
+          "softness": 0.8,
+          "warmth": 0.5,
+          "irregularity": 0.35,
+          "patchCount": 3,
+          "patchStrength": 0.38,
+          "crownStrength": 0.5
+        },
+        "focal": {
+          "screenCenter": [
+            0.5,
+            0.73
+          ],
+          "screenRadius": [
+            0.29,
+            0.13
+          ],
+          "centerDensity": 0,
+          "edgeDensity": 0.8
+        },
+        "framing": {
+          "density": 1.25,
+          "foregroundDensity": 1.6,
+          "clusterScale": 3.5,
+          "treeClearance": 18
+        },
+        "light": {
+          "position": [
+            -36,
+            38,
+            22
+          ],
+          "color": "#ffe0a8",
+          "intensity": 4.8,
+          "ambientColor": "#a3c4df",
+          "ambientIntensity": 0.75,
+          "shadowSoftness": 2,
+          "shadowStrength": 0.9
+        },
+        "clouds": {
+          "enabled": true,
+          "count": 2,
+          "strength": 0.28,
+          "softness": 0.65
+        },
+        "emphasis": {
+          "count": 3,
+          "strength": 0.75
+        },
+        "background": {
+          "near": 57,
+          "far": 110,
+          "saturation": 0.7,
+          "contrast": 0.82
+        }
+      },
+      "clearing": {
+        "x": -1.385160085303234,
+        "z": -3.3993223031872475,
+        "radiusX": 14.477595530140524,
+        "radiusZ": 22.745678956979457
+      },
+      "selected": [
+        {
+          "index": 30,
+          "score": 0.2270477557238333
+        },
+        {
+          "index": 27,
+          "score": 0.20178279904266067
+        },
+        {
+          "index": 23,
+          "score": 0.20012659503942876
+        }
+      ],
+      "clouds": [
+        {
+          "x": -13.029461825057389,
+          "z": -13.405205476272997,
+          "radiusX": 19.284050875343382,
+          "radiusZ": 10.717581765726209
+        },
+        {
+          "x": 16.6803275570036,
+          "z": -1.3387982667779141,
+          "radiusX": 16.608023930341005,
+          "radiusZ": 14.861281547695398
+        }
+      ]
+    },
+    "treeFingerprint": 3059476551,
+    "skyFingerprint": "0ff0ddedf73922f994d15ec8988d137349de5846a37520093a80cc26ce2e8687",
+    "errors": []
+  }
+]

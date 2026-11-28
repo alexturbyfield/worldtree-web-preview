@@ -1,0 +1,33 @@
+{
+  "gitHead": "0bca0bac1bf9a192aea18843133e5ebae10aaf39",
+  "workingTreeBaseline": true,
+  "authoritativeRetainedCheckpoint": "best-source",
+  "rejectedTier3Candidates": "rejected-tier3",
+  "correctionCycles": 4,
+  "retainedCycles": [
+    1,
+    3
+  ],
+  "rejectedCycles": [
+    2,
+    4
+  ],
+  "puget": {
+    "tier1ByteIdentical": true,
+    "tier3ByteIdentical": true
+  },
+  "checkpoints": {
+    "baseline-source": {
+      "biome-visual.ts.txt": "f1b9fa46d1922cabe1a18cecb1f0ef4e013941b7c50ee86249b34cd262893743",
+      "painted-renderer.ts.txt": "1b7b6189b5dd02a5a1f990d0f205bef82555e85bd0b8f4ebf3e4f9d175f89ba7",
+      "pretty-scene.ts.txt": "56b0159f61d11b144146ea21fe6f132d1487ace90fe35094e384d1ade543bc95",
+      "rainforest-depth.ts.txt": "3f0738a23fe40b923ac103c27aaa907c5fd811df6e8ae94a7f1f94ea61993282"
+    },
+    "best-source": {
+      "biome-visual.ts.txt": "f1b9fa46d1922cabe1a18cecb1f0ef4e013941b7c50ee86249b34cd262893743",
+      "painted-renderer.ts.txt": "1b7b6189b5dd02a5a1f990d0f205bef82555e85bd0b8f4ebf3e4f9d175f89ba7",
+      "pretty-scene.ts.txt": "2273bdf3a916aaa1a3306ccb279644890f6d3abced380133e62bc1860c0cd44b",
+      "rainforest-depth.ts.txt": "3f0738a23fe40b923ac103c27aaa907c5fd811df6e8ae94a7f1f94ea61993282"
+    }
+  }
+}

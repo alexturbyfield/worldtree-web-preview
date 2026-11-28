@@ -1,0 +1,141 @@
+{
+  "groups": 2952,
+  "target": [
+    0,
+    1,
+    8
+  ],
+  "candidates": [
+    {
+      "position": [
+        -28,
+        70,
+        18
+      ],
+      "focalTransmission": 0.7227654491391261,
+      "framingTransmission": 0.7260420660806342,
+      "score": 0.25083810618671387
+    },
+    {
+      "position": [
+        -28,
+        70,
+        -8
+      ],
+      "focalTransmission": 0.67484500957477,
+      "framingTransmission": 0.7169837769912302,
+      "score": 0.2088055545304704
+    },
+    {
+      "position": [
+        -28,
+        58,
+        -8
+      ],
+      "focalTransmission": 0.6690659289303,
+      "framingTransmission": 0.7556747992952673,
+      "score": 0.17787730938837631
+    },
+    {
+      "position": [
+        -28,
+        58,
+        18
+      ],
+      "focalTransmission": 0.6611739750097252,
+      "framingTransmission": 0.7611619702843585,
+      "score": 0.16641869432489215
+    },
+    {
+      "position": [
+        -28,
+        70,
+        -28
+      ],
+      "focalTransmission": 0.6289219388831642,
+      "framingTransmission": 0.7336758415081808,
+      "score": 0.15203264190284665
+    },
+    {
+      "position": [
+        -28,
+        34,
+        18
+      ],
+      "focalTransmission": 0.6565655146292546,
+      "framingTransmission": 0.7851387451612241,
+      "score": 0.14622533027445894
+    },
+    {
+      "position": [
+        -28,
+        46,
+        18
+      ],
+      "focalTransmission": 0.6276452860458285,
+      "framingTransmission": 0.7684931171149865,
+      "score": 0.12812475992108724
+    },
+    {
+      "position": [
+        -28,
+        34,
+        -28
+      ],
+      "focalTransmission": 0.59919296783428,
+      "framingTransmission": 0.7411441934596332,
+      "score": 0.11744924208551838
+    },
+    {
+      "position": [
+        -28,
+        46,
+        -8
+      ],
+      "focalTransmission": 0.6234181334159681,
+      "framingTransmission": 0.8115275256844221,
+      "score": 0.09592524172109373
+    },
+    {
+      "position": [
+        -28,
+        58,
+        -28
+      ],
+      "focalTransmission": 0.5946548114924081,
+      "framingTransmission": 0.769331124988976,
+      "score": 0.09458958024957365
+    },
+    {
+      "position": [
+        -28,
+        34,
+        -8
+      ],
+      "focalTransmission": 0.5723127402705603,
+      "framingTransmission": 0.7972072935638982,
+      "score": 0.054127999454026465
+    },
+    {
+      "position": [
+        -28,
+        46,
+        -28
+      ],
+      "focalTransmission": 0.5912457772340144,
+      "framingTransmission": 0.8317544268941719,
+      "score": 0.05060539975280265
+    }
+  ],
+  "selected": {
+    "position": [
+      -28,
+      70,
+      18
+    ],
+    "focalTransmission": 0.7227654491391261,
+    "framingTransmission": 0.7260420660806342,
+    "score": 0.25083810618671387
+  },
+  "limitation": "Analytic source-group optical coverage only. Not actual shadow-map measurement or aesthetic approval."
+}

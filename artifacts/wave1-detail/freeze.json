@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-26T13:19:06.024Z",
+  "training": [
+    29,
+    41
+  ],
+  "holdout": 1237,
+  "sourceHashes": {
+    "src/lib/forest/wave1-fields.ts": "3b75c341d19bcf56d8681750577d0e58a42c848ef628c0aa850e61f58f27e1cb",
+    "src/lib/forest/wave1-rebuild.ts": "b97d586a29ef8ec1ed7dd51ee8e4879ac4e43e1d9e751b3b7efd709bf65457aa",
+    "src/lib/forest/wave1-impostors.ts": "7146aad9f9021d57a10848dc2b90c36ddcff8a6030d703cfc5d6cfdf9798c740",
+    "src/lib/forest/wave1-water.ts": "a41be61219232b2033b94abda2d7767964bcfc8b9798eb81fa748a576a3d2f35",
+    "src/lib/forest/wave1-ground-detail.ts": "c70a3a65cb1031f4309f31ede6c7a49cf852f4130f80ac3898fd97fedc7bdcfa",
+    "src/lib/forest/wave1-desert-detail.ts": "20a4cbbc1c45dc40e81fd41fc92a8885d75b7322eae146b90744b4d120faf2f4",
+    "src/lib/forest/wave1-mangrove-detail.ts": "93243d427284605c98644984d7e77e0f1db202af4b7394c18e46ea48b47e7833",
+    "src/lib/forest/wave1-meadow-detail.ts": "2891ea5c82f7456623548e395dad106a06cf6a2bcba96d2d9214421314d9ae01",
+    "src/lib/forest/environment-foundations.ts": "4a0e1286670abf0959b3a7a478a608ab3f7ad4ce63cff1e49a59a4d9e295c231",
+    "src/lib/forest/painted-renderer.ts": "604e95e996a2308c1c8bce4811f8bf0751be216a56735b5ad979d8c4d12f2457",
+    "src/lib/forest/wave1.ts": "4facb76740809cb8598113e302a82411243bdc9bc953c7c9e10e11a5c03b06ba",
+    "src/lib/vegetation.ts": "173b715d10aa54add0ac2d40ad89b417c7a8cfdd62c3e6bb42a8d08521b922c1",
+    "public/assets/wave1-detail/tidal-mud-v1.webp": "e1f42cc3bc3dca8713ad934f1803b5e35fade9e45fbdbe20daea47613c0d112b"
+  },
+  "status": "Frozen for final seed and review capture, not final biome approval"
+}

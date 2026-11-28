@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-28T04:11:03.428Z",
+  "request": "Extend canopy shadows across full foreground",
+  "status": "retained-for-human-review",
+  "humanApproval": null,
+  "seed": 29,
+  "baseline": "artifacts/tropical-pine-canopy/final.png",
+  "image": "artifacts/tropical-pine-full-canopy/final.png",
+  "source": "src/lib/forest/tropical-pine.ts",
+  "hypothesis": "Additional real canopy occluders offset across the opening extend foliage shadows from left edge across center and right foreground",
+  "implementation": {
+    "overheadTrees": {
+      "before": 2,
+      "after": 5
+    },
+    "screenSpaceDarkening": false,
+    "groundLightingCamera": "Unchanged"
+  },
+  "visionReviewer": "Implementing assistant, actual 640x360 render inspected",
+  "observed": "Shade now covers central soil and right fern/rock framing as well as left; sunlit middle-distance opening remains. Foreground is intentionally darker and isolated sun flecks are less frequent.",
+  "decision": "retain",
+  "remaining": "Broad overlapping canopy shadows reduce fine sun flecks; foliage remains coarse and pale",
+  "checks": {
+    "typescript": "npx tsc --noEmit --pretty false passed",
+    "browserErrors": [],
+    "stats": {
+      "frame": 8,
+      "calls": 123,
+      "triangles": 2342986,
+      "points": 0,
+      "lines": 0
+    },
+    "mobileApproval": false
+  },
+  "commitPushDeploy": false
+}

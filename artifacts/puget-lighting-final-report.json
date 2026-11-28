@@ -1,0 +1,41 @@
+[
+  {
+    "mode": "final",
+    "calls": 17,
+    "triangles": 701528,
+    "camera": [
+      0.01045391827706954,
+      7.707058230656985,
+      34.282255793480886
+    ],
+    "exposure": 1.12,
+    "pixelRatio": 0.65,
+    "environment": {
+      "groundTile": "2048 × 2048 × 3 painted materials",
+      "grassAtlas": "2048 × 2048",
+      "instances": [
+        {
+          "name": "foundation-grass-near",
+          "count": 1572,
+          "triangles": 6288
+        },
+        {
+          "name": "foundation-grass-far",
+          "count": 496,
+          "triangles": 992
+        },
+        {
+          "name": "foundation-short-sward",
+          "count": 3726,
+          "triangles": 11178
+        }
+      ],
+      "grassDrawCalls": 3,
+      "grassAlphaTest": 0.38,
+      "grassCastsShadows": false,
+      "grassDistance": "Crossed cards fade 32–46 m; 30% single-card subset fades in 30–44 m, out 68–88 m.",
+      "clearing": "Elliptical reserved area; 2.5% residual acceptance before soil and vegetation masks."
+    },
+    "errors": []
+  }
+]

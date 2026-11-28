@@ -1,0 +1,204 @@
+{
+  "checkpoint": "21938bf",
+  "rankingMethod": "491 existing forest ecoregion audit points, seed 29, count actual 12-entry resolved candidate palettes; exclude registry taxa with existing dedicated presets. Not abundance or verified local occurrence.",
+  "ecologicalCaveat": "Known country/climate-only filtering admits mangroves to inland palettes. Suitability records and resolver intentionally unchanged.",
+  "checks": "Prior species unchanged; deterministic repeated output; appearance seed preserves geometry; registry IDs verified.",
+  "rows": [
+    {
+      "id": "avicennia",
+      "scientificName": "Avicennia marina",
+      "taxonId": "wcvp:18454",
+      "designHeight": 7.496962090246916,
+      "renderingStatus": "Dedicated procedural V1; provisional visual design",
+      "sampledPalettes": 99,
+      "foliageSurfaces": 1080
+    },
+    {
+      "id": "red-mangrove",
+      "scientificName": "Rhizophora mangle",
+      "taxonId": "wcvp:2523199",
+      "designHeight": 10.308909357084634,
+      "renderingStatus": "Dedicated procedural V1; provisional visual design",
+      "sampledPalettes": 87,
+      "foliageSurfaces": 936
+    },
+    {
+      "id": "stilt-mangrove",
+      "scientificName": "Rhizophora stylosa",
+      "taxonId": "wcvp:2523185",
+      "designHeight": 16.896786626139097,
+      "renderingStatus": "Dedicated procedural V1; provisional visual design",
+      "sampledPalettes": 65,
+      "foliageSurfaces": 1008
+    },
+    {
+      "id": "cacao",
+      "scientificName": "Theobroma cacao",
+      "taxonId": "wcvp:2519807",
+      "designHeight": 4.953073181979358,
+      "renderingStatus": "Dedicated procedural V1; provisional visual design",
+      "sampledPalettes": 41,
+      "foliageSurfaces": 576
+    },
+    {
+      "id": "rubber",
+      "scientificName": "Hevea brasiliensis",
+      "taxonId": "wcvp:98927",
+      "designHeight": 22.027009637251684,
+      "renderingStatus": "Dedicated procedural V1; provisional visual design",
+      "sampledPalettes": 40,
+      "foliageSurfaces": 1080
+    }
+  ],
+  "V2Backlog": {
+    "roots": "Smooth ring junctions and constrain curve contacts to future terrain data.",
+    "crown": "Further naturalize repeated terminal spray motifs without changing the current foliage renderer.",
+    "pods": "Add ribs and better old-branch attachments in a later cacao detail pass."
+  },
+  "botanicalReferences": [
+    "https://mangrove.nus.edu.sg/guidebooks/text/1043.htm",
+    "https://powo.science.kew.org/taxon/urn%3Alsid%3Aipni.org%3Anames%3A30061148-2/general-information",
+    "https://plantuse.plantnet.org/en/Theobroma_cacao_%28PROSEA%29"
+  ],
+  "cause": "All five formerly shared identical CrownArchitecture settings, one leader, golden-angle primaries, identical three-fork secondary intervals and foliage intervals; prop roots used radial foot placement and almost linear midpoint curves.",
+  "controls": "Opt-in branching profiles: leader count, leader split height/spread, secondary fork start, explicit primary levels and cacao pod count. Existing crown parameters tuned per species.",
+  "limitations": [
+    "Root and branch junctions share a batch but are not watertight boolean unions; ring transitions remain visible close up.",
+    "Pneumatophore field is synthetic, not a tidal habitat simulation.",
+    "Cacao pods are simple tapered colored meshes with attachment stalks, not fully ribbed fruits.",
+    "Stylosa upright versus mangle low spreading is an art-directed V1 choice, not a universal species distinction.",
+    "Materials, atlases, lighting, ecological records and unrelated species are unchanged."
+  ],
+  "beforeCapture": {
+    "errors": [],
+    "common": {
+      "min": [
+        -3.376631736755371,
+        -0.009992563165724277,
+        -3.0934410095214844
+      ],
+      "max": [
+        4.3550310134887695,
+        10.858928680419922,
+        4.421872138977051
+      ]
+    },
+    "ground": {
+      "view": {
+        "position": [
+          22.25428103743956,
+          9.820607627827439,
+          37.298711974730615
+        ],
+        "quaternion": [
+          -0.059670661624651324,
+          0.0074860035435176196,
+          0.00044750479145613836,
+          0.9981899476711256
+        ],
+        "offsets": [
+          2.2258574962615967,
+          11.317125082015991,
+          21.051745891571045,
+          29.614707827568054,
+          39.05449616909027
+        ]
+      },
+      "calls": 11,
+      "triangles": 137090,
+      "roots": [
+        {
+          "id": "avicennia",
+          "x": 292.2888423798148,
+          "y": 768.7412784980568
+        },
+        {
+          "id": "red-mangrove",
+          "x": 667.9402980299016,
+          "y": 770.1896149824229
+        },
+        {
+          "id": "stilt-mangrove",
+          "x": 1073.125791384998,
+          "y": 771.7518209159698
+        },
+        {
+          "id": "cacao",
+          "x": 1432.092858994918,
+          "y": 773.1358301960767
+        },
+        {
+          "id": "rubber",
+          "x": 1830.6128678711848,
+          "y": 774.6723371360179
+        }
+      ]
+    }
+  },
+  "afterCapture": {
+    "errors": [],
+    "common": {
+      "min": [
+        -3.459463357925415,
+        -0.011678499169647694,
+        -3.2044577598571777
+      ],
+      "max": [
+        3.9487125873565674,
+        10.907514572143555,
+        3.4014079570770264
+      ]
+    },
+    "ground": {
+      "view": {
+        "position": [
+          22.25428103743956,
+          9.820607627827439,
+          37.298711974730615
+        ],
+        "quaternion": [
+          -0.059670661624651324,
+          0.0074860035435176196,
+          0.00044750479145613836,
+          0.9981899476711256
+        ],
+        "offsets": [
+          2.2258574962615967,
+          11.317125082015991,
+          21.051745891571045,
+          29.614707827568054,
+          39.05449616909027
+        ]
+      },
+      "calls": 11,
+      "triangles": 159506,
+      "roots": [
+        {
+          "id": "avicennia",
+          "x": 292.2888423798148,
+          "y": 768.7412784980568
+        },
+        {
+          "id": "red-mangrove",
+          "x": 667.9402980299016,
+          "y": 770.1896149824229
+        },
+        {
+          "id": "stilt-mangrove",
+          "x": 1073.125791384998,
+          "y": 771.7518209159698
+        },
+        {
+          "id": "cacao",
+          "x": 1432.092858994918,
+          "y": 773.1358301960767
+        },
+        {
+          "id": "rubber",
+          "x": 1830.6128678711848,
+          "y": 774.6723371360179
+        }
+      ]
+    }
+  }
+}

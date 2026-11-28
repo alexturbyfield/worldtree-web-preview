@@ -1,0 +1,16 @@
+{
+  "targetedTypeScript": "passed",
+  "objectiveTests": 3,
+  "planTests": 1,
+  "matchedCameras": true,
+  "finalResolution": [
+    1920,
+    1080
+  ],
+  "finalPageShaderErrors": [],
+  "pugetTier1ByteIdentical": true,
+  "pugetTier3ByteIdentical": true,
+  "workingSourceMatchesRetainedSnapshot": true,
+  "visualTarget": "partly met; inspection boundaries and art limitations remain",
+  "deployed": false
+}

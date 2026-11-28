@@ -1,0 +1,105 @@
+{
+  "version": "ground-v1",
+  "region": "Seattle regional demonstration",
+  "bounds": [
+    -122.4,
+    47.57,
+    -122.28,
+    47.69
+  ],
+  "retrieved": "2026-11-22T22:58:25.022655+00:00",
+  "land": {
+    "source": "ESA WorldCover 2021 v200",
+    "url": "https://esa-worldcover.s3.eu-central-1.amazonaws.com/v200/2021/map/ESA_WorldCover_10m_2021_v200_N45W123_Map.tif",
+    "resolutionMeters": 10,
+    "date": "2021",
+    "license": "CC BY 4.0",
+    "classes": {
+      "10": [
+        "Tree cover",
+        "#67816a"
+      ],
+      "20": [
+        "Shrubland",
+        "#9caa7d"
+      ],
+      "30": [
+        "Grassland",
+        "#b3bb87"
+      ],
+      "40": [
+        "Cropland",
+        "#c3b58b"
+      ],
+      "50": [
+        "Built-up",
+        "#ac9895"
+      ],
+      "60": [
+        "Bare / sparse vegetation",
+        "#c7c0af"
+      ],
+      "70": [
+        "Snow / ice",
+        "#e0e6e6"
+      ],
+      "80": [
+        "Permanent water",
+        "#7fabb7"
+      ],
+      "90": [
+        "Herbaceous wetland",
+        "#8faeab"
+      ],
+      "95": [
+        "Mangroves",
+        "#628b7e"
+      ],
+      "100": [
+        "Moss / lichen",
+        "#b5b494"
+      ]
+    },
+    "uncertainty": "InputQuality not imported; classification uncertainty unavailable.",
+    "sha256": "b3aa066c381e6da8a3b2aed64bf6ea41fe059afbb8df2991b719f688046a3863"
+  },
+  "soil": {
+    "source": "ISRIC SoilGrids 2.0",
+    "url": "https://docs.isric.org/globaldata/soilgrids/SoilGrids_faqs_02.html",
+    "resolutionMeters": 250,
+    "depth": "0\u20135 cm",
+    "date": "2.0 rolling release; not an observation year",
+    "license": "CC BY 4.0",
+    "units": {
+      "sand": "%",
+      "silt": "%",
+      "clay": "%",
+      "soc": "g/kg"
+    },
+    "display": "Sand fraction; 48\u00d748 WGS84 nearest-neighbour sample grid, not increased source resolution.",
+    "uncertainty": "Q05\u2013Q95 prediction intervals where supplied, not measurement error."
+  },
+  "fractions": {
+    "source": "Copernicus LC100 Collection 3, 2015\u20132019",
+    "resolutionMeters": 100,
+    "status": "not imported",
+    "reason": "Requires a separate authenticated download or regional raster preparation. Missing is not zero; WorldCover classes are not fractions."
+  },
+  "alignmentChecks": [
+    {
+      "lat": 47.6062,
+      "lon": -122.3321,
+      "sourceCode": 50
+    },
+    {
+      "lat": 47.64,
+      "lon": -122.338,
+      "sourceCode": 80
+    },
+    {
+      "lat": 47.666,
+      "lon": -122.315,
+      "sourceCode": 50
+    }
+  ]
+}

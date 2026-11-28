@@ -1,0 +1,29 @@
+{
+  "A": {
+    "record": "A-r1",
+    "candidateId": "baseline",
+    "approval": "Existing retained source; not human-approved by this lab",
+    "screenshots": {
+      "hero": "artifacts/visual-quality/lab-A-r1-baseline/savanna-hero.png",
+      "inspection": "artifacts/visual-quality/lab-A-r1-baseline/savanna-inspection.png"
+    }
+  },
+  "B": {
+    "record": "B-r1",
+    "candidateId": "baseline",
+    "approval": "Existing retained source; not human-approved by this lab",
+    "screenshots": {
+      "hero": "artifacts/visual-quality/lab-B-r1-baseline/rainforest-hero.png",
+      "inspection": "artifacts/visual-quality/lab-B-r1-baseline/rainforest-inspection.png"
+    }
+  },
+  "S": {
+    "record": "S-r1",
+    "candidateId": "baseline",
+    "approval": "existing retained source; not human-approved by this lab",
+    "screenshots": {
+      "hero": "artifacts/visual-quality/lab-S-r1-baseline/savanna-hero.png",
+      "inspection": "artifacts/visual-quality/lab-S-r1-baseline/savanna-inspection.png"
+    }
+  }
+}

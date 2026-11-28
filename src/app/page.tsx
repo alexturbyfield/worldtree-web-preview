@@ -1,2 +1,3 @@
 import Explorer from '@/components/Explorer';
-export default function Page() { return <Explorer/>; }
+import {Suspense} from 'react';
+export default function Page() { return <Suspense fallback={<main className="forest-loading">Wildloom 0.1 · Opening the ecological world map…</main>}><Explorer/></Suspense>; }

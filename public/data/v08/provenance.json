@@ -1,6 +1,6 @@
 {
   "version": "0.8.0",
-  "taxa": 400,
+  "taxa": 402,
   "sourceRelease": "WCVP 16, extracted 2026-06-04",
   "retrieved": "2026-11-21",
   "sources": [
@@ -38,7 +38,7 @@
   "legacyTaxa": 62,
   "legacyResolved": 62,
   "files": {
-    "taxa.json": "00e9761abf8e64de29c153083673af11e785eb84057946a4595a5c1c414044fc",
+    "taxa.json": "d4663ddb1d251584dafc92d6650e517afa469803daf7f0aefbcfab6024ccaf56",
     "areas.json": "f763b3c2c38c39a37826507c663f3190ea6ecbd6092608fdb0df103cdf8a4ad3",
     "legacy-links.json": "a3dac8f1ff50e1548c88effc0e9476ed7941fa76893532c8b32be55fbab6d2f2",
     "ecoregion-associations.json": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",

@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "id": "mediterranean-checkpoint1-r2",
+  "date": "2026-11-27T18:13:16.339Z",
+  "authorization": "User: Do it — one corrective Checkpoint 1 pass; no material/flower stage, commit, push or deploy",
+  "baseline": "mediterranean-reconstruction-checkpoint1 (rejected)",
+  "inputs": {
+    "seed": 29,
+    "structureSeed": "mediterranean-1",
+    "camera": {
+      "position": [
+        0,
+        1.7,
+        16
+      ],
+      "target": [
+        0,
+        -6.225925925926,
+        -44
+      ],
+      "fov": 47
+    },
+    "references": [
+      "mediterranean-concept",
+      "mediterranean-dirt-mask",
+      "mediterranean-albedo",
+      "mediterranean-luminance"
+    ],
+    "matte": "unchanged herault-garrigue-v1",
+    "sourceHashes": {
+      "src/lib/forest/mediterranean-recipe.ts": "c9d86cbc3bddf4cb48781b47e2523d261a137b6ef9aca70d0f014973bef579b9",
+      "src/lib/forest/mediterranean-adapter.ts": "f1431bd6326f0fd4e3dc9e9d89d14ff60cea45b113e67589895e96f4272c1f98",
+      "src/lib/forest/mediterranean-shrub.ts": "241c54fa507f68373bd6e13bc134a845c461fc3e7e969bcd9953e91ec5a37954",
+      "tests/mediterranean.test.ts": "846ab898039f98a9fc233f5c02c962bb32a1d23d0692209e4c4c14bb693d7a8c"
+    }
+  },
+  "scope": {
+    "agents": 1,
+    "implementationPasses": 1,
+    "autonomousCorrectionLoops": 0,
+    "runtimeFiles": [
+      "src/lib/forest/mediterranean-recipe.ts",
+      "src/lib/forest/mediterranean-adapter.ts",
+      "src/lib/forest/mediterranean-shrub.ts"
+    ],
+    "protectedScenes": "No source changes outside Mediterranean adapter/recipe/new shrub geometry; no comprehensive regression captures run",
+    "grass": "Existing meadow geometry unchanged"
+  },
+  "hypothesis": "Smaller branch-owned leaves at real metre scale and a low lateral understory, combined with a laterally placed oak, will open the valley and expose the existing matte without more geometry.",
+  "changes": [
+    "Oak shifted laterally/back and given a narrower crown; spray size reduced while retaining candidate identity and source individual seeds.",
+    "Replaced enlarged tundra branchlet construction with compact, three-dimensional branched small-leaf shrubs at near/middle/far detail. Placement reserves a stable world-space valley sightline and soil shoulders.",
+    "Removed invented out-of-frustum soil ribbon and clamped-field repetition beyond world bounds. Projection-derived streaks remain unresolved."
+  ],
+  "review": {
+    "reviewer": "Primary Codex via actual concept, previous hero, current hero and inspection images; no independent reviewer",
+    "betterThanPrevious": true,
+    "goodEnoughToApprove": false,
+    "decision": "retain structural correction provisionally; remain at Checkpoint 1",
+    "humanApproval": null,
+    "visibleEvidence": [
+      "The current hero has an open central sky/valley view and a continuous distant matte band; the rejected hero was filled by giant shrub leaves and crown sprays.",
+      "The principal trunk is now lateral rather than through the main view; pale rock groups are visible again.",
+      "Shrubs are low small-leaf forms rather than crisscrossing tall stems. The scene still lacks coherent middle-distance plant masses."
+    ],
+    "remaining": [
+      {
+        "severity": "major",
+        "defect": "Weak middle-ground landscape massing and depth",
+        "evidence": "The ground is a broad yellow-olive field with sparse dark specks; the matte reads as a compressed horizontal band rather than a layered, connected valley.",
+        "hypothesis": "Near/mid terrain and vegetation envelopes are not yet designed at the broad scale of the reference.",
+        "recommendation": "Next composition pass should shape connected low scrub communities and physical terrain shoulders before ground microdetail."
+      },
+      {
+        "severity": "major",
+        "defect": "Coarse oak and stone silhouettes/materials",
+        "evidence": "Smooth dark wood, angular bright leaf sprays and rounded/blocky pale rocks do not reproduce the sculptural detailed concept.",
+        "hypothesis": "Current shared oak-spray and rock approximations remain inadequate at close range.",
+        "recommendation": "Refine principal silhouettes and foliage mass hierarchy, then address bark/stone response at the appropriate checkpoint."
+      },
+      {
+        "severity": "major",
+        "defect": "Projection-related soil streaks and flat substrate",
+        "evidence": "Inspection still exposes directional soil streaks despite removal of the straight fallback. Hero soil remains flat in color.",
+        "hypothesis": "A single camera mask projects foreground/background exclusions onto multiple depths; bounded field sampling alone cannot reconstruct a terrain route.",
+        "recommendation": "Derive a terrain-aware route from mask trajectory/width and explicitly separate it from remote exposed-soil patches. Do not treat the reference mask as a solved world splat."
+      }
+    ]
+  },
+  "rules": [
+    {
+      "principle": "Plant projected occupancy must be checked at the reference eye before decoration",
+      "status": "experimentally supported",
+      "evidence": "artifacts/mediterranean-checkpoint1-r2/before-after.png",
+      "limits": "One seed; not human-approved or validated globally"
+    },
+    {
+      "principle": "Small leaves should remain small when scaling shrub height; use branch hierarchy and clump envelopes for mass",
+      "status": "experimentally supported",
+      "evidence": "artifacts/mediterranean-checkpoint1-r2/hero.png",
+      "limits": "New unnamed sclerophyll approximation; full concept fidelity and mobile performance unverified"
+    },
+    {
+      "principle": "Frozen camera-mask projection alone reconstructs a correct terrain route",
+      "status": "rejected",
+      "evidence": "artifacts/mediterranean-checkpoint1-r2/inspection.png",
+      "reason": "Directional streaks remain after fallback removal; requires terrain-aware interpretation"
+    }
+  ],
+  "technical": {
+    "typecheck": "passed",
+    "focusedTests": {
+      "passed": 4,
+      "failed": 0
+    },
+    "browserErrors": [],
+    "heroBefore": {
+      "frame": 9,
+      "calls": 17,
+      "triangles": 2098928,
+      "points": 0,
+      "lines": 0,
+      "geometries": 16,
+      "textures": 9
+    },
+    "heroAfter": {
+      "frame": 9,
+      "calls": 16,
+      "triangles": 1647828,
+      "points": 0,
+      "lines": 0,
+      "geometries": 15,
+      "textures": 9
+    },
+    "triangleReductionFraction": 0.21491923496184717,
+    "instances": {
+      "grass": 5200,
+      "shrubs": 720,
+      "rocks": 108,
+      "trees": 11
+    },
+    "mobilePerformanceApproved": false
+  },
+  "next": "Wait for human review; no automatic Checkpoint 2."
+}

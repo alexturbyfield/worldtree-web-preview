@@ -1,0 +1,50 @@
+[
+  {
+    "biome": "desert",
+    "seed": "29",
+    "view": "hero",
+    "cameraUnchanged": true,
+    "transformsUnchanged": true,
+    "errors": []
+  },
+  {
+    "biome": "desert",
+    "seed": "29",
+    "view": "inspection",
+    "cameraUnchanged": true,
+    "transformsUnchanged": true,
+    "errors": []
+  },
+  {
+    "biome": "desert",
+    "seed": "41",
+    "view": "hero",
+    "cameraUnchanged": true,
+    "transformsUnchanged": true,
+    "errors": []
+  },
+  {
+    "biome": "desert",
+    "seed": "41",
+    "view": "inspection",
+    "cameraUnchanged": true,
+    "transformsUnchanged": true,
+    "errors": []
+  },
+  {
+    "biome": "desert",
+    "seed": "8423",
+    "view": "hero",
+    "cameraUnchanged": true,
+    "transformsUnchanged": true,
+    "errors": []
+  },
+  {
+    "biome": "desert",
+    "seed": "8423",
+    "view": "inspection",
+    "cameraUnchanged": true,
+    "transformsUnchanged": true,
+    "errors": []
+  }
+]

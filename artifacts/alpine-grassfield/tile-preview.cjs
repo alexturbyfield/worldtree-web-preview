@@ -1,0 +1,1 @@
+const sharp=require('sharp');(async()=>{const tile=await sharp('public/assets/alpine-meadow/meadow-ground-v1.png').resize(300,300).png().toBuffer();await sharp({create:{width:900,height:900,channels:3,background:'#445f38'}}).composite(Array.from({length:9},(_,i)=>({input:tile,left:i%3*300,top:Math.floor(i/3)*300}))).png().toFile('artifacts/alpine-grassfield/ground-3x3.png');})();

@@ -1,0 +1,41 @@
+{
+  "seed": "29",
+  "tiers": {
+    "1": [
+      640,
+      360
+    ],
+    "2": [
+      1280,
+      720
+    ],
+    "3": [
+      1920,
+      1080
+    ]
+  },
+  "common": "&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human&composition=C&groundLighting=B&illumination=on",
+  "scenes": {
+    "savanna": "lat=-2.3&lon=35.2&habitat=grassland&conditional=1",
+    "rainforest": "lat=-3.12&lon=-60.02&habitat=forest&rainforest=v5",
+    "puget": "lat=47.6062&lon=-122.3321&habitat=forest&conditional=0"
+  },
+  "inspection": {
+    "position": [
+      34,
+      23,
+      44
+    ],
+    "target": [
+      -2,
+      7,
+      -12
+    ]
+  },
+  "historical": [
+    "artifacts/wildloom-biome-v3-savanna.png",
+    "artifacts/rainforest-v5-B.png",
+    "artifacts/wildloom-biome-v3-puget.png",
+    "artifacts/pretty-scene-pass1/comparison.png"
+  ]
+}

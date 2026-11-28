@@ -1,0 +1,245 @@
+[
+  {
+    "biome": "desert",
+    "mode": "concept",
+    "regions": [
+      {
+        "name": "background",
+        "meanDisplayLuminance": 0.5124549608220187,
+        "meanHSV_saturation": 0.5111040228746456,
+        "warmMinusBlue": 0.34401866515838847,
+        "darkFractionBelow03": 0.1569471153846154
+      },
+      {
+        "name": "middle",
+        "meanDisplayLuminance": 0.548196862952487,
+        "meanHSV_saturation": 0.596899887456875,
+        "warmMinusBlue": 0.4668903657617131,
+        "darkFractionBelow03": 0.12651442307692307
+      },
+      {
+        "name": "foreground",
+        "meanDisplayLuminance": 0.42239143575367427,
+        "meanHSV_saturation": 0.5282032056615084,
+        "warmMinusBlue": 0.34509757965700305,
+        "darkFractionBelow03": 0.28607421875
+      }
+    ]
+  },
+  {
+    "biome": "desert",
+    "mode": "before",
+    "regions": [
+      {
+        "name": "background",
+        "meanDisplayLuminance": 0.5705881042232175,
+        "meanHSV_saturation": 0.475833964589451,
+        "warmMinusBlue": 0.1863137254901331,
+        "darkFractionBelow03": 0.10007211538461538
+      },
+      {
+        "name": "middle",
+        "meanDisplayLuminance": 0.5417615560708947,
+        "meanHSV_saturation": 0.5463534520108815,
+        "warmMinusBlue": 0.3624647435897316,
+        "darkFractionBelow03": 0.15673076923076923
+      },
+      {
+        "name": "foreground",
+        "meanDisplayLuminance": 0.464725967769609,
+        "meanHSV_saturation": 0.6195530881010939,
+        "warmMinusBlue": 0.40426715686273595,
+        "darkFractionBelow03": 0.0578515625
+      }
+    ]
+  },
+  {
+    "biome": "desert",
+    "mode": "after",
+    "regions": [
+      {
+        "name": "background",
+        "meanDisplayLuminance": 0.5193294218325796,
+        "meanHSV_saturation": 0.3821135251194259,
+        "warmMinusBlue": 0.14828902714928477,
+        "darkFractionBelow03": 0.27490384615384617
+      },
+      {
+        "name": "middle",
+        "meanDisplayLuminance": 0.6025078850112717,
+        "meanHSV_saturation": 0.4333780320683215,
+        "warmMinusBlue": 0.3029188348416133,
+        "darkFractionBelow03": 0.12620192307692307
+      },
+      {
+        "name": "foreground",
+        "meanDisplayLuminance": 0.4869221589460996,
+        "meanHSV_saturation": 0.44515933043669437,
+        "warmMinusBlue": 0.27221568627454495,
+        "darkFractionBelow03": 0.03669921875
+      }
+    ]
+  },
+  {
+    "biome": "mangrove",
+    "mode": "concept",
+    "regions": [
+      {
+        "name": "background",
+        "meanDisplayLuminance": 0.35607127026772717,
+        "meanHSV_saturation": 0.4535633165090513,
+        "warmMinusBlue": 0.18394127073899297,
+        "darkFractionBelow03": 0.4422596153846154
+      },
+      {
+        "name": "middle",
+        "meanDisplayLuminance": 0.37244609306183923,
+        "meanHSV_saturation": 0.5012251989955347,
+        "warmMinusBlue": 0.19411387631968535,
+        "darkFractionBelow03": 0.4019951923076923
+      },
+      {
+        "name": "foreground",
+        "meanDisplayLuminance": 0.31816872192095835,
+        "meanHSV_saturation": 0.5258324382481496,
+        "warmMinusBlue": 0.19612814031863324,
+        "darkFractionBelow03": 0.52162109375
+      }
+    ]
+  },
+  {
+    "biome": "mangrove",
+    "mode": "before",
+    "regions": [
+      {
+        "name": "background",
+        "meanDisplayLuminance": 0.37757828325791604,
+        "meanHSV_saturation": 0.4729416970537584,
+        "warmMinusBlue": 0.09468552036197615,
+        "darkFractionBelow03": 0.3264423076923077
+      },
+      {
+        "name": "middle",
+        "meanDisplayLuminance": 0.3154299207956153,
+        "meanHSV_saturation": 0.4949776502805006,
+        "warmMinusBlue": 0.14352799773748307,
+        "darkFractionBelow03": 0.5306490384615384
+      },
+      {
+        "name": "foreground",
+        "meanDisplayLuminance": 0.28143129967829716,
+        "meanHSV_saturation": 0.5526019714442318,
+        "warmMinusBlue": 0.18563028492645148,
+        "darkFractionBelow03": 0.5689453125
+      }
+    ]
+  },
+  {
+    "biome": "mangrove",
+    "mode": "after",
+    "regions": [
+      {
+        "name": "background",
+        "meanDisplayLuminance": 0.44451964325038035,
+        "meanHSV_saturation": 0.41628248557213704,
+        "warmMinusBlue": 0.09688706636500008,
+        "darkFractionBelow03": 0.23560096153846155
+      },
+      {
+        "name": "middle",
+        "meanDisplayLuminance": 0.4544803716440467,
+        "meanHSV_saturation": 0.4063488424273303,
+        "warmMinusBlue": 0.17342684766206445,
+        "darkFractionBelow03": 0.12721153846153846
+      },
+      {
+        "name": "foreground",
+        "meanDisplayLuminance": 0.5219645392003656,
+        "meanHSV_saturation": 0.4373543735127435,
+        "warmMinusBlue": 0.24112630208335906,
+        "darkFractionBelow03": 0.09037109375
+      }
+    ]
+  },
+  {
+    "biome": "flooded",
+    "mode": "concept",
+    "regions": [
+      {
+        "name": "background",
+        "meanDisplayLuminance": 0.4832395406108636,
+        "meanHSV_saturation": 0.6100001002607389,
+        "warmMinusBlue": 0.3420895550528472,
+        "darkFractionBelow03": 0.1491826923076923
+      },
+      {
+        "name": "middle",
+        "meanDisplayLuminance": 0.4029303893665163,
+        "meanHSV_saturation": 0.6682015596933979,
+        "warmMinusBlue": 0.3185720211161252,
+        "darkFractionBelow03": 0.26605769230769233
+      },
+      {
+        "name": "foreground",
+        "meanDisplayLuminance": 0.32445754577205405,
+        "meanHSV_saturation": 0.6459420610674412,
+        "warmMinusBlue": 0.25815655637263174,
+        "darkFractionBelow03": 0.51453125
+      }
+    ]
+  },
+  {
+    "biome": "flooded",
+    "mode": "before",
+    "regions": [
+      {
+        "name": "background",
+        "meanDisplayLuminance": 0.4755318748680217,
+        "meanHSV_saturation": 0.48853891734007526,
+        "warmMinusBlue": 0.004207861990955246,
+        "darkFractionBelow03": 0.2725
+      },
+      {
+        "name": "middle",
+        "meanDisplayLuminance": 0.35639256874057257,
+        "meanHSV_saturation": 0.5983692898635331,
+        "warmMinusBlue": 0.18878751885360254,
+        "darkFractionBelow03": 0.44802884615384614
+      },
+      {
+        "name": "foreground",
+        "meanDisplayLuminance": 0.2540834792892209,
+        "meanHSV_saturation": 0.5343482430630528,
+        "warmMinusBlue": 0.10578063725483791,
+        "darkFractionBelow03": 0.78669921875
+      }
+    ]
+  },
+  {
+    "biome": "flooded",
+    "mode": "after",
+    "regions": [
+      {
+        "name": "background",
+        "meanDisplayLuminance": 0.5147661758861245,
+        "meanHSV_saturation": 0.4575055236772306,
+        "warmMinusBlue": 0.02618542609351928,
+        "darkFractionBelow03": 0.18057692307692308
+      },
+      {
+        "name": "middle",
+        "meanDisplayLuminance": 0.5197108525640982,
+        "meanHSV_saturation": 0.49802559587256934,
+        "warmMinusBlue": 0.26698906485669666,
+        "darkFractionBelow03": 0.12778846153846155
+      },
+      {
+        "name": "foreground",
+        "meanDisplayLuminance": 0.3772052071231257,
+        "meanHSV_saturation": 0.49898866081219934,
+        "warmMinusBlue": 0.19330384497546282,
+        "darkFractionBelow03": 0.1512109375
+      }
+    ]
+  }
+]

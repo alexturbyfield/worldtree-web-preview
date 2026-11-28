@@ -1,0 +1,99 @@
+Wildloom Amazon Rainforest Environmental Art Pass V4 — first comparison
+
+DELIVERY
+rainforest-v4-comparison.png — V3 unchanged scene / V4 encounter / V4 live elevated inspection.
+Seed 29, structure grove-1, appearance garden, Manaus -3.12,-60.02, same 819x513 panels, 1600x1050 browser viewport.
+CAMERA EXCEPTION: V3's existing orbit clamp placed its nominal human camera at world Y=10.1169,
+roughly 11.7m above this synthetic terrain. That exact original capture is preserved separately in
+rainforest-v4-V3-original.png and verified byte-identical after implementation with rainforest=v3.
+The first two sheet panels are matched at an actual 1.7m above terrain, position [0,0.1252664941,29],
+target [-1,9,-6]. V4 uses that corrected eye height live. The original camera capture remains available for review.
+Elevated inspection uses the existing diagnostic camera [50,46,60], target [-2,7,-12] and existing distant LOD.
+A same-detailed-geometry elevated diagnostic is also retained in rainforest-v4-inspection-detailed.png.
+
+IMPLEMENTATION — THREE SOURCE FILES
+src/lib/forest/composition-archetype.ts:
+  Added an Amazon-only V4 stratum configuration and bounded greedy canopy occupancy (81 samples, 18 candidates
+  per main-canopy placement). Candidates cover poorly occupied crown footprints while excluding central trunks.
+  2 near-edge main-canopy trunks, 4 emergents, 26 other main-canopy trees, 12 subcanopy and 20 understory instances.
+  Uniform scene-instance scales reuse existing source models/branch architecture; no foliage-density inflation,
+  no botanical profile/generator changes, and no new ecological species. The V3 archetype remains accessible.
+src/lib/forest/biome-visual.ts:
+  Amazon-only configuration: 64 visual composition instances, forest-floor texture at 5m repeat, warmer brown/umber
+  material pigment, grass disabled, no horizon hill, fog delayed from 25–90m to 65–150m with deep green depth.
+  Sun [-28,48,18], warm intensity 3.8, ambient .42; existing focal painterly illumination and warm foliage response
+  reused. Puget and other biome configurations remain on their existing branches.
+  Added six shared GPU-instanced life-form batches: broadleaf seedlings, fern clusters, pinnate-frond palms,
+  shrubs, lianas and trunk epiphytes. Geometry is shared per batch, with deterministic size/yaw/tint and tree-base
+  or foreground-edge patches. The central opening rejects tall ground dressing. No grass carpet or rocks added.
+  Existing integrated mahogany buttresses scale with the source composition instances; no invented kapok model.
+  Replaced broad hard shaft planes with two narrow, softly feathered additive shaft hints.
+src/lib/forest/painted-renderer.ts:
+  Amazon V4-only camera clamp correction and transition through the existing inspection route. This preserves
+  the same composed V4 layout for inspection; the existing far LOD remains active there. Puget camera/lighting untouched.
+Added scripts/studies/capture-rainforest-v4.cjs. Original source snapshots: rainforest-v4-baseline-source/.
+
+COUNTS AND RENDERER COUNTERS
+V3: 36 trees = 12 mahogany, 4 rubber, 5 Cecropia, 3 acai, 12 cacao; 780 generic ground fans.
+V4: 64 trees = 25 Swietenia macrophylla, 7 Hevea brasiliensis, 8 Cecropia peltata,
+    4 Euterpe precatoria, 20 Theobroma cacao. Strata: 4 emergent / 28 main canopy / 12 subcanopy / 20 understory.
+V4 model height range 2.87–53.41m, versus V3 3.17–35.61m; artistic instance dimensions, not measured ages/heights.
+These counts are composition instances reusing eligible individuals, not revised ecological population or abundance.
+Canonical input data and resolver-approved palette are unchanged; local occurrence remains unverified.
+
+V4 understory: 712 instances / 126488 approximate triangles across six shared batches.
+  seedlings: 180 instances / 10080 triangles
+  ferns: 150 instances / 45000 triangles
+  palms: 90 instances / 38160 triangles
+  shrubs: 120 instances / 17280 triangles
+  lianas: 72 instances / 10368 triangles
+  epiphytes: 100 instances / 5600 triangles
+
+                            Calls      Submitted triangles
+V3 matched 1.7m encounter     19            596624
+V4 1.7m encounter             17           1297518
+V4 live elevated inspection   17            436850
+V4 detailed elevated study    17           1297518
+Ground dressing is six instanced draws, never one draw per plant. Shaft hints add two draws; the hill draw is removed.
+Measured in desktop Chromium ANGLE SwiftShader, pixel ratio .65, shadows enabled, foliage alpha mask .34.
+Static shadow-map generation and GPU overdraw are not represented by steady-frame triangle counters.
+No physical mobile FPS or GPU timer was measured. Human-view geometry cost rises about 117%; this is not a claim
+of meeting a mobile frame-rate target. The existing low-detail inspection path is much cheaper.
+
+PRESERVATION / CHECKS
+TypeScript passes; capture script syntax and whitespace checks pass; all capture page/shader error arrays empty.
+Targeted checks pass: deterministic composition, immutable canonical input, identical eligible palette and original
+structure/appearance/scene seeds, reuse of individual seeds, missing-data-safe composition, central trunk exclusion.
+Approved Puget screenshot is byte-identical: rainforest-v4-puget-preserved.png versus wildloom-biome-v3-puget.png.
+V3 at its native camera is byte-identical to the pre-change capture. No map/database, UI, generator, botanical profile,
+leaf atlas or sky asset was modified in this pass. Existing unrelated working changes were preserved.
+
+FIRST-RENDER REVIEW / MISSING ASSETS AND LIMITATIONS
+The human view now reads taller and more enclosed overhead, with massive cropped edge trunks and recognizable
+broadleaf/palm/fern layers. The forest floor is brown leaf litter, and a central encounter space remains readable.
+Acceptance is still partial: rear sky windows/terrain boundary remain exposed, rear enclosure is insufficient,
+understory remains graphic, some crown and ground texture motifs repeat, and selective illumination is weaker
+than the supplied photographic concept. The inspection view exposes the finite terrain slab and canopy holes.
+No extra fog was added to conceal these gaps. Stop after this first comparison instead of polishing further.
+The existing Puget forest-floor PNG is reused/tinted; a dedicated Amazon litter/soil asset is still missing.
+Life-form plants are unnamed procedural dressing, not species-specific botanical reconstructions. Better tropical
+leaf surfaces/atlas art, branch-aware vine/epiphyte attachment and larger detailed buttress surfaces remain missing.
+Shafts are view-dependent planar hints, not physically occluded volumetric scattering. No bloom is added.
+
+REFERENCES
+Existing project concept: wildloom-amazon-terra-firme-concept-v1.png.
+Real Amazon forest photograph (PIK):
+https://www.pik-potsdam.de/de/aktuelles/nachrichten/amazonaswald-biodiversitaet-kann-klimarisiken-mindern
+Viewed for buttressed trunks, layered small stems, vines and irregular negative space; not used as a texture.
+Amazon photography:
+https://rainforests.mongabay.com/amazon/visiting-the-amazon-rainforest.html
+Forest-layer reference:
+https://striresearch.si.edu/rainforest/home/rainforest-layers/
+References guide visual structure; species eligibility comes from existing project data.
+
+PREVIEW
+npm run dev -- --port 3001
+http://localhost:3001/explore?lat=-3.12&lon=-60.02&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human&composition=C&groundLighting=B&illumination=on&rainforest=v4
+Use camera=inspection for elevated V4. Use rainforest=v3 for the untouched V3 configuration/native camera.
+Reproduce the comparison: node scripts/studies/capture-rainforest-v4.cjs
+No deployment, commits, new UI, broad tests or follow-up ecosystem work. Stopped for visual review.

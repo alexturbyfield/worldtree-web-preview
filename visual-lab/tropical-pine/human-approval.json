@@ -1,0 +1,17 @@
+{
+  "date": "2026-11-28T04:24:33.516Z",
+  "actor": "user",
+  "text": "This is accepted. This concludes the major regions?",
+  "status": "human-approved-visual-checkpoint",
+  "scope": "Current tropical pine-oak seed29 composite including the latest midground branch-value treatment; no approval of global ecological routing, device performance or other provisional biomes inferred",
+  "image": "artifacts/tropical-pine-branch-values/final.png",
+  "parameters": {
+    "seed": 29,
+    "lat": 14.507672,
+    "lon": -89.435797,
+    "expansion": "tropicalpine",
+    "wind": 0
+  },
+  "evidence": "visual-lab/tropical-pine/branch-values-review.json",
+  "commitPushDeployAuthorized": false
+}

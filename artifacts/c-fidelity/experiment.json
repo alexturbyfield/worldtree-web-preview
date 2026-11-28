@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "id": "C-fidelity",
+  "date": "2026-11-25",
+  "generatorVersion": "growth-profile-1 + C2 / fidelity-field1",
+  "sourceBase": "0bca0bac1bf9a192aea18843133e5ebae10aaf39",
+  "branch": "feat/wildloom-foliage-studio",
+  "sourceHashes": {
+    "src/lib/studio/growth-profile.ts": "492da2b42e721aec3b7e2cc0e53ab6cdd1f83a2887bf27093977bc7336412bcd",
+    "src/lib/forest/tree-experiment.ts": "cc281010ce1dc41a69ec8761a6dd466b9343b65524e4f54337f659e0c0e6131d",
+    "src/lib/forest/painted-renderer.ts": "ec73d87226d261b90f082248bedf0f4c58a2fe06eac0e2be97c67ec24920fdf9",
+    "src/lib/forest/savanna-recipe.ts": "ef78bd9570b4b6c2e640eb18b6b3d3f46df4f91264e98e17c9b4a504e6e5d45a",
+    "scripts/studies/visual-quality.cjs": "85aaf134ba10f8465a80b0bc6b2d6f6eeaf486e91d82f964ee9c3f426c0e413f",
+    "tests/tree-growth-profile.test.ts": "feb44daa74358d853197074d65e7ee2622f2c973ae3f38d20d8088b4c9c82fc3",
+    "visual-lab/acacia-architectures.json": "ec42ac007b24d5711d1ed775891475ee8ee36b4092ce7164f3071539dcd2f9c5",
+    "visual-lab/procedural-tree-grammar.json": "66918163bca160134b0755b52717b031a108f01d6e1a8e8acc7ff7949103fff1",
+    "visual-lab/landscape-color-grammar.json": "38f82e306d249d340eb648c563ade3b3b6bf69a50d3bd8d0649fad56a56a6cd0"
+  },
+  "sourceSnapshots": "artifacts/c-fidelity/final-source",
+  "priorExperiment": "artifacts/golden-plains-trees/REPORT.md",
+  "humanDirection": "visual-lab/feedback/c-direction-fidelity.json",
+  "references": [
+    ".codex-attachments/0cd44ce1-629d-4f8a-9bd2-2061fb7f1332/0d727cc7-0268-4165-98a5-d7a54546ce02/1000011014.png"
+  ],
+  "referenceRights": "User supplied for private art direction; no licensing or reuse consent inferred",
+  "worldSeeds": [
+    "29",
+    "41",
+    "73"
+  ],
+  "presentationSeed": "unchanged recipe presentation seed; recorded per capture",
+  "profile": {
+    "name": "Forked layered crown - connected volume",
+    "height": 9.5,
+    "radius": 9.5,
+    "trunk": {
+      "radius": 0.5,
+      "flare": 1.4,
+      "taper": 0.4,
+      "lean": [
+        0.25,
+        0,
+        0.1
+      ],
+      "forkHeight": 0.28,
+      "leaders": 2,
+      "leaderSpread": 1.8
+    },
+    "scaffold": {
+      "count": 8,
+      "reach": 0.48,
+      "levels": [
+        0.73,
+        0.85,
+        0.79,
+        0.9
+      ],
+      "wind": [
+        0.3,
+        0,
+        0
+      ],
+      "gap": 0.14,
+      "innerShoots": true
+    },
+    "secondary": {
+      "count": 3,
+      "reach": 0.32,
+      "fan": 0.9,
+      "rise": 0.48
+    },
+    "terminal": {
+      "count": 3,
+      "reach": 0.16,
+      "fan": 0.8,
+      "rise": 0.48
+    },
+    "foliage": {
+      "width": 2.25,
+      "length": 1.85,
+      "sprays": 4,
+      "occupancy": 0.9,
+      "shadow": "#283D30",
+      "body": "#65783A",
+      "light": "#C6B85B",
+      "volume": 0.8
+    },
+    "age": {
+      "maturity": 1
+    },
+    "environment": {
+      "windScale": 1,
+      "phototropism": 0.03
+    },
+    "lod": {
+      "groupStride": 2,
+      "essentialSprays": 1
+    }
+  },
+  "worldField": {
+    "coordinate": "world xz, encounter north toward negative Z; anchor z34",
+    "progressRangeMeters": [
+      2,
+      30
+    ],
+    "irregularity": "5*sin(x*.045+z*.027)",
+    "nearPigments": [
+      "#6C603E",
+      "#99763C"
+    ],
+    "middlePigments": [
+      "#E9B650",
+      "#FFE0A0"
+    ],
+    "warmTipPigment": "#E9B650",
+    "tipMix": 0.12,
+    "distanceAtmosphere": "retained plains ramps; details in source and capture parameters",
+    "relief": "unchanged retained r-plains .5 continuation relief; inner terrain untouched"
+  },
+  "candidateURLs": {
+    "retained": "/explore?lat=-2.3&lon=35.2&habitat=grassland&conditional=1&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human&composition=C&groundLighting=B&illumination=on&pretty=on&treeStudy=C2&labCandidate=r-fidelity",
+    "rejected": "same query with labCandidate=r-fidelity-solid",
+    "baseline": "same query with treeStudy=C and labCandidate=r-plains"
+  },
+  "visualInspection": {
+    "available": true,
+    "method": "Assistant interpreted actual PNG contents through view_image; separate from capture, metadata and objective checks.",
+    "scales": [
+      "160x90 contact thumbnails",
+      "640x360 hero/inspection",
+      "640x360 close camera for grass and foliage"
+    ],
+    "review": "artifacts/c-fidelity/review.json",
+    "humanFinalApproval": null
+  },
+  "iterations": [
+    {
+      "id": "C-fidelity-r1",
+      "target": "branch-supported crown volume",
+      "attempts": 1,
+      "decision": "retain-provisionally",
+      "evidence": "artifacts/c-fidelity/tree-diagnostics.png",
+      "meaningfulImprovement": true
+    },
+    {
+      "id": "C-fidelity-r2",
+      "target": "world-space values",
+      "attempts": 2,
+      "decision": "retain-revision-provisionally",
+      "rejected": "First ground was too brown; preserved as c-fidelity-ground",
+      "meaningfulImprovement": true
+    },
+    {
+      "id": "C-fidelity-r3",
+      "target": "dimensional foreground grass",
+      "attempts": 2,
+      "decision": "reject-both-retain-existing-grass",
+      "meaningfulImprovement": false,
+      "evidence": "artifacts/c-fidelity/grass-rejected.png"
+    }
+  ],
+  "measurements": "artifacts/c-fidelity/measurements.json",
+  "humanPreference": {
+    "scope": "structure C only",
+    "approvedFinal": false
+  },
+  "bestKnown": {
+    "candidate": "r-fidelity",
+    "treeStudy": "C2",
+    "humanApproved": false,
+    "source": "agent visual critique only"
+  },
+  "training": {
+    "modelTrained": false,
+    "agentRatingsAreHumanLabels": false
+  }
+}

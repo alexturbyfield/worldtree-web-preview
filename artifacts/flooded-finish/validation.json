@@ -1,0 +1,124 @@
+{
+  "matched": [
+    {
+      "view": "hero",
+      "cameraIdentical": true,
+      "calls": [
+        21,
+        21
+      ],
+      "triangles": [
+        2182574,
+        2414846
+      ],
+      "staging": {
+        "capsuleRadius": 0.35,
+        "bodyHeight": 1.7,
+        "approachRadius": 0.85,
+        "minimumGroundAboveWater": 0.14770435479323532,
+        "rootIntrusions": 0,
+        "shortGrassHeightBound": 0.08,
+        "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+      },
+      "instances": [
+        {
+          "name": "field-source-stand-impostors",
+          "count": 100,
+          "hash": "b9d299be790d5e70ffcc04ed1eabbae89da459e88e64f0a16143b769e4ab417a"
+        },
+        {
+          "name": "field-dimensional-meadow",
+          "count": 2310,
+          "hash": "97c54a296582a3b128f5499def6288a54df67ce3df8bc9b76f6b1c3c1809b844"
+        },
+        {
+          "name": "field-distant-meadow",
+          "count": 11841,
+          "hash": "b8776671afe0307819d0202279dce495351c3c87ac3332adac29adc747264451"
+        },
+        {
+          "name": "field-sparse-unnamed-seedheads",
+          "count": 23,
+          "hash": "ed3880e8442ee6616e2721aa36faa71517fa10ce292ab1c860d20752fe0fe58f"
+        }
+      ],
+      "treeCount": 24,
+      "errors": []
+    },
+    {
+      "view": "inspection",
+      "cameraIdentical": true,
+      "calls": [
+        21,
+        21
+      ],
+      "triangles": [
+        2182574,
+        2414846
+      ],
+      "staging": {
+        "capsuleRadius": 0.35,
+        "bodyHeight": 1.7,
+        "approachRadius": 0.85,
+        "minimumGroundAboveWater": 0.14770435479323532,
+        "rootIntrusions": 0,
+        "shortGrassHeightBound": 0.08,
+        "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+      },
+      "instances": [
+        {
+          "name": "field-source-stand-impostors",
+          "count": 100,
+          "hash": "b9d299be790d5e70ffcc04ed1eabbae89da459e88e64f0a16143b769e4ab417a"
+        },
+        {
+          "name": "field-dimensional-meadow",
+          "count": 2310,
+          "hash": "97c54a296582a3b128f5499def6288a54df67ce3df8bc9b76f6b1c3c1809b844"
+        },
+        {
+          "name": "field-distant-meadow",
+          "count": 11841,
+          "hash": "b8776671afe0307819d0202279dce495351c3c87ac3332adac29adc747264451"
+        },
+        {
+          "name": "field-sparse-unnamed-seedheads",
+          "count": 23,
+          "hash": "ed3880e8442ee6616e2721aa36faa71517fa10ce292ab1c860d20752fe0fe58f"
+        }
+      ],
+      "treeCount": 24,
+      "errors": []
+    }
+  ],
+  "otherBiomes": [
+    {
+      "biome": "desert",
+      "view": "hero",
+      "pixelIdentical": true
+    },
+    {
+      "biome": "desert",
+      "view": "inspection",
+      "pixelIdentical": true
+    },
+    {
+      "biome": "mangrove",
+      "view": "hero",
+      "pixelIdentical": true
+    },
+    {
+      "biome": "mangrove",
+      "view": "inspection",
+      "pixelIdentical": true
+    }
+  ],
+  "frozenSourceUnchanged": true,
+  "development": [
+    29,
+    41
+  ],
+  "holdout": 63817,
+  "holdoutTuned": false,
+  "mobileApproved": false
+}

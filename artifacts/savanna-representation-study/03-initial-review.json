@@ -1,0 +1,18 @@
+{
+  "visionAvailable": true,
+  "interventionLevel": "representation",
+  "artisticHypothesis": "Separate broad landscape structure from fine blades using three different constructions.",
+  "imagesInspected": [
+    "artifacts/visual-quality/lab-S-r1-sa/savanna-hero.png", "artifacts/visual-quality/lab-S-r1-sa/savanna-inspection.png",
+    "artifacts/visual-quality/lab-S-r1-sb/savanna-hero.png", "artifacts/visual-quality/lab-S-r1-sb/savanna-inspection.png",
+    "artifacts/visual-quality/lab-S-r1-sc/savanna-hero.png", "artifacts/visual-quality/lab-S-r1-sc/savanna-inspection.png"
+  ],
+  "inspectionComposite": "artifacts/savanna-representation-study/initial-inspection-strip.png",
+  "ranking": ["sc", "sa", "sb"],
+  "reason": "The constructions are distinct, but first implementation quality prevents judging them as successful grassland. A is flattened leaf-like debris, B exposes a patterned field basis, and C has rectangular canopy seams. Keep the baseline; make one implementation revision rather than increasing density.",
+  "candidates": [
+    {"id":"sa","betterThanPrevious":false,"goodEnough":false,"reason":"Low, untextured surfaces read as flattened leaves. Hypothesis: inadequate height-to-width ratio, excessive bend and missing grass-specific surface/silhouette information.","failureClassification":"implementation-quality","nextAction":"One revision: painterly grass-swath alpha atlas, taller upright curved masses, integrated base colors."},
+    {"id":"sb","betterThanPrevious":false,"goodEnough":false,"reason":"The surface is quiet but bare and visibly patterned. Hypothesis: correlated hash/interpolation and directional sine detail create regular structure; grass semantics are too weak.","failureClassification":"implementation-quality","nextAction":"One revision: uncorrelated field basis, smoother interpolation, restrained irregular strokes and selective taller parallax blades."},
+    {"id":"sc","betterThanPrevious":false,"goodEnough":false,"reason":"Low relief begins to organize the field, but hard rectangular seams and faceted patches dominate. Hypothesis: discontinuous boundary slopes and normals that do not match the displaced surface.","failureClassification":"implementation-quality","nextAction":"One revision: zero-slope boundaries, correct surface normals, feathered contact, and limited textured mass accents."}
+  ]
+}

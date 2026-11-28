@@ -1,0 +1,60 @@
+{
+  "phase": 1,
+  "status": "frozen before explicit calibration mapping",
+  "blindingLimitation": "The full brief was delivered together. This is a genuine image-led comparison, but not a formally blinded assessment of unseen calibration criteria.",
+  "inspectionMethod": "Actual images interpreted through view_image; not metadata or metric inference.",
+  "imagesInspected": [
+    ".codex-attachments/0cd44ce1-629d-4f8a-9bd2-2061fb7f1332/0d727cc7-0268-4165-98a5-d7a54546ce02/1000011014.png",
+    ".codex-attachments/0cd44ce1-629d-4f8a-9bd2-2061fb7f1332/268a9f8a-a89e-46f8-8243-3f84016fa18d/1000011015.png",
+    "artifacts/visual-quality/lab-initial/savanna-hero.png",
+    "artifacts/visual-quality/lab-A-r1-a3/savanna-hero.png",
+    "artifacts/visual-quality/lab-initial/puget-hero.png"
+  ],
+  "differences": [
+    {
+      "id": "D1",
+      "title": "Landscape first, individual plants second",
+      "referenceObservation": "Large golden swathes read as connected fabric. Curving intermediate groups carry most of the field; thin strokes decorate a few crests and the close foreground.",
+      "wildloomObservation": "The retained field resolves into repeated little branching shapes, while the ribbon candidate resolves into separate spiky tufts. The middle clearing is a different, largely empty surface.",
+      "aestheticConsequence": "Attention jumps between thousands of equally insistent marks instead of reading a meadow as a few composed forms.",
+      "principle": "A hierarchy of silhouette/value masses, intermediate rhythms and subordinate detail must survive reduction.",
+      "technicalHypothesis": "Use a continuous grassland substrate and intermediate curved masses; reserve thin geometry for selected foreground and silhouette regions rather than covering the field with the same tuft."
+    },
+    {
+      "id": "D2",
+      "title": "Illumination organizes the land into connected shapes",
+      "referenceObservation": "Warm lit bands and cool shaded bases sweep across many plants at once. Highlights are selective; the dark framing supports a luminous open middle rather than outlining every blade.",
+      "wildloomObservation": "The ground is a comparatively flat ochre area interrupted by sharp dark plant edges. Grass often has the same olive/gold response across large distances, while the sky has much richer soft tonal structure.",
+      "aestheticConsequence": "The eye gets strong local contrast but weak large-scale guidance and little sense of light flowing across the landscape.",
+      "principle": "Broad light/value relationships should dominate local material contrast.",
+      "technicalHypothesis": "Share a low-frequency world-space illumination/palette field between substrate and vegetation, retain the existing sun, and suppress high-frequency contrast away from selected lit crests."
+    },
+    {
+      "id": "D3",
+      "title": "Directional rhythm replaces radial repetition",
+      "referenceObservation": "Long curved strokes lean through the foreground in related directions. Their groups bend around open areas and overlap, creating a rhythm rather than a visible planting pattern.",
+      "wildloomObservation": "Repeated radial fans and pointed clusters face many unrelated directions. Similar shapes repeat from close foreground to the distance; the ribbon alternative changes the object but retains the repetitive spiky rhythm.",
+      "aestheticConsequence": "The field feels assembled from objects instead of grown and swept into coherent movement.",
+      "principle": "Correlated directional variation at the group scale can unify many irregular local silhouettes.",
+      "technicalHypothesis": "Use a slowly varying lean/orientation field, overlapping curved surfaces and varied edge breakup; let individual blades diverge modestly from the larger flow."
+    },
+    {
+      "id": "D4",
+      "title": "The clearing belongs to the grassland",
+      "referenceObservation": "Open regions transition through shorter, lower-contrast growth and exposed-earth variation. Neighboring grass bases share the ground's shadow color, and roots/bases disappear into a common surface.",
+      "wildloomObservation": "The central opening resembles an ochre stage surrounded by different, discrete geometry. Crisp dark bases and abrupt changes in visible plant height announce where objects begin.",
+      "aestheticConsequence": "The open encounter area reads as an exclusion mask rather than a naturally occurring part of the landscape.",
+      "principle": "Material, spatial coverage and height must express the same transition, including places with little geometry.",
+      "technicalHypothesis": "Drive terrain color, plant base color and a gradual height envelope from shared fields, with soft soil/vegetation transitions and restrained contact shading rather than isolated black bases."
+    },
+    {
+      "id": "D5",
+      "title": "A common painterly language and depth hierarchy",
+      "referenceObservation": "Foreground sweeps, simplified middle bands, quiet cooler distance and a broad tree silhouette all use varied but compatible edges. The attractive sky and land feel painted with related decisions.",
+      "wildloomObservation": "The sky is soft and expressive, but grass remains hard-edged and similarly object-like over depth. A simple distant band and sharp foreground marks provide little intermediate visual structure. Puget's protected reference demonstrates a calmer, more continuous ground opening than the savanna.",
+      "aestheticConsequence": "The land looks pasted beneath the sky; objects compete across depth and the scene lacks an intentional visual rhythm.",
+      "principle": "Detail, contrast, edge softness and palette separation should change together with depth while retaining biome identity.",
+      "technicalHypothesis": "Use depth-aware simplification and quiet surface color at distance, medium-scale overlapping grass shapes nearby, and sparse native-scale detail. Keep sky/camera/tree systems fixed while testing whether the land can join their visual language."
+    }
+  ]
+}

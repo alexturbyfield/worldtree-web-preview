@@ -1,0 +1,6 @@
+import {resolveVegetation} from '../../src/lib/vegetation';
+import {createSceneRecipe} from '../../src/lib/forest/recipe';
+import {prairieStudy} from '../../src/lib/forest/wave3-prairie';
+const profile=resolveVegetation({lat:36.5736504415,lon:-98.3419281896,geography:{ECO_ID:389,ECO_NAME:'Central-Southern US mixed grasslands',BIOME_NAME:'Temperate grasslands',BIOME_NUM:8,REALM:'Nearctic'},botanicalArea:{code:'OKL',name:'Oklahoma'},habitat:'grassland',seed:'grove-1'});
+const r=createSceneRecipe(profile,{seed:'29',conditional:true,density:36,structureSeed:'grove-1',appearanceSeed:'garden'});
+for(const t of prairieStudy.compose(r).trees){let maxGap=0,maxRadius=0,minDot=1;let prev:any;for(const s of t.model.segments){if(prev&&prev.pathId===s.pathId){maxGap=Math.max(maxGap,Math.hypot(...s.a.map((v,i)=>v-prev.b[i]) as [number,number,number]));maxRadius=Math.max(maxRadius,Math.abs(prev.r1-s.r0));if(prev.tangentB&&s.tangentA)minDot=Math.min(minDot,prev.tangentB.reduce((sum:number,v:number,i:number)=>sum+v*s.tangentA![i],0));}prev=s;}console.log(t.index,{maxGap,maxRadius,minDot});}

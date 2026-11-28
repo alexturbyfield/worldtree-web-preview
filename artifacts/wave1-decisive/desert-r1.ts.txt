@@ -1,0 +1,57 @@
+import * as T from 'three';
+import {randomSource,hashSeed} from './random';
+import {cameraSpace,collisionFootprint,type FieldPlan} from './wave1-fields';
+import {desertRockMaterial} from './wave1-desert-detail';
+
+/** Synthetic low-relief drainage, not inferred mountains or measured local geology. */
+export function desertRelief(seed:string,x:number,z:number){
+ const phase=(hashSeed(seed+'|arid-drainage')%10000)*.001;
+ const bend=Math.sin(z*.034+phase)*8+Math.sin(z*.083+phase)*2.3;
+ const wash=Math.exp(-Math.pow((x-bend)/3.6,2));
+ return .17*Math.sin(x*.064+z*.043+phase)+.12*Math.sin(z*.115-x*.021)-wash*.38;
+}
+
+/** Smooth implicit eroded mass cut by joints; marching tetrahedra, not box/sphere meshes. */
+export function erodedMass(seed:string,steps=25){
+ const r=randomSource(seed),phase=r()*6.28,tilt=(r()-.5)*.3;
+ const smin=(a:number,b:number,k:number)=>{const h=Math.max(0,Math.min(1,.5+.5*(b-a)/k));return b*(1-h)+a*h-k*h*(1-h);};
+ const sdf=(x:number,y:number,z:number)=>{
+  const warp=.045*Math.sin(y*4+phase)*Math.sin(z*3.7+phase);x+=warp;z+=.035*Math.sin(x*4.3+y*2.9);
+  const ell=(cx:number,cy:number,cz:number,rx:number,ry:number,rz:number)=>(Math.hypot((x-cx)/rx,(y-cy)/ry,(z-cz)/rz)-1)*Math.min(rx,ry,rz);
+  let d=smin(ell(-.24,-.03,.02,.71,.92,.72),ell(.48,-.34,.05,.61,.57,.70),.15);
+  d=smin(d,ell(-.48,-.57,.48,.60,.30,.55),.10);
+  d=Math.max(d,(x*.39+y*.86+z*.18-.86)*.65,(-x*.6+y*.26-z*.64-.94)*.65);
+  const fissure=Math.max(Math.abs(x+z*.32-y*tilt-.04)-.018,Math.abs(z+.10)-.62,-y-.36);
+  d=Math.max(d,-fissure);
+  return d+.016*Math.sin(x*11+phase)*Math.sin(y*9.3-z*5)+.008*Math.sin(z*23+y*14)*Math.sin(x*17-y*9);
+ };
+ const pos:number[]=[],norm:number[]=[],colors:number[]=[],limit=1.35,step=limit*2/steps,n=steps+1,values=new Float32Array(n*n*n);
+ const index=(x:number,y:number,z:number)=>x+n*(y+n*z),point=(x:number,y:number,z:number)=>new T.Vector3(-limit+x*step,-limit+y*step,-limit+z*step);
+ for(let z=0;z<n;z++)for(let y=0;y<n;y++)for(let x=0;x<n;x++){const p=point(x,y,z);values[index(x,y,z)]=sdf(p.x,p.y,p.z);}
+ const corners=[[0,0,0],[1,0,0],[1,1,0],[0,1,0],[0,0,1],[1,0,1],[1,1,1],[0,1,1]],tetra=[[0,5,1,6],[0,1,2,6],[0,2,3,6],[0,3,7,6],[0,7,4,6],[0,4,5,6]],edges=[[0,1],[0,2],[0,3],[1,2],[1,3],[2,3]];
+ const normal=(p:T.Vector3)=>{const e=.004;return new T.Vector3(sdf(p.x+e,p.y,p.z)-sdf(p.x-e,p.y,p.z),sdf(p.x,p.y+e,p.z)-sdf(p.x,p.y-e,p.z),sdf(p.x,p.y,p.z+e)-sdf(p.x,p.y,p.z-e)).normalize();};
+ for(let z=0;z<steps;z++)for(let y=0;y<steps;y++)for(let x=0;x<steps;x++){
+  const points=corners.map(c=>point(x+c[0],y+c[1],z+c[2])),vs=corners.map(c=>values[index(x+c[0],y+c[1],z+c[2])]);
+  if(vs.every(v=>v>0)||vs.every(v=>v<0))continue;
+  for(const t of tetra){const crossings:T.Vector3[]=[];for(const [a,b]of edges){const ia=t[a],ib=t[b],va=vs[ia],vb=vs[ib];if((va<0)===(vb<0))continue;crossings.push(points[ia].clone().lerp(points[ib],va/(va-vb)));}if(crossings.length<3)continue;
+   const center=crossings.reduce((a,p)=>a.add(p),new T.Vector3()).divideScalar(crossings.length),N=normal(center),u=crossings[0].clone().sub(center).normalize(),v=new T.Vector3().crossVectors(N,u);crossings.sort((a,b)=>Math.atan2(a.clone().sub(center).dot(v),a.clone().sub(center).dot(u))-Math.atan2(b.clone().sub(center).dot(v),b.clone().sub(center).dot(u)));
+   for(let i=1;i<crossings.length-1;i++)for(const p of [crossings[0],crossings[i],crossings[i+1]]){pos.push(p.x,p.y,p.z);const nv=normal(p);norm.push(nv.x,nv.y,nv.z);const mineral=.92+.06*Math.sin(p.y*9+p.z*4+phase);colors.push(mineral,mineral*.98,mineral*.93);}
+  }
+ }
+ const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(pos,3));g.setAttribute('normal',new T.Float32BufferAttribute(norm,3));g.setAttribute('color',new T.Float32BufferAttribute(colors,3));g.computeBoundingBox();g.computeBoundingSphere();return g;
+}
+
+export function mountDesertDirection(scene:T.Scene,plan:FieldPlan,height:(x:number,z:number)=>number){
+ const r=randomSource(plan.seed+'|rocky-shoulders'),o=new T.Object3D(),s=Math.sin(plan.heading),c=Math.cos(plan.heading),placements:{x:number;z:number;size:number;stretch:number;angle:number;variant:number}[]=[];
+ const put=(side:number,forward:number,size:number,variant:number)=>{const x=plan.eye[0]+s*forward+c*side,z=plan.eye[2]-c*forward+s*side;if(collisionFootprint(plan,x,z,size*1.6))return;placements.push({x,z,size,variant,stretch:.85+r()*.45,angle:r()*6.28});};
+ const dominant=r()>.5?-1:1;
+ for(const [side,f,size]of [[6.7,10,3.3],[8.6,14,3.9],[5.5,16,2.1],[4.6,4,1.35],[8,7,1.8]]as const)put(side*dominant,f,size,placements.length%6);
+ for(const [side,f,size]of [[6.1,12,2.2],[7.4,17,2.1],[4.3,5.5,1.0]]as const)put(-side*dominant,f,size,placements.length%6);
+ for(let k=0;k<52;k++){const f=19+r()*150,side=(k%2?1:-1)*(5+f*(.20+r()*.4));put(side,f,(.4+r()*1.5)*(1-Math.min(.5,f/300)),k%6);}
+ for(let variant=0;variant<6;variant++){
+  const near=variant<3,g=erodedMass(plan.seed+'|weathered-'+variant,near?25:18),mat=desertRockMaterial();mat.vertexColors=true;
+  const list=placements.filter(p=>p.variant===variant),mesh=new T.InstancedMesh(g,mat,list.length);mesh.name='field-jointed-bedrock';
+  list.forEach((p,i)=>{o.position.set(p.x,height(p.x,p.z)+p.size*.39,p.z);o.rotation.set((r()-.5)*.15,p.angle,(r()-.5)*.13);o.scale.set(p.size*p.stretch,p.size*(.8+r()*.35),p.size);o.updateMatrix();mesh.setMatrixAt(i,o.matrix);mesh.setColorAt(i,new T.Color('#a87454').lerp(new T.Color('#d5a47a'),r()*.45));});mesh.computeBoundingSphere();mesh.castShadow=mesh.receiveShadow=true;scene.add(mesh);
+ }
+ scene.userData.desertDirection={version:'eroded-implicit-1',formations:placements.length,dominantSide:dominant,representation:'seeded implicit eroded/jointed masses; six variations, two sampling resolutions',geography:'Synthetic low relief only; no measured elevation or mountain inference'};
+}

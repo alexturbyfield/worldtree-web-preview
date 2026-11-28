@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "id": "holm-oak-reference-pass",
+  "date": "2026-11-27T19:01:24.039Z",
+  "references": [
+    "visual-lab/mediterranean/holm-oak/reference.webp",
+    "visual-lab/mediterranean/holm-oak/reference-silhouette.png"
+  ],
+  "inputs": {
+    "seed": 29,
+    "structureSeed": "mediterranean-1",
+    "camera": {
+      "position": [
+        0,
+        1.7,
+        16
+      ],
+      "target": [
+        0,
+        -6.225925925926,
+        -44
+      ],
+      "fov": 47
+    },
+    "sourceHashes": {
+      "src/lib/forest/holm-oak-study.ts": "e24b6a986ac6d689ab125aa92149c3027a6e9035b93286897e07704ec9b30507",
+      "src/lib/forest/mediterranean-recipe.ts": "4b3bf92db3320271d39af10f430689b803137d56cf1874b1915afa7a34473ed3",
+      "src/lib/forest/mediterranean-adapter.ts": "f5437b57a03f6516bd5f40a5331431f8376cf49f0336882b3369b76868691047",
+      "tests/holm-oak.test.ts": "2c9b8d923861a7c1bad649d794db4f5f74262980ca00700be3c81bbd3af41b8c"
+    }
+  },
+  "analysis": {
+    "observations": [
+      "Short visible trunk, with internal fine branching beneath an almost continuous foliage dome.",
+      "Crown is broad with uneven peripheral tufts; lower-left negative spaces and smaller exposed limbs, not an open cork-oak fork.",
+      "Foliage is deep muted olive with gray-green surfaces and dark interiors; bark is finely scaled rather than thick cork."
+    ],
+    "hypothesis": "Branch-supported sprays along multiple branch intervals and broader overlapping crown sectors can reproduce the dense evergreen mass without spherical meshes."
+  },
+  "iterationHistory": [
+    {
+      "candidate": "First representation",
+      "images": [
+        "first-beauty.png",
+        "first-silhouette.png"
+      ],
+      "decision": "revise",
+      "reason": "Actual render too upright, discrete lobes and yellow-green palette."
+    },
+    {
+      "candidate": "Broader connected branch envelope with texture albedo retained",
+      "images": [
+        "beauty.png",
+        "silhouette.png",
+        "branches.png",
+        "bark.png"
+      ],
+      "decision": "retain provisionally",
+      "betterThanPrevious": true,
+      "goodEnoughForFinalApproval": false,
+      "reason": "Broad connected silhouette and muted foliage closer to supplied reference; edge lobes and internal highlight shapes still too repetitive."
+    }
+  ],
+  "review": {
+    "reviewer": "Primary Codex via actual supplied images and captured beauty, silhouette, branch and scene images; no independent review",
+    "humanApproval": null,
+    "remaining": [
+      {
+        "severity": "major",
+        "defect": "Repeated crown scallops and clump boundaries",
+        "evidence": "The silhouette still resolves into similar-sized peripheral lobes, unlike the photograph’s finer, more irregular connected outline."
+      },
+      {
+        "severity": "major",
+        "defect": "Material/light complexity below reference",
+        "evidence": "Large green highlight patches and simplified interior shading lack the photo’s subtle gray-green leaf variation; bark detail is strongest only at close view."
+      },
+      {
+        "severity": "minor",
+        "defect": "Trunk/branch habit still approximate",
+        "evidence": "The trunk and root flare are comparatively regular; real reference has more individual character and asymmetric fine branching."
+      }
+    ]
+  },
+  "preservation": {
+    "corkHeroDeepEqual": true,
+    "backgroundIdentitiesPositionsRotationsSeedsPreserved": true,
+    "approvedOtherBiomes": "No changes to their recipe/material paths; no full screenshot regression suite run",
+    "groundSkyLightingCameraMatte": "unchanged"
+  },
+  "technique": {
+    "geometry": "Species-specific short trunk/internal branching and connected dome, existing StudioStudy batches and LOD; no spherical canopy",
+    "textures": "Generated versioned holm bark and cutout sprig; same UVs used for depth shadows and beauty",
+    "barkUV": "Shared arc-length helper from cork hero; indexed geometry and picking ranges retained",
+    "scope": "Explicit Mediterranean local adapter only, not global species promotion"
+  },
+  "checks": {
+    "typecheck": "passed",
+    "targetedTests": 7,
+    "preservation": "Frozen previous recipe compiled and cork hero deep-compared; all background identities and transforms unchanged",
+    "browserErrors": []
+  },
+  "performance": {
+    "before": {
+      "frame": 9,
+      "calls": 18,
+      "triangles": 1649632,
+      "points": 0,
+      "lines": 0,
+      "geometries": 17,
+      "textures": 11
+    },
+    "after": {
+      "frame": 8,
+      "calls": 18,
+      "triangles": 1822040,
+      "points": 0,
+      "lines": 0,
+      "geometries": 17,
+      "textures": 11
+    },
+    "mobileApproved": false,
+    "alphaOverdraw": "not measured"
+  },
+  "rules": [
+    {
+      "principle": "Reference silhouette can distinguish evergreen domed crown from an open forked oak",
+      "status": "experimentally supported",
+      "limitations": "One scene seed and exemplar; human approval pending"
+    },
+    {
+      "principle": "Generated foliage albedo must survive palette-shader remapping",
+      "status": "experimentally supported",
+      "evidence": "Initial shader replaced texture hue with palette; local source-albedo blend restored muted olive colors"
+    },
+    {
+      "principle": "A broader envelope alone solves the full crown silhouette",
+      "status": "rejected",
+      "reason": "Repetitive scalloped clump outlines remain"
+    }
+  ],
+  "committed": false,
+  "pushed": false,
+  "deployed": false
+}

@@ -1,0 +1,14 @@
+{
+  "tested": 3342,
+  "rockCount": 15,
+  "overlaps": 0,
+  "pairs": [],
+  "shots": [
+    {
+      "rock": 0
+    },
+    {
+      "rock": 5
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-26T19:23:42.876Z",
+  "development": [
+    29,
+    41
+  ],
+  "holdout": 27139,
+  "sourceHashes": {
+    "src/lib/forest/wave1-fidelity.ts": "bb6e7f8e5887019d40377e9b48ed8ee1a4eb920c3cf91a8ed24999fcbff5ff5a",
+    "src/lib/forest/wave1-rebuild.ts": "9ae0032c9e0c7c8a5303dea5d772b3fd515d7fb724d6824e1726666992f3e0c0",
+    "src/lib/forest/wave1-desert-direction.ts": "a91b7141e253cfb789211eda3a75948cd491b306af0cd60e4bcd71a7cf6415a8",
+    "src/lib/forest/wave1-water.ts": "a41be61219232b2033b94abda2d7767964bcfc8b9798eb81fa748a576a3d2f35",
+    "src/lib/forest/wave1-fields.ts": "3b75c341d19bcf56d8681750577d0e58a42c848ef628c0aa850e61f58f27e1cb",
+    "public/assets/wave1-detail/desert-granite-v1.webp": "eaf8fb532160b6dd0c1ee826e7f564ee75a2d425426473f61c918e068c94a1ae"
+  },
+  "policy": "No tuning after holdout. artPass=variation retains preceding state; fidelity is candidate only.",
+  "originalSourceHashes": {
+    "src/lib/forest/wave1-fidelity.ts": "9fce00599557df949716996186d88b412dd008badd12d519b22f201cd3f78ee1",
+    "src/lib/forest/wave1-rebuild.ts": "9ae0032c9e0c7c8a5303dea5d772b3fd515d7fb724d6824e1726666992f3e0c0",
+    "src/lib/forest/wave1-desert-direction.ts": "a91b7141e253cfb789211eda3a75948cd491b306af0cd60e4bcd71a7cf6415a8",
+    "src/lib/forest/wave1-water.ts": "a41be61219232b2033b94abda2d7767964bcfc8b9798eb81fa748a576a3d2f35",
+    "src/lib/forest/wave1-fields.ts": "3b75c341d19bcf56d8681750577d0e58a42c848ef628c0aa850e61f58f27e1cb",
+    "public/assets/wave1-detail/desert-granite-v1.webp": "eaf8fb532160b6dd0c1ee826e7f564ee75a2d425426473f61c918e068c94a1ae"
+  },
+  "typeOnlyAmendment": {
+    "date": "2026-11-26T19:29:49.805Z",
+    "file": "src/lib/forest/wave1-fidelity.ts",
+    "reason": "ArrayLike<number> assertions fix TypeScript inference for copied geometry buffers. Type assertions erase; no runtime code, parameters, artistic recipe or holdout tuning changed.",
+    "before": "9fce00599557df949716996186d88b412dd008badd12d519b22f201cd3f78ee1",
+    "after": "bb6e7f8e5887019d40377e9b48ed8ee1a4eb920c3cf91a8ed24999fcbff5ff5a"
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "id": "wave2-autonomous-living-floors",
+  "authorization": "User: Autonomous Artistic Iteration; Implement the proposed plan",
+  "report": "artifacts/wave2-autonomous/REPORT.md",
+  "controller": {
+    "mode": "progress-based",
+    "supersedesRoundCapForThisSession": true,
+    "oldSessionsPreserved": true,
+    "stopConditions": ["substantially closer milestone", "consequential artistic tradeoff", "two substantially different failures on the same problem", "execution/resource limits"],
+    "checkpointReason": "Retained visible floor/material and true-low-cover representation gains; secondary-view moss regression repaired before retention. Further artistic defects remain. No automatic round-count stop."
+  },
+  "references": ["wave2-concept-boreal", "wave2-concept-temperate", "wave2-concept-tundra"],
+  "baseline": "artifacts/wave2-concepts/retained/report.json",
+  "recovery": "artifacts/wave2-autonomous/baseline-source",
+  "sourceFreeze": "artifacts/wave2-autonomous/freeze.json",
+  "developmentSeeds": [29, 41, 73],
+  "holdouts": {"boreal": 8553620, "temperate": 7056763, "tundra": 5554973},
+  "retiredHoldout": {"boreal": 2472814, "reason": "Belongs to pre-repair moss field; development seed29 inspection revealed regression. New field received a fresh unseen holdout."},
+  "workstreams": {
+    "boreal": "Preserve bough enclosure; replace speckled floor with continuous moss/duff, weathered rootbed stones and grounded roots. Only local Wave2 files.",
+    "temperate": "Preserve connected stand; diagnose material/light, develop litter/moss/bark/root contact and source-derived continuation. Only local Wave2 files.",
+    "tundra": "Replace crossed cards with true branched low shrubs, curved small leaves and short sedges; correlate communities without arbitrary count increases. Only local Wave2 files."
+  },
+  "reviewers": {"root": "Actual concept, intermediates, hero/inspection and seed/regional image interpretation", "specialists": "Actual own-work captures inspected before corrections", "independentExternalReview": false, "limitation": "Specialists hit service usage limits after implementation handoffs; root completed final choices and validation."},
+  "history": [
+    {"experiment": "boreal-floor-r1", "hypothesis": "Continuous artwork and rootbed geometry replace speckled dressing", "decision": "revise", "evidence": "artifacts/wave2-autonomous/boreal-floor-r1/boreal-29-hero.png", "defect": "White mineral bodies and serrated cap overlay", "severity": "major"},
+    {"experiment": "boreal-floor-r2/r3", "hypothesis": "Coordinate linear mineral reflectance; blend moss in one rock shader", "decision": "retain", "evidence": "artifacts/wave2-autonomous/boreal-floor-r3/boreal-29-hero.png", "result": "White body and hard cap artifacts removed"},
+    {"experiment": "boreal-framing-r1", "hypothesis": "Over-reserved approach hid foreground anchors", "decision": "retain", "evidence": "artifacts/wave2-autonomous/boreal-framing-r1/boreal-29-hero.png", "result": "Existing stones enter lateral foreground with transformed-bounds clearance"},
+    {"experiment": "boreal-inspection-repair", "hypothesis": "Ungated moisture/noise placed moss outside stand shelter", "decision": "retain repair; reject prior far blobs", "evidence": "artifacts/wave2-autonomous/boreal-inspection-repair/boreal-29-inspection.png", "result": "Persistent shelter gate removes broad external blobs; hero moss remains"},
+    {"experiment": "temperate-light/surface/moss", "hypothesis": "Layer real albedo and persistent branch shelter before stronger lighting", "decision": "retain", "evidence": "artifacts/wave2-autonomous/temperate-moss-r1/temperate-29-hero.png", "result": "Layered green moss/litter and readable bark/root contacts"},
+    {"experiment": "temperate-depth-r1", "hypothesis": "Source-baked outer stand closes exposed horizon economically", "decision": "retain with inspection limitations", "evidence": "artifacts/wave2-autonomous/temperate-depth-r1/temperate-29-hero.png", "result": "Hero horizon closes; elevated views reveal cards"},
+    {"experiment": "optical key sweep", "hypothesis": "Actual source-group transmission can propose useful physical key directions", "decision": "retain temperate direction; reject boreal score winner", "evidence": "artifacts/wave2-autonomous/diagnostic-temperate-selected-key/candidate-sun.png", "result": "Same-energy temperate key makes opening clearer; numerical preference alone did not work for boreal"},
+    {"experiment": "tundra-branch-r1/r2", "hypothesis": "Actual woody support and small leaves replace flat-card stars", "decision": "retain compact R2 over twiggy R1", "evidence": "artifacts/wave2-autonomous/tundra-branch-r2/tundra-29-hero.png", "result": "True depth, fewer exposed stems and reduced tessellation; no alpha mats"},
+    {"experiment": "tundra-community-r1", "hypothesis": "Shared thresholded cover field creates connected communities", "decision": "reject and revert", "evidence": "artifacts/wave2-autonomous/tundra-community-r1/tundra-29-hero.png", "defect": "Field starves near vegetation despite fixed target count", "severity": "major"},
+    {"experiment": "tundra-swaths-r1", "hypothesis": "Linked irregular swaths preserve near massing", "decision": "revise camera clearance", "evidence": "artifacts/wave2-autonomous/tundra-swaths-r1/tundra-29-hero.png", "defect": "Independent RNG exposed camera-blocking boulder", "severity": "critical"},
+    {"experiment": "tundra-swaths-r2", "hypothesis": "Conservative radius protects camera and approach while retaining low plants", "decision": "retain", "evidence": "artifacts/wave2-autonomous/tundra-swaths-r2/tundra-29-hero.png", "result": "Readable center and dimensional lateral communities; pale repetitive vegetation remains"},
+    {"experiment": "tundra-clump-values-r1", "hypothesis": "Crown-scale pigment/occlusion improves clump volume", "decision": "reject and revert", "evidence": "artifacts/wave2-autonomous/tundra-clump-values-r1/tundra-29-hero.png", "result": "No clear enough visual gain to retain complexity"}
+  ],
+  "rules": [
+    {"principle": "Separate persistent growth shelter from current projected sunlight", "status": "experimentally-supported", "kind": "technical", "evidence": "artifacts/wave2-autonomous/time-independence.json", "limitation": "Synthetic visual-study ecology, not verified habitat model"},
+    {"principle": "Preserve actual albedo hue and detail across ground/object transitions", "status": "experimentally-supported", "evidence": "artifacts/wave2-autonomous/structure-to-retained.png", "limitation": "Biomes remain below artistic target"},
+    {"principle": "Pure optical score can approve a light direction", "status": "rejected", "evidence": "artifacts/wave2-autonomous/boreal-light-sweep.json"},
+    {"principle": "Fixed instance count ensures expected vegetation coverage", "status": "rejected", "evidence": "artifacts/wave2-autonomous/tundra-community-r1/tundra-29-hero.png"},
+    {"principle": "Camera-space approach checks must include hard-object bounds", "status": "experimentally-supported", "kind": "technical", "evidence": "artifacts/wave2-autonomous/validation.json"}
+  ],
+  "humanCandidateApproval": null,
+  "humanApprovedBestChanged": false,
+  "globalPromotion": false,
+  "trainingOccurred": false,
+  "remainingArtisticDefects": ["Weak selective focal sunlight, especially boreal", "Mechanical crown/trunk and fern shapes", "Tundra pale/repetitive clumps and weak landform hierarchy", "Elevated-view continuation and finite detailed floor coverage"],
+  "validation": "artifacts/wave2-autonomous/validation.json"
+}

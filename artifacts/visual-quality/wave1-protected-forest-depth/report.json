@@ -1,0 +1,1204 @@
+[
+  {
+    "biome": "puget",
+    "view": "hero",
+    "tier": 1,
+    "width": 640,
+    "height": 360,
+    "variant": "current",
+    "camera": {
+      "position": [
+        0.01045391827706954,
+        7.707058230656985,
+        34.282255793480886
+      ],
+      "quaternion": [
+        -0.015704626550489445,
+        0.01850671755262297,
+        0.00029072675123710626,
+        0.9997053473840646
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "performance": {
+      "calls": 19,
+      "triangles": 643121,
+      "cpuSubmissionMs": [
+        1.199999988079071,
+        0.3999999761581421,
+        0.5
+      ],
+      "synchronousCompletionMs": [],
+      "pixelRatio": 1,
+      "textureObjects": 17,
+      "geometryObjects": 19,
+      "antialias": false
+    },
+    "instances": [
+      {
+        "name": "",
+        "count": 65,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          1.2671480178833008,
+          2.6549952030181885
+        ]
+      },
+      {
+        "name": "corner-understory-framing",
+        "count": 26,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.654863715171814,
+          1.5452916622161865
+        ]
+      },
+      {
+        "name": "",
+        "count": 40,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.414991557598114,
+          3.036580740499287
+        ]
+      },
+      {
+        "name": "foundation-grass-near",
+        "count": 1155,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.6065118594618987,
+          1.9044719865767303
+        ]
+      },
+      {
+        "name": "foundation-grass-far",
+        "count": 340,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.6101313994964607,
+          1.891398802231807
+        ]
+      },
+      {
+        "name": "foundation-short-sward",
+        "count": 3161,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.5336725115776062,
+          1.7349674701690674
+        ]
+      }
+    ],
+    "textureAudit": [
+      {
+        "width": 2048,
+        "height": 2048,
+        "mipmaps": true,
+        "estimatedRGBABytes": 22369621,
+        "source": "generated canvas"
+      },
+      {
+        "width": 1774,
+        "height": 887,
+        "mipmaps": true,
+        "estimatedRGBABytes": 8392203,
+        "source": "/assets/puget-v1/sky-matte-v1.webp"
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "mipmaps": true,
+        "estimatedRGBABytes": 8386752,
+        "source": "/assets/puget-v1/mountain-painted-v1.webp"
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "mipmaps": true,
+        "estimatedRGBABytes": 22369621,
+        "source": "/assets/puget-v1/grass.png"
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "mipmaps": false,
+        "estimatedRGBABytes": 16384,
+        "source": "generated canvas"
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "mipmaps": true,
+        "estimatedRGBABytes": 1048576,
+        "source": "generated canvas"
+      },
+      {
+        "width": 1254,
+        "height": 1254,
+        "mipmaps": true,
+        "estimatedRGBABytes": 8386752,
+        "source": "/assets/conifer-v2/fir-sprays-v1.png"
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "mipmaps": true,
+        "estimatedRGBABytes": 1048576,
+        "source": "generated canvas"
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "mipmaps": true,
+        "estimatedRGBABytes": 1048576,
+        "source": "generated canvas"
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "mipmaps": true,
+        "estimatedRGBABytes": 1048576,
+        "source": "generated canvas"
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "mipmaps": true,
+        "estimatedRGBABytes": 1048576,
+        "source": "generated canvas"
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "renderer": "WebKit WebGL",
+    "errors": [],
+    "coverage": {
+      "available": false,
+      "region": "lower half",
+      "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+      "fraction": null,
+      "nearBlackFraction": null,
+      "horizontalBands": null
+    },
+    "findings": [],
+    "limitations": [
+      "Metrics flag potential failures; they cannot establish artistic quality.",
+      "Coverage mask omits terrain occlusion; near-black statistics include legitimate shadows.",
+      "Faceting, continuity and conspicuous repetition require vision inspection; no RGB-only artistic approval."
+    ]
+  },
+  {
+    "biome": "rainforest",
+    "view": "hero",
+    "tier": 1,
+    "width": 640,
+    "height": 360,
+    "variant": "current",
+    "camera": {
+      "position": [
+        6.661338147750939e-16,
+        0.1252664940564987,
+        29
+      ],
+      "quaternion": [
+        0.12378536973294182,
+        0.014171483327660637,
+        -0.0017680016816925947,
+        0.992206241398645
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "performance": {
+      "calls": 26,
+      "triangles": 1450298,
+      "cpuSubmissionMs": [
+        0.9000000357627869,
+        0.3999999761581421,
+        0.5
+      ],
+      "synchronousCompletionMs": [],
+      "pixelRatio": 1,
+      "textureObjects": 14,
+      "geometryObjects": 22,
+      "antialias": false
+    },
+    "instances": [
+      {
+        "name": "rainforest-v4-seedlings",
+        "count": 180,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.5070501502664252,
+          1.68182178347779
+        ]
+      },
+      {
+        "name": "rainforest-v4-ferns",
+        "count": 150,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.39884463266771103,
+          1.2732963580393484
+        ]
+      },
+      {
+        "name": "rainforest-v4-palms",
+        "count": 90,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.35183680817799473,
+          1.0267031123093704
+        ]
+      },
+      {
+        "name": "rainforest-v4-shrubs",
+        "count": 120,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.5390318772226356,
+          1.4464447575026749
+        ]
+      },
+      {
+        "name": "rainforest-v4-lianas",
+        "count": 72,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          6.281315326690674,
+          25.79508399963379
+        ]
+      },
+      {
+        "name": "rainforest-v4-epiphytes",
+        "count": 100,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.35155478021788383,
+          0.7939302116176221
+        ]
+      },
+      {
+        "name": "rainforest-v5-forest-wall",
+        "count": 108,
+        "visible": true,
+        "tiles": 4,
+        "scaleRange": [
+          13.543059349060059,
+          65.59628295898438
+        ]
+      },
+      {
+        "name": "rainforest-v5-lower-understory",
+        "count": 3,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          17,
+          17
+        ]
+      },
+      {
+        "name": "rainforest-v5-outer-trunks",
+        "count": 32,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          22.773921966552734,
+          44.22627258300781
+        ]
+      },
+      {
+        "name": "rainforest-v5-outer-crowns",
+        "count": 192,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          3.0835578441619873,
+          5.981924057006836
+        ]
+      },
+      {
+        "name": "rainforest-v5-ferns",
+        "count": 220,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.4221591428764792,
+          1.1938862097589302
+        ]
+      },
+      {
+        "name": "rainforest-v5-palms",
+        "count": 120,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.33417845520549055,
+          0.9123187102603095
+        ]
+      },
+      {
+        "name": "rainforest-v5-seedlings",
+        "count": 240,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.504718517112787,
+          1.536293998241366
+        ]
+      },
+      {
+        "name": "rainforest-v5-foliage-cards",
+        "count": 850,
+        "visible": true,
+        "tiles": 6,
+        "scaleRange": [
+          0.5070757380388127,
+          1.6118826376780457
+        ]
+      },
+      {
+        "name": "rainforest-v5-floor-decals",
+        "count": 520,
+        "visible": true,
+        "tiles": 4,
+        "scaleRange": [
+          1,
+          1
+        ]
+      }
+    ],
+    "backdrop": true,
+    "plan": {
+      "version": 1,
+      "seed": "29",
+      "biome": "amazon",
+      "patches": [
+        {
+          "x": -7.474262269679457,
+          "z": 25.146856451872736,
+          "rx": 4.776911700936035,
+          "rz": 4.014598583802581,
+          "angle": 2.2925648390762583,
+          "strength": 1
+        },
+        {
+          "x": 11.50813211640343,
+          "z": 22.804316052235663,
+          "rx": 5.27384305568412,
+          "rz": 4.465539207216352,
+          "angle": 0.8362483114987959,
+          "strength": 0.8513344333041459
+        },
+        {
+          "x": -13.828441318124533,
+          "z": 14.01363337924704,
+          "rx": 4.417599946353585,
+          "rz": 7.84930528816767,
+          "angle": 1.2638841751747223,
+          "strength": 0.7289387081982568
+        },
+        {
+          "x": 12.490529390051961,
+          "z": 6.291361234616488,
+          "rx": 4.663569895643741,
+          "rz": 6.4267300649080426,
+          "angle": 0.5006193859268628,
+          "strength": 1
+        },
+        {
+          "x": -9.181880057323724,
+          "z": -9.43924593902193,
+          "rx": 4.5063112819101665,
+          "rz": 4.253507108427584,
+          "angle": 1.1863644789682186,
+          "strength": 0.9337446396937594
+        },
+        {
+          "x": 12.335725219920278,
+          "z": -19.062799621839076,
+          "rx": 4.9363897762727,
+          "rz": 5.935283322818577,
+          "angle": 1.2995129898178628,
+          "strength": 0.9464705148944632
+        },
+        {
+          "x": -22.551449765916914,
+          "z": -20.963698260486126,
+          "rx": 5.9606655376032,
+          "rz": 5.14310416392982,
+          "angle": 1.4525552123207273,
+          "strength": 1
+        },
+        {
+          "x": 23.206250787712634,
+          "z": -28.51563147548586,
+          "rx": 5.803511204523966,
+          "rz": 6.613535071723163,
+          "angle": 1.7993588022194262,
+          "strength": 0.8152130283880978
+        },
+        {
+          "x": -13.647162456065416,
+          "z": -38.26495222887024,
+          "rx": 3.7312559369951486,
+          "rz": 6.449437752366066,
+          "angle": 0.5227721634903961,
+          "strength": 0.7242652726126835
+        },
+        {
+          "x": 9.668001220561564,
+          "z": -40.83829581318423,
+          "rx": 4.330703045567498,
+          "rz": 7.157645479077473,
+          "angle": 0.31137582555011023,
+          "strength": 1
+        }
+      ],
+      "clearing": {
+        "x": 0,
+        "z": 2,
+        "rx": 5.2,
+        "rz": 10
+      },
+      "hero": {
+        "id": "tree-27-rainforest-interior-0",
+        "x": -6.837556634750217,
+        "z": 23.171510669402778,
+        "height": 44.57468932784929,
+        "radius": 7
+      },
+      "palette": {
+        "soil": "#5c4934",
+        "vegetation": "#4c6542",
+        "shade": "#294d47",
+        "sun": "#b8a35f"
+      },
+      "batches": [
+        {
+          "name": "rainforest-v4-seedlings",
+          "instances": 180,
+          "triangles": 10080
+        },
+        {
+          "name": "rainforest-v4-ferns",
+          "instances": 150,
+          "triangles": 45000
+        },
+        {
+          "name": "rainforest-v4-palms",
+          "instances": 90,
+          "triangles": 38160
+        },
+        {
+          "name": "rainforest-v4-shrubs",
+          "instances": 120,
+          "triangles": 17280
+        },
+        {
+          "name": "rainforest-v5-ferns",
+          "instances": 220,
+          "triangles": 66000
+        },
+        {
+          "name": "rainforest-v5-palms",
+          "instances": 120,
+          "triangles": 50880
+        },
+        {
+          "name": "rainforest-v5-seedlings",
+          "instances": 240,
+          "triangles": 13440
+        },
+        {
+          "name": "rainforest-v5-foliage-cards",
+          "instances": 850,
+          "triangles": 1700
+        }
+      ],
+      "additionalDrawCalls": 0,
+      "notes": [
+        "Presentation dressing only; no source trees or ecological records modified.",
+        "World-space plant masses and correlated ground albedo; no screen vignette.",
+        "Existing hero tree receives selective sun-facing crown highlights."
+      ]
+    },
+    "quality": {
+      "floorDecals": {
+        "mode": "leaf-root-fragments",
+        "linearAlbedoCutoff": [
+          0.045,
+          0.095
+        ],
+        "instances": 520
+      }
+    },
+    "lab": {
+      "schemaVersion": 1,
+      "generatorVersion": "visual-lab-2.1",
+      "experiment": "B",
+      "candidate": "baseline",
+      "worldSeed": "29",
+      "presentationSeed": "pretty-dressing-1|amazon",
+      "retainedLitterSeed": "rainforest-depth-v5",
+      "parameters": null,
+      "targetLayout": {
+        "count": 2490,
+        "occupancyCV": 1.8334531075475726,
+        "gridAlignedFraction": 0.0012048192771084338,
+        "duplicatePositionFraction": 0,
+        "matrixDigest": "7018e4eb"
+      },
+      "unchangedSystems": {
+        "before": "a32a17cf",
+        "after": "a32a17cf",
+        "match": true,
+        "scope": "Non-target geometry identities/attribute versions, instance transforms, material identities/colors and lights; not a full per-vertex cryptographic proof."
+      }
+    },
+    "textureAudit": [
+      {
+        "width": 2048,
+        "height": 2048,
+        "mipmaps": true,
+        "estimatedRGBABytes": 22369621,
+        "source": "/assets/puget-v1/forest-floor.png"
+      },
+      {
+        "width": 1774,
+        "height": 887,
+        "mipmaps": true,
+        "estimatedRGBABytes": 8392203,
+        "source": "/assets/puget-v1/sky-matte-v1.webp"
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "mipmaps": true,
+        "estimatedRGBABytes": 22369621,
+        "source": "/assets/amazon-v5/forest-wall.webp"
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "mipmaps": true,
+        "estimatedRGBABytes": 22369621,
+        "source": "/assets/puget-v1/foliage.png"
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "mipmaps": true,
+        "estimatedRGBABytes": 22369621,
+        "source": "/assets/amazon-v5/floor-decals.webp"
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "mipmaps": false,
+        "estimatedRGBABytes": 16384,
+        "source": "generated canvas"
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "mipmaps": true,
+        "estimatedRGBABytes": 1048576,
+        "source": "generated canvas"
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "mipmaps": true,
+        "estimatedRGBABytes": 1048576,
+        "source": "generated canvas"
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "mipmaps": true,
+        "estimatedRGBABytes": 1048576,
+        "source": "generated canvas"
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "mipmaps": true,
+        "estimatedRGBABytes": 1048576,
+        "source": "generated canvas"
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "mipmaps": true,
+        "estimatedRGBABytes": 1048576,
+        "source": "generated canvas"
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "renderer": "WebKit WebGL",
+    "errors": [],
+    "coverage": {
+      "available": false,
+      "region": "lower half",
+      "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+      "fraction": null,
+      "nearBlackFraction": null,
+      "horizontalBands": null
+    },
+    "findings": [
+      {
+        "severity": "minor",
+        "defect": "Four-tile leaf atlas reuse still requires visual repetition review",
+        "measurements": {
+          "count": 520,
+          "tiles": 4,
+          "scaleRange": [
+            1,
+            1
+          ],
+          "albedoMask": {
+            "mode": "leaf-root-fragments",
+            "linearAlbedoCutoff": [
+              0.045,
+              0.095
+            ],
+            "instances": 520
+          }
+        }
+      }
+    ],
+    "limitations": [
+      "Metrics flag potential failures; they cannot establish artistic quality.",
+      "Coverage mask omits terrain occlusion; near-black statistics include legitimate shadows.",
+      "Faceting, continuity and conspicuous repetition require vision inspection; no RGB-only artistic approval."
+    ]
+  },
+  {
+    "biome": "rainforest",
+    "view": "inspection",
+    "tier": 1,
+    "width": 640,
+    "height": 360,
+    "variant": "current",
+    "camera": {
+      "position": [
+        34,
+        23,
+        44
+      ],
+      "quaternion": [
+        -0.11289019307845702,
+        0.2798418085648005,
+        0.033156062656846556,
+        0.9528090270326922
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "performance": {
+      "calls": 22,
+      "triangles": 1433698,
+      "cpuSubmissionMs": [
+        0.5,
+        0.3999999761581421,
+        0.6000000238418579
+      ],
+      "synchronousCompletionMs": [],
+      "pixelRatio": 1,
+      "textureObjects": 14,
+      "geometryObjects": 22,
+      "antialias": false
+    },
+    "instances": [
+      {
+        "name": "rainforest-v4-seedlings",
+        "count": 180,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.5070501502664252,
+          1.68182178347779
+        ]
+      },
+      {
+        "name": "rainforest-v4-ferns",
+        "count": 150,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.39884463266771103,
+          1.2732963580393484
+        ]
+      },
+      {
+        "name": "rainforest-v4-palms",
+        "count": 90,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.35183680817799473,
+          1.0267031123093704
+        ]
+      },
+      {
+        "name": "rainforest-v4-shrubs",
+        "count": 120,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.5390318772226356,
+          1.4464447575026749
+        ]
+      },
+      {
+        "name": "rainforest-v4-lianas",
+        "count": 72,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          6.281315326690674,
+          25.79508399963379
+        ]
+      },
+      {
+        "name": "rainforest-v4-epiphytes",
+        "count": 100,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.35155478021788383,
+          0.7939302116176221
+        ]
+      },
+      {
+        "name": "rainforest-v5-forest-wall",
+        "count": 108,
+        "visible": false,
+        "tiles": 4,
+        "scaleRange": [
+          13.543059349060059,
+          65.59628295898438
+        ]
+      },
+      {
+        "name": "rainforest-v5-lower-understory",
+        "count": 3,
+        "visible": false,
+        "tiles": null,
+        "scaleRange": [
+          17,
+          17
+        ]
+      },
+      {
+        "name": "rainforest-v5-outer-trunks",
+        "count": 32,
+        "visible": false,
+        "tiles": null,
+        "scaleRange": [
+          22.773921966552734,
+          44.22627258300781
+        ]
+      },
+      {
+        "name": "rainforest-v5-outer-crowns",
+        "count": 192,
+        "visible": false,
+        "tiles": null,
+        "scaleRange": [
+          3.0835578441619873,
+          5.981924057006836
+        ]
+      },
+      {
+        "name": "rainforest-v5-ferns",
+        "count": 220,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.4221591428764792,
+          1.1938862097589302
+        ]
+      },
+      {
+        "name": "rainforest-v5-palms",
+        "count": 120,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.33417845520549055,
+          0.9123187102603095
+        ]
+      },
+      {
+        "name": "rainforest-v5-seedlings",
+        "count": 240,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.504718517112787,
+          1.536293998241366
+        ]
+      },
+      {
+        "name": "rainforest-v5-foliage-cards",
+        "count": 850,
+        "visible": true,
+        "tiles": 6,
+        "scaleRange": [
+          0.5070757380388127,
+          1.6118826376780457
+        ]
+      },
+      {
+        "name": "rainforest-v5-floor-decals",
+        "count": 520,
+        "visible": true,
+        "tiles": 4,
+        "scaleRange": [
+          1,
+          1
+        ]
+      }
+    ],
+    "backdrop": false,
+    "plan": {
+      "version": 1,
+      "seed": "29",
+      "biome": "amazon",
+      "patches": [
+        {
+          "x": -7.474262269679457,
+          "z": 25.146856451872736,
+          "rx": 4.776911700936035,
+          "rz": 4.014598583802581,
+          "angle": 2.2925648390762583,
+          "strength": 1
+        },
+        {
+          "x": 11.50813211640343,
+          "z": 22.804316052235663,
+          "rx": 5.27384305568412,
+          "rz": 4.465539207216352,
+          "angle": 0.8362483114987959,
+          "strength": 0.8513344333041459
+        },
+        {
+          "x": -13.828441318124533,
+          "z": 14.01363337924704,
+          "rx": 4.417599946353585,
+          "rz": 7.84930528816767,
+          "angle": 1.2638841751747223,
+          "strength": 0.7289387081982568
+        },
+        {
+          "x": 12.490529390051961,
+          "z": 6.291361234616488,
+          "rx": 4.663569895643741,
+          "rz": 6.4267300649080426,
+          "angle": 0.5006193859268628,
+          "strength": 1
+        },
+        {
+          "x": -9.181880057323724,
+          "z": -9.43924593902193,
+          "rx": 4.5063112819101665,
+          "rz": 4.253507108427584,
+          "angle": 1.1863644789682186,
+          "strength": 0.9337446396937594
+        },
+        {
+          "x": 12.335725219920278,
+          "z": -19.062799621839076,
+          "rx": 4.9363897762727,
+          "rz": 5.935283322818577,
+          "angle": 1.2995129898178628,
+          "strength": 0.9464705148944632
+        },
+        {
+          "x": -22.551449765916914,
+          "z": -20.963698260486126,
+          "rx": 5.9606655376032,
+          "rz": 5.14310416392982,
+          "angle": 1.4525552123207273,
+          "strength": 1
+        },
+        {
+          "x": 23.206250787712634,
+          "z": -28.51563147548586,
+          "rx": 5.803511204523966,
+          "rz": 6.613535071723163,
+          "angle": 1.7993588022194262,
+          "strength": 0.8152130283880978
+        },
+        {
+          "x": -13.647162456065416,
+          "z": -38.26495222887024,
+          "rx": 3.7312559369951486,
+          "rz": 6.449437752366066,
+          "angle": 0.5227721634903961,
+          "strength": 0.7242652726126835
+        },
+        {
+          "x": 9.668001220561564,
+          "z": -40.83829581318423,
+          "rx": 4.330703045567498,
+          "rz": 7.157645479077473,
+          "angle": 0.31137582555011023,
+          "strength": 1
+        }
+      ],
+      "clearing": {
+        "x": 0,
+        "z": 2,
+        "rx": 5.2,
+        "rz": 10
+      },
+      "hero": {
+        "id": "tree-27-rainforest-interior-0",
+        "x": -6.837556634750217,
+        "z": 23.171510669402778,
+        "height": 44.57468932784929,
+        "radius": 7
+      },
+      "palette": {
+        "soil": "#5c4934",
+        "vegetation": "#4c6542",
+        "shade": "#294d47",
+        "sun": "#b8a35f"
+      },
+      "batches": [
+        {
+          "name": "rainforest-v4-seedlings",
+          "instances": 180,
+          "triangles": 10080
+        },
+        {
+          "name": "rainforest-v4-ferns",
+          "instances": 150,
+          "triangles": 45000
+        },
+        {
+          "name": "rainforest-v4-palms",
+          "instances": 90,
+          "triangles": 38160
+        },
+        {
+          "name": "rainforest-v4-shrubs",
+          "instances": 120,
+          "triangles": 17280
+        },
+        {
+          "name": "rainforest-v5-ferns",
+          "instances": 220,
+          "triangles": 66000
+        },
+        {
+          "name": "rainforest-v5-palms",
+          "instances": 120,
+          "triangles": 50880
+        },
+        {
+          "name": "rainforest-v5-seedlings",
+          "instances": 240,
+          "triangles": 13440
+        },
+        {
+          "name": "rainforest-v5-foliage-cards",
+          "instances": 850,
+          "triangles": 1700
+        }
+      ],
+      "additionalDrawCalls": 0,
+      "notes": [
+        "Presentation dressing only; no source trees or ecological records modified.",
+        "World-space plant masses and correlated ground albedo; no screen vignette.",
+        "Existing hero tree receives selective sun-facing crown highlights."
+      ]
+    },
+    "quality": {
+      "floorDecals": {
+        "mode": "leaf-root-fragments",
+        "linearAlbedoCutoff": [
+          0.045,
+          0.095
+        ],
+        "instances": 520
+      }
+    },
+    "lab": {
+      "schemaVersion": 1,
+      "generatorVersion": "visual-lab-2.1",
+      "experiment": "B",
+      "candidate": "baseline",
+      "worldSeed": "29",
+      "presentationSeed": "pretty-dressing-1|amazon",
+      "retainedLitterSeed": "rainforest-depth-v5",
+      "parameters": null,
+      "targetLayout": {
+        "count": 2490,
+        "occupancyCV": 1.8334531075475726,
+        "gridAlignedFraction": 0.0012048192771084338,
+        "duplicatePositionFraction": 0,
+        "matrixDigest": "7018e4eb"
+      },
+      "unchangedSystems": {
+        "before": "a32a17cf",
+        "after": "a32a17cf",
+        "match": true,
+        "scope": "Non-target geometry identities/attribute versions, instance transforms, material identities/colors and lights; not a full per-vertex cryptographic proof."
+      }
+    },
+    "textureAudit": [
+      {
+        "width": 2048,
+        "height": 2048,
+        "mipmaps": true,
+        "estimatedRGBABytes": 22369621,
+        "source": "/assets/puget-v1/forest-floor.png"
+      },
+      {
+        "width": 1774,
+        "height": 887,
+        "mipmaps": true,
+        "estimatedRGBABytes": 8392203,
+        "source": "/assets/puget-v1/sky-matte-v1.webp"
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "mipmaps": true,
+        "estimatedRGBABytes": 22369621,
+        "source": "/assets/amazon-v5/forest-wall.webp"
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "mipmaps": true,
+        "estimatedRGBABytes": 22369621,
+        "source": "/assets/puget-v1/foliage.png"
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "mipmaps": true,
+        "estimatedRGBABytes": 22369621,
+        "source": "/assets/amazon-v5/floor-decals.webp"
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "mipmaps": false,
+        "estimatedRGBABytes": 16384,
+        "source": "generated canvas"
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "mipmaps": true,
+        "estimatedRGBABytes": 1048576,
+        "source": "generated canvas"
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "mipmaps": true,
+        "estimatedRGBABytes": 1048576,
+        "source": "generated canvas"
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "mipmaps": true,
+        "estimatedRGBABytes": 1048576,
+        "source": "generated canvas"
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "mipmaps": true,
+        "estimatedRGBABytes": 1048576,
+        "source": "generated canvas"
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "mipmaps": true,
+        "estimatedRGBABytes": 1048576,
+        "source": "generated canvas"
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "renderer": "WebKit WebGL",
+    "errors": [],
+    "coverage": {
+      "available": false,
+      "region": "lower half",
+      "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+      "fraction": null,
+      "nearBlackFraction": null,
+      "horizontalBands": null
+    },
+    "findings": [
+      {
+        "severity": "minor",
+        "defect": "Four-tile leaf atlas reuse still requires visual repetition review",
+        "measurements": {
+          "count": 520,
+          "tiles": 4,
+          "scaleRange": [
+            1,
+            1
+          ],
+          "albedoMask": {
+            "mode": "leaf-root-fragments",
+            "linearAlbedoCutoff": [
+              0.045,
+              0.095
+            ],
+            "instances": 520
+          }
+        }
+      },
+      {
+        "severity": "major",
+        "defect": "Forest continuation disabled at inspection height",
+        "measurements": {
+          "backdropVisible": false
+        }
+      }
+    ],
+    "limitations": [
+      "Metrics flag potential failures; they cannot establish artistic quality.",
+      "Coverage mask omits terrain occlusion; near-black statistics include legitimate shadows.",
+      "Faceting, continuity and conspicuous repetition require vision inspection; no RGB-only artistic approval."
+    ]
+  }
+]

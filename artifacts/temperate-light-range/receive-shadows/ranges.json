@@ -1,0 +1,112 @@
+{
+  "label": "receive-shadows",
+  "units": "Display-space Rec709 luminance 0-255, not physical scene radiance. P05 and P95 are robust shadow/highlight anchors, not absolute min/max.",
+  "conceptSelection": "Foliage: upper concept region with green/gold chroma filter; wood: manually annotated near-birch polygon; soil: central lower brown chroma region. Approximate photographic reference segmentation, not semantic ground truth.",
+  "renderSelection": "Actual rendered material IDs: foliage=1, source wood=2, terrain=3; brown chroma filter isolates soil from moss.",
+  "concept": {
+    "foliage": {
+      "count": 46081,
+      "p05": 43,
+      "p50": 96,
+      "p95": 220,
+      "p99": 242,
+      "shadowRGB": [
+        31,
+        50,
+        4
+      ],
+      "highlightRGB": [
+        228,
+        228,
+        116
+      ]
+    },
+    "wood": {
+      "count": 2813,
+      "p05": 14,
+      "p50": 69,
+      "p95": 121,
+      "p99": 186,
+      "shadowRGB": [
+        14,
+        15,
+        1
+      ],
+      "highlightRGB": [
+        118,
+        118,
+        154
+      ]
+    },
+    "soil": {
+      "count": 7290,
+      "p05": 53,
+      "p50": 105,
+      "p95": 222,
+      "p99": 236,
+      "shadowRGB": [
+        63,
+        54,
+        13
+      ],
+      "highlightRGB": [
+        249,
+        219,
+        167
+      ]
+    }
+  },
+  "render": {
+    "foliage": {
+      "count": 91732,
+      "p05": 57,
+      "p50": 75,
+      "p95": 116,
+      "p99": 142,
+      "shadowRGB": [
+        22,
+        70,
+        35
+      ],
+      "highlightRGB": [
+        87,
+        131,
+        58
+      ]
+    },
+    "wood": {
+      "count": 23010,
+      "p05": 15,
+      "p50": 89,
+      "p95": 177,
+      "p99": 207,
+      "shadowRGB": [
+        19,
+        15,
+        8
+      ],
+      "highlightRGB": [
+        180,
+        178,
+        157
+      ]
+    },
+    "soil": {
+      "count": 59226,
+      "p05": 34,
+      "p50": 55,
+      "p95": 107,
+      "p99": 126,
+      "shadowRGB": [
+        52,
+        31,
+        9
+      ],
+      "highlightRGB": [
+        136,
+        106,
+        34
+      ]
+    }
+  }
+}

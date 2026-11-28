@@ -1,0 +1,29 @@
+[
+  {
+    "seed": "29",
+    "deterministic": true,
+    "finiteAndBounded": true,
+    "nearMaskMean": 0.7674238832056458,
+    "soilDominantFraction": 0.7221644120707597,
+    "farField": 0,
+    "hash": "6dbaa60520c02d2a4ab58b87c493ab58228f8316c2eea2e74b849cdb0002b13b"
+  },
+  {
+    "seed": "41",
+    "deterministic": true,
+    "finiteAndBounded": true,
+    "nearMaskMean": 0.7185683772400395,
+    "soilDominantFraction": 0.6659729448491155,
+    "farField": 0,
+    "hash": "7063a81a44e3f3d30c4d3f37e53344573b305fcfe33ded8f34c8130ac23b0823"
+  },
+  {
+    "seed": "63817",
+    "deterministic": true,
+    "finiteAndBounded": true,
+    "nearMaskMean": 0.8733449681696828,
+    "soilDominantFraction": 0.8553590010405827,
+    "farField": 0,
+    "hash": "9e43897a171095201f27360fa882368b4eee229e08dbfdb738c5aead22f34c84"
+  }
+]

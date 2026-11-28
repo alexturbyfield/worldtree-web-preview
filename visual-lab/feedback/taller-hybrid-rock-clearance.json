@@ -1,0 +1,11 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-25",
+  "actor": "human",
+  "input": "explicit conversation",
+  "request": "Taller brush x1.75, more reeds, and do not clip through rocks",
+  "scope": "Numerical height/density and physical rock-clearance direction; not approval of newly rendered result",
+  "previousEvidence": "artifacts/hybrid-grass/comparison.png",
+  "experiment": "artifacts/hybrid-tall/record.json",
+  "finalVisualApproval": false
+}

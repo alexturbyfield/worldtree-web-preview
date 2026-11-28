@@ -1,0 +1,12 @@
+import * as T from 'three';
+import type {SceneRecipe} from './recipe';
+import {makeExpansionPlan,expansionHeight,mountExpansionBase,type ExpansionPalette} from './wave2-shared';
+import {composeTemperateConcept,mountTemperateFloor,installTemperateLightResponse} from './wave2-temperate-concept';
+const palette:ExpansionPalette={ground:['#2c402d','#767c46','#c6bd78'],soil:'#947c52',air:'#91aaa0',sun:'#ffe2ae',foliage:['#203e35','#69823f','#d1d17d'],texture:'/assets/puget-v1/forest-floor.png'};
+export const temperatePlan=(r:SceneRecipe)=>{const p=makeExpansionPlan('temperate',4,r.seed,.62);p.camera.target=[0,expansionHeight(p,0,-55)+2.3,-55];return p;};
+export const temperateStudy={id:'temperate',biome:4,compose:(r:SceneRecipe)=>composeTemperateConcept(r,temperatePlan(r)),camera:(r:SceneRecipe)=>temperatePlan(r).camera,mount:(s:T.Scene,r:SceneRecipe,sun:T.DirectionalLight,fill:T.DirectionalLight)=>{
+ const p=temperatePlan(r),base=mountExpansionBase(s,r,p,sun,fill,palette,{concept:true,canopy:false,groundScale:3,sunDirection:[-35,48,6]}),floor=mountTemperateFloor(s,p),light=installTemperateLightResponse(s);
+ s.userData.wave2Concept={biome:'temperate',version:'connected-woodland-1',architecture:'Species-conditioned scaffold; broad spreading oak, upward beech, slender drooping birch; elliptic leaf rendering approximate',ecology:'Source regional candidates and unnamed fern/leafy functional forms, not local occurrence evidence',states:{season:'leaf-on reference',weather:'clear reference',timeOfDay:'warm reference'},staging:{center:[0,26],radius:1.4,height:1.8},trees:r.trees.length};
+ base.finish();return()=>{light();floor();base.dispose();};
+}};
+

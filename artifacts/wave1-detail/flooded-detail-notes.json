@@ -1,0 +1,72 @@
+{
+  "scope": "Flooded grass ribbon/detail module only; parent owns composition, placement, substrate, water, capture and session budget",
+  "reviewer": "meadow_detail task agent",
+  "visionAvailable": true,
+  "loaded": ["AGENTS.md", "visual-lab/README.md", "visual-lab/wave1/README.md", "visual-lab/wave1/refinement-session.json", "visual-lab/wave1/flooded/review.json", "visual-lab/wave1/flooded/reference-analysis.json", "visual-lab/art-direction-policy.json", "docs/visual-quality-workflow.md", ".agents/skills/prototype-fast/SKILL.md", ".agents/skills/foliage-study/SKILL.md", ".agents/skills/mobile-budget/SKILL.md", "node_modules/next/dist/docs/01-app/03-api-reference/01-directives/use-client.md"],
+  "baseline": "artifacts/wave1-rebuild/flooded-29-hero.png; parent preserves full baseline source. New isolated module can be removed without editing fallback.",
+  "imagesInspected": [".codex-attachments/e97cc808-5cc4-4a8d-8112-5971ec4a638c/38620747-464e-4437-a47d-8842aa806c4f/1000011079.png", "artifacts/wave1-rebuild/flooded-29-hero.png"],
+  "diagnosis": [
+    {"severity": "major", "evidence": "Dark thin V/stick grass silhouettes in baseline, compared with broad gently arching ribbon foliage in supplied concept", "hypothesis": "Curved folded opaque ribbons and broad sky-oriented normals retain dimensional leaf faces without black spear shading"},
+    {"severity": "major", "evidence": "Scattered individual tufts show clear repetition rather than layered vegetation masses", "hypothesis": "Uneven blade lengths, reach and twist improve interlocking silhouette; parent handles correlated placement"},
+    {"severity": "major", "evidence": "Large beige foreground dominates baseline", "hypothesis": "Parent's shared terrain colors and low plants are necessary; extra duplicate carpet is intentionally absent from this module"}
+  ],
+  "interventionLevel": "representation",
+  "construction": "Deterministic opaque folded ribbons; near 9 leaves, 5 longitudinal sections, 3 vertices across; far 5 leaves, 3 sections, 2 vertices across. Smooth upward-biased shading and coherent relative vertex pigments. Sparse unnamed seed-bearing stems use one instanced draw with no alpha/shadows.",
+  "objectiveChecks": {
+    "command": "npx tsx -e targeted geometry determinism/finite values/footprint/disposal checks",
+    "passed": true,
+    "near": {"vertices": 162, "triangles": 180},
+    "far": {"vertices": 40, "triangles": 30},
+    "seedheadGeometryTriangles": 16,
+    "seedheadInstances": {"29": 25, "41": 45},
+    "footprint": "No seedhead instances in forward 2..7, abs(side)<1.5; transforms checked for seeds29/41",
+    "cleanup": "Removes mesh and disposes geometry/material",
+    "gpuOrMobileFrameTime": "Not measured; draw/triangle counts are not mobile approval"
+  },
+  "correction2": {
+    "imagesInspected": ["artifacts/visual-quality/wave1-detail-r1/flooded-hero.png", "artifacts/visual-quality/wave1-detail-r1/flooded-inspection.png"],
+    "severity": "major",
+    "visibleEvidence": "R1 removes black spear shading but leaves pale wheat-like upright narrow shapes, uniform gold faces and weak layering. Broad golden bare foreground still dominates; this belongs to parent placement/substrate.",
+    "hypothesis": "Broader bodies, mixed drooping and tall arches and richer green base pigment with limited warm tips improve layered grass while retaining opaque mobile construction.",
+    "change": "Width .035-.067 versus .025-.05; mixed cubic droop .25/.42/.51 versus .29; height .30-1.03 before droop; green base RGB .48/.68/.32 to warm tips .91/.92/.59. Same geometry cost and deterministic draws.",
+    "checkpoint": "artifacts/wave1-detail/flooded-meadow-r1.ts.txt",
+    "decision": "revise R1; R2 awaiting integrated capture"
+  },
+  "integratedR3Review": {
+    "reviewer": "meadow_detail task agent",
+    "actualVision": true,
+    "imagesInspected": ["artifacts/visual-quality/wave1-detail-r3/flooded-hero.png", "artifacts/visual-quality/wave1-detail-r3/flooded-inspection.png", ".codex-attachments/e97cc808-5cc4-4a8d-8112-5971ec4a638c/38620747-464e-4437-a47d-8842aa806c4f/1000011079.png"],
+    "progress": "R3 exposes near water and reflected tree masses with asymmetric left canopy framing. Visible grass is greener and lacks the baseline black spear shading. Camera/composition differ from R1, so this is not an isolated helper A/B.",
+    "remaining": [
+      {"severity": "major", "evidence": "Entire lower half of hero remains empty tan staging lawn; concept has narrow irregular low path, dense tall side framing and low patchwork cover", "cause": "Confirmed visible vegetation occupancy failure, not demonstrated blade material failure", "next": "Parent placement: low-cover minimum independent of zero community; medium/tall side grass outside footprint at forward2..12"},
+      {"severity": "major", "evidence": "Inspection shows narrow planted band at upper-left of foreground island and almost no vegetation across remaining broad substrate", "cause": "Hypothesis: suitability multiplied by community eliminates vegetation in most of camera-selected staging island", "next": "Diagnose ecological field-to-placement mapping before further leaf tuning"},
+      {"severity": "minor", "evidence": "Few surviving isolated tufts remain visually separate at bank edge", "cause": "Layering cannot form from scattered isolated instances", "next": "Cluster occupancy first; reassess dimensional blades at Tier2 only if leaf detail then remains material"}
+    ],
+    "decision": "Retain current helper provisionally; no additional helper tuning is justified by R3's distant sparse grass. Parent composition/placement remains below reference target.",
+    "humanApproval": false
+  },
+  "integratedR4Review": {
+    "reviewer": "meadow_detail task agent",
+    "actualVision": true,
+    "imagesInspected": ["artifacts/visual-quality/wave1-detail-r4/flooded-hero.png", "artifacts/visual-quality/wave1-detail-r4/flooded-inspection.png"],
+    "referenceCompared": ".codex-attachments/e97cc808-5cc4-4a8d-8112-5971ec4a638c/38620747-464e-4437-a47d-8842aa806c4f/1000011079.png",
+    "progress": "Substantial R3-to-R4 composition improvement. Dense near side grasses frame a low open passage; greener short cover replaces empty tan stage, and nearby reflected water remains visible. It now reads as a developing wetland edge.",
+    "remaining": [
+      {"severity": "major", "evidence": "Large near leaves read as flat lime cutout/sword foliage with weak face/ridge light variation. Repeated radial-fan silhouettes are obvious in both side swaths.", "cause": "Hypothesis: upward-biased normal repair over-flattens lighting; near-swath scaling magnifies blade widths and repeated clump shape", "next": "Future focused geometry/normal comparison: thinner ribbons, more retained face/ridge variation with diffuse floor to prevent black tips; evaluate width/scale jointly"},
+      {"severity": "major", "evidence": "Side framing is much stronger but forms similar-height, similar-tint left/right walls. Concept has irregular overlapping tufts, selected golden edges and green interior shadows.", "cause": "Hypothesis: correlated multiscale group variation is weaker than raw instance variation", "next": "Future placement comparison: irregular clump boundaries and local height/pigment groups while retaining low footprint"},
+      {"severity": "minor", "evidence": "Short cover still reads as scattered tiny points toward middle of passage, while inspection retains a broad sparse remote field", "cause": "Visible occupancy and projected scale discontinuity", "next": "Reassess ground/low-cover aggregate rather than increasing isolated accent count"}
+    ],
+    "decision": "Retain R4 over R3 as development progress. No helper change in this review: highest-priority residual needs a controlled next comparison, not speculative tuning. Reference quality is not met.",
+    "humanApproval": false
+  },
+  "normalCalibrationCandidate": {
+    "requestedBy": "parent following independent occupancy review; one bounded candidate",
+    "hypothesis": "15 percent narrower near ribbons and stronger retained face-normal response improve dimensionality and reduce sword-like shapes without returning black spears",
+    "change": "Near width x.85; fragment normal normalize(normal*.65 + viewSpaceUp*.45), previously .36/.85. Far geometry, pigment, instance placement, density and exposure unchanged.",
+    "rollback": "artifacts/wave1-detail/flooded-meadow-r2.ts.txt",
+    "checks": "Finite positions, unchanged180/30 triangles and unchanged near maxY .6814904213 verified using targeted tsx command",
+    "decision": "pending parent same-view render and actual inspection; revert if weak or black spear regression"
+  },
+  "decision": "one requested normal/width calibration pending actual same-view inspection; no aesthetic approval",
+  "humanApproval": "Layout retained for development according to parent task; no final art approval"
+}

@@ -1,0 +1,126 @@
+{
+  "task": "Reference-informed prairie willow and cottonwood finish",
+  "seed": 29,
+  "speciesIdentification": {
+    "foregroundAndRightMiddle": "Salix nigra, previously generic oak studio model",
+    "smallerLeftMiddle": "Populus deltoides, previously generic oak studio model"
+  },
+  "references": [
+    {
+      "url": "https://dendro.cnre.vt.edu/dendrology/syllabus/factsheet.cfm?ID=86",
+      "observations": "Narrow lanceolate leaves, irregular spreading crown, thick furrowed bark. Actual bark, leaf and form photos interpreted from page screenshot.",
+      "rights": "Virginia Tech photographs copyright; viewed as references only, not used in game textures."
+    },
+    {
+      "url": "https://www.nwmissouri.edu/arboretum/tree/populusdeltoides.htm",
+      "observations": "Actual cottonwood bark image inspected: gray-brown ridged plates and branched fissures; broad vase-shaped irregular crown described.",
+      "rights": "University photographs copyright; reference inspection only."
+    },
+    {
+      "url": "https://extension.okstate.edu/programs/plant-id/plant-profiles/eastern-cottonwood",
+      "observations": "Regional identity, triangular leaves, massive deeply furrowed gray bark."
+    }
+  ],
+  "implementation": [
+    "Prairie-only finish retains seeds, dimensions, placement and centerline branching; thinner secondary wood and species-informed existing leaf sprays.",
+    "Recovered continuous path/tangent frames from inherited segment chains; matched radii remove visible joint wedges.",
+    "Generated irregular bark albedo, 1024-square WebP, 468948 bytes, shared map/bump texture with metric branch-aligned UVs.",
+    "UVs and material hook guarded to ECO389 prairie preview; canonical shared tree assets are not mutated."
+  ],
+  "assetProvenance": {
+    "method": "Built-in image_gen, generated for this project, not a downloaded reference photo",
+    "source": "C:/Users/aturb/.codex/generated_images/01a205da-da33-7d33-9ee8-3170650dd5eb/exec-c7af043d-8a04-440e-82fa-83ae8a21ff77.png",
+    "dimensions": [
+      1024,
+      1024
+    ],
+    "estimatedRgbaMipGpuBytes": 5592405,
+    "seamlessStatus": "Requested tileable; no formal edge equality guarantee or production approval claimed."
+  },
+  "review": {
+    "reviewer": "Codex primary-agent actual image interpretation",
+    "decision": "Retain improved bark, joint continuity and finer foliage for human review",
+    "humanApproval": null,
+    "rejected": "Analytic stripe bump treatment and first rigid leaf-spray arrangement. Actual failure images/source preserved in rejected-striped-finish.",
+    "visibleImprovement": "Close-up no longer has bright gaps around each curved branch section; smooth brown tubes replaced by uneven gray-brown bark. Secondary limbs are less oversized.",
+    "remaining": [
+      "Retained oak-derived centerline hierarchy remains a species approximation.",
+      "Willow sprays can still read as flat fans at close range; no claim of photorealistic or final botanical approval.",
+      "Prairie ground and shrub representation remain unfinished outside this tree pass."
+    ]
+  },
+  "validation": {
+    "typescript": "passed",
+    "targetedTests": "3 passed",
+    "cameraUnchanged": true,
+    "renderSettingsUnchanged": true,
+    "before": [
+      {
+        "frame": 6,
+        "calls": 16,
+        "triangles": 673898,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.40000003576278687
+      },
+      {
+        "frame": 7,
+        "calls": 16,
+        "triangles": 673898,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      },
+      {
+        "frame": 8,
+        "calls": 16,
+        "triangles": 673898,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.40000003576278687
+      }
+    ],
+    "after": [
+      {
+        "frame": 6,
+        "calls": 17,
+        "triangles": 718736,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 7,
+        "calls": 17,
+        "triangles": 718736,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      },
+      {
+        "frame": 8,
+        "calls": 17,
+        "triangles": 718736,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.19999998807907104
+      }
+    ],
+    "pugetRegression": {
+      "changedPixels": 0,
+      "pixels": 230400,
+      "scope": "Shared renderer before/after; approved Puget encounter camera, seed 29, wind off."
+    },
+    "otherProtectedBiomes": "Not broadly recaptured; no source recipe edits and only prairie-scoped renderer hooks.",
+    "mobileDeviceValidation": false
+  },
+  "files": {
+    "src/lib/forest/prairie-tree-finish.ts": "680d8f09f11e54494080888c1711a2bc54bcae7893a412b0e1eb35c6a113f6ba",
+    "src/lib/forest/wave3-prairie.ts": "2b0089603650067b20dc5667df937f260a39a0c3a694b794110c768adff29f7a",
+    "src/lib/forest/painted-renderer.ts": "435bbed8bce7586b9286ec29e6996874eff0a123dc71f1f6dc874c5e2eca35b2",
+    "public/assets/prairie/black-willow-bark-v1.webp": "c9d326b2f1732de844577595e1996a54bf4f26b22a7ccf86e528216d4be2f0c6",
+    "tests/prairie-tree-finish.test.ts": "dd65024bcdc9306dafab86bfda948ec1ad385fb3a420e5787f83f9b7d4c1b2c4"
+  },
+  "comparison": "artifacts\\prairie-tree-realism\\comparison.png",
+  "noCommitPushDeploy": true
+}

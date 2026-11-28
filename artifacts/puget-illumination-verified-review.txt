@@ -1,0 +1,15 @@
+Painterly illumination — current draft verified and profile made explicit
+
+Existing illumination implementation retained; no second lighting system added.
+Source adjustment this pass: src/lib/forest/environment-foundations.ts explicitly includes illumination settings in pugetCompositionProfile.
+Controls: focalStrength .9; focalWidth [19,20]; softness .8; warmth .5; irregularity .35; patchCount 3; patchStrength .38; crownStrength .5. focalCenter optionally supplies world X/Z.
+GroundCompositionLighting remains independent and unchanged. Foreground protection retains cool green framing; ground texture detail survives the post-light multiplier. Selected upper, sun-facing foliage receives warm accents.
+Three deterministic broad patches contribute positive light or subtract illumination; purple in debug marks net negative field, not every subtractive region.
+World-space field coordinates are captured once, not recomputed during orbit. No geometry, scenery, source assets, physical light or shadow changes in this pass.
+
+Fresh captures: puget-illumination-verified-AB.png and puget-illumination-verified-debug.png; combined sheet puget-illumination-verified-comparison.png.
+Independent checks: TypeScript passed; deterministic field, separate vignette adjustment and captured-coordinate stability passed. Camera, exposure, shadow strength, geometry fingerprint, sky hash, ground instance counts and vignette match in all three captures. Before PNG is byte-identical to existing draft baseline. Browser/shader errors absent.
+Cost counters: 17 draw calls, 575981 submitted triangles in every capture. No extra mesh, draw call or texture from illumination. Shader arithmetic cost not GPU-timed; physical Android performance unmeasured.
+Preview /explore?lat=47.6062&lon=-122.3321&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&encounter=1&camera=human&composition=C&groundLighting=B&illumination=on
+Use illumination=off or illumination=debug to compare. These are stylized lighting fields, not simulated volumetric scattering.
+Stopped after this comparison; no deployment, commit or further polish.

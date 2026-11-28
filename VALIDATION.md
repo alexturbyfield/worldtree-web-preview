@@ -1,6 +1,6 @@
 # WorldTree v0.8 validation
 
-- 81 automated TypeScript tests passed, including original catalog parity, the generated geographic worker, 19 representative global coordinate cases, every biome/realm, native-range boundaries, cross-continent exclusions, treeless/open contexts, six habitats, deterministic exports, missing data, taxonomy homonyms and unvalidated environmental filters.
+- 93 automated TypeScript tests passed, including the original 81 regression tests and 12 export-contract checks. Coverage includes original catalog parity, the generated geographic worker, 19 representative global coordinate cases, every biome/realm, native-range boundaries, cross-continent exclusions, treeless/open contexts, six habitats, deterministic exports, missing data, taxonomy homonyms and unvalidated environmental filters.
 - All 15 original Python tests passed unchanged.
 - ESLint and TypeScript checks passed.
 - Next.js production build and static export passed.
@@ -19,9 +19,13 @@ The actual RESOLVE polygon classifies central Cairo as **Nile Delta flooded sava
 
 The release is deployed only as a Vercel **Preview** in the existing project. Public HTTP, served asset integrity and global lookup smoke tests are run against the returned URL before handoff. The exact Preview URL and deployed application commit are returned with the release. The production domain remains the previously approved blank placeholder.
 
+## Export-contract acceptance
+
+`TreeSpecies` includes optional canonical `heightMeters`. Exports preserve the legacy `matureHeightM` field, copy a supplied legacy range to the canonical field when needed, and prefer an explicitly supplied canonical range. The 400 current catalog records remain unchanged: unknown heights omit the canonical field. Contract tests check all required species fields across the catalog, nonmutation, synthetic supplied ranges, confidence/evidence and source preservation, deterministic seeds, six habitat modes, unvalidated environmental constraints, and insufficient-data results. Synthetic range fixtures are test data only and never enter the ecological catalog.
+
 ## Browser verification limit
 
-Desktop inspection for this release was attempted. The existing Windows Firewall security dialog for a previously stopped Python server still blocks Chrome; no v0.8 mobile screenshot or real touch-flow pass is claimed. The earlier v0.7 initial layout review at 390 × 844 is not represented as v0.8 verification. CSS retains the mobile breakpoint, large controls, document scrolling and MapLibre touch controls. This desktop-only QA blocker does not prevent cloud deployment or public Android access. It requires manual handling when the user returns to the computer.
+Rendered mobile/device testing is optional for this acceptance pass, as agreed with the user, and is not a release gate. It was not rerun; no v0.8 mobile screenshot or real touch-flow pass is claimed. An earlier desktop inspection was blocked by a Windows Firewall security dialog for a stopped Python server. The v0.7 initial layout review at 390 × 844 is not represented as v0.8 verification. CSS retains the mobile breakpoint, large controls, document scrolling and MapLibre touch controls. Public HTML/viewport checks and live worker/data smoke tests are separate from rendered browser verification.
 
 ## Data-quality and licensing limits
 

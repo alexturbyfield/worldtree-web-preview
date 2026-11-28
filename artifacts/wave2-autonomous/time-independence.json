@@ -1,0 +1,9 @@
+{
+  "seed": 29,
+  "pixels": 16384,
+  "changedProjectedIllumination": 10446,
+  "changedMoisture": 0,
+  "changedPersistentShelter": 0,
+  "result": "Passed: moss growth inputs unchanged by physical key direction; projected illumination changes independently",
+  "scope": "Synthetic habitat study, not measured ecology"
+}

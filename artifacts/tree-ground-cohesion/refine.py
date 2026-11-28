@@ -1,0 +1,2 @@
+from pathlib import Path
+p=Path('src/lib/forest/tree-experiment.ts');s=p.read_text().replace('width:p.foliage.width*scale,length:p.foliage.length*scale','width:p.foliage.width*scale*1.2,length:p.foliage.length*scale*1.15').replace('study.model.dimensions.height+.2','Math.max(parent.anchor[1]+.65,study.model.dimensions.height-.35)').replace('height:anchor[1]+.7','height:Math.max(study.model.dimensions.height,anchor[1]+.55)');p.write_text(s)

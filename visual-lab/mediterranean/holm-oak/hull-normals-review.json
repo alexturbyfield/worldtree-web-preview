@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-27T19:12:07.671Z",
+  "humanFeedback": {
+    "text": "A is best, but it looks like the normals of the individual cards need to be updated to follow the general hull the the cannot makes. It is currently very noisy",
+    "materialPreference": "A",
+    "silhouette": "Previously approved; preserved",
+    "normalTreatmentApproval": null
+  },
+  "hypothesis": "Per-spray axes and grid perturbations create discontinuous lighting; a continuous ellipsoidal crown-gradient field should remove seams.",
+  "implementation": "Only Holm-oak batch normal attributes replaced by the crown hull gradient in tree-local space, rotated back to world space. No position/index/UV/alpha changes. Material A retained by default; explicit baseline and card-normal fallback remain available.",
+  "reviewer": "Primary Codex inspected actual 640x360 result against frozen A",
+  "decision": "retain for human review",
+  "observed": "Broad upper-left illumination and cool lower canopy replace alternating bright/dark spray patches. Leaf detail is now very subdued; surface may be too smooth.",
+  "limitations": [
+    "Hull shading does not model every branch-clump cavity",
+    "Possible need for restrained local-normal blend later; no automatic follow-up performed",
+    "No mobile benchmark or global template promotion"
+  ],
+  "checks": {
+    "typecheck": "passed",
+    "focusedTests": 8,
+    "maskPixelDifferences": 0,
+    "sourceMaskPixels": 230400,
+    "browserErrors": [],
+    "counts": {
+      "frame": 9,
+      "calls": 18,
+      "triangles": 1822040,
+      "points": 0,
+      "lines": 0,
+      "geometries": 17,
+      "textures": 11
+    }
+  },
+  "evidence": "artifacts/holm-hull-normals/before-after.png",
+  "commit": false,
+  "push": false,
+  "deployed": false
+}

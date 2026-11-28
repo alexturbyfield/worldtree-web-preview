@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "generatorVersion": "visual-lab-1",
+  "experiments": {
+    "A": {
+      "biome": "savanna",
+      "family": "grass",
+      "presentationSeed": "grass-study-1",
+      "referenceIds": ["savanna-composition", "savanna-grass", "savanna-light"],
+      "candidates": [
+        {"id":"a1","name":"Soft ribbon clumps","parameters":{"geometry":"ribbons","count":2100,"blades":5,"segments":3,"bladeWidth":0.13,"bend":0.48,"height":1.6,"heightVariation":0.65,"width":1.4,"broadFraction":0.5,"densityFloor":0.34,"normalWrap":0.7,"tip":"#dfc27a","base":"#747445"}},
+        {"id":"a2","name":"Broad painterly card masses","parameters":{"geometry":"atlas","count":7500,"blades":0,"segments":0,"bladeWidth":0,"bend":0,"height":1.25,"heightVariation":0.5,"width":1.7,"broadFraction":0.68,"densityFloor":0.48,"normalWrap":0.85,"tip":"#e3ca8c","base":"#99925a"}},
+        {"id":"a3","name":"Fine flowing blades","parameters":{"geometry":"ribbons","count":2100,"blades":7,"segments":2,"bladeWidth":0.075,"bend":0.7,"height":1.9,"heightVariation":0.9,"width":1.6,"broadFraction":0.6,"densityFloor":0.4,"normalWrap":0.65,"tip":"#e6ca84","base":"#788052"}}
+      ]
+    },
+    "B": {
+      "biome": "rainforest",
+      "family": "ground-dressing",
+      "presentationSeed": "forest-floor-study-1",
+      "referenceIds": ["rainforest-floor", "rainforest-depth", "rainforest-focal"],
+      "candidates": [
+        {"id":"b1","name":"Low broadleaf islands","parameters":{"spread":1.15,"fernScale":0.62,"palmScale":0.5,"broadleafScale":0.95,"heightVariation":0.4,"foregroundScale":1.05,"litterScale":1.1,"gap":1.1}},
+        {"id":"b2","name":"Layered edge understory","parameters":{"spread":0.85,"fernScale":1.05,"palmScale":0.72,"broadleafScale":1.15,"heightVariation":0.65,"foregroundScale":1.35,"litterScale":1.25,"gap":1.05}},
+        {"id":"b3","name":"Broken mixed-size patches","parameters":{"spread":1.45,"fernScale":0.78,"palmScale":0.58,"broadleafScale":0.85,"heightVariation":0.8,"foregroundScale":1.2,"litterScale":0.8,"gap":1.2}}
+      ]
+    }
+  }
+}

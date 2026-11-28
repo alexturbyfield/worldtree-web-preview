@@ -1,0 +1,674 @@
+[
+  {
+    "biome": "desert",
+    "view": "hero",
+    "tier": 1,
+    "width": 640,
+    "height": 360,
+    "variant": "current",
+    "camera": {
+      "position": [
+        0,
+        0.8472590633566935,
+        34
+      ],
+      "quaternion": [
+        0.01230337707261847,
+        -0.004031854530539593,
+        0.00004960958482750933,
+        0.999916180787441
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "performance": {
+      "calls": 6,
+      "triangles": 157510,
+      "cpuSubmissionMs": [
+        0.9000000059604645,
+        0.4000000059604645,
+        0.19999998807907104
+      ],
+      "synchronousCompletionMs": [],
+      "pixelRatio": 1,
+      "textureObjects": 4,
+      "geometryObjects": 6,
+      "antialias": false
+    },
+    "instances": [
+      {
+        "name": "desert-weathered-granite",
+        "count": 38,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.30893756698383057,
+          4.917651765769901
+        ]
+      },
+      {
+        "name": "desert-weathered-granite",
+        "count": 70,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.334053594521499,
+          4.063154291805831
+        ]
+      },
+      {
+        "name": "desert-weathered-granite",
+        "count": 105,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.06551328753653742,
+          3.2711350955082934
+        ]
+      },
+      {
+        "name": "desert-resolver-xeric-shrub-form",
+        "count": 110,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.6710165739059448,
+          1.3980340957641602
+        ]
+      }
+    ],
+    "textureAudit": [
+      {
+        "width": 1774,
+        "height": 887,
+        "mipmaps": true,
+        "estimatedRGBABytes": 8392203,
+        "source": "/assets/puget-v1/sky-matte-v1.webp"
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "renderer": "WebKit WebGL",
+    "errors": [],
+    "coverage": {
+      "available": false,
+      "region": "lower half",
+      "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+      "fraction": null,
+      "nearBlackFraction": null,
+      "horizontalBands": null
+    },
+    "findings": [],
+    "limitations": [
+      "Metrics flag potential failures; they cannot establish artistic quality.",
+      "Coverage mask omits terrain occlusion; near-black statistics include legitimate shadows.",
+      "Faceting, continuity and conspicuous repetition require vision inspection; no RGB-only artistic approval."
+    ]
+  },
+  {
+    "biome": "desert",
+    "view": "inspection",
+    "tier": 1,
+    "width": 640,
+    "height": 360,
+    "variant": "current",
+    "camera": {
+      "position": [
+        70,
+        50,
+        85
+      ],
+      "quaternion": [
+        -0.17164577003343667,
+        0.2750834768545333,
+        0.04998336618883981,
+        0.9446525676118614
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "performance": {
+      "calls": 6,
+      "triangles": 157510,
+      "cpuSubmissionMs": [
+        0.5,
+        0.29999998211860657,
+        0.09999999403953552
+      ],
+      "synchronousCompletionMs": [],
+      "pixelRatio": 1,
+      "textureObjects": 4,
+      "geometryObjects": 6,
+      "antialias": false
+    },
+    "instances": [
+      {
+        "name": "desert-weathered-granite",
+        "count": 38,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.30893756698383057,
+          4.917651765769901
+        ]
+      },
+      {
+        "name": "desert-weathered-granite",
+        "count": 70,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.334053594521499,
+          4.063154291805831
+        ]
+      },
+      {
+        "name": "desert-weathered-granite",
+        "count": 105,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.06551328753653742,
+          3.2711350955082934
+        ]
+      },
+      {
+        "name": "desert-resolver-xeric-shrub-form",
+        "count": 110,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.6710165739059448,
+          1.3980340957641602
+        ]
+      }
+    ],
+    "textureAudit": [
+      {
+        "width": 1774,
+        "height": 887,
+        "mipmaps": true,
+        "estimatedRGBABytes": 8392203,
+        "source": "/assets/puget-v1/sky-matte-v1.webp"
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "renderer": "WebKit WebGL",
+    "errors": [],
+    "coverage": {
+      "available": false,
+      "region": "lower half",
+      "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+      "fraction": null,
+      "nearBlackFraction": null,
+      "horizontalBands": null
+    },
+    "findings": [],
+    "limitations": [
+      "Metrics flag potential failures; they cannot establish artistic quality.",
+      "Coverage mask omits terrain occlusion; near-black statistics include legitimate shadows.",
+      "Faceting, continuity and conspicuous repetition require vision inspection; no RGB-only artistic approval."
+    ]
+  },
+  {
+    "biome": "mangrove",
+    "view": "hero",
+    "tier": 1,
+    "width": 640,
+    "height": 360,
+    "variant": "current",
+    "camera": {
+      "position": [
+        0,
+        2.05,
+        31
+      ],
+      "quaternion": [
+        -0.00037857057010793325,
+        0.015146299694104859,
+        0.0000057346015476251695,
+        0.9998852165408857
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "performance": {
+      "calls": 12,
+      "triangles": 1451722,
+      "cpuSubmissionMs": [
+        1.2000000178813934,
+        0.699999988079071,
+        0.5999999940395355
+      ],
+      "synchronousCompletionMs": [],
+      "pixelRatio": 1,
+      "textureObjects": 9,
+      "geometryObjects": 8,
+      "antialias": false
+    },
+    "instances": [
+      {
+        "name": "mangrove-shore-root-debris",
+        "count": 339,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.1846340982208832,
+          0.5690465281213385
+        ]
+      },
+      {
+        "name": "mangrove-distant-canopy-masses",
+        "count": 46,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          3.012455940246582,
+          5.935644626617432
+        ]
+      }
+    ],
+    "textureAudit": [
+      {
+        "width": 1774,
+        "height": 887,
+        "mipmaps": true,
+        "estimatedRGBABytes": 8392203,
+        "source": "/assets/puget-v1/sky-matte-v1.webp"
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "mipmaps": true,
+        "estimatedRGBABytes": 22369621,
+        "source": "/assets/puget-v1/forest-floor.png"
+      },
+      {
+        "width": 512,
+        "height": 256,
+        "mipmaps": false,
+        "estimatedRGBABytes": 524288,
+        "source": "generated canvas"
+      },
+      {
+        "width": 256,
+        "height": 256,
+        "mipmaps": false,
+        "estimatedRGBABytes": 262144,
+        "source": "generated canvas"
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "mipmaps": false,
+        "estimatedRGBABytes": 16384,
+        "source": "generated canvas"
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "mipmaps": true,
+        "estimatedRGBABytes": 1048576,
+        "source": "generated canvas"
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "renderer": "WebKit WebGL",
+    "errors": [],
+    "coverage": {
+      "available": false,
+      "region": "lower half",
+      "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+      "fraction": null,
+      "nearBlackFraction": null,
+      "horizontalBands": null
+    },
+    "findings": [],
+    "limitations": [
+      "Metrics flag potential failures; they cannot establish artistic quality.",
+      "Coverage mask omits terrain occlusion; near-black statistics include legitimate shadows.",
+      "Faceting, continuity and conspicuous repetition require vision inspection; no RGB-only artistic approval."
+    ]
+  },
+  {
+    "biome": "mangrove",
+    "view": "inspection",
+    "tier": 1,
+    "width": 640,
+    "height": 360,
+    "variant": "current",
+    "camera": {
+      "position": [
+        70,
+        50,
+        85
+      ],
+      "quaternion": [
+        -0.17164577003343667,
+        0.2750834768545333,
+        0.04998336618883981,
+        0.9446525676118614
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "performance": {
+      "calls": 12,
+      "triangles": 1451722,
+      "cpuSubmissionMs": [
+        0.800000011920929,
+        0.800000011920929,
+        0.7999999821186066
+      ],
+      "synchronousCompletionMs": [],
+      "pixelRatio": 1,
+      "textureObjects": 9,
+      "geometryObjects": 8,
+      "antialias": false
+    },
+    "instances": [
+      {
+        "name": "mangrove-shore-root-debris",
+        "count": 339,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.1846340982208832,
+          0.5690465281213385
+        ]
+      },
+      {
+        "name": "mangrove-distant-canopy-masses",
+        "count": 46,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          3.012455940246582,
+          5.935644626617432
+        ]
+      }
+    ],
+    "textureAudit": [
+      {
+        "width": 1774,
+        "height": 887,
+        "mipmaps": true,
+        "estimatedRGBABytes": 8392203,
+        "source": "/assets/puget-v1/sky-matte-v1.webp"
+      },
+      {
+        "width": 2048,
+        "height": 2048,
+        "mipmaps": true,
+        "estimatedRGBABytes": 22369621,
+        "source": "/assets/puget-v1/forest-floor.png"
+      },
+      {
+        "width": 512,
+        "height": 256,
+        "mipmaps": false,
+        "estimatedRGBABytes": 524288,
+        "source": "generated canvas"
+      },
+      {
+        "width": 256,
+        "height": 256,
+        "mipmaps": false,
+        "estimatedRGBABytes": 262144,
+        "source": "generated canvas"
+      },
+      {
+        "width": 64,
+        "height": 64,
+        "mipmaps": false,
+        "estimatedRGBABytes": 16384,
+        "source": "generated canvas"
+      },
+      {
+        "width": 512,
+        "height": 384,
+        "mipmaps": true,
+        "estimatedRGBABytes": 1048576,
+        "source": "generated canvas"
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "renderer": "WebKit WebGL",
+    "errors": [],
+    "coverage": {
+      "available": false,
+      "region": "lower half",
+      "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+      "fraction": null,
+      "nearBlackFraction": null,
+      "horizontalBands": null
+    },
+    "findings": [],
+    "limitations": [
+      "Metrics flag potential failures; they cannot establish artistic quality.",
+      "Coverage mask omits terrain occlusion; near-black statistics include legitimate shadows.",
+      "Faceting, continuity and conspicuous repetition require vision inspection; no RGB-only artistic approval."
+    ]
+  },
+  {
+    "biome": "flooded",
+    "view": "hero",
+    "tier": 1,
+    "width": 640,
+    "height": 360,
+    "variant": "current",
+    "camera": {
+      "position": [
+        -18,
+        1.6941562907697951,
+        34
+      ],
+      "quaternion": [
+        -0.001693394345312932,
+        -0.057188850959103206,
+        -0.0000970021724461407,
+        0.998361937541765
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "performance": {
+      "calls": 8,
+      "triangles": 835378,
+      "cpuSubmissionMs": [
+        0.9000000059604645,
+        0.7000000178813934,
+        0.5999999940395355
+      ],
+      "synchronousCompletionMs": [],
+      "pixelRatio": 1,
+      "textureObjects": 7,
+      "geometryObjects": 6,
+      "antialias": false
+    },
+    "instances": [
+      {
+        "name": "wave1-flooded-sedges",
+        "count": 3000,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.7003363370895386,
+          1.5996677875518799
+        ]
+      },
+      {
+        "name": "wave1-flooded-distant-sedges",
+        "count": 2700,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.5500101447105408,
+          1.0499906539916992
+        ]
+      }
+    ],
+    "textureAudit": [
+      {
+        "width": 1774,
+        "height": 887,
+        "mipmaps": true,
+        "estimatedRGBABytes": 8392203,
+        "source": "/assets/puget-v1/sky-matte-v1.webp"
+      },
+      {
+        "width": 512,
+        "height": 256,
+        "mipmaps": false,
+        "estimatedRGBABytes": 524288,
+        "source": "generated canvas"
+      },
+      {
+        "width": 256,
+        "height": 256,
+        "mipmaps": false,
+        "estimatedRGBABytes": 262144,
+        "source": "generated canvas"
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "renderer": "WebKit WebGL",
+    "errors": [],
+    "coverage": {
+      "available": false,
+      "region": "lower half",
+      "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+      "fraction": null,
+      "nearBlackFraction": null,
+      "horizontalBands": null
+    },
+    "findings": [],
+    "limitations": [
+      "Metrics flag potential failures; they cannot establish artistic quality.",
+      "Coverage mask omits terrain occlusion; near-black statistics include legitimate shadows.",
+      "Faceting, continuity and conspicuous repetition require vision inspection; no RGB-only artistic approval."
+    ]
+  },
+  {
+    "biome": "flooded",
+    "view": "inspection",
+    "tier": 1,
+    "width": 640,
+    "height": 360,
+    "variant": "current",
+    "camera": {
+      "position": [
+        70,
+        50,
+        85
+      ],
+      "quaternion": [
+        -0.17164577003343667,
+        0.2750834768545333,
+        0.04998336618883981,
+        0.9446525676118614
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "performance": {
+      "calls": 8,
+      "triangles": 835378,
+      "cpuSubmissionMs": [
+        0.800000011920929,
+        1.699999988079071,
+        0.800000011920929
+      ],
+      "synchronousCompletionMs": [],
+      "pixelRatio": 1,
+      "textureObjects": 7,
+      "geometryObjects": 6,
+      "antialias": false
+    },
+    "instances": [
+      {
+        "name": "wave1-flooded-sedges",
+        "count": 3000,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.7003363370895386,
+          1.5996677875518799
+        ]
+      },
+      {
+        "name": "wave1-flooded-distant-sedges",
+        "count": 2700,
+        "visible": true,
+        "tiles": null,
+        "scaleRange": [
+          0.5500101447105408,
+          1.0499906539916992
+        ]
+      }
+    ],
+    "textureAudit": [
+      {
+        "width": 1774,
+        "height": 887,
+        "mipmaps": true,
+        "estimatedRGBABytes": 8392203,
+        "source": "/assets/puget-v1/sky-matte-v1.webp"
+      },
+      {
+        "width": 512,
+        "height": 256,
+        "mipmaps": false,
+        "estimatedRGBABytes": 524288,
+        "source": "generated canvas"
+      },
+      {
+        "width": 256,
+        "height": 256,
+        "mipmaps": false,
+        "estimatedRGBABytes": 262144,
+        "source": "generated canvas"
+      }
+    ],
+    "renderSettings": {
+      "exposure": 1.12,
+      "toneMapping": 4,
+      "shadowType": 1
+    },
+    "renderer": "WebKit WebGL",
+    "errors": [],
+    "coverage": {
+      "available": false,
+      "region": "lower half",
+      "mask": "actual alpha-tested vegetation silhouette, original geometry; isolated from ground and nonvegetation",
+      "fraction": null,
+      "nearBlackFraction": null,
+      "horizontalBands": null
+    },
+    "findings": [],
+    "limitations": [
+      "Metrics flag potential failures; they cannot establish artistic quality.",
+      "Coverage mask omits terrain occlusion; near-black statistics include legitimate shadows.",
+      "Faceting, continuity and conspicuous repetition require vision inspection; no RGB-only artistic approval."
+    ]
+  }
+]

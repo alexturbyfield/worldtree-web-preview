@@ -1,0 +1,324 @@
+[
+  {
+    "id": "tundra",
+    "seed": "26123",
+    "mode": "after",
+    "view": "hero",
+    "file": "artifacts/wave2/holdout-tundra/tundra-26123-after-hero.png",
+    "samples": [
+      {
+        "frame": 6,
+        "calls": 7,
+        "triangles": 275352,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.2999999523162842
+      },
+      {
+        "frame": 7,
+        "calls": 7,
+        "triangles": 275352,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.10000002384185791
+      },
+      {
+        "frame": 8,
+        "calls": 7,
+        "triangles": 275352,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      }
+    ],
+    "camera": {
+      "position": [
+        0,
+        2.552238822772891,
+        34
+      ],
+      "target": [
+        0,
+        0.2287919528804805,
+        -55
+      ]
+    },
+    "instances": [
+      {
+        "name": "expansion-low-unnamed-cover",
+        "count": 3600
+      },
+      {
+        "name": "expansion-embedded-weathered-stone",
+        "count": 34
+      },
+      {
+        "name": "expansion-unnamed-low-foliage",
+        "count": 297
+      }
+    ],
+    "recipe": {
+      "id": "tundra",
+      "biome": 11,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "tundra",
+        "biome": 11,
+        "seed": "26123",
+        "phase": 5.077221315950155,
+        "relief": 2.1,
+        "camera": {
+          "position": [
+            0,
+            2.5522388227728916,
+            34
+          ],
+          "target": [
+            0,
+            0.2287919528804805,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          2.5522388227728916,
+          34
+        ],
+        "target": [
+          0,
+          0.2287919528804805,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#a8bec3"
+        }
+      },
+      "trees": 0,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "plan": {
+      "id": "tundra",
+      "biome": 11,
+      "seed": "26123",
+      "phase": 5.077221315950155,
+      "relief": 2.1,
+      "camera": {
+        "position": [
+          0,
+          2.5522388227728916,
+          34
+        ],
+        "target": [
+          0,
+          0.2287919528804805,
+          -55
+        ]
+      },
+      "inspection": {
+        "position": [
+          62,
+          38,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ]
+      },
+      "fieldEvidence": "synthetic art fields, not measured terrain/hydrology"
+    },
+    "dressing": {
+      "instances": {
+        "lowCover": 3600,
+        "rocks": 34
+      },
+      "identity": "Unnamed low grass/sedge/shrub functional forms, not a regional flora inventory",
+      "staging": "No roots or tall dressing within the central approach field"
+    },
+    "errors": []
+  },
+  {
+    "id": "tundra",
+    "seed": "26123",
+    "mode": "after",
+    "view": "inspection",
+    "file": "artifacts/wave2/holdout-tundra/tundra-26123-after-inspection.png",
+    "samples": [
+      {
+        "frame": 10,
+        "calls": 7,
+        "triangles": 275352,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      },
+      {
+        "frame": 11,
+        "calls": 7,
+        "triangles": 275352,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      },
+      {
+        "frame": 12,
+        "calls": 7,
+        "triangles": 275352,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      }
+    ],
+    "camera": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ]
+    },
+    "instances": [
+      {
+        "name": "expansion-low-unnamed-cover",
+        "count": 3600
+      },
+      {
+        "name": "expansion-embedded-weathered-stone",
+        "count": 34
+      },
+      {
+        "name": "expansion-unnamed-low-foliage",
+        "count": 297
+      }
+    ],
+    "recipe": {
+      "id": "tundra",
+      "biome": 11,
+      "version": "global-expansion-prototype-1",
+      "plan": {
+        "id": "tundra",
+        "biome": 11,
+        "seed": "26123",
+        "phase": 5.077221315950155,
+        "relief": 2.1,
+        "camera": {
+          "position": [
+            0,
+            2.5522388227728916,
+            34
+          ],
+          "target": [
+            0,
+            0.2287919528804805,
+            -55
+          ]
+        },
+        "inspection": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "eye": [
+          0,
+          2.5522388227728916,
+          34
+        ],
+        "target": [
+          0,
+          0.2287919528804805,
+          -55
+        ]
+      },
+      "presentation": {
+        "foliageAtmosphere": {
+          "near": 95,
+          "far": 420,
+          "strength": 0.55,
+          "color": "#a8bec3"
+        }
+      },
+      "trees": 0,
+      "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+      "layers": {
+        "season": "independent reference state, unresolved",
+        "weather": "clear visual study",
+        "timeOfDay": "warm directional reference state"
+      }
+    },
+    "plan": {
+      "id": "tundra",
+      "biome": 11,
+      "seed": "26123",
+      "phase": 5.077221315950155,
+      "relief": 2.1,
+      "camera": {
+        "position": [
+          0,
+          2.5522388227728916,
+          34
+        ],
+        "target": [
+          0,
+          0.2287919528804805,
+          -55
+        ]
+      },
+      "inspection": {
+        "position": [
+          62,
+          38,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ]
+      },
+      "fieldEvidence": "synthetic art fields, not measured terrain/hydrology"
+    },
+    "dressing": {
+      "instances": {
+        "lowCover": 3600,
+        "rocks": 34
+      },
+      "identity": "Unnamed low grass/sedge/shrub functional forms, not a regional flora inventory",
+      "staging": "No roots or tall dressing within the central approach field"
+    },
+    "errors": []
+  }
+]

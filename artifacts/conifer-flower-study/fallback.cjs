@@ -1,0 +1,1 @@
+const h=require('../../scripts/studies/visual-quality.cjs');(async()=>{await h.startSession();try{h.config.scenes.puget+='&conifer=legacy';await h.capture({label:'conifer-puget-legacy',scenes:['puget'],candidate:'baseline',closePage:true,masks:false});}finally{await h.closeSession()}})().catch(e=>{console.error(e);process.exitCode=1});

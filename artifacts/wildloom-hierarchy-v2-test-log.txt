@@ -1,0 +1,383 @@
+(node:15164) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+Replace `const THREE = require("three")` with `import * as THREE from "three"`.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ ellipsoid normals use inverse squared radii, ellipsoid rotation and parent inverse transpose (7.0161ms)
+✔ oak: deterministic cards preserve scaffolds and separate structure from pigment (89.6278ms)
+✔ douglas: deterministic cards preserve scaffolds and separate structure from pigment (172.2514ms)
+✔ spruce: deterministic cards preserve scaffolds and separate structure from pigment (182.6416ms)
+✔ pine: deterministic cards preserve scaffolds and separate structure from pigment (20.164ms)
+✔ acacia: deterministic cards preserve scaffolds and separate structure from pigment (23.2268ms)
+✔ card instances share a four-vertex sheet and independent normal attributes (8.3306ms)
+✔ all canopy atlas tiles contain many leaves, with distinct broadleaf/needle morphology (35.537ms)
+✔ indexed batches bake identical seeded attributes and repeat transferred normals at all four corners (27.5647ms)
+(node:26120) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+Replace `const THREE = require("three")` with `import * as THREE from "three"`.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ douglas: reproducible full crown, independent pigments, distinct structural seeds (78.4152ms)
+✔ spruce: reproducible full crown, independent pigments, distinct structural seeds (19.8885ms)
+✔ oak: reproducible full crown, independent pigments, distinct structural seeds (8.6729ms)
+✔ pine: reproducible full crown, independent pigments, distinct structural seeds (5.1597ms)
+✔ acacia: reproducible full crown, independent pigments, distinct structural seeds (4.8771ms)
+✔ fluffiness and overlap enlarge crowns; branch exposure opens them; surface detail leaves structure intact (7.9109ms)
+✔ closed deformed lofts have outward winding, smooth finite normals and cheap distant LODs (37.0727ms)
+✔ new controls survive direct links and recipe export; Diagram remains unchanged (6.0596ms)
+✔ TypeScript agrees with original Python on 148 locality, boundary and unsupported cases (10.5024ms)
+✔ preserves 18 localities, 62 taxa and 71 provisional associations (3.2726ms)
+✔ Seattle forest preserves bounded catalog lookup (0.2931ms)
+✔ Seattle urban preserves bounded catalog lookup (0.3386ms)
+✔ Atlanta forest preserves bounded catalog lookup (9.9126ms)
+✔ Atlanta urban preserves bounded catalog lookup (1.3165ms)
+✔ Tokyo forest preserves bounded catalog lookup (0.2619ms)
+✔ Tokyo urban preserves bounded catalog lookup (0.1678ms)
+✔ Vancouver Island forest preserves bounded catalog lookup (0.1674ms)
+✔ Vancouver Island urban preserves bounded catalog lookup (0.3131ms)
+✔ Southern Scandinavia forest preserves bounded catalog lookup (0.1775ms)
+✔ Southern Scandinavia urban preserves bounded catalog lookup (0.1821ms)
+✔ British lowlands forest preserves bounded catalog lookup (0.1276ms)
+✔ British lowlands urban preserves bounded catalog lookup (0.0727ms)
+✔ Western Mediterranean forest preserves bounded catalog lookup (0.0701ms)
+✔ Western Mediterranean urban preserves bounded catalog lookup (0.0726ms)
+✔ Alps forest preserves bounded catalog lookup (0.0804ms)
+✔ Alps urban preserves bounded catalog lookup (0.0827ms)
+✔ Western Amazon forest preserves bounded catalog lookup (0.0762ms)
+✔ Western Amazon urban preserves bounded catalog lookup (0.0851ms)
+✔ Congo Basin forest preserves bounded catalog lookup (0.0884ms)
+✔ Congo Basin urban preserves bounded catalog lookup (0.0791ms)
+✔ East African savanna forest preserves bounded catalog lookup (0.0576ms)
+✔ East African savanna urban preserves bounded catalog lookup (0.1955ms)
+✔ South African bushveld forest preserves bounded catalog lookup (0.0696ms)
+✔ South African bushveld urban preserves bounded catalog lookup (0.0593ms)
+✔ Western Ghats forest preserves bounded catalog lookup (0.0555ms)
+✔ Western Ghats urban preserves bounded catalog lookup (0.0566ms)
+✔ Borneo forest preserves bounded catalog lookup (0.0554ms)
+✔ Borneo urban preserves bounded catalog lookup (0.0602ms)
+✔ Eastern Australia forest preserves bounded catalog lookup (0.0989ms)
+✔ Eastern Australia urban preserves bounded catalog lookup (0.113ms)
+✔ New Zealand North Island forest preserves bounded catalog lookup (0.0738ms)
+✔ New Zealand North Island urban preserves bounded catalog lookup (0.0705ms)
+✔ Patagonia forest preserves bounded catalog lookup (0.0586ms)
+✔ Patagonia urban preserves bounded catalog lookup (0.1125ms)
+✔ Northeastern US forest preserves bounded catalog lookup (0.076ms)
+✔ Northeastern US urban preserves bounded catalog lookup (0.0663ms)
+✔ key presets contain original native and planted candidates (0.2544ms)
+✔ unsupported and ocean locations never inherit a nearby pool (0.1355ms)
+✔ rejects invalid input including nonfinite coordinates (0.7081ms)
+✔ overlapping boxes select the smallest region and bounds are inclusive (0.2414ms)
+✖ all 400 catalog records satisfy the game export contract without inventing heights (33.5972ms)
+✔ a supplied legacy height range also exports through the canonical field (2.2483ms)
+✔ an explicit canonical height takes precedence while preserving legacy metadata (0.7248ms)
+✔ height normalization preserves deterministic selection, environment and evidence metadata (1.8232ms)
+✔ export preserves forest habitat semantics and provisional evidence (1.1391ms)
+✔ export preserves urban habitat semantics and provisional evidence (2.3031ms)
+✔ export preserves grassland habitat semantics and provisional evidence (0.461ms)
+✔ export preserves wetland habitat semantics and provisional evidence (0.3791ms)
+✔ export preserves coastal habitat semantics and provisional evidence (0.3728ms)
+✔ export preserves alpine habitat semantics and provisional evidence (0.3785ms)
+✔ an unvalidated constraint exports unknown measurements and no eligible species (0.455ms)
+✔ an unsupported location exports an explicit insufficient-data result (0.2873ms)
+(node:2520) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+Replace `const THREE = require("three")` with `import * as THREE from "three"`.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ atlas has distinct, seeded botanical morphologies and valid tile rectangles (13.0071ms)
+✔ douglas cards are branch-attached, seeded, and appearance-independent (64.2879ms)
+✔ spruce cards are branch-attached, seeded, and appearance-independent (25.5726ms)
+✔ pine cards are branch-attached, seeded, and appearance-independent (14.3499ms)
+✔ oak cards are branch-attached, seeded, and appearance-independent (11.094ms)
+✔ acacia cards are branch-attached, seeded, and appearance-independent (9.6412ms)
+✔ detail and LOD remove cards without moving retained attachments; density zero stays bare (18.0235ms)
+✔ foliage geometry consists of open bent sheets with instanced atlas and wind attributes (4.4343ms)
+✔ all three modes preserve v1.0 skeletons; foliage controls and wind round-trip in shared links (16.1313ms)
+(node:26564) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+Replace `const THREE = require("three")` with `import * as THREE from "three"`.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ Douglas-fir: deterministic custom tree geometry and bounded complexity (44.9555ms)
+✔ Norway spruce: deterministic custom tree geometry and bounded complexity (26.6337ms)
+✔ Scots pine: deterministic custom tree geometry and bounded complexity (10.6305ms)
+✔ Oak: deterministic custom tree geometry and bounded complexity (10.6475ms)
+✔ Acacia: deterministic custom tree geometry and bounded complexity (8.3317ms)
+✔ Ponderosa pine: deterministic custom tree geometry and bounded complexity (5.1314ms)
+✔ Western red cedar: deterministic custom tree geometry and bounded complexity (15.4749ms)
+✔ Grey mangrove: deterministic custom tree geometry and bounded complexity (4.6841ms)
+✔ Red mangrove: deterministic custom tree geometry and bounded complexity (4.6365ms)
+✔ Stilt-root mangrove: deterministic custom tree geometry and bounded complexity (5.1673ms)
+✔ Cacao: deterministic custom tree geometry and bounded complexity (5.0198ms)
+✔ Rubber tree: deterministic custom tree geometry and bounded complexity (4.1812ms)
+✖ Cecropia: deterministic custom tree geometry and bounded complexity (12.8407ms)
+✖ Screw pine: deterministic custom tree geometry and bounded complexity (5.5673ms)
+✖ Forest acai palm: deterministic custom tree geometry and bounded complexity (4.4064ms)
+✔ Bigleaf mahogany: deterministic custom tree geometry and bounded complexity (12.422ms)
+✔ Dipterocarpus alatus: deterministic custom tree geometry and bounded complexity (12.9533ms)
+✔ Dipterocarpus grandiflorus: deterministic custom tree geometry and bounded complexity (18.1648ms)
+✔ Kapok: deterministic custom tree geometry and bounded complexity (16.4425ms)
+✔ Silver birch: deterministic custom tree geometry and bounded complexity (17.1015ms)
+✔ European ash: deterministic custom tree geometry and bounded complexity (11.72ms)
+✔ Paper birch: deterministic custom tree geometry and bounded complexity (15.2549ms)
+✔ Bigleaf maple: deterministic custom tree geometry and bounded complexity (14.8647ms)
+✔ Quaking aspen: deterministic custom tree geometry and bounded complexity (14.1718ms)
+✔ Weeping willow: deterministic custom tree geometry and bounded complexity (12.099ms)
+✖ Douglas-fir chunky V1: deterministic custom tree geometry and bounded complexity (2.6644ms)
+✖ all five requested species map to their own design presets; other taxa are labelled fallbacks (1.3935ms)
+✔ scene recipe uses only selected ecological candidates, retaining confidence and synthetic metadata (673.1905ms)
+✔ individual regeneration changes one tree shape without moving it or modifying its siblings (391.5243ms)
+✔ ocean, tundra, ice, desert and unsourced environmental filters do not invent a forest (0.905ms)
+✔ biome growth forms have no invented scientific identity and conditional habitat needs opt-in (1054.9507ms)
+✔ urban candidates retain provisional planting status rather than being upgraded to native evidence (359.402ms)
+✔ a preset does not introduce species absent from the regional catalog (503.9154ms)
+✔ direct scene links round-trip environmental constraints and individual revisions (1.1066ms)
+✔ geographic tiling handles world edges (1.4978ms)
+✔ accurate lookup handles holes, multipolygons and boundary points (0.668ms)
+✔ RESOLVE source geography resolves Seattle (195.736ms)
+✔ RESOLVE source geography resolves Atlanta (92.0091ms)
+✔ RESOLVE source geography resolves Tokyo (11.4931ms)
+✔ ocean has no invented terrestrial context (2.3074ms)
+✔ global coordinate: Seattle (135.2708ms)
+✔ global coordinate: Atlanta (98.7066ms)
+✔ global coordinate: Tokyo (11.6354ms)
+✔ global coordinate: Manaus (14.0405ms)
+✔ global coordinate: Kinshasa region (7.4711ms)
+✔ global coordinate: Antananarivo (12.4156ms)
+✔ global coordinate: Cairo · Nile Delta (15.0038ms)
+✔ global coordinate: Cairo desert edge (13.6663ms)
+✔ global coordinate: Berlin (12.5537ms)
+✔ global coordinate: Yakutsk (4.2505ms)
+✔ global coordinate: Mumbai region (6.095ms)
+✔ global coordinate: Borneo (51.6997ms)
+✔ global coordinate: Perth (28.6584ms)
+✔ global coordinate: Auckland (6.3275ms)
+✔ global coordinate: Reykjavík region (7.8292ms)
+✔ global coordinate: Hawaiʻi (3.6548ms)
+✔ global coordinate: Caribbean (16.0909ms)
+✔ global coordinate: Arctic tundra (5.8863ms)
+✔ global coordinate: Sahara (4.2101ms)
+✖ 400 distinct accepted sourced tree taxa; original 62 names linked without overwriting legacy data (2.2189ms)
+✔ no arbitrary cross-continent leakage in Madagascar or native-range fallback (27.2658ms)
+✔ all 14 terrestrial biomes and eight realms have explicit ecological responses (144.1695ms)
+✔ coverage audit separates 846 ecoregions and the misleading source Rock and Ice biome code (1.7095ms)
+✔ deserts, open grasslands, tundra and alpine settings do not get arbitrary forest species (86.5301ms)
+✔ ocean, missing polygon data, missing realm and unknown biome fail honestly (156.3082ms)
+✔ native-range boundary geometry covers edges but excludes holes and outside points (0.4677ms)
+✔ urban is not inferred from native-country data; preserved planting examples stay provisional (22.9518ms)
+✔ deterministic seeds order a palette without inventing ecological spawn probabilities (26.9913ms)
+✔ moisture, elevation, coastal and seasonal filters do not silently pass unknown traits (66.4129ms)
+✔ verified species/ecoregion association outranks broad native ranges only with a real evidence field (49.4764ms)
+✔ species search finds accepted scientific, preserved common and reconciled synonym names (1.3146ms)
+✔ source temperate climate includes native boreal larches and Iceland birch without implying current forest cover (11.6657ms)
+(node:25740) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+Replace `const THREE = require("three")` with `import * as THREE from "three"`.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ red-mangrove: connected hierarchy, terminal taper, grounded roots and deterministic pigments (320.6754ms)
+✔ stilt-mangrove: connected hierarchy, terminal taper, grounded roots and deterministic pigments (170.1572ms)
+✔ cacao: connected hierarchy, terminal taper, grounded roots and deterministic pigments (109.5956ms)
+✔ rubber: connected hierarchy, terminal taper, grounded roots and deterministic pigments (114.4764ms)
+(node:26820) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+Replace `const THREE = require("three")` with `import * as THREE from "three"`.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ douglas: repeatable branching, independent pigments, finite bounded geometry (85.4767ms)
+✔ spruce: repeatable branching, independent pigments, finite bounded geometry (57.3915ms)
+✔ pine: repeatable branching, independent pigments, finite bounded geometry (21.1072ms)
+✔ oak: repeatable branching, independent pigments, finite bounded geometry (22.1341ms)
+✔ acacia: repeatable branching, independent pigments, finite bounded geometry (40.3282ms)
+✔ ponderosa: repeatable branching, independent pigments, finite bounded geometry (37.7052ms)
+✔ cedar: repeatable branching, independent pigments, finite bounded geometry (31.7137ms)
+✔ avicennia: repeatable branching, independent pigments, finite bounded geometry (69.5689ms)
+✔ red-mangrove: repeatable branching, independent pigments, finite bounded geometry (67.8237ms)
+✔ stilt-mangrove: repeatable branching, independent pigments, finite bounded geometry (45.4084ms)
+✔ cacao: repeatable branching, independent pigments, finite bounded geometry (42.3178ms)
+✔ rubber: repeatable branching, independent pigments, finite bounded geometry (39.2446ms)
+✔ cecropia: repeatable branching, independent pigments, finite bounded geometry (14.7593ms)
+✔ pandanus: repeatable branching, independent pigments, finite bounded geometry (14.1184ms)
+✔ acai: repeatable branching, independent pigments, finite bounded geometry (10.8807ms)
+✔ mahogany: repeatable branching, independent pigments, finite bounded geometry (46.253ms)
+✔ dipterocarp-alatus: repeatable branching, independent pigments, finite bounded geometry (37.4712ms)
+✔ dipterocarp-grandiflorus: repeatable branching, independent pigments, finite bounded geometry (41.7155ms)
+✔ kapok: repeatable branching, independent pigments, finite bounded geometry (46.658ms)
+✔ silver-birch: repeatable branching, independent pigments, finite bounded geometry (26.803ms)
+✔ ash: repeatable branching, independent pigments, finite bounded geometry (11.3301ms)
+✔ birch: repeatable branching, independent pigments, finite bounded geometry (11.2888ms)
+✔ maple: repeatable branching, independent pigments, finite bounded geometry (9.6241ms)
+✔ aspen: repeatable branching, independent pigments, finite bounded geometry (10.902ms)
+✔ willow: repeatable branching, independent pigments, finite bounded geometry (9.3214ms)
+✔ douglas-v1: repeatable branching, independent pigments, finite bounded geometry (14.0041ms)
+✔ foliage density and stylization leave the skeleton intact; zero density removes foliage (1.4711ms)
+✔ tree generation does not consult unseeded randomness (1.5134ms)
+✔ brush textures and alpha sprays are deterministic, small, and actually contain cutouts (50.4449ms)
+✔ shared irregular crowns have gradient pigments and a reduced distant LOD (6.8902ms)
+✔ structural and appearance caches are bounded and repeat variants are reused (53.9284ms)
+✖ scene placement, structure and appearance seeds are independent and presets are not mutated (62802.0854ms)
+✔ laboratory recipes have no fabricated geographic claims; controls and renderer links round-trip (19.0604ms)
+(node:14460) [THREE_CJS_DEPRECATED] DeprecationWarning: `require("three")` is deprecated and will be removed.
+Replace `const THREE = require("three")` with `import * as THREE from "three"`.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+✔ studio controls and direct links round-trip; malformed controls fail honestly (3.7368ms)
+✔ broadleaf: branch attachments, deterministic buffers, independent pigments and intact source skeleton (151.1166ms)
+✔ flower: branch attachments, deterministic buffers, independent pigments and intact source skeleton (88.2461ms)
+✔ conifer: branch attachments, deterministic buffers, independent pigments and intact source skeleton (326.3855ms)
+✔ single groups show one connected source branch path, not detached neighboring wood (12.4877ms)
+✔ size, overlap and density affect foliage; zero density removes all surfaces (14.1303ms)
+✔ fir fronds follow branch direction and contain downward droop; existing preset is not rewritten (23.0308ms)
+✔ deployed worker bundle resolves real gzip tiles using browser stream APIs (412.6382ms)
+ℹ tests 197
+ℹ suites 0
+ℹ pass 189
+ℹ fail 8
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 66871.0019
+
+✖ failing tests:
+
+test at tests\export-contract.test.ts:9:1
+✖ all 400 catalog records satisfy the game export contract without inventing heights (33.5972ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  402 !== 400
+  
+      at TestContext.<anonymous> (C:\Users\aturb\Documents\Codex\2026-11-21\worldtree-build-and-deploy-mobile-web\tests\export-contract.test.ts:13:10)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.start (node:internal/test_runner/test:1003:17)
+      at startSubtestAfterBootstrap (node:internal/test_runner/harness:358:17) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 402,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\forest.test.ts:12:3
+✖ Cecropia: deterministic custom tree geometry and bounded complexity (12.8407ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(a.segments.length>40&&a.segments.length<=420)
+  
+      at TestContext.<anonymous> (C:\Users\aturb\Documents\Codex\2026-11-21\worldtree-build-and-deploy-mobile-web\tests\forest.test.ts:15:12)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\forest.test.ts:12:3
+✖ Screw pine: deterministic custom tree geometry and bounded complexity (5.5673ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(a.segments.length>40&&a.segments.length<=420)
+  
+      at TestContext.<anonymous> (C:\Users\aturb\Documents\Codex\2026-11-21\worldtree-build-and-deploy-mobile-web\tests\forest.test.ts:15:12)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\forest.test.ts:12:3
+✖ Forest acai palm: deterministic custom tree geometry and bounded complexity (4.4064ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(a.segments.length>40&&a.segments.length<=420)
+  
+      at TestContext.<anonymous> (C:\Users\aturb\Documents\Codex\2026-11-21\worldtree-build-and-deploy-mobile-web\tests\forest.test.ts:15:12)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\forest.test.ts:12:3
+✖ Douglas-fir chunky V1: deterministic custom tree geometry and bounded complexity (2.6644ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+  
+    assert.ok(a.segments.length>40&&a.segments.length<=420)
+  
+      at TestContext.<anonymous> (C:\Users\aturb\Documents\Codex\2026-11-21\worldtree-build-and-deploy-mobile-web\tests\forest.test.ts:15:12)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at tests\forest.test.ts:26:1
+✖ all five requested species map to their own design presets; other taxa are labelled fallbacks (1.3935ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+  
+    {
+      fallback: false,
+  +   presetId: 'douglas-v1',
+  -   presetId: 'douglas',
+      reason: null
+    }
+  
+      at TestContext.<anonymous> (C:\Users\aturb\Documents\Codex\2026-11-21\worldtree-build-and-deploy-mobile-web\tests\forest.test.ts:27:186)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: { presetId: 'douglas-v1', fallback: false, reason: null },
+    expected: { presetId: 'douglas', fallback: false, reason: null },
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at tests\global.test.ts:28:1
+✖ 400 distinct accepted sourced tree taxa; original 62 names linked without overwriting legacy data (2.2189ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  402 !== 400
+  
+      at TestContext.<anonymous> (C:\Users\aturb\Documents\Codex\2026-11-21\worldtree-build-and-deploy-mobile-web\tests\global.test.ts:29:9)
+      at Test.runInAsyncScope (node:async_hooks:214:14)
+      at Test.run (node:internal/test_runner/test:1106:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:788:18)
+      at Test.postRun (node:internal/test_runner/test:1235:19)
+      at Test.run (node:internal/test_runner/test:1163:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:788:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 402,
+    expected: 400,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at tests\painterly.test.ts:48:1
+✖ scene placement, structure and appearance seeds are independent and presets are not mutated (62802.0854ms)
+  [RangeError: Array buffer allocation failed]

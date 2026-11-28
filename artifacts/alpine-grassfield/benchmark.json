@@ -1,0 +1,50 @@
+[
+  {
+    "variant": "before",
+    "benchmark": {
+      "durationMs": 5139.799999982119,
+      "frames": 32,
+      "fps": 6.225923187694332,
+      "medianFrameMs": 157.80000001192093,
+      "p95FrameMs": 175.10000002384186,
+      "meanRenderCpuMs": 0.5454545454545454,
+      "calls": 14,
+      "triangles": 641908,
+      "quality": "software economy",
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "viewport": "940 × 460",
+      "pixelRatio": 1,
+      "foliageCards": 14652,
+      "foliageMasses": 0,
+      "method": "5 second continuous orbit; browser frame intervals and CPU render submission time. Not a GPU timer or physical-device benchmark."
+    },
+    "framebuffer": [
+      640,
+      360
+    ]
+  },
+  {
+    "variant": "brush-field",
+    "benchmark": {
+      "durationMs": 5298.600000023842,
+      "frames": 10,
+      "fps": 1.8872909825151933,
+      "medianFrameMs": 527.3000000119209,
+      "p95FrameMs": 558.7999999821186,
+      "meanRenderCpuMs": 0.5727272738109935,
+      "calls": 12,
+      "triangles": 501884,
+      "quality": "software economy",
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "viewport": "940 × 460",
+      "pixelRatio": 1,
+      "foliageCards": 14652,
+      "foliageMasses": 0,
+      "method": "5 second continuous orbit; browser frame intervals and CPU render submission time. Not a GPU timer or physical-device benchmark."
+    },
+    "framebuffer": [
+      640,
+      360
+    ]
+  }
+]

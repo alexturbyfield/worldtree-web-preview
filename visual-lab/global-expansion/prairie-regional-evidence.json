@@ -1,0 +1,46 @@
+{
+  "id": "prairie-us-mixedgrass-regional-context",
+  "scope": "Regional/habitat evidence relevant to the ECO389 study, not a verified ecological-site lookup for its exact audit coordinate.",
+  "accessed": "2026-11-27T11:44:35.667109+00:00",
+  "sources": [
+    {
+      "url": "https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY014OK",
+      "title": "NRCS ecological site R078CY014OK, Rolling Sands",
+      "status": "Provisional ecological-site description",
+      "supports": [
+        "Rolling regional terrain",
+        "Mid/tall perennial grasses",
+        "Forbs and legumes",
+        "Sparse shrub component"
+      ],
+      "regionalCandidatesNotPointVerified": [
+        "Artemisia filifolia",
+        "Rhus aromatica",
+        "Prunus angustifolia"
+      ],
+      "doesNotEstablish": [
+        "Exact soil/ecological site at the audit point",
+        "Measured local elevations",
+        "Current plant populations or phenology"
+      ]
+    },
+    {
+      "url": "https://www.fws.gov/refuge/salt-plains/about-us",
+      "title": "USFWS Salt Plains refuge, regional landscape context",
+      "supports": [
+        "Mixed-grass prairie and rolling sand hills occur in the wider north-central Oklahoma context"
+      ],
+      "doesNotEstablish": [
+        "A lake, salt flats, dunes, forest or particular species at the selected audit point"
+      ]
+    }
+  ],
+  "renderMapping": {
+    "grasses": "Unnamed curved-blade/tussock functional forms",
+    "seedheads": "Unnamed branching panicles",
+    "forbs": "Generic yellow heads and purple flowering shoots; not named/verified species",
+    "shrubs": "Unnamed branching low-leaf forms, explicitly enabled only in the ECO389 regional study",
+    "rocksAndMatureTrees": "Not added from concept imagery without adequate site/context evidence"
+  },
+  "trainingPerformed": false
+}

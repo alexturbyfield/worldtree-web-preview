@@ -1,0 +1,15 @@
+from pathlib import Path
+p=Path('src/lib/forest/painted-renderer.ts');s=p.read_text();s="import {readAlpineOptions} from './alpine-recipe';\nimport {alpineSceneRecipe,mountAlpineEnvironment,gradeAlpineTree} from './alpine-adapter';\n"+s
+s=s.replace('  const biome=biomeVisualProfile(recipe);', "  const alpineOptions=readAlpineOptions(location.search,recipe.seed),alpine=alpineOptions?alpineSceneRecipe(recipe,alpineOptions):undefined;if(alpine)recipe=alpine;\n  const biome=alpine?undefined:biomeVisualProfile(recipe);")
+s=s.replace('lab?38:47,1,.2,350','lab?38:47,1,.2,alpine?3500:350')
+s=s.replace("  view??=(recipe as BiomeRecipe)", "  if(alpine){controls.maxDistance=1600;controls.maxPolarAngle=Math.PI*.65;view??=new URLSearchParams(location.search).get('camera')==='inspection'?alpine.alpinePlan.inspection:alpine.alpinePlan.camera;}\n  view??=(recipe as BiomeRecipe)")
+s=s.replace("const foundations=!!(recipe as EncounterRecipe).encounter&&", "const foundations=(!!alpine||!!(recipe as EncounterRecipe).encounter)&&")
+s=s.replace('const disposeEncounter=dressEncounter(scene,recipe as EncounterRecipe,mobile,foundations);','const disposeEncounter=alpine?mountAlpineEnvironment(scene,alpine,sun,fill):dressEncounter(scene,recipe as EncounterRecipe,mobile,foundations);')
+s=s.replace("  if(directLighting){sun.position", "  if(directLighting&&!alpine){sun.position")
+s=s.replace("if(biomeVisualProfile(recipe)?.id==='amazon'", "if(!alpine&&biomeVisualProfile(recipe)?.id==='amazon'")
+s=s.replace("gradedMaterials.add(material);", "if(alpine)gradeAlpineTree(material,alpine.alpinePlan);gradedMaterials.add(material);")
+s=s.replace("  if(scene.userData.recipeEye&&new URLSearchParams", "  if(alpine){const pose=new URLSearchParams(location.search).get('camera')==='inspection'?alpine.alpinePlan.inspection:alpine.alpinePlan.camera;camera.position.fromArray(pose.position);controls.target.fromArray(pose.target);controls.maxPolarAngle=Math.PI*.65;controls.update();}\n  if(scene.userData.recipeEye&&new URLSearchParams")
+p.write_text(s)
+p=Path('src/lib/forest/alpine-adapter.ts');s=p.read_text().replace("new T.MeshStandardMaterial({roughness:1,side:T.DoubleSide})", "new T.MeshStandardMaterial({roughness:1,side:T.DoubleSide,vertexColors:kind==='flower'})").replace("locations:plants,kind:'grass'", "locations:plants,kind:kind==='flower'?'flower':'grass'")
+s=s.replace("const c=pigment(p,o.position.x,o.position.z,batch.kind==='rock'?'rock':'grass');", "const c=batch.kind==='flower'?new T.Color('#ffffff').lerp(new T.Color(a.sunlit),.1):pigment(p,o.position.x,o.position.z,batch.kind==='rock'?'rock':'grass');")
+p.write_text(s)

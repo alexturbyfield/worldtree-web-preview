@@ -1,0 +1,2884 @@
+{
+  "freeze": {
+    "date": "2026-11-26T13:19:06.024Z",
+    "training": [
+      29,
+      41
+    ],
+    "holdout": 1237,
+    "sourceHashes": {
+      "src/lib/forest/wave1-fields.ts": "3b75c341d19bcf56d8681750577d0e58a42c848ef628c0aa850e61f58f27e1cb",
+      "src/lib/forest/wave1-rebuild.ts": "b97d586a29ef8ec1ed7dd51ee8e4879ac4e43e1d9e751b3b7efd709bf65457aa",
+      "src/lib/forest/wave1-impostors.ts": "7146aad9f9021d57a10848dc2b90c36ddcff8a6030d703cfc5d6cfdf9798c740",
+      "src/lib/forest/wave1-water.ts": "a41be61219232b2033b94abda2d7767964bcfc8b9798eb81fa748a576a3d2f35",
+      "src/lib/forest/wave1-ground-detail.ts": "c70a3a65cb1031f4309f31ede6c7a49cf852f4130f80ac3898fd97fedc7bdcfa",
+      "src/lib/forest/wave1-desert-detail.ts": "20a4cbbc1c45dc40e81fd41fc92a8885d75b7322eae146b90744b4d120faf2f4",
+      "src/lib/forest/wave1-mangrove-detail.ts": "93243d427284605c98644984d7e77e0f1db202af4b7394c18e46ea48b47e7833",
+      "src/lib/forest/wave1-meadow-detail.ts": "2891ea5c82f7456623548e395dad106a06cf6a2bcba96d2d9214421314d9ae01",
+      "src/lib/forest/environment-foundations.ts": "4a0e1286670abf0959b3a7a478a608ab3f7ad4ce63cff1e49a59a4d9e295c231",
+      "src/lib/forest/painted-renderer.ts": "604e95e996a2308c1c8bce4811f8bf0751be216a56735b5ad979d8c4d12f2457",
+      "src/lib/forest/wave1.ts": "4facb76740809cb8598113e302a82411243bdc9bc953c7c9e10e11a5c03b06ba",
+      "src/lib/vegetation.ts": "173b715d10aa54add0ac2d40ad89b417c7a8cfdd62c3e6bb42a8d08521b922c1",
+      "public/assets/wave1-detail/tidal-mud-v1.webp": "e1f42cc3bc3dca8713ad934f1803b5e35fade9e45fbdbe20daea47613c0d112b"
+    },
+    "status": "Frozen for final seed and review capture, not final biome approval"
+  },
+  "frames": [
+    {
+      "biome": "desert",
+      "seed": "29",
+      "view": "hero",
+      "file": "artifacts/wave1-detail/desert-29-hero.png",
+      "camera": {
+        "position": [
+          -27,
+          3.036333874529917,
+          -36
+        ],
+        "target": [
+          22.49747468305833,
+          2.1363338745299174,
+          13.497474683058321
+        ]
+      },
+      "wave1": {
+        "id": "desert",
+        "biome": 13,
+        "version": "connected-field-detail-1",
+        "presentation": {
+          "foliageAtmosphere": {
+            "near": 120,
+            "far": 650,
+            "strength": 0.5,
+            "color": "#78977c"
+          }
+        },
+        "plan": {
+          "biome": "desert",
+          "seed": "29",
+          "eye": [
+            -27,
+            3.036333874529917,
+            -36
+          ],
+          "target": [
+            22.49747468305833,
+            2.1363338745299174,
+            13.497474683058321
+          ],
+          "heading": 2.356194490192345,
+          "stagingClearance": 1.255546546258769
+        },
+        "trees": 0,
+        "instances": [
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        }
+      },
+      "samples": [
+        {
+          "completedRenderMs": 0.30000001192092896,
+          "frame": 7,
+          "calls": 11,
+          "triangles": 564028,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 0.29999998211860657,
+          "frame": 8,
+          "calls": 11,
+          "triangles": 564028,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 0.5,
+          "frame": 9,
+          "calls": 11,
+          "triangles": 564028,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 5,
+      "geometryObjects": 11,
+      "instances": [
+        {
+          "name": "field-jointed-bedrock",
+          "count": 75,
+          "trianglesPerInstance": 1200
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 75,
+          "trianglesPerInstance": 1200
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 75,
+          "trianglesPerInstance": 1200
+        },
+        {
+          "name": "desert-contact-gravel",
+          "count": 2706,
+          "trianglesPerInstance": 36
+        },
+        {
+          "name": "desert-unnamed-open-shrub",
+          "count": 4,
+          "trianglesPerInstance": 742
+        },
+        {
+          "name": "desert-unnamed-open-shrub",
+          "count": 4,
+          "trianglesPerInstance": 742
+        },
+        {
+          "name": "desert-unnamed-dry-fibres",
+          "count": 242,
+          "trianglesPerInstance": 114
+        }
+      ],
+      "details": {},
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "errors": []
+    },
+    {
+      "biome": "desert",
+      "seed": "29",
+      "view": "inspection",
+      "file": "artifacts/wave1-detail/desert-29-inspection.png",
+      "camera": {
+        "position": [
+          38,
+          48.036333874529916,
+          29
+        ],
+        "target": [
+          -2.2512626584708357,
+          0,
+          -11.25126265847084
+        ]
+      },
+      "wave1": {
+        "id": "desert",
+        "biome": 13,
+        "version": "connected-field-detail-1",
+        "presentation": {
+          "foliageAtmosphere": {
+            "near": 120,
+            "far": 650,
+            "strength": 0.5,
+            "color": "#78977c"
+          }
+        },
+        "plan": {
+          "biome": "desert",
+          "seed": "29",
+          "eye": [
+            -27,
+            3.036333874529917,
+            -36
+          ],
+          "target": [
+            22.49747468305833,
+            2.1363338745299174,
+            13.497474683058321
+          ],
+          "heading": 2.356194490192345,
+          "stagingClearance": 1.255546546258769
+        },
+        "trees": 0,
+        "instances": [
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        }
+      },
+      "samples": [
+        {
+          "completedRenderMs": 0.09999999403953552,
+          "frame": 12,
+          "calls": 11,
+          "triangles": 564028,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 0.20000001788139343,
+          "frame": 13,
+          "calls": 11,
+          "triangles": 564028,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 0.29999998211860657,
+          "frame": 14,
+          "calls": 11,
+          "triangles": 564028,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 5,
+      "geometryObjects": 11,
+      "instances": [
+        {
+          "name": "field-jointed-bedrock",
+          "count": 75,
+          "trianglesPerInstance": 1200
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 75,
+          "trianglesPerInstance": 1200
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 75,
+          "trianglesPerInstance": 1200
+        },
+        {
+          "name": "desert-contact-gravel",
+          "count": 2706,
+          "trianglesPerInstance": 36
+        },
+        {
+          "name": "desert-unnamed-open-shrub",
+          "count": 4,
+          "trianglesPerInstance": 742
+        },
+        {
+          "name": "desert-unnamed-open-shrub",
+          "count": 4,
+          "trianglesPerInstance": 742
+        },
+        {
+          "name": "desert-unnamed-dry-fibres",
+          "count": 242,
+          "trianglesPerInstance": 114
+        }
+      ],
+      "details": {},
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "errors": []
+    },
+    {
+      "biome": "mangrove",
+      "seed": "29",
+      "view": "hero",
+      "file": "artifacts/wave1-detail/mangrove-29-hero.png",
+      "camera": {
+        "position": [
+          72,
+          2.077603828842169,
+          -18
+        ],
+        "target": [
+          142,
+          1.1776038288421693,
+          -18.000000000000004
+        ]
+      },
+      "wave1": {
+        "id": "mangrove",
+        "biome": 14,
+        "version": "connected-field-detail-1",
+        "presentation": {
+          "foliageAtmosphere": {
+            "near": 120,
+            "far": 650,
+            "strength": 0.5,
+            "color": "#72978b"
+          }
+        },
+        "plan": {
+          "biome": "mangrove",
+          "seed": "29",
+          "eye": [
+            72,
+            2.077603828842169,
+            -18
+          ],
+          "target": [
+            142,
+            1.1776038288421693,
+            -18.000000000000004
+          ],
+          "heading": 1.5707963267948966,
+          "stagingClearance": 0.15266596056652895
+        },
+        "trees": 95,
+        "instances": [],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation.",
+        "depthSampling": {
+          "farMetresPerTexel": 8.59375,
+          "nearMetresPerTexel": 0.625
+        }
+      },
+      "impostors": {
+        "count": 650,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "completedRenderMs": 1.4000000059604645,
+          "frame": 18,
+          "calls": 23,
+          "triangles": 2546486,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 0.9000000059604645,
+          "frame": 20,
+          "calls": 23,
+          "triangles": 2546486,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 1,
+          "frame": 22,
+          "calls": 23,
+          "triangles": 2546486,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 12,
+      "geometryObjects": 10,
+      "instances": [
+        {
+          "name": "field-source-stand-impostors",
+          "count": 650,
+          "trianglesPerInstance": 2
+        },
+        {
+          "name": "mangrove-unnamed-juvenile-leaves",
+          "count": 1026,
+          "trianglesPerInstance": 8
+        },
+        {
+          "name": "mangrove-unnamed-juvenile-stems",
+          "count": 209,
+          "trianglesPerInstance": 20
+        },
+        {
+          "name": "mangrove-low-folded-leaf-litter",
+          "count": 1532,
+          "trianglesPerInstance": 8
+        },
+        {
+          "name": "mangrove-fallen-shore-twigs",
+          "count": 44,
+          "trianglesPerInstance": 20
+        }
+      ],
+      "details": {
+        "mangroveDetail": {
+          "version": 3,
+          "pockets": 63,
+          "nearShoreAnchors": 7,
+          "seedlings": 209,
+          "leaves": 1026,
+          "litter": 1532,
+          "twigs": 44,
+          "drawCalls": 4,
+          "footprint": "forward 2..7m, abs(side)<1.5m: no plants/twigs; litter below .03m",
+          "ecology": "Unnamed juvenile growth forms and fallen fragments; synthetic moisture/tree/shore association, no species or occurrence claim"
+        }
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "errors": []
+    },
+    {
+      "biome": "mangrove",
+      "seed": "29",
+      "view": "inspection",
+      "file": "artifacts/wave1-detail/mangrove-29-inspection.png",
+      "camera": {
+        "position": [
+          137,
+          47.07760382884217,
+          47
+        ],
+        "target": [
+          107,
+          0,
+          -18
+        ]
+      },
+      "wave1": {
+        "id": "mangrove",
+        "biome": 14,
+        "version": "connected-field-detail-1",
+        "presentation": {
+          "foliageAtmosphere": {
+            "near": 120,
+            "far": 650,
+            "strength": 0.5,
+            "color": "#72978b"
+          }
+        },
+        "plan": {
+          "biome": "mangrove",
+          "seed": "29",
+          "eye": [
+            72,
+            2.077603828842169,
+            -18
+          ],
+          "target": [
+            142,
+            1.1776038288421693,
+            -18.000000000000004
+          ],
+          "heading": 1.5707963267948966,
+          "stagingClearance": 0.15266596056652895
+        },
+        "trees": 95,
+        "instances": [],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation.",
+        "depthSampling": {
+          "farMetresPerTexel": 8.59375,
+          "nearMetresPerTexel": 0.625
+        }
+      },
+      "impostors": {
+        "count": 650,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "completedRenderMs": 4.100000023841858,
+          "frame": 28,
+          "calls": 23,
+          "triangles": 2546486,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 1.199999988079071,
+          "frame": 30,
+          "calls": 23,
+          "triangles": 2546486,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 1,
+          "frame": 32,
+          "calls": 23,
+          "triangles": 2546486,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 12,
+      "geometryObjects": 10,
+      "instances": [
+        {
+          "name": "field-source-stand-impostors",
+          "count": 650,
+          "trianglesPerInstance": 2
+        },
+        {
+          "name": "mangrove-unnamed-juvenile-leaves",
+          "count": 1026,
+          "trianglesPerInstance": 8
+        },
+        {
+          "name": "mangrove-unnamed-juvenile-stems",
+          "count": 209,
+          "trianglesPerInstance": 20
+        },
+        {
+          "name": "mangrove-low-folded-leaf-litter",
+          "count": 1532,
+          "trianglesPerInstance": 8
+        },
+        {
+          "name": "mangrove-fallen-shore-twigs",
+          "count": 44,
+          "trianglesPerInstance": 20
+        }
+      ],
+      "details": {
+        "mangroveDetail": {
+          "version": 3,
+          "pockets": 63,
+          "nearShoreAnchors": 7,
+          "seedlings": 209,
+          "leaves": 1026,
+          "litter": 1532,
+          "twigs": 44,
+          "drawCalls": 4,
+          "footprint": "forward 2..7m, abs(side)<1.5m: no plants/twigs; litter below .03m",
+          "ecology": "Unnamed juvenile growth forms and fallen fragments; synthetic moisture/tree/shore association, no species or occurrence claim"
+        }
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "errors": []
+    },
+    {
+      "biome": "flooded",
+      "seed": "29",
+      "view": "hero",
+      "file": "artifacts/wave1-detail/flooded-29-hero.png",
+      "camera": {
+        "position": [
+          -63,
+          1.7116061343029232,
+          -27
+        ],
+        "target": [
+          -112.49747468305833,
+          0.8116061343029232,
+          -76.49747468305831
+        ]
+      },
+      "wave1": {
+        "id": "flooded",
+        "biome": 9,
+        "version": "connected-field-detail-1",
+        "presentation": {
+          "foliageAtmosphere": {
+            "near": 120,
+            "far": 650,
+            "strength": 0.5,
+            "color": "#78977c"
+          }
+        },
+        "plan": {
+          "biome": "flooded",
+          "seed": "29",
+          "eye": [
+            -63,
+            1.7116061343029232,
+            -27
+          ],
+          "target": [
+            -112.49747468305833,
+            0.8116061343029232,
+            -76.49747468305831
+          ],
+          "heading": 5.497787143782138,
+          "stagingClearance": 0.10796727499743605
+        },
+        "trees": 24,
+        "instances": [
+          {
+            "name": "field-dimensional-meadow",
+            "count": 2310
+          },
+          {
+            "name": "field-distant-meadow",
+            "count": 11841
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation.",
+        "depthSampling": {
+          "farMetresPerTexel": 8.59375,
+          "nearMetresPerTexel": 0.625
+        }
+      },
+      "impostors": {
+        "count": 100,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "completedRenderMs": 1.7000000178813934,
+          "frame": 18,
+          "calls": 21,
+          "triangles": 2182574,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 1,
+          "frame": 20,
+          "calls": 21,
+          "triangles": 2182574,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 1,
+          "frame": 22,
+          "calls": 21,
+          "triangles": 2182574,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 11,
+      "geometryObjects": 11,
+      "instances": [
+        {
+          "name": "field-source-stand-impostors",
+          "count": 100,
+          "trianglesPerInstance": 2
+        },
+        {
+          "name": "field-dimensional-meadow",
+          "count": 2310,
+          "trianglesPerInstance": 180
+        },
+        {
+          "name": "field-distant-meadow",
+          "count": 11841,
+          "trianglesPerInstance": 30
+        },
+        {
+          "name": "field-sparse-unnamed-seedheads",
+          "count": 23,
+          "trianglesPerInstance": 16
+        }
+      ],
+      "details": {
+        "meadowDetail": {
+          "version": "ribbon-3-normal-calibration",
+          "seedheads": 23,
+          "nearTriangles": 180,
+          "farTriangles": 30,
+          "alpha": false,
+          "footprint": "no seedheads within forward < 7; central forward < 9 excluded"
+        }
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "errors": []
+    },
+    {
+      "biome": "flooded",
+      "seed": "29",
+      "view": "inspection",
+      "file": "artifacts/wave1-detail/flooded-29-inspection.png",
+      "camera": {
+        "position": [
+          2,
+          46.711606134302926,
+          38
+        ],
+        "target": [
+          -87.74873734152916,
+          0,
+          -51.74873734152916
+        ]
+      },
+      "wave1": {
+        "id": "flooded",
+        "biome": 9,
+        "version": "connected-field-detail-1",
+        "presentation": {
+          "foliageAtmosphere": {
+            "near": 120,
+            "far": 650,
+            "strength": 0.5,
+            "color": "#78977c"
+          }
+        },
+        "plan": {
+          "biome": "flooded",
+          "seed": "29",
+          "eye": [
+            -63,
+            1.7116061343029232,
+            -27
+          ],
+          "target": [
+            -112.49747468305833,
+            0.8116061343029232,
+            -76.49747468305831
+          ],
+          "heading": 5.497787143782138,
+          "stagingClearance": 0.10796727499743605
+        },
+        "trees": 24,
+        "instances": [
+          {
+            "name": "field-dimensional-meadow",
+            "count": 2310
+          },
+          {
+            "name": "field-distant-meadow",
+            "count": 11841
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation.",
+        "depthSampling": {
+          "farMetresPerTexel": 8.59375,
+          "nearMetresPerTexel": 0.625
+        }
+      },
+      "impostors": {
+        "count": 100,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "completedRenderMs": 3.100000023841858,
+          "frame": 28,
+          "calls": 21,
+          "triangles": 2182574,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 1,
+          "frame": 30,
+          "calls": 21,
+          "triangles": 2182574,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 1.0999999940395355,
+          "frame": 32,
+          "calls": 21,
+          "triangles": 2182574,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 11,
+      "geometryObjects": 11,
+      "instances": [
+        {
+          "name": "field-source-stand-impostors",
+          "count": 100,
+          "trianglesPerInstance": 2
+        },
+        {
+          "name": "field-dimensional-meadow",
+          "count": 2310,
+          "trianglesPerInstance": 180
+        },
+        {
+          "name": "field-distant-meadow",
+          "count": 11841,
+          "trianglesPerInstance": 30
+        },
+        {
+          "name": "field-sparse-unnamed-seedheads",
+          "count": 23,
+          "trianglesPerInstance": 16
+        }
+      ],
+      "details": {
+        "meadowDetail": {
+          "version": "ribbon-3-normal-calibration",
+          "seedheads": 23,
+          "nearTriangles": 180,
+          "farTriangles": 30,
+          "alpha": false,
+          "footprint": "no seedheads within forward < 7; central forward < 9 excluded"
+        }
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "errors": []
+    },
+    {
+      "biome": "desert",
+      "seed": "41",
+      "view": "hero",
+      "file": "artifacts/wave1-detail/desert-41-hero.png",
+      "camera": {
+        "position": [
+          -63,
+          3.3680408437594105,
+          -81
+        ],
+        "target": [
+          -112.49747468305833,
+          2.46804084375941,
+          -130.49747468305833
+        ]
+      },
+      "wave1": {
+        "id": "desert",
+        "biome": 13,
+        "version": "connected-field-detail-1",
+        "presentation": {
+          "foliageAtmosphere": {
+            "near": 120,
+            "far": 650,
+            "strength": 0.5,
+            "color": "#78977c"
+          }
+        },
+        "plan": {
+          "biome": "desert",
+          "seed": "41",
+          "eye": [
+            -63,
+            3.3680408437594105,
+            -81
+          ],
+          "target": [
+            -112.49747468305833,
+            2.46804084375941,
+            -130.49747468305833
+          ],
+          "heading": 5.497787143782138,
+          "stagingClearance": 1.5993552972317373
+        },
+        "trees": 0,
+        "instances": [
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        }
+      },
+      "samples": [
+        {
+          "completedRenderMs": 0.30000001192092896,
+          "frame": 7,
+          "calls": 11,
+          "triangles": 571804,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 0.29999998211860657,
+          "frame": 8,
+          "calls": 11,
+          "triangles": 571804,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 0.30000001192092896,
+          "frame": 9,
+          "calls": 11,
+          "triangles": 571804,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 5,
+      "geometryObjects": 11,
+      "instances": [
+        {
+          "name": "field-jointed-bedrock",
+          "count": 75,
+          "trianglesPerInstance": 1200
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 75,
+          "trianglesPerInstance": 1200
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 75,
+          "trianglesPerInstance": 1200
+        },
+        {
+          "name": "desert-contact-gravel",
+          "count": 2922,
+          "trianglesPerInstance": 36
+        },
+        {
+          "name": "desert-unnamed-open-shrub",
+          "count": 4,
+          "trianglesPerInstance": 742
+        },
+        {
+          "name": "desert-unnamed-open-shrub",
+          "count": 4,
+          "trianglesPerInstance": 742
+        },
+        {
+          "name": "desert-unnamed-dry-fibres",
+          "count": 242,
+          "trianglesPerInstance": 114
+        }
+      ],
+      "details": {},
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "errors": []
+    },
+    {
+      "biome": "desert",
+      "seed": "41",
+      "view": "inspection",
+      "file": "artifacts/wave1-detail/desert-41-inspection.png",
+      "camera": {
+        "position": [
+          2,
+          48.36804084375941,
+          -16
+        ],
+        "target": [
+          -87.74873734152916,
+          0,
+          -105.74873734152916
+        ]
+      },
+      "wave1": {
+        "id": "desert",
+        "biome": 13,
+        "version": "connected-field-detail-1",
+        "presentation": {
+          "foliageAtmosphere": {
+            "near": 120,
+            "far": 650,
+            "strength": 0.5,
+            "color": "#78977c"
+          }
+        },
+        "plan": {
+          "biome": "desert",
+          "seed": "41",
+          "eye": [
+            -63,
+            3.3680408437594105,
+            -81
+          ],
+          "target": [
+            -112.49747468305833,
+            2.46804084375941,
+            -130.49747468305833
+          ],
+          "heading": 5.497787143782138,
+          "stagingClearance": 1.5993552972317373
+        },
+        "trees": 0,
+        "instances": [
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        }
+      },
+      "samples": [
+        {
+          "completedRenderMs": 0.10000002384185791,
+          "frame": 12,
+          "calls": 11,
+          "triangles": 571804,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 0.19999998807907104,
+          "frame": 13,
+          "calls": 11,
+          "triangles": 571804,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 0.30000001192092896,
+          "frame": 14,
+          "calls": 11,
+          "triangles": 571804,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 5,
+      "geometryObjects": 11,
+      "instances": [
+        {
+          "name": "field-jointed-bedrock",
+          "count": 75,
+          "trianglesPerInstance": 1200
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 75,
+          "trianglesPerInstance": 1200
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 75,
+          "trianglesPerInstance": 1200
+        },
+        {
+          "name": "desert-contact-gravel",
+          "count": 2922,
+          "trianglesPerInstance": 36
+        },
+        {
+          "name": "desert-unnamed-open-shrub",
+          "count": 4,
+          "trianglesPerInstance": 742
+        },
+        {
+          "name": "desert-unnamed-open-shrub",
+          "count": 4,
+          "trianglesPerInstance": 742
+        },
+        {
+          "name": "desert-unnamed-dry-fibres",
+          "count": 242,
+          "trianglesPerInstance": 114
+        }
+      ],
+      "details": {},
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "errors": []
+    },
+    {
+      "biome": "mangrove",
+      "seed": "41",
+      "view": "hero",
+      "file": "artifacts/wave1-detail/mangrove-41-hero.png",
+      "camera": {
+        "position": [
+          9,
+          2.060254757878313,
+          9
+        ],
+        "target": [
+          -61,
+          1.1602547578783131,
+          9.000000000000012
+        ]
+      },
+      "wave1": {
+        "id": "mangrove",
+        "biome": 14,
+        "version": "connected-field-detail-1",
+        "presentation": {
+          "foliageAtmosphere": {
+            "near": 120,
+            "far": 650,
+            "strength": 0.5,
+            "color": "#72978b"
+          }
+        },
+        "plan": {
+          "biome": "mangrove",
+          "seed": "41",
+          "eye": [
+            9,
+            2.060254757878313,
+            9
+          ],
+          "target": [
+            -61,
+            1.1602547578783131,
+            9.000000000000012
+          ],
+          "heading": 4.71238898038469,
+          "stagingClearance": 0.08957552072288207
+        },
+        "trees": 95,
+        "instances": [],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation.",
+        "depthSampling": {
+          "farMetresPerTexel": 8.59375,
+          "nearMetresPerTexel": 0.625
+        }
+      },
+      "impostors": {
+        "count": 650,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "completedRenderMs": 1.5,
+          "frame": 18,
+          "calls": 23,
+          "triangles": 2545310,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 1,
+          "frame": 20,
+          "calls": 23,
+          "triangles": 2545310,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 0.9000000059604645,
+          "frame": 22,
+          "calls": 23,
+          "triangles": 2545310,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 12,
+      "geometryObjects": 10,
+      "instances": [
+        {
+          "name": "field-source-stand-impostors",
+          "count": 650,
+          "trianglesPerInstance": 2
+        },
+        {
+          "name": "mangrove-unnamed-juvenile-leaves",
+          "count": 938,
+          "trianglesPerInstance": 8
+        },
+        {
+          "name": "mangrove-unnamed-juvenile-stems",
+          "count": 186,
+          "trianglesPerInstance": 20
+        },
+        {
+          "name": "mangrove-low-folded-leaf-litter",
+          "count": 1614,
+          "trianglesPerInstance": 8
+        },
+        {
+          "name": "mangrove-fallen-shore-twigs",
+          "count": 40,
+          "trianglesPerInstance": 20
+        }
+      ],
+      "details": {
+        "mangroveDetail": {
+          "version": 3,
+          "pockets": 63,
+          "nearShoreAnchors": 6,
+          "seedlings": 186,
+          "leaves": 938,
+          "litter": 1614,
+          "twigs": 40,
+          "drawCalls": 4,
+          "footprint": "forward 2..7m, abs(side)<1.5m: no plants/twigs; litter below .03m",
+          "ecology": "Unnamed juvenile growth forms and fallen fragments; synthetic moisture/tree/shore association, no species or occurrence claim"
+        }
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "errors": []
+    },
+    {
+      "biome": "mangrove",
+      "seed": "41",
+      "view": "inspection",
+      "file": "artifacts/wave1-detail/mangrove-41-inspection.png",
+      "camera": {
+        "position": [
+          74,
+          47.06025475787831,
+          74
+        ],
+        "target": [
+          -26,
+          0,
+          9.000000000000007
+        ]
+      },
+      "wave1": {
+        "id": "mangrove",
+        "biome": 14,
+        "version": "connected-field-detail-1",
+        "presentation": {
+          "foliageAtmosphere": {
+            "near": 120,
+            "far": 650,
+            "strength": 0.5,
+            "color": "#72978b"
+          }
+        },
+        "plan": {
+          "biome": "mangrove",
+          "seed": "41",
+          "eye": [
+            9,
+            2.060254757878313,
+            9
+          ],
+          "target": [
+            -61,
+            1.1602547578783131,
+            9.000000000000012
+          ],
+          "heading": 4.71238898038469,
+          "stagingClearance": 0.08957552072288207
+        },
+        "trees": 95,
+        "instances": [],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation.",
+        "depthSampling": {
+          "farMetresPerTexel": 8.59375,
+          "nearMetresPerTexel": 0.625
+        }
+      },
+      "impostors": {
+        "count": 650,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "completedRenderMs": 2.5,
+          "frame": 28,
+          "calls": 23,
+          "triangles": 2545310,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 1,
+          "frame": 30,
+          "calls": 23,
+          "triangles": 2545310,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 0.9000000059604645,
+          "frame": 32,
+          "calls": 23,
+          "triangles": 2545310,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 12,
+      "geometryObjects": 10,
+      "instances": [
+        {
+          "name": "field-source-stand-impostors",
+          "count": 650,
+          "trianglesPerInstance": 2
+        },
+        {
+          "name": "mangrove-unnamed-juvenile-leaves",
+          "count": 938,
+          "trianglesPerInstance": 8
+        },
+        {
+          "name": "mangrove-unnamed-juvenile-stems",
+          "count": 186,
+          "trianglesPerInstance": 20
+        },
+        {
+          "name": "mangrove-low-folded-leaf-litter",
+          "count": 1614,
+          "trianglesPerInstance": 8
+        },
+        {
+          "name": "mangrove-fallen-shore-twigs",
+          "count": 40,
+          "trianglesPerInstance": 20
+        }
+      ],
+      "details": {
+        "mangroveDetail": {
+          "version": 3,
+          "pockets": 63,
+          "nearShoreAnchors": 6,
+          "seedlings": 186,
+          "leaves": 938,
+          "litter": 1614,
+          "twigs": 40,
+          "drawCalls": 4,
+          "footprint": "forward 2..7m, abs(side)<1.5m: no plants/twigs; litter below .03m",
+          "ecology": "Unnamed juvenile growth forms and fallen fragments; synthetic moisture/tree/shore association, no species or occurrence claim"
+        }
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "errors": []
+    },
+    {
+      "biome": "flooded",
+      "seed": "41",
+      "view": "hero",
+      "file": "artifacts/wave1-detail/flooded-41-hero.png",
+      "camera": {
+        "position": [
+          9,
+          1.9868786765423327,
+          9
+        ],
+        "target": [
+          -61,
+          1.0868786765423328,
+          9.000000000000012
+        ]
+      },
+      "wave1": {
+        "id": "flooded",
+        "biome": 9,
+        "version": "connected-field-detail-1",
+        "presentation": {
+          "foliageAtmosphere": {
+            "near": 120,
+            "far": 650,
+            "strength": 0.5,
+            "color": "#78977c"
+          }
+        },
+        "plan": {
+          "biome": "flooded",
+          "seed": "41",
+          "eye": [
+            9,
+            1.9868786765423327,
+            9
+          ],
+          "target": [
+            -61,
+            1.0868786765423328,
+            9.000000000000012
+          ],
+          "heading": 4.71238898038469,
+          "stagingClearance": 0.07771744783131797
+        },
+        "trees": 24,
+        "instances": [
+          {
+            "name": "field-dimensional-meadow",
+            "count": 2770
+          },
+          {
+            "name": "field-distant-meadow",
+            "count": 11317
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation.",
+        "depthSampling": {
+          "farMetresPerTexel": 8.59375,
+          "nearMetresPerTexel": 0.625
+        }
+      },
+      "impostors": {
+        "count": 100,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "completedRenderMs": 2,
+          "frame": 18,
+          "calls": 21,
+          "triangles": 2317918,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 1.4000000059604645,
+          "frame": 20,
+          "calls": 21,
+          "triangles": 2317918,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 1.0999999940395355,
+          "frame": 22,
+          "calls": 21,
+          "triangles": 2317918,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 11,
+      "geometryObjects": 11,
+      "instances": [
+        {
+          "name": "field-source-stand-impostors",
+          "count": 100,
+          "trianglesPerInstance": 2
+        },
+        {
+          "name": "field-dimensional-meadow",
+          "count": 2770,
+          "trianglesPerInstance": 180
+        },
+        {
+          "name": "field-distant-meadow",
+          "count": 11317,
+          "trianglesPerInstance": 30
+        },
+        {
+          "name": "field-sparse-unnamed-seedheads",
+          "count": 60,
+          "trianglesPerInstance": 16
+        }
+      ],
+      "details": {
+        "meadowDetail": {
+          "version": "ribbon-3-normal-calibration",
+          "seedheads": 60,
+          "nearTriangles": 180,
+          "farTriangles": 30,
+          "alpha": false,
+          "footprint": "no seedheads within forward < 7; central forward < 9 excluded"
+        }
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "errors": []
+    },
+    {
+      "biome": "flooded",
+      "seed": "41",
+      "view": "inspection",
+      "file": "artifacts/wave1-detail/flooded-41-inspection.png",
+      "camera": {
+        "position": [
+          74,
+          46.98687867654233,
+          74
+        ],
+        "target": [
+          -26,
+          0,
+          9.000000000000007
+        ]
+      },
+      "wave1": {
+        "id": "flooded",
+        "biome": 9,
+        "version": "connected-field-detail-1",
+        "presentation": {
+          "foliageAtmosphere": {
+            "near": 120,
+            "far": 650,
+            "strength": 0.5,
+            "color": "#78977c"
+          }
+        },
+        "plan": {
+          "biome": "flooded",
+          "seed": "41",
+          "eye": [
+            9,
+            1.9868786765423327,
+            9
+          ],
+          "target": [
+            -61,
+            1.0868786765423328,
+            9.000000000000012
+          ],
+          "heading": 4.71238898038469,
+          "stagingClearance": 0.07771744783131797
+        },
+        "trees": 24,
+        "instances": [
+          {
+            "name": "field-dimensional-meadow",
+            "count": 2770
+          },
+          {
+            "name": "field-distant-meadow",
+            "count": 11317
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation.",
+        "depthSampling": {
+          "farMetresPerTexel": 8.59375,
+          "nearMetresPerTexel": 0.625
+        }
+      },
+      "impostors": {
+        "count": 100,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "completedRenderMs": 0.7999999821186066,
+          "frame": 28,
+          "calls": 21,
+          "triangles": 2317918,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 1,
+          "frame": 30,
+          "calls": 21,
+          "triangles": 2317918,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 1,
+          "frame": 32,
+          "calls": 21,
+          "triangles": 2317918,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 11,
+      "geometryObjects": 11,
+      "instances": [
+        {
+          "name": "field-source-stand-impostors",
+          "count": 100,
+          "trianglesPerInstance": 2
+        },
+        {
+          "name": "field-dimensional-meadow",
+          "count": 2770,
+          "trianglesPerInstance": 180
+        },
+        {
+          "name": "field-distant-meadow",
+          "count": 11317,
+          "trianglesPerInstance": 30
+        },
+        {
+          "name": "field-sparse-unnamed-seedheads",
+          "count": 60,
+          "trianglesPerInstance": 16
+        }
+      ],
+      "details": {
+        "meadowDetail": {
+          "version": "ribbon-3-normal-calibration",
+          "seedheads": 60,
+          "nearTriangles": 180,
+          "farTriangles": 30,
+          "alpha": false,
+          "footprint": "no seedheads within forward < 7; central forward < 9 excluded"
+        }
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "errors": []
+    },
+    {
+      "biome": "desert",
+      "seed": "1237",
+      "view": "hero",
+      "file": "artifacts/wave1-detail/desert-1237-hero.png",
+      "camera": {
+        "position": [
+          72,
+          2.9962896324663184,
+          0
+        ],
+        "target": [
+          72,
+          2.0962896324663185,
+          -70
+        ]
+      },
+      "wave1": {
+        "id": "desert",
+        "biome": 13,
+        "version": "connected-field-detail-1",
+        "presentation": {
+          "foliageAtmosphere": {
+            "near": 120,
+            "far": 650,
+            "strength": 0.5,
+            "color": "#78977c"
+          }
+        },
+        "plan": {
+          "biome": "desert",
+          "seed": "1237",
+          "eye": [
+            72,
+            2.9962896324663184,
+            0
+          ],
+          "target": [
+            72,
+            2.0962896324663185,
+            -70
+          ],
+          "heading": 0,
+          "stagingClearance": 1.2057247308917027
+        },
+        "trees": 0,
+        "instances": [
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        }
+      },
+      "samples": [
+        {
+          "completedRenderMs": 0.4000000059604645,
+          "frame": 7,
+          "calls": 11,
+          "triangles": 565648,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 0.4000000059604645,
+          "frame": 8,
+          "calls": 11,
+          "triangles": 565648,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 0.5999999940395355,
+          "frame": 9,
+          "calls": 11,
+          "triangles": 565648,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 5,
+      "geometryObjects": 11,
+      "instances": [
+        {
+          "name": "field-jointed-bedrock",
+          "count": 75,
+          "trianglesPerInstance": 1200
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 75,
+          "trianglesPerInstance": 1200
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 75,
+          "trianglesPerInstance": 1200
+        },
+        {
+          "name": "desert-contact-gravel",
+          "count": 2751,
+          "trianglesPerInstance": 36
+        },
+        {
+          "name": "desert-unnamed-open-shrub",
+          "count": 4,
+          "trianglesPerInstance": 742
+        },
+        {
+          "name": "desert-unnamed-open-shrub",
+          "count": 4,
+          "trianglesPerInstance": 742
+        },
+        {
+          "name": "desert-unnamed-dry-fibres",
+          "count": 242,
+          "trianglesPerInstance": 114
+        }
+      ],
+      "details": {},
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "errors": []
+    },
+    {
+      "biome": "desert",
+      "seed": "1237",
+      "view": "inspection",
+      "file": "artifacts/wave1-detail/desert-1237-inspection.png",
+      "camera": {
+        "position": [
+          137,
+          47.996289632466315,
+          65
+        ],
+        "target": [
+          72,
+          0,
+          -35
+        ]
+      },
+      "wave1": {
+        "id": "desert",
+        "biome": 13,
+        "version": "connected-field-detail-1",
+        "presentation": {
+          "foliageAtmosphere": {
+            "near": 120,
+            "far": 650,
+            "strength": 0.5,
+            "color": "#78977c"
+          }
+        },
+        "plan": {
+          "biome": "desert",
+          "seed": "1237",
+          "eye": [
+            72,
+            2.9962896324663184,
+            0
+          ],
+          "target": [
+            72,
+            2.0962896324663185,
+            -70
+          ],
+          "heading": 0,
+          "stagingClearance": 1.2057247308917027
+        },
+        "trees": 0,
+        "instances": [
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          },
+          {
+            "name": "field-jointed-bedrock",
+            "count": 75
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        }
+      },
+      "samples": [
+        {
+          "completedRenderMs": 0.20000001788139343,
+          "frame": 12,
+          "calls": 11,
+          "triangles": 565648,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 0.29999998211860657,
+          "frame": 13,
+          "calls": 11,
+          "triangles": 565648,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 0.20000001788139343,
+          "frame": 14,
+          "calls": 11,
+          "triangles": 565648,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 5,
+      "geometryObjects": 11,
+      "instances": [
+        {
+          "name": "field-jointed-bedrock",
+          "count": 75,
+          "trianglesPerInstance": 1200
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 75,
+          "trianglesPerInstance": 1200
+        },
+        {
+          "name": "field-jointed-bedrock",
+          "count": 75,
+          "trianglesPerInstance": 1200
+        },
+        {
+          "name": "desert-contact-gravel",
+          "count": 2751,
+          "trianglesPerInstance": 36
+        },
+        {
+          "name": "desert-unnamed-open-shrub",
+          "count": 4,
+          "trianglesPerInstance": 742
+        },
+        {
+          "name": "desert-unnamed-open-shrub",
+          "count": 4,
+          "trianglesPerInstance": 742
+        },
+        {
+          "name": "desert-unnamed-dry-fibres",
+          "count": 242,
+          "trianglesPerInstance": 114
+        }
+      ],
+      "details": {},
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "errors": []
+    },
+    {
+      "biome": "mangrove",
+      "seed": "1237",
+      "view": "hero",
+      "file": "artifacts/wave1-detail/mangrove-1237-hero.png",
+      "camera": {
+        "position": [
+          -36,
+          2.0208764262470256,
+          90
+        ],
+        "target": [
+          -36,
+          1.1208764262470257,
+          20
+        ]
+      },
+      "wave1": {
+        "id": "mangrove",
+        "biome": 14,
+        "version": "connected-field-detail-1",
+        "presentation": {
+          "foliageAtmosphere": {
+            "near": 120,
+            "far": 650,
+            "strength": 0.5,
+            "color": "#72978b"
+          }
+        },
+        "plan": {
+          "biome": "mangrove",
+          "seed": "1237",
+          "eye": [
+            -36,
+            2.0208764262470256,
+            90
+          ],
+          "target": [
+            -36,
+            1.1208764262470257,
+            20
+          ],
+          "heading": 0,
+          "stagingClearance": 0.12274521860726707
+        },
+        "trees": 95,
+        "instances": [],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation.",
+        "depthSampling": {
+          "farMetresPerTexel": 8.59375,
+          "nearMetresPerTexel": 0.625
+        }
+      },
+      "impostors": {
+        "count": 650,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "completedRenderMs": 0.7999999821186066,
+          "frame": 18,
+          "calls": 23,
+          "triangles": 2546118,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 0.7999999821186066,
+          "frame": 20,
+          "calls": 23,
+          "triangles": 2546118,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 0.9000000059604645,
+          "frame": 22,
+          "calls": 23,
+          "triangles": 2546118,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 12,
+      "geometryObjects": 10,
+      "instances": [
+        {
+          "name": "field-source-stand-impostors",
+          "count": 650,
+          "trianglesPerInstance": 2
+        },
+        {
+          "name": "mangrove-unnamed-juvenile-leaves",
+          "count": 988,
+          "trianglesPerInstance": 8
+        },
+        {
+          "name": "mangrove-unnamed-juvenile-stems",
+          "count": 196,
+          "trianglesPerInstance": 20
+        },
+        {
+          "name": "mangrove-low-folded-leaf-litter",
+          "count": 1607,
+          "trianglesPerInstance": 8
+        },
+        {
+          "name": "mangrove-fallen-shore-twigs",
+          "count": 33,
+          "trianglesPerInstance": 20
+        }
+      ],
+      "details": {
+        "mangroveDetail": {
+          "version": 3,
+          "pockets": 64,
+          "nearShoreAnchors": 6,
+          "seedlings": 196,
+          "leaves": 988,
+          "litter": 1607,
+          "twigs": 33,
+          "drawCalls": 4,
+          "footprint": "forward 2..7m, abs(side)<1.5m: no plants/twigs; litter below .03m",
+          "ecology": "Unnamed juvenile growth forms and fallen fragments; synthetic moisture/tree/shore association, no species or occurrence claim"
+        }
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "errors": []
+    },
+    {
+      "biome": "mangrove",
+      "seed": "1237",
+      "view": "inspection",
+      "file": "artifacts/wave1-detail/mangrove-1237-inspection.png",
+      "camera": {
+        "position": [
+          29,
+          47.02087642624703,
+          155
+        ],
+        "target": [
+          -36,
+          0,
+          55
+        ]
+      },
+      "wave1": {
+        "id": "mangrove",
+        "biome": 14,
+        "version": "connected-field-detail-1",
+        "presentation": {
+          "foliageAtmosphere": {
+            "near": 120,
+            "far": 650,
+            "strength": 0.5,
+            "color": "#72978b"
+          }
+        },
+        "plan": {
+          "biome": "mangrove",
+          "seed": "1237",
+          "eye": [
+            -36,
+            2.0208764262470256,
+            90
+          ],
+          "target": [
+            -36,
+            1.1208764262470257,
+            20
+          ],
+          "heading": 0,
+          "stagingClearance": 0.12274521860726707
+        },
+        "trees": 95,
+        "instances": [],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation.",
+        "depthSampling": {
+          "farMetresPerTexel": 8.59375,
+          "nearMetresPerTexel": 0.625
+        }
+      },
+      "impostors": {
+        "count": 650,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "completedRenderMs": 0.7999999821186066,
+          "frame": 28,
+          "calls": 23,
+          "triangles": 2546118,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 0.9000000059604645,
+          "frame": 30,
+          "calls": 23,
+          "triangles": 2546118,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 0.9000000059604645,
+          "frame": 32,
+          "calls": 23,
+          "triangles": 2546118,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 12,
+      "geometryObjects": 10,
+      "instances": [
+        {
+          "name": "field-source-stand-impostors",
+          "count": 650,
+          "trianglesPerInstance": 2
+        },
+        {
+          "name": "mangrove-unnamed-juvenile-leaves",
+          "count": 988,
+          "trianglesPerInstance": 8
+        },
+        {
+          "name": "mangrove-unnamed-juvenile-stems",
+          "count": 196,
+          "trianglesPerInstance": 20
+        },
+        {
+          "name": "mangrove-low-folded-leaf-litter",
+          "count": 1607,
+          "trianglesPerInstance": 8
+        },
+        {
+          "name": "mangrove-fallen-shore-twigs",
+          "count": 33,
+          "trianglesPerInstance": 20
+        }
+      ],
+      "details": {
+        "mangroveDetail": {
+          "version": 3,
+          "pockets": 64,
+          "nearShoreAnchors": 6,
+          "seedlings": 196,
+          "leaves": 988,
+          "litter": 1607,
+          "twigs": 33,
+          "drawCalls": 4,
+          "footprint": "forward 2..7m, abs(side)<1.5m: no plants/twigs; litter below .03m",
+          "ecology": "Unnamed juvenile growth forms and fallen fragments; synthetic moisture/tree/shore association, no species or occurrence claim"
+        }
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "errors": []
+    },
+    {
+      "biome": "flooded",
+      "seed": "1237",
+      "view": "hero",
+      "file": "artifacts/wave1-detail/flooded-1237-hero.png",
+      "camera": {
+        "position": [
+          -18,
+          1.8189174535495871,
+          -36
+        ],
+        "target": [
+          52,
+          0.9189174535495872,
+          -36.00000000000001
+        ]
+      },
+      "wave1": {
+        "id": "flooded",
+        "biome": 9,
+        "version": "connected-field-detail-1",
+        "presentation": {
+          "foliageAtmosphere": {
+            "near": 120,
+            "far": 650,
+            "strength": 0.5,
+            "color": "#78977c"
+          }
+        },
+        "plan": {
+          "biome": "flooded",
+          "seed": "1237",
+          "eye": [
+            -18,
+            1.8189174535495871,
+            -36
+          ],
+          "target": [
+            52,
+            0.9189174535495872,
+            -36.00000000000001
+          ],
+          "heading": 1.5707963267948966,
+          "stagingClearance": 0.07532664068555851
+        },
+        "trees": 24,
+        "instances": [
+          {
+            "name": "field-dimensional-meadow",
+            "count": 1550
+          },
+          {
+            "name": "field-distant-meadow",
+            "count": 12752
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation.",
+        "depthSampling": {
+          "farMetresPerTexel": 8.59375,
+          "nearMetresPerTexel": 0.625
+        }
+      },
+      "impostors": {
+        "count": 100,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "completedRenderMs": 2.4000000059604645,
+          "frame": 18,
+          "calls": 21,
+          "triangles": 1963826,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 1.300000011920929,
+          "frame": 20,
+          "calls": 21,
+          "triangles": 1963826,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 2,
+          "frame": 22,
+          "calls": 21,
+          "triangles": 1963826,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 11,
+      "geometryObjects": 11,
+      "instances": [
+        {
+          "name": "field-source-stand-impostors",
+          "count": 100,
+          "trianglesPerInstance": 2
+        },
+        {
+          "name": "field-dimensional-meadow",
+          "count": 1550,
+          "trianglesPerInstance": 180
+        },
+        {
+          "name": "field-distant-meadow",
+          "count": 12752,
+          "trianglesPerInstance": 30
+        },
+        {
+          "name": "field-sparse-unnamed-seedheads",
+          "count": 29,
+          "trianglesPerInstance": 16
+        }
+      ],
+      "details": {
+        "meadowDetail": {
+          "version": "ribbon-3-normal-calibration",
+          "seedheads": 29,
+          "nearTriangles": 180,
+          "farTriangles": 30,
+          "alpha": false,
+          "footprint": "no seedheads within forward < 7; central forward < 9 excluded"
+        }
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "errors": []
+    },
+    {
+      "biome": "flooded",
+      "seed": "1237",
+      "view": "inspection",
+      "file": "artifacts/wave1-detail/flooded-1237-inspection.png",
+      "camera": {
+        "position": [
+          47,
+          46.81891745354959,
+          29
+        ],
+        "target": [
+          17,
+          0,
+          -36
+        ]
+      },
+      "wave1": {
+        "id": "flooded",
+        "biome": 9,
+        "version": "connected-field-detail-1",
+        "presentation": {
+          "foliageAtmosphere": {
+            "near": 120,
+            "far": 650,
+            "strength": 0.5,
+            "color": "#78977c"
+          }
+        },
+        "plan": {
+          "biome": "flooded",
+          "seed": "1237",
+          "eye": [
+            -18,
+            1.8189174535495871,
+            -36
+          ],
+          "target": [
+            52,
+            0.9189174535495872,
+            -36.00000000000001
+          ],
+          "heading": 1.5707963267948966,
+          "stagingClearance": 0.07532664068555851
+        },
+        "trees": 24,
+        "instances": [
+          {
+            "name": "field-dimensional-meadow",
+            "count": 1550
+          },
+          {
+            "name": "field-distant-meadow",
+            "count": 12752
+          }
+        ],
+        "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+        "layers": {
+          "season": "unresolved",
+          "weather": "clear study",
+          "timeOfDay": "warm directional study"
+        },
+        "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation.",
+        "depthSampling": {
+          "farMetresPerTexel": 8.59375,
+          "nearMetresPerTexel": 0.625
+        }
+      },
+      "impostors": {
+        "count": 100,
+        "atlas": [
+          1024,
+          1024
+        ],
+        "source": "Four isolated views baked from an existing procedural source tree; presentation continuation, not local species/abundance observations."
+      },
+      "samples": [
+        {
+          "completedRenderMs": 0.9000000059604645,
+          "frame": 28,
+          "calls": 21,
+          "triangles": 1963826,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 1,
+          "frame": 30,
+          "calls": 21,
+          "triangles": 1963826,
+          "points": 0,
+          "lines": 0
+        },
+        {
+          "completedRenderMs": 2.7999999821186066,
+          "frame": 32,
+          "calls": 21,
+          "triangles": 1963826,
+          "points": 0,
+          "lines": 0
+        }
+      ],
+      "textureObjects": 11,
+      "geometryObjects": 11,
+      "instances": [
+        {
+          "name": "field-source-stand-impostors",
+          "count": 100,
+          "trianglesPerInstance": 2
+        },
+        {
+          "name": "field-dimensional-meadow",
+          "count": 1550,
+          "trianglesPerInstance": 180
+        },
+        {
+          "name": "field-distant-meadow",
+          "count": 12752,
+          "trianglesPerInstance": 30
+        },
+        {
+          "name": "field-sparse-unnamed-seedheads",
+          "count": 29,
+          "trianglesPerInstance": 16
+        }
+      ],
+      "details": {
+        "meadowDetail": {
+          "version": "ribbon-3-normal-calibration",
+          "seedheads": 29,
+          "nearTriangles": 180,
+          "farTriangles": 30,
+          "alpha": false,
+          "footprint": "no seedheads within forward < 7; central forward < 9 excluded"
+        }
+      },
+      "renderer": "ANGLE (Google, Vulkan 1.3.0 (SwiftShader Device (Subzero) (0x0000C0DE)), SwiftShader driver)",
+      "errors": []
+    }
+  ],
+  "diagnostics": [
+    {
+      "biome": "desert",
+      "seed": "29",
+      "staging": {
+        "capsuleRadius": 0.35,
+        "bodyHeight": 1.7,
+        "approachRadius": 0.85,
+        "minimumGroundAboveWater": 1.24515385114566,
+        "rootIntrusions": 0,
+        "shortGrassHeightBound": 0.08,
+        "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+      },
+      "intersections": [],
+      "actualGrassHeightInApproach": null,
+      "plan": {
+        "biome": "desert",
+        "seed": "29",
+        "eye": [
+          -27,
+          3.036333874529917,
+          -36
+        ],
+        "target": [
+          22.49747468305833,
+          2.1363338745299174,
+          13.497474683058321
+        ],
+        "heading": 2.356194490192345,
+        "stagingClearance": 1.255546546258769
+      },
+      "waterPixels": {
+        "fullFrame": 0,
+        "lowerHalf": 0,
+        "middleBand": 0
+      },
+      "grassLuminance": {
+        "pixels": 0,
+        "nearBlackFraction": 0
+      },
+      "errors": []
+    },
+    {
+      "biome": "mangrove",
+      "seed": "29",
+      "staging": {
+        "capsuleRadius": 0.35,
+        "bodyHeight": 1.7,
+        "approachRadius": 0.85,
+        "minimumGroundAboveWater": 0.2607121371096338,
+        "rootIntrusions": 0,
+        "shortGrassHeightBound": 0.08,
+        "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+      },
+      "intersections": [],
+      "actualGrassHeightInApproach": null,
+      "plan": {
+        "biome": "mangrove",
+        "seed": "29",
+        "eye": [
+          72,
+          2.077603828842169,
+          -18
+        ],
+        "target": [
+          142,
+          1.1776038288421693,
+          -18.000000000000004
+        ],
+        "heading": 1.5707963267948966,
+        "stagingClearance": 0.15266596056652895
+      },
+      "waterPixels": {
+        "fullFrame": 0.09918836805555556,
+        "lowerHalf": 0.19514756944444445,
+        "middleBand": 0.31933238636363637
+      },
+      "grassLuminance": {
+        "pixels": 0,
+        "nearBlackFraction": 0
+      },
+      "errors": []
+    },
+    {
+      "biome": "flooded",
+      "seed": "29",
+      "staging": {
+        "capsuleRadius": 0.35,
+        "bodyHeight": 1.7,
+        "approachRadius": 0.85,
+        "minimumGroundAboveWater": 0.14770435479323532,
+        "rootIntrusions": 0,
+        "shortGrassHeightBound": 0.08,
+        "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+      },
+      "intersections": [],
+      "actualGrassHeightInApproach": 0.012704478620632897,
+      "plan": {
+        "biome": "flooded",
+        "seed": "29",
+        "eye": [
+          -63,
+          1.7116061343029232,
+          -27
+        ],
+        "target": [
+          -112.49747468305833,
+          0.8116061343029232,
+          -76.49747468305831
+        ],
+        "heading": 5.497787143782138,
+        "stagingClearance": 0.10796727499743605
+      },
+      "waterPixels": {
+        "fullFrame": 0.044973958333333335,
+        "lowerHalf": 0.08546006944444444,
+        "middleBand": 0.13984375
+      },
+      "grassLuminance": {
+        "pixels": 48120,
+        "nearBlackFraction": 0.03748960931005819
+      },
+      "errors": []
+    },
+    {
+      "biome": "desert",
+      "seed": "41",
+      "staging": {
+        "capsuleRadius": 0.35,
+        "bodyHeight": 1.7,
+        "approachRadius": 0.85,
+        "minimumGroundAboveWater": 1.5999706797909072,
+        "rootIntrusions": 0,
+        "shortGrassHeightBound": 0.08,
+        "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+      },
+      "intersections": [],
+      "actualGrassHeightInApproach": null,
+      "plan": {
+        "biome": "desert",
+        "seed": "41",
+        "eye": [
+          -63,
+          3.3680408437594105,
+          -81
+        ],
+        "target": [
+          -112.49747468305833,
+          2.46804084375941,
+          -130.49747468305833
+        ],
+        "heading": 5.497787143782138,
+        "stagingClearance": 1.5993552972317373
+      },
+      "waterPixels": {
+        "fullFrame": 0,
+        "lowerHalf": 0,
+        "middleBand": 0
+      },
+      "grassLuminance": {
+        "pixels": 0,
+        "nearBlackFraction": 0
+      },
+      "errors": []
+    },
+    {
+      "biome": "mangrove",
+      "seed": "41",
+      "staging": {
+        "capsuleRadius": 0.35,
+        "bodyHeight": 1.7,
+        "approachRadius": 0.85,
+        "minimumGroundAboveWater": 0.16662988049795863,
+        "rootIntrusions": 0,
+        "shortGrassHeightBound": 0.08,
+        "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+      },
+      "intersections": [],
+      "actualGrassHeightInApproach": null,
+      "plan": {
+        "biome": "mangrove",
+        "seed": "41",
+        "eye": [
+          9,
+          2.060254757878313,
+          9
+        ],
+        "target": [
+          -61,
+          1.1602547578783131,
+          9.000000000000012
+        ],
+        "heading": 4.71238898038469,
+        "stagingClearance": 0.08957552072288207
+      },
+      "waterPixels": {
+        "fullFrame": 0.10091579861111111,
+        "lowerHalf": 0.19713541666666667,
+        "middleBand": 0.31176136363636364
+      },
+      "grassLuminance": {
+        "pixels": 0,
+        "nearBlackFraction": 0
+      },
+      "errors": []
+    },
+    {
+      "biome": "flooded",
+      "seed": "41",
+      "staging": {
+        "capsuleRadius": 0.35,
+        "bodyHeight": 1.7,
+        "approachRadius": 0.85,
+        "minimumGroundAboveWater": 0.13725945311205892,
+        "rootIntrusions": 0,
+        "shortGrassHeightBound": 0.08,
+        "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+      },
+      "intersections": [],
+      "actualGrassHeightInApproach": 0.030377584169977823,
+      "plan": {
+        "biome": "flooded",
+        "seed": "41",
+        "eye": [
+          9,
+          1.9868786765423327,
+          9
+        ],
+        "target": [
+          -61,
+          1.0868786765423328,
+          9.000000000000012
+        ],
+        "heading": 4.71238898038469,
+        "stagingClearance": 0.07771744783131797
+      },
+      "waterPixels": {
+        "fullFrame": 0.06963975694444445,
+        "lowerHalf": 0.13236111111111112,
+        "middleBand": 0.21659090909090908
+      },
+      "grassLuminance": {
+        "pixels": 55239,
+        "nearBlackFraction": 0
+      },
+      "errors": []
+    },
+    {
+      "biome": "desert",
+      "seed": "1237",
+      "staging": {
+        "capsuleRadius": 0.35,
+        "bodyHeight": 1.7,
+        "approachRadius": 0.85,
+        "minimumGroundAboveWater": 1.2245398049264766,
+        "rootIntrusions": 0,
+        "shortGrassHeightBound": 0.08,
+        "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+      },
+      "intersections": [],
+      "actualGrassHeightInApproach": null,
+      "plan": {
+        "biome": "desert",
+        "seed": "1237",
+        "eye": [
+          72,
+          2.9962896324663184,
+          0
+        ],
+        "target": [
+          72,
+          2.0962896324663185,
+          -70
+        ],
+        "heading": 0,
+        "stagingClearance": 1.2057247308917027
+      },
+      "waterPixels": {
+        "fullFrame": 0,
+        "lowerHalf": 0,
+        "middleBand": 0
+      },
+      "grassLuminance": {
+        "pixels": 0,
+        "nearBlackFraction": 0
+      },
+      "errors": []
+    },
+    {
+      "biome": "mangrove",
+      "seed": "1237",
+      "staging": {
+        "capsuleRadius": 0.35,
+        "bodyHeight": 1.7,
+        "approachRadius": 0.85,
+        "minimumGroundAboveWater": 0.26085960421130105,
+        "rootIntrusions": 0,
+        "shortGrassHeightBound": 0.08,
+        "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+      },
+      "intersections": [],
+      "actualGrassHeightInApproach": null,
+      "plan": {
+        "biome": "mangrove",
+        "seed": "1237",
+        "eye": [
+          -36,
+          2.0208764262470256,
+          90
+        ],
+        "target": [
+          -36,
+          1.1208764262470257,
+          20
+        ],
+        "heading": 0,
+        "stagingClearance": 0.12274521860726707
+      },
+      "waterPixels": {
+        "fullFrame": 0.11493055555555555,
+        "lowerHalf": 0.22495659722222222,
+        "middleBand": 0.36710227272727275
+      },
+      "grassLuminance": {
+        "pixels": 0,
+        "nearBlackFraction": 0
+      },
+      "errors": []
+    },
+    {
+      "biome": "flooded",
+      "seed": "1237",
+      "staging": {
+        "capsuleRadius": 0.35,
+        "bodyHeight": 1.7,
+        "approachRadius": 0.85,
+        "minimumGroundAboveWater": 0.07351354201166099,
+        "rootIntrusions": 0,
+        "shortGrassHeightBound": 0.08,
+        "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+      },
+      "intersections": [],
+      "actualGrassHeightInApproach": 0.0126772543191489,
+      "plan": {
+        "biome": "flooded",
+        "seed": "1237",
+        "eye": [
+          -18,
+          1.8189174535495871,
+          -36
+        ],
+        "target": [
+          52,
+          0.9189174535495872,
+          -36.00000000000001
+        ],
+        "heading": 1.5707963267948966,
+        "stagingClearance": 0.07532664068555851
+      },
+      "waterPixels": {
+        "fullFrame": 0.08235243055555555,
+        "lowerHalf": 0.15502604166666667,
+        "middleBand": 0.25367897727272726
+      },
+      "grassLuminance": {
+        "pixels": 21734,
+        "nearBlackFraction": 0
+      },
+      "errors": []
+    }
+  ],
+  "method": "640x360; fixed recipe camera; renderer.info.autoReset=false includes nested reflection passes; gl.finish completed-render samples on headless desktop/software renderer, not mobile performance approval; semantic water/grass masks support diagnosis, not aesthetics"
+}

@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "id": "wave1-flooded",
+  "biome": 9,
+  "ecoregion": 581,
+  "baseSource": "b1f4a12d21d281f74fed23932daa056d2da845cb",
+  "review": {
+    "actualVision": true,
+    "reviewer": "flooded task agent; root independently inspected R1 without reading module source",
+    "humanDecision": null,
+    "status": "provisional art-direction checkpoint, not approved"
+  },
+  "loaded": [
+    "AGENTS.md",
+    "visual-lab/README.md",
+    "docs/visual-quality-workflow.md",
+    "visual-lab/art-direction-policy.json",
+    ".agents/skills/prototype-fast/SKILL.md",
+    ".agents/skills/mobile-budget/SKILL.md",
+    "src/lib/vegetation.ts",
+    "data/global/ecoregions.json",
+    "existing painted renderer and grass/material adapters"
+  ],
+  "scope": {
+    "newScene": "Everglades wetland preview, source resolver BIOME9",
+    "unchanged": "Ecological source tree population, species catalog, approved scenes. Dispatcher guards BIOME9; parent owns protected-biome regression.",
+    "season": "Inherited/not inferred",
+    "weather": "Fixed clear reference state; no weather simulation",
+    "timeOfDay": "Fixed warm directional study light, independent record"
+  },
+  "capture": {
+    "width": 640,
+    "height": 360,
+    "seeds": [
+      "29",
+      "41"
+    ],
+    "holdout": "613",
+    "holdoutAfterFreeze": true,
+    "config": "artifacts/wave1-flooded/validate.cjs",
+    "baseline": "Generic existing wetland at matched study camera; original source retained at base commit",
+    "lightingComparison": "Before and after light changes are part of this authored biome profile; not a light-isolated test"
+  },
+  "rounds": [
+    {
+      "id": "r1",
+      "decision": "reject",
+      "hypothesis": "A broad winding slough and batched sedges establish open wetland depth.",
+      "evidence": "Large smooth river, bright pasted-sky reflection, isolated pale sticks and sparse banks.",
+      "cause": "Confirmed continuous-channel height field and sparse thin-blade geometry; resemblance to canal instead of marsh.",
+      "severity": "major"
+    },
+    {
+      "id": "r2",
+      "decision": "reject",
+      "hypothesis": "Narrower channel, pool cuts and local foreground plant massing restore marsh dominance.",
+      "evidence": "More coverage but stiff repeated V-spears; muddy empty raised bank ribbons and canal still dominate.",
+      "cause": "Confirmed blade width/curvature representation and field-to-placement mismatch.",
+      "severity": "major"
+    },
+    {
+      "id": "r3",
+      "decision": "retain-provisionally-for-review",
+      "hypothesis": "Thirteen curved blades per clump with base-to-tip pigment variation soften plant silhouette; smaller slough width and fragmented pools improve water/land balance.",
+      "evidence": "Softer and lusher than R2, especially seeds41/613, yet exposed bank ribbons and simplified repetitive distant vegetation remain. Hero29 overemphasizes water.",
+      "cause": "World-water-area fraction is only13.5%, but perspective gives channel much greater hero weight. Fixed terrain-field family produces similar layouts across seeds.",
+      "severity": "major",
+      "betterThanPrevious": true,
+      "goodEnoughToApprove": false,
+      "humanApproved": false
+    }
+  ],
+  "fieldChecks": [
+    {
+      "seed": "29",
+      "waterFraction": 0.13533834586466165,
+      "maxHeightStepPer10cm": 0.010393362953458468,
+      "deterministic": true
+    },
+    {
+      "seed": "41",
+      "waterFraction": 0.13750284802916382,
+      "maxHeightStepPer10cm": 0.011137256165894074,
+      "deterministic": true
+    },
+    {
+      "seed": "613",
+      "waterFraction": 0.13727500569605833,
+      "maxHeightStepPer10cm": 0.011209303829298009,
+      "deterministic": true
+    }
+  ],
+  "performance": {
+    "baseline": {
+      "drawCalls": 2,
+      "triangles": 2060
+    },
+    "candidate": {
+      "drawCalls": 6,
+      "triangles": 469378,
+      "nearInstances": 3000,
+      "farInstances": 2700,
+      "treeCount": 0,
+      "textureObjects": 5,
+      "geometryObjects": 6,
+      "alpha": "No alpha textures or transparency on sedge geometry; opaque depth-tested. Hardware overdraw unavailable.",
+      "timing": "Eight CPU submission samples per view, headless software renderer, usually0.1-0.4ms. This is not GPU or mobile performance.",
+      "mobileApproved": false
+    }
+  },
+  "validation": {
+    "typeScript": "npx tsc --noEmit passed after R3",
+    "targetedTests": "npx tsx --test tests/wave1-flooded.test.ts:2 passed",
+    "runtimeErrors": [],
+    "nearBlackFraction": 0,
+    "worldWaterFractionRange": [
+      0.13533834586466165,
+      0.13750284802916382
+    ],
+    "objectiveLimits": "No semantic vegetation coverage mask or hardware GPU counters. RGB darkness and field samples cannot determine aesthetic quality."
+  },
+  "findings": [
+    {
+      "severity": "major",
+      "defect": "Continuous-channel geometry and exposed bank ribbons remain too mechanical",
+      "evidence": "r3-inspection.png, final-41-inspection.png, final-613-inspection.png",
+      "next": "Replace dominant channel field with patch/flow-derived shallow microtopographic mosaic and coordinated plant-mat coverage, not more uniform plants."
+    },
+    {
+      "severity": "major",
+      "defect": "Sparse mid/far vegetation and repeated similar seed silhouettes",
+      "evidence": "All inspection captures",
+      "next": "Connected medium-frequency vegetation surfaces or inexpensive continuous mat representation with lower full-detail cost."
+    },
+    {
+      "severity": "minor",
+      "defect": "Water uses reflected sky lookup and repeated tiny ripple cue",
+      "evidence": "Hero and inspection captures",
+      "next": "Restrained shallow-water scattering/wetness and lower-frequency roughness, actual reflection only if justified."
+    }
+  ],
+  "reusableRules": [
+    {
+      "principle": "Water/vegetation composition must be evaluated in projected camera space as well as world-area proportions",
+      "status": "experimentally supported",
+      "evidence": "World water13.5-13.8%, yet hero29 still water-dominant",
+      "biomeSpecific": "Flooded flatland"
+    },
+    {
+      "principle": "Curved multi-blade clumps with darker bases and selective tip values outperform uniformly broad V-spears",
+      "status": "experimentally supported, not human-approved",
+      "evidence": "r2-hero.png versus r3-hero.png and final-41-hero.png",
+      "limitations": "Still visibly repeated low-poly clumps; no general approval."
+    }
+  ],
+  "stopReason": "Three correction rounds used. Preserve source/evidence; human art direction required before more implementation."
+}

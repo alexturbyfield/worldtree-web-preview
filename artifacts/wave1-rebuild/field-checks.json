@@ -1,0 +1,80 @@
+[
+  {
+    "biome": "mangrove",
+    "seed": "29",
+    "stagingMinimumHeight": 0.25116772421656514,
+    "terrainSamples": 351,
+    "waterSamples": 142,
+    "visibleWaterSamples": 123,
+    "visibleWaterFraction": 0.3504273504273504,
+    "findings": []
+  },
+  {
+    "biome": "mangrove",
+    "seed": "41",
+    "stagingMinimumHeight": 0.5074915875722436,
+    "terrainSamples": 351,
+    "waterSamples": 30,
+    "visibleWaterSamples": 30,
+    "visibleWaterFraction": 0.08547008547008547,
+    "findings": [
+      {
+        "severity": "major",
+        "defect": "Insufficient terrain-visible water samples in forward encounter cone",
+        "note": "Terrain-only line-of-sight proxy; does not account for vegetation or artistic image weighting."
+      }
+    ]
+  },
+  {
+    "biome": "mangrove",
+    "seed": "997",
+    "stagingMinimumHeight": 0.48870599519782426,
+    "terrainSamples": 351,
+    "waterSamples": 67,
+    "visibleWaterSamples": 67,
+    "visibleWaterFraction": 0.1908831908831909,
+    "findings": []
+  },
+  {
+    "biome": "flooded",
+    "seed": "29",
+    "stagingMinimumHeight": 0.5435467410289448,
+    "terrainSamples": 351,
+    "waterSamples": 13,
+    "visibleWaterSamples": 11,
+    "visibleWaterFraction": 0.03133903133903134,
+    "findings": [
+      {
+        "severity": "major",
+        "defect": "Insufficient terrain-visible water samples in forward encounter cone",
+        "note": "Terrain-only line-of-sight proxy; does not account for vegetation or artistic image weighting."
+      }
+    ]
+  },
+  {
+    "biome": "flooded",
+    "seed": "41",
+    "stagingMinimumHeight": 0.3137120384697418,
+    "terrainSamples": 351,
+    "waterSamples": 15,
+    "visibleWaterSamples": 13,
+    "visibleWaterFraction": 0.037037037037037035,
+    "findings": [
+      {
+        "severity": "major",
+        "defect": "Insufficient terrain-visible water samples in forward encounter cone",
+        "note": "Terrain-only line-of-sight proxy; does not account for vegetation or artistic image weighting."
+      }
+    ]
+  },
+  {
+    "biome": "flooded",
+    "seed": "997",
+    "stagingMinimumHeight": 0.25476839244633537,
+    "terrainSamples": 351,
+    "waterSamples": 76,
+    "visibleWaterSamples": 70,
+    "visibleWaterFraction": 0.19943019943019943,
+    "findings": []
+  }
+]

@@ -1,0 +1,82 @@
+{
+  "task": "Prairie concept-led tree placement",
+  "hypothesis": "Use asymmetric near framing, a readable middle-distance tree and smaller receding landmarks; reject locations whose lower trunk is concealed by intervening terrain.",
+  "reference": "prairie-wave3-primary",
+  "seed": 29,
+  "scope": "Only optional ECO389 regional riparian tree study; no camera, terrain, grass, species or tree model changes. Individual tree seeds retained.",
+  "files": [
+    "src/lib/forest/wave3-prairie.ts",
+    "tests/prairie-land-cover.test.ts"
+  ],
+  "reviewer": "Primary Codex actual hero and elevated image inspection",
+  "humanApproval": null,
+  "decision": "Retain for review",
+  "observations": [
+    "Left foreground trunk and canopy frame the image; right middle tree has clearly exposed branching and trunk.",
+    "Smaller background specimens establish a depth sequence rather than repeated paired skyline crowns.",
+    "Elevated view confirms terrain contact; no artificial raised pads.",
+    "Crowns still have generic broadleaf fallback shapes and bright, granular foliage. Ground remains smooth and visually sparse."
+  ],
+  "checks": {
+    "typescript": "passed",
+    "targetedTests": "2 passed",
+    "cameraMatched": true,
+    "renderSettingsMatched": true,
+    "errors": 0,
+    "before": [
+      {
+        "frame": 6,
+        "calls": 16,
+        "triangles": 700610,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      },
+      {
+        "frame": 7,
+        "calls": 16,
+        "triangles": 700610,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      },
+      {
+        "frame": 8,
+        "calls": 16,
+        "triangles": 700610,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.40000003576278687
+      }
+    ],
+    "after": [
+      {
+        "frame": 6,
+        "calls": 16,
+        "triangles": 673898,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.40000003576278687
+      },
+      {
+        "frame": 7,
+        "calls": 16,
+        "triangles": 673898,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.30000001192092896
+      },
+      {
+        "frame": 8,
+        "calls": 16,
+        "triangles": 673898,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.40000003576278687
+      }
+    ]
+  },
+  "comparison": "artifacts\\prairie-tree-placement\\comparison.png",
+  "inspection": "artifacts\\prairie-tree-placement\\after\\prairie-29-inspection.png",
+  "approval": "Agent retention is not human approval. Trees remain a conditional regional habitat study."
+}

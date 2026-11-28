@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-11-26T00:01:31.171209+00:00",
+  "actor": "user",
+  "kind": "explicit-style-selection-and-release-authorization",
+  "statement": "Go with the new style. Commit and push. Add our changes to the live site so I can review. I want to see the performance effect",
+  "experiment": "alpine-grassfield-1",
+  "preferredStyle": "painted-ground-root-matched-brush-and-regional-flower-cards",
+  "screenshot": "artifacts/alpine-grassfield/direction-comparison.png",
+  "seed": "29",
+  "scope": "Select the visual direction and publish for real-device review; not a claim of mobile performance or final whole-scene approval.",
+  "performanceApproval": false,
+  "deploymentAuthorized": true,
+  "baselineParameter": "meadowField=legacy"
+}

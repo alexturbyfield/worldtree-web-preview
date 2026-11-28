@@ -1,0 +1,98 @@
+[
+  {
+    "baseline": true,
+    "view": "hero",
+    "calls": 2,
+    "triangles": 2060,
+    "wave1": null,
+    "camera": [
+      -7,
+      1.4230184530504189,
+      34
+    ],
+    "errors": []
+  },
+  {
+    "baseline": true,
+    "view": "inspection",
+    "calls": 2,
+    "triangles": 2060,
+    "wave1": null,
+    "camera": [
+      70,
+      50,
+      85
+    ],
+    "errors": []
+  },
+  {
+    "baseline": false,
+    "view": "hero",
+    "calls": 6,
+    "triangles": 264578,
+    "wave1": {
+      "id": "flooded",
+      "version": "flooded-1",
+      "biome": 9,
+      "ecoregion": 581,
+      "seed": "29",
+      "treeCount": 0,
+      "sedgeInstances": [
+        2300,
+        2700
+      ],
+      "reflection": "Reflected sky lookup with subtle ripples; no planar geometry or tree reflection.",
+      "ecology": "Unnamed open-groundcover sedge/grass forms; no confirmed local taxon inferred.",
+      "layers": {
+        "season": "inherited/not inferred",
+        "weather": "fixed clear study",
+        "timeOfDay": "fixed warm directional study"
+      },
+      "limitations": [
+        "Synthetic wetland microtopography, not surveyed hydrology.",
+        "Far marsh simplified; no tree islands inserted without source palette."
+      ]
+    },
+    "camera": [
+      -7,
+      1.4230184530504189,
+      34
+    ],
+    "errors": []
+  },
+  {
+    "baseline": false,
+    "view": "inspection",
+    "calls": 6,
+    "triangles": 264578,
+    "wave1": {
+      "id": "flooded",
+      "version": "flooded-1",
+      "biome": 9,
+      "ecoregion": 581,
+      "seed": "29",
+      "treeCount": 0,
+      "sedgeInstances": [
+        2300,
+        2700
+      ],
+      "reflection": "Reflected sky lookup with subtle ripples; no planar geometry or tree reflection.",
+      "ecology": "Unnamed open-groundcover sedge/grass forms; no confirmed local taxon inferred.",
+      "layers": {
+        "season": "inherited/not inferred",
+        "weather": "fixed clear study",
+        "timeOfDay": "fixed warm directional study"
+      },
+      "limitations": [
+        "Synthetic wetland microtopography, not surveyed hydrology.",
+        "Far marsh simplified; no tree islands inserted without source palette."
+      ]
+    },
+    "camera": [
+      70,
+      50,
+      85
+    ],
+    "errors": []
+  }
+]

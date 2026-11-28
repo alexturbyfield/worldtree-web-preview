@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-25",
+  "actor": "human",
+  "input": "explicit conversation",
+  "decision": "prefer-C-and-increase-density",
+  "preferredCandidate": "C broken arched highlight tufts",
+  "reason": "C feels best. Go Dense with it now",
+  "scope": "Grass representation/density direction, retaining sparse C tree; not final approval of dense render",
+  "evidence": "artifacts/tall-tufts/comparison.png",
+  "nextExperiment": "artifacts/dense-tufts/record.json",
+  "finalVisualApproval": false
+}

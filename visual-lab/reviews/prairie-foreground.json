@@ -1,0 +1,89 @@
+{
+  "task": "Fill and frame the prairie foreground",
+  "reference": "prairie-wave3-primary, actual image reinspected",
+  "hypothesis": "Overlapping grass, seedhead, flower and low-shrub pockets at the lateral foreground provide a natural frame while low cover connects into a readable staging opening.",
+  "scope": "One prairie-only dressing file. Retained tree specimens, terrain, camera, lighting and grass representation. Existing middle communities keep their own unchanged random streams.",
+  "file": "src/lib/forest/wave3-prairie-dressing.ts",
+  "review": {
+    "reviewer": "Primary Codex actual hero and elevated screenshot interpretation",
+    "decision": "Retain for review",
+    "humanApproval": null,
+    "observations": [
+      "Both lateral foreground edges are now occupied by dimensional grass and flower silhouettes instead of mostly empty substrate.",
+      "Patch overlap and varied heights connect the side framing into existing middle shrubs.",
+      "Center remains readable; low plants soften the opening without a raised or circular clearing.",
+      "Grass pigmentation is still pale and uniform; this is not final concept fidelity."
+    ]
+  },
+  "validation": {
+    "typescript": "passed",
+    "captureErrors": [],
+    "cameraMatched": true,
+    "settingsMatched": true,
+    "before": [
+      {
+        "frame": 6,
+        "calls": 17,
+        "triangles": 718736,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      },
+      {
+        "frame": 7,
+        "calls": 17,
+        "triangles": 718736,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.40000003576278687
+      },
+      {
+        "frame": 8,
+        "calls": 17,
+        "triangles": 718736,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.3999999761581421
+      }
+    ],
+    "after": [
+      {
+        "frame": 6,
+        "calls": 22,
+        "triangles": 959328,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 7,
+        "calls": 22,
+        "triangles": 959328,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.5
+      },
+      {
+        "frame": 8,
+        "calls": 22,
+        "triangles": 959328,
+        "points": 0,
+        "lines": 0,
+        "cpuSubmissionMs": 0.40000003576278687
+      }
+    ],
+    "staging": {
+      "center": [
+        0,
+        26
+      ],
+      "radius": 0.45,
+      "conservativeRockFernBoundsOverlaps": [],
+      "limitation": "Bounds detector for dressing, not character physics or exact triangle collision; low cover is deliberately traversable."
+    },
+    "limitation": "Root-position exclusions and image inspection are not character-physics certification. No mobile-device approval or broad regression suite."
+  },
+  "comparison": "artifacts\\prairie-foreground\\comparison.png",
+  "inspection": "artifacts\\prairie-foreground\\after\\prairie-29-inspection.png",
+  "noCommitPushDeploy": true
+}

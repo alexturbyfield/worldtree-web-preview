@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-28T04:29:50.253564+00:00",
+  "actor": "user",
+  "text": "Let's prep for that. All regions we've edited are accepted. Push these changes and merge them into master",
+  "status": "human-approved-artistic-baselines",
+  "scope": "Latest retained checkpoints for all developed regional environment directions, including previously provisional tropical dry forest and Andean puna. Historical agent critiques and rejected candidates remain unchanged.",
+  "coverage": {
+    "biomeFamilies": 14,
+    "regionalRecipeDirections": 15,
+    "scenes": [
+      {
+        "id": "puget",
+        "biomeId": 5,
+        "status": "human-approved-regional-artistic-baseline"
+      },
+      {
+        "id": "savanna",
+        "biomeId": 7,
+        "status": "human-approved-regional-artistic-baseline"
+      },
+      {
+        "id": "rainforest",
+        "biomeId": 1,
+        "status": "human-approved-regional-artistic-baseline"
+      },
+      {
+        "id": "alpine",
+        "biomeId": 5,
+        "status": "human-approved-regional-artistic-baseline"
+      },
+      {
+        "id": "desert",
+        "biomeId": 13,
+        "status": "human-approved-regional-artistic-baseline"
+      },
+      {
+        "id": "mangrove",
+        "biomeId": 14,
+        "status": "human-approved-regional-artistic-baseline"
+      },
+      {
+        "id": "flooded-grassland",
+        "biomeId": 9,
+        "status": "human-approved-regional-artistic-baseline"
+      },
+      {
+        "id": "boreal",
+        "biomeId": 6,
+        "status": "human-approved-regional-artistic-baseline"
+      },
+      {
+        "id": "temperate-woodland",
+        "biomeId": 4,
+        "status": "human-approved-regional-artistic-baseline"
+      },
+      {
+        "id": "tundra",
+        "biomeId": 11,
+        "status": "human-approved-regional-artistic-baseline"
+      },
+      {
+        "id": "prairie",
+        "biomeId": 8,
+        "status": "human-approved-regional-artistic-baseline"
+      },
+      {
+        "id": "mediterranean",
+        "biomeId": 12,
+        "status": "human-approved-regional-artistic-baseline"
+      },
+      {
+        "id": "tropical-dry-forest",
+        "biomeId": 2,
+        "status": "human-approved-regional-artistic-baseline"
+      },
+      {
+        "id": "andean-puna",
+        "biomeId": 10,
+        "status": "human-approved-regional-artistic-baseline"
+      },
+      {
+        "id": "tropical-pine-oak",
+        "biomeId": 3,
+        "status": "human-approved-regional-artistic-baseline"
+      }
+    ]
+  },
+  "acceptedLatestImages": {
+    "tropical-pine-oak": "artifacts/tropical-pine-branch-values/final.png",
+    "andean-puna": "artifacts/andean-puna/final.png",
+    "tropical-dry-forest": "artifacts/dry-forest-brush/final.png",
+    "mediterranean-holm": "artifacts/holm-cork-palette/tiny-hero.png"
+  },
+  "limits": [
+    "Not global ecoregion or exact species-occurrence validation",
+    "Not mobile performance approval",
+    "Not authorization to enable global recipes or deploy manually"
+  ],
+  "authorizedGitActions": [
+    "Commit accumulated work",
+    "Push feature branch",
+    "Merge into master",
+    "Push master"
+  ],
+  "integration": {
+    "featureBranch": "feat/material-workbench",
+    "requestedTarget": "master",
+    "base": "origin/main",
+    "reason": "Remote default is main; master did not exist. Create requested target without renaming default."
+  },
+  "validation": {
+    "typecheck": "passed",
+    "targetedTests": {
+      "passed": 20,
+      "failed": 0
+    },
+    "productionBuild": "passed"
+  }
+}

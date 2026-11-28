@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "domain": "Landscape Color and Atmosphere",
+  "parameters": {
+    "paletteGuidance": {
+      "highlight": "#FFE0A0",
+      "body": "#F4BD55",
+      "amber": "#D99B37",
+      "ochre": "#A87935",
+      "shade": "#675E43",
+      "middle": "#E7B65D",
+      "straw": "#C4B48B",
+      "haze": "#91A5A0"
+    },
+    "actualScope": "Pigment guidance, not fixed pixels; not every supplied swatch is used verbatim.",
+    "addedReliefScale": 0.5,
+    "originalInnerTerrain": "Unchanged to preserve tree/camera/rock contacts",
+    "distanceTransitions": [
+      {
+        "rangeMeters": [
+          12,
+          65
+        ],
+        "pigment": "#E7B65D",
+        "mix": 0.4
+      },
+      {
+        "rangeMeters": [
+          55,
+          130
+        ],
+        "pigment": "#C4B48B",
+        "mix": 0.6
+      },
+      {
+        "rangeMeters": [
+          110,
+          185
+        ],
+        "pigment": "#91A5A0",
+        "mix": 0.6
+      }
+    ],
+    "worldAnchor": [
+      0,
+      34
+    ]
+  },
+  "rules": [
+    {
+      "id": "LC1",
+      "principle": "Coordinate terrain and vegetation pigments before adding detail.",
+      "referenceEvidence": [
+        {
+          "source": "artifacts/golden-plains-trees/01-reference-observations.json",
+          "observation": "Connected golden grass masses share base/shadow colors across ground and growth."
+        }
+      ],
+      "implementationHypothesis": "Use the same world-space pigment/painted texture fields for terrain and real blades.",
+      "renderEvidence": [
+        "artifacts/golden-plains-trees/landscape-stage.png",
+        "artifacts/golden-plains-trees/grass-stage.png"
+      ],
+      "result": "Warmer coherent substrate supports sparse geometry; material wiring bug in first edge batch was fixed.",
+      "knownLimitations": "Current midground still has separated marks; not proof of a complete swath solution.",
+      "constraints": {
+        "universalPrinciple": "Shared pigment relationships; exact gold palette is biome-specific.",
+        "species": [
+          "umbrella-acacia visual study"
+        ],
+        "biome": [
+          "savanna"
+        ],
+        "otherBiomes": "Untested; do not apply numerical profiles automatically"
+      },
+      "status": "experimentally-supported",
+      "humanApproval": null
+    },
+    {
+      "id": "LC2",
+      "principle": "Distance compresses color contrast continuously.",
+      "referenceEvidence": [
+        {
+          "source": "artifacts/golden-plains-trees/01-reference-observations.json",
+          "observation": "Near gold gives way to quieter straw and blue-sage near the horizon."
+        }
+      ],
+      "implementationHypothesis": "Overlapping smooth world-distance pigment ramps; preserve existing sky/exposure.",
+      "renderEvidence": [
+        "artifacts/golden-plains-trees/before-after.png",
+        "artifacts/golden-plains-trees/seed-checks.png"
+      ],
+      "result": "Ground/grass fades smoothly across tested views/seeds without discrete color bands.",
+      "knownLimitations": "Other trees retain existing distance response; atmosphere is not physical volumetric scattering.",
+      "constraints": {
+        "universalPrinciple": "Distance hierarchy generalizes; transition scales/pigments need local calibration.",
+        "species": [
+          "umbrella-acacia visual study"
+        ],
+        "biome": [
+          "savanna"
+        ],
+        "otherBiomes": "Untested; do not apply numerical profiles automatically"
+      },
+      "status": "experimentally-supported",
+      "humanApproval": null
+    },
+    {
+      "id": "LC3",
+      "principle": "Terrain silhouette must express biome identity.",
+      "referenceEvidence": [
+        {
+          "source": "artifacts/golden-plains-trees/01-reference-observations.json",
+          "observation": "The reference is predominantly an open plain with occasional shallow landforms and distant geology."
+        }
+      ],
+      "implementationHypothesis": "Halve added continuation relief, retain low inner terrain and distant illustrated geology.",
+      "renderEvidence": [
+        "artifacts/golden-plains-trees/landscape-stage.png",
+        "artifacts/golden-plains-trees/seed-checks.png"
+      ],
+      "result": "Inspection reads as broader plains while terrain continuity remains.",
+      "knownLimitations": "Reduction applies to added apron relief, not every original ground amplitude; drainage is preserved visually, not hydrologically simulated.",
+      "constraints": {
+        "universalPrinciple": "Match landform scale to biome; do not use this flatness for all environments.",
+        "species": [
+          "umbrella-acacia visual study"
+        ],
+        "biome": [
+          "savanna"
+        ],
+        "otherBiomes": "Untested; do not apply numerical profiles automatically"
+      },
+      "status": "experimentally-supported",
+      "humanApproval": null
+    },
+    {
+      "id": "LC4",
+      "principle": "Fine detail should be localized while medium forms remain connected.",
+      "referenceEvidence": [
+        {
+          "source": "artifacts/golden-plains-trees/01-reference-observations.json",
+          "observation": "Fine foreground blades support larger grass swaths, rather than becoming equally strong marks everywhere."
+        }
+      ],
+      "implementationHypothesis": "Near cupped blades and sparse seed heads; cheap mid blades with reduced height at distance; far material dominance.",
+      "renderEvidence": [
+        "artifacts/golden-plains-trees/grass-stage.png",
+        "artifacts/golden-plains-trees/grass-native-crop.png"
+      ],
+      "result": "Cost decreases and near parallax is present, but connected midground swaths remain incomplete.",
+      "knownLimitations": "Do not promote cheaper geometry or sparse coverage into artistic success.",
+      "constraints": {
+        "universalPrinciple": "Frequency hierarchy universal; grass geometry/sparsity specific to this study.",
+        "species": [
+          "umbrella-acacia visual study"
+        ],
+        "biome": [
+          "savanna"
+        ],
+        "otherBiomes": "Untested; do not apply numerical profiles automatically"
+      },
+      "status": "proposed",
+      "humanApproval": null
+    },
+    {
+      "id": "LC5",
+      "principle": "Surface light must preserve rich shade without a global color filter.",
+      "referenceEvidence": [
+        {
+          "source": "artifacts/golden-plains-trees/01-reference-observations.json",
+          "observation": "Selective warm highlights coexist with cooler readable interiors/valleys."
+        }
+      ],
+      "implementationHypothesis": "Keep physical sun and cast shadows; use shared localized world pigment/light response, no grass shadow casting.",
+      "renderEvidence": [
+        "artifacts/golden-plains-trees/before-after.png"
+      ],
+      "result": "No rectangular card shadows; ground remains continuous under real blade edges.",
+      "knownLimitations": "Some mid blades remain dark accents; not a validated physically based grass BRDF.",
+      "constraints": {
+        "universalPrinciple": "Lighting coherence generalizes; opacity/normal response must match representation.",
+        "species": [
+          "umbrella-acacia visual study"
+        ],
+        "biome": [
+          "savanna"
+        ],
+        "otherBiomes": "Untested; do not apply numerical profiles automatically"
+      },
+      "status": "experimentally-supported",
+      "humanApproval": null
+    },
+    {
+      "id": "LC-C2-field",
+      "principle": "World-space local value regions should frame a luminous middle without following the screen.",
+      "referenceEvidence": [
+        {
+          "source": "artifacts/c-fidelity/01-reference-observations.json",
+          "observation": "Warm dark foreground masses frame luminous golden plains; individual blades support broad values rather than dominate them."
+        }
+      ],
+      "implementationHypothesis": "Irregular world-Z progression, coherent sweep field, shared ground/grass pigments, retained distance atmosphere.",
+      "renderEvidence": [
+        "artifacts/c-fidelity/comparison.png",
+        "artifacts/c-fidelity/seed-checks.png"
+      ],
+      "result": "Warmer shaded foreground and lighter middle are stable in hero and rotated elevated views across3seeds.",
+      "knownLimitations": "Improvement is modest at seed29; broad foreground remains underdressed. The world-axis field is composed for this anchored encounter, not a universal geography rule.",
+      "constraints": {
+        "universalPrinciple": "Test relationships, not copied numeric defaults.",
+        "species": [],
+        "biome": [
+          "savanna"
+        ],
+        "otherBiomes": "Not tested; preserve Puget and rainforest defaults"
+      },
+      "status": "experimentally-supported",
+      "humanApproval": null
+    },
+    {
+      "id": "LC-C2-solid-negative",
+      "principle": "Dimensional geometry alone does not create soft painterly vegetation masses.",
+      "referenceEvidence": [
+        {
+          "source": "artifacts/c-fidelity/01-reference-observations.json",
+          "observation": "Warm dark foreground masses frame luminous golden plains; individual blades support broad values rather than dominate them."
+        }
+      ],
+      "implementationHypothesis": "Closed triangular blade cross sections, curved centerlines, sparse seed heads, instancing and shared pigment.",
+      "renderEvidence": [
+        "artifacts/c-fidelity/grass-rejected.png",
+        "artifacts/visual-quality/c-fidelity-integrated/savanna-hero.png"
+      ],
+      "result": "Two-segment version looked like gold chips. Four segments reduced angular chips but close views still show stiff folded ribbons; 208226 scene triangles versus107962 baseline is not justified.",
+      "knownLimitations": "Reject this implementation, not the general idea of geometry-based grass. Next prototype needs smooth curved normals, varied growth trajectories and connected clump silhouettes before population scaling.",
+      "constraints": {
+        "universalPrinciple": "Test relationships, not copied numeric defaults.",
+        "species": [],
+        "biome": [
+          "savanna"
+        ],
+        "otherBiomes": "Not tested; preserve Puget and rainforest defaults"
+      },
+      "status": "rejected",
+      "humanApproval": null
+    }
+  ]
+}

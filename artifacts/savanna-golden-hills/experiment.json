@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "scene": "savanna",
+  "worldSeeds": [
+    "29",
+    "41",
+    "73"
+  ],
+  "presentationSeed": "reference-recipe-1",
+  "parameters": {
+    "revision": 2,
+    "grassInstances": 2200,
+    "frameGrass": 480,
+    "backdropRadius": 145,
+    "backdropHeight": 80,
+    "terrainContinuation": 330,
+    "artDirection": "asymmetric weathered foreground; honey-gold middle; irregular blue-green shadow rolls; illustrated hill continuity"
+  },
+  "references": [
+    "savanna-composition",
+    "savanna-grass",
+    "savanna-light",
+    "savanna-geology"
+  ],
+  "baseline": "r-full previous C2 (unchanged)",
+  "selected": "r-golden R2",
+  "rounds": [
+    {
+      "id": 1,
+      "decision": "revise",
+      "review": "artifacts/savanna-golden-hills/r1-review.json",
+      "sources": "artifacts/savanna-golden-hills/r1-source"
+    },
+    {
+      "id": 2,
+      "decision": "retain-provisionally",
+      "review": "artifacts/savanna-golden-hills/r2-review.json",
+      "sources": "artifacts/savanna-golden-hills/r2-source"
+    },
+    {
+      "id": 3,
+      "decision": "reject/revert",
+      "review": "artifacts/savanna-golden-hills/r3-review.json",
+      "sources": "artifacts/savanna-golden-hills/r3-source"
+    }
+  ],
+  "humanReview": null,
+  "sourceHashes": {
+    "src/lib/forest/savanna-recipe.ts": "b8145056ddc2d9eca4b62fd6d72126cc2268ced8669c0a3d28b8a843afc82074",
+    "src/lib/forest/visual-lab.ts": "7995aba1cab7b4d2178f10afcd8d37ea0a0f7af5b1e748ea838a03efafe6be4b",
+    "visual-lab/savanna-recipe.json": "93e13b1c4a384f623d2e01d353b6eb2f06c2df20e08cc8056b16e4c256a2260f",
+    "public/assets/savanna-hills/golden-ridges-v1.webp": "4578108a137fb9bab64f90537fa3d6f5efac80facd8cd05ec7b7e7f8c7cab0ce"
+  },
+  "asset": "public/assets/savanna-hills/golden-ridges-v1.webp",
+  "assetProvenance": "artifacts/savanna-golden-hills/asset-provenance.json",
+  "sameCamera": true
+}

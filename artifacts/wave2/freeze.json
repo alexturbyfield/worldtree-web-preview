@@ -1,0 +1,29 @@
+{
+  "date": "2026-11-26T23:16:50.173Z",
+  "correctionRoundsUsed": 3,
+  "developmentSeeds": [
+    29,
+    41,
+    73
+  ],
+  "holdouts": {
+    "boreal": 20717,
+    "temperate": 23819,
+    "tundra": 26123
+  },
+  "sourceHashes": {
+    "src/lib/forest/wave2-shared.ts": "b684110a5d867dd6ea5f77f402781c41ac13dcb0d6d10befe0a07a1cde132e8e",
+    "src/lib/forest/wave2-boreal.ts": "359511e62da872533a5ae182163ccd87f6cfabe1234c2bed949717755e118b4a",
+    "src/lib/forest/wave2-temperate.ts": "fd1e0bcc0286805036841aad32a5567d5506da4cdf424aeb252314ab8f929555",
+    "src/lib/forest/wave2-tundra.ts": "01dd2375fd8ce5eeec06d09d32dc92992169011beab643cc4aac8b9b140e681b",
+    "src/lib/forest/wave1.ts": "1a675316911dcac5cedf58dddf347c5910b7fb1e19b1109286f5a060f7682e1d",
+    "src/lib/forest/wave1-impostors.ts": "e3e03232bab8f98ad5b22a5e10f5de9a95bce06f910980c14cdb0886fed68701"
+  },
+  "policy": "No artistic changes after holdout generation. R1 sparse prototype, R2 cover/bake rejected, R3 retains fields but needs enclosure, R4 selected as review checkpoint, not visual approval.",
+  "postFreezeTechnicalCorrection": {
+    "file": "src/lib/forest/painted-renderer.ts",
+    "hash": "708fcc7adb2cff42a23423662adfe00048778ca68547ba4d6aaa75d764281f07",
+    "reason": "New opt-in study pick callback maps presentation occurrence indices to canonical source IDs. No scene parameters, geometry, shaders or artistic choices changed; protected previews bypass this mapping.",
+    "artisticHoldoutTuning": false
+  }
+}

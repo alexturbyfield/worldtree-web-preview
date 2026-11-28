@@ -1,0 +1,54 @@
+{
+  "checks": [
+    {
+      "id": "boreal-finland",
+      "kind": "boreal",
+      "deterministic": true,
+      "sourceUnchanged": true,
+      "trees": 48,
+      "candidateSpecies": [
+        "Betula pubescens",
+        "Pinus sylvestris",
+        "Picea obovata",
+        "Picea abies",
+        "Betula pendula"
+      ]
+    },
+    {
+      "id": "temperate-europe",
+      "kind": "temperate",
+      "deterministic": true,
+      "sourceUnchanged": true,
+      "trees": 34,
+      "candidateSpecies": [
+        "Quercus robur",
+        "Fagus sylvatica",
+        "Betula pendula"
+      ]
+    },
+    {
+      "id": "tundra-alaska",
+      "kind": "tundra",
+      "deterministic": true,
+      "sourceUnchanged": true,
+      "trees": 0,
+      "candidateSpecies": []
+    },
+    {
+      "id": "boreal-birch-edge",
+      "kind": "boreal",
+      "deterministic": true,
+      "sourceUnchanged": true,
+      "trees": 23,
+      "candidateSpecies": [
+        "Betula pubescens"
+      ]
+    }
+  ],
+  "guardCasesPassed": [
+    "RockIce",
+    "wrong biome",
+    "unknown/ocean"
+  ],
+  "limits": "Regional source candidates, not verified point occurrences; species architecture fallback remains labelled"
+}

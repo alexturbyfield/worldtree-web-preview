@@ -1,0 +1,34 @@
+{
+  "staging": {
+    "capsuleRadius": 0.35,
+    "bodyHeight": 1.7,
+    "approachRadius": 0.85,
+    "minimumGroundAboveWater": 0.13725945311205892,
+    "rootIntrusions": 0,
+    "shortGrassHeightBound": 0.08,
+    "note": "Conservative source-segment sweep and dry approach samples, not a character physics simulation."
+  },
+  "intersections": [],
+  "actualGrassHeightInApproach": 0.030377584169977823,
+  "plan": {
+    "biome": "flooded",
+    "seed": "41",
+    "eye": [
+      9,
+      1.9868786765423327,
+      9
+    ],
+    "target": [
+      -61,
+      1.0868786765423328,
+      9.000000000000012
+    ],
+    "heading": 4.71238898038469,
+    "stagingClearance": 0.07771744783131797
+  },
+  "grassLuminance": {
+    "pixels": 55239,
+    "nearBlackFraction": 0
+  },
+  "errors": []
+}

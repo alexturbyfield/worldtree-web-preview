@@ -1,0 +1,22 @@
+[
+  {
+    "biome": "mangrove",
+    "view": "hero",
+    "retainedMatchesPrior": true
+  },
+  {
+    "biome": "mangrove",
+    "view": "inspection",
+    "retainedMatchesPrior": true
+  },
+  {
+    "biome": "flooded",
+    "view": "hero",
+    "retainedMatchesPrior": true
+  },
+  {
+    "biome": "flooded",
+    "view": "inspection",
+    "retainedMatchesPrior": true
+  }
+]

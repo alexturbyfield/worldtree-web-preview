@@ -1,0 +1,24 @@
+{
+  "references": "Three user-supplied images; kept private, not redistributed.",
+  "comparisons": [
+    {
+      "reference": 1,
+      "priority": "Soft layered green and pink crowns, dark interiors, bright outer leaves",
+      "implemented": "Pointed oval leaf fans and five-petal blossom clusters on curved overlapping patches; cool interior shading and warm highlights.",
+      "limits": "No garden environment, grass, bloom or atmospheric lighting is reproduced."
+    },
+    {
+      "reference": 2,
+      "priority": "Distinct full tree silhouettes with visible botanical branching",
+      "implemented": "Three side-by-side group and branch studies; existing broadleaf and Douglas-fir skeletons preserved.",
+      "limits": "The broadleaf and flowering studies share a generic oak skeleton. Blossoms do not identify an oak species or actual flowering behavior. Some patch repetition remains."
+    },
+    {
+      "reference": 3,
+      "priority": "Horizontal conifer tiers and hanging feathered needle sprays",
+      "implemented": "Fir sprays follow source branch directions, with tapered branchlet atlases and downward curvature.",
+      "limits": "Needle density, taper and bark remain artist-directed. The silhouette is coarser and more regular than the supplied fir reference."
+    }
+  ],
+  "status": "Prototype for user visual approval. Production forest renderer has not been modified."
+}

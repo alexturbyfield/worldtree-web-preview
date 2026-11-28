@@ -1,0 +1,25 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Wildloom Reference-to-Recipe",
+  "type":"object",
+  "required":["schemaVersion","id","biome","provenance","hypothesis","systemsChanged","parameters","rules","experiments"],
+  "properties":{
+    "schemaVersion":{"const":1},"id":{"type":"string"},"biome":{"type":"string"},
+    "provenance":{"type":"object","required":["references","negativeExamples","sourceVersion"]},
+    "hypothesis":{"type":"string"},"systemsChanged":{"type":"array","items":{"type":"string"}},
+    "parameters":{"type":"object"},
+    "rules":{"type":"array","items":{"$ref":"#/$defs/rule"}},
+    "experiments":{"type":"array","items":{"$ref":"#/$defs/experiment"}}
+  },
+  "$defs":{
+    "status":{"enum":["proposed","experimentally-supported","human-approved","rejected"]},
+    "rule":{"type":"object","required":["id","principle","referenceEvidence","intendedEffect","systems","implementation","evaluation","confidence","biomeConstraints","reuse","status","evidence"],"properties":{
+      "id":{"type":"string"},"principle":{"type":"string"},
+      "referenceEvidence":{"type":"array","items":{"type":"object","required":["referenceId","observation"],"properties":{"referenceId":{"type":"string"},"observation":{"type":"string"}}}},
+      "intendedEffect":{"type":"string"},"systems":{"type":"array","items":{"type":"string"}},"implementation":{"type":"string","description":"Inferred technique, never presented as a fact visible in the reference"},
+      "evaluation":{"type":"string"},"confidence":{"enum":["low","medium","high"]},"biomeConstraints":{"type":"string"},"reuse":{"type":"string"},"status":{"$ref":"#/$defs/status"},"evidence":{"type":"array"},"humanApproval":{"type":["object","null"]}
+    }},
+    "experiment":{"type":"object","required":["id","principleIds","implementation","captures","seeds","parameters","sourceVersion","demonstrated","improved","failure","reusable","specific","humanFeedbackNeeded","decision"],"properties":{"improved":{"type":["boolean","null"]},"decision":{"enum":["pending","accept-provisionally","revise","revert","reject"]}}}
+  },
+  "description":"Portable artistic relationships; renderer-free parameters. Reference observations and suggested techniques are separate. Agent support never implies human approval. Each status transition must cite actual images, seeds, parameters and frozen source; rejected techniques remain negative examples."
+}

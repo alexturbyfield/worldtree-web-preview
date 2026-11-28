@@ -1,0 +1,51 @@
+{
+  "visionAvailable": true,
+  "reason": "All six revised candidate frames were actually inspected, followed by native 160x90 thumbnails and 320x130 foreground crops alongside two supplied concepts. The hybrid has the most useful construction direction, but none is an attractive grassland or an overall improvement worth adopting. Keep the original scene and stop at the requested checkpoint after one revision per representation.",
+  "imagesInspected": [
+    "artifacts/visual-quality/lab-S-r2-sa/savanna-hero.png",
+    "artifacts/visual-quality/lab-S-r2-sa/savanna-inspection.png",
+    "artifacts/visual-quality/lab-S-r2-sb/savanna-hero.png",
+    "artifacts/visual-quality/lab-S-r2-sb/savanna-inspection.png",
+    "artifacts/visual-quality/lab-S-r2-sc/savanna-hero.png",
+    "artifacts/visual-quality/lab-S-r2-sc/savanna-inspection.png",
+    "artifacts/visual-quality/lab-S-r2-baseline/savanna-hero.png",
+    "artifacts/savanna-representation-study/thumbnails.png",
+    "artifacts/savanna-representation-study/sa-detail.png",
+    "artifacts/savanna-representation-study/sb-detail.png",
+    "artifacts/savanna-representation-study/sc-detail.png"
+  ],
+  "ranking": ["sc", "sb", "sa"],
+  "recommendation": "Reject all for adoption. For a subsequent authorized study, pursue the hybrid principle with continuous directional grass swath construction; retain the shared field but replace the present discrete/faceted mass geometry. This is a future direction, not provisional approval of sc.",
+  "candidates": [
+    {
+      "id": "sa",
+      "betterThanPrevious": false,
+      "goodEnough": false,
+      "reason": "Major: the 640px and detail views show angular, dark-edged chunks that read as rocks/debris rather than flowing grass. Thumbnail: the chunks still compete as equal-sized marks and the central area remains barren. Inspection: connected rolling swathes are absent. Hypothesis: crossed curved surfaces and height-dependent normals produce disconnected facets, while compressed atlas color suppresses internal brush structure. Failure remains implementation/representation quality, not insufficient count. Reject.",
+      "severity": "major",
+      "decision": "reject",
+      "technicalTradeoff": "580 target instances; 9 calls; 58,710 submitted triangles; a padded 2048 RGBA atlas adds texture/alpha-test cost. Fewer instances do not produce an artistic benefit."
+    },
+    {
+      "id": "sb",
+      "betterThanPrevious": false,
+      "goodEnough": false,
+      "reason": "Major: broad color is calmer and the regular grid is reduced, but at thumbnail and normal scale it reads as bare ochre ground. Detail reveals sparse dark sticks/dotted aliasing rather than convincing grass. The reviewed inspection ROI flags 22.2% near-black among only 72 silhouette pixels; this is a small, shadow-contaminated proxy, not proof of a physical lighting defect. Hypothesis: a color/bump-only material lacks sufficient directional vegetation structure and horizon/parallax cues. The material-only representation is inadequate in its current form. Reject.",
+      "severity": "major",
+      "decision": "reject",
+      "technicalTradeoff": "650 target instances; 8 calls; 21,150 triangles. Lowest geometry cost, but shader noise/bump work and missing grass identity prevent selection."
+    },
+    {
+      "id": "sc",
+      "betterThanPrevious": false,
+      "goodEnough": false,
+      "reason": "Major: the low canopy creates more intermediate sweeps than B, but the detail and inspection views still show long rectangular/faceted strips and isolated angular card masses. Thumbnail is quieter than baseline but lacks the reference's luminous continuous golden grass. Hypothesis: blended displaced patches still expose topology/normals and the common card component inherits A's visual failure. Hybrid is the strongest future construction hypothesis, not a successful current candidate. Reject.",
+      "severity": "major",
+      "decision": "reject",
+      "technicalTradeoff": "800 target instances; 11 calls; 80,870 triangles (41% above baseline), plus transparent overlap and atlas cost. No demonstrated visual benefit justifies promoting this overhead."
+    }
+  ],
+  "multiscaleInterpretation": "Lower-half edge fraction at 640px falls from baseline 44.4% to A 19.7%, B 4.4%, C 11.0%. References measure 12.0% and 7.2%, but C matching that range does not make its facets attractive. At 160px A still measures 33.0% versus baseline 26.7%, showing that replacing fine noise with equally insistent chunks can retain poor mass organization. Reference framing/camera differ; these measurements diagnose and cannot rank art.",
+  "humanReview": null,
+  "stopReason": "Two all-rejected rounds; each of three representations has received its one permitted revision. No final-resolution renders, no adoption, no further iteration before human art direction."
+}

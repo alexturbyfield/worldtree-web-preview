@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-27T22:38:53.248Z",
+  "request": "Bring far background trees closer; quick one-image pass",
+  "seed": 29,
+  "image": "artifacts/dry-forest-brush/final.png",
+  "baseline": "artifacts/dry-forest-corrected/final.png",
+  "source": "src/lib/forest/tropical-dry-forest.ts",
+  "hypothesis": "Compress distant stand and shrub depth to overlap silhouettes behind the foreground",
+  "change": "Same tree/shrub counts, distant stand width 220 to110m and depth interval -40..-310 to -8..-123; medium roles pulled forward; distant shrubs tightened",
+  "visionReviewer": "Implementing assistant",
+  "observed": "More overlapping woody silhouettes behind pink tree and side brush; front-center opening preserved. Foliage repetition and pale distant matte persist.",
+  "decision": "retain for user review",
+  "humanApproval": null,
+  "checks": "TypeScript passed; capture reported no browser errors; 134 calls, 2924474 triangles",
+  "budget": "One source pass, one screenshot; no additional seeds or deployment"
+}

@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "experiment": "wave1-mangrove",
+  "date": "2026-11-25T20:04:31.496239",
+  "status": "provisional technical checkpoint; not human approved",
+  "roundLimit": 3,
+  "roundsUsed": 3,
+  "retained": "r2",
+  "frozenBeforeHoldout": true,
+  "trainingSeeds": [
+    29,
+    41
+  ],
+  "holdoutSeed": 617,
+  "sourceHashes": {
+    "src/lib/forest/wave1-mangrove.ts": "f28d8f4a97943353ddb663f2138d06c67ca12e3e9c86fe1146e821643e04cd1f",
+    "src/lib/vegetation.ts": "388467b3615d80cb7932e5bc070e61173c44fed2ef8b21e9891264d9cbf52eae"
+  },
+  "references": [
+    "mg-usgs-everglades-proproots"
+  ],
+  "inputs": {
+    "lat": 25.2,
+    "lon": -80.9,
+    "biome": 14,
+    "ecoregion": 612,
+    "habitat": "coastal",
+    "structureSeed": "grove-1",
+    "appearanceSeed": "garden"
+  },
+  "camera": {
+    "hero": {
+      "position": [
+        0,
+        2.05,
+        31
+      ],
+      "target": [
+        -2,
+        2,
+        -35
+      ]
+    },
+    "inspection": {
+      "position": [
+        70,
+        50,
+        85
+      ],
+      "target": [
+        0,
+        1,
+        -25
+      ]
+    }
+  },
+  "render": {
+    "width": 640,
+    "height": 360,
+    "pixelRatio": 1,
+    "fov": 47
+  },
+  "humanPreference": null,
+  "reviews": [
+    {
+      "round": 1,
+      "decision": "revise",
+      "evidence": "Corrected main-camera images show too-crisp reflection and flat pale shore; original inverted-camera hero evidence invalid."
+    },
+    {
+      "round": 2,
+      "decision": "retain-provisionally",
+      "evidence": "Corrected main-camera images improve damp substrate and restrain mirror response, but canopy/shore/inspection continuation remain major defects."
+    },
+    {
+      "round": 3,
+      "decision": "reject-and-revert-to-r2",
+      "evidence": "Generic stacked ellipsoid backdrop closes some gaps but reads mechanically in actual hero/inspection."
+    }
+  ],
+  "finalTechnicalCorrection": "Presentation-reuse tree indices map to original source indices for inspection; no geometric/artistic change.",
+  "integrationFreeze": "artifacts/wave1-mangrove/freeze.json",
+  "holdoutNote": "617 first generated after original art-source freeze; parent reproduced after selection-index-only correction. It is revealed and may not be reused as unseen.",
+  "parentReview": "visual-lab/wave1/parent-review.json",
+  "goodEnoughToApprove": false,
+  "humanApproved": false
+}

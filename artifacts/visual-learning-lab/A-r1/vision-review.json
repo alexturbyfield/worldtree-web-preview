@@ -1,0 +1,80 @@
+{
+  "visionAvailable": true,
+  "reviewScope": "targeted parameter family in a fixed scene; not whole-scene approval",
+  "imagesInspected": [
+    "artifacts/visual-quality/lab-A-r1-a1/savanna-hero.png",
+    "artifacts/visual-quality/lab-A-r1-a1/savanna-inspection.png",
+    "artifacts/visual-quality/lab-A-r1-a2/savanna-hero.png",
+    "artifacts/visual-quality/lab-A-r1-a2/savanna-inspection.png",
+    "artifacts/visual-quality/lab-A-r1-a3/savanna-hero.png",
+    "artifacts/visual-quality/lab-A-r1-a3/savanna-inspection.png"
+  ],
+  "inspectionComposite": "artifacts/visual-learning-lab/A-r1/inspection-strip.png",
+  "referenceIds": [
+    "savanna-composition",
+    "savanna-grass",
+    "savanna-light"
+  ],
+  "ranking": [
+    "a3",
+    "a1",
+    "a2"
+  ],
+  "reason": "All pass technical gates, but none meets the reference-led grass quality bar. Radial blade templates and coarse segment curvature are the likely causes; this is a hypothesis supported by the geometry code and visible spike forms. Retain the previous best.",
+  "candidates": [
+    {
+      "id": "a1",
+      "betterThanPrevious": true,
+      "goodEnough": false,
+      "reason": "Reads as grass rather than fern-like cards, but broad radial spikes and a flat olive-gold response are too artificial for the reference.",
+      "assessment": {
+        "biomeIdentity": "Grass identity improves",
+        "composition": "Opening and acacia unchanged",
+        "silhouette": "Broad pointed radial clumps look agave-like",
+        "vegetation": "Too stiff and repeated",
+        "groundRichness": "Coverage improves but center remains flat",
+        "terrain": "Unchanged simple historical hill",
+        "depth": "Near/middle/far structure retained",
+        "lighting": "No black clumps, but olive flatness remains",
+        "repetition": "Same radial spike pattern repeats",
+        "overallAppeal": "Relative improvement, not approval quality"
+      }
+    },
+    {
+      "id": "a2",
+      "betterThanPrevious": false,
+      "goodEnough": false,
+      "reason": "Lower triangle cost is a technical gain, but pale skeletal atlas forms look like weeds or debris and are less attractive than the retained baseline.",
+      "assessment": {
+        "biomeIdentity": "Weak golden-grass identity",
+        "composition": "Unchanged clear center",
+        "silhouette": "Pale branching card forms",
+        "vegetation": "Skeletal, weed-like",
+        "groundRichness": "Visible isolated debris inside opening",
+        "terrain": "Unchanged",
+        "depth": "Layering unchanged",
+        "lighting": "Overly pale vegetation despite acceptable dark-pixel metric",
+        "repetition": "Obvious repeated cards",
+        "overallAppeal": "Reject despite numerical efficiency"
+      }
+    },
+    {
+      "id": "a3",
+      "betterThanPrevious": true,
+      "goodEnough": false,
+      "reason": "The strongest relative grass treatment, with finer blades and clearer masses, but still uniformly pointed, rigid and too olive compared with the references.",
+      "assessment": {
+        "biomeIdentity": "Best grass silhouette of the three",
+        "composition": "Focal opening remains readable",
+        "silhouette": "Fine blades are still sharply segmented",
+        "vegetation": "Radial tufts lack coherent flowing lean",
+        "groundRichness": "Dense edges, sparse center",
+        "terrain": "Unchanged",
+        "depth": "Foreground mass stronger",
+        "lighting": "Readable golden/olive blades, insufficient subtle color hierarchy",
+        "repetition": "Template orientation and repeated radial form remain visible",
+        "overallAppeal": "Rank first; reject as not good enough"
+      }
+    }
+  ]
+}

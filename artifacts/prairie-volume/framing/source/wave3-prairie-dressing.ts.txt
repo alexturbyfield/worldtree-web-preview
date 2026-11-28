@@ -1,0 +1,125 @@
+import * as T from 'three';
+import {randomSource} from './random';
+import {brushGeometry,reedGeometry} from './savanna-recipe';
+import {meadowGeometry} from './wave1-meadow-detail';
+import {expansionHeight,type ExpansionPlan,type ExpansionPalette} from './wave2-shared';
+
+export interface PrairieCommunity {growth:number;moisture:number;soil:number;exposure:number;flow:number;staging:number}
+type Sample=(x:number,z:number)=>PrairieCommunity;
+type Shader=Parameters<T.MeshStandardMaterial['onBeforeCompile']>[0];
+
+/** One pigment implementation for terrain and every grass root. */
+export function prairiePigment(shader:Shader,field:T.Texture,detail:T.Texture,palette:ExpansionPalette){
+ Object.assign(shader.uniforms,{prField:{value:field},prDetail:{value:detail},prShade:{value:new T.Color(palette.ground[0])},prBody:{value:new T.Color(palette.ground[1])},prSun:{value:new T.Color(palette.ground[2])},prSoil:{value:new T.Color(palette.soil)}});
+ shader.fragmentShader=`uniform sampler2D prField,prDetail;uniform vec3 prShade,prBody,prSun,prSoil;
+ vec3 prairieRootPigment(vec3 world){
+  vec4 f=texture2D(prField,clamp(world.xz/4096.+.5,vec2(0.),vec2(1.)));
+  vec3 c=mix(prShade,prBody,clamp(f.r*.8+.15,0.,1.));
+  c=mix(c,vec3(.265,.320,.210),f.g*.28);
+  c=mix(c,prSun,smoothstep(.38,.70,f.b)*.92);
+  c=mix(c,prSoil,f.a*.78);
+  float ink=dot(texture2D(prDetail,world.xz/5.5).rgb,vec3(.2126,.7152,.0722));
+  float detail=(1.-smoothstep(28.,180.,distance(cameraPosition.xz,world.xz)))*.65;
+  return c*mix(1.,clamp(sqrt(max(.001,ink)/.22),.70,1.30),detail);
+ }
+ `+shader.fragmentShader;
+}
+
+function grassMaterial(field:T.Texture,detail:T.Texture,palette:ExpansionPalette,atlas?:T.Texture,flowers=false){
+ const m=new T.MeshStandardMaterial({...(atlas?{map:atlas}:{}),vertexColors:flowers,side:T.DoubleSide,roughness:1,alphaTest:atlas?.28:0});
+ m.onBeforeCompile=(shader,renderer)=>{
+  prairiePigment(shader,field,detail,palette);
+  shader.vertexShader=`varying vec3 prWorld,prRootN;varying float prHeight;attribute vec3 prairieRootNormal;${atlas?'attribute float brushTile;varying vec2 prAtlasUv;':''}${flowers?'attribute float prairiePetal;varying float prPetal;':''}\n`+shader.vertexShader;
+  shader.vertexShader=shader.vertexShader.replace('#include <begin_vertex>',`#include <begin_vertex>
+   prWorld=(modelMatrix*instanceMatrix*vec4(position,1.)).xyz;
+   prHeight=prWorld.y-(modelMatrix*instanceMatrix*vec4(0.,0.,0.,1.)).y;prRootN=prairieRootNormal;
+   ${atlas?'prAtlasUv=(vec2(mod(brushTile,2.),1.-floor(brushTile/2.))+uv)*.5;':''}
+   ${flowers?'prPetal=prairiePetal;':''}`);
+  shader.fragmentShader=`varying vec3 prWorld,prRootN;varying float prHeight;${atlas?'varying vec2 prAtlasUv;':''}${flowers?'varying float prPetal;':''}\n`+shader.fragmentShader;
+  shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>',atlas?`
+   vec4 prBrush=texture2D(map,prAtlasUv);diffuseColor.a*=prBrush.a;
+   diffuseColor.a*=1.-smoothstep(85.,190.,distance(cameraPosition.xz,prWorld.xz));
+  `:'');
+  shader.fragmentShader=shader.fragmentShader.replace('#include <metalnessmap_fragment>',`#include <metalnessmap_fragment>
+   vec3 prRoot=prairieRootPigment(prWorld);
+   float prTip=smoothstep(.16,.95,prHeight);
+   diffuseColor.rgb=mix(prRoot,prSun,prTip*.26);
+   ${atlas?'float prStroke=clamp(dot(prBrush.rgb,vec3(.2126,.7152,.0722))/.36,.86,1.23);diffuseColor.rgb*=mix(1.,prStroke,prTip*.35);':''}
+   ${flowers?'diffuseColor.rgb=mix(diffuseColor.rgb,vColor.rgb,prPetal);':''}`);
+  shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_begin>',`#include <normal_fragment_begin>
+   normal=normalize(mat3(viewMatrix)*normalize(prRootN)+normal*(.12+smoothstep(.1,1.,prHeight)*.18));`);
+ };
+ m.customProgramCacheKey=()=> 'prairie-root-shared-material-v1|'+!!atlas+'|'+flowers;
+ return m;
+}
+
+function forbGeometry(purple:boolean){
+ const positions:number[]=[],colors:number[]=[],petals:number[]=[],indices:number[]=[],r=randomSource(purple?'prairie-purple-forb':'prairie-yellow-forb');
+ const tri=(a:T.Vector3,b:T.Vector3,c:T.Vector3,color:T.Color,petal=0)=>{const n=positions.length/3;for(const v of [a,b,c]){positions.push(v.x,v.y,v.z);colors.push(color.r,color.g,color.b);petals.push(petal);}indices.push(n,n+1,n+2);};
+ const green=new T.Color('#617847'),flower=new T.Color(purple?'#9b79a6':'#d7b64e'),heart=new T.Color('#715932');
+ for(let stem=0;stem<4;stem++){
+  const a=stem*2.399,h=.36+r()*.40,root=new T.Vector3(Math.cos(a)*.12,0,Math.sin(a)*.12),top=root.clone().add(new T.Vector3(Math.cos(a)*.15,h,Math.sin(a)*.15));
+  tri(root,top.clone().add(new T.Vector3(.007,0,0)),top.clone().add(new T.Vector3(-.007,0,0)),green);
+  for(let j=1;j<4;j++){const base=root.clone().lerp(top,j/5),tip=base.clone().add(new T.Vector3(Math.cos(a+j*2.4)*.18,.04,Math.sin(a+j*2.4)*.18)),side=new T.Vector3(-(tip.z-base.z),.03,tip.x-base.x).multiplyScalar(.25);tri(base,base.clone().lerp(tip,.5).add(side),tip,green);tri(base,tip,base.clone().lerp(tip,.5).sub(side),green);}
+  for(let head=0;head<(purple?3:1);head++){
+   const center=top.clone().add(new T.Vector3(head*.025,head*.075,0)),radius=purple?.035:.075;
+   for(let petal=0;petal<(purple?5:8);petal++){const a=petal*Math.PI*2/(purple?5:8),out=center.clone().add(new T.Vector3(Math.cos(a)*radius,-.025,Math.sin(a)*radius)),side=new T.Vector3(-Math.sin(a)*radius*.25,0,Math.cos(a)*radius*.25),mid=center.clone().lerp(out,.62).add(new T.Vector3(0,.018,0));tri(center,mid.clone().add(side),out,flower,1);tri(center,out,mid.clone().sub(side),flower,1);}
+   for(let j=0;j<6;j++){const a=j*Math.PI/3,b=(j+1)*Math.PI/3;tri(center.clone().add(new T.Vector3(0,.009,0)),center.clone().add(new T.Vector3(Math.cos(a)*radius*.24,.005,Math.sin(a)*radius*.24)),center.clone().add(new T.Vector3(Math.cos(b)*radius*.24,.005,Math.sin(b)*radius*.24)),heart,1);}
+  }
+ }
+ const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(positions,3));g.setAttribute('color',new T.Float32BufferAttribute(colors,3));g.setAttribute('prairiePetal',new T.Float32BufferAttribute(petals,1));g.setIndex(indices);g.computeVertexNormals();return g;
+}
+
+function shrubGeometry(){
+ const positions:number[]=[],indices:number[]=[];
+ for(let branch=0;branch<11;branch++){
+  const a=branch*2.399,reach=.32+(branch%4)*.10,h=.42+(branch%3)*.19;
+  const n=positions.length/3,dx=Math.sin(a)*.008,dz=Math.cos(a)*.008;
+  positions.push(-dx,0,dz,dx,0,-dz,Math.cos(a)*reach+dx,h,Math.sin(a)*reach-dz,Math.cos(a)*reach-dx,h,Math.sin(a)*reach+dz);indices.push(n,n+1,n+2,n,n+2,n+3);
+  for(let node=1;node<6;node++)for(const side of [-1,1]){
+   const t=node/6,base=new T.Vector3(Math.cos(a)*reach*t,t*h,Math.sin(a)*reach*t),angle=a+side*.8,length=.13+(branch%3)*.02,tip=base.clone().add(new T.Vector3(Math.cos(angle)*length,.025,Math.sin(angle)*length)),cross=new T.Vector3(-Math.sin(angle)*length*.30,.03,Math.cos(angle)*length*.30),n=positions.length/3;
+   for(const v of [base,base.clone().lerp(tip,.5).add(cross),tip,base.clone().lerp(tip,.5).sub(cross)])positions.push(v.x,v.y,v.z);indices.push(n,n+1,n+2,n,n+2,n+3);
+  }
+ }
+ const g=new T.BufferGeometry();g.setAttribute('position',new T.Float32BufferAttribute(positions,3));g.setIndex(indices);g.computeVertexNormals();return g;
+}
+
+/** Dimensional functional forms; no claimed point occurrences or named flora. */
+export function mountPrairieDressing(scene:T.Scene,plan:ExpansionPlan,palette:ExpansionPalette,field:T.Texture,detail:T.Texture,load:(path:string)=>T.Texture,sample:Sample){
+ const random=randomSource(plan.seed+'|prairie-volume-v1'),group=new T.Group(),created:T.InstancedMesh[]=[],o=new T.Object3D();group.name='prairie-dimensional-communities';scene.add(group);
+ const atlas=load('/assets/savanna-brush/painted-tufts-v1.webp');
+ function batch(g:T.BufferGeometry,count:number,m:T.MeshStandardMaterial,name:string){const mesh=new T.InstancedMesh(g,m,count);mesh.name=name;mesh.receiveShadow=true;group.add(mesh);created.push(mesh);return mesh;}
+ const normal=(x:number,z:number)=>new T.Vector3(expansionHeight(plan,x-.3,z)-expansionHeight(plan,x+.3,z),.6,expansionHeight(plan,x,z-.3)-expansionHeight(plan,x,z+.3)).normalize();
+ const fill=(mesh:T.InstancedMesh,kind:'near'|'mid'|'fine'|'seed'|'flower')=>{
+  const normals=new Float32Array(mesh.count*3),tiles=new Float32Array(mesh.count);
+  const target=mesh.count;let placed=0;
+  for(let i=0;i<target;i++){
+   let x=0,z=0,f=sample(0,0),accepted=false;
+   for(let attempt=0;attempt<70;attempt++){
+    if(kind==='near'&&i<200||kind==='flower'&&i<32){x=(i%2?1:-1)*(2.0+random()*5.5);z=23+random()*11;}
+    else if(kind==='mid'){x=(random()-.5)*270;z=5-random()*240;}else{x=(random()-.5)*(kind==='near'?65:45);z=34-random()*(kind==='near'?85:65);}
+    f=sample(x,z);if(f.soil>.42||random()>.20+f.growth*.85)continue;
+    if(kind==='flower'&&(f.staging>.15||f.growth<.44||f.moisture<.28||f.moisture>.8))continue;
+    if((kind==='fine'||kind==='seed')&&f.staging>.2)continue;accepted=true;break;
+   }
+   if(!accepted)continue;
+   const growth=(.65+random()*.55)*(.55+f.growth*.65),height=growth*(1-f.staging*.88);
+   o.position.set(x,expansionHeight(plan,x,z)-.045,z);o.rotation.set(0,.35+f.flow*.7+(random()-.5)*.65,0);
+   o.scale.set(kind==='mid'?1.2+random()*.9:.70+random()*.65,kind==='flower'?.7+random()*.6:height,kind==='mid'?1.2+random()*.9:.70+random()*.65);o.updateMatrix();mesh.setMatrixAt(placed,o.matrix);
+   normal(x,z).toArray(normals,placed*3);tiles[placed]=Math.floor(random()*4);placed++;
+  }
+  mesh.count=placed;
+  mesh.geometry.setAttribute('prairieRootNormal',new T.InstancedBufferAttribute(normals,3));mesh.geometry.setAttribute('brushTile',new T.InstancedBufferAttribute(tiles,1));mesh.computeBoundingSphere();
+ };
+ const near=batch(brushGeometry(true,true,1.35),2300,grassMaterial(field,detail,palette,atlas),'prairie-near-brush-masses');fill(near,'near');
+ const mid=batch(brushGeometry(false,true,1.5),4200,grassMaterial(field,detail,palette,atlas),'prairie-middle-brush-masses');fill(mid,'mid');
+ const fine=batch(meadowGeometry(false),260,grassMaterial(field,detail,palette),'prairie-curved-fine-grass');fill(fine,'fine');
+ const seed=batch(reedGeometry(),140,grassMaterial(field,detail,palette),'prairie-dimensional-seedheads');fill(seed,'seed');
+ for(const purple of [false,true]){const flowers=batch(forbGeometry(purple),purple?120:160,grassMaterial(field,detail,palette,undefined,true),purple?'prairie-purple-forb-communities':'prairie-yellow-forb-communities');fill(flowers,'flower');}
+ const shrubs=batch(shrubGeometry(),12,new T.MeshStandardMaterial({color:'#657c4d',roughness:1,side:T.DoubleSide}),'prairie-regional-shrub-growth-forms');
+ for(let i=0;i<shrubs.count;i++){
+  const x=(i%2?1:-1)*(i<2?6+random()*2:7+random()*26),z=i<2?23+random()*3:22-random()*125,scale=.85+random()*.8;o.position.set(x,expansionHeight(plan,x,z),z);o.rotation.set(0,random()*6.283,0);o.scale.setScalar(scale);o.updateMatrix();shrubs.setMatrixAt(i,o.matrix);
+ }shrubs.computeBoundingSphere();
+ scene.userData.prairieDressing={instances:Object.fromEntries(created.map(m=>[m.name,m.count])),ecology:'Unnamed functional-form study: grasses, seedheads, forbs and sparse low shrubs. Regional NRCS evidence informs roles, not point occurrences.',source:'https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY014OK',shadows:'No per-grass-card cast shadows; terrain-directed receiving and smooth root normals.',mobileApproval:false};
+ return()=>{scene.remove(group);for(const m of created){m.geometry.dispose();(m.material as T.Material).dispose();m.dispose();}};
+}

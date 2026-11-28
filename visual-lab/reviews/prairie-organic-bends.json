@@ -1,0 +1,37 @@
+{
+  "task": "Prairie nonuniform limb bending",
+  "humanFeedback": {
+    "text": "Now it's too straight. Find a non uniform bending",
+    "reference": "artifacts/prairie-branch-taper/comparison.png",
+    "label": "Explicit correction request; not approval of a new candidate"
+  },
+  "hypothesis": "Uneven, signed smooth bends with independent amplitudes and spacing can sit between repeated arcing limbs and rigid straight runs.",
+  "implementation": "Each branch gets 2\u20134 unevenly spaced bend controls, changing bend direction and magnitude, smoothly interpolated using Hermite tangents. Separate curve random stream preserves the prior taper draws. Parent-relative branch and foliage attachment movement remains intact.",
+  "files": [
+    "src/lib/forest/prairie-tree-finish.ts",
+    "tests/prairie-tree-finish.test.ts"
+  ],
+  "review": {
+    "reviewer": "Codex primary actual hero and detail image inspection",
+    "decision": "Retain for human review",
+    "humanApproval": null,
+    "observations": [
+      "Close-up shows softer nonuniform changes in limb direction rather than straight rods.",
+      "Curvature does not recreate the same bow shape across limbs.",
+      "The earlier fast taper, bark and continuous joints remain.",
+      "Foliage sprays and crown mass distribution remain stylized."
+    ]
+  },
+  "checks": {
+    "typescript": "passed",
+    "targetedTest": "passed; restrained but visible bend variation, quick taper, joint continuity, finite UVs and source preservation",
+    "cameraUnchanged": true,
+    "renderSettingsUnchanged": true,
+    "trianglesBefore": 718736,
+    "trianglesAfter": 718736,
+    "captureErrors": [],
+    "protected": "No renderer or protected recipe edits in this pass."
+  },
+  "comparison": "artifacts\\prairie-organic-bends\\comparison.png",
+  "noCommitPushDeploy": true
+}

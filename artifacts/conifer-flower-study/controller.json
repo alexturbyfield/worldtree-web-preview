@@ -1,0 +1,21 @@
+{
+  "session": "user-authorized-conifer-and-flower-study",
+  "maxRounds": 3,
+  "rounds": [
+    {
+      "id": "R1",
+      "decision": "reject"
+    },
+    {
+      "id": "R2",
+      "decision": "revise"
+    },
+    {
+      "id": "R3",
+      "decision": "retain-provisionally"
+    }
+  ],
+  "status": "awaiting-human-review",
+  "technicalRegressionFixIsNotAnArtisticRound": true,
+  "humanApproval": null
+}

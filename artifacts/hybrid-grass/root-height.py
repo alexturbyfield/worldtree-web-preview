@@ -1,0 +1,10 @@
+from pathlib import Path
+p=Path('src/lib/forest/savanna-recipe.ts');s=p.read_text()
+s=s.replace("shader.vertexShader='varying vec3 recipeWorld;varying float fibreTip;'+", "shader.vertexShader=(hybrid&&role===2?'varying float grassHeight;':'')+'varying vec3 recipeWorld;varying float fibreTip;'+")
+s=s.replace("recipeWorld=(${world}).xyz;fibreTip=uv.y;", "recipeWorld=(${world}).xyz;fibreTip=uv.y;${hybrid&&role===2?'grassHeight=recipeWorld.y-(modelMatrix*instanceMatrix*vec4(0.,0.,0.,1.)).y;':''}")
+s=s.replace("shader.fragmentShader=shared+'\\nvarying vec3 recipeWorld;", "shader.fragmentShader=(hybrid&&role===2?'varying float grassHeight;':'')+shared+'\\nvarying vec3 recipeWorld;")
+s=s.replace("(1.-smoothstep(.03,.36,fibreTip))", "(1.-smoothstep(.06,.30,grassHeight))")
+s=s.replace("*smoothstep(.04,.45,brushLocal.y)", "*smoothstep(.06,.30,grassHeight)")
+s=s.replace("(.08*smoothstep(.08,.6,fibreTip))", "(.08*smoothstep(.06,.30,grassHeight))")
+s=s.replace("rootTextureFade:[.03,.36]", "rootTextureFadeMeters:[.06,.30]")
+p.write_text(s)

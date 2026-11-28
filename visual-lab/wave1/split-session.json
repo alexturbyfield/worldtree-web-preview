@@ -1,0 +1,59 @@
+{
+  "schemaVersion": 1,
+  "id": "wave1-split-artistic-refinement",
+  "status": "provisional opt-in checkpoint; not final biome approval",
+  "humanDirection": {
+    "source": "Wildloom Wave 1: Split Artistic Refinement",
+    "wetlands": "Acceptable structural progress; do not rebuild layouts. Judge lighting, color, material response and atmosphere.",
+    "desert": "Current structure/material inadequate; separate geological and sparse vegetation representation pass.",
+    "finalApproval": false
+  },
+  "loaded": ["AGENTS.md", "visual-lab/art-direction-policy.json", "docs/visual-quality-workflow.md", "visual-lab/wave1/detail-session.json", "prior retained/rejected image evidence", "visual-review skill", "mobile-budget skill", "installed Next use-client guide"],
+  "baseline": "artifacts/wave1-detail/freeze.json and new matched artPass-absent captures under artifacts/wave1-split/r2 and validation",
+  "references": "Existing user-approved desert/mangrove/flooded concepts indexed by visual-lab/wave1/detail-session.json; private reference rights unchanged",
+  "vision": {
+    "available": true,
+    "reviewer": "root agent using actual view_image visual interpretation",
+    "independentReviewThisSession": false,
+    "imagesInspected": ["artifacts/wave1-detail/concepts.png", "artifacts/wave1-split/rock-isolated-r1.png", "artifacts/wave1-split/rock-isolated-assembly.png", "artifacts/wave1-split/r2/mangrove-29-after-hero.png", "artifacts/wave1-split/r2/flooded-29-after-hero.png", "artifacts/wave1-split/shadow-no-shadows.png", "artifacts/wave1-split/shadow-bias-adjust.png", "artifacts/wave1-split/final/mangrove-29-after-hero.png", "artifacts/wave1-split/final/flooded-29-after-hero.png", "artifacts/wave1-split/no-sky.png", "artifacts/wave1-split/seeds.png", "artifacts/wave1-split/inspection-seeds.png", "artifacts/wave1-split/mangrove-29-opposed.png"]
+  },
+  "referenceObservations": [
+    "Warm selective light and cool interior shade organize the concepts before individual leaf details.",
+    "Mud, grass bases, and near water share local value relationships without flattening substrate detail.",
+    "Desert rocks contain interlocking large masses, broken intermediate fragments and contact debris rather than one regular primitive."
+  ],
+  "cycles": [
+    {"id": 1, "hypothesis": "Joint-plane fragments can replace regular single blocks", "evidence": "rock-isolated-r1.png", "decision": "reject regular flat-topped stack", "technicalFailures": "Wet shader reserved GLSL word patch prevented compilation; repaired, not judged visually"},
+    {"id": 2, "hypothesis": "Asymmetric fragment hierarchy plus incident-light wet pigments", "evidence": "r2 matched captures and isolated assembly", "decision": "retain rock construction provisionally; revise wet light response", "defects": "Pale foreground tree pigments and stippled shadow pattern; ground recoloring weakens fine texture contrast"},
+    {"id": 3, "hypothesis": "Correct shadow bias, preserve foreground pigment richness and use actual light directions", "evidence": "final captures, opposite-sun diagnostic, shadow controls", "decision": "retain final opt-in study provisionally; reference quality not achieved", "stopReason": "Three targeted correction cycles; remaining geological weathering and wet substrate richness require a new focused representation/material experiment"}
+  ],
+  "diagnoses": [
+    {"issue": "Stippled ground shade", "status": "confirmed", "evidence": "Shadow-disabled and bias-adjusted1280 controls", "finding": "Bias/radius calibration resolves the objectionable shadow pattern while preserving physical cast shadows"},
+    {"issue": "Hardcoded fallback foliage key", "status": "confirmed in fallback source, not active mangrove library path", "finding": "canopy-billboard-material Basic path uses fixed vertex-light directions. Opt-in adapter handles this when used. Actual inspected mangrove meshes are library ShaderMaterials and already follow the sun.", "correction": "Earlier commentary attributing the mangrove scene to Basic materials was corrected after material audit"},
+    {"issue": "Pale foreground trees", "status": "confirmed visible", "finding": "Distant vegetation pigments were initially applied too broadly; final foreground pigments are richer, existing distance blending remains"},
+    {"issue": "Ground detail remains subdued", "status": "visible limitation", "finding": "Palette mixing reduces fine substrate contrast. Do not promote this material construction as a globally supported recipe."}
+  ],
+  "reviews": {
+    "mangrove": {"betterThanBaseline": "modest lighting improvement", "goodEnoughToApprove": false, "decision": "retain for comparison", "majorDefects": ["Broad under-detailed muddy foreground remains conspicuous without sky", "Canopy highlights remain too uniformly green in inspection; crown/root interlock is still below concept", "Shore boundary and distant horizon remain too clean"]},
+    "flooded": {"betterThanBaseline": "modest lighting/color improvement", "goodEnoughToApprove": false, "decision": "retain for comparison", "majorDefects": ["Repeated sword/fan grass silhouettes persist", "Sky-cropped approach remains lawn-like and uniform", "Distant islands retain sparse cover and periodic water ripples"]},
+    "desert": {"betterThanBaseline": "geological silhouette and readable shrub scale improve", "goodEnoughToApprove": false, "decision": "retain isolated assembly direction provisionally", "majorDefects": ["Fractures still look too angular and freshly broken rather than weathered", "Only three assembly molds repeat", "Broad foreground still lacks convincing intermediate substrate structure"]}
+  },
+  "rules": [
+    {"id": "shadow-artifact-isolation", "status": "experimentally-supported", "principle": "Compare shadow-off and bias controls before correcting a shading artifact through pigment/exposure", "evidence": "shadow-current.png, shadow-no-shadows.png, shadow-bias-adjust.png", "scope": "This terrain/shadow scale; bias values are not universal defaults"},
+    {"id": "fracture-hierarchy", "status": "experimentally-supported", "principle": "Unequal connected fragment sizes and bedding orientations break the single-block silhouette", "evidence": "geology-study.png and final hero/inspection views", "limits": "Weathering and per-specimen diversity remain inadequate; no global geological approval"},
+    {"id": "wetland-correlated-pigments", "status": "proposed", "principle": "Coordinate grass/soil pigments in world space under real incident lighting", "evidence": "no-sky.png", "limits": "Current mixing sacrifices some texture contrast; not promoted to successful global grammar"},
+    {"id": "distant-palette-on-near-trees", "status": "rejected", "principle": "Do not apply distant gray-sage pigments uniformly to foreground trees", "evidence": "r2/flooded-29-after-hero.png", "limits": "Foreground/distance relationships need independent calibration"}
+  ],
+  "validation": {
+    "seeds": [29, 41, 1879],
+    "holdout": "1879 frozen before first generation; no runtime edits afterward",
+    "freeze": "artifacts/wave1-split/freeze.json",
+    "matched": "artifacts/wave1-split/matched-checks.json",
+    "stagingAndShaderAudit": "artifacts/wave1-split/verification.json",
+    "protected": "artifacts/wave1-split/regression.json",
+    "tests": "TypeScript and9 targeted geology/detail/field tests passed; no full suite/build/mobile testing",
+    "mobileApproval": false
+  },
+  "approval": {"agentRetentionOnly": true, "humanFinalApproval": null, "globalPromotion": false, "humanApprovedBestChanged": false},
+  "report": "artifacts/wave1-split/REPORT.md"
+}

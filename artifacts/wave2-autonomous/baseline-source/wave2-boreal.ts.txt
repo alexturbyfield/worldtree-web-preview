@@ -1,0 +1,39 @@
+import * as T from 'three';
+import type {SceneRecipe} from './recipe';
+import {makeExpansionPlan,expansionHeight,mountExpansionBase,type ExpansionPalette} from './wave2-shared';
+import {randomSource} from './random';
+import {sceneLibraryStudy} from './library';
+import {borealTree,borealEmptyCanopy,mountBorealNeedles,mountBorealFloor} from './wave2-boreal-geometry';
+const palette:ExpansionPalette={ground:['#34483b','#687a3e','#b6af58'],soil:'#786447',air:'#9aafa6',sun:'#ffe3a8',foliage:['#243f38','#52774a','#b9bd64'],texture:'/assets/puget-v1/forest-floor.png'};
+const plan=(r:SceneRecipe)=>{const p=makeExpansionPlan('boreal',6,r.seed,.65);p.camera={position:[0,expansionHeight(p,0,34)+1.7,34],target:[0,expansionHeight(p,0,-30)+3.3,-30]};return p;};
+/** Source-linked stand; conifers use declared genus art profiles, never relabelled Douglas geometry. */
+function compose(source:SceneRecipe):SceneRecipe{
+ const p=plan(source),r=randomSource(source.seed+'|concept-boreal-stand'),birchOnly=/birch/i.test(source.ecoregion?.ECO_NAME??'');
+ const pool=source.trees.filter(t=>(birchOnly?/Betula/:/Picea|Pinus|Larix|Abies|Betula|Populus/).test(t.species.scientificName??'')),conifers=pool.filter(t=>/Picea|Pinus|Larix|Abies/.test(t.species.scientificName??''));
+ const trees:SceneRecipe['trees']=[];
+ for(let i=0;i<(birchOnly?34:48)&&pool.length;i++){
+  const candidates=birchOnly||i%11===8?pool:conifers.length?conifers:pool,t=candidates[i%candidates.length];let x:number,z:number;
+  if(i<4){x=(i%2?1:-1)*(5.6+r()*1.4);z=29-Math.floor(i/2)*13+r()*2;}
+  else if(i<20){z=19-r()*69;x=(i%2?1:-1)*(6+r()*12);}else{z=-28-r()*142;x=(r()-.5)*165;}
+  if(i===4||i===5){x=(i%2?1:-1)*6.3;z=-5-r()*3;}
+  if(i>=6&&i<12){x=(i%2?1:-1)*(4.8+r()*3.8);z=23-Math.floor((i-6)/2)*9+r()*2;}
+  if(z>12&&Math.abs(x)<4.8)x=(x<0?-1:1)*(5.2+r()*3);
+  const position:[number,number,number]=[x,expansionHeight(p,x,z),z],near=Math.hypot(x,z-34)<45;
+  if(/Picea|Pinus|Larix|Abies/.test(t.species.scientificName??'')){
+   const model=borealTree(t.seed+'|occurrence'+i,t.species.scientificName??'',near?1:.78,i<4);
+   trees.push({...t,id:t.id+'-boreal-presentation-'+i,index:i,position,rotation:r()*6.283,studio:undefined,model,canopy:borealEmptyCanopy(model),foliageCards:[],species:{...t.species,visual:{...t.species.visual,fallback:true,reason:'Genus-conditional spruce/pine/larch/fir branching art study; regional candidate retained, local occurrence and dimensions unverified'}}});
+  }else{const studio=/Betula/.test(t.species.scientificName??'')?sceneLibraryStudy('silver-birch',t.seed,t.appearanceSeed??source.appearanceSeed,1):t.studio;trees.push({...t,id:t.id+'-boreal-presentation-'+i,index:i,position,rotation:r()*6.283,studio,model:studio?.model??t.model});}
+ }
+ return {...source,trees,purpose:'visual_laboratory',distribution:'Source-linked regional-candidate stand; genus architecture and composition are artistic, not measured abundance',limitations:[...source.limitations,'Boreal bough profiles are morphological hypotheses, not verified measurements. Low moss/heath forms remain unnamed.']};
+}
+export const borealStudy={id:'boreal',biome:6,compose,camera:(r:SceneRecipe)=>plan(r).camera,mount:(s:T.Scene,r:SceneRecipe,sun:T.DirectionalLight,fill:T.DirectionalLight)=>{
+ const p=plan(r),base=mountExpansionBase(s,r,p,sun,fill,palette,{concept:true,canopy:false});
+ const needles=mountBorealNeedles(s,r,p,base.load('/assets/wave2-concepts/spruce-sprays-v2.png')),floor=mountBorealFloor(s,p);sun.position.set(-28,34,-8);sun.target.position.set(0,1,-20);sun.intensity=3.5;sun.shadow.intensity=.66;sun.shadow.normalBias=.04;fill.intensity=.34;
+ s.children.forEach(o=>{if(o instanceof T.HemisphereLight){o.intensity=.74;o.color.set('#acc8d7');o.groundColor.set('#6b7749');}});s.fog=new T.Fog('#8da59b',85,280);
+ s.userData.wave2Concept={id:'boreal',version:3,trees:r.trees.length,architecture:'Genus-conditional leader, paired rolled alpha-tested lobes attached to drooping bough chains',needleArtwork:'Generated spruce spray atlas is a painterly needle-texture approximation; pine/larch family differences remain structural, not verified species anatomy',ecology:'Regional candidates; unnamed moss/heath; local occurrence unverified',referenceState:{season:'green with provisional warm low foliage',weather:'clear',timeOfDay:'warm upper-left reference light'},staging:'Low cover remains; no hard anchors in approach'};
+ base.finish();return()=>{needles();floor();base.dispose();};
+}};
+
+
+
+

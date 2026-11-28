@@ -1,0 +1,44 @@
+{
+  "date": "2026-11-27T19:08:25.046Z",
+  "humanFeedback": {
+    "text": "The silhouette looks great, but the material treatment looks dark with muddy shading compared to the somewhat stylized tuning elsewhere give me three options to choose from",
+    "approvedScope": "Current holm-oak silhouette only; not materials or whole scene"
+  },
+  "hypothesis": "Directional pigment ramps and restrained texture contrast can retain the approved structure while replacing muddy multiplicative foliage shading.",
+  "candidates": [
+    {
+      "id": "A",
+      "name": "A — Warm painterly olive",
+      "construction": "Smooth warm three-pigment ramp, restrained leaf detail",
+      "review": "Warmest and most balanced match to existing illustrated scenery; some highlights are quite pale."
+    },
+    {
+      "id": "B",
+      "name": "B — Soft silver-sage",
+      "construction": "Cooler palette, softer lifted shadow transition, least texture contrast",
+      "review": "Soft silver/sage appearance and readable interiors; less warm and less dimensional."
+    },
+    {
+      "id": "C",
+      "name": "C — Graphic golden-green",
+      "construction": "Narrow transitions between strong shadow/body/highlight bands",
+      "review": "Strongest saturation and graphic separation; greatest risk of neon highlights and visible clump segmentation."
+    }
+  ],
+  "recommendation": "A",
+  "humanMaterialPreference": null,
+  "reviewer": "Primary Codex inspected actual A/B/C tree renders",
+  "technical": {
+    "typecheck": "passed",
+    "testsPassed": 7,
+    "geometryAndCountsIdentical": true,
+    "baselineRestoredPixelIdentically": true,
+    "errors": []
+  },
+  "evidence": "artifacts/holm-material-options/comparison.png",
+  "status": "Awaiting human material choice; no candidate automatically retained as default",
+  "scope": "Only holm-oak material shader and bark parameters, no geometry/placement/lighting changes",
+  "commit": false,
+  "push": false,
+  "deployment": false
+}

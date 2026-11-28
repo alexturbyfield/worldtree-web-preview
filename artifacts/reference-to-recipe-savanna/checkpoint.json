@@ -1,0 +1,14 @@
+{
+  "date": "2026-11-25T07:48:12.095Z",
+  "status": "awaiting-human-art-direction",
+  "recipe": "savanna-reference-recipe-1",
+  "humanReview": null,
+  "agentRecommendation": "Retain painted-ground experiment; reject current full scene for adoption",
+  "images": [
+    "artifacts/reference-to-recipe-savanna/original-camera-comparison.png",
+    "artifacts/reference-to-recipe-savanna/hero-comparison.png",
+    "artifacts/reference-to-recipe-savanna/seed-checks.png"
+  ],
+  "question": "Keep this ground-led direction for a larger silhouette/rock/continuation experiment, or reject the direction?",
+  "modelTrainingOccurred": false
+}

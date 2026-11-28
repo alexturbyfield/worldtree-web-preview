@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-25T21:28:01.525149+00:00",
+  "retainedArtRound": "R2",
+  "rejectedRounds": [
+    "R0 technical/visual failures",
+    "R3 pyramidal geological representation"
+  ],
+  "sourceHashes": {
+    "src/lib/forest/alpine-recipe.ts": "043f56d719bb558f0680c32df0dba45dbfaa8ec508d7a761a4a97c65c373c8e1",
+    "src/lib/forest/alpine-adapter.ts": "ca02d3bdf4e1ded691e5f36a9326c1fabe42c0599bed4fabb732a94413984b6b",
+    "src/lib/forest/painted-renderer.ts": "b7af257a440fe652b101c259bd530796174d20249851daca6ed9580ddf63f2bb",
+    "src/lib/forest/savanna-recipe.ts": "26b6bf02cec6c668a1924d49252d150007e9df4742302525b1ac90837c4b5dc6",
+    "scripts/studies/visual-quality.cjs": "285bf58226cf57e05ec787aed8affe3275e6efda20cedcb94a1db6a6b99ca6b3",
+    "visual-lab/alpine/recipe.json": "a6cb0921bb2857666d85d92d279e74eaa5be6b3cab3d61590822abfb2171507f",
+    "visual-lab/alpine/recipe.schema.json": "806bef4a8e9791ebb76e79b40e5f683342a3eb0d006d27d29a9ae18a6811af5e"
+  },
+  "status": "frozen-before-holdouts",
+  "trainingSeeds": [
+    "29",
+    "41",
+    "73"
+  ],
+  "holdouts": {
+    "valley": "101",
+    "overlook": "131",
+    "treeline": "167"
+  },
+  "holdoutsGenerated": false,
+  "noFurtherTuning": "Do not change frozen geometry or artistic parameters after holdout evaluation without a new experiment."
+}

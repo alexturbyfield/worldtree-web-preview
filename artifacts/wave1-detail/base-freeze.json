@@ -1,0 +1,22 @@
+[
+  {
+    "Algorithm": "SHA256",
+    "Hash": "5EB9373D21F736CB0FE68070B0DA1F9C4F15524B9EC00D6115842808356B7F5E",
+    "Path": "C:\\Users\\aturb\\Documents\\Codex\\2026-11-21\\worldtree-build-and-deploy-mobile-web\\src\\lib\\forest\\wave1-fields.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "A4D49CB22BA71F5ADAC5BDA71DD9E5DEFD43E1DFC5370484E22D8B15D5431267",
+    "Path": "C:\\Users\\aturb\\Documents\\Codex\\2026-11-21\\worldtree-build-and-deploy-mobile-web\\src\\lib\\forest\\wave1-rebuild.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "E0F9CCCAB0D94F368259EE706F32EA208C44C5FD93F8F0B65B0354211AF82A2B",
+    "Path": "C:\\Users\\aturb\\Documents\\Codex\\2026-11-21\\worldtree-build-and-deploy-mobile-web\\src\\lib\\forest\\wave1-impostors.ts"
+  },
+  {
+    "Algorithm": "SHA256",
+    "Hash": "173B715D10AA54ADD0AC2D40AD89B417C7A8CFDD62C3E6BB42A8D08521B922C1",
+    "Path": "C:\\Users\\aturb\\Documents\\Codex\\2026-11-21\\worldtree-build-and-deploy-mobile-web\\src\\lib\\vegetation.ts"
+  }
+]

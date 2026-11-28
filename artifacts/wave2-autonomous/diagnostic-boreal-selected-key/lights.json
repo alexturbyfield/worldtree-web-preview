@@ -1,0 +1,18 @@
+[
+  {
+    "mode": "normal",
+    "light": [
+      -28,
+      34,
+      -8
+    ]
+  },
+  {
+    "mode": "candidate-sun",
+    "light": [
+      -28,
+      34,
+      -28
+    ]
+  }
+]
