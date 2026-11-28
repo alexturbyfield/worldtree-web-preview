@@ -1,0 +1,50 @@
+{
+  "frozenAt": "2026-11-28T13:17:52.991Z",
+  "holdoutSeed": "530219",
+  "files": [
+    {
+      "path": "src/lib/forest/bounded-resolver.ts",
+      "sha256": "7c6cf8396f455bc9f19926dc5df43f0907eb49d98ada90cc7daa8f0f2adfb833"
+    },
+    {
+      "path": "src/lib/forest/bounded-resolver-policy.json",
+      "sha256": "c462339ac6a0f1e6bfd4b29fe24fd74b13383a5edf712494bc5b94285c9101b1"
+    },
+    {
+      "path": "src/lib/forest/environment-registry.ts",
+      "sha256": "387a40028a4e1700eea9c2950bd2007cd0d3726acc883da5a3c7e44d4e167337"
+    },
+    {
+      "path": "src/lib/forest/geographic-pilot.ts",
+      "sha256": "f4b6b7c00562a246f50fe57be231f2feeeee22294d3d5d490bb1a9fee2152bd6"
+    },
+    {
+      "path": "src/lib/forest/recipe.ts",
+      "sha256": "688941193c8c6d86ed9b7f032fcf331b881b74155571071b699770c69740bd7d"
+    },
+    {
+      "path": "src/lib/forest/wave1.ts",
+      "sha256": "d35c1259b04b90503224c0f7f315b8a014c4535c38d015d6517e4f7902bc8824"
+    },
+    {
+      "path": "src/lib/forest/regional-pilot-study.ts",
+      "sha256": "597458f3493a67715894b86166880a22a9f40b23b7982a825b5d4e2c4b7c5f3c"
+    },
+    {
+      "path": "src/lib/forest/landscape-matte.ts",
+      "sha256": "8ba761a985e6f81cadee9243d657952d305e3dfe7ab25c0efc97c1fcafb1d3e6"
+    },
+    {
+      "path": "src/components/EnvironmentReferencePanel.tsx",
+      "sha256": "3cd169d3a8ee6fa696ea118cf4a03c13ab103bd795c636aa578aa07d9671cc1f"
+    },
+    {
+      "path": "src/components/ForestExplorer.tsx",
+      "sha256": "d0cd0c5ac400f625fcb7f74bdc01fffaf8533e14dd1df23a8787e999cf7f607f"
+    },
+    {
+      "path": "src/components/Explorer.tsx",
+      "sha256": "fea18b22502534acc8c8855d578412f0e09472dcd5602409476ad08a9cc30eec"
+    }
+  ]
+}

@@ -1,0 +1,244 @@
+{
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          0,
+          1.640938451444579,
+          34
+        ],
+        "quaternion": [
+          0.004388752168858736,
+          0,
+          0,
+          0.9999903693808257
+        ],
+        "fov": 47,
+        "far": 2500
+      },
+      "calls": 13,
+      "triangles": 839116,
+      "textures": 11
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          62,
+          40,
+          76
+        ],
+        "quaternion": [
+          -0.14960876967790102,
+          0.27061515290874505,
+          0.04261564454501207,
+          0.9500360845208219
+        ],
+        "fov": 47,
+        "far": 2500
+      },
+      "calls": 13,
+      "triangles": 839116,
+      "textures": 11
+    }
+  ],
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": null,
+    "selectedScene": null,
+    "route": {
+      "kind": "wave",
+      "adapter": "temperate",
+      "sceneId": null,
+      "variant": "original",
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:woodland-appalachia",
+          "name": "Appalachian-Blue Ridge forests · bounded automatic",
+          "family": "temperate",
+          "biome": 4,
+          "eco": 331,
+          "lat": 35.8,
+          "lon": -83.7,
+          "area": "TEN"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "2206818744",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Acer saccharum",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:56795-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Quercus falcata",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:215831-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Fagus grandifolia",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295597-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+        ]
+      }
+    },
+    "pilot": null,
+    "regional": {
+      "schemaVersion": 1,
+      "version": "bounded-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:woodland-appalachia",
+        "name": "Appalachian-Blue Ridge forests · bounded automatic",
+        "family": "temperate",
+        "biome": 4,
+        "eco": 331,
+        "lat": 35.8,
+        "lon": -83.7,
+        "area": "TEN"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "2206818744",
+      "eligibleTreeCandidates": [
+        {
+          "scientificName": "Acer saccharum",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:56795-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Quercus falcata",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:215831-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Fagus grandifolia",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295597-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        }
+      ],
+      "renderedTreeIdentity": "regional-candidate-architecture",
+      "limitations": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+      ]
+    },
+    "automatic": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "selected",
+      "code": "supported-regional-transfer",
+      "explanation": "Regional candidate and architecture checks passed; the matching shared forest recipe is selected.",
+      "ruleId": "woodland-appalachia",
+      "distanceKm": 28.648420413539277,
+      "confidence": "regional-range-candidate",
+      "recipe": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:woodland-appalachia",
+          "name": "Appalachian-Blue Ridge forests · bounded automatic",
+          "family": "temperate",
+          "biome": 4,
+          "eco": 331,
+          "lat": 35.8,
+          "lon": -83.7,
+          "area": "TEN"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "2206818744",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Acer saccharum",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:56795-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Quercus falcata",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:215831-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Fagus grandifolia",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295597-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+        ]
+      }
+    },
+    "mode": "automatic",
+    "checkpoint": null,
+    "vegetationCoverage": "adapter-generated",
+    "individualInspection": false,
+    "referenceLocation": null,
+    "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+    "limits": [
+      "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+      "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+      "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+      "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+      "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+      "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+    ],
+    "notices": [
+      "Automatic selection: Regional candidate and architecture checks passed; the matching shared forest recipe is selected."
+    ]
+  },
+  "render": {
+    "resolution": [
+      640,
+      360
+    ],
+    "pixelRatio": 1,
+    "exposure": 1.12,
+    "toneMapping": 4
+  },
+  "id": "appalachia",
+  "query": "lat=35.8&lon=-83.7&seed=29&habitat=forest&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+  "errors": []
+}

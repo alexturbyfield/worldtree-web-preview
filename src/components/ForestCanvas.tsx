@@ -2,17 +2,18 @@
 import {useEffect,useRef,useState} from 'react';
 import type {SceneRecipe} from '@/lib/forest/recipe';
 import {mountForest,type RenderStats,type CameraView} from '@/lib/forest/renderer';
-export default function ForestCanvas({recipe,selected,onPick,focusRequest,lab=false,debug='none',onMetrics,onDiagramFallback}:{recipe:SceneRecipe;selected:number|null;onPick:(index:number|null)=>void;focusRequest:{index:number;revision:number}|null;lab?:boolean;debug?:'none'|'wireframe'|'skeleton'|'cards';onMetrics?:(stats:RenderStats)=>void;onDiagramFallback?:()=>void}){
+export default function ForestCanvas({recipe,selected,onPick,focusRequest,lab=false,debug='none',onMetrics,onDiagramFallback,onReferenceViewChange}:{recipe:SceneRecipe;selected:number|null;onPick:(index:number|null)=>void;focusRequest:{index:number;revision:number}|null;lab?:boolean;debug?:'none'|'wireframe'|'skeleton'|'cards';onMetrics?:(stats:RenderStats)=>void;onDiagramFallback?:()=>void;onReferenceViewChange?:(matches:boolean)=>void}){
   const host=useRef<HTMLDivElement>(null),runtime=useRef<ReturnType<typeof mountForest>|null>(null),pick=useRef(onPick);
   const view=useRef<CameraView|undefined>(undefined);
-  const metrics=useRef(onMetrics);
+  const metrics=useRef(onMetrics),referenceView=useRef(onReferenceViewChange);
   const [benchmark,setBenchmark]=useState<import('@/lib/forest/renderer').BenchmarkResult|null>(null),[measuring,setMeasuring]=useState(false);
   const [error,setError]=useState(''),[stats,setStats]=useState<RenderStats|null>(null);
   useEffect(()=>{pick.current=onPick;},[onPick]);
   useEffect(()=>{metrics.current=onMetrics;},[onMetrics]);
+  useEffect(()=>{referenceView.current=onReferenceViewChange;},[onReferenceViewChange]);
   useEffect(()=>{
     let active=true;
-    try{runtime.current=mountForest(host.current!,recipe,index=>pick.current(index),s=>{if(active){setStats(s);setError('');if(s.frames===1){setBenchmark(null);setMeasuring(false);}metrics.current?.(s);}},message=>{if(active)setError(message);},view.current,{lab,debug});}
+    try{runtime.current=mountForest(host.current!,recipe,index=>pick.current(index),s=>{if(active){setStats(s);setError('');if(s.frames===1){setBenchmark(null);setMeasuring(false);}metrics.current?.(s);}},message=>{if(active)setError(message);},view.current,{lab,debug,onReferenceViewChange:matches=>referenceView.current?.(matches)});}
     catch{queueMicrotask(()=>{if(active)setError('3D graphics could not start. WebGL2 may be unavailable or disabled. Try another browser or graphics setting. The ecological profile and scene JSON remain available.');});}
     return()=>{active=false;view.current=runtime.current?.view();runtime.current?.dispose();runtime.current=null;};
   },[recipe,lab,debug]);

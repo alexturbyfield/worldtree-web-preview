@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-27",
+  "milestone": "Protected Environment Registry",
+  "branch": "feat/environment-registry",
+  "acceptedSource": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+  "loadedInstructions": [
+    "AGENTS.md",
+    "visual-lab/README.md",
+    "docs/visual-quality-workflow.md",
+    "visual-lab/art-direction-policy.json",
+    ".agents/skills/prototype-fast/SKILL.md",
+    "vercel:react-best-practices",
+    "Next local use-search-params and use-router guides"
+  ],
+  "hypothesis": "Consolidating metadata and adapter dispatch can expose accepted regional references without changing their rendered artwork.",
+  "severity": "major workflow risk; no aesthetic change intended",
+  "intervention": "Metadata and UI integration; existing rendering adapters retained",
+  "evidence": {
+    "parity": "artifacts/environment-registry/parity.json",
+    "matchedViews": 30,
+    "changedChannels": 0,
+    "drawCallsAndTriangles": "unchanged in all matched views",
+    "browser": "artifacts/environment-registry/ui-validation.json",
+    "browserChecksPassed": 11,
+    "visualInterpretationAvailable": true,
+    "agentInspection": [
+      "Before and after 15-scene contact sheets",
+      "Mobile scene and picker controls"
+    ],
+    "observations": "Matched landscape shapes, material colors, shadows and continuation remain unchanged. Picker is usable on a narrow viewport. No new artistic judgment is promoted."
+  },
+  "checks": {
+    "typeScript": "passed",
+    "focusedTests": {
+      "passed": 21,
+      "failed": 0
+    },
+    "productionBuild": "passed",
+    "targetedEslint": "passed",
+    "legacyForest": {
+      "passed": 29,
+      "failed": 5,
+      "preexisting": true,
+      "proof": "artifacts/environment-registry/legacy-test-baseline-proof.json"
+    }
+  },
+  "decision": "retain consolidation; preserve existing human approvals only",
+  "limitations": [
+    "No physical mobile frame-time approval",
+    "Adapter-generated specimens are not individually registered in the exported input recipe",
+    "Seeds 41 and 73 were routing tests, not a new visual generalization study",
+    "No worldwide recipe promotion, commit, push or deployment"
+  ],
+  "sources": [
+    {
+      "path": "src/lib/forest/environment-registry.json",
+      "sha256": "279ca0b66ef1b7bae65f8a470d16057108e337e2c18c83206413acd0447e2a4b"
+    },
+    {
+      "path": "src/lib/forest/environment-registry.ts",
+      "sha256": "e3de913f581bbff21ebd45f6f31db895db011caa5941357561e6aaa25f014569"
+    },
+    {
+      "path": "src/lib/forest/wave1.ts",
+      "sha256": "8b8e994732c2b857b76f1313e23c71f84c9b5abf7f46f89249db20a6c122d115"
+    },
+    {
+      "path": "src/lib/forest/biome-visual.ts",
+      "sha256": "10c0d820081f3f1bd8375fdef8c3d3e33b397d8e8993195b93535d34d4801457"
+    },
+    {
+      "path": "src/lib/forest/painted-renderer.ts",
+      "sha256": "953be6645d39f164218075748507982d3fc1d22e68186f90fe12cdaa0b452830"
+    },
+    {
+      "path": "src/lib/forest/render-types.ts",
+      "sha256": "d93b7aa85995c7fc84a2d40785e1f51f522bd2f14be04a9d65e76a1f94d8c1e4"
+    },
+    {
+      "path": "src/components/EnvironmentReferencePanel.tsx",
+      "sha256": "72228269b72854317445c4c3525e013c0f67ca32559cd5738ac6ff0866bdc5da"
+    },
+    {
+      "path": "src/components/ForestExplorer.tsx",
+      "sha256": "936abd67d5f2f306a4c0a627a7ef571bd853aa1d32a87552935a660064a7f659"
+    },
+    {
+      "path": "src/components/ForestCanvas.tsx",
+      "sha256": "68dd9da4742e7b1b0e40ea7f6586034a1b029bf7a47e09fea73a2f1f87ca4168"
+    },
+    {
+      "path": "scripts/studies/environment-registry.cjs",
+      "sha256": "c96c0afb2890605e2f05785fb94349d991fcb389d95c4e39b8b779be3643f10c"
+    },
+    {
+      "path": "tests/environment-registry.test.ts",
+      "sha256": "2cd47fccc029b6c32508e2f01478f0adc0032388f9779a9c55df32eb7234e0f7"
+    }
+  ]
+}

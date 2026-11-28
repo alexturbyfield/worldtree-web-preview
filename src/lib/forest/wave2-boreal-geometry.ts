@@ -39,9 +39,9 @@ function geometry(s:Surface){const g=new T.BufferGeometry();g.setAttribute('posi
 function needleMaterial(map?:T.Texture){const m=new T.MeshStandardMaterial({map,alphaTest:map ? .55 : 0,vertexColors:true,side:T.DoubleSide,roughness:1});m.onBeforeCompile=shader=>{shader.fragmentShader=shader.fragmentShader.replace('#include <normal_fragment_maps>','#include <normal_fragment_maps>\nnormal=normalize(normal*.70+mat3(viewMatrix)*vec3(0.,.75,0.));');};m.customProgramCacheKey=()=> 'boreal-rounded-needle-wrap-3|'+!!map;return m;}
 
 export function mountBorealNeedles(scene:T.Scene,recipe:SceneRecipe,plan:ExpansionPlan,atlas:T.Texture){
- const s=surface(),r=randomSource(recipe.seed+'|needle-paint');
- for(const tree of recipe.trees){if(tree.studio||!/Picea|Pinus|Larix|Abies/.test(tree.species.scientificName??''))continue;
-  const pine=/Pinus/.test(tree.species.scientificName??''),near=Math.hypot(tree.position[0],tree.position[2]-34)<48,c=Math.cos(tree.rotation),sn=Math.sin(tree.rotation),transform=(p:Point)=>new T.Vector3(p[0]*c-p[2]*sn+tree.position[0],p[1]+tree.position[1],p[0]*sn+p[2]*c+tree.position[2]);
+ const s=surface(),r=randomSource(recipe.seed+'|needle-paint'),form=(t:SceneRecipe['trees'][number])=>t.species.scientificName??(t.species.id==='unnamed-conifer-growth-form'?'Pinus':'');
+ for(const tree of recipe.trees){if(tree.studio||!/Picea|Pinus|Larix|Abies/.test(form(tree)))continue;
+  const pine=/Pinus/.test(form(tree)),near=Math.hypot(tree.position[0],tree.position[2]-34)<48,c=Math.cos(tree.rotation),sn=Math.sin(tree.rotation),transform=(p:Point)=>new T.Vector3(p[0]*c-p[2]*sn+tree.position[0],p[1]+tree.position[1],p[0]*sn+p[2]*c+tree.position[2]);
   for(const segment of tree.model.segments){if(segment.depth!==1||segment.r1!==.008)continue;const a=transform(segment.a),b=transform(segment.b),len=a.distanceTo(b),axis=b.clone().sub(a).normalize(),t=segment.b[1]/tree.model.parameters.height;
    a.addScaledVector(axis,-len*.48);
    const tint=new T.Color('#9fb6aa').lerp(new T.Color('#f4f3d4'),Math.max(0,t-.35)*.8+r()*.10);
@@ -50,7 +50,7 @@ export function mountBorealNeedles(scene:T.Scene,recipe:SceneRecipe,plan:Expansi
  }
  const mesh=new T.Mesh(geometry(s),needleMaterial(atlas));mesh.name='boreal-attached-needle-sprays';mesh.castShadow=true;mesh.receiveShadow=false;scene.add(mesh);
  const farS=surface();for(let level=0;level<8;level++)for(let arm=0;arm<5;arm++){const t=level/8,a=arm*1.256+level*2.399,reach=(1-t)*.48,root=new T.Vector3(0,.18+t*.78,0),end=new T.Vector3(Math.cos(a)*reach,root.y-reach*.17,Math.sin(a)*reach);for(const side of [-1,1])spray(farS,root,end,reach*.55,new T.Color('#b8c9bc'),level+arm,2,side*.70);}
- const far=new T.InstancedMesh(geometry(farS),needleMaterial(atlas),recipe.trees.some(t=>/Picea|Pinus|Larix|Abies/.test(t.species.scientificName??''))?420:0),o=new T.Object3D();far.name='boreal-distant-attached-boughs';
+ const far=new T.InstancedMesh(geometry(farS),needleMaterial(atlas),recipe.trees.some(t=>/Picea|Pinus|Larix|Abies/.test(form(t)))?420:0),o=new T.Object3D();far.name='boreal-distant-attached-boughs';
  for(let i=0;i<far.count;i++){const angle=r()*6.283,d=72+r()*270,x=Math.cos(angle)*d,z=34+Math.sin(angle)*d;o.position.set(x,expansionHeight(plan,x,z),z);o.rotation.set(0,r()*6.283,0);o.scale.set(10+r()*6,20+r()*9,10+r()*6);o.updateMatrix();far.setMatrixAt(i,o.matrix);}far.computeBoundingSphere();far.receiveShadow=false;scene.add(far);
  return()=>{scene.remove(mesh,far);mesh.geometry.dispose();(mesh.material as T.Material).dispose();far.geometry.dispose();(far.material as T.Material).dispose();};
 }

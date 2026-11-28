@@ -1,0 +1,708 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-28T12:33:49.697Z",
+  "milestone": "representative-geographic-pilot-complete",
+  "humanApproval": null,
+  "branch": "feat/geographic-pilot",
+  "scope": {
+    "locations": 42,
+    "sourceBiomeFamilies": 14,
+    "locationsPerFamily": {
+      "1": 3,
+      "2": 3,
+      "3": 3,
+      "4": 3,
+      "5": 3,
+      "6": 3,
+      "7": 3,
+      "8": 3,
+      "9": 3,
+      "10": 3,
+      "11": 3,
+      "12": 3,
+      "13": 3,
+      "14": 3
+    },
+    "newTrials": 24,
+    "globalAutomaticRouting": false,
+    "deployed": false
+  },
+  "loaded": [
+    "Latest user-supplied AGENTS.md",
+    "visual-lab/README.md",
+    "docs/visual-quality-workflow.md",
+    "visual-lab/environment-registry/GEOGRAPHIC-PILOT.md",
+    "visual-lab/environment-registry/EXPANSION-B.md",
+    ".agents/skills/prototype-fast/SKILL.md",
+    "Next local use-search-params guide"
+  ],
+  "reviewer": {
+    "name": "Implementing assistant",
+    "independent": false,
+    "visionAvailable": true,
+    "inspected": [
+      "24-case hero sheet",
+      "24-case elevated inspection sheet",
+      "Individual Amazon, Borneo, Cuban pine-form, Portuguese woodland and Ethiopian montane views",
+      "Eight-family reserved-seed hero/inspection sheet",
+      "Current Nicaraguan and Mexican dry-forest follow-up hero views"
+    ]
+  },
+  "hypothesis": "Existing scenery components can cover every source biome family through explicit regional candidate gates, functional-form fallbacks and location-conditioned asset suppression, without modifying accepted artwork.",
+  "implementation": {
+    "strategy": "One bounded coverage pass; no aesthetic correction loops or holdout tuning.",
+    "forestTransfer": "Existing tree models, genus grammar, floor and depth components; real regional identities retained with labelled shape approximations.",
+    "unnamedFallback": "Tropical conifer context uses explicitly unnamed conifer functional forms when named candidates are ineligible; no Guatemalan species list is imported.",
+    "openHabitats": "Savanna/wetland/montane/desert transfers preserve unnamed cover and conservative woody-role suppression.",
+    "matteGuard": "Location-conditioned shared mattes cannot load outside the pilot location envelope. Manual Mojave distance painting hidden in foreign desert trials.",
+    "montaneCorrection": "First Peru trial exposed a mismatch between declared no-tree identity and retained named regional roles; these were withheld and Peru recaptured before freeze. Superseded evidence preserved."
+  },
+  "validation": {
+    "typeScript": "passed; production build also includes TypeScript",
+    "productionBuild": "passed",
+    "targetedTests": {
+      "passed": 55,
+      "failed": 0,
+      "log": "artifacts/geographic-completion/tests.log"
+    },
+    "targetedEslint": "passed",
+    "newPrimaryViews": 48,
+    "holdout": {
+      "seed": "847193",
+      "sites": [
+        "rainforest-borneo",
+        "tropicalpine-himalaya",
+        "conifer-alps",
+        "savanna-arnhem",
+        "flooded-pantanal",
+        "montane-ethiopia",
+        "mediterranean-portugal",
+        "desert-namib"
+      ],
+      "views": 16,
+      "sourcesFrozenBeforeRender": true,
+      "frozenSourcesUnchanged": true,
+      "retuned": false
+    },
+    "protected": {
+      "references": 15,
+      "views": 30,
+      "pixelAndGeometryIdentical": 30,
+      "errors": []
+    },
+    "mobilePicker": {
+      "options": 43,
+      "touchHeight": 44,
+      "noOverflow": true
+    },
+    "captureErrors": [],
+    "additionalDryForestChecks": [
+      {
+        "id": "dryforest-nicaragua",
+        "views": [
+          {
+            "view": "hero",
+            "camera": {
+              "position": [
+                0,
+                1.7,
+                34
+              ],
+              "quaternion": [
+                0.0033707290692054958,
+                0,
+                0,
+                0.9999943190766345
+              ],
+              "fov": 47
+            },
+            "calls": 134,
+            "triangles": 3050988,
+            "textures": 12
+          },
+          {
+            "view": "inspection",
+            "camera": {
+              "position": [
+                62,
+                39.7,
+                76
+              ],
+              "quaternion": [
+                -0.15864142630254027,
+                0.27668858962333825,
+                0.04636852147143735,
+                0.9466394680391773
+              ],
+              "fov": 47
+            },
+            "calls": 137,
+            "triangles": 3060828,
+            "textures": 12
+          }
+        ],
+        "errors": []
+      },
+      {
+        "id": "dryforest-mexico",
+        "views": [
+          {
+            "view": "hero",
+            "camera": {
+              "position": [
+                0,
+                1.7,
+                34
+              ],
+              "quaternion": [
+                0.0033707290692054958,
+                0,
+                0,
+                0.9999943190766345
+              ],
+              "fov": 47
+            },
+            "calls": 137,
+            "triangles": 3060798,
+            "textures": 12
+          },
+          {
+            "view": "inspection",
+            "camera": {
+              "position": [
+                62,
+                39.7,
+                76
+              ],
+              "quaternion": [
+                -0.15864142630254027,
+                0.27668858962333825,
+                0.04636852147143735,
+                0.9466394680391773
+              ],
+              "fov": 47
+            },
+            "calls": 137,
+            "triangles": 3060798,
+            "textures": 12
+          }
+        ],
+        "errors": []
+      }
+    ]
+  },
+  "critique": [
+    {
+      "family": "rainforest",
+      "severity": "major",
+      "evidence": "Native regional candidates and layered floor/stand render in three continents. Tree height and crown shapes remain uneven; many species use generic branching, with a visible finite stand footprint from above.",
+      "decision": "Retain experiment; not concept-quality or species-accurate approval."
+    },
+    {
+      "family": "tropicalpine",
+      "severity": "major",
+      "evidence": "Open raised-crown conifer forms and needle-textured floor are readable. Generic trunks and repeated bough structure remain; identities are deliberately unnamed because the eligible candidate pool is empty.",
+      "decision": "Retain functional-form previews. Named profiles and stronger regional evidence are required before botanical promotion."
+    },
+    {
+      "family": "conifer",
+      "severity": "major",
+      "evidence": "Regional genus-conditioned trees retain enclosed forest character. Boreal floor/palette borrowing and limited distant stand coverage remain evident.",
+      "decision": "Retain preview; preserve original Puget reference as the accepted artwork."
+    },
+    {
+      "family": "savanna",
+      "severity": "major",
+      "evidence": "Expansive open grassland, terrain continuation and dimensional cover transfer. Regional woody communities, species-appropriate foreground variation and stronger middle-distance anchors are missing.",
+      "decision": "Open-patch trials only; do not infer categorical treelessness or regional completeness."
+    },
+    {
+      "family": "flooded",
+      "severity": "major",
+      "evidence": "Irregular water/land mosaic and sky-reflected water remain visible at encounter height. Broad pale foregrounds and sparse silhouette diversity remain; local hydroperiod and tree islands are not established.",
+      "decision": "Retain unreviewed wetland trials; no fixed water tint was introduced."
+    },
+    {
+      "family": "montane",
+      "severity": "major",
+      "evidence": "Tussocks, cushions and embedded rocks transfer without named Andean woody/rosette roles. Foreign distant peaks are withheld, exposing weak atmospheric continuation and repetitive cover.",
+      "decision": "Retain functional montane trials; region-compatible background/evidence remains necessary."
+    },
+    {
+      "family": "mediterranean",
+      "severity": "major",
+      "evidence": "Supported cork/holm oak candidates preserve foreground framing and winding soil openings. Without the Hérault matte, foreign backgrounds are flatter and less intricate; shrubs/flowers remain approximate.",
+      "decision": "Retain trial; no approval of regional surface/geological fidelity."
+    },
+    {
+      "family": "desert",
+      "severity": "major",
+      "evidence": "Open horizon, large rock anchors, sparse vegetation and soil texture transfer. Repetitive geological molds and mechanical large-scale ground patterns remain visible, especially from elevated views.",
+      "decision": "Retain rockland studies, not actual surveyed Atacama/Namib land cover."
+    }
+  ],
+  "performance": [
+    {
+      "site": "rainforest-amazon",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 21,
+          "triangles": 811924,
+          "textures": 19
+        },
+        {
+          "view": "inspection",
+          "calls": 21,
+          "triangles": 811924,
+          "textures": 19
+        }
+      ]
+    },
+    {
+      "site": "rainforest-congo",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 12,
+          "triangles": 1024528,
+          "textures": 10
+        },
+        {
+          "view": "inspection",
+          "calls": 12,
+          "triangles": 1024528,
+          "textures": 10
+        }
+      ]
+    },
+    {
+      "site": "rainforest-borneo",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 13,
+          "triangles": 1070504,
+          "textures": 11
+        },
+        {
+          "view": "inspection",
+          "calls": 13,
+          "triangles": 1070504,
+          "textures": 11
+        }
+      ]
+    },
+    {
+      "site": "tropicalpine-guatemala",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 10,
+          "triangles": 768584,
+          "textures": 7
+        },
+        {
+          "view": "inspection",
+          "calls": 10,
+          "triangles": 768584,
+          "textures": 7
+        }
+      ]
+    },
+    {
+      "site": "tropicalpine-cuba",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 10,
+          "triangles": 708628,
+          "textures": 7
+        },
+        {
+          "view": "inspection",
+          "calls": 10,
+          "triangles": 708628,
+          "textures": 7
+        }
+      ]
+    },
+    {
+      "site": "tropicalpine-himalaya",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 10,
+          "triangles": 710404,
+          "textures": 7
+        },
+        {
+          "view": "inspection",
+          "calls": 10,
+          "triangles": 710404,
+          "textures": 7
+        }
+      ]
+    },
+    {
+      "site": "conifer-puget",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 14,
+          "triangles": 659466,
+          "textures": 9
+        },
+        {
+          "view": "inspection",
+          "calls": 14,
+          "triangles": 659466,
+          "textures": 9
+        }
+      ]
+    },
+    {
+      "site": "conifer-alps",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 14,
+          "triangles": 658364,
+          "textures": 9
+        },
+        {
+          "view": "inspection",
+          "calls": 14,
+          "triangles": 658364,
+          "textures": 9
+        }
+      ]
+    },
+    {
+      "site": "conifer-bc",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 15,
+          "triangles": 677096,
+          "textures": 10
+        },
+        {
+          "view": "inspection",
+          "calls": 15,
+          "triangles": 677096,
+          "textures": 10
+        }
+      ]
+    },
+    {
+      "site": "savanna-tanzania",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 14,
+          "triangles": 925568,
+          "textures": 8
+        },
+        {
+          "view": "inspection",
+          "calls": 14,
+          "triangles": 925568,
+          "textures": 8
+        }
+      ]
+    },
+    {
+      "site": "savanna-cerrado",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 14,
+          "triangles": 751052,
+          "textures": 8
+        },
+        {
+          "view": "inspection",
+          "calls": 14,
+          "triangles": 751052,
+          "textures": 8
+        }
+      ]
+    },
+    {
+      "site": "savanna-arnhem",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 14,
+          "triangles": 880240,
+          "textures": 8
+        },
+        {
+          "view": "inspection",
+          "calls": 14,
+          "triangles": 880240,
+          "textures": 8
+        }
+      ]
+    },
+    {
+      "site": "flooded-everglades",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 11,
+          "triangles": 1247970,
+          "textures": 10
+        },
+        {
+          "view": "inspection",
+          "calls": 11,
+          "triangles": 1247970,
+          "textures": 10
+        }
+      ]
+    },
+    {
+      "site": "flooded-pantanal",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 11,
+          "triangles": 2197302,
+          "textures": 10
+        },
+        {
+          "view": "inspection",
+          "calls": 11,
+          "triangles": 2197302,
+          "textures": 10
+        }
+      ]
+    },
+    {
+      "site": "flooded-niger",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 11,
+          "triangles": 1917698,
+          "textures": 10
+        },
+        {
+          "view": "inspection",
+          "calls": 11,
+          "triangles": 1917698,
+          "textures": 10
+        }
+      ]
+    },
+    {
+      "site": "montane-peru",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 12,
+          "triangles": 2133044,
+          "textures": 15
+        },
+        {
+          "view": "inspection",
+          "calls": 10,
+          "triangles": 2133040,
+          "textures": 15
+        }
+      ]
+    },
+    {
+      "site": "montane-ethiopia",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 10,
+          "triangles": 2133040,
+          "textures": 14
+        },
+        {
+          "view": "inspection",
+          "calls": 10,
+          "triangles": 2133040,
+          "textures": 14
+        }
+      ]
+    },
+    {
+      "site": "montane-altai",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 10,
+          "triangles": 2133040,
+          "textures": 14
+        },
+        {
+          "view": "inspection",
+          "calls": 10,
+          "triangles": 2133040,
+          "textures": 14
+        }
+      ]
+    },
+    {
+      "site": "mediterranean-france",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 18,
+          "triangles": 1822040,
+          "textures": 12
+        },
+        {
+          "view": "inspection",
+          "calls": 16,
+          "triangles": 1822036,
+          "textures": 12
+        }
+      ]
+    },
+    {
+      "site": "mediterranean-portugal",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 16,
+          "triangles": 1821640,
+          "textures": 11
+        },
+        {
+          "view": "inspection",
+          "calls": 16,
+          "triangles": 1821640,
+          "textures": 11
+        }
+      ]
+    },
+    {
+      "site": "mediterranean-italy",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 16,
+          "triangles": 1822036,
+          "textures": 11
+        },
+        {
+          "view": "inspection",
+          "calls": 16,
+          "triangles": 1822036,
+          "textures": 11
+        }
+      ]
+    },
+    {
+      "site": "desert-mojave",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 19,
+          "triangles": 895428,
+          "textures": 9
+        },
+        {
+          "view": "inspection",
+          "calls": 16,
+          "triangles": 849044,
+          "textures": 9
+        }
+      ]
+    },
+    {
+      "site": "desert-atacama",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 17,
+          "triangles": 897832,
+          "textures": 8
+        },
+        {
+          "view": "inspection",
+          "calls": 17,
+          "triangles": 897832,
+          "textures": 8
+        }
+      ]
+    },
+    {
+      "site": "desert-namib",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 17,
+          "triangles": 896028,
+          "textures": 8
+        },
+        {
+          "view": "inspection",
+          "calls": 17,
+          "triangles": 896028,
+          "textures": 8
+        }
+      ]
+    }
+  ],
+  "performanceLimits": "Software WebGL draw calls, submitted triangles and texture-object counts only; no physical-mobile FPS, GPU time, overdraw or texture-byte approval.",
+  "reusableFindings": [
+    {
+      "principle": "Separate catalogue candidates, rendered functional forms and verified local occurrence",
+      "status": "experimentally-supported",
+      "evidence": "Pilot manifests, null scientific names for anonymous conifers, source audit and targeted tests",
+      "limits": "No new local occurrence, trait or abundance dataset was added"
+    },
+    {
+      "principle": "Do not export a location-conditioned matte as another region’s geography",
+      "status": "experimentally-supported",
+      "evidence": "Foreign/local/legacy asset-loading test and inspected Mediterranean/montane/desert trials",
+      "limits": "Withholding a foreign asset can reveal an unfinished backdrop; that is recorded, not hidden"
+    },
+    {
+      "principle": "Coverage counts do not establish artistic quality",
+      "status": "proposed",
+      "evidence": "All views rendered, while the visible deficits above remain",
+      "limits": "No new candidate was labelled human-approved",
+      "existingLabOperatingRule": true
+    }
+  ],
+  "siteAudit": "artifacts/geographic-completion/audit.json",
+  "sourceFreeze": "artifacts/geographic-completion/freeze.json",
+  "changedFiles": [
+    "src/lib/forest/geographic-pilot.ts",
+    "src/lib/forest/environment-registry.ts",
+    "src/lib/forest/wave1.ts",
+    "src/lib/forest/regional-pilot-study.ts",
+    "src/lib/forest/landscape-matte.ts",
+    "src/lib/forest/andean-puna.ts",
+    "src/lib/forest/wave1-depth-texture.ts",
+    "src/lib/forest/wave2-boreal-geometry.ts",
+    "tests/geographic-pilot.test.ts",
+    "visual-lab/environment-registry/README.md",
+    "visual-lab/environment-registry/COMPLETION.md"
+  ],
+  "next": [
+    "User review of the representative trials",
+    "Prioritize regional tree/ground-cover data and backdrop gaps",
+    "Validate real-device cost, including earlier heavy Sundarbans case",
+    "Design a bounded automatic resolver rollout only after the relevant artistic/data/performance gates pass"
+  ],
+  "humanDirection": {
+    "actor": "user",
+    "kind": "task-priority-and-scope",
+    "quotes": [
+      "I'm okay here. I'd like to move on with continuation",
+      "Expansion",
+      "Finish it up"
+    ],
+    "scope": "Leave current dry-forest canopy work; finish representative geographic expansion.",
+    "candidateApproval": null
+  }
+}

@@ -1,0 +1,96 @@
+{
+  "hero": {
+    "position": [
+      6.661338147750939e-16,
+      0.1252664940564987,
+      29
+    ],
+    "quaternion": [
+      0.12378536973294182,
+      0.014171483327660637,
+      -0.0017680016816925947,
+      0.992206241398645
+    ],
+    "aspect": 1.7777777777777777,
+    "fov": 47
+  },
+  "inspection": {
+    "position": [
+      70,
+      50,
+      85
+    ],
+    "target": [
+      0,
+      1,
+      -25
+    ]
+  },
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          6.661338147750939e-16,
+          0.1252664940564987,
+          29
+        ],
+        "quaternion": [
+          0.12378536973294182,
+          0.014171483327660637,
+          -0.0017680016816925947,
+          0.992206241398645
+        ]
+      },
+      "calls": 26,
+      "triangles": 1450298
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          70,
+          50,
+          85
+        ],
+        "quaternion": [
+          -0.17164577003343667,
+          0.2750834768545333,
+          0.04998336618883981,
+          0.9446525676118614
+        ]
+      },
+      "calls": 22,
+      "triangles": 1433698
+    }
+  ],
+  "assets": [
+    {
+      "url": "/assets/amazon-v5/floor-decals.webp",
+      "sha256": "5d323a726396df2d93790227bf890f3b9e902e8f844818f77212728ed2a4e692"
+    },
+    {
+      "url": "/assets/amazon-v5/forest-wall.webp",
+      "sha256": "938eb1509113896d12d0b9231b608dc3974535a350f4038910ed41ebe5d5118f"
+    },
+    {
+      "url": "/assets/puget-v1/foliage.png",
+      "sha256": "153eee66340f46e6413ea53794c9db71db059e0c3de875bb38162e2b9e2fa7d4"
+    },
+    {
+      "url": "/assets/puget-v1/forest-floor.png",
+      "sha256": "5ed9e83b342a55f564be4efc82df61a214851f66a69dbeeccd53b1a582f36dfc"
+    },
+    {
+      "url": "/assets/puget-v1/sky-matte-v1.webp",
+      "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+    }
+  ],
+  "exposure": 1.12,
+  "toneMapping": 4,
+  "selection": null,
+  "errors": [],
+  "id": "rainforest",
+  "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+  "query": "lat=-3.12&lon=-60.02&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&encounter=1&camera=human&rainforest=v5&composition=C&groundLighting=B&illumination=on"
+}

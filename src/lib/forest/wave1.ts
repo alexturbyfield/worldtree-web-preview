@@ -1,3 +1,4 @@
+import {regionalPilotStudy} from './regional-pilot-study';
 import {mediterraneanStudy} from './mediterranean-adapter';
 import {tropicalDryStudy} from './tropical-dry-forest';
 import {andeanStudy} from './andean-puna';
@@ -11,5 +12,16 @@ import {borealStudy} from './wave2-boreal';
 import {temperateStudy} from './wave2-temperate';
 import {tundraStudy} from './wave2-tundra';
 import {prairieStudy} from './wave3-prairie';
+import {resolveEnvironmentSelection,type EnvironmentRoute} from './environment-registry';
 /** Opt-in presentation only; RESOLVE gate cannot be bypassed by a query string. */
-export function wave1Study(recipe:SceneRecipe,search:string){const params=new URLSearchParams(search),expansion=params.get('expansion');if(expansion==='tropicalpine'&&recipe.ecoregion?.BIOME_NUM===3&&recipe.location&&Math.hypot(recipe.location.lat-14.507672,recipe.location.lon+89.435797)<.3)return tropicalPineStudy;if(expansion==='andean'&&recipe.ecoregion?.BIOME_NUM===10&&recipe.location&&Math.hypot(recipe.location.lat+9.88,recipe.location.lon+77.19)<.4)return andeanStudy;if(expansion==='dryforest'&&recipe.ecoregion?.BIOME_NUM===2&&recipe.location&&Math.hypot(recipe.location.lat-10.85,recipe.location.lon+85.61)<.35)return tropicalDryStudy;if(expansion==='mediterranean'&&recipe.ecoregion?.BIOME_NUM===12&&recipe.ecoregion.ECO_ID===799&&recipe.location&&Math.hypot(recipe.location.lat-43.72,recipe.location.lon-3.58)<.25)return mediterraneanStudy;if(recipe.ecoregion?.ECO_ID!==0){const next=[borealStudy,temperateStudy,tundraStudy,prairieStudy].find(s=>s.id===expansion&&recipe.ecoregion?.BIOME_NUM===s.biome);if(next)return next;}const id=params.get('wave1'),original=[desertStudy,mangroveStudy,floodedStudy].find(s=>s.id===id&&recipe.ecoregion?.BIOME_NUM===s.biome);return original&&params.get('fieldStudy')==='rebuild'?rebuiltStudy(original.id as 'desert'|'mangrove'|'flooded',original.biome):original;}
+export function wave1Study(recipe:SceneRecipe,search:string,route:EnvironmentRoute=resolveEnvironmentSelection(recipe,search).route){
+ if(route.kind!=='wave')return;
+ const regional=route.regional??route.pilot;
+ const transfer=regional?regionalPilotStudy(regional):undefined;
+ const original=transfer??(regional?.site.family==='savanna'?prairieStudy:regional?.site.family==='montane'?andeanStudy:undefined)??[desertStudy,mangroveStudy,floodedStudy,borealStudy,temperateStudy,tundraStudy,prairieStudy,mediterraneanStudy,tropicalDryStudy,andeanStudy,tropicalPineStudy].find(s=>s.id===route.adapter);
+ const study=original&&route.variant==='rebuild'?rebuiltStudy(original.id as 'desert'|'mangrove'|'flooded',original.biome):original;
+ if(!study||!regional)return study;
+ return {...study,compose:(r:SceneRecipe)=>study.compose({...r,seed:regional.effectiveSeed}),mount:(...args:Parameters<typeof study.mount>)=>{
+  const dispose=study.mount(...args);if(route.pilot)args[0].userData.geographicPilot=route.pilot;else args[0].userData.regionalRecipe=regional;return dispose;
+ }};
+}

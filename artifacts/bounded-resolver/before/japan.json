@@ -1,0 +1,79 @@
+{
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          0,
+          1.641702975645583,
+          34
+        ],
+        "quaternion": [
+          0.004416860582285986,
+          0,
+          0,
+          0.9999902456237244
+        ],
+        "fov": 47,
+        "far": 350
+      },
+      "calls": 5,
+      "triangles": 295604,
+      "textures": 7
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          62,
+          40,
+          76
+        ],
+        "quaternion": [
+          -0.14960876967790102,
+          0.27061515290874505,
+          0.04261564454501207,
+          0.9500360845208219
+        ],
+        "fov": 47,
+        "far": 350
+      },
+      "calls": 6,
+      "triangles": 307124,
+      "textures": 7
+    }
+  ],
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": null,
+    "selectedScene": null,
+    "route": {
+      "kind": "generic",
+      "adapter": "generic",
+      "sceneId": null
+    },
+    "pilot": null,
+    "regional": null,
+    "automatic": null,
+    "mode": "generic",
+    "checkpoint": null,
+    "vegetationCoverage": "canonical",
+    "individualInspection": true,
+    "referenceLocation": null,
+    "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+    "limits": [],
+    "notices": []
+  },
+  "render": {
+    "resolution": [
+      640,
+      360
+    ],
+    "pixelRatio": 1,
+    "exposure": 1.12,
+    "toneMapping": 4
+  },
+  "id": "japan",
+  "query": "lat=36.25&lon=138.3&seed=29&habitat=forest&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly",
+  "errors": []
+}

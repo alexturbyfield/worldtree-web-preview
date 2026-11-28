@@ -1,0 +1,642 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-28T06:03:01.501Z",
+  "status": "opt-in-expansion-for-review",
+  "humanApproval": null,
+  "scope": "Nine new audited coordinates; six total pilot families and eighteen locations. No global routing promotion. Dry-forest canopy and continuation left alone.",
+  "loaded": [
+    "AGENTS.md",
+    ".agents/skills/prototype-fast/SKILL.md",
+    "docs/visual-quality-workflow.md",
+    "visual-lab/environment-registry/GEOGRAPHIC-PILOT.md",
+    "visual-lab/environment-registry/geographic-pilot-review.json",
+    "visual-lab/global-expansion/INVENTORY.md",
+    "Next local use-search-params guide"
+  ],
+  "visualInterpretation": {
+    "available": true,
+    "reviewer": "Implementing assistant; not independent",
+    "inspected": [
+      "Individual Canadian boreal, Chukchi and polar tundra images",
+      "Gabon mangrove hero",
+      "Nine-site hero/inspection gallery",
+      "Three-family reserved-seed gallery",
+      "Mobile location selector"
+    ]
+  },
+  "hypothesis": "Reuse accepted family adapters at explicitly gated source coordinates, selecting only supported regional candidate architectures without exporting the original regional species list.",
+  "siteEvidence": [
+    {
+      "id": "boreal-finland",
+      "name": "Finnish taiga",
+      "family": "boreal",
+      "lat": 66.5,
+      "lon": 26,
+      "biome": 6,
+      "eco": 717,
+      "area": "FIN",
+      "region": "Scandinavian and Russian taiga",
+      "species": [
+        {
+          "name": "Betula pendula",
+          "preset": "silver-birch",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Picea obovata",
+          "preset": "spruce",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262697-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Betula pubescens",
+          "preset": "oak",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295185-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Picea abies",
+          "preset": "spruce",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262609-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Quercus robur",
+          "preset": "oak",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:304293-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Pinus sylvestris",
+          "preset": "pine",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263353-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "boreal-canada",
+      "name": "Canadian Shield forest",
+      "family": "boreal",
+      "lat": 50.03395423650011,
+      "lon": -79.9693233989495,
+      "biome": 6,
+      "eco": 370,
+      "area": "ONT",
+      "region": "Central Canadian Shield forests",
+      "species": [
+        {
+          "name": "Acer saccharum",
+          "preset": "oak",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:56795-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Betula pendula",
+          "preset": "silver-birch",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Tsuga canadensis",
+          "preset": "spruce",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:264005-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Gymnocladus dioicus",
+          "preset": "oak",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1195073-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Elaeagnus commutata",
+          "preset": "oak",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:315523-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Pinus strobus",
+          "preset": "pine",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:197100-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Picea laxa",
+          "preset": "spruce",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195881-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Fagus grandifolia",
+          "preset": "oak",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295597-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Betula papyrifera",
+          "preset": "birch",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:32197-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Liriodendron tulipifera",
+          "preset": "oak",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30197364-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Populus tremuloides",
+          "preset": "aspen",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:208337-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "boreal-siberia",
+      "name": "East Siberian taiga",
+      "family": "boreal",
+      "lat": 61.374604867000016,
+      "lon": 113.46115642698791,
+      "biome": 6,
+      "eco": 710,
+      "area": "YAK",
+      "region": "East Siberian taiga",
+      "species": [
+        {
+          "name": "Larix sibirica",
+          "preset": "spruce",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262455-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Alnus glutipes",
+          "preset": "oak",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:107665-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Sambucus williamsii",
+          "preset": "oak",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:149409-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Picea obovata",
+          "preset": "spruce",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262697-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Larix gmelinii",
+          "preset": "spruce",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77092562-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Pinus sibirica",
+          "preset": "pine",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77095028-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Betula pubescens",
+          "preset": "oak",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295185-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Betula pendula",
+          "preset": "silver-birch",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "name": "Pinus sylvestris",
+          "preset": "pine",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263353-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tundra-alaska",
+      "name": "Alaskan coastal tundra",
+      "family": "tundra",
+      "lat": 70.40569664550017,
+      "lon": -155.5860519265899,
+      "biome": 11,
+      "eco": 407,
+      "area": "ASK",
+      "region": "Arctic coastal tundra",
+      "species": []
+    },
+    {
+      "id": "tundra-chukchi",
+      "name": "Chukchi tundra",
+      "family": "tundra",
+      "lat": 66.5,
+      "lon": 179.5,
+      "biome": 11,
+      "eco": 772,
+      "area": "MAG",
+      "region": "Chukchi Peninsula tundra",
+      "species": []
+    },
+    {
+      "id": "tundra-polar",
+      "name": "High-Arctic sparse tundra",
+      "family": "tundra",
+      "lat": 79.8425808130001,
+      "lon": 22.698212507857455,
+      "biome": 11,
+      "eco": 778,
+      "area": "SVA",
+      "region": "Russian Arctic desert",
+      "species": []
+    },
+    {
+      "id": "mangrove-florida",
+      "name": "Florida tidal mangrove",
+      "family": "mangrove",
+      "lat": 25.2,
+      "lon": -80.9,
+      "biome": 14,
+      "eco": 612,
+      "area": "FLA",
+      "region": "Bahamian-Antillean mangroves",
+      "species": [
+        {
+          "name": "Rhizophora mangle",
+          "preset": "red-mangrove",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30061148-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mangrove-gabon",
+      "name": "Gabon tidal mangrove",
+      "family": "mangrove",
+      "lat": 0.07135971000002428,
+      "lon": 9.73893832629247,
+      "biome": 14,
+      "eco": 111,
+      "area": "GAB",
+      "region": "Central African mangroves",
+      "species": [
+        {
+          "name": "Rhizophora mangle",
+          "preset": "red-mangrove",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30061148-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "mangrove-sundarbans",
+      "name": "Sundarbans tidal mangrove",
+      "family": "mangrove",
+      "lat": 22.160026979000122,
+      "lon": 89.11163382745804,
+      "biome": 14,
+      "eco": 323,
+      "area": "BAN",
+      "region": "Sundarbans mangroves",
+      "species": [
+        {
+          "name": "Avicennia marina",
+          "preset": "avicennia",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:861130-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        }
+      ]
+    }
+  ],
+  "validation": {
+    "typeScript": "passed",
+    "targetedTests": {
+      "passed": 29,
+      "failed": 0,
+      "log": "artifacts/geographic-expansion-b/tests.log"
+    },
+    "targetedEslint": "passed",
+    "primaryViews": 18,
+    "holdout": {
+      "seed": "62417",
+      "views": 6,
+      "frozenSourcesUnchanged": true,
+      "retuned": false
+    },
+    "protectedCaptured": [
+      {
+        "id": "boreal",
+        "view": "hero",
+        "pixelIdentical": true
+      },
+      {
+        "id": "boreal",
+        "view": "inspection",
+        "pixelIdentical": true
+      },
+      {
+        "id": "tundra",
+        "view": "hero",
+        "pixelIdentical": true
+      },
+      {
+        "id": "tundra",
+        "view": "inspection",
+        "pixelIdentical": true
+      },
+      {
+        "id": "mangrove",
+        "view": "hero",
+        "pixelIdentical": true
+      },
+      {
+        "id": "mangrove",
+        "view": "inspection",
+        "pixelIdentical": true
+      }
+    ],
+    "protectedRouting": "All fifteen accepted IDs checked by targeted tests. Only the three affected canonical families were recaptured this pass; do not imply all protected images were recaptured.",
+    "browser": {
+      "options": 19,
+      "touchHeight": 44,
+      "noOverflow": true
+    },
+    "errors": []
+  },
+  "critique": [
+    {
+      "family": "boreal",
+      "severity": "major",
+      "observed": "Hero enclosure, mossy ground and source-conditioned conifer/birch forms transfer. Trunks remain plain, boughs repeat, and elevated views expose finite stand distribution and abrupt texture fields.",
+      "decision": "Retain opt-in transfer study. Regional candidate support is useful; global artwork approval is withheld."
+    },
+    {
+      "family": "tundra",
+      "severity": "major",
+      "observed": "Open treeless identity and correlated low-cover bands transfer; polar-desert adapter visibly reduces coverage. Surface pigments are repetitive, distant relief is generic and the sparse High-Arctic substrate is overly warm.",
+      "decision": "Retain experimental previews, not a claim of locally measured plant communities or reference-quality material fidelity."
+    },
+    {
+      "family": "mangrove",
+      "severity": "major",
+      "observed": "Irregular water/shoreline mosaic and environment-colored reflections remain visible from staging cameras. Sundarbans uses its supported Avicennia profile. Foreground mud can be too empty, crowns remain separated and forest enclosure is weaker than the concept.",
+      "decision": "Retain explicit supported-profile previews; do not promote a catalogue subset as dominant local forest."
+    }
+  ],
+  "performance": [
+    {
+      "site": "boreal-finland",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 15,
+          "triangles": 692534,
+          "textures": 10
+        },
+        {
+          "view": "inspection",
+          "calls": 15,
+          "triangles": 692534,
+          "textures": 10
+        }
+      ]
+    },
+    {
+      "site": "boreal-canada",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 16,
+          "triangles": 681014,
+          "textures": 11
+        },
+        {
+          "view": "inspection",
+          "calls": 16,
+          "triangles": 681014,
+          "textures": 11
+        }
+      ]
+    },
+    {
+      "site": "boreal-siberia",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 15,
+          "triangles": 675428,
+          "textures": 10
+        },
+        {
+          "view": "inspection",
+          "calls": 15,
+          "triangles": 675428,
+          "textures": 10
+        }
+      ]
+    },
+    {
+      "site": "tundra-alaska",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 16,
+          "triangles": 1016508,
+          "textures": 5
+        },
+        {
+          "view": "inspection",
+          "calls": 16,
+          "triangles": 1016508,
+          "textures": 5
+        }
+      ]
+    },
+    {
+      "site": "tundra-chukchi",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 16,
+          "triangles": 1014636,
+          "textures": 5
+        },
+        {
+          "view": "inspection",
+          "calls": 16,
+          "triangles": 1014636,
+          "textures": 5
+        }
+      ]
+    },
+    {
+      "site": "tundra-polar",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 16,
+          "triangles": 250148,
+          "textures": 5
+        },
+        {
+          "view": "inspection",
+          "calls": 16,
+          "triangles": 250148,
+          "textures": 5
+        }
+      ]
+    },
+    {
+      "site": "mangrove-florida",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 20,
+          "triangles": 2486114,
+          "textures": 14
+        },
+        {
+          "view": "inspection",
+          "calls": 20,
+          "triangles": 2486114,
+          "textures": 14
+        }
+      ]
+    },
+    {
+      "site": "mangrove-gabon",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 20,
+          "triangles": 2494066,
+          "textures": 14
+        },
+        {
+          "view": "inspection",
+          "calls": 20,
+          "triangles": 2494066,
+          "textures": 14
+        }
+      ]
+    },
+    {
+      "site": "mangrove-sundarbans",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 20,
+          "triangles": 5664718,
+          "textures": 14
+        },
+        {
+          "view": "inspection",
+          "calls": 20,
+          "triangles": 5664718,
+          "textures": 14
+        }
+      ]
+    }
+  ],
+  "performanceLimits": "Counts captured in software WebGL, not physical-mobile timing. Sundarbans submits approximately 5.7M triangles versus 2.5M for the Rhizophora examples, so performance validation/representation work is needed before rollout.",
+  "reusedRules": [
+    {
+      "principle": "Tree architecture eligibility must match the actual regionally resolved candidate, not the preferred reference tree",
+      "status": "experimentally-supported",
+      "evidence": "Source names/profile IDs in audit and runtime pilot manifests; legacy routing tests pass",
+      "limitation": "Catalogue countries do not establish point occurrence, species anatomy or canopy dominance"
+    },
+    {
+      "principle": "Open biomes and sparse polar contexts must remain treeless without forcing forest templates",
+      "status": "experimentally-supported",
+      "evidence": "All tundra views and sparse polar capture",
+      "limitation": "Nonwoody forms are unnamed; source biome classification does not validate local soil or phenology"
+    },
+    {
+      "principle": "Reuse retained topology rather than accidentally loading a rejected legacy adapter",
+      "status": "experimentally-supported",
+      "evidence": "Mangrove variant rebuild and fidelity URL tested; irregular shoreline screenshots inspected",
+      "limitation": "No canal A/B was performed in this batch; old rejection remains in prior Lab evidence"
+    }
+  ],
+  "changedFiles": [
+    "src/lib/forest/geographic-pilot.ts",
+    "src/lib/forest/environment-registry.ts",
+    "src/components/EnvironmentReferencePanel.tsx",
+    "tests/geographic-pilot.test.ts",
+    "visual-lab/environment-registry/EXPANSION-B.md",
+    "visual-lab/environment-registry/GEOGRAPHIC-PILOT.md"
+  ],
+  "remaining": [
+    "Regional nonwoody catalogues and measured environmental fields are still missing",
+    "Finite scene continuation and repeated materials remain visible in elevated views",
+    "Sundarbans geometry cost requires a budget before production routing",
+    "New locations require user visual review"
+  ],
+  "next": "Review this batch, then continue remaining recipe families under the same explicit evidence gates. Do not widen automatic map routing merely because coverage points were added."
+}

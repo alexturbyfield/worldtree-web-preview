@@ -322,6 +322,8 @@ Positive human-preference tests run only in isolated temporary fixtures; they do
 
 ## Adaptive visual work
 
+For the consolidated accepted scene inventory, canonical reference picker and frozen regression evidence, see the [protected environment registry](environment-registry/README.md). The registry supplies metadata and routing to the existing adapters; it does not replace the Lab's reference or approval records.
+
 For new tasks use [the efficient visual-development protocol](../AGENTS.md#efficient-visual-development-and-learning). It supersedes fixed-three-candidate guidance: choose a focused fix, sweep, distinct representations, broad composition or minimal architecture prototypes according to uncertainty. Historical catalog experiments remain preserved, including their fixed candidate counts and stop records. Do not reset budgets.
 
 Load permanent rules, reusable skills/grammar and task-specific evidence. Critique actual images before implementation justification. Record attribution, hypothesis confidence, strategy, artistic/reusable value, capture inputs, decisions, source freeze and unseen final seed. Reuse the existing harness/controller. Shared changes require affected/protected biome captures. Efficiency never justifies skipping meaningful experiments, visual inspection or honest evaluation.

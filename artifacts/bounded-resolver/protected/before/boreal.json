@@ -1,0 +1,92 @@
+{
+  "hero": {
+    "position": [
+      0,
+      1.6436058218259575,
+      34
+    ],
+    "quaternion": [
+      0.013036468752836722,
+      0,
+      0,
+      0.9999150216305664
+    ],
+    "aspect": 1.7777777777777777,
+    "fov": 47
+  },
+  "inspection": {
+    "position": [
+      62,
+      38,
+      76
+    ],
+    "target": [
+      0,
+      2,
+      -24
+    ]
+  },
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          0,
+          1.6436058218259575,
+          34
+        ],
+        "quaternion": [
+          0.013036468752836722,
+          0,
+          0,
+          0.9999150216305664
+        ]
+      },
+      "calls": 15,
+      "triangles": 691432
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          62,
+          38,
+          76
+        ],
+        "quaternion": [
+          -0.14225669339427574,
+          0.2709366497614252,
+          0.04052142593573312,
+          0.9511647486322844
+        ]
+      },
+      "calls": 15,
+      "triangles": 691432
+    }
+  ],
+  "assets": [
+    {
+      "url": "/assets/puget-v1/sky-matte-v1.webp",
+      "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+    },
+    {
+      "url": "/assets/wave1-detail/desert-granite-v1.webp",
+      "sha256": "eaf8fb532160b6dd0c1ee826e7f564ee75a2d425426473f61c918e068c94a1ae"
+    },
+    {
+      "url": "/assets/wave2-autonomous/boreal-floor-v1.png",
+      "sha256": "1a2ff0f48dfe4bd5eaf0a0e3fb126fef5910d38bcde237ce70baff76f8f78664"
+    },
+    {
+      "url": "/assets/wave2-concepts/spruce-sprays-v2.png",
+      "sha256": "d499db568521abffbc80eb9df499e37b83ee611126eb5c473d4a47649399b9a2"
+    }
+  ],
+  "exposure": 1.12,
+  "toneMapping": 4,
+  "selection": null,
+  "errors": [],
+  "id": "boreal",
+  "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+  "query": "lat=66.5&lon=26&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&expansion=boreal"
+}

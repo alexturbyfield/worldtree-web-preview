@@ -1,0 +1,136 @@
+{
+  "hero": {
+    "position": [
+      -3.004880202934146,
+      7.286881360972199,
+      44.819828966632485
+    ],
+    "quaternion": [
+      0.018598816038418668,
+      -0.022884851646490397,
+      0.0004258163765890836,
+      0.9995649985306112
+    ],
+    "aspect": 1.7777777777777777,
+    "fov": 47
+  },
+  "inspection": {
+    "position": [
+      70,
+      50,
+      85
+    ],
+    "target": [
+      0,
+      1,
+      -25
+    ]
+  },
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          -3.004880202934146,
+          7.286881360972199,
+          44.819828966632485
+        ],
+        "quaternion": [
+          0.018598816038418668,
+          -0.022884851646490397,
+          0.0004258163765890836,
+          0.9995649985306112
+        ]
+      },
+      "calls": 12,
+      "triangles": 501884
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          70,
+          50,
+          85
+        ],
+        "quaternion": [
+          -0.17164577003343667,
+          0.2750834768545333,
+          0.04998336618883981,
+          0.9446525676118614
+        ]
+      },
+      "calls": 12,
+      "triangles": 501884
+    }
+  ],
+  "assets": [
+    {
+      "url": "/assets/alpine-backdrop/distant-ridges-v1.png",
+      "sha256": "3e875754ba0bb292b9f7addfb062967848f76f38fbaccd31c02b04d2fb7a2322"
+    },
+    {
+      "url": "/assets/conifer-v2/fir-sprays-v1.png",
+      "sha256": "f5ab5e9e4b7539da57b1f4c45f24cdc04bdda936b89b7a6cf224df4a4a7dfe2a"
+    },
+    {
+      "url": "/assets/puget-v1/sky-matte-v1.webp",
+      "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+    }
+  ],
+  "exposure": 1.12,
+  "toneMapping": 4,
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": "alpine",
+    "selectedScene": {
+      "id": "alpine",
+      "name": "Alpine meadow and treeline",
+      "version": "accepted-v1"
+    },
+    "route": {
+      "kind": "alpine",
+      "adapter": "alpine",
+      "sceneId": "alpine"
+    },
+    "pilot": null,
+    "regional": null,
+    "automatic": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "protected-reference",
+      "code": "protected-reference",
+      "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    },
+    "mode": "reference",
+    "checkpoint": {
+      "id": "alpine-accepted-v1",
+      "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+      "exactSettings": true
+    },
+    "vegetationCoverage": "adapter-generated",
+    "individualInspection": false,
+    "referenceLocation": {
+      "lat": 51.17,
+      "lon": -116.18
+    },
+    "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+    "limits": [
+      "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+      "Synthetic terrain and materials are not measured land cover.",
+      "Reference lighting and matte camera envelopes remain adapter-specific.",
+      "Mobile performance and unreviewed variations are not approved."
+    ],
+    "notices": [
+      "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+    ]
+  },
+  "errors": [],
+  "id": "alpine",
+  "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+  "query": "lat=51.17&lon=-116.18&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&alpine=treeline&palette=A&backdrop=subtle&alpineArt=meadow&meadowField=brush&referenceScene=alpine&autoEnvironment=bounded-auto-v1"
+}

@@ -1,0 +1,2231 @@
+[
+  {
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.9916626806681965,
+            34
+          ],
+          "quaternion": [
+            -0.00009342924736356658,
+            0,
+            0,
+            0.9999999956354877
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 15,
+        "triangles": 906940,
+        "textures": 13
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "quaternion": [
+            -0.14960876967790102,
+            0.27061515290874505,
+            0.04261564454501207,
+            0.9500360845208219
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 15,
+        "triangles": 906940,
+        "textures": 13
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "temperate",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:woodland-europe",
+            "name": "Western European broadleaf forests · bounded automatic",
+            "family": "temperate",
+            "biome": 4,
+            "eco": 686,
+            "lat": 50.7,
+            "lon": 10.8,
+            "area": "GER"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "89827273",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Fagus sylvatica",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:305836-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Betula pendula",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Fraxinus excelsior",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:609009-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Betula pubescens",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295185-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Quercus robur",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:304293-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:woodland-europe",
+          "name": "Western European broadleaf forests · bounded automatic",
+          "family": "temperate",
+          "biome": 4,
+          "eco": 686,
+          "lat": 50.7,
+          "lon": 10.8,
+          "area": "GER"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "89827273",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Fagus sylvatica",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:305836-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Betula pendula",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Fraxinus excelsior",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:609009-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Betula pubescens",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295185-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Quercus robur",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:304293-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Regional candidate and architecture checks passed; the matching shared forest recipe is selected.",
+        "ruleId": "woodland-europe",
+        "distanceKm": 30.70655584263668,
+        "confidence": "regional-range-candidate",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:woodland-europe",
+            "name": "Western European broadleaf forests · bounded automatic",
+            "family": "temperate",
+            "biome": 4,
+            "eco": 686,
+            "lat": 50.7,
+            "lon": 10.8,
+            "area": "GER"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "89827273",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Fagus sylvatica",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:305836-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Betula pendula",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Fraxinus excelsior",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:609009-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Betula pubescens",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295185-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Quercus robur",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:304293-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+      ],
+      "notices": [
+        "Automatic selection: Regional candidate and architecture checks passed; the matching shared forest recipe is selected."
+      ]
+    },
+    "render": {
+      "resolution": [
+        640,
+        360
+      ],
+      "pixelRatio": 1,
+      "exposure": 1.12,
+      "toneMapping": 4
+    },
+    "id": "germany",
+    "query": "lat=50.7&lon=10.8&seed=29&habitat=forest&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": []
+  },
+  {
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.640938451444579,
+            34
+          ],
+          "quaternion": [
+            0.004388752168858736,
+            0,
+            0,
+            0.9999903693808257
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 13,
+        "triangles": 839116,
+        "textures": 11
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "quaternion": [
+            -0.14960876967790102,
+            0.27061515290874505,
+            0.04261564454501207,
+            0.9500360845208219
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 13,
+        "triangles": 839116,
+        "textures": 11
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "temperate",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:woodland-appalachia",
+            "name": "Appalachian-Blue Ridge forests · bounded automatic",
+            "family": "temperate",
+            "biome": 4,
+            "eco": 331,
+            "lat": 35.8,
+            "lon": -83.7,
+            "area": "TEN"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "2206818744",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Acer saccharum",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:56795-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Quercus falcata",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:215831-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Fagus grandifolia",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295597-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:woodland-appalachia",
+          "name": "Appalachian-Blue Ridge forests · bounded automatic",
+          "family": "temperate",
+          "biome": 4,
+          "eco": 331,
+          "lat": 35.8,
+          "lon": -83.7,
+          "area": "TEN"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "2206818744",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Acer saccharum",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:56795-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Quercus falcata",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:215831-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Fagus grandifolia",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295597-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Regional candidate and architecture checks passed; the matching shared forest recipe is selected.",
+        "ruleId": "woodland-appalachia",
+        "distanceKm": 28.648420413539277,
+        "confidence": "regional-range-candidate",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:woodland-appalachia",
+            "name": "Appalachian-Blue Ridge forests · bounded automatic",
+            "family": "temperate",
+            "biome": 4,
+            "eco": 331,
+            "lat": 35.8,
+            "lon": -83.7,
+            "area": "TEN"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "2206818744",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Acer saccharum",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:56795-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Quercus falcata",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:215831-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Fagus grandifolia",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295597-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+      ],
+      "notices": [
+        "Automatic selection: Regional candidate and architecture checks passed; the matching shared forest recipe is selected."
+      ]
+    },
+    "render": {
+      "resolution": [
+        640,
+        360
+      ],
+      "pixelRatio": 1,
+      "exposure": 1.12,
+      "toneMapping": 4
+    },
+    "id": "appalachia",
+    "query": "lat=35.8&lon=-83.7&seed=29&habitat=forest&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": []
+  },
+  {
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.641702975645583,
+            34
+          ],
+          "quaternion": [
+            0.004416860582285986,
+            0,
+            0,
+            0.9999902456237244
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 15,
+        "triangles": 914456,
+        "textures": 13
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "quaternion": [
+            -0.14960876967790102,
+            0.27061515290874505,
+            0.04261564454501207,
+            0.9500360845208219
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 15,
+        "triangles": 914456,
+        "textures": 13
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "temperate",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:woodland-japan",
+            "name": "Taiheiyo montane deciduous forests · bounded automatic",
+            "family": "temperate",
+            "biome": 4,
+            "eco": 683,
+            "lat": 36.25,
+            "lon": 138.3,
+            "area": "JAP"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "397078703",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Tilia maximowicziana",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:835435-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Fagus crenata",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295581-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Acer palmatum",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:927504-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Betula pendula",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:woodland-japan",
+          "name": "Taiheiyo montane deciduous forests · bounded automatic",
+          "family": "temperate",
+          "biome": 4,
+          "eco": 683,
+          "lat": 36.25,
+          "lon": 138.3,
+          "area": "JAP"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "397078703",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Tilia maximowicziana",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:835435-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Fagus crenata",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295581-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Acer palmatum",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:927504-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Betula pendula",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Regional candidate and architecture checks passed; the matching shared forest recipe is selected.",
+        "ruleId": "woodland-japan",
+        "distanceKm": 38.71413972639433,
+        "confidence": "regional-range-candidate",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:woodland-japan",
+            "name": "Taiheiyo montane deciduous forests · bounded automatic",
+            "family": "temperate",
+            "biome": 4,
+            "eco": 683,
+            "lat": 36.25,
+            "lon": 138.3,
+            "area": "JAP"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "397078703",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Tilia maximowicziana",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:835435-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Fagus crenata",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295581-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Acer palmatum",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:927504-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Betula pendula",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+      ],
+      "notices": [
+        "Automatic selection: Regional candidate and architecture checks passed; the matching shared forest recipe is selected."
+      ]
+    },
+    "render": {
+      "resolution": [
+        640,
+        360
+      ],
+      "pixelRatio": 1,
+      "exposure": 1.12,
+      "toneMapping": 4
+    },
+    "id": "japan",
+    "query": "lat=36.25&lon=138.3&seed=29&habitat=forest&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": []
+  },
+  {
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.6691871522787844,
+            34
+          ],
+          "quaternion": [
+            0.013859168410969312,
+            0,
+            0,
+            0.9999039571133602
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 15,
+        "triangles": 688380,
+        "textures": 10
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "quaternion": [
+            -0.14960876967790102,
+            0.27061515290874505,
+            0.04261564454501207,
+            0.9500360845208219
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 15,
+        "triangles": 688380,
+        "textures": 10
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "boreal",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:boreal-finland",
+            "name": "Scandinavian and Russian taiga · bounded automatic",
+            "family": "boreal",
+            "biome": 6,
+            "eco": 717,
+            "lat": 66.8,
+            "lon": 26.2,
+            "area": "FIN"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "1376063887",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Betula pendula",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Picea obovata",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262697-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Betula pubescens",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295185-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Picea abies",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262609-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Pinus sylvestris",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263353-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:boreal-finland",
+          "name": "Scandinavian and Russian taiga · bounded automatic",
+          "family": "boreal",
+          "biome": 6,
+          "eco": 717,
+          "lat": 66.8,
+          "lon": 26.2,
+          "area": "FIN"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "1376063887",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Betula pendula",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Picea obovata",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262697-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Betula pubescens",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295185-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Picea abies",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262609-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Pinus sylvestris",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263353-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Regional candidate and architecture checks passed; the matching shared forest recipe is selected.",
+        "ruleId": "boreal-finland",
+        "distanceKm": 34.503300554508,
+        "confidence": "regional-range-candidate",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:boreal-finland",
+            "name": "Scandinavian and Russian taiga · bounded automatic",
+            "family": "boreal",
+            "biome": 6,
+            "eco": 717,
+            "lat": 66.8,
+            "lon": 26.2,
+            "area": "FIN"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "1376063887",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Betula pendula",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Picea obovata",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262697-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Betula pubescens",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295185-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Picea abies",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262609-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Pinus sylvestris",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263353-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+      ],
+      "notices": [
+        "Automatic selection: Regional candidate and architecture checks passed; the matching shared forest recipe is selected."
+      ]
+    },
+    "render": {
+      "resolution": [
+        640,
+        360
+      ],
+      "pixelRatio": 1,
+      "exposure": 1.12,
+      "toneMapping": 4
+    },
+    "id": "finland",
+    "query": "lat=66.8&lon=26.2&seed=29&habitat=forest&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": []
+  },
+  {
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.688951757079139,
+            34
+          ],
+          "quaternion": [
+            0.01378808977591429,
+            0,
+            0,
+            0.9999049397719422
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 16,
+        "triangles": 683602,
+        "textures": 11
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "quaternion": [
+            -0.14960876967790102,
+            0.27061515290874505,
+            0.04261564454501207,
+            0.9500360845208219
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 16,
+        "triangles": 683602,
+        "textures": 11
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "boreal",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:boreal-canada",
+            "name": "Central Canadian Shield forests · bounded automatic",
+            "family": "boreal",
+            "biome": 6,
+            "eco": 370,
+            "lat": 50.3,
+            "lon": -80.2,
+            "area": "ONT"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "1806620480",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Betula pendula",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Pinus strobus",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:197100-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Picea laxa",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195881-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Betula papyrifera",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:32197-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Populus tremuloides",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:208337-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:boreal-canada",
+          "name": "Central Canadian Shield forests · bounded automatic",
+          "family": "boreal",
+          "biome": 6,
+          "eco": 370,
+          "lat": 50.3,
+          "lon": -80.2,
+          "area": "ONT"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "1806620480",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Betula pendula",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Pinus strobus",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:197100-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Picea laxa",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195881-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Betula papyrifera",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:32197-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Populus tremuloides",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:208337-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Regional candidate and architecture checks passed; the matching shared forest recipe is selected.",
+        "ruleId": "boreal-canada",
+        "distanceKm": 33.83931705003026,
+        "confidence": "regional-range-candidate",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:boreal-canada",
+            "name": "Central Canadian Shield forests · bounded automatic",
+            "family": "boreal",
+            "biome": 6,
+            "eco": 370,
+            "lat": 50.3,
+            "lon": -80.2,
+            "area": "ONT"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "1806620480",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Betula pendula",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Pinus strobus",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:197100-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Picea laxa",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195881-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Betula papyrifera",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:32197-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Populus tremuloides",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:208337-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+      ],
+      "notices": [
+        "Automatic selection: Regional candidate and architecture checks passed; the matching shared forest recipe is selected."
+      ]
+    },
+    "render": {
+      "resolution": [
+        640,
+        360
+      ],
+      "pixelRatio": 1,
+      "exposure": 1.12,
+      "toneMapping": 4
+    },
+    "id": "canada",
+    "query": "lat=50.3&lon=-80.2&seed=29&habitat=forest&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": []
+  },
+  {
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.8291439082764125,
+            34
+          ],
+          "quaternion": [
+            0.010912420549626026,
+            0,
+            0,
+            0.9999404577662353
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 15,
+        "triangles": 679380,
+        "textures": 10
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "quaternion": [
+            -0.14960876967790102,
+            0.27061515290874505,
+            0.04261564454501207,
+            0.9500360845208219
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 15,
+        "triangles": 679380,
+        "textures": 10
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "boreal",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:boreal-siberia",
+            "name": "East Siberian taiga · bounded automatic",
+            "family": "boreal",
+            "biome": 6,
+            "eco": 710,
+            "lat": 61.7,
+            "lon": 113.7,
+            "area": "YAK"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "517948824",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Larix sibirica",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262455-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Picea obovata",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262697-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Larix gmelinii",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77092562-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Pinus sibirica",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77095028-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Betula pubescens",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295185-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Betula pendula",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Pinus sylvestris",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263353-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:boreal-siberia",
+          "name": "East Siberian taiga · bounded automatic",
+          "family": "boreal",
+          "biome": 6,
+          "eco": 710,
+          "lat": 61.7,
+          "lon": 113.7,
+          "area": "YAK"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "517948824",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Larix sibirica",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262455-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Picea obovata",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262697-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Larix gmelinii",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77092562-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Pinus sibirica",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77095028-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Betula pubescens",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295185-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Betula pendula",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Pinus sylvestris",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263353-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Regional candidate and architecture checks passed; the matching shared forest recipe is selected.",
+        "ruleId": "boreal-siberia",
+        "distanceKm": 38.33222675249649,
+        "confidence": "regional-range-candidate",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:boreal-siberia",
+            "name": "East Siberian taiga · bounded automatic",
+            "family": "boreal",
+            "biome": 6,
+            "eco": 710,
+            "lat": 61.7,
+            "lon": 113.7,
+            "area": "YAK"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "517948824",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Larix sibirica",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262455-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Picea obovata",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262697-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Larix gmelinii",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77092562-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Pinus sibirica",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77095028-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Betula pubescens",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295185-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Betula pendula",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Pinus sylvestris",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263353-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+      ],
+      "notices": [
+        "Automatic selection: Regional candidate and architecture checks passed; the matching shared forest recipe is selected."
+      ]
+    },
+    "render": {
+      "resolution": [
+        640,
+        360
+      ],
+      "pixelRatio": 1,
+      "exposure": 1.12,
+      "toneMapping": 4
+    },
+    "id": "siberia",
+    "query": "lat=61.7&lon=113.7&seed=29&habitat=forest&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": []
+  },
+  {
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.510522882514766,
+            34
+          ],
+          "quaternion": [
+            -0.016012803436504006,
+            0,
+            0,
+            0.9998717868437451
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 16,
+        "triangles": 1011628,
+        "textures": 5
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "quaternion": [
+            -0.14960876967790102,
+            0.27061515290874505,
+            0.04261564454501207,
+            0.9500360845208219
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 16,
+        "triangles": 1011628,
+        "textures": 5
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "tundra",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:tundra-alaska",
+            "name": "Arctic coastal tundra · bounded automatic",
+            "family": "tundra",
+            "biome": 11,
+            "eco": 407,
+            "lat": 70.3,
+            "lon": -155.2,
+            "area": "ASK"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "866209432",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:tundra-alaska",
+          "name": "Arctic coastal tundra · bounded automatic",
+          "family": "tundra",
+          "biome": 11,
+          "eco": 407,
+          "lat": 70.3,
+          "lon": -155.2,
+          "area": "ASK"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "866209432",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "none",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Source tundra classification supports a treeless low-cover study; no named local flora are asserted.",
+        "ruleId": "tundra-alaska",
+        "distanceKm": 18.613080859184144,
+        "confidence": "biome-context-only",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:tundra-alaska",
+            "name": "Arctic coastal tundra · bounded automatic",
+            "family": "tundra",
+            "biome": 11,
+            "eco": 407,
+            "lat": 70.3,
+            "lon": -155.2,
+            "area": "ASK"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "866209432",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+      ],
+      "notices": [
+        "Automatic selection: Source tundra classification supports a treeless low-cover study; no named local flora are asserted."
+      ]
+    },
+    "render": {
+      "resolution": [
+        640,
+        360
+      ],
+      "pixelRatio": 1,
+      "exposure": 1.12,
+      "toneMapping": 4
+    },
+    "id": "alaska",
+    "query": "lat=70.3&lon=-155.2&seed=29&habitat=grassland&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": []
+  },
+  {
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            2.157665768795541,
+            34
+          ],
+          "quaternion": [
+            -0.02633293958983931,
+            0,
+            0,
+            0.9996532280208762
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 16,
+        "triangles": 1033628,
+        "textures": 5
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "quaternion": [
+            -0.14960876967790102,
+            0.27061515290874505,
+            0.04261564454501207,
+            0.9500360845208219
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 16,
+        "triangles": 1033628,
+        "textures": 5
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "tundra",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:tundra-chukchi",
+            "name": "Chukchi Peninsula tundra · bounded automatic",
+            "family": "tundra",
+            "biome": 11,
+            "eco": 772,
+            "lat": 66.5,
+            "lon": -179.5,
+            "area": "MAG"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "2167996128",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:tundra-chukchi",
+          "name": "Chukchi Peninsula tundra · bounded automatic",
+          "family": "tundra",
+          "biome": 11,
+          "eco": 772,
+          "lat": 66.5,
+          "lon": -179.5,
+          "area": "MAG"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "2167996128",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "none",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Source tundra classification supports a treeless low-cover study; no named local flora are asserted.",
+        "ruleId": "tundra-chukchi",
+        "distanceKm": 44.338400181884204,
+        "confidence": "biome-context-only",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:tundra-chukchi",
+            "name": "Chukchi Peninsula tundra · bounded automatic",
+            "family": "tundra",
+            "biome": 11,
+            "eco": 772,
+            "lat": 66.5,
+            "lon": -179.5,
+            "area": "MAG"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "2167996128",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+      ],
+      "notices": [
+        "Automatic selection: Source tundra classification supports a treeless low-cover study; no named local flora are asserted."
+      ]
+    },
+    "render": {
+      "resolution": [
+        640,
+        360
+      ],
+      "pixelRatio": 1,
+      "exposure": 1.12,
+      "toneMapping": 4
+    },
+    "id": "chukchi-dateline",
+    "query": "lat=66.5&lon=-179.5&seed=29&habitat=grassland&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": []
+  },
+  {
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.6183776306243913,
+            34
+          ],
+          "quaternion": [
+            -0.017976289606615726,
+            0,
+            0,
+            0.9998384134508831
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 16,
+        "triangles": 243316,
+        "textures": 5
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "quaternion": [
+            -0.14960876967790102,
+            0.27061515290874505,
+            0.04261564454501207,
+            0.9500360845208219
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 16,
+        "triangles": 243316,
+        "textures": 5
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "tundra",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:tundra-polar",
+            "name": "Russian Arctic desert · bounded automatic",
+            "family": "tundra",
+            "biome": 11,
+            "eco": 778,
+            "lat": 79.84,
+            "lon": 23.05,
+            "area": "SVA"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "278613900",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:tundra-polar",
+          "name": "Russian Arctic desert · bounded automatic",
+          "family": "tundra",
+          "biome": 11,
+          "eco": 778,
+          "lat": 79.84,
+          "lon": 23.05,
+          "area": "SVA"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "278613900",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "none",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Source tundra classification supports a treeless low-cover study; no named local flora are asserted.",
+        "ruleId": "tundra-polar",
+        "distanceKm": 6.905230114630134,
+        "confidence": "biome-context-only",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:tundra-polar",
+            "name": "Russian Arctic desert · bounded automatic",
+            "family": "tundra",
+            "biome": 11,
+            "eco": 778,
+            "lat": 79.84,
+            "lon": 23.05,
+            "area": "SVA"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "278613900",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+      ],
+      "notices": [
+        "Automatic selection: Source tundra classification supports a treeless low-cover study; no named local flora are asserted."
+      ]
+    },
+    "render": {
+      "resolution": [
+        640,
+        360
+      ],
+      "pixelRatio": 1,
+      "exposure": 1.12,
+      "toneMapping": 4
+    },
+    "id": "high-arctic",
+    "query": "lat=79.84&lon=23.05&seed=29&habitat=grassland&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": []
+  }
+]

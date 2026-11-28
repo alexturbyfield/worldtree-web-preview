@@ -1,0 +1,65 @@
+{
+  "checks": [
+    {
+      "name": "automatic control selects renderer at new location",
+      "pass": true
+    },
+    {
+      "name": "renderer and UI agree",
+      "pass": true
+    },
+    {
+      "name": "no new artistic approval",
+      "pass": true
+    },
+    {
+      "name": "adapter-only tree inspection is unavailable",
+      "pass": true
+    },
+    {
+      "name": "export includes decision, actual region and botanical country",
+      "pass": true
+    },
+    {
+      "name": "seed edits preserve automatic mode",
+      "pass": true
+    },
+    {
+      "name": "back-to-map link preserves opt-in",
+      "pass": true
+    },
+    {
+      "name": "map forwards automatic mode",
+      "pass": true
+    },
+    {
+      "name": "map makes opt-in visible",
+      "pass": true
+    },
+    {
+      "name": "map-to-scene round trip retains automatic routing",
+      "pass": true
+    },
+    {
+      "name": "mobile has no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "automatic selector is touch sized",
+      "pass": true
+    },
+    {
+      "name": "ocean fallback is explained",
+      "pass": true
+    },
+    {
+      "name": "approved reference wins over automatic request",
+      "pass": true
+    },
+    {
+      "name": "reference checkpoint remains approved",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

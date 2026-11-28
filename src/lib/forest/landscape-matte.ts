@@ -9,6 +9,7 @@ export interface LandscapeMatteAsset {
 }
 /** Opt-in world planes: real translation parallax, shared sky/fog, no camera-following billboard. */
 export function mountLandscapeMatte(scene:T.Scene,spec:LandscapeMatteAsset,load:(url:string)=>T.Texture){
+ const pilot=scene.userData.environmentSelection?.regional??scene.userData.environmentSelection?.pilot;if(pilot&&Math.hypot(pilot.site.lat-spec.conditioning.location.lat,pilot.site.lon-spec.conditioning.location.lon)>.08){(scene.userData.withheldRegionalMattes??=[]).push({id:spec.id,reason:'Location-conditioned reference asset outside its geographic pilot envelope'});return()=>{};}
  const texture=load(spec.asset);texture.wrapS=texture.wrapT=T.ClampToEdgeWrapping;
  const group=new T.Group();group.name='landscape-matte-'+spec.id;
  for(const layer of spec.layers){const material=new T.MeshBasicMaterial({map:texture,transparent:true,alphaTest:.025,opacity:layer.opacity,depthWrite:false,side:T.DoubleSide,fog:true,toneMapped:false});

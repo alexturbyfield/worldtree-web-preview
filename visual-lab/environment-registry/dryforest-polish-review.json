@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-28T05:51:10.958Z",
+  "status": "partial-improvement-retained-for-human-review",
+  "humanApproval": null,
+  "scope": "Geographic dry-woodland pilot only; accepted reference and other biomes unchanged",
+  "seed": "29",
+  "site": "dryforest-costa-rica",
+  "reviewer": "Implementing assistant; actual concept, 640x360 hero and inspection images inspected; no independent reviewer",
+  "loaded": [
+    "AGENTS.md",
+    ".agents/skills/prototype-fast/SKILL.md",
+    "visual-lab/environment-registry/geographic-pilot-review.json",
+    "visual-lab/dry-forest/corrected-reference-review.json",
+    "visual-lab/dry-forest/corrected-concept.png"
+  ],
+  "diagnosis": [
+    {
+      "severity": "major",
+      "visible": "Repeated comb-like leaf arrangements and fragmented crown lighting",
+      "cause": "Flat compound-spray geometry and repeated orientation; replacement shape quality uncertain"
+    },
+    {
+      "severity": "major",
+      "visible": "Very dark limbs and uniformly warm floor",
+      "cause": "Dark bark albedo under crown shadows; large soil fields carry little vegetation pigment"
+    },
+    {
+      "severity": "critical",
+      "visible": "A compact stand surrounded by bare terrain in inspection",
+      "cause": "Location-specific matte correctly withheld, but no procedural stand continuation replaces it"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "hypothesis": "Rounded dimensional sprays reduce serrated repetition; new source-baked distance patches fill the unsupported background.",
+      "evidence": "artifacts/dryforest-polish/rejected-round1",
+      "decision": "Reject foliage thinning and orange grass recoloring. Distance coverage improves but remains too isolated."
+    },
+    {
+      "round": 2,
+      "hypothesis": "Overlapping larger sprays restore volume, denser patch layers connect woodland, and world-space ground fields integrate their bases.",
+      "evidence": "artifacts/dryforest-polish/rejected-canopy-round2",
+      "decision": "Reject canopy: flat foliage plates and about 5.1M submitted triangles. Retain the direction of woodland continuation and ground integration."
+    },
+    {
+      "round": 3,
+      "hypothesis": "Restoring the best-known foliage while retaining supported distance/ground corrections preserves the stronger near scene.",
+      "evidence": "artifacts/dryforest-polish/after",
+      "decision": "Retain partially. Improved elevated continuation and ground breakup; only modest change at hero height. Do not claim concept fidelity."
+    }
+  ],
+  "implementation": [
+    "Source-baked four-patch 1024x1024 atlas from actual unnamed near trees; layered world-space cylindrical instances",
+    "Seventy-metre exclusion around the encounter camera keeps distance geometry out of staging",
+    "Continuous textured soil/low-cover pigment relationships on terrain; no floating ground stamps",
+    "Readable bark albedo floor and reduced directional shadow strength confined to pilot",
+    "Original foliage geometry, normals and grass pigments restored after rejected trials"
+  ],
+  "metrics": {
+    "before": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "quaternion": [
+            0.0033707290692054958,
+            0,
+            0,
+            0.9999943190766345
+          ],
+          "fov": 47
+        },
+        "calls": 134,
+        "triangles": 3044310,
+        "textures": 11
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "quaternion": [
+            -0.14225669339427574,
+            0.2709366497614252,
+            0.04052142593573312,
+            0.9511647486322844
+          ],
+          "fov": 47
+        },
+        "calls": 136,
+        "triangles": 3058430,
+        "textures": 11
+      }
+    ],
+    "after": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "quaternion": [
+            0.0033707290692054958,
+            0,
+            0,
+            0.9999943190766345
+          ],
+          "fov": 47
+        },
+        "calls": 135,
+        "triangles": 3046720,
+        "textures": 12
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "quaternion": [
+            -0.14225669339427574,
+            0.2709366497614252,
+            0.04052142593573312,
+            0.9511647486322844
+          ],
+          "fov": 47
+        },
+        "calls": 137,
+        "triangles": 3060840,
+        "textures": 12
+      }
+    ],
+    "protected": [
+      {
+        "view": "hero",
+        "identical": true
+      },
+      {
+        "view": "inspection",
+        "identical": true
+      }
+    ],
+    "typeScript": "passed",
+    "targetedTests": {
+      "passed": 12,
+      "failed": 0
+    },
+    "targetedEslint": "passed",
+    "mobile": "Not measured on physical mobile hardware. Source-baked atlas has a one-time render cost and a 4 MiB RGBA color attachment estimate, plus depth/driver overhead."
+  },
+  "remaining": [
+    "Canopy geometry remains visibly repetitive and branches retain overly dark regions. A new representation needs a separately scoped tree study.",
+    "Hero-view improvement is modest; this pass does not meet the concept-quality target.",
+    "Distant cards approximate elevated views and can reveal repeated silhouettes; synthetic distribution is not measured habitat.",
+    "Only Costa Rica seed29 was visually evaluated during this pass; other pilot sites remain unreviewed."
+  ],
+  "rules": [
+    {
+      "principle": "Extend unsupported backgrounds using actual scene-source geometry rather than importing unrelated landscape assets",
+      "status": "experimentally-supported",
+      "limit": "Partially successful here; not approved globally"
+    },
+    {
+      "principle": "More leaf geometry does not establish canopy quality",
+      "status": "rejected",
+      "techniques": [
+        "Small sparse rounded sprays",
+        "Larger overlapping plate-like sprays"
+      ],
+      "evidence": "Both rejected rounds preserved"
+    }
+  ],
+  "changedFiles": [
+    "src/lib/forest/tropical-dry-forest.ts",
+    "src/lib/forest/dryforest-pilot-polish.ts",
+    "visual-lab/environment-registry/dryforest-polish-review.json"
+  ],
+  "sources": [
+    {
+      "path": "src/lib/forest/tropical-dry-forest.ts",
+      "sha256": "25d0da709468b0011e4b6647bf4ff756759daf02247e7216ccdb673daddd10b5"
+    },
+    {
+      "path": "src/lib/forest/dryforest-pilot-polish.ts",
+      "sha256": "7bf97ed13a8ffebfbd8d7ce4aa21b9c44a189616fa3dc6517ec763b9290e52c9"
+    }
+  ],
+  "next": "Human review of retained distance changes; isolate the remaining canopy representation problem before another environment pass."
+}

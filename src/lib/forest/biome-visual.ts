@@ -2,6 +2,7 @@ import {prettySceneEnabled,mountPrettyScene} from './pretty-scene';
 import {rainforestV5,mountRainforestDepth} from './rainforest-depth';
 import {activeArchetype,arrangeArchetype,rainforestV4} from './composition-archetype';
 import * as T from 'three';
+import {geographicProfileId} from './environment-registry';
 import {randomSource} from './random';
 import {terrainHeight,type SceneRecipe} from './recipe';
 import type {CameraView} from './render-types';
@@ -23,7 +24,7 @@ export const biomeVisualProfiles:BiomeVisualProfile[]=[
  {id:'savanna',name:'East African savanna · conditional canopy',match:{biomes:[7],realm:'Afrotropic'},distribution:{pattern:'open-scattered',maxTrees:7,allowedDesigns:['acacia'],roles:{acacia:'canopy'},weights:{canopy:1,palm:0,understory:0}},ground:{texture:null,palette:['#6c6234','#9a8644','#bdab55','#ddd28a'],soil:'#a25a36',exposedSoil:.42,tileMeters:9},vegetation:{grass:2800,shrubs:35,understory:0,height:1.05,bladeWidth:.045,palette:['#8a813f','#d5c373']},landscape:{kind:'open-horizon',color:'#af9e75'},sky:{asset:sky,haze:'#e3cfa4',near:75,far:195,tint:'#fff1db'},light:{position:[-48,20,25],sun:'#ffcf81',intensity:3.4,ambient:'#c7d6e4',fill:1,shadowColor:'#8e7954'},composition:{opening:[20,26],enclosure:.1,foreground:1,midground:5,camera:{position:[0,3.2,34],target:[-2,3.8,-20]},focalStrength:.5,edgeShade:.22}},
  {id:'amazon',name:'Amazon tropical rainforest',match:{biomes:[1],realm:'Neotropic'},distribution:{pattern:'layered',maxTrees:38,allowedDesigns:['mahogany','rubber','kapok','acai','cecropia','cacao'],roles:{mahogany:'canopy',rubber:'canopy',kapok:'canopy',acai:'palm',cecropia:'understory',cacao:'understory'},weights:{canopy:.6,palm:.2,understory:.2}},ground:{texture:'/assets/puget-v1/forest-floor.png',palette:['#273c2b','#3d5734','#577446','#84964e'],soil:'#6f5135',exposedSoil:.65,tileMeters:8},vegetation:{grass:480,shrubs:140,understory:160,height:1.5,bladeWidth:.13,palette:['#254d38','#78a350']},landscape:{kind:'enclosed',color:'#4b7566'},sky:{asset:sky,haze:'#829f8a',near:23,far:115,tint:'#bcd6cb'},light:{position:[-25,52,12],sun:'#ffe3a8',intensity:3.1,ambient:'#92b8b0',fill:.8,shadowColor:'#315645'},composition:{opening:[7,11],enclosure:.92,foreground:7,midground:13,camera:{position:[0,2.8,29],target:[-1,9,-6]},focalStrength:.85,edgeShade:.4}}
 ];
-function baseBiomeVisualProfile(r:SceneRecipe){return biomeVisualProfiles.find(p=>p.match.ecoregions?.includes(r.ecoregion?.ECO_ID??-1))??biomeVisualProfiles.find(p=>p.match.biomes?.includes(r.ecoregion?.BIOME_NUM??-1)&&p.match.realm===r.ecoregion?.REALM);}
+function baseBiomeVisualProfile(r:SceneRecipe){const id=geographicProfileId(r);return biomeVisualProfiles.find(p=>p.id===id);}
 export function biomeVisualProfile(r:SceneRecipe):BiomeVisualProfile|undefined{
  const p=baseBiomeVisualProfile(r);if(!p)return p;
  const current:BiomeVisualProfile=p.id!=='amazon'||!rainforestV4()?p:{...p,distribution:{...p.distribution,maxTrees:64},ground:{...p.ground,palette:['#302b20','#403a26','#3c4930','#777047'],soil:'#69472e',exposedSoil:.55,tileMeters:5},vegetation:{...p.vegetation,grass:0,shrubs:160,understory:360},light:{...p.light,position:[-28,48,18],intensity:3.8,ambient:'#81aaa0',fill:.42,shadowColor:'#284c3b'},sky:{...p.sky,haze:rainforestV5()?'#35665e':'#284a3a',near:rainforestV5()?28:65,far:rainforestV5()?125:150}};

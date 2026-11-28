@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-11-28T05:41:27.096Z",
+  "status": "opt-in-pilot-retained-for-review-not-global-promotion",
+  "humanApproval": null,
+  "branch": "feat/geographic-pilot",
+  "loaded": [
+    "AGENTS.md",
+    ".agents/skills/prototype-fast/SKILL.md",
+    "docs/visual-quality-workflow.md",
+    "visual-lab/art-direction-policy.json",
+    "visual-lab/environment-registry/README.md",
+    "visual-lab/environment-registry/baselines.json",
+    "visual-lab/global-expansion/INVENTORY.md",
+    "visual-lab/global-expansion/prairie-regional-evidence.json",
+    "visual-lab/dry-forest/corrected-reference-review.json",
+    "Next local use-search-params guide"
+  ],
+  "hypothesis": "Accepted family-level composition and material systems can transfer through explicit geography guards and source-linked vegetation roles without promoting study species or imported mattes as local evidence.",
+  "strategy": "One bounded resolver implementation; one correction to reject an out-of-region hills asset. No aesthetic tuning against holdout.",
+  "reviewer": {
+    "identity": "Implementing assistant",
+    "visionAvailable": true,
+    "independent": false,
+    "imagesInspected": [
+      "Accepted 15-scene contact sheet",
+      "Existing dry-forest concept",
+      "Nine-site before/after hero sheet",
+      "Nine-site inspection sheet",
+      "Reserved-seed hero/inspection sheet",
+      "Mobile pilot status and limitations panel"
+    ]
+  },
+  "visualCritique": [
+    {
+      "family": "temperate",
+      "severity": "major",
+      "observations": [
+        "Connected crown enclosure, moss/litter floor and dappled light transfer across three regional palettes.",
+        "Hero views retain an opening and lateral trunks; bark and leaf differentiation remain approximate.",
+        "Elevated views expose the bounded forest continuation; material bands beyond it remain visible."
+      ],
+      "decision": "Retain as unreviewed transfer study; not evidence of measured local forest cover."
+    },
+    {
+      "family": "prairie",
+      "severity": "major",
+      "observations": [
+        "Open, rolling distance and treeless composition transfer to Pampas and steppe without Oklahoma trees.",
+        "Foreground staging can read too bare; far pigment fields remain broad and smooth.",
+        "Regional grass/forb species and ecological community proportions are missing outside Oklahoma."
+      ],
+      "decision": "Retain recipe transfer provisionally; withhold Oklahoma hills matte outside ECO389 and request regional cover-data work before rollout."
+    },
+    {
+      "family": "dryforest",
+      "severity": "critical",
+      "observations": [
+        "Spreading crowns and exposed-soil opening remain recognizable at hero height.",
+        "Elevated and holdout views reveal a compact stand in a vast bare field after the unsupported matte is withheld.",
+        "Leaf-spray repetition and low-fidelity shading remain conspicuous; named roles are not supported by the current eligible catalogue."
+      ],
+      "decision": "Reject geographic rollout of this adapter. Preserve opt-in diagnostic previews and evidence; develop source-backed profiles and regional continuation before promotion."
+    }
+  ],
+  "experiments": [
+    {
+      "principle": "Country-native candidates are separate from selected-point occurrence and actual rendered identity",
+      "implementation": "Source-linked woodland palette, ecology guard, explicitly unnamed dry-seasonal growth forms",
+      "evidence": "Per-site capture JSON selection and dryForest metadata",
+      "result": "Functionally supported, not botanical or artistic approval",
+      "reuse": "All biomes need the same evidence separation",
+      "approvalStatus": "experimentally-supported"
+    },
+    {
+      "principle": "Do not export a location-conditioned matte as new-region evidence",
+      "implementation": "Withhold Costa Rica distance asset and Oklahoma hills art outside its reference region",
+      "evidence": "rejected-regional-matte captures and retained after images",
+      "result": "Prevents geographic misrepresentation but reveals unfinished physical continuation",
+      "reuse": "Biome-independent asset conditioning",
+      "approvalStatus": "experimentally-supported"
+    }
+  ],
+  "validation": {
+    "typeScript": "passed",
+    "targetedTests": {
+      "passed": 20,
+      "failed": 0,
+      "log": "artifacts/geographic-pilot/targeted-tests.log"
+    },
+    "targetedEslint": "passed",
+    "primarySites": 9,
+    "primaryViews": 18,
+    "holdout": {
+      "seed": "91837",
+      "sites": 3,
+      "views": 6,
+      "frozenSourcesUnchanged": true,
+      "retuned": false
+    },
+    "protected": {
+      "views": 30,
+      "pixelIdentical": 30,
+      "errors": []
+    },
+    "captureErrors": [],
+    "checksForSeeds41and73": "Routing and independent deterministic seed derivation only; not rendered visual approval",
+    "browser": {
+      "checks": [
+        {
+          "name": "nine pilot sites exposed",
+          "pass": true
+        },
+        {
+          "name": "touch target at least 44px",
+          "pass": true
+        },
+        {
+          "name": "no mobile overflow",
+          "pass": true
+        },
+        {
+          "name": "selection loads regional site",
+          "pass": true
+        },
+        {
+          "name": "never labels pilot approved",
+          "pass": true
+        },
+        {
+          "name": "unsupported ocean query reports fallback",
+          "pass": true
+        }
+      ],
+      "errors": []
+    }
+  },
+  "performance": [
+    {
+      "site": "woodland-europe",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 15,
+          "triangles": 918590,
+          "textures": 13
+        },
+        {
+          "view": "inspection",
+          "calls": 15,
+          "triangles": 918590,
+          "textures": 13
+        }
+      ]
+    },
+    {
+      "site": "woodland-appalachia",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 13,
+          "triangles": 839420,
+          "textures": 11
+        },
+        {
+          "view": "inspection",
+          "calls": 13,
+          "triangles": 839420,
+          "textures": 11
+        }
+      ]
+    },
+    {
+      "site": "woodland-japan",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 15,
+          "triangles": 914562,
+          "textures": 13
+        },
+        {
+          "view": "inspection",
+          "calls": 15,
+          "triangles": 914562,
+          "textures": 13
+        }
+      ]
+    },
+    {
+      "site": "prairie-oklahoma",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 24,
+          "triangles": 979334,
+          "textures": 12
+        },
+        {
+          "view": "inspection",
+          "calls": 22,
+          "triangles": 979330,
+          "textures": 12
+        }
+      ]
+    },
+    {
+      "site": "prairie-pampas",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 14,
+          "triangles": 889250,
+          "textures": 8
+        },
+        {
+          "view": "inspection",
+          "calls": 14,
+          "triangles": 889250,
+          "textures": 8
+        }
+      ]
+    },
+    {
+      "site": "prairie-mongolia",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 14,
+          "triangles": 871678,
+          "textures": 8
+        },
+        {
+          "view": "inspection",
+          "calls": 14,
+          "triangles": 871678,
+          "textures": 8
+        }
+      ]
+    },
+    {
+      "site": "dryforest-costa-rica",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 134,
+          "triangles": 3044310,
+          "textures": 11
+        },
+        {
+          "view": "inspection",
+          "calls": 136,
+          "triangles": 3058430,
+          "textures": 11
+        }
+      ]
+    },
+    {
+      "site": "dryforest-nicaragua",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 133,
+          "triangles": 3048590,
+          "textures": 11
+        },
+        {
+          "view": "inspection",
+          "calls": 136,
+          "triangles": 3058430,
+          "textures": 11
+        }
+      ]
+    },
+    {
+      "site": "dryforest-mexico",
+      "views": [
+        {
+          "view": "hero",
+          "calls": 136,
+          "triangles": 3058430,
+          "textures": 11
+        },
+        {
+          "view": "inspection",
+          "calls": 136,
+          "triangles": 3058430,
+          "textures": 11
+        }
+      ]
+    }
+  ],
+  "performanceLimits": "Software WebGL captures; submitted triangles, draw calls and allocated texture counts only. No physical-mobile frame-time, alpha-overdraw or texture-byte approval.",
+  "changedFiles": [
+    "src/lib/forest/geographic-pilot.ts",
+    "src/lib/forest/environment-registry.ts",
+    "src/lib/forest/wave1.ts",
+    "src/lib/forest/tropical-dry-forest.ts",
+    "src/lib/forest/wave3-prairie.ts",
+    "src/components/EnvironmentReferencePanel.tsx",
+    "scripts/studies/geographic-pilot.cjs",
+    "scripts/studies/environment-registry.cjs",
+    "tests/geographic-pilot.test.ts",
+    "visual-lab/environment-registry/GEOGRAPHIC-PILOT.md",
+    "visual-lab/environment-registry/README.md"
+  ],
+  "next": [
+    "Human review of transfer quality before broadening any geographic gate",
+    "Curate source-backed dry-forest role eligibility and replace isolated-stand continuation",
+    "Add regional nonwoody cover data for Pampas/steppe",
+    "Do not globally promote or deploy this pilot"
+  ]
+}
