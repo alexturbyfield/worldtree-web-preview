@@ -28,11 +28,11 @@ export function referenceSoilSampler(seed:string,mask:{width:number;height:numbe
   return 0; // No invented route outside the frozen reference; prevents inspection ribbons.
  };
 }
-export function composeMediterranean(r:SceneRecipe):CorkScene{
- const source=r.trees.filter(t=>t.species.scientificName==='Quercus ilex'),rng=randomSource(r.seed+'|mediterranean-occurrences'),trees:SceneTree[]=[];
+export function composeMediterranean(r:SceneRecipe,unnamed=false):CorkScene{
+ const source=r.trees.filter(t=>t.species.scientificName==='Quercus ilex'||unnamed&&t.species.scientificName===null),rng=randomSource(r.seed+'|mediterranean-occurrences'),trees:SceneTree[]=[];
  // Relative roles, not copied concept coordinates; the seed perturbs spacing, size and yaw.
  const roles=[[-6.4,7,10.4,4.2],[14,-9,7.9,3.8],[-14,-35,4.8,3.4],[19,-55,5.1,3.8],[-38,-95,4.7,3.4],[44,-125,5.3,4.0],[-70,-165,5.4,3.9],[93,-235,6.0,4.4],[10,-115,3.7,2.7],[-102,-275,6,4.2],[135,-340,7,4.6]];
- for(let i=0;i<roles.length&&source.length;i++){const t=source[i%source.length],[a,b,h,w]=roles[i],x=a+(rng()-.5)*(i<2?.5:5),z=b+(rng()-.5)*(i<2?.6:8),studio=holmOakStudy(t,h*(.94+rng()*.12),w*(.94+rng()*.12),i);trees.push({...t,id:t.id+'-mediterranean-presentation-'+i,index:i,position:[x,mediterraneanHeight(r.seed,x,z),z],rotation:i===0?0:rng()*6.283,studio,model:studio.model,species:{...t.species,visual:{...t.species.visual,fallback:true,reason:'Regional Quercus ilex candidate; shared oak branch/spray approximation, not a measured species reconstruction or point occurrence.'}}});}
+ for(let i=0;i<roles.length&&source.length;i++){const t=source[i%source.length],[a,b,h,w]=roles[i],x=a+(rng()-.5)*(i<2?.5:5),z=b+(rng()-.5)*(i<2?.6:8),studio=holmOakStudy(t,h*(.94+rng()*.12),w*(.94+rng()*.12),i);trees.push({...t,id:t.id+'-mediterranean-presentation-'+i,index:i,position:[x,mediterraneanHeight(r.seed,x,z),z],rotation:i===0?0:rng()*6.283,studio,model:studio.model,species:{...t.species,visual:{...t.species.visual,fallback:true,reason:unnamed?'Unnamed evergreen broadleaf using shared oak art geometry; no local taxon asserted.':'Regional Quercus ilex candidate; shared oak branch/spray approximation, not a measured species reconstruction or point occurrence.'}}});}
  const cork=r.trees.find(t=>t.species.scientificName==='Quercus suber');
  const corkHero=cork&&trees[0]?corkOakHero(cork,trees[0].position):undefined;
  return {...r,trees:corkHero?trees.slice(1):trees,corkHero,purpose:'visual_laboratory',distribution:'Reference-role composition with deterministic variations using existing candidate oak individuals; no measured tree positions or abundance.',limitations:[...r.limitations,'Garrigue terrain, oak size and unnamed shrub communities are synthetic. Concept-matching layout is not a geographic reconstruction.']};

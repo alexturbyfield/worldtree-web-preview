@@ -1,0 +1,161 @@
+{
+  "hero": {
+    "position": [
+      0,
+      1.7,
+      34
+    ],
+    "quaternion": [
+      0.0033707290692054958,
+      0,
+      0,
+      0.9999943190766345
+    ],
+    "aspect": 1.7777777777777777,
+    "fov": 47
+  },
+  "inspection": {
+    "position": [
+      62,
+      38,
+      76
+    ],
+    "target": [
+      0,
+      2,
+      -24
+    ]
+  },
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          0,
+          1.7,
+          34
+        ],
+        "quaternion": [
+          0.0033707290692054958,
+          0,
+          0,
+          0.9999943190766345
+        ]
+      },
+      "calls": 134,
+      "triangles": 2924474
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          62,
+          38,
+          76
+        ],
+        "quaternion": [
+          -0.14225669339427574,
+          0.2709366497614252,
+          0.04052142593573312,
+          0.9511647486322844
+        ]
+      },
+      "calls": 137,
+      "triangles": 2948430
+    }
+  ],
+  "assets": [
+    {
+      "url": "/assets/cork-oak/bark-v1.webp",
+      "sha256": "b8105d45e956d83ac764deebd2ba241fd62c4cf1869498cc5f9c6f80eb4595cc"
+    },
+    {
+      "url": "/assets/dry-forest/distance.png",
+      "sha256": "c23a85e1c96fb588b311c2e9da31c0b9dd79f4b53afd48c600cb8b0255796314"
+    },
+    {
+      "url": "/assets/dry-forest/guanacaste-leaf-v2.webp",
+      "sha256": "c1fb73480690652dd7376582014120300aefc43cf47b25d82a74b4f4629a1251"
+    },
+    {
+      "url": "/assets/dry-forest/gumbo-bark-v2.webp",
+      "sha256": "607ce9430b70d2ea81ea64323a7769fc06441bcca8db8cbdb8ed0e1a8b05a594"
+    },
+    {
+      "url": "/assets/dry-forest/soil-albedo.webp",
+      "sha256": "e33f861c9054aee85eca77f1c260bf8ef3acd6028547e5510fa7ef870844efa8"
+    },
+    {
+      "url": "/assets/dry-forest/soil-normal.png",
+      "sha256": "a292d45d9e08d0fa9c50b11fc007d3efa0a658c37354675903ff54339061cf77"
+    },
+    {
+      "url": "/assets/dry-forest/soil-roughness.png",
+      "sha256": "700556a58dfc898467c1ef0185d3ecb319c1c64b70e5d2701c1a4be764807bd4"
+    },
+    {
+      "url": "/assets/puget-v1/sky-matte-v1.webp",
+      "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+    },
+    {
+      "url": "/assets/wave1-detail/arid-sediment-v1.webp",
+      "sha256": "67ff274ba29d736c58a2e5578bc8915289e37f5a93e3f68cb0147ea004c0ae84"
+    }
+  ],
+  "exposure": 1.12,
+  "toneMapping": 4,
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": "tropical-dry-forest",
+    "selectedScene": {
+      "id": "tropical-dry-forest",
+      "name": "Central American dry forest",
+      "version": "accepted-v1"
+    },
+    "route": {
+      "kind": "wave",
+      "adapter": "dryforest",
+      "sceneId": "tropical-dry-forest",
+      "variant": "original"
+    },
+    "pilot": null,
+    "regional": null,
+    "automatic": {
+      "policyVersion": "global-auto-v1",
+      "requestedVersion": "global-auto-v1",
+      "status": "protected-reference",
+      "code": "protected-reference",
+      "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    },
+    "mode": "reference",
+    "checkpoint": {
+      "id": "tropical-dry-forest-accepted-v1",
+      "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+      "exactSettings": true
+    },
+    "vegetationCoverage": "adapter-generated",
+    "individualInspection": false,
+    "referenceLocation": {
+      "lat": 10.85,
+      "lon": -85.61
+    },
+    "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+    "limits": [
+      "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+      "Synthetic terrain and materials are not measured land cover.",
+      "Reference lighting and matte camera envelopes remain adapter-specific.",
+      "Mobile performance and unreviewed variations are not approved."
+    ],
+    "notices": [
+      "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+    ]
+  },
+  "errors": [],
+  "id": "tropical-dry-forest",
+  "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+  "query": "lat=10.85&lon=-85.61&habitat=forest&seed=29&density=24&structure=grove-1&appearance=garden&wind=0&mode=painterly&expansion=dryforest&drySeason=flowering&referenceScene=tropical-dry-forest&autoEnvironment=global-auto-v1"
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "experiment": "global-auto-v1",
+  "status": "production-routing-release-art-variations-unreviewed",
+  "authorization": {"quote": "Can we release the rest of the world? I want the art encounter view for that area to be the view you get when you click on a location", "scope": "worldwide routing, default map navigation and production publication", "doesNotApprove": "every generated scene, local occurrence or mobile performance"},
+  "loaded": ["AGENTS.md", ".agents/skills/prototype-fast/SKILL.md", "visual-lab/environment-registry/BOUNDED-COMPLETION.md", "local Next.js use-search-params guide", "Vercel deployments-cicd skill", "React best-practices checklist"],
+  "hypothesis": "Source biome plus supported regional candidates or explicitly unnamed growth forms can provide worldwide encounter art without pretending the trial envelopes establish local ecology.",
+  "visionAvailable": true,
+  "reviewer": "implementing-agent",
+  "independentReview": false,
+  "newCandidateApproval": null,
+  "evidenceRoot": "artifacts/global-release/",
+  "evidence": ["audit.json", "cases.json", "after/report.json", "hero-sheet.png", "inspection-sheet.png", "freeze.json", "holdout/report-785.json", "protected-global/parity.json", "tests.log", "typecheck.log", "lint.log", "map-lint.log", "ui-local.json", "publication.json"],
+  "corrections": [
+    {"severity": "major", "finding": "Generic wet-forest fallback lost Mediterranean identity.", "decision": "replace with retained Mediterranean composition using unnamed attribution", "status": "experimentally-supported"},
+    {"severity": "major", "finding": "Antarctic source names did not always include the word Antarctic, producing dense heath.", "decision": "use actual Antarctic realm to select existing sparse polar treatment", "status": "experimentally-supported"},
+    {"severity": "critical", "finding": "Decorative map marker intercepted location taps.", "decision": "disable marker pointer events and verify real canvas navigation", "status": "experimentally-supported"}
+  ],
+  "validation": {"auditPoints": 847, "artSelected": 844, "rockIceFallback": 3, "unnamedArchitectureFallbacks": 81, "families": 14, "visualSamples": 15, "protectedViewsPixelIdentical": 30, "targetedTestsPassed": 126, "typescript": "passed", "targetedEslint": "passed", "fullSuiteRun": false, "mobileDeviceTested": false},
+  "remaining": ["regional plant-community and distant-landscape specificity", "encounter-scale inspection artifacts", "expensive mangrove geometry and unmeasured real-device performance", "actual terrain, hydrology, current cover and phenology remain unmeasured"],
+  "release": {"mode": "global-auto-v1", "defaultFromMap": true, "genericEscapeRetained": true, "boundedModeRetained": true, "globalArtisticApproval": false}
+}

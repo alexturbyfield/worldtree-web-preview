@@ -1,0 +1,1 @@
+const fs=require('fs'),p=__dirname+'/verify.cjs';let s=fs.readFileSync(p,'utf8').replace("new URLSearchParams('autoEnvironment=global-auto-v1&seed=275103').get('seed')===freeze.holdoutSeed","held[0].selection.regional.inputSeed===freeze.holdoutSeed");fs.writeFileSync(p,s);

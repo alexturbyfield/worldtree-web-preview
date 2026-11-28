@@ -1,0 +1,133 @@
+{
+  "hero": {
+    "position": [
+      0,
+      1.7147654075940282,
+      34
+    ],
+    "quaternion": [
+      0.0022905666981541165,
+      0,
+      0,
+      0.9999973766486595
+    ],
+    "aspect": 1.7777777777777777,
+    "fov": 47
+  },
+  "inspection": {
+    "position": [
+      62,
+      38,
+      76
+    ],
+    "target": [
+      0,
+      2,
+      -24
+    ]
+  },
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          0,
+          1.7147654075940282,
+          34
+        ],
+        "quaternion": [
+          0.0022905666981541165,
+          0,
+          0,
+          0.9999973766486595
+        ]
+      },
+      "calls": 15,
+      "triangles": 942962
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          62,
+          38,
+          76
+        ],
+        "quaternion": [
+          -0.14225669339427574,
+          0.2709366497614252,
+          0.04052142593573312,
+          0.9511647486322844
+        ]
+      },
+      "calls": 15,
+      "triangles": 942962
+    }
+  ],
+  "assets": [
+    {
+      "url": "/assets/puget-v1/sky-matte-v1.webp",
+      "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+    },
+    {
+      "url": "/assets/wave2-autonomous/temperate-floor-v1.png",
+      "sha256": "278d59f727fa7a85813d36f931ad83f49d6749b6710a85f0771c04badf8d8e5d"
+    }
+  ],
+  "exposure": 1.12,
+  "toneMapping": 4,
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": "temperate-woodland",
+    "selectedScene": {
+      "id": "temperate-woodland",
+      "name": "Temperate woodland",
+      "version": "accepted-v1"
+    },
+    "route": {
+      "kind": "wave",
+      "adapter": "temperate",
+      "sceneId": "temperate-woodland",
+      "variant": "original"
+    },
+    "pilot": null,
+    "regional": null,
+    "automatic": {
+      "policyVersion": "global-auto-v1",
+      "requestedVersion": "global-auto-v1",
+      "status": "protected-reference",
+      "code": "protected-reference",
+      "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    },
+    "mode": "reference",
+    "checkpoint": {
+      "id": "temperate-woodland-accepted-v1",
+      "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+      "exactSettings": true
+    },
+    "vegetationCoverage": "mixed",
+    "individualInspection": true,
+    "referenceLocation": {
+      "lat": 50.5,
+      "lon": 10.5
+    },
+    "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+    "limits": [
+      "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+      "Synthetic terrain and materials are not measured land cover.",
+      "Reference lighting and matte camera envelopes remain adapter-specific.",
+      "Mobile performance and unreviewed variations are not approved."
+    ],
+    "notices": [
+      "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+    ]
+  },
+  "errors": [],
+  "id": "temperate-woodland",
+  "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+  "query": "lat=50.5&lon=10.5&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&expansion=temperate&referenceScene=temperate-woodland&autoEnvironment=global-auto-v1"
+}

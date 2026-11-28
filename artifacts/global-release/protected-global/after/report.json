@@ -1,0 +1,2201 @@
+[
+  {
+    "hero": {
+      "position": [
+        0.01045391827706954,
+        7.707058230656985,
+        34.282255793480886
+      ],
+      "quaternion": [
+        -0.015704626550489445,
+        0.01850671755262297,
+        0.00029072675123710626,
+        0.9997053473840646
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "inspection": {
+      "position": [
+        70,
+        50,
+        85
+      ],
+      "target": [
+        0,
+        1,
+        -25
+      ]
+    },
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0.01045391827706954,
+            7.707058230656985,
+            34.282255793480886
+          ],
+          "quaternion": [
+            -0.015704626550489445,
+            0.01850671755262297,
+            0.00029072675123710626,
+            0.9997053473840646
+          ]
+        },
+        "calls": 19,
+        "triangles": 643127
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            70,
+            50,
+            85
+          ],
+          "quaternion": [
+            -0.17164577003343667,
+            0.2750834768545333,
+            0.04998336618883981,
+            0.9446525676118614
+          ]
+        },
+        "calls": 19,
+        "triangles": 643127
+      }
+    ],
+    "assets": [
+      {
+        "url": "/assets/conifer-v2/fir-sprays-v1.png",
+        "sha256": "f5ab5e9e4b7539da57b1f4c45f24cdc04bdda936b89b7a6cf224df4a4a7dfe2a"
+      },
+      {
+        "url": "/assets/puget-v1/grass.png",
+        "sha256": "f1c3a2379d595ef8df947f620f1ccaedebab7cb2649f588d32392b63fab36126"
+      },
+      {
+        "url": "/assets/puget-v1/mountain-painted-v1.webp",
+        "sha256": "c231cd748b1c20ba22b40462a3a05662c481e2097e32ccd6a0e9da437aba4e40"
+      },
+      {
+        "url": "/assets/puget-v1/sky-matte-v1.webp",
+        "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+      }
+    ],
+    "exposure": 1.12,
+    "toneMapping": 4,
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": "puget",
+      "selectedScene": {
+        "id": "puget",
+        "name": "Puget woodland",
+        "version": "accepted-v1"
+      },
+      "route": {
+        "kind": "profile",
+        "adapter": "puget",
+        "sceneId": "puget"
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "protected-reference",
+        "code": "protected-reference",
+        "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "reference",
+      "checkpoint": {
+        "id": "puget-accepted-v1",
+        "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+        "exactSettings": true
+      },
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": {
+        "lat": 47.6062,
+        "lon": -122.3321
+      },
+      "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+      "limits": [
+        "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+        "Synthetic terrain and materials are not measured land cover.",
+        "Reference lighting and matte camera envelopes remain adapter-specific.",
+        "Mobile performance and unreviewed variations are not approved."
+      ],
+      "notices": [
+        "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+      ]
+    },
+    "errors": [],
+    "id": "puget",
+    "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+    "query": "lat=47.6062&lon=-122.3321&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&encounter=1&camera=human&conditional=0&composition=C&groundLighting=B&illumination=on&referenceScene=puget&autoEnvironment=global-auto-v1"
+  },
+  {
+    "hero": {
+      "position": [
+        0,
+        0.21041739075620725,
+        34
+      ],
+      "quaternion": [
+        0.024969864063644317,
+        0.01850322795785242,
+        -0.0004622464236711974,
+        0.9995168446664752
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "inspection": {
+      "position": [
+        70,
+        50,
+        85
+      ],
+      "target": [
+        0,
+        1,
+        -25
+      ]
+    },
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            0.21041739075620725,
+            34
+          ],
+          "quaternion": [
+            0.024969864063644317,
+            0.01850322795785242,
+            -0.0004622464236711974,
+            0.9995168446664752
+          ]
+        },
+        "calls": 11,
+        "triangles": 174552
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            70,
+            50,
+            85
+          ],
+          "quaternion": [
+            -0.17164577003343667,
+            0.2750834768545333,
+            0.04998336618883981,
+            0.9446525676118614
+          ]
+        },
+        "calls": 11,
+        "triangles": 174552
+      }
+    ],
+    "assets": [
+      {
+        "url": "/assets/puget-v1/grass.png",
+        "sha256": "f1c3a2379d595ef8df947f620f1ccaedebab7cb2649f588d32392b63fab36126"
+      },
+      {
+        "url": "/assets/puget-v1/sky-matte-v1.webp",
+        "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+      },
+      {
+        "url": "/assets/savanna-hills/golden-ridges-v1.webp",
+        "sha256": "4578108a137fb9bab64f90537fa3d6f5efac80facd8cd05ec7b7e7f8c7cab0ce"
+      },
+      {
+        "url": "/assets/savanna-recipe/painted-fibre-v1.webp",
+        "sha256": "f7668bc9fee9ac97038dce34aeef7b31b9a1fb92069f63e4df06069acc6e1de5"
+      }
+    ],
+    "exposure": 1.12,
+    "toneMapping": 4,
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": "savanna",
+      "selectedScene": {
+        "id": "savanna",
+        "name": "East African savanna",
+        "version": "accepted-v1"
+      },
+      "route": {
+        "kind": "profile",
+        "adapter": "savanna",
+        "sceneId": "savanna"
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "protected-reference",
+        "code": "protected-reference",
+        "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "reference",
+      "checkpoint": {
+        "id": "savanna-accepted-v1",
+        "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+        "exactSettings": true
+      },
+      "vegetationCoverage": "mixed",
+      "individualInspection": true,
+      "referenceLocation": {
+        "lat": -2.3,
+        "lon": 35.2
+      },
+      "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+      "limits": [
+        "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+        "Synthetic terrain and materials are not measured land cover.",
+        "Reference lighting and matte camera envelopes remain adapter-specific.",
+        "Mobile performance and unreviewed variations are not approved."
+      ],
+      "notices": [
+        "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+      ]
+    },
+    "errors": [],
+    "id": "savanna",
+    "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+    "query": "lat=-2.3&lon=35.2&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&encounter=1&camera=human&conditional=1&composition=C&groundLighting=B&illumination=on&treeStudy=C3&labCandidate=r-fidelity-tuft-hybrid-tall&pretty=on&referenceScene=savanna&autoEnvironment=global-auto-v1"
+  },
+  {
+    "hero": {
+      "position": [
+        6.661338147750939e-16,
+        0.1252664940564987,
+        29
+      ],
+      "quaternion": [
+        0.12378536973294182,
+        0.014171483327660637,
+        -0.0017680016816925947,
+        0.992206241398645
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "inspection": {
+      "position": [
+        70,
+        50,
+        85
+      ],
+      "target": [
+        0,
+        1,
+        -25
+      ]
+    },
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            6.661338147750939e-16,
+            0.1252664940564987,
+            29
+          ],
+          "quaternion": [
+            0.12378536973294182,
+            0.014171483327660637,
+            -0.0017680016816925947,
+            0.992206241398645
+          ]
+        },
+        "calls": 26,
+        "triangles": 1450298
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            70,
+            50,
+            85
+          ],
+          "quaternion": [
+            -0.17164577003343667,
+            0.2750834768545333,
+            0.04998336618883981,
+            0.9446525676118614
+          ]
+        },
+        "calls": 22,
+        "triangles": 1433698
+      }
+    ],
+    "assets": [
+      {
+        "url": "/assets/amazon-v5/floor-decals.webp",
+        "sha256": "5d323a726396df2d93790227bf890f3b9e902e8f844818f77212728ed2a4e692"
+      },
+      {
+        "url": "/assets/amazon-v5/forest-wall.webp",
+        "sha256": "938eb1509113896d12d0b9231b608dc3974535a350f4038910ed41ebe5d5118f"
+      },
+      {
+        "url": "/assets/puget-v1/foliage.png",
+        "sha256": "153eee66340f46e6413ea53794c9db71db059e0c3de875bb38162e2b9e2fa7d4"
+      },
+      {
+        "url": "/assets/puget-v1/forest-floor.png",
+        "sha256": "5ed9e83b342a55f564be4efc82df61a214851f66a69dbeeccd53b1a582f36dfc"
+      },
+      {
+        "url": "/assets/puget-v1/sky-matte-v1.webp",
+        "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+      }
+    ],
+    "exposure": 1.12,
+    "toneMapping": 4,
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": "rainforest",
+      "selectedScene": {
+        "id": "rainforest",
+        "name": "Amazon rainforest",
+        "version": "accepted-v1"
+      },
+      "route": {
+        "kind": "profile",
+        "adapter": "amazon",
+        "sceneId": "rainforest"
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "protected-reference",
+        "code": "protected-reference",
+        "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "reference",
+      "checkpoint": {
+        "id": "rainforest-accepted-v1",
+        "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+        "exactSettings": true
+      },
+      "vegetationCoverage": "mixed",
+      "individualInspection": true,
+      "referenceLocation": {
+        "lat": -3.12,
+        "lon": -60.02
+      },
+      "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+      "limits": [
+        "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+        "Synthetic terrain and materials are not measured land cover.",
+        "Reference lighting and matte camera envelopes remain adapter-specific.",
+        "Mobile performance and unreviewed variations are not approved."
+      ],
+      "notices": [
+        "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+      ]
+    },
+    "errors": [],
+    "id": "rainforest",
+    "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+    "query": "lat=-3.12&lon=-60.02&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&encounter=1&camera=human&rainforest=v5&composition=C&groundLighting=B&illumination=on&referenceScene=rainforest&autoEnvironment=global-auto-v1"
+  },
+  {
+    "hero": {
+      "position": [
+        -3.004880202934146,
+        7.286881360972199,
+        44.819828966632485
+      ],
+      "quaternion": [
+        0.018598816038418668,
+        -0.022884851646490397,
+        0.0004258163765890836,
+        0.9995649985306112
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "inspection": {
+      "position": [
+        70,
+        50,
+        85
+      ],
+      "target": [
+        0,
+        1,
+        -25
+      ]
+    },
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            -3.004880202934146,
+            7.286881360972199,
+            44.819828966632485
+          ],
+          "quaternion": [
+            0.018598816038418668,
+            -0.022884851646490397,
+            0.0004258163765890836,
+            0.9995649985306112
+          ]
+        },
+        "calls": 12,
+        "triangles": 501884
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            70,
+            50,
+            85
+          ],
+          "quaternion": [
+            -0.17164577003343667,
+            0.2750834768545333,
+            0.04998336618883981,
+            0.9446525676118614
+          ]
+        },
+        "calls": 12,
+        "triangles": 501884
+      }
+    ],
+    "assets": [
+      {
+        "url": "/assets/alpine-backdrop/distant-ridges-v1.png",
+        "sha256": "3e875754ba0bb292b9f7addfb062967848f76f38fbaccd31c02b04d2fb7a2322"
+      },
+      {
+        "url": "/assets/conifer-v2/fir-sprays-v1.png",
+        "sha256": "f5ab5e9e4b7539da57b1f4c45f24cdc04bdda936b89b7a6cf224df4a4a7dfe2a"
+      },
+      {
+        "url": "/assets/puget-v1/sky-matte-v1.webp",
+        "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+      }
+    ],
+    "exposure": 1.12,
+    "toneMapping": 4,
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": "alpine",
+      "selectedScene": {
+        "id": "alpine",
+        "name": "Alpine meadow and treeline",
+        "version": "accepted-v1"
+      },
+      "route": {
+        "kind": "alpine",
+        "adapter": "alpine",
+        "sceneId": "alpine"
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "protected-reference",
+        "code": "protected-reference",
+        "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "reference",
+      "checkpoint": {
+        "id": "alpine-accepted-v1",
+        "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+        "exactSettings": true
+      },
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": {
+        "lat": 51.17,
+        "lon": -116.18
+      },
+      "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+      "limits": [
+        "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+        "Synthetic terrain and materials are not measured land cover.",
+        "Reference lighting and matte camera envelopes remain adapter-specific.",
+        "Mobile performance and unreviewed variations are not approved."
+      ],
+      "notices": [
+        "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+      ]
+    },
+    "errors": [],
+    "id": "alpine",
+    "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+    "query": "lat=51.17&lon=-116.18&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&alpine=treeline&palette=A&backdrop=subtle&alpineArt=meadow&meadowField=brush&referenceScene=alpine&autoEnvironment=global-auto-v1"
+  },
+  {
+    "hero": {
+      "position": [
+        -27,
+        3.036333874529917,
+        -36
+      ],
+      "quaternion": [
+        0.0024599552941897444,
+        0.9238604443126958,
+        0.005938857434064377,
+        -0.3826755257743521
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "inspection": {
+      "position": [
+        70,
+        50,
+        85
+      ],
+      "target": [
+        0,
+        1,
+        -25
+      ]
+    },
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            -27,
+            3.036333874529917,
+            -36
+          ],
+          "quaternion": [
+            0.0024599552941897444,
+            0.9238604443126958,
+            0.005938857434064377,
+            -0.3826755257743521
+          ]
+        },
+        "calls": 19,
+        "triangles": 897240
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            70,
+            50,
+            85
+          ],
+          "quaternion": [
+            -0.17164577003343667,
+            0.2750834768545333,
+            0.04998336618883981,
+            0.9446525676118614
+          ]
+        },
+        "calls": 17,
+        "triangles": 897236
+      }
+    ],
+    "assets": [
+      {
+        "url": "/assets/puget-v1/grass.png",
+        "sha256": "f1c3a2379d595ef8df947f620f1ccaedebab7cb2649f588d32392b63fab36126"
+      },
+      {
+        "url": "/assets/puget-v1/sky-matte-v1.webp",
+        "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+      },
+      {
+        "url": "/assets/wave1-detail/arid-sediment-v1.webp",
+        "sha256": "67ff274ba29d736c58a2e5578bc8915289e37f5a93e3f68cb0147ea004c0ae84"
+      },
+      {
+        "url": "/assets/wave1-detail/desert-distance-v1.webp",
+        "sha256": "f54c66be1d0ede9171192ff62b463c6ef234a69eed6fa5a54ebd45837ec782ca"
+      }
+    ],
+    "exposure": 1.12,
+    "toneMapping": 4,
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": "desert",
+      "selectedScene": {
+        "id": "desert",
+        "name": "Desert / xeric shrubland",
+        "version": "accepted-v1"
+      },
+      "route": {
+        "kind": "wave",
+        "adapter": "desert",
+        "sceneId": "desert",
+        "variant": "rebuild"
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "protected-reference",
+        "code": "protected-reference",
+        "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "reference",
+      "checkpoint": {
+        "id": "desert-accepted-v1",
+        "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+        "exactSettings": true
+      },
+      "vegetationCoverage": "mixed",
+      "individualInspection": true,
+      "referenceLocation": {
+        "lat": 34,
+        "lon": -116.15
+      },
+      "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+      "limits": [
+        "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+        "Synthetic terrain and materials are not measured land cover.",
+        "Reference lighting and matte camera envelopes remain adapter-specific.",
+        "Mobile performance and unreviewed variations are not approved."
+      ],
+      "notices": [
+        "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+      ]
+    },
+    "errors": [],
+    "id": "desert",
+    "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+    "query": "lat=34&lon=-116.15&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&wave1=desert&fieldStudy=rebuild&artPass=fidelity&referenceScene=desert&autoEnvironment=global-auto-v1"
+  },
+  {
+    "hero": {
+      "position": [
+        72,
+        2.077603828842169,
+        -18
+      ],
+      "quaternion": [
+        -0.004545404694389373,
+        -0.7070921717118386,
+        -0.004545404694389373,
+        0.7070921717118386
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "inspection": {
+      "position": [
+        70,
+        50,
+        85
+      ],
+      "target": [
+        0,
+        1,
+        -25
+      ]
+    },
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            72,
+            2.077603828842169,
+            -18
+          ],
+          "quaternion": [
+            -0.004545404694389373,
+            -0.7070921717118386,
+            -0.004545404694389373,
+            0.7070921717118386
+          ]
+        },
+        "calls": 20,
+        "triangles": 2492234
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            70,
+            50,
+            85
+          ],
+          "quaternion": [
+            -0.17164577003343667,
+            0.2750834768545333,
+            0.04998336618883981,
+            0.9446525676118614
+          ]
+        },
+        "calls": 20,
+        "triangles": 2492234
+      }
+    ],
+    "assets": [
+      {
+        "url": "/assets/puget-v1/sky-matte-v1.webp",
+        "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+      }
+    ],
+    "exposure": 1.12,
+    "toneMapping": 4,
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": "mangrove",
+      "selectedScene": {
+        "id": "mangrove",
+        "name": "Mangrove forest",
+        "version": "accepted-v1"
+      },
+      "route": {
+        "kind": "wave",
+        "adapter": "mangrove",
+        "sceneId": "mangrove",
+        "variant": "rebuild"
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "protected-reference",
+        "code": "protected-reference",
+        "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "reference",
+      "checkpoint": {
+        "id": "mangrove-accepted-v1",
+        "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+        "exactSettings": true
+      },
+      "vegetationCoverage": "mixed",
+      "individualInspection": true,
+      "referenceLocation": {
+        "lat": 25.2,
+        "lon": -80.9
+      },
+      "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+      "limits": [
+        "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+        "Synthetic terrain and materials are not measured land cover.",
+        "Reference lighting and matte camera envelopes remain adapter-specific.",
+        "Mobile performance and unreviewed variations are not approved."
+      ],
+      "notices": [
+        "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+      ]
+    },
+    "errors": [],
+    "id": "mangrove",
+    "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+    "query": "lat=25.2&lon=-80.9&habitat=coastal&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&wave1=mangrove&fieldStudy=rebuild&artPass=fidelity&referenceScene=mangrove&autoEnvironment=global-auto-v1"
+  },
+  {
+    "hero": {
+      "position": [
+        -63,
+        1.7116061343029232,
+        -27
+      ],
+      "quaternion": [
+        -0.005938857434064383,
+        0.3826755257743522,
+        0.0024599552941897466,
+        0.9238604443126958
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "inspection": {
+      "position": [
+        70,
+        50,
+        85
+      ],
+      "target": [
+        0,
+        1,
+        -25
+      ]
+    },
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            -63,
+            1.7116061343029232,
+            -27
+          ],
+          "quaternion": [
+            -0.005938857434064383,
+            0.3826755257743522,
+            0.0024599552941897466,
+            0.9238604443126958
+          ]
+        },
+        "calls": 16,
+        "triangles": 2251558
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            70,
+            50,
+            85
+          ],
+          "quaternion": [
+            -0.17164577003343667,
+            0.2750834768545333,
+            0.04998336618883981,
+            0.9446525676118614
+          ]
+        },
+        "calls": 16,
+        "triangles": 2251558
+      }
+    ],
+    "assets": [
+      {
+        "url": "/assets/puget-v1/sky-matte-v1.webp",
+        "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+      }
+    ],
+    "exposure": 1.12,
+    "toneMapping": 4,
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": "flooded-grassland",
+      "selectedScene": {
+        "id": "flooded-grassland",
+        "name": "Flooded grassland",
+        "version": "accepted-v1"
+      },
+      "route": {
+        "kind": "wave",
+        "adapter": "flooded",
+        "sceneId": "flooded-grassland",
+        "variant": "rebuild"
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "protected-reference",
+        "code": "protected-reference",
+        "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "reference",
+      "checkpoint": {
+        "id": "flooded-grassland-accepted-v1",
+        "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+        "exactSettings": true
+      },
+      "vegetationCoverage": "mixed",
+      "individualInspection": true,
+      "referenceLocation": {
+        "lat": 26.209957419,
+        "lon": -80.9383825925
+      },
+      "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+      "limits": [
+        "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+        "Synthetic terrain and materials are not measured land cover.",
+        "Reference lighting and matte camera envelopes remain adapter-specific.",
+        "Mobile performance and unreviewed variations are not approved."
+      ],
+      "notices": [
+        "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+      ]
+    },
+    "errors": [],
+    "id": "flooded-grassland",
+    "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+    "query": "lat=26.209957419&lon=-80.9383825925&habitat=wetland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&wave1=flooded&fieldStudy=rebuild&artPass=flooded-finish&conditional=1&referenceScene=flooded-grassland&autoEnvironment=global-auto-v1"
+  },
+  {
+    "hero": {
+      "position": [
+        0,
+        1.6436058218259575,
+        34
+      ],
+      "quaternion": [
+        0.013036468752836722,
+        0,
+        0,
+        0.9999150216305664
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "inspection": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ]
+    },
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.6436058218259575,
+            34
+          ],
+          "quaternion": [
+            0.013036468752836722,
+            0,
+            0,
+            0.9999150216305664
+          ]
+        },
+        "calls": 15,
+        "triangles": 691432
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "quaternion": [
+            -0.14225669339427574,
+            0.2709366497614252,
+            0.04052142593573312,
+            0.9511647486322844
+          ]
+        },
+        "calls": 15,
+        "triangles": 691432
+      }
+    ],
+    "assets": [
+      {
+        "url": "/assets/puget-v1/sky-matte-v1.webp",
+        "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+      },
+      {
+        "url": "/assets/wave1-detail/desert-granite-v1.webp",
+        "sha256": "eaf8fb532160b6dd0c1ee826e7f564ee75a2d425426473f61c918e068c94a1ae"
+      },
+      {
+        "url": "/assets/wave2-autonomous/boreal-floor-v1.png",
+        "sha256": "1a2ff0f48dfe4bd5eaf0a0e3fb126fef5910d38bcde237ce70baff76f8f78664"
+      },
+      {
+        "url": "/assets/wave2-concepts/spruce-sprays-v2.png",
+        "sha256": "d499db568521abffbc80eb9df499e37b83ee611126eb5c473d4a47649399b9a2"
+      }
+    ],
+    "exposure": 1.12,
+    "toneMapping": 4,
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": "boreal",
+      "selectedScene": {
+        "id": "boreal",
+        "name": "Boreal forest",
+        "version": "accepted-v1"
+      },
+      "route": {
+        "kind": "wave",
+        "adapter": "boreal",
+        "sceneId": "boreal",
+        "variant": "original"
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "protected-reference",
+        "code": "protected-reference",
+        "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "reference",
+      "checkpoint": {
+        "id": "boreal-accepted-v1",
+        "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+        "exactSettings": true
+      },
+      "vegetationCoverage": "mixed",
+      "individualInspection": true,
+      "referenceLocation": {
+        "lat": 66.5,
+        "lon": 26
+      },
+      "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+      "limits": [
+        "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+        "Synthetic terrain and materials are not measured land cover.",
+        "Reference lighting and matte camera envelopes remain adapter-specific.",
+        "Mobile performance and unreviewed variations are not approved."
+      ],
+      "notices": [
+        "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+      ]
+    },
+    "errors": [],
+    "id": "boreal",
+    "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+    "query": "lat=66.5&lon=26&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&expansion=boreal&referenceScene=boreal&autoEnvironment=global-auto-v1"
+  },
+  {
+    "hero": {
+      "position": [
+        0,
+        1.7147654075940282,
+        34
+      ],
+      "quaternion": [
+        0.0022905666981541165,
+        0,
+        0,
+        0.9999973766486595
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "inspection": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ]
+    },
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7147654075940282,
+            34
+          ],
+          "quaternion": [
+            0.0022905666981541165,
+            0,
+            0,
+            0.9999973766486595
+          ]
+        },
+        "calls": 15,
+        "triangles": 942962
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "quaternion": [
+            -0.14225669339427574,
+            0.2709366497614252,
+            0.04052142593573312,
+            0.9511647486322844
+          ]
+        },
+        "calls": 15,
+        "triangles": 942962
+      }
+    ],
+    "assets": [
+      {
+        "url": "/assets/puget-v1/sky-matte-v1.webp",
+        "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+      },
+      {
+        "url": "/assets/wave2-autonomous/temperate-floor-v1.png",
+        "sha256": "278d59f727fa7a85813d36f931ad83f49d6749b6710a85f0771c04badf8d8e5d"
+      }
+    ],
+    "exposure": 1.12,
+    "toneMapping": 4,
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": "temperate-woodland",
+      "selectedScene": {
+        "id": "temperate-woodland",
+        "name": "Temperate woodland",
+        "version": "accepted-v1"
+      },
+      "route": {
+        "kind": "wave",
+        "adapter": "temperate",
+        "sceneId": "temperate-woodland",
+        "variant": "original"
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "protected-reference",
+        "code": "protected-reference",
+        "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "reference",
+      "checkpoint": {
+        "id": "temperate-woodland-accepted-v1",
+        "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+        "exactSettings": true
+      },
+      "vegetationCoverage": "mixed",
+      "individualInspection": true,
+      "referenceLocation": {
+        "lat": 50.5,
+        "lon": 10.5
+      },
+      "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+      "limits": [
+        "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+        "Synthetic terrain and materials are not measured land cover.",
+        "Reference lighting and matte camera envelopes remain adapter-specific.",
+        "Mobile performance and unreviewed variations are not approved."
+      ],
+      "notices": [
+        "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+      ]
+    },
+    "errors": [],
+    "id": "temperate-woodland",
+    "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+    "query": "lat=50.5&lon=10.5&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&expansion=temperate&referenceScene=temperate-woodland&autoEnvironment=global-auto-v1"
+  },
+  {
+    "hero": {
+      "position": [
+        0,
+        2.7718088878891134,
+        34
+      ],
+      "quaternion": [
+        -0.03127154955753114,
+        0,
+        0,
+        0.9995109254972008
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "inspection": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ]
+    },
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            2.7718088878891134,
+            34
+          ],
+          "quaternion": [
+            -0.03127154955753114,
+            0,
+            0,
+            0.9995109254972008
+          ]
+        },
+        "calls": 16,
+        "triangles": 1040908
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "quaternion": [
+            -0.14225669339427574,
+            0.2709366497614252,
+            0.04052142593573312,
+            0.9511647486322844
+          ]
+        },
+        "calls": 16,
+        "triangles": 1040908
+      }
+    ],
+    "assets": [
+      {
+        "url": "/assets/puget-v1/sky-matte-v1.webp",
+        "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+      },
+      {
+        "url": "/assets/wave2-autonomous/tundra-floor-v1.png",
+        "sha256": "a46deeef8cf8ed882fe3eb33fb2edcc77083695fdb82206877b3cec5e9524876"
+      }
+    ],
+    "exposure": 1.12,
+    "toneMapping": 4,
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": "tundra",
+      "selectedScene": {
+        "id": "tundra",
+        "name": "Arctic tundra",
+        "version": "accepted-v1"
+      },
+      "route": {
+        "kind": "wave",
+        "adapter": "tundra",
+        "sceneId": "tundra",
+        "variant": "original"
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "protected-reference",
+        "code": "protected-reference",
+        "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "reference",
+      "checkpoint": {
+        "id": "tundra-accepted-v1",
+        "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+        "exactSettings": true
+      },
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": {
+        "lat": 69,
+        "lon": -150
+      },
+      "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+      "limits": [
+        "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+        "Synthetic terrain and materials are not measured land cover.",
+        "Reference lighting and matte camera envelopes remain adapter-specific.",
+        "Mobile performance and unreviewed variations are not approved."
+      ],
+      "notices": [
+        "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+      ]
+    },
+    "errors": [],
+    "id": "tundra",
+    "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+    "query": "lat=69&lon=-150&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&expansion=tundra&referenceScene=tundra&autoEnvironment=global-auto-v1"
+  },
+  {
+    "hero": {
+      "position": [
+        0,
+        1.7,
+        34
+      ],
+      "quaternion": [
+        0.05620526029552742,
+        0,
+        0,
+        0.9984192349484818
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "inspection": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        0,
+        -24
+      ]
+    },
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "quaternion": [
+            0.05620526029552742,
+            0,
+            0,
+            0.9984192349484818
+          ]
+        },
+        "calls": 24,
+        "triangles": 1002290
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "quaternion": [
+            -0.14960876967790102,
+            0.27061515290874505,
+            0.04261564454501207,
+            0.9500360845208219
+          ]
+        },
+        "calls": 22,
+        "triangles": 1002286
+      }
+    ],
+    "assets": [
+      {
+        "url": "/assets/alpine-meadow/meadow-ground-v1.png",
+        "sha256": "dda7595d93a385c227c03430b9338dcc7c3998fec539c5edd44dab16d3b47ed0"
+      },
+      {
+        "url": "/assets/prairie/black-willow-bark-v1.webp",
+        "sha256": "c9d326b2f1732de844577595e1996a54bf4f26b22a7ccf86e528216d4be2f0c6"
+      },
+      {
+        "url": "/assets/prairie/distant-hills-v1.webp",
+        "sha256": "01dfeb55b17157e3e89f1d2220a2c8a42f2f457558ba162a3fd19b849b1a3c07"
+      },
+      {
+        "url": "/assets/puget-v1/sky-matte-v1.webp",
+        "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+      },
+      {
+        "url": "/assets/savanna-brush/painted-tufts-v1.webp",
+        "sha256": "b3be409e178c1a59036aa3b2ec29756a147ab8c403455883a4a975d7c0949a55"
+      },
+      {
+        "url": "/assets/wave1-detail/arid-sediment-v1.webp",
+        "sha256": "67ff274ba29d736c58a2e5578bc8915289e37f5a93e3f68cb0147ea004c0ae84"
+      }
+    ],
+    "exposure": 1.12,
+    "toneMapping": 4,
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": "prairie",
+      "selectedScene": {
+        "id": "prairie",
+        "name": "Temperate prairie",
+        "version": "accepted-v1"
+      },
+      "route": {
+        "kind": "wave",
+        "adapter": "prairie",
+        "sceneId": "prairie",
+        "variant": "original"
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "protected-reference",
+        "code": "protected-reference",
+        "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "reference",
+      "checkpoint": {
+        "id": "prairie-accepted-v1",
+        "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+        "exactSettings": true
+      },
+      "vegetationCoverage": "mixed",
+      "individualInspection": true,
+      "referenceLocation": {
+        "lat": 36.5736504415,
+        "lon": -98.3419281896
+      },
+      "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+      "limits": [
+        "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+        "Synthetic terrain and materials are not measured land cover.",
+        "Reference lighting and matte camera envelopes remain adapter-specific.",
+        "Mobile performance and unreviewed variations are not approved."
+      ],
+      "notices": [
+        "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+      ]
+    },
+    "errors": [],
+    "id": "prairie",
+    "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+    "query": "lat=36.5736504415&lon=-98.3419281896&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&expansion=prairie&conditional=1&referenceScene=prairie&autoEnvironment=global-auto-v1"
+  },
+  {
+    "hero": {
+      "position": [
+        0,
+        1.7,
+        16
+      ],
+      "quaternion": [
+        -0.06562197776538489,
+        0,
+        0,
+        0.997844555045604
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "inspection": {
+      "position": [
+        40,
+        32,
+        48
+      ],
+      "target": [
+        0,
+        -5,
+        -45
+      ]
+    },
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            16
+          ],
+          "quaternion": [
+            -0.06562197776538489,
+            0,
+            0,
+            0.997844555045604
+          ]
+        },
+        "calls": 18,
+        "triangles": 1822040
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            40,
+            32,
+            48
+          ],
+          "quaternion": [
+            -0.17072087308926792,
+            0.19861345592355148,
+            0.03515716778101263,
+            0.9644537584412015
+          ]
+        },
+        "calls": 16,
+        "triangles": 1822036
+      }
+    ],
+    "assets": [
+      {
+        "url": "/assets/alpine-meadow/meadow-ground-v1.png",
+        "sha256": "dda7595d93a385c227c03430b9338dcc7c3998fec539c5edd44dab16d3b47ed0"
+      },
+      {
+        "url": "/assets/cork-oak/bark-v1.webp",
+        "sha256": "b8105d45e956d83ac764deebd2ba241fd62c4cf1869498cc5f9c6f80eb4595cc"
+      },
+      {
+        "url": "/assets/cork-oak/leaves-v1.webp",
+        "sha256": "3b48f62189ed6d5606f10d8e2199a2f1fbde61fb57f15b61b06d5054230c9936"
+      },
+      {
+        "url": "/assets/holm-oak/bark-v1.webp",
+        "sha256": "e3085fd25cd89179a99ffe25dd6220f5335cff6bb0a485307a00c3cdb88e5258"
+      },
+      {
+        "url": "/assets/holm-oak/leaves-v1.webp",
+        "sha256": "e4351803344ec4d00ade9d3d91669a96185bb6e4d6d757a42b1689e1235ad867"
+      },
+      {
+        "url": "/assets/mediterranean/herault-garrigue-distance-v1.webp",
+        "sha256": "c204141f0e33f89f2b77f88cd3ab9719571068002d98a4d8ca2107ad4d3374d9"
+      },
+      {
+        "url": "/assets/puget-v1/sky-matte-v1.webp",
+        "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+      },
+      {
+        "url": "/assets/wave1-detail/arid-sediment-v1.webp",
+        "sha256": "67ff274ba29d736c58a2e5578bc8915289e37f5a93e3f68cb0147ea004c0ae84"
+      }
+    ],
+    "exposure": 1.12,
+    "toneMapping": 4,
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": "mediterranean",
+      "selectedScene": {
+        "id": "mediterranean",
+        "name": "Mediterranean woodland",
+        "version": "accepted-v1"
+      },
+      "route": {
+        "kind": "wave",
+        "adapter": "mediterranean",
+        "sceneId": "mediterranean",
+        "variant": "original"
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "protected-reference",
+        "code": "protected-reference",
+        "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "reference",
+      "checkpoint": {
+        "id": "mediterranean-accepted-v1",
+        "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+        "exactSettings": true
+      },
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": {
+        "lat": 43.72,
+        "lon": 3.58
+      },
+      "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+      "limits": [
+        "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+        "Synthetic terrain and materials are not measured land cover.",
+        "Reference lighting and matte camera envelopes remain adapter-specific.",
+        "Mobile performance and unreviewed variations are not approved."
+      ],
+      "notices": [
+        "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+      ]
+    },
+    "errors": [],
+    "id": "mediterranean",
+    "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+    "query": "lat=43.72&lon=3.58&habitat=forest&seed=29&density=36&structure=mediterranean-1&appearance=garden&wind=0&mode=painterly&expansion=mediterranean&referenceScene=mediterranean&autoEnvironment=global-auto-v1"
+  },
+  {
+    "hero": {
+      "position": [
+        0,
+        1.7,
+        34
+      ],
+      "quaternion": [
+        0.0033707290692054958,
+        0,
+        0,
+        0.9999943190766345
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "inspection": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ]
+    },
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "quaternion": [
+            0.0033707290692054958,
+            0,
+            0,
+            0.9999943190766345
+          ]
+        },
+        "calls": 134,
+        "triangles": 2924474
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "quaternion": [
+            -0.14225669339427574,
+            0.2709366497614252,
+            0.04052142593573312,
+            0.9511647486322844
+          ]
+        },
+        "calls": 137,
+        "triangles": 2948430
+      }
+    ],
+    "assets": [
+      {
+        "url": "/assets/cork-oak/bark-v1.webp",
+        "sha256": "b8105d45e956d83ac764deebd2ba241fd62c4cf1869498cc5f9c6f80eb4595cc"
+      },
+      {
+        "url": "/assets/dry-forest/distance.png",
+        "sha256": "c23a85e1c96fb588b311c2e9da31c0b9dd79f4b53afd48c600cb8b0255796314"
+      },
+      {
+        "url": "/assets/dry-forest/guanacaste-leaf-v2.webp",
+        "sha256": "c1fb73480690652dd7376582014120300aefc43cf47b25d82a74b4f4629a1251"
+      },
+      {
+        "url": "/assets/dry-forest/gumbo-bark-v2.webp",
+        "sha256": "607ce9430b70d2ea81ea64323a7769fc06441bcca8db8cbdb8ed0e1a8b05a594"
+      },
+      {
+        "url": "/assets/dry-forest/soil-albedo.webp",
+        "sha256": "e33f861c9054aee85eca77f1c260bf8ef3acd6028547e5510fa7ef870844efa8"
+      },
+      {
+        "url": "/assets/dry-forest/soil-normal.png",
+        "sha256": "a292d45d9e08d0fa9c50b11fc007d3efa0a658c37354675903ff54339061cf77"
+      },
+      {
+        "url": "/assets/dry-forest/soil-roughness.png",
+        "sha256": "700556a58dfc898467c1ef0185d3ecb319c1c64b70e5d2701c1a4be764807bd4"
+      },
+      {
+        "url": "/assets/puget-v1/sky-matte-v1.webp",
+        "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+      },
+      {
+        "url": "/assets/wave1-detail/arid-sediment-v1.webp",
+        "sha256": "67ff274ba29d736c58a2e5578bc8915289e37f5a93e3f68cb0147ea004c0ae84"
+      }
+    ],
+    "exposure": 1.12,
+    "toneMapping": 4,
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": "tropical-dry-forest",
+      "selectedScene": {
+        "id": "tropical-dry-forest",
+        "name": "Central American dry forest",
+        "version": "accepted-v1"
+      },
+      "route": {
+        "kind": "wave",
+        "adapter": "dryforest",
+        "sceneId": "tropical-dry-forest",
+        "variant": "original"
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "protected-reference",
+        "code": "protected-reference",
+        "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "reference",
+      "checkpoint": {
+        "id": "tropical-dry-forest-accepted-v1",
+        "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+        "exactSettings": true
+      },
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": {
+        "lat": 10.85,
+        "lon": -85.61
+      },
+      "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+      "limits": [
+        "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+        "Synthetic terrain and materials are not measured land cover.",
+        "Reference lighting and matte camera envelopes remain adapter-specific.",
+        "Mobile performance and unreviewed variations are not approved."
+      ],
+      "notices": [
+        "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+      ]
+    },
+    "errors": [],
+    "id": "tropical-dry-forest",
+    "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+    "query": "lat=10.85&lon=-85.61&habitat=forest&seed=29&density=24&structure=grove-1&appearance=garden&wind=0&mode=painterly&expansion=dryforest&drySeason=flowering&referenceScene=tropical-dry-forest&autoEnvironment=global-auto-v1"
+  },
+  {
+    "hero": {
+      "position": [
+        0,
+        1.7,
+        34
+      ],
+      "quaternion": [
+        -0.03714499174327802,
+        -0.008145735650401822,
+        -0.0003027923110738257,
+        0.999276640823712
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "inspection": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ]
+    },
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "quaternion": [
+            -0.03714499174327802,
+            -0.008145735650401822,
+            -0.0003027923110738257,
+            0.999276640823712
+          ]
+        },
+        "calls": 21,
+        "triangles": 2268504
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "quaternion": [
+            -0.14225669339427574,
+            0.2709366497614252,
+            0.04052142593573312,
+            0.9511647486322844
+          ]
+        },
+        "calls": 19,
+        "triangles": 2268500
+      }
+    ],
+    "assets": [
+      {
+        "url": "/assets/andean-puna/bark-albedo.webp",
+        "sha256": "c9a5b68a2616fe64916507dc12ea7c9b4635fefb4818859169d8eb3b579ce58a"
+      },
+      {
+        "url": "/assets/andean-puna/bark-normal.png",
+        "sha256": "e68408ff0ac6de2651f86cdb08c83d555097e17b621924334d4077cc79046fa9"
+      },
+      {
+        "url": "/assets/andean-puna/bark-roughness.png",
+        "sha256": "7d8cfb986e662e3b082b71e3f8f9ecc8355e7413c5890798501b295bfb752412"
+      },
+      {
+        "url": "/assets/andean-puna/cover-albedo.webp",
+        "sha256": "e6c9f85452dfe0ddbf4e84be9da8a4600245afe97c0a3c33bc96185d441d653d"
+      },
+      {
+        "url": "/assets/andean-puna/cover-normal.png",
+        "sha256": "858ba9d3a50281d5142750e4bcbb0e9e47920b0912d196ff6d5af15b02f15649"
+      },
+      {
+        "url": "/assets/andean-puna/cover-roughness.png",
+        "sha256": "a84f1b5d7ae77ff7eb0ad81a9593cc44b9fa5be84455c3219e47c98fb15894bc"
+      },
+      {
+        "url": "/assets/andean-puna/distance.png",
+        "sha256": "5469c77b31cc2d96a884a05faac92e5b73bcfc09c40cca1e561b666f8d30123f"
+      },
+      {
+        "url": "/assets/andean-puna/rock-albedo.webp",
+        "sha256": "412db3c5d6f91256921b442ba8e8b887de26d3f02e661ffb719fcd54b77baf31"
+      },
+      {
+        "url": "/assets/andean-puna/rock-normal.png",
+        "sha256": "ddb6e790e3e9be380cfd4de4734f912872d478ae6377ec4554c3d6c71d060576"
+      },
+      {
+        "url": "/assets/andean-puna/rock-roughness.png",
+        "sha256": "7241e63b4f6df7cbc29d68bf61910e8123c5470b3a8b07b763d4a9d61562ea33"
+      },
+      {
+        "url": "/assets/andean-puna/soil-albedo.webp",
+        "sha256": "32f93e589859153838d319e20fe69c4cf2bcf501886cc771cd928c75f82f288e"
+      },
+      {
+        "url": "/assets/andean-puna/soil-normal.png",
+        "sha256": "ba4608fc46fc6172a422577b8c491fd0953e1ae94a0234b844ea3111abee9bff"
+      },
+      {
+        "url": "/assets/andean-puna/soil-roughness.png",
+        "sha256": "1081d4ee8b475d2907e03c90ac3cf349c86bd90d52d6ca774f2b35fd72e4c7a2"
+      },
+      {
+        "url": "/assets/puget-v1/sky-matte-v1.webp",
+        "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+      }
+    ],
+    "exposure": 1.12,
+    "toneMapping": 4,
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": "andean-puna",
+      "selectedScene": {
+        "id": "andean-puna",
+        "name": "Andean puna grassland",
+        "version": "accepted-v1"
+      },
+      "route": {
+        "kind": "wave",
+        "adapter": "andean",
+        "sceneId": "andean-puna",
+        "variant": "original"
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "protected-reference",
+        "code": "protected-reference",
+        "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "reference",
+      "checkpoint": {
+        "id": "andean-puna-accepted-v1",
+        "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+        "exactSettings": true
+      },
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": {
+        "lat": -9.88,
+        "lon": -77.19
+      },
+      "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+      "limits": [
+        "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+        "Synthetic terrain and materials are not measured land cover.",
+        "Reference lighting and matte camera envelopes remain adapter-specific.",
+        "Mobile performance and unreviewed variations are not approved."
+      ],
+      "notices": [
+        "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+      ]
+    },
+    "errors": [],
+    "id": "andean-puna",
+    "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+    "query": "lat=-9.88&lon=-77.19&habitat=forest&seed=29&density=24&structure=grove-1&appearance=garden&wind=0&mode=painterly&expansion=andean&referenceScene=andean-puna&autoEnvironment=global-auto-v1"
+  },
+  {
+    "hero": {
+      "position": [
+        0,
+        1.7,
+        34
+      ],
+      "quaternion": [
+        -0.017528619593268496,
+        -0.003730692087245149,
+        -0.00006540438638227013,
+        0.9998393996807542
+      ],
+      "aspect": 1.7777777777777777,
+      "fov": 47
+    },
+    "inspection": {
+      "position": [
+        62,
+        38,
+        76
+      ],
+      "target": [
+        0,
+        2,
+        -24
+      ]
+    },
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "quaternion": [
+            -0.017528619593268496,
+            -0.003730692087245149,
+            -0.00006540438638227013,
+            0.9998393996807542
+          ]
+        },
+        "calls": 123,
+        "triangles": 2310906
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "quaternion": [
+            -0.14225669339427574,
+            0.2709366497614252,
+            0.04052142593573312,
+            0.9511647486322844
+          ]
+        },
+        "calls": 121,
+        "triangles": 2347058
+      }
+    ],
+    "assets": [
+      {
+        "url": "/assets/cork-oak/leaves-v1.webp",
+        "sha256": "3b48f62189ed6d5606f10d8e2199a2f1fbde61fb57f15b61b06d5054230c9936"
+      },
+      {
+        "url": "/assets/holm-oak/bark-v1.webp",
+        "sha256": "e3085fd25cd89179a99ffe25dd6220f5335cff6bb0a485307a00c3cdb88e5258"
+      },
+      {
+        "url": "/assets/puget-v1/sky-matte-v1.webp",
+        "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+      },
+      {
+        "url": "/assets/tropical-pine/bark-albedo.webp",
+        "sha256": "24dcef1be268b0236a77f1b9c578e8f267ea2113450e92e589197e9af2bc0cf9"
+      },
+      {
+        "url": "/assets/tropical-pine/bark-normal.png",
+        "sha256": "942492abfbfbfc88ffb88a42d854e9df87586181eb9befe4d2a01df8d02b4dfe"
+      },
+      {
+        "url": "/assets/tropical-pine/bark-roughness.png",
+        "sha256": "61e50e8f84519fba48cd708149b8b8075eedfb262773fec1513c692b5da1c9ce"
+      },
+      {
+        "url": "/assets/tropical-pine/distance.png",
+        "sha256": "759fa674add5c7bef3b79f82224cf2f42a343cabfdbcfaf2bf627e873c202472"
+      },
+      {
+        "url": "/assets/tropical-pine/floor-albedo.webp",
+        "sha256": "8a73aad9ff244888dcd498460505bc97afe471cdf3ff605a1ecb5a305ccc60fa"
+      },
+      {
+        "url": "/assets/tropical-pine/floor-normal.png",
+        "sha256": "755768a875d64b7ebbf7efcbe448f82ef8a60362a137f43fcb8df934f5b6ee48"
+      },
+      {
+        "url": "/assets/tropical-pine/floor-roughness.png",
+        "sha256": "129c6c227fd1b38f46906ef225604141e15bea3584a726c540f7e6a22652bc1a"
+      },
+      {
+        "url": "/assets/tropical-pine/pine-sprays.webp",
+        "sha256": "91741039d2ad19c29bd9669284fd9160ca7240cb4d248f91f1905e6ea5fa561a"
+      },
+      {
+        "url": "/assets/tropical-pine/rock-albedo.webp",
+        "sha256": "0664b1552682b466f8297796367579b5e64cd9756fd021e1961aab292fda4d83"
+      },
+      {
+        "url": "/assets/tropical-pine/rock-normal.png",
+        "sha256": "42a879673b00045f55976c50228c7435981203d4c384cd09e9c0f2b77d4936fe"
+      },
+      {
+        "url": "/assets/tropical-pine/rock-roughness.png",
+        "sha256": "1f64969c3028532feccb808a789b56389b8722107922179b945a6984c7a0ed70"
+      },
+      {
+        "url": "/assets/tropical-pine/treeline-v1.png",
+        "sha256": "6aa882991b5234ae58545cea07e08575b9f0a4f0684df63856d5327af93ee250"
+      }
+    ],
+    "exposure": 1.12,
+    "toneMapping": 4,
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": "tropical-pine-oak",
+      "selectedScene": {
+        "id": "tropical-pine-oak",
+        "name": "Central American pine–oak",
+        "version": "accepted-v1"
+      },
+      "route": {
+        "kind": "wave",
+        "adapter": "tropicalpine",
+        "sceneId": "tropical-pine-oak",
+        "variant": "original"
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "protected-reference",
+        "code": "protected-reference",
+        "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "reference",
+      "checkpoint": {
+        "id": "tropical-pine-oak-accepted-v1",
+        "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+        "exactSettings": true
+      },
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": {
+        "lat": 14.507672,
+        "lon": -89.435797
+      },
+      "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+      "limits": [
+        "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+        "Synthetic terrain and materials are not measured land cover.",
+        "Reference lighting and matte camera envelopes remain adapter-specific.",
+        "Mobile performance and unreviewed variations are not approved."
+      ],
+      "notices": [
+        "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+      ]
+    },
+    "errors": [],
+    "id": "tropical-pine-oak",
+    "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+    "query": "lat=14.507672&lon=-89.435797&habitat=forest&seed=29&density=24&structure=grove-1&appearance=garden&wind=0&mode=painterly&expansion=tropicalpine&referenceScene=tropical-pine-oak&autoEnvironment=global-auto-v1"
+  }
+]

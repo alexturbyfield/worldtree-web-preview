@@ -1,0 +1,38 @@
+{
+  "origin": "http://localhost:3001",
+  "checks": [
+    {
+      "name": "map tap opens art directly",
+      "pass": true
+    },
+    {
+      "name": "first camera is the art encounter camera",
+      "pass": true
+    },
+    {
+      "name": "global art route selected",
+      "pass": true
+    },
+    {
+      "name": "coordinate search opens art outside trial bounds",
+      "pass": true
+    },
+    {
+      "name": "world mode is visible",
+      "pass": true
+    },
+    {
+      "name": "generic view remains available",
+      "pass": true
+    },
+    {
+      "name": "ocean does not invent an ecosystem",
+      "pass": true
+    },
+    {
+      "name": "no mobile horizontal overflow",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

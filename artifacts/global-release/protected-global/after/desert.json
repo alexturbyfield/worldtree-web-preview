@@ -1,0 +1,141 @@
+{
+  "hero": {
+    "position": [
+      -27,
+      3.036333874529917,
+      -36
+    ],
+    "quaternion": [
+      0.0024599552941897444,
+      0.9238604443126958,
+      0.005938857434064377,
+      -0.3826755257743521
+    ],
+    "aspect": 1.7777777777777777,
+    "fov": 47
+  },
+  "inspection": {
+    "position": [
+      70,
+      50,
+      85
+    ],
+    "target": [
+      0,
+      1,
+      -25
+    ]
+  },
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          -27,
+          3.036333874529917,
+          -36
+        ],
+        "quaternion": [
+          0.0024599552941897444,
+          0.9238604443126958,
+          0.005938857434064377,
+          -0.3826755257743521
+        ]
+      },
+      "calls": 19,
+      "triangles": 897240
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          70,
+          50,
+          85
+        ],
+        "quaternion": [
+          -0.17164577003343667,
+          0.2750834768545333,
+          0.04998336618883981,
+          0.9446525676118614
+        ]
+      },
+      "calls": 17,
+      "triangles": 897236
+    }
+  ],
+  "assets": [
+    {
+      "url": "/assets/puget-v1/grass.png",
+      "sha256": "f1c3a2379d595ef8df947f620f1ccaedebab7cb2649f588d32392b63fab36126"
+    },
+    {
+      "url": "/assets/puget-v1/sky-matte-v1.webp",
+      "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+    },
+    {
+      "url": "/assets/wave1-detail/arid-sediment-v1.webp",
+      "sha256": "67ff274ba29d736c58a2e5578bc8915289e37f5a93e3f68cb0147ea004c0ae84"
+    },
+    {
+      "url": "/assets/wave1-detail/desert-distance-v1.webp",
+      "sha256": "f54c66be1d0ede9171192ff62b463c6ef234a69eed6fa5a54ebd45837ec782ca"
+    }
+  ],
+  "exposure": 1.12,
+  "toneMapping": 4,
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": "desert",
+    "selectedScene": {
+      "id": "desert",
+      "name": "Desert / xeric shrubland",
+      "version": "accepted-v1"
+    },
+    "route": {
+      "kind": "wave",
+      "adapter": "desert",
+      "sceneId": "desert",
+      "variant": "rebuild"
+    },
+    "pilot": null,
+    "regional": null,
+    "automatic": {
+      "policyVersion": "global-auto-v1",
+      "requestedVersion": "global-auto-v1",
+      "status": "protected-reference",
+      "code": "protected-reference",
+      "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    },
+    "mode": "reference",
+    "checkpoint": {
+      "id": "desert-accepted-v1",
+      "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+      "exactSettings": true
+    },
+    "vegetationCoverage": "mixed",
+    "individualInspection": true,
+    "referenceLocation": {
+      "lat": 34,
+      "lon": -116.15
+    },
+    "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+    "limits": [
+      "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+      "Synthetic terrain and materials are not measured land cover.",
+      "Reference lighting and matte camera envelopes remain adapter-specific.",
+      "Mobile performance and unreviewed variations are not approved."
+    ],
+    "notices": [
+      "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+    ]
+  },
+  "errors": [],
+  "id": "desert",
+  "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+  "query": "lat=34&lon=-116.15&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&wave1=desert&fieldStudy=rebuild&artPass=fidelity&referenceScene=desert&autoEnvironment=global-auto-v1"
+}

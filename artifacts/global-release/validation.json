@@ -1,0 +1,41 @@
+{
+  "checks": [
+    {
+      "name": "all 14 source families have reviewed sample captures",
+      "pass": true
+    },
+    {
+      "name": "world audit selects all non-rock/ice lookup points",
+      "pass": true
+    },
+    {
+      "name": "30 explicit global reference views unchanged",
+      "pass": true
+    },
+    {
+      "name": "final held-out capture succeeded",
+      "pass": true
+    },
+    {
+      "name": "frozen renderer and routing files unchanged",
+      "pass": true
+    },
+    {
+      "name": "map, search, generic fallback and first camera browser checks pass",
+      "pass": true
+    }
+  ],
+  "auditedPoints": 847,
+  "artSelected": 844,
+  "unnamedFallbacks": 81,
+  "callRange": [
+    10,
+    137
+  ],
+  "triangleRange": [
+    256644,
+    3060802
+  ],
+  "postFreezeUiFix": "WorldMap decorative marker pointer events disabled after the UI test exposed intercepted taps; no art recipe or captured camera was tuned.",
+  "mobileDeviceTested": false
+}

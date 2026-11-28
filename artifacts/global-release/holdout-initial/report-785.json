@@ -1,0 +1,169 @@
+[
+  {
+    "id": "785",
+    "family": "mediterranean",
+    "name": "Aegean and Western Turkey sclerophyllous and mixed forests",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "calls": 14,
+        "triangles": 1833508,
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            16
+          ],
+          "target": [
+            0,
+            -6.225925925926,
+            -44
+          ]
+        },
+        "textures": 9
+      },
+      {
+        "view": "inspection",
+        "calls": 14,
+        "triangles": 1833508,
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "textures": 9
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "mediterranean",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "growthFormFallback": "broadleaf",
+          "site": {
+            "id": "auto:global:785",
+            "name": "Aegean and Western Turkey sclerophyllous and mixed forests · biome art encounter",
+            "family": "mediterranean",
+            "biome": 12,
+            "eco": 785,
+            "lat": 37.36933496900005,
+            "lon": 22.2360913127809,
+            "area": "GRC"
+          },
+          "inputSeed": "618379",
+          "effectiveSeed": "623895295",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "unnamed-broadleaf-growth-forms",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+            "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "global-auto-v1",
+        "status": "experimental-unreviewed",
+        "growthFormFallback": "broadleaf",
+        "site": {
+          "id": "auto:global:785",
+          "name": "Aegean and Western Turkey sclerophyllous and mixed forests · biome art encounter",
+          "family": "mediterranean",
+          "biome": 12,
+          "eco": 785,
+          "lat": 37.36933496900005,
+          "lon": 22.2360913127809,
+          "area": "GRC"
+        },
+        "inputSeed": "618379",
+        "effectiveSeed": "623895295",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "unnamed-broadleaf-growth-forms",
+        "limitations": [
+          "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+          "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+          "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms.",
+        "ruleId": "global:785",
+        "distanceKm": null,
+        "confidence": "biome-context-only",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "growthFormFallback": "broadleaf",
+          "site": {
+            "id": "auto:global:785",
+            "name": "Aegean and Western Turkey sclerophyllous and mixed forests · biome art encounter",
+            "family": "mediterranean",
+            "biome": 12,
+            "eco": 785,
+            "lat": 37.36933496900005,
+            "lon": 22.2360913127809,
+            "area": "GRC"
+          },
+          "inputSeed": "618379",
+          "effectiveSeed": "623895295",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "unnamed-broadleaf-growth-forms",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+            "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Automatic art recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+        "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+      ],
+      "notices": [
+        "Automatic selection: Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms."
+      ]
+    }
+  }
+]

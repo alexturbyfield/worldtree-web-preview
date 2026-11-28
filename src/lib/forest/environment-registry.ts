@@ -1,4 +1,4 @@
-import {resolveBoundedEnvironment,type AutomaticDecision,type BoundedContext} from './bounded-resolver';
+import {resolveAutomaticEnvironment,type AutomaticDecision,type BoundedContext} from './bounded-resolver';
 import {resolveGeographicPilot,type GeographicPilot,type RegionalRecipeSelection} from './geographic-pilot';
 import catalog from './environment-registry.json';
 import {parseSceneQuery,sceneQuery} from './query';
@@ -38,7 +38,7 @@ function legacyRoute(r:EnvironmentContext,q:URLSearchParams):EnvironmentRoute{
 function normalizedSettings(search:string){const q=new URLSearchParams(search),normalized=new URLSearchParams(sceneQuery(parseSceneQuery(q))),seen=new Set<string>();for(const [key,value]of q){if(seen.has(key))throw Error('Repeated scene parameters are not a pinned checkpoint');seen.add(key);if(key!=='referenceScene'&&key!=='autoEnvironment'&&!CORE_KEYS.includes(key))normalized.set(key,value);}normalized.sort();return normalized.toString();}
 export function resolveEnvironmentSelection(r:EnvironmentContext,search:string):EnvironmentSelectionManifest{
  const q=new URLSearchParams(search),requested=q.get('referenceScene'),reference=requested?environmentById(requested):undefined,notices:string[]=[];
- let route=legacyRoute(r,q),automatic=resolveBoundedEnvironment(r,search);
+ let route=legacyRoute(r,q),automatic=resolveAutomaticEnvironment(r,search);
  const pilotResult=resolveGeographicPilot(r,search);
  if(q.has('geographicPilot')){route=pilotResult.pilot?{kind:'wave',adapter:pilotResult.pilot.site.family,sceneId:null,variant:['mangrove','desert','flooded'].includes(pilotResult.pilot.site.family)?'rebuild':'original',pilot:pilotResult.pilot}:geographicRoute(r);if(pilotResult.reason)notices.push(pilotResult.reason);}
  if(automatic?.recipe)route={kind:'wave',adapter:automatic.recipe.site.family,sceneId:null,variant:['mangrove','desert','flooded'].includes(automatic.recipe.site.family)?'rebuild':'original',regional:automatic.recipe};
@@ -57,7 +57,7 @@ export function resolveEnvironmentSelection(r:EnvironmentContext,search:string):
  checkpoint:entry?{id:entry.reference.checkpointId,approvalRecord:entry.reference.approval,exactSettings:exact}:null,
  vegetationCoverage:regional?'adapter-generated':entry?.vegetationCoverage??'canonical',individualInspection:regional?false:!entry||entry.vegetationCoverage!=='adapter-generated',
  referenceLocation:entry?{lat:Number(entry.reference.params.lat),lon:Number(entry.reference.params.lon)}:null,
- evidence:route.regional?'Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.':route.pilot?'Geographic pilot: regional catalogue candidates and explicitly unnamed functional forms; no point-occurrence or artistic approval.':entry?.evidence??'Existing geographic/ecological fallback; no reference-scene approval is inferred.',limits:regional?.limitations??entry?.limits??[],notices};
+ evidence:route.regional?'Automatic art recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.':route.pilot?'Geographic pilot: regional catalogue candidates and explicitly unnamed functional forms; no point-occurrence or artistic approval.':entry?.evidence??'Existing geographic/ecological fallback; no reference-scene approval is inferred.',limits:regional?.limitations??entry?.limits??[],notices};
 }
 const CORE_KEYS=['lat','lon','habitat','seed','density','structure','appearance','mode','wind','conditional','moisture','coastal','seasonality','elevation','r','stylization','foliageDensity','asymmetry','foliageDetail','fluffiness','clumpOverlap','surfaceLeafDetail','branchExposure'];
 /** Preserve every adapter flag; editing a seed must not silently select an older scene. */

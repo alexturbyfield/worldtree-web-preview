@@ -1,0 +1,140 @@
+{
+  "hero": {
+    "position": [
+      0,
+      0.21041739075620725,
+      34
+    ],
+    "quaternion": [
+      0.024969864063644317,
+      0.01850322795785242,
+      -0.0004622464236711974,
+      0.9995168446664752
+    ],
+    "aspect": 1.7777777777777777,
+    "fov": 47
+  },
+  "inspection": {
+    "position": [
+      70,
+      50,
+      85
+    ],
+    "target": [
+      0,
+      1,
+      -25
+    ]
+  },
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          0,
+          0.21041739075620725,
+          34
+        ],
+        "quaternion": [
+          0.024969864063644317,
+          0.01850322795785242,
+          -0.0004622464236711974,
+          0.9995168446664752
+        ]
+      },
+      "calls": 11,
+      "triangles": 174552
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          70,
+          50,
+          85
+        ],
+        "quaternion": [
+          -0.17164577003343667,
+          0.2750834768545333,
+          0.04998336618883981,
+          0.9446525676118614
+        ]
+      },
+      "calls": 11,
+      "triangles": 174552
+    }
+  ],
+  "assets": [
+    {
+      "url": "/assets/puget-v1/grass.png",
+      "sha256": "f1c3a2379d595ef8df947f620f1ccaedebab7cb2649f588d32392b63fab36126"
+    },
+    {
+      "url": "/assets/puget-v1/sky-matte-v1.webp",
+      "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+    },
+    {
+      "url": "/assets/savanna-hills/golden-ridges-v1.webp",
+      "sha256": "4578108a137fb9bab64f90537fa3d6f5efac80facd8cd05ec7b7e7f8c7cab0ce"
+    },
+    {
+      "url": "/assets/savanna-recipe/painted-fibre-v1.webp",
+      "sha256": "f7668bc9fee9ac97038dce34aeef7b31b9a1fb92069f63e4df06069acc6e1de5"
+    }
+  ],
+  "exposure": 1.12,
+  "toneMapping": 4,
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": "savanna",
+    "selectedScene": {
+      "id": "savanna",
+      "name": "East African savanna",
+      "version": "accepted-v1"
+    },
+    "route": {
+      "kind": "profile",
+      "adapter": "savanna",
+      "sceneId": "savanna"
+    },
+    "pilot": null,
+    "regional": null,
+    "automatic": {
+      "policyVersion": "global-auto-v1",
+      "requestedVersion": "global-auto-v1",
+      "status": "protected-reference",
+      "code": "protected-reference",
+      "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    },
+    "mode": "reference",
+    "checkpoint": {
+      "id": "savanna-accepted-v1",
+      "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+      "exactSettings": true
+    },
+    "vegetationCoverage": "mixed",
+    "individualInspection": true,
+    "referenceLocation": {
+      "lat": -2.3,
+      "lon": 35.2
+    },
+    "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+    "limits": [
+      "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+      "Synthetic terrain and materials are not measured land cover.",
+      "Reference lighting and matte camera envelopes remain adapter-specific.",
+      "Mobile performance and unreviewed variations are not approved."
+    ],
+    "notices": [
+      "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+    ]
+  },
+  "errors": [],
+  "id": "savanna",
+  "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+  "query": "lat=-2.3&lon=35.2&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&encounter=1&camera=human&conditional=1&composition=C&groundLighting=B&illumination=on&treeStudy=C3&labCandidate=r-fidelity-tuft-hybrid-tall&pretty=on&referenceScene=savanna&autoEnvironment=global-auto-v1"
+}

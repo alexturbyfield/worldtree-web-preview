@@ -55,10 +55,11 @@ export interface PilotContext {
  landCover?:{scientificName:string;renderEligible:boolean;growthForm:string}[];
 }
 export interface RegionalRecipeSelection {
- schemaVersion:1;version:'geographic-pilot-v1'|'bounded-auto-v1';status:'experimental-unreviewed';
+ schemaVersion:1;version:'geographic-pilot-v1'|'bounded-auto-v1'|'global-auto-v1';status:'experimental-unreviewed';
+ growthFormFallback?:'broadleaf'|'conifer'|'mangrove';
  site:{id:string;name:string;family:GeographicPilotSite['family'];biome:number;eco:number;lat:number;lon:number;area:string|null};inputSeed:string;effectiveSeed:string;
  eligibleTreeCandidates:{scientificName:string;sources:string[]}[];
- renderedTreeIdentity:'regional-candidate-architecture'|'conditional-regional-trees'|'unnamed-seasonal-growth-forms'|'none'|'unnamed-conifer-growth-forms';
+ renderedTreeIdentity:'regional-candidate-architecture'|'conditional-regional-trees'|'unnamed-seasonal-growth-forms'|'none'|'unnamed-conifer-growth-forms'|'unnamed-broadleaf-growth-forms'|'unnamed-mangrove-growth-forms';
  limitations:string[];
 }
 export interface GeographicPilot extends RegionalRecipeSelection {version:'geographic-pilot-v1';site:GeographicPilotSite}

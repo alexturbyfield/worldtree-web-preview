@@ -1,0 +1,157 @@
+{
+  "hero": {
+    "position": [
+      0,
+      1.7,
+      16
+    ],
+    "quaternion": [
+      -0.06562197776538489,
+      0,
+      0,
+      0.997844555045604
+    ],
+    "aspect": 1.7777777777777777,
+    "fov": 47
+  },
+  "inspection": {
+    "position": [
+      40,
+      32,
+      48
+    ],
+    "target": [
+      0,
+      -5,
+      -45
+    ]
+  },
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          0,
+          1.7,
+          16
+        ],
+        "quaternion": [
+          -0.06562197776538489,
+          0,
+          0,
+          0.997844555045604
+        ]
+      },
+      "calls": 18,
+      "triangles": 1822040
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          40,
+          32,
+          48
+        ],
+        "quaternion": [
+          -0.17072087308926792,
+          0.19861345592355148,
+          0.03515716778101263,
+          0.9644537584412015
+        ]
+      },
+      "calls": 16,
+      "triangles": 1822036
+    }
+  ],
+  "assets": [
+    {
+      "url": "/assets/alpine-meadow/meadow-ground-v1.png",
+      "sha256": "dda7595d93a385c227c03430b9338dcc7c3998fec539c5edd44dab16d3b47ed0"
+    },
+    {
+      "url": "/assets/cork-oak/bark-v1.webp",
+      "sha256": "b8105d45e956d83ac764deebd2ba241fd62c4cf1869498cc5f9c6f80eb4595cc"
+    },
+    {
+      "url": "/assets/cork-oak/leaves-v1.webp",
+      "sha256": "3b48f62189ed6d5606f10d8e2199a2f1fbde61fb57f15b61b06d5054230c9936"
+    },
+    {
+      "url": "/assets/holm-oak/bark-v1.webp",
+      "sha256": "e3085fd25cd89179a99ffe25dd6220f5335cff6bb0a485307a00c3cdb88e5258"
+    },
+    {
+      "url": "/assets/holm-oak/leaves-v1.webp",
+      "sha256": "e4351803344ec4d00ade9d3d91669a96185bb6e4d6d757a42b1689e1235ad867"
+    },
+    {
+      "url": "/assets/mediterranean/herault-garrigue-distance-v1.webp",
+      "sha256": "c204141f0e33f89f2b77f88cd3ab9719571068002d98a4d8ca2107ad4d3374d9"
+    },
+    {
+      "url": "/assets/puget-v1/sky-matte-v1.webp",
+      "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+    },
+    {
+      "url": "/assets/wave1-detail/arid-sediment-v1.webp",
+      "sha256": "67ff274ba29d736c58a2e5578bc8915289e37f5a93e3f68cb0147ea004c0ae84"
+    }
+  ],
+  "exposure": 1.12,
+  "toneMapping": 4,
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": "mediterranean",
+    "selectedScene": {
+      "id": "mediterranean",
+      "name": "Mediterranean woodland",
+      "version": "accepted-v1"
+    },
+    "route": {
+      "kind": "wave",
+      "adapter": "mediterranean",
+      "sceneId": "mediterranean",
+      "variant": "original"
+    },
+    "pilot": null,
+    "regional": null,
+    "automatic": {
+      "policyVersion": "global-auto-v1",
+      "requestedVersion": "global-auto-v1",
+      "status": "protected-reference",
+      "code": "protected-reference",
+      "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    },
+    "mode": "reference",
+    "checkpoint": {
+      "id": "mediterranean-accepted-v1",
+      "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+      "exactSettings": true
+    },
+    "vegetationCoverage": "adapter-generated",
+    "individualInspection": false,
+    "referenceLocation": {
+      "lat": 43.72,
+      "lon": 3.58
+    },
+    "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+    "limits": [
+      "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+      "Synthetic terrain and materials are not measured land cover.",
+      "Reference lighting and matte camera envelopes remain adapter-specific.",
+      "Mobile performance and unreviewed variations are not approved."
+    ],
+    "notices": [
+      "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+    ]
+  },
+  "errors": [],
+  "id": "mediterranean",
+  "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+  "query": "lat=43.72&lon=3.58&habitat=forest&seed=29&density=36&structure=mediterranean-1&appearance=garden&wind=0&mode=painterly&expansion=mediterranean&referenceScene=mediterranean&autoEnvironment=global-auto-v1"
+}

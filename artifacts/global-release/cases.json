@@ -1,0 +1,1271 @@
+[
+  {
+    "id": 117,
+    "name": "Adelie Land tundra",
+    "point": {
+      "lat": -68.39917060999997,
+      "lon": 149.78004250560252
+    },
+    "actual": {
+      "ECO_ID": 117,
+      "ECO_NAME": "Adelie Land tundra",
+      "BIOME_NUM": 11,
+      "BIOME_NAME": "Tundra",
+      "REALM": "Antarctica",
+      "COLOR_BIO": "#9ED7C2",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "area": {
+      "code": "ANT",
+      "name": "Antarctica"
+    },
+    "habitat": "grassland",
+    "status": "selected",
+    "code": "supported-regional-transfer",
+    "family": "tundra",
+    "regional": {
+      "schemaVersion": 1,
+      "version": "global-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:global:117",
+        "name": "Adelie Land tundra · biome art encounter",
+        "family": "tundra",
+        "biome": 11,
+        "eco": 117,
+        "lat": -68.39917060999997,
+        "lon": 149.78004250560252,
+        "area": "ANT"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "2989220471",
+      "eligibleTreeCandidates": [],
+      "renderedTreeIdentity": "none",
+      "limitations": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+      ]
+    },
+    "palette": []
+  },
+  {
+    "id": 135,
+    "name": "Admiralty Islands lowland rain forests",
+    "point": {
+      "lat": -2.1062023269998917,
+      "lon": 146.93373890082077
+    },
+    "actual": {
+      "ECO_ID": 135,
+      "ECO_NAME": "Admiralty Islands lowland rain forests",
+      "BIOME_NUM": 1,
+      "BIOME_NAME": "Tropical & Subtropical Moist Broadleaf Forests",
+      "REALM": "Australasia",
+      "COLOR_BIO": "#38A700",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "area": {
+      "code": "BIS",
+      "name": "Bismarck Archipelago"
+    },
+    "habitat": "forest",
+    "status": "selected",
+    "code": "supported-regional-transfer",
+    "family": "rainforest",
+    "regional": {
+      "schemaVersion": 1,
+      "version": "global-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:global:135",
+        "name": "Admiralty Islands lowland rain forests · biome art encounter",
+        "family": "rainforest",
+        "biome": 1,
+        "eco": 135,
+        "lat": -2.1062023269998917,
+        "lon": 146.93373890082077,
+        "area": "BIS"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "2783267105",
+      "eligibleTreeCandidates": [
+        {
+          "scientificName": "Cocos nucifera",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:666160-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Pandanus tectorius",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:895770-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        }
+      ],
+      "renderedTreeIdentity": "regional-candidate-architecture",
+      "limitations": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Regional candidates use shared architecture approximations; no Amazon species list or foreign regional matte is imported."
+      ]
+    },
+    "palette": [
+      {
+        "scientificName": "Rhizophora stylosa",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:719845-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Cocos nucifera",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:666160-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Avicennia marina",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:861130-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Pandanus tectorius",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:895770-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 785,
+    "name": "Aegean and Western Turkey sclerophyllous and mixed forests",
+    "point": {
+      "lat": 37.36933496900005,
+      "lon": 22.2360913127809
+    },
+    "actual": {
+      "ECO_ID": 785,
+      "ECO_NAME": "Aegean and Western Turkey sclerophyllous and mixed forests",
+      "BIOME_NUM": 12,
+      "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub",
+      "REALM": "Palearctic",
+      "COLOR_BIO": "#FE0000",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "area": {
+      "code": "GRC",
+      "name": "Greece"
+    },
+    "habitat": "forest",
+    "status": "selected",
+    "code": "supported-regional-transfer",
+    "family": "mediterranean",
+    "regional": {
+      "schemaVersion": 1,
+      "version": "global-auto-v1",
+      "status": "experimental-unreviewed",
+      "growthFormFallback": "broadleaf",
+      "site": {
+        "id": "auto:global:785",
+        "name": "Aegean and Western Turkey sclerophyllous and mixed forests · biome art encounter",
+        "family": "mediterranean",
+        "biome": 12,
+        "eco": 785,
+        "lat": 37.36933496900005,
+        "lon": 22.2360913127809,
+        "area": "GRC"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "1325162392",
+      "eligibleTreeCandidates": [],
+      "renderedTreeIdentity": "unnamed-broadleaf-growth-forms",
+      "limitations": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+        "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+      ]
+    },
+    "palette": [
+      {
+        "scientificName": "Quercus robur",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:304293-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Pinus pinea",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263221-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Cotinus coggygria",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:69498-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Rhus coriaria",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:70477-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Pistacia atlantica",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:70236-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Buxus sempervirens",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:340317-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Abies alba",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60468511-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Aesculus hippocastanum",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:781594-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Paliurus spina-christi",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:717707-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Pinus halepensis",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262982-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Pinus sylvestris",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263353-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Picea abies",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262609-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 807,
+    "name": "Afghan Mountains semi-desert",
+    "point": {
+      "lat": 34.56283707800017,
+      "lon": 65.19976580823018
+    },
+    "actual": {
+      "ECO_ID": 807,
+      "ECO_NAME": "Afghan Mountains semi-desert",
+      "BIOME_NUM": 13,
+      "BIOME_NAME": "Deserts & Xeric Shrublands",
+      "REALM": "Palearctic",
+      "COLOR_BIO": "#CC6767",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "area": {
+      "code": "AFG",
+      "name": "Afghanistan"
+    },
+    "habitat": "grassland",
+    "status": "selected",
+    "code": "supported-regional-transfer",
+    "family": "desert",
+    "regional": {
+      "schemaVersion": 1,
+      "version": "global-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:global:807",
+        "name": "Afghan Mountains semi-desert · biome art encounter",
+        "family": "desert",
+        "biome": 13,
+        "eco": 807,
+        "lat": 34.56283707800017,
+        "lon": 65.19976580823018,
+        "area": "AFG"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "3702361199",
+      "eligibleTreeCandidates": [],
+      "renderedTreeIdentity": "none",
+      "limitations": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+      ]
+    },
+    "palette": []
+  },
+  {
+    "id": 722,
+    "name": "Al-Hajar foothill xeric woodlands and shrublands",
+    "point": {
+      "lat": 24.173606726500083,
+      "lon": 56.36052262033344
+    },
+    "actual": {
+      "ECO_ID": 722,
+      "ECO_NAME": "Al-Hajar foothill xeric woodlands and shrublands",
+      "BIOME_NUM": 8,
+      "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands",
+      "REALM": "Palearctic",
+      "COLOR_BIO": "#FEFF73",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "area": {
+      "code": "OMA",
+      "name": "Oman"
+    },
+    "habitat": "grassland",
+    "status": "selected",
+    "code": "supported-regional-transfer",
+    "family": "prairie",
+    "regional": {
+      "schemaVersion": 1,
+      "version": "global-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:global:722",
+        "name": "Al-Hajar foothill xeric woodlands and shrublands · biome art encounter",
+        "family": "prairie",
+        "biome": 8,
+        "eco": 722,
+        "lat": 24.173606726500083,
+        "lon": 56.36052262033344,
+        "area": "OMA"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "1146973998",
+      "eligibleTreeCandidates": [],
+      "renderedTreeIdentity": "none",
+      "limitations": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "No regional nonwoody catalogue is loaded: grass and forbs remain unnamed functional forms, with no Oklahoma woody plants or location-conditioned hills artwork imported."
+      ]
+    },
+    "palette": []
+  },
+  {
+    "id": 369,
+    "name": "Alaska Peninsula montane taiga",
+    "point": {
+      "lat": 57.37037865150015,
+      "lon": -153.191449776205
+    },
+    "actual": {
+      "ECO_ID": 369,
+      "ECO_NAME": "Alaska Peninsula montane taiga",
+      "BIOME_NUM": 6,
+      "BIOME_NAME": "Boreal Forests/Taiga",
+      "REALM": "Nearctic",
+      "COLOR_BIO": "#7AB6F5",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "area": {
+      "code": "ASK",
+      "name": "Alaska"
+    },
+    "habitat": "forest",
+    "status": "selected",
+    "code": "supported-regional-transfer",
+    "family": "boreal",
+    "regional": {
+      "schemaVersion": 1,
+      "version": "global-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:global:369",
+        "name": "Alaska Peninsula montane taiga · biome art encounter",
+        "family": "boreal",
+        "biome": 6,
+        "eco": 369,
+        "lat": 57.37037865150015,
+        "lon": -153.191449776205,
+        "area": "ASK"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "3435830545",
+      "eligibleTreeCandidates": [
+        {
+          "scientificName": "Populus tremuloides",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:208337-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Betula pendula",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Picea sitchensis",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:676986-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Picea laxa",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195881-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Abies amabilis",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325658-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        }
+      ],
+      "renderedTreeIdentity": "regional-candidate-architecture",
+      "limitations": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+      ]
+    },
+    "palette": [
+      {
+        "scientificName": "Physocarpus capitatus",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195615-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Pseudotsuga menziesii",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:677141-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Populus tremuloides",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:208337-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Elaeagnus commutata",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:315523-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Thuja plicata",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60443333-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Betula pendula",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Picea sitchensis",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:676986-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Taxus brevifolia",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:249736-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Picea laxa",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195881-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Abies amabilis",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325658-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Callitropsis nootkatensis",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60450448-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Ribes bracteosum",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30289786-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 345,
+    "name": "Alberta-British Columbia foothills forests",
+    "point": {
+      "lat": 57.158521197500164,
+      "lon": -119.72073017229269
+    },
+    "actual": {
+      "ECO_ID": 345,
+      "ECO_NAME": "Alberta-British Columbia foothills forests",
+      "BIOME_NUM": 5,
+      "BIOME_NAME": "Temperate Conifer Forests",
+      "REALM": "Nearctic",
+      "COLOR_BIO": "#458970",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "area": {
+      "code": "ABT",
+      "name": "Alberta"
+    },
+    "habitat": "forest",
+    "status": "selected",
+    "code": "supported-regional-transfer",
+    "family": "conifer",
+    "regional": {
+      "schemaVersion": 1,
+      "version": "global-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:global:345",
+        "name": "Alberta-British Columbia foothills forests · biome art encounter",
+        "family": "conifer",
+        "biome": 5,
+        "eco": 345,
+        "lat": 57.158521197500164,
+        "lon": -119.72073017229269,
+        "area": "ABT"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "2434956590",
+      "eligibleTreeCandidates": [
+        {
+          "scientificName": "Populus tremuloides",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:208337-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Picea laxa",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195881-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Betula pendula",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Betula papyrifera",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:32197-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        }
+      ],
+      "renderedTreeIdentity": "regional-candidate-architecture",
+      "limitations": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Genus-conditioned conifer structure and shared needle artwork are approximations; local canopy composition is unverified."
+      ]
+    },
+    "palette": [
+      {
+        "scientificName": "Populus tremuloides",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:208337-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Picea laxa",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195881-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Elaeagnus commutata",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:315523-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Tsuga heterophylla",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:260297-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Pseudotsuga menziesii",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:677141-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Thuja plicata",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60443333-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Betula pendula",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Betula papyrifera",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:32197-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Taxus brevifolia",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:249736-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 328,
+    "name": "Allegheny Highlands forests",
+    "point": {
+      "lat": 41.97371084350007,
+      "lon": -77.00279466304261
+    },
+    "actual": {
+      "ECO_ID": 328,
+      "ECO_NAME": "Allegheny Highlands forests",
+      "BIOME_NUM": 4,
+      "BIOME_NAME": "Temperate Broadleaf & Mixed Forests",
+      "REALM": "Nearctic",
+      "COLOR_BIO": "#00734C",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "area": {
+      "code": "PEN",
+      "name": "Pennsylvania"
+    },
+    "habitat": "forest",
+    "status": "selected",
+    "code": "supported-regional-transfer",
+    "family": "temperate",
+    "regional": {
+      "schemaVersion": 1,
+      "version": "global-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:global:328",
+        "name": "Allegheny Highlands forests · biome art encounter",
+        "family": "temperate",
+        "biome": 4,
+        "eco": 328,
+        "lat": 41.97371084350007,
+        "lon": -77.00279466304261,
+        "area": "PEN"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "1614206366",
+      "eligibleTreeCandidates": [
+        {
+          "scientificName": "Acer saccharum",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:56795-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Quercus falcata",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:215831-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Fagus grandifolia",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295597-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        }
+      ],
+      "renderedTreeIdentity": "regional-candidate-architecture",
+      "limitations": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+      ]
+    },
+    "palette": [
+      {
+        "scientificName": "Gymnocladus dioicus",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1195073-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Paxistima canbyi",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60458019-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Liquidambar styraciflua",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:430718-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Pinus strobus",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:197100-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Acer saccharum",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:56795-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Populus tremuloides",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:208337-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Tsuga canadensis",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:264005-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Clethra acuminata",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:327566-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Spiraea virginiana",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:242467-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Pyrularia pubera",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:780539-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Quercus falcata",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:215831-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Fagus grandifolia",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295597-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 749,
+    "name": "Altai alpine meadow and tundra",
+    "point": {
+      "lat": 49.65422753150014,
+      "lon": 87.34323418135183
+    },
+    "actual": {
+      "ECO_ID": 749,
+      "ECO_NAME": "Altai alpine meadow and tundra",
+      "BIOME_NUM": 10,
+      "BIOME_NAME": "Montane Grasslands & Shrublands",
+      "REALM": "Palearctic",
+      "COLOR_BIO": "#D6C39D",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "area": {
+      "code": "ALT",
+      "name": "Altay"
+    },
+    "habitat": "grassland",
+    "status": "selected",
+    "code": "supported-regional-transfer",
+    "family": "montane",
+    "regional": {
+      "schemaVersion": 1,
+      "version": "global-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:global:749",
+        "name": "Altai alpine meadow and tundra · biome art encounter",
+        "family": "montane",
+        "biome": 10,
+        "eco": 749,
+        "lat": 49.65422753150014,
+        "lon": 87.34323418135183,
+        "area": "ALT"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "1586604288",
+      "eligibleTreeCandidates": [],
+      "renderedTreeIdentity": "none",
+      "limitations": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+      ]
+    },
+    "palette": []
+  },
+  {
+    "id": 611,
+    "name": "Amazon-Orinoco-Southern Caribbean mangroves",
+    "point": {
+      "lat": 5.846792416500051,
+      "lon": -56.41458227540717
+    },
+    "actual": {
+      "ECO_ID": 611,
+      "ECO_NAME": "Amazon-Orinoco-Southern Caribbean mangroves",
+      "BIOME_NUM": 14,
+      "BIOME_NAME": "Mangroves",
+      "REALM": "Neotropic",
+      "COLOR_BIO": "#FE01C4",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "area": {
+      "code": "SUR",
+      "name": "Surinam"
+    },
+    "habitat": "coastal",
+    "status": "selected",
+    "code": "supported-regional-transfer",
+    "family": "mangrove",
+    "regional": {
+      "schemaVersion": 1,
+      "version": "global-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:global:611",
+        "name": "Amazon-Orinoco-Southern Caribbean mangroves · biome art encounter",
+        "family": "mangrove",
+        "biome": 14,
+        "eco": 611,
+        "lat": 5.846792416500051,
+        "lon": -56.41458227540717,
+        "area": "SUR"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "1882287141",
+      "eligibleTreeCandidates": [
+        {
+          "scientificName": "Rhizophora mangle",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30061148-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        }
+      ],
+      "renderedTreeIdentity": "regional-candidate-architecture",
+      "limitations": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Country-native supported mangrove root profiles only. Tide, salinity and shoreline are unmeasured; water color remains environment-derived."
+      ]
+    },
+    "palette": [
+      {
+        "scientificName": "Rhizophora mangle",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30061148-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 741,
+    "name": "Amur meadow steppe",
+    "point": {
+      "lat": 47.65915771650009,
+      "lon": 133.18613372438483
+    },
+    "actual": {
+      "ECO_ID": 741,
+      "ECO_NAME": "Amur meadow steppe",
+      "BIOME_NUM": 9,
+      "BIOME_NAME": "Flooded Grasslands & Savannas",
+      "REALM": "Palearctic",
+      "COLOR_BIO": "#BEE7FF",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "area": {
+      "code": "CHM",
+      "name": "Manchuria"
+    },
+    "habitat": "wetland",
+    "status": "selected",
+    "code": "supported-regional-transfer",
+    "family": "flooded",
+    "regional": {
+      "schemaVersion": 1,
+      "version": "global-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:global:741",
+        "name": "Amur meadow steppe · biome art encounter",
+        "family": "flooded",
+        "biome": 9,
+        "eco": 741,
+        "lat": 47.65915771650009,
+        "lon": 133.18613372438483,
+        "area": "CHM"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "2182216288",
+      "eligibleTreeCandidates": [],
+      "renderedTreeIdentity": "none",
+      "limitations": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+      ]
+    },
+    "palette": []
+  },
+  {
+    "id": 34,
+    "name": "Angolan mopane woodlands",
+    "point": {
+      "lat": -18.319430559999887,
+      "lon": 14.540928813784312
+    },
+    "actual": {
+      "ECO_ID": 34,
+      "ECO_NAME": "Angolan mopane woodlands",
+      "BIOME_NUM": 7,
+      "BIOME_NAME": "Tropical & Subtropical Grasslands, Savannas & Shrublands",
+      "REALM": "Afrotropic",
+      "COLOR_BIO": "#FEAA01",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "area": {
+      "code": "NAM",
+      "name": "Namibia"
+    },
+    "habitat": "grassland",
+    "status": "selected",
+    "code": "supported-regional-transfer",
+    "family": "savanna",
+    "regional": {
+      "schemaVersion": 1,
+      "version": "global-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:global:34",
+        "name": "Angolan mopane woodlands · biome art encounter",
+        "family": "savanna",
+        "biome": 7,
+        "eco": 34,
+        "lat": -18.319430559999887,
+        "lon": 14.540928813784312,
+        "area": "NAM"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "4042816104",
+      "eligibleTreeCandidates": [],
+      "renderedTreeIdentity": "none",
+      "limitations": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+      ]
+    },
+    "palette": []
+  },
+  {
+    "id": 520,
+    "name": "Apure-Villavicencio dry forests",
+    "point": {
+      "lat": 6.938733873500155,
+      "lon": -71.47592748390258
+    },
+    "actual": {
+      "ECO_ID": 520,
+      "ECO_NAME": "Apure-Villavicencio dry forests",
+      "BIOME_NUM": 2,
+      "BIOME_NAME": "Tropical & Subtropical Dry Broadleaf Forests",
+      "REALM": "Neotropic",
+      "COLOR_BIO": "#CCCD65",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "area": {
+      "code": "CLM",
+      "name": "Colombia"
+    },
+    "habitat": "forest",
+    "status": "selected",
+    "code": "supported-regional-transfer",
+    "family": "dryforest",
+    "regional": {
+      "schemaVersion": 1,
+      "version": "global-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:global:520",
+        "name": "Apure-Villavicencio dry forests · biome art encounter",
+        "family": "dryforest",
+        "biome": 2,
+        "eco": 520,
+        "lat": 6.938733873500155,
+        "lon": -71.47592748390258,
+        "area": "CLM"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "786346859",
+      "eligibleTreeCandidates": [
+        {
+          "scientificName": "Ceiba pentandra",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1166232-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        }
+      ],
+      "renderedTreeIdentity": "unnamed-seasonal-growth-forms",
+      "limitations": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Trees are explicitly unnamed seasonal growth forms. The accepted Guanacaste/gumbo-limbo identities, flowering and Costa Rica matte are withheld."
+      ]
+    },
+    "palette": [
+      {
+        "scientificName": "Ceiba pentandra",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1166232-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 325,
+    "name": "Bermuda subtropical conifer forests",
+    "point": {
+      "lat": 32.36014240750015,
+      "lon": -64.65678802586635
+    },
+    "actual": {
+      "ECO_ID": 325,
+      "ECO_NAME": "Bermuda subtropical conifer forests",
+      "BIOME_NUM": 3,
+      "BIOME_NAME": "Tropical & Subtropical Coniferous Forests",
+      "REALM": "Nearctic",
+      "COLOR_BIO": "#88CE66",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "area": {
+      "code": "BER",
+      "name": "Bermuda"
+    },
+    "habitat": "forest",
+    "status": "selected",
+    "code": "supported-regional-transfer",
+    "family": "tropicalpine",
+    "regional": {
+      "schemaVersion": 1,
+      "version": "global-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:global:325",
+        "name": "Bermuda subtropical conifer forests · biome art encounter",
+        "family": "tropicalpine",
+        "biome": 3,
+        "eco": 325,
+        "lat": 32.36014240750015,
+        "lon": -64.65678802586635,
+        "area": "BER"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "1378508076",
+      "eligibleTreeCandidates": [],
+      "renderedTreeIdentity": "unnamed-conifer-growth-forms",
+      "limitations": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Eligible local pines are used only when source-backed; otherwise the tree architecture is explicitly an unnamed conifer growth form. No Guatemalan species are imported."
+      ]
+    },
+    "palette": [
+      {
+        "scientificName": null,
+        "sources": []
+      }
+    ]
+  },
+  {
+    "id": 616,
+    "name": "Southern Atlantic Brazilian mangroves",
+    "point": {
+      "lat": -24.427732360999954,
+      "lon": -47.12734512833566
+    },
+    "actual": {
+      "ECO_ID": 616,
+      "ECO_NAME": "Southern Atlantic Brazilian mangroves",
+      "BIOME_NUM": 14,
+      "BIOME_NAME": "Mangroves",
+      "REALM": "Neotropic",
+      "COLOR_BIO": "#FE01C4",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "area": null,
+    "habitat": "coastal",
+    "status": "selected",
+    "code": "supported-regional-transfer",
+    "family": "mangrove",
+    "regional": {
+      "schemaVersion": 1,
+      "version": "global-auto-v1",
+      "status": "experimental-unreviewed",
+      "growthFormFallback": "mangrove",
+      "site": {
+        "id": "auto:global:616",
+        "name": "Southern Atlantic Brazilian mangroves · biome art encounter",
+        "family": "mangrove",
+        "biome": 14,
+        "eco": 616,
+        "lat": -24.427732360999954,
+        "lon": -47.12734512833566,
+        "area": null
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "3334753160",
+      "eligibleTreeCandidates": [],
+      "renderedTreeIdentity": "unnamed-mangrove-growth-forms",
+      "limitations": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Country-native supported mangrove root profiles only. Tide, salinity and shoreline are unmeasured; water color remains environment-derived."
+      ]
+    },
+    "palette": [
+      {
+        "scientificName": null,
+        "sources": []
+      }
+    ]
+  }
+]

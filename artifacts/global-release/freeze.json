@@ -1,0 +1,59 @@
+{
+  "at": "2026-11-28T15:52:00.866Z",
+  "holdoutSeed": "275103",
+  "files": [
+    {
+      "path": "src/components/EnvironmentReferencePanel.tsx",
+      "sha256": "da9b4fee113934282221fdb581609c0fc3ff7d49ebb58fcab6f96db20519121c"
+    },
+    {
+      "path": "src/components/Explorer.tsx",
+      "sha256": "a46ae382b6a2167527536d7c300529b3eb3c9a840057a21d09f2f9464cda5b9b"
+    },
+    {
+      "path": "src/components/ForestExplorer.tsx",
+      "sha256": "48eff4df1685186db31977053529880c8125d992049d48bb2cb04d51adc38a2f"
+    },
+    {
+      "path": "src/lib/forest/bounded-resolver.ts",
+      "sha256": "a321abd279c1a2d1aa757180eff3aa9ec273e81de3d730b1ac4c9da85b7d8cdb"
+    },
+    {
+      "path": "src/lib/forest/environment-registry.ts",
+      "sha256": "8fc3f9e6dbc739524c3ddc0959d663b4546d06b70a494b2cac03345d17617e77"
+    },
+    {
+      "path": "src/lib/forest/geographic-pilot.ts",
+      "sha256": "7d37a3673cc6dbd1cc037589ec7fe9ac8efc4f48c30e72f202e573b82390a7b5"
+    },
+    {
+      "path": "src/lib/forest/holm-oak-study.ts",
+      "sha256": "e5868c6088f46c01454ab8ed6880c8f47a52edb2512c212aee9f245759169613"
+    },
+    {
+      "path": "src/lib/forest/mediterranean-adapter.ts",
+      "sha256": "6db9c9d3fde4c683239f4e248740b1f9b4e1d928bcf8e0d1f4c8e579afcd91c6"
+    },
+    {
+      "path": "src/lib/forest/mediterranean-recipe.ts",
+      "sha256": "a1a1f5229ce08dd64be94df16e94dfa403a254dc63eeeaadd7c721a8497bda46"
+    },
+    {
+      "path": "src/lib/forest/regional-pilot-study.ts",
+      "sha256": "c3ebff6ac65e77d45af037c3479aa2312fd9a9a37ec6c4f10448cb249cfe22d9"
+    },
+    {
+      "path": "src/lib/forest/wave1.ts",
+      "sha256": "182f7f2d2bab8d581fe8c4559fc1a19c3db974784e6d70b8e0aa56fdd03a58c7"
+    },
+    {
+      "path": "src/lib/forest/wave2-tundra.ts",
+      "sha256": "2c7638a9708a537ec9a12e94ab7e40387db54d8dd10b536f5839aaa311adf30b"
+    },
+    {
+      "path": "src/lib/forest/unnamed-biome-tree.ts",
+      "sha256": "dc72087e12b198ad8fdb68812c4986b9055b95bd9e741194bc13fe54849ddf76"
+    }
+  ],
+  "initialHoldoutSeed": "618379"
+}

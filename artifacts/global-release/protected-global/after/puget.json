@@ -1,0 +1,140 @@
+{
+  "hero": {
+    "position": [
+      0.01045391827706954,
+      7.707058230656985,
+      34.282255793480886
+    ],
+    "quaternion": [
+      -0.015704626550489445,
+      0.01850671755262297,
+      0.00029072675123710626,
+      0.9997053473840646
+    ],
+    "aspect": 1.7777777777777777,
+    "fov": 47
+  },
+  "inspection": {
+    "position": [
+      70,
+      50,
+      85
+    ],
+    "target": [
+      0,
+      1,
+      -25
+    ]
+  },
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          0.01045391827706954,
+          7.707058230656985,
+          34.282255793480886
+        ],
+        "quaternion": [
+          -0.015704626550489445,
+          0.01850671755262297,
+          0.00029072675123710626,
+          0.9997053473840646
+        ]
+      },
+      "calls": 19,
+      "triangles": 643127
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          70,
+          50,
+          85
+        ],
+        "quaternion": [
+          -0.17164577003343667,
+          0.2750834768545333,
+          0.04998336618883981,
+          0.9446525676118614
+        ]
+      },
+      "calls": 19,
+      "triangles": 643127
+    }
+  ],
+  "assets": [
+    {
+      "url": "/assets/conifer-v2/fir-sprays-v1.png",
+      "sha256": "f5ab5e9e4b7539da57b1f4c45f24cdc04bdda936b89b7a6cf224df4a4a7dfe2a"
+    },
+    {
+      "url": "/assets/puget-v1/grass.png",
+      "sha256": "f1c3a2379d595ef8df947f620f1ccaedebab7cb2649f588d32392b63fab36126"
+    },
+    {
+      "url": "/assets/puget-v1/mountain-painted-v1.webp",
+      "sha256": "c231cd748b1c20ba22b40462a3a05662c481e2097e32ccd6a0e9da437aba4e40"
+    },
+    {
+      "url": "/assets/puget-v1/sky-matte-v1.webp",
+      "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+    }
+  ],
+  "exposure": 1.12,
+  "toneMapping": 4,
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": "puget",
+    "selectedScene": {
+      "id": "puget",
+      "name": "Puget woodland",
+      "version": "accepted-v1"
+    },
+    "route": {
+      "kind": "profile",
+      "adapter": "puget",
+      "sceneId": "puget"
+    },
+    "pilot": null,
+    "regional": null,
+    "automatic": {
+      "policyVersion": "global-auto-v1",
+      "requestedVersion": "global-auto-v1",
+      "status": "protected-reference",
+      "code": "protected-reference",
+      "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    },
+    "mode": "reference",
+    "checkpoint": {
+      "id": "puget-accepted-v1",
+      "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+      "exactSettings": true
+    },
+    "vegetationCoverage": "canonical",
+    "individualInspection": true,
+    "referenceLocation": {
+      "lat": 47.6062,
+      "lon": -122.3321
+    },
+    "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+    "limits": [
+      "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+      "Synthetic terrain and materials are not measured land cover.",
+      "Reference lighting and matte camera envelopes remain adapter-specific.",
+      "Mobile performance and unreviewed variations are not approved."
+    ],
+    "notices": [
+      "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+    ]
+  },
+  "errors": [],
+  "id": "puget",
+  "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+  "query": "lat=47.6062&lon=-122.3321&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&encounter=1&camera=human&conditional=0&composition=C&groundLighting=B&illumination=on&referenceScene=puget&autoEnvironment=global-auto-v1"
+}

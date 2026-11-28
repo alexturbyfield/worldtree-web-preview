@@ -34,6 +34,8 @@ Do not overwrite the frozen `before` evidence when checking future changes; pres
 
 ## Scope and next step
 
+[Worldwide art encounters](GLOBAL-ART-RELEASE.md) now open by default from map taps and location selections, following source biomes with labelled regional/growth-form approximations. The user authorized worldwide routing and production release; generated variations remain artistically unreviewed. Explicit references, bounded mode and generic fallbacks are preserved.
+
 The [bounded resolver expansion is complete](BOUNDED-COMPLETION.md): all 14 existing families now have 42 explicit regional envelopes, with a touch-friendly automatic preview picker. This is representative opt-in coverage, not worldwide routing or artistic approval of each transfer. Earlier milestone records below remain preserved.
 
 ### Earlier milestones (historical)

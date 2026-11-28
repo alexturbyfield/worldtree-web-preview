@@ -1,0 +1,158 @@
+[
+  {
+    "id": "117",
+    "family": "tundra",
+    "name": "Adelie Land tundra",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "calls": 16,
+        "triangles": 256644,
+        "camera": {
+          "position": [
+            0,
+            2.7686585458039135,
+            34
+          ],
+          "target": [
+            0,
+            -2.606666493315533,
+            -55
+          ]
+        },
+        "textures": 5
+      },
+      {
+        "view": "inspection",
+        "calls": 16,
+        "triangles": 256644,
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "textures": 5
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "tundra",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:117",
+            "name": "Adelie Land tundra · biome art encounter",
+            "family": "tundra",
+            "biome": 11,
+            "eco": 117,
+            "lat": -68.39917060999997,
+            "lon": 149.78004250560252,
+            "area": "ANT"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "2989220471",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "global-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:global:117",
+          "name": "Adelie Land tundra · biome art encounter",
+          "family": "tundra",
+          "biome": 11,
+          "eco": 117,
+          "lat": -68.39917060999997,
+          "lon": 149.78004250560252,
+          "area": "ANT"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "2989220471",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "none",
+        "limitations": [
+          "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+          "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms.",
+        "ruleId": "global:117",
+        "distanceKm": null,
+        "confidence": "biome-context-only",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:117",
+            "name": "Adelie Land tundra · biome art encounter",
+            "family": "tundra",
+            "biome": 11,
+            "eco": 117,
+            "lat": -68.39917060999997,
+            "lon": 149.78004250560252,
+            "area": "ANT"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "2989220471",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Automatic art recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+      ],
+      "notices": [
+        "Automatic selection: Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms."
+      ]
+    }
+  }
+]

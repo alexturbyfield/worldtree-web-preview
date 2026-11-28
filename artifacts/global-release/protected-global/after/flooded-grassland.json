@@ -1,0 +1,129 @@
+{
+  "hero": {
+    "position": [
+      -63,
+      1.7116061343029232,
+      -27
+    ],
+    "quaternion": [
+      -0.005938857434064383,
+      0.3826755257743522,
+      0.0024599552941897466,
+      0.9238604443126958
+    ],
+    "aspect": 1.7777777777777777,
+    "fov": 47
+  },
+  "inspection": {
+    "position": [
+      70,
+      50,
+      85
+    ],
+    "target": [
+      0,
+      1,
+      -25
+    ]
+  },
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          -63,
+          1.7116061343029232,
+          -27
+        ],
+        "quaternion": [
+          -0.005938857434064383,
+          0.3826755257743522,
+          0.0024599552941897466,
+          0.9238604443126958
+        ]
+      },
+      "calls": 16,
+      "triangles": 2251558
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          70,
+          50,
+          85
+        ],
+        "quaternion": [
+          -0.17164577003343667,
+          0.2750834768545333,
+          0.04998336618883981,
+          0.9446525676118614
+        ]
+      },
+      "calls": 16,
+      "triangles": 2251558
+    }
+  ],
+  "assets": [
+    {
+      "url": "/assets/puget-v1/sky-matte-v1.webp",
+      "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+    }
+  ],
+  "exposure": 1.12,
+  "toneMapping": 4,
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": "flooded-grassland",
+    "selectedScene": {
+      "id": "flooded-grassland",
+      "name": "Flooded grassland",
+      "version": "accepted-v1"
+    },
+    "route": {
+      "kind": "wave",
+      "adapter": "flooded",
+      "sceneId": "flooded-grassland",
+      "variant": "rebuild"
+    },
+    "pilot": null,
+    "regional": null,
+    "automatic": {
+      "policyVersion": "global-auto-v1",
+      "requestedVersion": "global-auto-v1",
+      "status": "protected-reference",
+      "code": "protected-reference",
+      "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    },
+    "mode": "reference",
+    "checkpoint": {
+      "id": "flooded-grassland-accepted-v1",
+      "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+      "exactSettings": true
+    },
+    "vegetationCoverage": "mixed",
+    "individualInspection": true,
+    "referenceLocation": {
+      "lat": 26.209957419,
+      "lon": -80.9383825925
+    },
+    "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+    "limits": [
+      "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+      "Synthetic terrain and materials are not measured land cover.",
+      "Reference lighting and matte camera envelopes remain adapter-specific.",
+      "Mobile performance and unreviewed variations are not approved."
+    ],
+    "notices": [
+      "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+    ]
+  },
+  "errors": [],
+  "id": "flooded-grassland",
+  "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+  "query": "lat=26.209957419&lon=-80.9383825925&habitat=wetland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&wave1=flooded&fieldStudy=rebuild&artPass=flooded-finish&conditional=1&referenceScene=flooded-grassland&autoEnvironment=global-auto-v1"
+}

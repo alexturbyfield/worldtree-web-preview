@@ -1,4 +1,5 @@
 import * as T from 'three';
+import {unnamedBiomeTree} from './unnamed-biome-tree';
 import type {SceneRecipe,SceneTree} from './recipe';
 import type {RegionalRecipeSelection} from './geographic-pilot';
 import {randomSource} from './random';
@@ -11,13 +12,13 @@ import {mountTemperateDepth} from './wave2-temperate-depth';
 /** Portable transfer of existing forest components, never a new species model.
  * Used only by the explicit pilot; accepted regional adapters remain unchanged. */
 export function regionalPilotStudy(pilot:RegionalRecipeSelection){
- const family=pilot.site.family,moist=family==='rainforest';
- if(family==='conifer')return {...borealStudy,id:'conifer',biome:5};
- if(!moist&&family!=='tropicalpine')return;
+ const family=pilot.site.family,moist=family==='rainforest'||pilot.growthFormFallback==='broadleaf';
+ if(family==='conifer'&&!pilot.growthFormFallback)return {...borealStudy,id:'conifer',biome:5};
+ if(!moist&&family!=='tropicalpine'&&pilot.growthFormFallback!=='conifer')return;
  const plan=(r:SceneRecipe)=>{const p=makeExpansionPlan(moist?'temperate':'boreal',pilot.site.biome,r.seed,.65);p.camera.position=[0,expansionHeight(p,0,34)+1.7,34];p.camera.target=[0,expansionHeight(p,0,-55)+(moist?6:3.3),-55];return p;};
  const compose=(r:SceneRecipe):SceneRecipe=>{
   const p=plan(r),rng=randomSource(r.seed+'|regional-forest-transfer'),eligible=new Set(pilot.eligibleTreeCandidates.map(t=>t.scientificName));
-  const pool=r.trees.filter(t=>t.species.scientificName&&eligible.has(t.species.scientificName)),trees:SceneTree[]=[];
+  const pool=pilot.growthFormFallback==='broadleaf'?[unnamedBiomeTree(r,'broadleaf')]:r.trees.filter(t=>t.species.scientificName&&eligible.has(t.species.scientificName)),trees:SceneTree[]=[];
   if(r.requestedTreeCount===0)return {...r,trees};
   for(let i=0;i<48;i++){
    const source=pool[i%pool.length];if(moist&&!source)break;

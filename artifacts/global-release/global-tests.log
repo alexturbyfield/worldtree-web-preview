@@ -1,0 +1,25 @@
+✔ worldwide art resolves biome 1 without inventing named flora (3.3317ms)
+✔ worldwide art resolves biome 2 without inventing named flora (0.4338ms)
+✔ worldwide art resolves biome 3 without inventing named flora (0.4134ms)
+✔ worldwide art resolves biome 4 without inventing named flora (1.1383ms)
+✔ worldwide art resolves biome 5 without inventing named flora (0.3291ms)
+✔ worldwide art resolves biome 6 without inventing named flora (0.2424ms)
+✔ worldwide art resolves biome 7 without inventing named flora (0.3318ms)
+✔ worldwide art resolves biome 8 without inventing named flora (0.2519ms)
+✔ worldwide art resolves biome 9 without inventing named flora (0.286ms)
+✔ worldwide art resolves biome 10 without inventing named flora (0.367ms)
+✔ worldwide art resolves biome 11 without inventing named flora (0.2145ms)
+✔ worldwide art resolves biome 12 without inventing named flora (0.2085ms)
+✔ worldwide art resolves biome 13 without inventing named flora (0.1745ms)
+✔ worldwide art resolves biome 14 without inventing named flora (0.1915ms)
+✔ missing country uses unnamed forms and missing geography/active unmeasured filters keep fallback (0.2625ms)
+✔ explicit accepted references and diagrams keep priority worldwide (3.3175ms)
+✔ global URLs retain inputs, clear study flags, and preserve an explicit generic fallback (0.3836ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 278.3051

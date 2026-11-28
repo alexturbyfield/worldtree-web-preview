@@ -1,0 +1,149 @@
+{
+  "hero": {
+    "position": [
+      0,
+      1.7,
+      34
+    ],
+    "quaternion": [
+      0.05620526029552742,
+      0,
+      0,
+      0.9984192349484818
+    ],
+    "aspect": 1.7777777777777777,
+    "fov": 47
+  },
+  "inspection": {
+    "position": [
+      62,
+      38,
+      76
+    ],
+    "target": [
+      0,
+      0,
+      -24
+    ]
+  },
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          0,
+          1.7,
+          34
+        ],
+        "quaternion": [
+          0.05620526029552742,
+          0,
+          0,
+          0.9984192349484818
+        ]
+      },
+      "calls": 24,
+      "triangles": 1002290
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          62,
+          38,
+          76
+        ],
+        "quaternion": [
+          -0.14960876967790102,
+          0.27061515290874505,
+          0.04261564454501207,
+          0.9500360845208219
+        ]
+      },
+      "calls": 22,
+      "triangles": 1002286
+    }
+  ],
+  "assets": [
+    {
+      "url": "/assets/alpine-meadow/meadow-ground-v1.png",
+      "sha256": "dda7595d93a385c227c03430b9338dcc7c3998fec539c5edd44dab16d3b47ed0"
+    },
+    {
+      "url": "/assets/prairie/black-willow-bark-v1.webp",
+      "sha256": "c9d326b2f1732de844577595e1996a54bf4f26b22a7ccf86e528216d4be2f0c6"
+    },
+    {
+      "url": "/assets/prairie/distant-hills-v1.webp",
+      "sha256": "01dfeb55b17157e3e89f1d2220a2c8a42f2f457558ba162a3fd19b849b1a3c07"
+    },
+    {
+      "url": "/assets/puget-v1/sky-matte-v1.webp",
+      "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+    },
+    {
+      "url": "/assets/savanna-brush/painted-tufts-v1.webp",
+      "sha256": "b3be409e178c1a59036aa3b2ec29756a147ab8c403455883a4a975d7c0949a55"
+    },
+    {
+      "url": "/assets/wave1-detail/arid-sediment-v1.webp",
+      "sha256": "67ff274ba29d736c58a2e5578bc8915289e37f5a93e3f68cb0147ea004c0ae84"
+    }
+  ],
+  "exposure": 1.12,
+  "toneMapping": 4,
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": "prairie",
+    "selectedScene": {
+      "id": "prairie",
+      "name": "Temperate prairie",
+      "version": "accepted-v1"
+    },
+    "route": {
+      "kind": "wave",
+      "adapter": "prairie",
+      "sceneId": "prairie",
+      "variant": "original"
+    },
+    "pilot": null,
+    "regional": null,
+    "automatic": {
+      "policyVersion": "global-auto-v1",
+      "requestedVersion": "global-auto-v1",
+      "status": "protected-reference",
+      "code": "protected-reference",
+      "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    },
+    "mode": "reference",
+    "checkpoint": {
+      "id": "prairie-accepted-v1",
+      "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+      "exactSettings": true
+    },
+    "vegetationCoverage": "mixed",
+    "individualInspection": true,
+    "referenceLocation": {
+      "lat": 36.5736504415,
+      "lon": -98.3419281896
+    },
+    "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+    "limits": [
+      "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+      "Synthetic terrain and materials are not measured land cover.",
+      "Reference lighting and matte camera envelopes remain adapter-specific.",
+      "Mobile performance and unreviewed variations are not approved."
+    ],
+    "notices": [
+      "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+    ]
+  },
+  "errors": [],
+  "id": "prairie",
+  "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+  "query": "lat=36.5736504415&lon=-98.3419281896&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&expansion=prairie&conditional=1&referenceScene=prairie&autoEnvironment=global-auto-v1"
+}

@@ -1,0 +1,2766 @@
+[
+  {
+    "id": "117",
+    "family": "tundra",
+    "name": "Adelie Land tundra",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "calls": 16,
+        "triangles": 256644,
+        "camera": {
+          "position": [
+            0,
+            2.7686585458039135,
+            34
+          ],
+          "target": [
+            0,
+            -2.606666493315533,
+            -55
+          ]
+        },
+        "textures": 5
+      },
+      {
+        "view": "inspection",
+        "calls": 16,
+        "triangles": 256644,
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "textures": 5
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "tundra",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:117",
+            "name": "Adelie Land tundra · biome art encounter",
+            "family": "tundra",
+            "biome": 11,
+            "eco": 117,
+            "lat": -68.39917060999997,
+            "lon": 149.78004250560252,
+            "area": "ANT"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "2989220471",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "global-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:global:117",
+          "name": "Adelie Land tundra · biome art encounter",
+          "family": "tundra",
+          "biome": 11,
+          "eco": 117,
+          "lat": -68.39917060999997,
+          "lon": 149.78004250560252,
+          "area": "ANT"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "2989220471",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "none",
+        "limitations": [
+          "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+          "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms.",
+        "ruleId": "global:117",
+        "distanceKm": null,
+        "confidence": "biome-context-only",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:117",
+            "name": "Adelie Land tundra · biome art encounter",
+            "family": "tundra",
+            "biome": 11,
+            "eco": 117,
+            "lat": -68.39917060999997,
+            "lon": 149.78004250560252,
+            "area": "ANT"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "2989220471",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Automatic art recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+      ],
+      "notices": [
+        "Automatic selection: Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms."
+      ]
+    }
+  },
+  {
+    "id": "135",
+    "family": "rainforest",
+    "name": "Admiralty Islands lowland rain forests",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "calls": 14,
+        "triangles": 983720,
+        "camera": {
+          "position": [
+            0,
+            1.6876621461327705,
+            34
+          ],
+          "target": [
+            0,
+            5.8437894109931685,
+            -55
+          ]
+        },
+        "textures": 12
+      },
+      {
+        "view": "inspection",
+        "calls": 14,
+        "triangles": 983720,
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "textures": 12
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "rainforest",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:135",
+            "name": "Admiralty Islands lowland rain forests · biome art encounter",
+            "family": "rainforest",
+            "biome": 1,
+            "eco": 135,
+            "lat": -2.1062023269998917,
+            "lon": 146.93373890082077,
+            "area": "BIS"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "2783267105",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Cocos nucifera",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:666160-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Pandanus tectorius",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:895770-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Regional candidates use shared architecture approximations; no Amazon species list or foreign regional matte is imported."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "global-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:global:135",
+          "name": "Admiralty Islands lowland rain forests · biome art encounter",
+          "family": "rainforest",
+          "biome": 1,
+          "eco": 135,
+          "lat": -2.1062023269998917,
+          "lon": 146.93373890082077,
+          "area": "BIS"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "2783267105",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Cocos nucifera",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:666160-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Pandanus tectorius",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:895770-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+          "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Regional candidates use shared architecture approximations; no Amazon species list or foreign regional matte is imported."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms.",
+        "ruleId": "global:135",
+        "distanceKm": null,
+        "confidence": "regional-range-candidate",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:135",
+            "name": "Admiralty Islands lowland rain forests · biome art encounter",
+            "family": "rainforest",
+            "biome": 1,
+            "eco": 135,
+            "lat": -2.1062023269998917,
+            "lon": 146.93373890082077,
+            "area": "BIS"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "2783267105",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Cocos nucifera",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:666160-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Pandanus tectorius",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:895770-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Regional candidates use shared architecture approximations; no Amazon species list or foreign regional matte is imported."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Automatic art recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Regional candidates use shared architecture approximations; no Amazon species list or foreign regional matte is imported."
+      ],
+      "notices": [
+        "Automatic selection: Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms."
+      ]
+    },
+    "transfer": {
+      "family": "rainforest",
+      "sourceBiome": 1,
+      "treeIdentity": "regional-candidate-architecture",
+      "limits": "Existing geometry/needle/forest-floor representations are approximations; no geographically conditioned foreign matte, no verified local cover or tree dimensions"
+    }
+  },
+  {
+    "id": "785",
+    "family": "mediterranean",
+    "name": "Aegean and Western Turkey sclerophyllous and mixed forests",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "calls": 14,
+        "triangles": 1833508,
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            16
+          ],
+          "target": [
+            0,
+            -6.225925925926,
+            -44
+          ]
+        },
+        "textures": 9
+      },
+      {
+        "view": "inspection",
+        "calls": 14,
+        "triangles": 1833508,
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "textures": 9
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "mediterranean",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "growthFormFallback": "broadleaf",
+          "site": {
+            "id": "auto:global:785",
+            "name": "Aegean and Western Turkey sclerophyllous and mixed forests · biome art encounter",
+            "family": "mediterranean",
+            "biome": 12,
+            "eco": 785,
+            "lat": 37.36933496900005,
+            "lon": 22.2360913127809,
+            "area": "GRC"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "1325162392",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "unnamed-broadleaf-growth-forms",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+            "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "global-auto-v1",
+        "status": "experimental-unreviewed",
+        "growthFormFallback": "broadleaf",
+        "site": {
+          "id": "auto:global:785",
+          "name": "Aegean and Western Turkey sclerophyllous and mixed forests · biome art encounter",
+          "family": "mediterranean",
+          "biome": 12,
+          "eco": 785,
+          "lat": 37.36933496900005,
+          "lon": 22.2360913127809,
+          "area": "GRC"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "1325162392",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "unnamed-broadleaf-growth-forms",
+        "limitations": [
+          "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+          "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+          "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms.",
+        "ruleId": "global:785",
+        "distanceKm": null,
+        "confidence": "biome-context-only",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "growthFormFallback": "broadleaf",
+          "site": {
+            "id": "auto:global:785",
+            "name": "Aegean and Western Turkey sclerophyllous and mixed forests · biome art encounter",
+            "family": "mediterranean",
+            "biome": 12,
+            "eco": 785,
+            "lat": 37.36933496900005,
+            "lon": 22.2360913127809,
+            "area": "GRC"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "1325162392",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "unnamed-broadleaf-growth-forms",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+            "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Automatic art recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+        "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+      ],
+      "notices": [
+        "Automatic selection: Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms."
+      ]
+    }
+  },
+  {
+    "id": "807",
+    "family": "desert",
+    "name": "Afghan Mountains semi-desert",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "calls": 17,
+        "triangles": 896848,
+        "camera": {
+          "position": [
+            81,
+            3.375991710955257,
+            45
+          ],
+          "target": [
+            81.00000000000001,
+            2.475991710955257,
+            115
+          ]
+        },
+        "textures": 8
+      },
+      {
+        "view": "inspection",
+        "calls": 12,
+        "triangles": 415776,
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "textures": 8
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "desert",
+        "sceneId": null,
+        "variant": "rebuild",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:807",
+            "name": "Afghan Mountains semi-desert · biome art encounter",
+            "family": "desert",
+            "biome": 13,
+            "eco": 807,
+            "lat": 34.56283707800017,
+            "lon": 65.19976580823018,
+            "area": "AFG"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "3702361199",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "global-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:global:807",
+          "name": "Afghan Mountains semi-desert · biome art encounter",
+          "family": "desert",
+          "biome": 13,
+          "eco": 807,
+          "lat": 34.56283707800017,
+          "lon": 65.19976580823018,
+          "area": "AFG"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "3702361199",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "none",
+        "limitations": [
+          "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+          "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms.",
+        "ruleId": "global:807",
+        "distanceKm": null,
+        "confidence": "biome-context-only",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:807",
+            "name": "Afghan Mountains semi-desert · biome art encounter",
+            "family": "desert",
+            "biome": 13,
+            "eco": 807,
+            "lat": 34.56283707800017,
+            "lon": 65.19976580823018,
+            "area": "AFG"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "3702361199",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Automatic art recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+      ],
+      "notices": [
+        "Automatic selection: Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms."
+      ]
+    }
+  },
+  {
+    "id": "722",
+    "family": "prairie",
+    "name": "Al-Hajar foothill xeric woodlands and shrublands",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "calls": 14,
+        "triangles": 829860,
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "target": [
+            0,
+            27,
+            -190
+          ]
+        },
+        "textures": 8
+      },
+      {
+        "view": "inspection",
+        "calls": 14,
+        "triangles": 829860,
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "textures": 8
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "prairie",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:722",
+            "name": "Al-Hajar foothill xeric woodlands and shrublands · biome art encounter",
+            "family": "prairie",
+            "biome": 8,
+            "eco": 722,
+            "lat": 24.173606726500083,
+            "lon": 56.36052262033344,
+            "area": "OMA"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "1146973998",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "No regional nonwoody catalogue is loaded: grass and forbs remain unnamed functional forms, with no Oklahoma woody plants or location-conditioned hills artwork imported."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "global-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:global:722",
+          "name": "Al-Hajar foothill xeric woodlands and shrublands · biome art encounter",
+          "family": "prairie",
+          "biome": 8,
+          "eco": 722,
+          "lat": 24.173606726500083,
+          "lon": 56.36052262033344,
+          "area": "OMA"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "1146973998",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "none",
+        "limitations": [
+          "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+          "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "No regional nonwoody catalogue is loaded: grass and forbs remain unnamed functional forms, with no Oklahoma woody plants or location-conditioned hills artwork imported."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms.",
+        "ruleId": "global:722",
+        "distanceKm": null,
+        "confidence": "biome-context-only",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:722",
+            "name": "Al-Hajar foothill xeric woodlands and shrublands · biome art encounter",
+            "family": "prairie",
+            "biome": 8,
+            "eco": 722,
+            "lat": 24.173606726500083,
+            "lon": 56.36052262033344,
+            "area": "OMA"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "1146973998",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "No regional nonwoody catalogue is loaded: grass and forbs remain unnamed functional forms, with no Oklahoma woody plants or location-conditioned hills artwork imported."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Automatic art recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "No regional nonwoody catalogue is loaded: grass and forbs remain unnamed functional forms, with no Oklahoma woody plants or location-conditioned hills artwork imported."
+      ],
+      "notices": [
+        "Automatic selection: Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms."
+      ]
+    }
+  },
+  {
+    "id": "369",
+    "family": "boreal",
+    "name": "Alaska Peninsula montane taiga",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "calls": 15,
+        "triangles": 675366,
+        "camera": {
+          "position": [
+            0,
+            1.9202071874937712,
+            34
+          ],
+          "target": [
+            0,
+            3.4284108122123795,
+            -30
+          ]
+        },
+        "textures": 10
+      },
+      {
+        "view": "inspection",
+        "calls": 15,
+        "triangles": 675366,
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "textures": 10
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "boreal",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:369",
+            "name": "Alaska Peninsula montane taiga · biome art encounter",
+            "family": "boreal",
+            "biome": 6,
+            "eco": 369,
+            "lat": 57.37037865150015,
+            "lon": -153.191449776205,
+            "area": "ASK"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "3435830545",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Populus tremuloides",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:208337-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Betula pendula",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Picea sitchensis",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:676986-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Picea laxa",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195881-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Abies amabilis",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325658-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "global-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:global:369",
+          "name": "Alaska Peninsula montane taiga · biome art encounter",
+          "family": "boreal",
+          "biome": 6,
+          "eco": 369,
+          "lat": 57.37037865150015,
+          "lon": -153.191449776205,
+          "area": "ASK"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "3435830545",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Populus tremuloides",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:208337-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Betula pendula",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Picea sitchensis",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:676986-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Picea laxa",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195881-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Abies amabilis",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325658-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+          "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms.",
+        "ruleId": "global:369",
+        "distanceKm": null,
+        "confidence": "regional-range-candidate",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:369",
+            "name": "Alaska Peninsula montane taiga · biome art encounter",
+            "family": "boreal",
+            "biome": 6,
+            "eco": 369,
+            "lat": 57.37037865150015,
+            "lon": -153.191449776205,
+            "area": "ASK"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "3435830545",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Populus tremuloides",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:208337-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Betula pendula",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Picea sitchensis",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:676986-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Picea laxa",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195881-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Abies amabilis",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325658-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Automatic art recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+      ],
+      "notices": [
+        "Automatic selection: Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms."
+      ]
+    }
+  },
+  {
+    "id": "345",
+    "family": "conifer",
+    "name": "Alberta-British Columbia foothills forests",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "calls": 15,
+        "triangles": 712224,
+        "camera": {
+          "position": [
+            0,
+            1.637404168256245,
+            34
+          ],
+          "target": [
+            0,
+            3.09493587796717,
+            -30
+          ]
+        },
+        "textures": 10
+      },
+      {
+        "view": "inspection",
+        "calls": 15,
+        "triangles": 712224,
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "textures": 10
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "conifer",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:345",
+            "name": "Alberta-British Columbia foothills forests · biome art encounter",
+            "family": "conifer",
+            "biome": 5,
+            "eco": 345,
+            "lat": 57.158521197500164,
+            "lon": -119.72073017229269,
+            "area": "ABT"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "2434956590",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Populus tremuloides",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:208337-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Picea laxa",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195881-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Betula pendula",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Betula papyrifera",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:32197-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Genus-conditioned conifer structure and shared needle artwork are approximations; local canopy composition is unverified."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "global-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:global:345",
+          "name": "Alberta-British Columbia foothills forests · biome art encounter",
+          "family": "conifer",
+          "biome": 5,
+          "eco": 345,
+          "lat": 57.158521197500164,
+          "lon": -119.72073017229269,
+          "area": "ABT"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "2434956590",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Populus tremuloides",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:208337-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Picea laxa",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195881-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Betula pendula",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Betula papyrifera",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:32197-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+          "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Genus-conditioned conifer structure and shared needle artwork are approximations; local canopy composition is unverified."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms.",
+        "ruleId": "global:345",
+        "distanceKm": null,
+        "confidence": "regional-range-candidate",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:345",
+            "name": "Alberta-British Columbia foothills forests · biome art encounter",
+            "family": "conifer",
+            "biome": 5,
+            "eco": 345,
+            "lat": 57.158521197500164,
+            "lon": -119.72073017229269,
+            "area": "ABT"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "2434956590",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Populus tremuloides",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:208337-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Picea laxa",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195881-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Betula pendula",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Betula papyrifera",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:32197-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Genus-conditioned conifer structure and shared needle artwork are approximations; local canopy composition is unverified."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Automatic art recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Genus-conditioned conifer structure and shared needle artwork are approximations; local canopy composition is unverified."
+      ],
+      "notices": [
+        "Automatic selection: Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms."
+      ]
+    }
+  },
+  {
+    "id": "328",
+    "family": "temperate",
+    "name": "Allegheny Highlands forests",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "calls": 13,
+        "triangles": 838560,
+        "camera": {
+          "position": [
+            0,
+            1.770855722558541,
+            34
+          ],
+          "target": [
+            0,
+            2.1146742456478167,
+            -55
+          ]
+        },
+        "textures": 11
+      },
+      {
+        "view": "inspection",
+        "calls": 13,
+        "triangles": 838560,
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "textures": 11
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "temperate",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:328",
+            "name": "Allegheny Highlands forests · biome art encounter",
+            "family": "temperate",
+            "biome": 4,
+            "eco": 328,
+            "lat": 41.97371084350007,
+            "lon": -77.00279466304261,
+            "area": "PEN"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "1614206366",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Acer saccharum",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:56795-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Quercus falcata",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:215831-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Fagus grandifolia",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295597-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "global-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:global:328",
+          "name": "Allegheny Highlands forests · biome art encounter",
+          "family": "temperate",
+          "biome": 4,
+          "eco": 328,
+          "lat": 41.97371084350007,
+          "lon": -77.00279466304261,
+          "area": "PEN"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "1614206366",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Acer saccharum",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:56795-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Quercus falcata",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:215831-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Fagus grandifolia",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295597-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+          "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms.",
+        "ruleId": "global:328",
+        "distanceKm": null,
+        "confidence": "regional-range-candidate",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:328",
+            "name": "Allegheny Highlands forests · biome art encounter",
+            "family": "temperate",
+            "biome": 4,
+            "eco": 328,
+            "lat": 41.97371084350007,
+            "lon": -77.00279466304261,
+            "area": "PEN"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "1614206366",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Acer saccharum",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:56795-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Quercus falcata",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:215831-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Fagus grandifolia",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295597-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Automatic art recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day."
+      ],
+      "notices": [
+        "Automatic selection: Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms."
+      ]
+    }
+  },
+  {
+    "id": "749",
+    "family": "montane",
+    "name": "Altai alpine meadow and tundra",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "calls": 10,
+        "triangles": 2133040,
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "target": [
+            3,
+            -12,
+            -150
+          ]
+        },
+        "textures": 14
+      },
+      {
+        "view": "inspection",
+        "calls": 10,
+        "triangles": 2133040,
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "textures": 14
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "montane",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:749",
+            "name": "Altai alpine meadow and tundra · biome art encounter",
+            "family": "montane",
+            "biome": 10,
+            "eco": 749,
+            "lat": 49.65422753150014,
+            "lon": 87.34323418135183,
+            "area": "ALT"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "1586604288",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "global-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:global:749",
+          "name": "Altai alpine meadow and tundra · biome art encounter",
+          "family": "montane",
+          "biome": 10,
+          "eco": 749,
+          "lat": 49.65422753150014,
+          "lon": 87.34323418135183,
+          "area": "ALT"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "1586604288",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "none",
+        "limitations": [
+          "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+          "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms.",
+        "ruleId": "global:749",
+        "distanceKm": null,
+        "confidence": "biome-context-only",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:749",
+            "name": "Altai alpine meadow and tundra · biome art encounter",
+            "family": "montane",
+            "biome": 10,
+            "eco": 749,
+            "lat": 49.65422753150014,
+            "lon": 87.34323418135183,
+            "area": "ALT"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "1586604288",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Automatic art recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+      ],
+      "notices": [
+        "Automatic selection: Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms."
+      ]
+    }
+  },
+  {
+    "id": "611",
+    "family": "mangrove",
+    "name": "Amazon-Orinoco-Southern Caribbean mangroves",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "calls": 20,
+        "triangles": 2507034,
+        "camera": {
+          "position": [
+            -63,
+            2.0360080667502305,
+            90
+          ],
+          "target": [
+            -63,
+            1.1360080667502306,
+            20
+          ]
+        },
+        "textures": 14
+      },
+      {
+        "view": "inspection",
+        "calls": 18,
+        "triangles": 2447314,
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "textures": 14
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "mangrove",
+        "sceneId": null,
+        "variant": "rebuild",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:611",
+            "name": "Amazon-Orinoco-Southern Caribbean mangroves · biome art encounter",
+            "family": "mangrove",
+            "biome": 14,
+            "eco": 611,
+            "lat": 5.846792416500051,
+            "lon": -56.41458227540717,
+            "area": "SUR"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "1882287141",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Rhizophora mangle",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30061148-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Country-native supported mangrove root profiles only. Tide, salinity and shoreline are unmeasured; water color remains environment-derived."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "global-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:global:611",
+          "name": "Amazon-Orinoco-Southern Caribbean mangroves · biome art encounter",
+          "family": "mangrove",
+          "biome": 14,
+          "eco": 611,
+          "lat": 5.846792416500051,
+          "lon": -56.41458227540717,
+          "area": "SUR"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "1882287141",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Rhizophora mangle",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30061148-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+          "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Country-native supported mangrove root profiles only. Tide, salinity and shoreline are unmeasured; water color remains environment-derived."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms.",
+        "ruleId": "global:611",
+        "distanceKm": null,
+        "confidence": "regional-range-candidate",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:611",
+            "name": "Amazon-Orinoco-Southern Caribbean mangroves · biome art encounter",
+            "family": "mangrove",
+            "biome": 14,
+            "eco": 611,
+            "lat": 5.846792416500051,
+            "lon": -56.41458227540717,
+            "area": "SUR"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "1882287141",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Rhizophora mangle",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30061148-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Country-native supported mangrove root profiles only. Tide, salinity and shoreline are unmeasured; water color remains environment-derived."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Automatic art recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Country-native supported mangrove root profiles only. Tide, salinity and shoreline are unmeasured; water color remains environment-derived."
+      ],
+      "notices": [
+        "Automatic selection: Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms."
+      ]
+    }
+  },
+  {
+    "id": "741",
+    "family": "flooded",
+    "name": "Amur meadow steppe",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "calls": 11,
+        "triangles": 1753878,
+        "camera": {
+          "position": [
+            -18,
+            2.0673060486387493,
+            -54
+          ],
+          "target": [
+            -17.999999999999993,
+            1.1673060486387494,
+            16
+          ]
+        },
+        "textures": 10
+      },
+      {
+        "view": "inspection",
+        "calls": 11,
+        "triangles": 1753878,
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "textures": 10
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "flooded",
+        "sceneId": null,
+        "variant": "rebuild",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:741",
+            "name": "Amur meadow steppe · biome art encounter",
+            "family": "flooded",
+            "biome": 9,
+            "eco": 741,
+            "lat": 47.65915771650009,
+            "lon": 133.18613372438483,
+            "area": "CHM"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "2182216288",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "global-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:global:741",
+          "name": "Amur meadow steppe · biome art encounter",
+          "family": "flooded",
+          "biome": 9,
+          "eco": 741,
+          "lat": 47.65915771650009,
+          "lon": 133.18613372438483,
+          "area": "CHM"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "2182216288",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "none",
+        "limitations": [
+          "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+          "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms.",
+        "ruleId": "global:741",
+        "distanceKm": null,
+        "confidence": "biome-context-only",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:741",
+            "name": "Amur meadow steppe · biome art encounter",
+            "family": "flooded",
+            "biome": 9,
+            "eco": 741,
+            "lat": 47.65915771650009,
+            "lon": 133.18613372438483,
+            "area": "CHM"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "2182216288",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Automatic art recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+      ],
+      "notices": [
+        "Automatic selection: Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms."
+      ]
+    }
+  },
+  {
+    "id": "34",
+    "family": "savanna",
+    "name": "Angolan mopane woodlands",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "calls": 14,
+        "triangles": 871370,
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "target": [
+            0,
+            27,
+            -190
+          ]
+        },
+        "textures": 8
+      },
+      {
+        "view": "inspection",
+        "calls": 14,
+        "triangles": 871370,
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "textures": 8
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "savanna",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:34",
+            "name": "Angolan mopane woodlands · biome art encounter",
+            "family": "savanna",
+            "biome": 7,
+            "eco": 34,
+            "lat": -18.319430559999887,
+            "lon": 14.540928813784312,
+            "area": "NAM"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "4042816104",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "global-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:global:34",
+          "name": "Angolan mopane woodlands · biome art encounter",
+          "family": "savanna",
+          "biome": 7,
+          "eco": 34,
+          "lat": -18.319430559999887,
+          "lon": 14.540928813784312,
+          "area": "NAM"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "4042816104",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "none",
+        "limitations": [
+          "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+          "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms.",
+        "ruleId": "global:34",
+        "distanceKm": null,
+        "confidence": "biome-context-only",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:34",
+            "name": "Angolan mopane woodlands · biome art encounter",
+            "family": "savanna",
+            "biome": 7,
+            "eco": 34,
+            "lat": -18.319430559999887,
+            "lon": 14.540928813784312,
+            "area": "NAM"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "4042816104",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Automatic art recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+      ],
+      "notices": [
+        "Automatic selection: Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms."
+      ]
+    }
+  },
+  {
+    "id": "520",
+    "family": "dryforest",
+    "name": "Apure-Villavicencio dry forests",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "calls": 137,
+        "triangles": 3060802,
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "target": [
+            0,
+            2.3,
+            -55
+          ]
+        },
+        "textures": 12
+      },
+      {
+        "view": "inspection",
+        "calls": 137,
+        "triangles": 3060802,
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "textures": 12
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "dryforest",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:520",
+            "name": "Apure-Villavicencio dry forests · biome art encounter",
+            "family": "dryforest",
+            "biome": 2,
+            "eco": 520,
+            "lat": 6.938733873500155,
+            "lon": -71.47592748390258,
+            "area": "CLM"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "786346859",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Ceiba pentandra",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1166232-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "unnamed-seasonal-growth-forms",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Trees are explicitly unnamed seasonal growth forms. The accepted Guanacaste/gumbo-limbo identities, flowering and Costa Rica matte are withheld."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "global-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:global:520",
+          "name": "Apure-Villavicencio dry forests · biome art encounter",
+          "family": "dryforest",
+          "biome": 2,
+          "eco": 520,
+          "lat": 6.938733873500155,
+          "lon": -71.47592748390258,
+          "area": "CLM"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "786346859",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Ceiba pentandra",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1166232-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "unnamed-seasonal-growth-forms",
+        "limitations": [
+          "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+          "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Trees are explicitly unnamed seasonal growth forms. The accepted Guanacaste/gumbo-limbo identities, flowering and Costa Rica matte are withheld."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms.",
+        "ruleId": "global:520",
+        "distanceKm": null,
+        "confidence": "biome-context-only",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:520",
+            "name": "Apure-Villavicencio dry forests · biome art encounter",
+            "family": "dryforest",
+            "biome": 2,
+            "eco": 520,
+            "lat": 6.938733873500155,
+            "lon": -71.47592748390258,
+            "area": "CLM"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "786346859",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Ceiba pentandra",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1166232-2",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "unnamed-seasonal-growth-forms",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Trees are explicitly unnamed seasonal growth forms. The accepted Guanacaste/gumbo-limbo identities, flowering and Costa Rica matte are withheld."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Automatic art recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Trees are explicitly unnamed seasonal growth forms. The accepted Guanacaste/gumbo-limbo identities, flowering and Costa Rica matte are withheld."
+      ],
+      "notices": [
+        "Automatic selection: Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms."
+      ]
+    }
+  },
+  {
+    "id": "325",
+    "family": "tropicalpine",
+    "name": "Bermuda subtropical conifer forests",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "calls": 10,
+        "triangles": 767364,
+        "camera": {
+          "position": [
+            0,
+            1.6719596021074477,
+            34
+          ],
+          "target": [
+            0,
+            3.3416712860137228,
+            -55
+          ]
+        },
+        "textures": 7
+      },
+      {
+        "view": "inspection",
+        "calls": 10,
+        "triangles": 767364,
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "textures": 7
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "tropicalpine",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:325",
+            "name": "Bermuda subtropical conifer forests · biome art encounter",
+            "family": "tropicalpine",
+            "biome": 3,
+            "eco": 325,
+            "lat": 32.36014240750015,
+            "lon": -64.65678802586635,
+            "area": "BER"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "1378508076",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "unnamed-conifer-growth-forms",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Eligible local pines are used only when source-backed; otherwise the tree architecture is explicitly an unnamed conifer growth form. No Guatemalan species are imported."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "global-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:global:325",
+          "name": "Bermuda subtropical conifer forests · biome art encounter",
+          "family": "tropicalpine",
+          "biome": 3,
+          "eco": 325,
+          "lat": 32.36014240750015,
+          "lon": -64.65678802586635,
+          "area": "BER"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "1378508076",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "unnamed-conifer-growth-forms",
+        "limitations": [
+          "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+          "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Eligible local pines are used only when source-backed; otherwise the tree architecture is explicitly an unnamed conifer growth form. No Guatemalan species are imported."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms.",
+        "ruleId": "global:325",
+        "distanceKm": null,
+        "confidence": "biome-context-only",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:global:325",
+            "name": "Bermuda subtropical conifer forests · biome art encounter",
+            "family": "tropicalpine",
+            "biome": 3,
+            "eco": 325,
+            "lat": 32.36014240750015,
+            "lon": -64.65678802586635,
+            "area": "BER"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "1378508076",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "unnamed-conifer-growth-forms",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Eligible local pines are used only when source-backed; otherwise the tree architecture is explicitly an unnamed conifer growth form. No Guatemalan species are imported."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Automatic art recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Eligible local pines are used only when source-backed; otherwise the tree architecture is explicitly an unnamed conifer growth form. No Guatemalan species are imported."
+      ],
+      "notices": [
+        "Automatic selection: Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms."
+      ]
+    },
+    "transfer": {
+      "family": "tropicalpine",
+      "sourceBiome": 3,
+      "treeIdentity": "unnamed-conifer-growth-forms",
+      "limits": "Existing geometry/needle/forest-floor representations are approximations; no geographically conditioned foreign matte, no verified local cover or tree dimensions"
+    }
+  },
+  {
+    "id": "616",
+    "family": "mangrove",
+    "name": "Southern Atlantic Brazilian mangroves",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "calls": 20,
+        "triangles": 2462482,
+        "camera": {
+          "position": [
+            -63,
+            1.9967592993874308,
+            -45
+          ],
+          "target": [
+            7,
+            1.0967592993874309,
+            -45.00000000000001
+          ]
+        },
+        "textures": 14
+      },
+      {
+        "view": "inspection",
+        "calls": 20,
+        "triangles": 2462482,
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ]
+        },
+        "textures": 14
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "mangrove",
+        "sceneId": null,
+        "variant": "rebuild",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "growthFormFallback": "mangrove",
+          "site": {
+            "id": "auto:global:616",
+            "name": "Southern Atlantic Brazilian mangroves · biome art encounter",
+            "family": "mangrove",
+            "biome": 14,
+            "eco": 616,
+            "lat": -24.427732360999954,
+            "lon": -47.12734512833566,
+            "area": null
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "3334753160",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "unnamed-mangrove-growth-forms",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Country-native supported mangrove root profiles only. Tide, salinity and shoreline are unmeasured; water color remains environment-derived."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "global-auto-v1",
+        "status": "experimental-unreviewed",
+        "growthFormFallback": "mangrove",
+        "site": {
+          "id": "auto:global:616",
+          "name": "Southern Atlantic Brazilian mangroves · biome art encounter",
+          "family": "mangrove",
+          "biome": 14,
+          "eco": 616,
+          "lat": -24.427732360999954,
+          "lon": -47.12734512833566,
+          "area": null
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "3334753160",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "unnamed-mangrove-growth-forms",
+        "limitations": [
+          "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+          "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Country-native supported mangrove root profiles only. Tide, salinity and shoreline are unmeasured; water color remains environment-derived."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "global-auto-v1",
+        "requestedVersion": "global-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms.",
+        "ruleId": "global:616",
+        "distanceKm": null,
+        "confidence": "biome-context-only",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "global-auto-v1",
+          "status": "experimental-unreviewed",
+          "growthFormFallback": "mangrove",
+          "site": {
+            "id": "auto:global:616",
+            "name": "Southern Atlantic Brazilian mangroves · biome art encounter",
+            "family": "mangrove",
+            "biome": 14,
+            "eco": 616,
+            "lat": -24.427732360999954,
+            "lon": -47.12734512833566,
+            "area": null
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "3334753160",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "unnamed-mangrove-growth-forms",
+          "limitations": [
+            "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+            "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Country-native supported mangrove root profiles only. Tide, salinity and shoreline are unmeasured; water color remains environment-derived."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Automatic art recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Global biome art recipe; geographic terrain, current land cover and local abundance are unmeasured.",
+        "Missing compatible catalogue entries use explicitly unnamed biome growth forms, not invented species.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Country-native supported mangrove root profiles only. Tide, salinity and shoreline are unmeasured; water color remains environment-derived."
+      ],
+      "notices": [
+        "Automatic selection: Art encounter selected from the source biome. Regional candidates are used where supported; missing tree data uses labelled unnamed growth forms."
+      ]
+    }
+  }
+]

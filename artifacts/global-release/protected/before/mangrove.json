@@ -1,0 +1,80 @@
+{
+  "hero": {
+    "position": [
+      72,
+      2.077603828842169,
+      -18
+    ],
+    "quaternion": [
+      -0.004545404694389373,
+      -0.7070921717118386,
+      -0.004545404694389373,
+      0.7070921717118386
+    ],
+    "aspect": 1.7777777777777777,
+    "fov": 47
+  },
+  "inspection": {
+    "position": [
+      70,
+      50,
+      85
+    ],
+    "target": [
+      0,
+      1,
+      -25
+    ]
+  },
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          72,
+          2.077603828842169,
+          -18
+        ],
+        "quaternion": [
+          -0.004545404694389373,
+          -0.7070921717118386,
+          -0.004545404694389373,
+          0.7070921717118386
+        ]
+      },
+      "calls": 20,
+      "triangles": 2492234
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          70,
+          50,
+          85
+        ],
+        "quaternion": [
+          -0.17164577003343667,
+          0.2750834768545333,
+          0.04998336618883981,
+          0.9446525676118614
+        ]
+      },
+      "calls": 20,
+      "triangles": 2492234
+    }
+  ],
+  "assets": [
+    {
+      "url": "/assets/puget-v1/sky-matte-v1.webp",
+      "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+    }
+  ],
+  "exposure": 1.12,
+  "toneMapping": 4,
+  "selection": null,
+  "errors": [],
+  "id": "mangrove",
+  "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+  "query": "lat=25.2&lon=-80.9&habitat=coastal&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&wave1=mangrove&fieldStudy=rebuild&artPass=fidelity"
+}

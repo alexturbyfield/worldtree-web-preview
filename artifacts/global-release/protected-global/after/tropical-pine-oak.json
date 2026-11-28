@@ -1,0 +1,185 @@
+{
+  "hero": {
+    "position": [
+      0,
+      1.7,
+      34
+    ],
+    "quaternion": [
+      -0.017528619593268496,
+      -0.003730692087245149,
+      -0.00006540438638227013,
+      0.9998393996807542
+    ],
+    "aspect": 1.7777777777777777,
+    "fov": 47
+  },
+  "inspection": {
+    "position": [
+      62,
+      38,
+      76
+    ],
+    "target": [
+      0,
+      2,
+      -24
+    ]
+  },
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          0,
+          1.7,
+          34
+        ],
+        "quaternion": [
+          -0.017528619593268496,
+          -0.003730692087245149,
+          -0.00006540438638227013,
+          0.9998393996807542
+        ]
+      },
+      "calls": 123,
+      "triangles": 2310906
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          62,
+          38,
+          76
+        ],
+        "quaternion": [
+          -0.14225669339427574,
+          0.2709366497614252,
+          0.04052142593573312,
+          0.9511647486322844
+        ]
+      },
+      "calls": 121,
+      "triangles": 2347058
+    }
+  ],
+  "assets": [
+    {
+      "url": "/assets/cork-oak/leaves-v1.webp",
+      "sha256": "3b48f62189ed6d5606f10d8e2199a2f1fbde61fb57f15b61b06d5054230c9936"
+    },
+    {
+      "url": "/assets/holm-oak/bark-v1.webp",
+      "sha256": "e3085fd25cd89179a99ffe25dd6220f5335cff6bb0a485307a00c3cdb88e5258"
+    },
+    {
+      "url": "/assets/puget-v1/sky-matte-v1.webp",
+      "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+    },
+    {
+      "url": "/assets/tropical-pine/bark-albedo.webp",
+      "sha256": "24dcef1be268b0236a77f1b9c578e8f267ea2113450e92e589197e9af2bc0cf9"
+    },
+    {
+      "url": "/assets/tropical-pine/bark-normal.png",
+      "sha256": "942492abfbfbfc88ffb88a42d854e9df87586181eb9befe4d2a01df8d02b4dfe"
+    },
+    {
+      "url": "/assets/tropical-pine/bark-roughness.png",
+      "sha256": "61e50e8f84519fba48cd708149b8b8075eedfb262773fec1513c692b5da1c9ce"
+    },
+    {
+      "url": "/assets/tropical-pine/distance.png",
+      "sha256": "759fa674add5c7bef3b79f82224cf2f42a343cabfdbcfaf2bf627e873c202472"
+    },
+    {
+      "url": "/assets/tropical-pine/floor-albedo.webp",
+      "sha256": "8a73aad9ff244888dcd498460505bc97afe471cdf3ff605a1ecb5a305ccc60fa"
+    },
+    {
+      "url": "/assets/tropical-pine/floor-normal.png",
+      "sha256": "755768a875d64b7ebbf7efcbe448f82ef8a60362a137f43fcb8df934f5b6ee48"
+    },
+    {
+      "url": "/assets/tropical-pine/floor-roughness.png",
+      "sha256": "129c6c227fd1b38f46906ef225604141e15bea3584a726c540f7e6a22652bc1a"
+    },
+    {
+      "url": "/assets/tropical-pine/pine-sprays.webp",
+      "sha256": "91741039d2ad19c29bd9669284fd9160ca7240cb4d248f91f1905e6ea5fa561a"
+    },
+    {
+      "url": "/assets/tropical-pine/rock-albedo.webp",
+      "sha256": "0664b1552682b466f8297796367579b5e64cd9756fd021e1961aab292fda4d83"
+    },
+    {
+      "url": "/assets/tropical-pine/rock-normal.png",
+      "sha256": "42a879673b00045f55976c50228c7435981203d4c384cd09e9c0f2b77d4936fe"
+    },
+    {
+      "url": "/assets/tropical-pine/rock-roughness.png",
+      "sha256": "1f64969c3028532feccb808a789b56389b8722107922179b945a6984c7a0ed70"
+    },
+    {
+      "url": "/assets/tropical-pine/treeline-v1.png",
+      "sha256": "6aa882991b5234ae58545cea07e08575b9f0a4f0684df63856d5327af93ee250"
+    }
+  ],
+  "exposure": 1.12,
+  "toneMapping": 4,
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": "tropical-pine-oak",
+    "selectedScene": {
+      "id": "tropical-pine-oak",
+      "name": "Central American pine–oak",
+      "version": "accepted-v1"
+    },
+    "route": {
+      "kind": "wave",
+      "adapter": "tropicalpine",
+      "sceneId": "tropical-pine-oak",
+      "variant": "original"
+    },
+    "pilot": null,
+    "regional": null,
+    "automatic": {
+      "policyVersion": "global-auto-v1",
+      "requestedVersion": "global-auto-v1",
+      "status": "protected-reference",
+      "code": "protected-reference",
+      "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    },
+    "mode": "reference",
+    "checkpoint": {
+      "id": "tropical-pine-oak-accepted-v1",
+      "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+      "exactSettings": true
+    },
+    "vegetationCoverage": "adapter-generated",
+    "individualInspection": false,
+    "referenceLocation": {
+      "lat": 14.507672,
+      "lon": -89.435797
+    },
+    "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+    "limits": [
+      "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+      "Synthetic terrain and materials are not measured land cover.",
+      "Reference lighting and matte camera envelopes remain adapter-specific.",
+      "Mobile performance and unreviewed variations are not approved."
+    ],
+    "notices": [
+      "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+    ]
+  },
+  "errors": [],
+  "id": "tropical-pine-oak",
+  "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+  "query": "lat=14.507672&lon=-89.435797&habitat=forest&seed=29&density=24&structure=grove-1&appearance=garden&wind=0&mode=painterly&expansion=tropicalpine&referenceScene=tropical-pine-oak&autoEnvironment=global-auto-v1"
+}
