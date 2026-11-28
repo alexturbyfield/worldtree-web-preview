@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "milestone": "bounded-prairie-preview",
+  "authorization": "User requested publication of the prairie extension and then Mediterranean development: Do it.",
+  "sourceCommit": "6cbd106",
+  "branch": "feat/bounded-environment-resolver",
+  "environment": "preview",
+  "url": "https://worldtree-web-preview-4sg08n4ba-alex-turbyfield.vercel.app",
+  "deploymentId": "dpl_FDVDShbCZuqZyJZMVCpzoEhujwzA",
+  "state": "READY",
+  "rules": 12,
+  "productionChanged": false,
+  "build": "Vercel remote build passed",
+  "smokeEvidence": "artifacts/bounded-prairie/deployed-smoke.json",
+  "browserChecks": {"oklahoma": "passed", "pampas": "passed", "mongolia": "passed"},
+  "mobileDeviceTested": false,
+  "artisticApproval": "not assigned by agent"
+}

@@ -2,6 +2,8 @@
 
 Status: **experimental, unreviewed**. The existing `bounded-auto-v1` opt-in now includes twelve explicit regional envelopes across woodland, boreal, tundra and prairie. Its prior nine rules and seed derivations are unchanged. No global recipe promotion or deployment occurred in this pass.
 
+Subsequent publication: the user authorized an isolated [prairie preview](https://worldtree-web-preview-4sg08n4ba-alex-turbyfield.vercel.app). [Publication record](prairie-publication.json) and deployed checks are separate from the original local experiment above. Production remains unchanged.
+
 The user said “Looks great” about the previously deployed bounded-resolver preview, then authorized adding prairie. This is recorded as approval of that preview, not approval of these new encounters or every coordinate inside an envelope.
 
 ## Scope and ecology

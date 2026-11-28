@@ -1,0 +1,26 @@
+[
+  {
+    "id": "oklahoma",
+    "url": "https://worldtree-web-preview-4sg08n4ba-alex-turbyfield.vercel.app/explore?lat=36.7&lon=-98.5&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&conditional=1&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "status": 200,
+    "text": "Automatic recipe · unreviewed\n\nSource grassland classification supports the shared open prairie recipe. Named plants are regional candidates only where a catalogue is available; woody cover is conditional.\n\nCentral-Southern US mixed grasslands · bounded automatic · regional range candidate\n\nRule: prairie-oklahoma · 19.9 km from trial\n\nNative-country ranges are candidate evidence, not point occurrence. Terrain, atmosphere and device performance are unverified.",
+    "errors": [],
+    "pass": true
+  },
+  {
+    "id": "pampas",
+    "url": "https://worldtree-web-preview-4sg08n4ba-alex-turbyfield.vercel.app/explore?lat=-35.2&lon=-61.2&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&conditional=0&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "status": 200,
+    "text": "Automatic recipe · unreviewed\n\nSource grassland classification supports the shared open prairie recipe. Named plants are regional candidates only where a catalogue is available; woody cover is conditional.\n\nHumid Pampas · bounded automatic · biome context only\n\nRule: prairie-pampas · 28.7 km from trial\n\nNative-country ranges are candidate evidence, not point occurrence. Terrain, atmosphere and device performance are unverified.",
+    "errors": [],
+    "pass": true
+  },
+  {
+    "id": "mongolia",
+    "url": "https://worldtree-web-preview-4sg08n4ba-alex-turbyfield.vercel.app/explore?lat=47.2&lon=107.2&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&conditional=0&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "status": 200,
+    "text": "Automatic recipe · unreviewed\n\nSource grassland classification supports the shared open prairie recipe. Named plants are regional candidates only where a catalogue is available; woody cover is conditional.\n\nMongolian-Manchurian grassland · bounded automatic · biome context only\n\nRule: prairie-mongolia · 26.9 km from trial\n\nNative-country ranges are candidate evidence, not point occurrence. Terrain, atmosphere and device performance are unverified.",
+    "errors": [],
+    "pass": true
+  }
+]
