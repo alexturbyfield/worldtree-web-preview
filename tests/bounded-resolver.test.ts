@@ -30,9 +30,9 @@ for(const [id,lat,lon]of samples)test(`new coordinate automatically resolves usi
  const exported=exportEnvironmentScene(recipe,s,'/explore?'+query);assert.equal(exported.environmentSelection.automatic?.policyVersion,'bounded-auto-v1');assert.equal(exported.botanicalArea?.code,profile.botanicalArea?.code);
  assert.equal(resolveEnvironmentSelection(recipe,'').automatic,null,'automatic routing is opt-in');
 });
-test('rollout policy only names existing trial scopes and the three declared families',()=>{
- assert.equal(boundedResolverPolicy.rules.length,9);assert.equal(new Set(boundedResolverPolicy.rules.map(r=>r.trialId)).size,9);
- for(const rule of boundedResolverPolicy.rules){const trial=geographicPilotSites.find(s=>s.id===rule.trialId);assert.ok(trial);assert.ok(['temperate','boreal','tundra'].includes(trial.family));}
+test('rollout policy only names existing trial scopes and the four declared families',()=>{
+ assert.equal(boundedResolverPolicy.rules.length,12);assert.equal(new Set(boundedResolverPolicy.rules.map(r=>r.trialId)).size,12);
+ for(const rule of boundedResolverPolicy.rules){const trial=geographicPilotSites.find(s=>s.id===rule.trialId);assert.ok(trial);assert.ok(['temperate','boreal','tundra','prairie'].includes(trial.family));}
 });
 test('all protected reference URLs keep priority and exact checkpoint metadata with auto requested',()=>{
  for(const entry of environmentRegistry){const q=new URLSearchParams(referenceSceneUrl(entry.id).split('?')[1]);q.set('autoEnvironment','bounded-auto-v1');const r={location:{lat:Number(q.get('lat')),lon:Number(q.get('lon'))},ecoregion:{BIOME_NUM:entry.scope.biomeId,ECO_ID:entry.scope.ecoregions?.[0]??100,REALM:entry.scope.realm??'Neotropic'}};const s=resolveEnvironmentSelection(r,q.toString());assert.equal(s.selectedScene?.id,entry.id);assert.equal(s.checkpoint?.exactSettings,true);assert.equal(s.regional,null);assert.equal(s.automatic?.status,'protected-reference');}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "experiment": "bounded-auto-v1-prairie-extension",
+  "intervention": "routing and regional asset guard only",
+  "status": "experimentally-supported-routing-art-unreviewed",
+  "loaded": ["AGENTS.md", ".agents/skills/prototype-fast/SKILL.md", "docs/visual-quality-workflow.md", "visual-lab/art-direction-policy.json", "visual-lab/environment-registry/GEOGRAPHIC-PILOT.md", "visual-lab/environment-registry/BOUNDED-RESOLVER.md"],
+  "visionAvailable": true,
+  "reviewer": "implementing-agent",
+  "independentReview": false,
+  "humanFeedback": [{"quote": "Looks great", "scope": "previously deployed bounded-resolver preview", "doesNotApprove": "new prairie variations or all geographic points"}],
+  "hypothesis": "Open grassland recipes can transfer without a tree palette, provided regional provenance gates, conditional trees and location-conditioned asset restrictions are preserved.",
+  "confirmedTechnicalCause": "The existing prairie matte guard checked only the manual geographicPilot query parameter, leaving automatic regional transfers unguarded.",
+  "implementation": "Whitelist three audited prairie rules; allow open-cover selection without tree candidates; restrict conditional Oklahoma trees to actual sourced regional candidates; make matte guard recognize resolved regional metadata.",
+  "evidenceRoot": "artifacts/bounded-prairie/",
+  "evidence": ["before.json", "after.json", "comparison-hero-sheet.png", "comparison-inspection-sheet.png", "freeze.json", "holdout/report.json", "validation.json", "tests.log", "typecheck.log", "lint.log"],
+  "developmentSeed": "29",
+  "reservedSeed": "934713",
+  "reservedRegion": "Mongolian-Manchurian grassland",
+  "correctionRounds": 0,
+  "observations": [
+    {"severity": "major", "finding": "Dimensional prairie and broad physical continuation replace bare generic fallback; regionally distinct nonwoody communities remain unsupported in Pampas and steppe."},
+    {"severity": "major", "finding": "Mongolia seed 29 near ridge masks distance; held-out seed opens the horizon. No tuning followed holdout."},
+    {"severity": "minor", "finding": "Elevated views expose encounter-focused geometry and synthetic terrain fields; existing foliage remains coarse."}
+  ],
+  "decision": "retain opt-in; human review required",
+  "rules": [
+    {"principle": "An open biome does not require a tree palette.", "status": "experimentally-supported", "scope": "these prairie envelopes"},
+    {"principle": "Location-conditioned matte guards inspect resolved regional metadata, including automatic routing.", "status": "experimentally-supported", "scope": "prairie adapter; protected reference unchanged"},
+    {"principle": "Shared grass forms establish regional botanical fidelity.", "status": "rejected", "reason": "No regional nonwoody catalogue exists for Pampas or steppe in the current data."}
+  ],
+  "validation": {"targetedTestsPassed": 74, "typescript": "passed", "targetedEslint": "passed", "protectedViewsPixelIdentical": 8, "fullBuildRun": false, "fullSuiteRun": false, "mobileDeviceTested": false},
+  "performance": {"developmentHeroCalls": [14, 24], "developmentHeroTriangles": [716776, 911174], "holdoutCalls": 14, "holdoutTriangles": 764782, "frameTimeMeasured": false, "alphaOverdrawMeasured": false, "textureBytesMeasured": false},
+  "publication": {"committed": false, "pushed": false, "deployed": false, "globallyPromoted": false}
+}

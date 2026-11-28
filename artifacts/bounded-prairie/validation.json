@@ -1,0 +1,66 @@
+{
+  "checks": [
+    {
+      "name": "frozen source unchanged after holdout",
+      "pass": true
+    },
+    {
+      "name": "protected pixels unchanged",
+      "pass": true
+    },
+    {
+      "name": "no render errors",
+      "pass": true
+    },
+    {
+      "name": "foreign location-conditioned matte withheld",
+      "pass": true
+    },
+    {
+      "name": "no Oklahoma plant identities exported to Pampas or steppe",
+      "pass": true
+    }
+  ],
+  "protectedParity": [
+    {
+      "id": "germany",
+      "view": "hero",
+      "changedChannels": 0
+    },
+    {
+      "id": "germany",
+      "view": "inspection",
+      "changedChannels": 0
+    },
+    {
+      "id": "finland",
+      "view": "hero",
+      "changedChannels": 0
+    },
+    {
+      "id": "finland",
+      "view": "inspection",
+      "changedChannels": 0
+    },
+    {
+      "id": "alaska",
+      "view": "hero",
+      "changedChannels": 0
+    },
+    {
+      "id": "alaska",
+      "view": "inspection",
+      "changedChannels": 0
+    },
+    {
+      "id": "prairie",
+      "view": "hero",
+      "changedChannels": 0
+    },
+    {
+      "id": "prairie",
+      "view": "inspection",
+      "changedChannels": 0
+    }
+  ]
+}

@@ -1,0 +1,380 @@
+[
+  {
+    "id": "oklahoma",
+    "lat": 36.7,
+    "lon": -98.5,
+    "query": "lat=36.7&lon=-98.5&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&conditional=1&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 389,
+      "ECO_NAME": "Central-Southern US mixed grasslands",
+      "BIOME_NUM": 8,
+      "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands",
+      "REALM": "Nearctic",
+      "COLOR_BIO": "#FEFF73",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "OKL",
+      "name": "Oklahoma"
+    },
+    "landCover": [
+      {
+        "id": "fragrant-sumac",
+        "commonName": "Fragrant sumac",
+        "scientificName": "Rhus aromatica",
+        "growthForm": "shrub",
+        "habitat": "Low branching shrub patches within the regional habitat mosaic.",
+        "representation": "leafy-shrub",
+        "conditional": false,
+        "renderEligible": true,
+        "evidenceLevel": "regional_ecological_site",
+        "localOccurrenceVerified": false,
+        "taxonomyStatus": "Name reported by ecological source; not independently reconciled to WCVP",
+        "sources": [
+          "https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY014OK"
+        ]
+      },
+      {
+        "id": "eastern-redcedar",
+        "commonName": "Eastern redcedar",
+        "scientificName": "Juniperus virginiana",
+        "growthForm": "tree",
+        "habitat": "Woody encroachment where fire is suppressed; excluded from the reference prairie planting.",
+        "representation": "conifer",
+        "conditional": true,
+        "renderEligible": false,
+        "evidenceLevel": "regional_ecological_site",
+        "localOccurrenceVerified": false,
+        "taxonomyStatus": "Name reported by ecological source; not independently reconciled to WCVP",
+        "sources": [
+          "https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY014OK"
+        ]
+      },
+      {
+        "id": "sand-dropseed",
+        "commonName": "Sand dropseed",
+        "scientificName": "Sporobolus cryptandrus",
+        "growthForm": "grass",
+        "habitat": "Fine seedhead-bearing midgrass in open sandy communities.",
+        "representation": "fine-seedheads",
+        "conditional": false,
+        "renderEligible": true,
+        "evidenceLevel": "regional_ecological_site",
+        "localOccurrenceVerified": false,
+        "taxonomyStatus": "Name reported by ecological source; not independently reconciled to WCVP",
+        "sources": [
+          "https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY014OK"
+        ]
+      },
+      {
+        "id": "little-bluestem",
+        "commonName": "Little bluestem",
+        "scientificName": "Schizachyrium scoparium",
+        "growthForm": "grass",
+        "habitat": "Mixed-grass communities on well-drained uplands.",
+        "representation": "bunchgrass",
+        "conditional": false,
+        "renderEligible": true,
+        "evidenceLevel": "regional_ecological_site",
+        "localOccurrenceVerified": false,
+        "taxonomyStatus": "Name reported by ecological source; not independently reconciled to WCVP",
+        "sources": [
+          "https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY014OK"
+        ]
+      },
+      {
+        "id": "indiangrass",
+        "commonName": "Indiangrass",
+        "scientificName": "Sorghastrum nutans",
+        "growthForm": "grass",
+        "habitat": "Tallgrass component; richer soil and moisture pockets.",
+        "representation": "tall-seedheads",
+        "conditional": false,
+        "renderEligible": true,
+        "evidenceLevel": "regional_ecological_site",
+        "localOccurrenceVerified": false,
+        "taxonomyStatus": "Name reported by ecological source; not independently reconciled to WCVP",
+        "sources": [
+          "https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY014OK"
+        ]
+      },
+      {
+        "id": "sand-plum",
+        "commonName": "Sand plum",
+        "scientificName": "Prunus angustifolia",
+        "growthForm": "shrub",
+        "habitat": "Suckering, connected thickets mixed with grasses.",
+        "representation": "plum-thicket",
+        "conditional": false,
+        "renderEligible": true,
+        "evidenceLevel": "regional_ecological_site",
+        "localOccurrenceVerified": false,
+        "taxonomyStatus": "Name reported by ecological source; not independently reconciled to WCVP",
+        "sources": [
+          "https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY014OK"
+        ]
+      },
+      {
+        "id": "sand-sagebrush",
+        "commonName": "Sand sagebrush",
+        "scientificName": "Artemisia filifolia",
+        "growthForm": "shrub",
+        "habitat": "Airy gray-green shrub communities on sandy soils.",
+        "representation": "sage-shrub",
+        "conditional": false,
+        "renderEligible": true,
+        "evidenceLevel": "regional_ecological_site",
+        "localOccurrenceVerified": false,
+        "taxonomyStatus": "Name reported by ecological source; not independently reconciled to WCVP",
+        "sources": [
+          "https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY014OK"
+        ]
+      },
+      {
+        "id": "sand-sunflower",
+        "commonName": "Sand sunflower",
+        "scientificName": "Helianthus petiolaris",
+        "growthForm": "forb",
+        "habitat": "Flowering openings in sandy prairie; bloom is seasonal.",
+        "representation": "yellow-forb",
+        "conditional": false,
+        "renderEligible": true,
+        "evidenceLevel": "regional_ecological_site",
+        "localOccurrenceVerified": false,
+        "taxonomyStatus": "Name reported by ecological source; not independently reconciled to WCVP",
+        "sources": [
+          "https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY014OK"
+        ]
+      },
+      {
+        "id": "eastern-cottonwood",
+        "commonName": "Eastern cottonwood",
+        "scientificName": "Populus deltoides",
+        "growthForm": "tree",
+        "habitat": "Conditional: sandy bottomland margins and draws with reliable subsurface water.",
+        "representation": "broadleaf_tree",
+        "conditional": true,
+        "renderEligible": true,
+        "evidenceLevel": "regional_ecological_site",
+        "localOccurrenceVerified": false,
+        "taxonomyStatus": "Name reported by ecological source; not independently reconciled to WCVP",
+        "sources": [
+          "https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY095OK"
+        ]
+      },
+      {
+        "id": "black-willow",
+        "commonName": "Black willow",
+        "scientificName": "Salix nigra",
+        "growthForm": "tree",
+        "habitat": "Conditional: wet bottomlands and drainage margins; not dry prairie crests.",
+        "representation": "broadleaf_tree",
+        "conditional": true,
+        "renderEligible": true,
+        "evidenceLevel": "regional_ecological_site",
+        "localOccurrenceVerified": false,
+        "taxonomyStatus": "Name reported by ecological source; not independently reconciled to WCVP",
+        "sources": [
+          "https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY095OK"
+        ]
+      },
+      {
+        "id": "sand-bluestem",
+        "commonName": "Sand bluestem",
+        "scientificName": "Andropogon hallii",
+        "growthForm": "grass",
+        "habitat": "Tall sandy-prairie grass; open, well-drained soils.",
+        "representation": "tall-grass",
+        "conditional": false,
+        "renderEligible": true,
+        "evidenceLevel": "regional_ecological_site",
+        "localOccurrenceVerified": false,
+        "taxonomyStatus": "Name reported by ecological source; not independently reconciled to WCVP",
+        "sources": [
+          "https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY014OK"
+        ]
+      }
+    ],
+    "palette": [
+      {
+        "scientificName": "Populus deltoides",
+        "sources": [
+          "https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY095OK"
+        ]
+      },
+      {
+        "scientificName": "Salix nigra",
+        "sources": [
+          "https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY095OK"
+        ]
+      }
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "selected",
+      "code": "supported-regional-transfer",
+      "explanation": "Source grassland classification supports the shared open prairie recipe. Named plants are regional candidates only where a catalogue is available; woody cover is conditional.",
+      "ruleId": "prairie-oklahoma",
+      "distanceKm": 19.907661128967817,
+      "confidence": "regional-range-candidate",
+      "recipe": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:prairie-oklahoma",
+          "name": "Central-Southern US mixed grasslands · bounded automatic",
+          "family": "prairie",
+          "biome": 8,
+          "eco": 389,
+          "lat": 36.7,
+          "lon": -98.5,
+          "area": "OKL"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "2266946293",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Populus deltoides",
+            "sources": [
+              "https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY095OK"
+            ]
+          },
+          {
+            "scientificName": "Salix nigra",
+            "sources": [
+              "https://edit.sc.egov.usda.gov/catalogs/esd/078C/R078CY095OK"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "conditional-regional-trees",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Oklahoma plants are regional ecological-site candidates, not point observations. Bottomland trees require the explicit conditional study toggle; no local drainage is measured."
+        ]
+      }
+    }
+  },
+  {
+    "id": "pampas",
+    "lat": -35.2,
+    "lon": -61.2,
+    "query": "lat=-35.2&lon=-61.2&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&conditional=0&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 576,
+      "ECO_NAME": "Humid Pampas",
+      "BIOME_NUM": 8,
+      "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands",
+      "REALM": "Neotropic",
+      "COLOR_BIO": "#FEFF73",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "AGE",
+      "name": "Argentina Northeast"
+    },
+    "palette": [],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "selected",
+      "code": "supported-regional-transfer",
+      "explanation": "Source grassland classification supports the shared open prairie recipe. Named plants are regional candidates only where a catalogue is available; woody cover is conditional.",
+      "ruleId": "prairie-pampas",
+      "distanceKm": 28.733655910378513,
+      "confidence": "biome-context-only",
+      "recipe": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:prairie-pampas",
+          "name": "Humid Pampas · bounded automatic",
+          "family": "prairie",
+          "biome": 8,
+          "eco": 576,
+          "lat": -35.2,
+          "lon": -61.2,
+          "area": "AGE"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "2718540732",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "none",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "No regional nonwoody catalogue is loaded: grass and forbs remain unnamed functional forms, with no Oklahoma woody plants or location-conditioned hills artwork imported."
+        ]
+      }
+    }
+  },
+  {
+    "id": "mongolia",
+    "lat": 47.2,
+    "lon": 107.2,
+    "query": "lat=47.2&lon=107.2&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&conditional=0&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 734,
+      "ECO_NAME": "Mongolian-Manchurian grassland",
+      "BIOME_NUM": 8,
+      "BIOME_NAME": "Temperate Grasslands, Savannas & Shrublands",
+      "REALM": "Palearctic",
+      "COLOR_BIO": "#FEFF73",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "MON",
+      "name": "Mongolia"
+    },
+    "palette": [],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "selected",
+      "code": "supported-regional-transfer",
+      "explanation": "Source grassland classification supports the shared open prairie recipe. Named plants are regional candidates only where a catalogue is available; woody cover is conditional.",
+      "ruleId": "prairie-mongolia",
+      "distanceKm": 26.90254149142836,
+      "confidence": "biome-context-only",
+      "recipe": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:prairie-mongolia",
+          "name": "Mongolian-Manchurian grassland · bounded automatic",
+          "family": "prairie",
+          "biome": 8,
+          "eco": 734,
+          "lat": 47.2,
+          "lon": 107.2,
+          "area": "MON"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "4266109296",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "none",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "No regional nonwoody catalogue is loaded: grass and forbs remain unnamed functional forms, with no Oklahoma woody plants or location-conditioned hills artwork imported."
+        ]
+      }
+    }
+  }
+]

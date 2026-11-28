@@ -13,7 +13,10 @@
     {"trialId":"boreal-siberia","realm":"Palearctic"},
     {"trialId":"tundra-alaska","realm":"Nearctic"},
     {"trialId":"tundra-chukchi","realm":"Palearctic"},
-    {"trialId":"tundra-polar","realm":"Palearctic"}
+    {"trialId":"tundra-polar","realm":"Palearctic"},
+    {"trialId":"prairie-oklahoma","realm":"Nearctic"},
+    {"trialId":"prairie-pampas","realm":"Neotropic"},
+    {"trialId":"prairie-mongolia","realm":"Palearctic"}
   ],
   "limits": [
     "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",

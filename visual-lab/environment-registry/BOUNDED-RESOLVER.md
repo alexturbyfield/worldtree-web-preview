@@ -2,6 +2,8 @@
 
 Status: **experimental, opt-in, artistically unreviewed**. This milestone selects existing recipes; it does not alter or approve their artwork.
 
+Subsequent scope: the [prairie extension](BOUNDED-PRAIRIE.md) adds three bounded areas, bringing the current policy to twelve. The original nine-area evidence below remains preserved.
+
 ## Use
 
 Open a map location, expand **Approved reference scenes → Bounded automatic resolver**, and choose **Bounded automatic · experimental**. The versioned URL flag is `autoEnvironment=bounded-auto-v1`. Back-to-map navigation and seed edits retain the opt-in. Choosing an explicit reference or study takes priority.

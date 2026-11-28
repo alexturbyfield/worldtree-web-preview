@@ -1,0 +1,325 @@
+[
+  {
+    "id": "mongolia",
+    "query": "lat=47.2&lon=107.2&habitat=grassland&seed=934713&density=36&structure=grove-1&appearance=garden&conditional=0&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "target": [
+            0,
+            27,
+            -190
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 14,
+        "triangles": 764782,
+        "textures": 8
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            38,
+            76
+          ],
+          "target": [
+            0,
+            0,
+            -24
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 14,
+        "triangles": 764782,
+        "textures": 8
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "prairie",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:prairie-mongolia",
+            "name": "Mongolian-Manchurian grassland · bounded automatic",
+            "family": "prairie",
+            "biome": 8,
+            "eco": 734,
+            "lat": 47.2,
+            "lon": 107.2,
+            "area": "MON"
+          },
+          "inputSeed": "934713",
+          "effectiveSeed": "1739527304",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "No regional nonwoody catalogue is loaded: grass and forbs remain unnamed functional forms, with no Oklahoma woody plants or location-conditioned hills artwork imported."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:prairie-mongolia",
+          "name": "Mongolian-Manchurian grassland · bounded automatic",
+          "family": "prairie",
+          "biome": 8,
+          "eco": 734,
+          "lat": 47.2,
+          "lon": 107.2,
+          "area": "MON"
+        },
+        "inputSeed": "934713",
+        "effectiveSeed": "1739527304",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "none",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "No regional nonwoody catalogue is loaded: grass and forbs remain unnamed functional forms, with no Oklahoma woody plants or location-conditioned hills artwork imported."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Source grassland classification supports the shared open prairie recipe. Named plants are regional candidates only where a catalogue is available; woody cover is conditional.",
+        "ruleId": "prairie-mongolia",
+        "distanceKm": 26.90254149142836,
+        "confidence": "biome-context-only",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:prairie-mongolia",
+            "name": "Mongolian-Manchurian grassland · bounded automatic",
+            "family": "prairie",
+            "biome": 8,
+            "eco": 734,
+            "lat": 47.2,
+            "lon": 107.2,
+            "area": "MON"
+          },
+          "inputSeed": "934713",
+          "effectiveSeed": "1739527304",
+          "eligibleTreeCandidates": [],
+          "renderedTreeIdentity": "none",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "No regional nonwoody catalogue is loaded: grass and forbs remain unnamed functional forms, with no Oklahoma woody plants or location-conditioned hills artwork imported."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "No regional nonwoody catalogue is loaded: grass and forbs remain unnamed functional forms, with no Oklahoma woody plants or location-conditioned hills artwork imported."
+      ],
+      "notices": [
+        "Automatic selection: Source grassland classification supports the shared open prairie recipe. Named plants are regional candidates only where a catalogue is available; woody cover is conditional."
+      ]
+    },
+    "backdrop": {
+      "asset": "distant-hills-v1.webp",
+      "withheldForPilot": true,
+      "geography": "Illustrated low rolling plains; synthetic artistic continuation, not measured geographic topography",
+      "inspection": "Matte hidden above 30m; physical continuous terrain remains",
+      "position": [
+        0,
+        300,
+        -1780
+      ],
+      "groundLighting": {
+        "settings": {
+          "foregroundDarkness": 0.34,
+          "sideFraming": 0.13,
+          "focalWidth": [
+            9,
+            20
+          ],
+          "transitionSoftness": 0.75,
+          "warmth": 0.08,
+          "irregularity": 0.7
+        },
+        "center": [
+          0,
+          12
+        ],
+        "forward": [
+          0,
+          -1
+        ],
+        "phase": 3.861799440841896
+      },
+      "shadow": "World-space vegetation texture, shared by terrain and understory; independent of physical tree shadows"
+    },
+    "landscape": {
+      "regionalPlants": [],
+      "communities": [
+        {
+          "x": -8.933885376900434,
+          "z": 22,
+          "rx": 3.811894698534161,
+          "rz": 8.385050919605419
+        },
+        {
+          "x": 8.371451942948624,
+          "z": 19,
+          "rx": 4.688771712128073,
+          "rz": 5.899577673990279
+        },
+        {
+          "x": -5.447304119588807,
+          "z": 16,
+          "rx": 4.058300568955019,
+          "rz": 7.021905677393079
+        },
+        {
+          "x": 7.877565196249634,
+          "z": 13,
+          "rx": 4.483611010015011,
+          "rz": 7.891962742432952
+        },
+        {
+          "x": -58.40104816574603,
+          "z": -34.33533553685993,
+          "rx": 7.242550479248166,
+          "rz": 19.677809122717008
+        },
+        {
+          "x": 30.01636534323916,
+          "z": -42.918079962953925,
+          "rx": 11.810876845382154,
+          "rz": 14.90270640118979
+        },
+        {
+          "x": -29.79864237923175,
+          "z": -50.83813001355156,
+          "rx": 9.108893691562116,
+          "rz": 16.620665640337393
+        },
+        {
+          "x": 53.73498999723233,
+          "z": -63.697228498756886,
+          "rx": 8.839387838728726,
+          "rz": 9.863850368186831
+        },
+        {
+          "x": -46.603981122374535,
+          "z": -76.47445987863466,
+          "rx": 11.595969824120402,
+          "rz": 21.081200966844335
+        },
+        {
+          "x": 72.89670260483399,
+          "z": -82.10014095017686,
+          "rx": 12.607417896389961,
+          "rz": 17.58737285179086
+        },
+        {
+          "x": -29.6210033968091,
+          "z": -91.96631764946505,
+          "rx": 8.553666942752898,
+          "rz": 22.962620539357886
+        },
+        {
+          "x": 69.55022110347636,
+          "z": -99.60591170657426,
+          "rx": 17.025755036622286,
+          "rz": 15.823402946349233
+        },
+        {
+          "x": -73.14564667618833,
+          "z": -108.0936670252122,
+          "rx": 9.689516450278461,
+          "rz": 18.23497684765607
+        },
+        {
+          "x": 10.019685086794198,
+          "z": -123.25183117482811,
+          "rx": 10.299605188891292,
+          "rz": 13.084458510158584
+        },
+        {
+          "x": -59.164687207434326,
+          "z": -130.50453432789072,
+          "rx": 9.243440233170986,
+          "rz": 21.816834217635915
+        },
+        {
+          "x": 24.670038464013487,
+          "z": -145.14217446977273,
+          "rx": 10.691422259435058,
+          "rz": 21.570661205099896
+        },
+        {
+          "x": -71.48792180093005,
+          "z": -153.20606570178643,
+          "rx": 12.784593934193254,
+          "rz": 13.443252915516496
+        },
+        {
+          "x": 34.22584208636545,
+          "z": -164.8430983624421,
+          "rx": 15.432731521315873,
+          "rz": 17.470674257958308
+        }
+      ],
+      "representation": "Existing meadow blades, seedheads, forbs and regional low-shrub growth forms; continuous broad terrain shoulders and shared pigments.",
+      "nearTerrainUnchangedWithin": 70,
+      "regionalShrubs": false,
+      "ecology": "Synthetic habitat communities; regional growth-form support does not verify point occurrences."
+    },
+    "exposure": 1.12
+  }
+]

@@ -36,6 +36,8 @@ Do not overwrite the frozen `before` evidence when checking future changes; pres
 
 The [bounded automatic resolver](BOUNDED-RESOLVER.md) now offers an opt-in transfer within nine audited regional envelopes, with explicit provenance gates and fallback reasons. Its variations remain experimental and unreviewed.
 
+The [prairie extension](BOUNDED-PRAIRIE.md) adds Oklahoma, Pampas and Mongolian steppe envelopes to that same policy (twelve total), preserving the prior rules and withholding unsupported foreign plants and location-conditioned artwork.
+
 [Representative pilot coverage is complete](COMPLETION.md): 42 audited trial locations across all fourteen existing biome families. This is an opt-in validation milestone, not global artistic approval or automatic geographic promotion.
 
 The authorized next step is available as the [opt-in geographic pilot](GEOGRAPHIC-PILOT.md): three locations each for woodland, prairie/steppe and tropical dry woodland. Its experimental evidence and remaining catalogue gaps are kept separate from these accepted checkpoints.

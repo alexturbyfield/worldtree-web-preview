@@ -1,0 +1,4 @@
+const fs=require('fs'),crypto=require('crypto'),root=__dirname+'/';
+const paths=['src/lib/forest/bounded-resolver.ts','src/lib/forest/bounded-resolver-policy.json','src/lib/forest/wave3-prairie.ts','src/components/EnvironmentReferencePanel.tsx'];
+fs.writeFileSync(root+'freeze.json',JSON.stringify({at:new Date().toISOString(),holdoutSeed:'934713',files:paths.map(path=>({path,sha256:crypto.createHash('sha256').update(fs.readFileSync(path)).digest('hex')}))},null,2));
+const old=fs.readFileSync('artifacts/bounded-resolver/capture.cjs','utf8').replace("root='artifacts/bounded-resolver',cases=require('./cases.json')","root='artifacts/bounded-prairie/previous',cases=require('../bounded-resolver/cases.json').filter(c=>['germany','finland','alaska'].includes(c.id))");fs.writeFileSync(root+'previous-capture.cjs',old);

@@ -1,0 +1,22 @@
+{
+  "at": "2026-11-28T14:47:10.987Z",
+  "holdoutSeed": "934713",
+  "files": [
+    {
+      "path": "src/lib/forest/bounded-resolver.ts",
+      "sha256": "579b87f191b030e53db9381f3823165ed66e1cc0eb1dbda97f32e28c268e6f18"
+    },
+    {
+      "path": "src/lib/forest/bounded-resolver-policy.json",
+      "sha256": "c2b1f64ebc3ff15cff4d1b0b846f674e4f90e12172b75a96bfd2ded12526e97d"
+    },
+    {
+      "path": "src/lib/forest/wave3-prairie.ts",
+      "sha256": "380901e6bc70bcb4bbf28e655745070af22dae4424b5a8949d8be8095816a275"
+    },
+    {
+      "path": "src/components/EnvironmentReferencePanel.tsx",
+      "sha256": "8f5e8fe77af017ac54d4d1e39c6f87e3048bc3769d7ead6a855a6186814eb1e2"
+    }
+  ]
+}

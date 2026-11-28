@@ -7,6 +7,7 @@ export interface BoundedContext extends PilotContext {
  ecoregion:(NonNullable<PilotContext['ecoregion']>&{REALM:string;ECO_NAME?:string})|null;
  botanicalArea?:{code:string;name:string}|null;
  ecologicalStatus?:string;requestedTreeCount?:number;
+ conditionalStudy?:boolean;
  trees?:{species:{scientificName:string|null}}[];
 }
 export interface AutomaticDecision {
@@ -44,19 +45,21 @@ export function resolveBoundedEnvironment(r:BoundedContext,search:string):Automa
  if(!r.botanicalArea?.code)return stop('missing-botanical-area','The botanical-country lookup is missing; no nearest-country substitution is made.');
  if(r.environment?.unvalidated.length)return stop('unmeasured-filter','Requested environmental filters lack observations; automatic selection is withheld.');
  const rules=policy.rules.map(rule=>({rule,trial:geographicPilotSites.find(site=>site.id===rule.trialId)!}));
- const match=rules.find(({rule,trial})=>['temperate','boreal','tundra'].includes(trial.family)&&trial.eco===g.ECO_ID&&trial.biome===g.BIOME_NUM&&rule.realm===g.REALM&&trial.area===r.botanicalArea!.code);
+ const match=rules.find(({rule,trial})=>['temperate','boreal','tundra','prairie'].includes(trial.family)&&trial.eco===g.ECO_ID&&trial.biome===g.BIOME_NUM&&rule.realm===g.REALM&&trial.area===r.botanicalArea!.code);
  if(!match)return base;
  const {rule,trial}=match,distanceKm=geographicDistanceKm(p,trial);
  if(distanceKm>policy.maxTrialDistanceKm)return {...stop('outside-distance','The location is beyond this rule’s tested rollout envelope; retaining the existing fallback.'),ruleId:rule.trialId,distanceKm};
  const habitat=r.habitat??q.get('habitat')??'forest';
- if(trial.family==='tundra'?!['forest','grassland'].includes(habitat):habitat!=='forest')return stop('unsupported-habitat','This habitat is not supported by the selected bounded rule.');
- const candidates=trial.family==='tundra'?[]:regionalCandidates(r,trial.family);
- if(trial.family!=='tundra'&&!candidates.length)return stop('unsupported-architecture','No supported tree architecture is backed by the actual resolved regional palette.');
+ const openCover=trial.family==='tundra'||trial.family==='prairie';
+ if(openCover?!['forest','grassland'].includes(habitat):habitat!=='forest')return stop('unsupported-habitat','This habitat is not supported by the selected bounded rule.');
+ const candidates=trial.family==='tundra'?[]:trial.family==='prairie'?
+  (trial.eco===389&&r.conditionalStudy?regionalCandidates(r,trial.family).filter(c=>r.landCover?.some(p=>p.growthForm==='tree'&&p.renderEligible&&p.scientificName===c.scientificName)):[]):regionalCandidates(r,trial.family);
+ if(!openCover&&!candidates.length)return stop('unsupported-architecture','No supported tree architecture is backed by the actual resolved regional palette.');
  const names=new Set(candidates.map(c=>c.scientificName));
- if(trial.family!=='tundra'&&(r.requestedTreeCount??0)>0&&r.trees&&!r.trees.some(t=>t.species.scientificName&&names.has(t.species.scientificName)))return stop('missing-drawable-source','The input scene has no drawable supported regional tree source.');
+ if(!openCover&&(r.requestedTreeCount??0)>0&&r.trees&&!r.trees.some(t=>t.species.scientificName&&names.has(t.species.scientificName)))return stop('missing-drawable-source','The input scene has no drawable supported regional tree source.');
  const inputSeed=q.get('seed')??'42',tile=geographicRecipeTile(p);
- const recipe:RegionalRecipeSelection={schemaVersion:1,version:'bounded-auto-v1',status:'experimental-unreviewed',site:{...trial,id:'auto:'+rule.trialId,name:(g.ECO_NAME??trial.name)+' · bounded automatic',lat:p.lat,lon:p.lon},inputSeed,effectiveSeed:String(hashSeed(inputSeed+'|bounded-auto-v1|'+trial.family+'|'+g.ECO_ID+'|'+r.botanicalArea.code+'|'+tile)),eligibleTreeCandidates:candidates,renderedTreeIdentity:trial.family==='tundra'?'none':'regional-candidate-architecture',limitations:[...policy.limits,'Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.','The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.']};
- return {...base,status:'selected',code:'supported-regional-transfer',explanation:trial.family==='tundra'?'Source tundra classification supports a treeless low-cover study; no named local flora are asserted.':'Regional candidate and architecture checks passed; the matching shared forest recipe is selected.',ruleId:rule.trialId,distanceKm,confidence:trial.family==='tundra'?'biome-context-only':'regional-range-candidate',recipe};
+ const recipe:RegionalRecipeSelection={schemaVersion:1,version:'bounded-auto-v1',status:'experimental-unreviewed',site:{...trial,id:'auto:'+rule.trialId,name:(g.ECO_NAME??trial.name)+' · bounded automatic',lat:p.lat,lon:p.lon},inputSeed,effectiveSeed:String(hashSeed(inputSeed+'|bounded-auto-v1|'+trial.family+'|'+g.ECO_ID+'|'+r.botanicalArea.code+'|'+tile)),eligibleTreeCandidates:candidates,renderedTreeIdentity:trial.family==='tundra'?'none':trial.family==='prairie'?(candidates.length?'conditional-regional-trees':'none'):'regional-candidate-architecture',limitations:[...policy.limits,'Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.','The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.',...(trial.family==='prairie'?[trial.eco===389?'Oklahoma plants are regional ecological-site candidates, not point observations. Bottomland trees require the explicit conditional study toggle; no local drainage is measured.':'No regional nonwoody catalogue is loaded: grass and forbs remain unnamed functional forms, with no Oklahoma woody plants or location-conditioned hills artwork imported.']:[])]};
+ return {...base,status:'selected',code:'supported-regional-transfer',explanation:trial.family==='tundra'?'Source tundra classification supports a treeless low-cover study; no named local flora are asserted.':trial.family==='prairie'?'Source grassland classification supports the shared open prairie recipe. Named plants are regional candidates only where a catalogue is available; woody cover is conditional.':'Regional candidate and architecture checks passed; the matching shared forest recipe is selected.',ruleId:rule.trialId,distanceKm,confidence:openCover&&!candidates.length?'biome-context-only':'regional-range-candidate',recipe};
 }
 
 /** Forward only the recognized explicit opt-in through ordinary map navigation. */
