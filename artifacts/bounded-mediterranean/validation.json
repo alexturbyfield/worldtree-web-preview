@@ -1,0 +1,76 @@
+{
+  "checks": [
+    {
+      "name": "ten protected images unchanged",
+      "pass": true
+    },
+    {
+      "name": "frozen source unchanged",
+      "pass": true
+    },
+    {
+      "name": "regional matte withheld at all new points",
+      "pass": true
+    },
+    {
+      "name": "no rendering errors",
+      "pass": true
+    },
+    {
+      "name": "cork hero uses source-backed cork oak",
+      "pass": true
+    }
+  ],
+  "parity": [
+    {
+      "id": "prairie",
+      "view": "hero",
+      "changedChannels": 0
+    },
+    {
+      "id": "prairie",
+      "view": "inspection",
+      "changedChannels": 0
+    },
+    {
+      "id": "mediterranean",
+      "view": "hero",
+      "changedChannels": 0
+    },
+    {
+      "id": "mediterranean",
+      "view": "inspection",
+      "changedChannels": 0
+    },
+    {
+      "id": "oklahoma",
+      "view": "hero",
+      "changedChannels": 0
+    },
+    {
+      "id": "oklahoma",
+      "view": "inspection",
+      "changedChannels": 0
+    },
+    {
+      "id": "pampas",
+      "view": "hero",
+      "changedChannels": 0
+    },
+    {
+      "id": "pampas",
+      "view": "inspection",
+      "changedChannels": 0
+    },
+    {
+      "id": "mongolia",
+      "view": "hero",
+      "changedChannels": 0
+    },
+    {
+      "id": "mongolia",
+      "view": "inspection",
+      "changedChannels": 0
+    }
+  ]
+}

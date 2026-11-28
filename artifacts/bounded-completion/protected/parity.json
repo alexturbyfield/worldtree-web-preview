@@ -1,0 +1,272 @@
+[
+  {
+    "id": "puget",
+    "view": "hero",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "puget",
+    "view": "inspection",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "savanna",
+    "view": "hero",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "savanna",
+    "view": "inspection",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "rainforest",
+    "view": "hero",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "rainforest",
+    "view": "inspection",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "alpine",
+    "view": "hero",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "alpine",
+    "view": "inspection",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "desert",
+    "view": "hero",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "desert",
+    "view": "inspection",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "mangrove",
+    "view": "hero",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "mangrove",
+    "view": "inspection",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "flooded-grassland",
+    "view": "hero",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "flooded-grassland",
+    "view": "inspection",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "boreal",
+    "view": "hero",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "boreal",
+    "view": "inspection",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "temperate-woodland",
+    "view": "hero",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "temperate-woodland",
+    "view": "inspection",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "tundra",
+    "view": "hero",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "tundra",
+    "view": "inspection",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "prairie",
+    "view": "hero",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "prairie",
+    "view": "inspection",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "mediterranean",
+    "view": "hero",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "mediterranean",
+    "view": "inspection",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "tropical-dry-forest",
+    "view": "hero",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "tropical-dry-forest",
+    "view": "inspection",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "andean-puna",
+    "view": "hero",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "andean-puna",
+    "view": "inspection",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "tropical-pine-oak",
+    "view": "hero",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  },
+  {
+    "id": "tropical-pine-oak",
+    "view": "inspection",
+    "changedChannels": 0,
+    "maxDelta": 0,
+    "meanDelta": 0,
+    "geometryIdentical": true,
+    "errors": []
+  }
+]

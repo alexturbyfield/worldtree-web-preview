@@ -1,0 +1,2318 @@
+[
+  {
+    "id": "dryforest-costa-rica",
+    "family": "dryforest",
+    "query": "lat=10.69&lon=-85.49&habitat=forest&seed=29&density=24&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "target": [
+            0,
+            2.3,
+            -55
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 4,
+        "triangles": 148364,
+        "textures": 5,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 4,
+        "triangles": 148364,
+        "textures": 5,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "dryforest-nicaragua",
+    "family": "dryforest",
+    "query": "lat=12.56&lon=-86.28&habitat=forest&seed=29&density=24&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "target": [
+            0,
+            2.3,
+            -55
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 4,
+        "triangles": 148364,
+        "textures": 5,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 4,
+        "triangles": 148364,
+        "textures": 5,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "dryforest-mexico",
+    "family": "dryforest",
+    "query": "lat=19.66&lon=-104.78&habitat=forest&seed=29&density=24&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "target": [
+            0,
+            2.3,
+            -55
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 5,
+        "triangles": 194708,
+        "textures": 6,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 5,
+        "triangles": 194708,
+        "textures": 6,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "mangrove-florida",
+    "family": "mangrove",
+    "query": "lat=25.2&lon=-80.66000000000001&habitat=coastal&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            -72,
+            2.3016966177345597,
+            54
+          ],
+          "target": [
+            -72,
+            1.4016966177345598,
+            -16
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 4,
+        "triangles": 251684,
+        "textures": 5,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 4,
+        "triangles": 251684,
+        "textures": 5,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "mangrove-gabon",
+    "family": "mangrove",
+    "query": "lat=-0.04864028999997572&lon=9.57893832629247&habitat=coastal&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            -90,
+            2.2758045313371698,
+            27
+          ],
+          "target": [
+            -139.49747468305833,
+            1.3758045313371698,
+            -22.497474683058314
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 0,
+        "triangles": 0,
+        "textures": 5,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 4,
+        "triangles": 251684,
+        "textures": 5,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "mangrove-sundarbans",
+    "family": "mangrove",
+    "query": "lat=22.320026979000122&lon=89.23163382745804&habitat=coastal&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            72,
+            2.105860987605833,
+            -72
+          ],
+          "target": [
+            121.49747468305833,
+            1.2058609876058333,
+            -22.50252531694168
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 0,
+        "triangles": 0,
+        "textures": 5,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 4,
+        "triangles": 496340,
+        "textures": 5,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "rainforest-amazon",
+    "family": "rainforest",
+    "query": "lat=-3.24&lon=-60.18&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7113312248985764,
+            34
+          ],
+          "target": [
+            0,
+            6.098038692484603,
+            -55
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 9,
+        "triangles": 185112,
+        "textures": 11,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 10,
+        "triangles": 186192,
+        "textures": 11,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": {
+        "id": "rainforest",
+        "name": "Amazon rainforest",
+        "version": "accepted-v1"
+      },
+      "route": {
+        "kind": "profile",
+        "adapter": "amazon",
+        "sceneId": "rainforest"
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "geographic",
+      "checkpoint": {
+        "id": "rainforest-accepted-v1",
+        "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+        "exactSettings": false
+      },
+      "vegetationCoverage": "mixed",
+      "individualInspection": true,
+      "referenceLocation": {
+        "lat": -3.12,
+        "lon": -60.02
+      },
+      "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+      "limits": [
+        "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+        "Synthetic terrain and materials are not measured land cover.",
+        "Reference lighting and matte camera envelopes remain adapter-specific.",
+        "Mobile performance and unreviewed variations are not approved."
+      ],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "rainforest-congo",
+    "family": "rainforest",
+    "query": "lat=-0.5729600919999279&lon=10.656357117199981&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.8348752717844115,
+            34
+          ],
+          "target": [
+            0,
+            5.9764869196253665,
+            -55
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 5,
+        "triangles": 313136,
+        "textures": 6,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 5,
+        "triangles": 313136,
+        "textures": 6,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "rainforest-borneo",
+    "family": "rainforest",
+    "query": "lat=1.6525973095000699&lon=112.94353468527072&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.6036911779965826,
+            34
+          ],
+          "target": [
+            0,
+            5.893730944491375,
+            -55
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 6,
+        "triangles": 335564,
+        "textures": 7,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 6,
+        "triangles": 335564,
+        "textures": 7,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "tropicalpine-guatemala",
+    "family": "tropicalpine",
+    "query": "lat=14.667672&lon=-89.31579699999999&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.9994833630735611,
+            34
+          ],
+          "target": [
+            0,
+            2.9608721686848507,
+            -55
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 4,
+        "triangles": 221732,
+        "textures": 5,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 4,
+        "triangles": 221732,
+        "textures": 5,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "tropicalpine-cuba",
+    "family": "tropicalpine",
+    "query": "lat=22.59424454550015&lon=-84.06066863974115&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7740648407289943,
+            34
+          ],
+          "target": [
+            0,
+            3.105167121722853,
+            -55
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 4,
+        "triangles": 221732,
+        "textures": 5,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 4,
+        "triangles": 221732,
+        "textures": 5,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "tropicalpine-himalaya",
+    "family": "tropicalpine",
+    "query": "lat=33.847498776500174&lon=73.9593963929189&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.5907862928537442,
+            34
+          ],
+          "target": [
+            0,
+            3.2082214086526597,
+            -55
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 4,
+        "triangles": 322748,
+        "textures": 5,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 4,
+        "triangles": 322748,
+        "textures": 5,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "conifer-puget",
+    "family": "conifer",
+    "query": "lat=47.7662&lon=-122.21209999999999&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.743921151086324,
+            34
+          ],
+          "target": [
+            0,
+            3.2599222046719776,
+            -30
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 9,
+        "triangles": 265748,
+        "textures": 10,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 9,
+        "triangles": 265748,
+        "textures": 10,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": {
+        "id": "puget",
+        "name": "Puget woodland",
+        "version": "accepted-v1"
+      },
+      "route": {
+        "kind": "profile",
+        "adapter": "puget",
+        "sceneId": "puget"
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "geographic",
+      "checkpoint": {
+        "id": "puget-accepted-v1",
+        "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+        "exactSettings": false
+      },
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": {
+        "lat": 47.6062,
+        "lon": -122.3321
+      },
+      "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+      "limits": [
+        "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+        "Synthetic terrain and materials are not measured land cover.",
+        "Reference lighting and matte camera envelopes remain adapter-specific.",
+        "Mobile performance and unreviewed variations are not approved."
+      ],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "conifer-alps",
+    "family": "conifer",
+    "query": "lat=46.25422194250015&lon=10.729839209495617&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.6544672708601202,
+            34
+          ],
+          "target": [
+            0,
+            3.3071201423741106,
+            -30
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 6,
+        "triangles": 258146,
+        "textures": 7,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 6,
+        "triangles": 258146,
+        "textures": 7,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "conifer-bc",
+    "family": "conifer",
+    "query": "lat=53.00538420850012&lon=-127.17099170961274&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.9596763206180334,
+            34
+          ],
+          "target": [
+            0,
+            3.2056416384630433,
+            -30
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 7,
+        "triangles": 295452,
+        "textures": 8,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 7,
+        "triangles": 295452,
+        "textures": 8,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "savanna-tanzania",
+    "family": "savanna",
+    "query": "lat=-2.1399999999999997&lon=35.32&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "target": [
+            0,
+            27,
+            -190
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": {
+        "id": "savanna",
+        "name": "East African savanna",
+        "version": "accepted-v1"
+      },
+      "route": {
+        "kind": "profile",
+        "adapter": "savanna",
+        "sceneId": "savanna"
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "geographic",
+      "checkpoint": {
+        "id": "savanna-accepted-v1",
+        "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+        "exactSettings": false
+      },
+      "vegetationCoverage": "mixed",
+      "individualInspection": true,
+      "referenceLocation": {
+        "lat": -2.3,
+        "lon": 35.2
+      },
+      "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+      "limits": [
+        "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+        "Synthetic terrain and materials are not measured land cover.",
+        "Reference lighting and matte camera envelopes remain adapter-specific.",
+        "Mobile performance and unreviewed variations are not approved."
+      ],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "savanna-cerrado",
+    "family": "savanna",
+    "query": "lat=-14.964225762999941&lon=-53.44781811810714&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "target": [
+            0,
+            27,
+            -190
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "savanna-arnhem",
+    "family": "savanna",
+    "query": "lat=-12.688173361499903&lon=133.53901648916127&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "target": [
+            0,
+            27,
+            -190
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "flooded-everglades",
+    "family": "flooded",
+    "query": "lat=26.36995741900012&lon=-80.81838259249979&habitat=wetland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            -9,
+            1.8407474414428857,
+            -27
+          ],
+          "target": [
+            -58.497474683058336,
+            0.9407474414428859,
+            -76.49747468305831
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "flooded-pantanal",
+    "family": "flooded",
+    "query": "lat=-18.599949358999904&lon=-56.27052109683886&habitat=wetland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            9,
+            1.9576426112233454,
+            0
+          ],
+          "target": [
+            -40.497474683058336,
+            1.0576426112233455,
+            -49.497474683058314
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "flooded-niger",
+    "family": "flooded",
+    "query": "lat=15.377014018000043&lon=-4.165552269107671&habitat=wetland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            -27,
+            1.8028408242659715,
+            18
+          ],
+          "target": [
+            -97,
+            0.9028408242659716,
+            18.000000000000014
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "montane-peru",
+    "family": "montane",
+    "query": "lat=-9.72&lon=-77.07&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "target": [
+            3,
+            -12,
+            -150
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "montane-ethiopia",
+    "family": "montane",
+    "query": "lat=11.089166666500086&lon=39.0758333335001&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "target": [
+            3,
+            -12,
+            -150
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "montane-altai",
+    "family": "montane",
+    "query": "lat=49.81422753150014&lon=87.46323418135184&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            34
+          ],
+          "target": [
+            3,
+            -12,
+            -150
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "desert-mojave",
+    "family": "desert",
+    "query": "lat=34.16&lon=-116.03&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            36,
+            3.4297281211795654,
+            -45
+          ],
+          "target": [
+            106,
+            2.5297281211795655,
+            -45.00000000000001
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "desert-atacama",
+    "family": "desert",
+    "query": "lat=-22.199061640499902&lon=-69.21837508798245&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            72,
+            3.580617747949578,
+            18
+          ],
+          "target": [
+            22.502525316941664,
+            2.6806177479495776,
+            -31.497474683058314
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "desert-namib",
+    "family": "desert",
+    "query": "lat=-23.816386401999946&lon=15.19421681101925&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            9,
+            2.833600862026394,
+            -54
+          ],
+          "target": [
+            -40.497474683058336,
+            1.9336008620263943,
+            -103.49747468305831
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            62,
+            40,
+            76
+          ],
+          "target": [
+            0,
+            2,
+            -24
+          ],
+          "fov": 47,
+          "far": 350
+        },
+        "calls": 2,
+        "triangles": 2060,
+        "textures": 3,
+        "mattes": []
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "generic",
+        "adapter": "generic",
+        "sceneId": null
+      },
+      "pilot": null,
+      "regional": null,
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "fallback",
+        "code": "outside-rollout",
+        "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+        "ruleId": null,
+        "distanceKm": null,
+        "confidence": "not-established",
+        "recipe": null
+      },
+      "mode": "generic",
+      "checkpoint": null,
+      "vegetationCoverage": "canonical",
+      "individualInspection": true,
+      "referenceLocation": null,
+      "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+      "limits": [],
+      "notices": [
+        "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+      ]
+    },
+    "exposure": 1.12
+  }
+]

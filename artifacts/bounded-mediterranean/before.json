@@ -1,0 +1,366 @@
+[
+  {
+    "id": "france",
+    "lat": 43.85,
+    "lon": 3.75,
+    "query": "lat=43.85&lon=3.75&habitat=forest&seed=29&density=36&structure=mediterranean-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 799,
+      "ECO_NAME": "Northeast Spain and Southern France Mediterranean forests",
+      "BIOME_NUM": 12,
+      "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub",
+      "REALM": "Palearctic",
+      "COLOR_BIO": "#FE0000",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "FRA",
+      "name": "France"
+    },
+    "palette": [
+      {
+        "scientificName": "Picea abies",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262609-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Buxus sempervirens",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:340317-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Fagus sylvatica",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:305836-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Ostrya carpinifolia",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295664-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Juglans hispanica",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:20002602-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Pinus sylvestris",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263353-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Pinus pinea",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263221-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Quercus suber",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "× Arsorbus thuringiaca",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77354226-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Betula pendula",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Laburnum alpinum",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:501425-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Quercus ilex",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296290-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      }
+    ],
+    "drawableNames": [
+      "Pinus pinea",
+      "Juglans hispanica",
+      "Fagus sylvatica",
+      "× Arsorbus thuringiaca",
+      "Quercus suber",
+      "Laburnum alpinum",
+      "Buxus sempervirens",
+      "Betula pendula",
+      "Pinus sylvestris",
+      "Picea abies",
+      "Quercus ilex"
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "portugal",
+    "lat": 38.5,
+    "lon": -8.4,
+    "query": "lat=38.5&lon=-8.4&habitat=forest&seed=29&density=36&structure=mediterranean-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 805,
+      "ECO_NAME": "Southwest Iberian Mediterranean sclerophyllous and mixed forests",
+      "BIOME_NUM": 12,
+      "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub",
+      "REALM": "Palearctic",
+      "COLOR_BIO": "#FE0000",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "POR",
+      "name": "Portugal"
+    },
+    "palette": [
+      {
+        "scientificName": "Rhus coriaria",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:70477-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Buxus sempervirens",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:340317-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Quercus ilex",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296290-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Pinus pinea",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263221-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Quercus suber",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Erica scoparia",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:329579-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Quercus robur",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:304293-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Betula pubescens",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295185-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Betula pendula",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      }
+    ],
+    "drawableNames": [
+      "Betula pendula",
+      "Quercus robur",
+      "Quercus suber",
+      "Quercus ilex",
+      "Erica scoparia",
+      "Betula pubescens",
+      "Buxus sempervirens",
+      "Pinus pinea",
+      "Rhus coriaria"
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "italy",
+    "lat": 42.8,
+    "lon": 12.1,
+    "query": "lat=42.8&lon=12.1&habitat=forest&seed=29&density=36&structure=mediterranean-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 795,
+      "ECO_NAME": "Italian sclerophyllous and semi-deciduous forests",
+      "BIOME_NUM": 12,
+      "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub",
+      "REALM": "Palearctic",
+      "COLOR_BIO": "#FE0000",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "ITA",
+      "name": "Italy"
+    },
+    "palette": [
+      {
+        "scientificName": "Laburnum alpinum",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:501425-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Betula pendula",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Ostrya carpinifolia",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295664-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Picea abies",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262609-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Buxus sempervirens",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:340317-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Paliurus spina-christi",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:717707-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Pinus pinea",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263221-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Cormus domestica",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:722386-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Quercus suber",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Juglans hispanica",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:20002602-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Quercus ilex",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296290-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Fagus sylvatica",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:305836-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      }
+    ],
+    "drawableNames": [
+      "Pinus pinea",
+      "Buxus sempervirens",
+      "Ostrya carpinifolia",
+      "Quercus suber",
+      "Cormus domestica",
+      "Quercus ilex",
+      "Betula pendula",
+      "Juglans hispanica",
+      "Paliurus spina-christi",
+      "Laburnum alpinum",
+      "Fagus sylvatica"
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  }
+]

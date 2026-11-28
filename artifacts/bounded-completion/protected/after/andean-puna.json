@@ -1,0 +1,181 @@
+{
+  "hero": {
+    "position": [
+      0,
+      1.7,
+      34
+    ],
+    "quaternion": [
+      -0.03714499174327802,
+      -0.008145735650401822,
+      -0.0003027923110738257,
+      0.999276640823712
+    ],
+    "aspect": 1.7777777777777777,
+    "fov": 47
+  },
+  "inspection": {
+    "position": [
+      62,
+      38,
+      76
+    ],
+    "target": [
+      0,
+      2,
+      -24
+    ]
+  },
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          0,
+          1.7,
+          34
+        ],
+        "quaternion": [
+          -0.03714499174327802,
+          -0.008145735650401822,
+          -0.0003027923110738257,
+          0.999276640823712
+        ]
+      },
+      "calls": 21,
+      "triangles": 2268504
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          62,
+          38,
+          76
+        ],
+        "quaternion": [
+          -0.14225669339427574,
+          0.2709366497614252,
+          0.04052142593573312,
+          0.9511647486322844
+        ]
+      },
+      "calls": 19,
+      "triangles": 2268500
+    }
+  ],
+  "assets": [
+    {
+      "url": "/assets/andean-puna/bark-albedo.webp",
+      "sha256": "c9a5b68a2616fe64916507dc12ea7c9b4635fefb4818859169d8eb3b579ce58a"
+    },
+    {
+      "url": "/assets/andean-puna/bark-normal.png",
+      "sha256": "e68408ff0ac6de2651f86cdb08c83d555097e17b621924334d4077cc79046fa9"
+    },
+    {
+      "url": "/assets/andean-puna/bark-roughness.png",
+      "sha256": "7d8cfb986e662e3b082b71e3f8f9ecc8355e7413c5890798501b295bfb752412"
+    },
+    {
+      "url": "/assets/andean-puna/cover-albedo.webp",
+      "sha256": "e6c9f85452dfe0ddbf4e84be9da8a4600245afe97c0a3c33bc96185d441d653d"
+    },
+    {
+      "url": "/assets/andean-puna/cover-normal.png",
+      "sha256": "858ba9d3a50281d5142750e4bcbb0e9e47920b0912d196ff6d5af15b02f15649"
+    },
+    {
+      "url": "/assets/andean-puna/cover-roughness.png",
+      "sha256": "a84f1b5d7ae77ff7eb0ad81a9593cc44b9fa5be84455c3219e47c98fb15894bc"
+    },
+    {
+      "url": "/assets/andean-puna/distance.png",
+      "sha256": "5469c77b31cc2d96a884a05faac92e5b73bcfc09c40cca1e561b666f8d30123f"
+    },
+    {
+      "url": "/assets/andean-puna/rock-albedo.webp",
+      "sha256": "412db3c5d6f91256921b442ba8e8b887de26d3f02e661ffb719fcd54b77baf31"
+    },
+    {
+      "url": "/assets/andean-puna/rock-normal.png",
+      "sha256": "ddb6e790e3e9be380cfd4de4734f912872d478ae6377ec4554c3d6c71d060576"
+    },
+    {
+      "url": "/assets/andean-puna/rock-roughness.png",
+      "sha256": "7241e63b4f6df7cbc29d68bf61910e8123c5470b3a8b07b763d4a9d61562ea33"
+    },
+    {
+      "url": "/assets/andean-puna/soil-albedo.webp",
+      "sha256": "32f93e589859153838d319e20fe69c4cf2bcf501886cc771cd928c75f82f288e"
+    },
+    {
+      "url": "/assets/andean-puna/soil-normal.png",
+      "sha256": "ba4608fc46fc6172a422577b8c491fd0953e1ae94a0234b844ea3111abee9bff"
+    },
+    {
+      "url": "/assets/andean-puna/soil-roughness.png",
+      "sha256": "1081d4ee8b475d2907e03c90ac3cf349c86bd90d52d6ca774f2b35fd72e4c7a2"
+    },
+    {
+      "url": "/assets/puget-v1/sky-matte-v1.webp",
+      "sha256": "7dfd37620bba81645f3209779e065ee06051a941cef2bf0c483cca4437d15118"
+    }
+  ],
+  "exposure": 1.12,
+  "toneMapping": 4,
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": "andean-puna",
+    "selectedScene": {
+      "id": "andean-puna",
+      "name": "Andean puna grassland",
+      "version": "accepted-v1"
+    },
+    "route": {
+      "kind": "wave",
+      "adapter": "andean",
+      "sceneId": "andean-puna",
+      "variant": "original"
+    },
+    "pilot": null,
+    "regional": null,
+    "automatic": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "protected-reference",
+      "code": "protected-reference",
+      "explanation": "The accepted reference settings take priority; their existing renderer is preserved.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    },
+    "mode": "reference",
+    "checkpoint": {
+      "id": "andean-puna-accepted-v1",
+      "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+      "exactSettings": true
+    },
+    "vegetationCoverage": "adapter-generated",
+    "individualInspection": false,
+    "referenceLocation": {
+      "lat": -9.88,
+      "lon": -77.19
+    },
+    "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+    "limits": [
+      "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+      "Synthetic terrain and materials are not measured land cover.",
+      "Reference lighting and matte camera envelopes remain adapter-specific.",
+      "Mobile performance and unreviewed variations are not approved."
+    ],
+    "notices": [
+      "Automatic selection: The accepted reference settings take priority; their existing renderer is preserved."
+    ]
+  },
+  "errors": [],
+  "id": "andean-puna",
+  "sourceVersion": "6b3900225861ce2b0a6af0e5188d985335b1ba4a",
+  "query": "lat=-9.88&lon=-77.19&habitat=forest&seed=29&density=24&structure=grove-1&appearance=garden&wind=0&mode=painterly&expansion=andean&referenceScene=andean-puna&autoEnvironment=bounded-auto-v1"
+}

@@ -1,0 +1,84 @@
+{
+  "id": "desert-namib",
+  "family": "desert",
+  "query": "lat=-23.816386401999946&lon=15.19421681101925&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+  "errors": [],
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          9,
+          2.833600862026394,
+          -54
+        ],
+        "target": [
+          -40.497474683058336,
+          1.9336008620263943,
+          -103.49747468305831
+        ],
+        "fov": 47,
+        "far": 350
+      },
+      "calls": 2,
+      "triangles": 2060,
+      "textures": 3,
+      "mattes": []
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          62,
+          40,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ],
+        "fov": 47,
+        "far": 350
+      },
+      "calls": 2,
+      "triangles": 2060,
+      "textures": 3,
+      "mattes": []
+    }
+  ],
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": null,
+    "selectedScene": null,
+    "route": {
+      "kind": "generic",
+      "adapter": "generic",
+      "sceneId": null
+    },
+    "pilot": null,
+    "regional": null,
+    "automatic": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    },
+    "mode": "generic",
+    "checkpoint": null,
+    "vegetationCoverage": "canonical",
+    "individualInspection": true,
+    "referenceLocation": null,
+    "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+    "limits": [],
+    "notices": [
+      "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+    ]
+  },
+  "exposure": 1.12
+}

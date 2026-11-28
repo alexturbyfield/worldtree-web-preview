@@ -1,0 +1,344 @@
+{
+  "id": "conifer-bc",
+  "family": "conifer",
+  "query": "lat=53.00538420850012&lon=-127.17099170961274&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+  "errors": [],
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          0,
+          1.9596763206180334,
+          34
+        ],
+        "target": [
+          0,
+          3.2056416384630433,
+          -30
+        ],
+        "fov": 47,
+        "far": 2500
+      },
+      "calls": 15,
+      "triangles": 672262,
+      "textures": 10,
+      "mattes": []
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          62,
+          40,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ],
+        "fov": 47,
+        "far": 2500
+      },
+      "calls": 15,
+      "triangles": 672262,
+      "textures": 10,
+      "mattes": []
+    }
+  ],
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": null,
+    "selectedScene": null,
+    "route": {
+      "kind": "wave",
+      "adapter": "conifer",
+      "sceneId": null,
+      "variant": "original",
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:conifer-bc",
+          "name": "British Columbia coastal conifer forests · bounded automatic",
+          "family": "conifer",
+          "biome": 5,
+          "eco": 349,
+          "lat": 53.00538420850012,
+          "lon": -127.17099170961274,
+          "area": "BRC"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "940153432",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Picea sitchensis",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:676986-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Picea laxa",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195881-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Pinus ponderosa",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:307165-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Populus tremuloides",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:208337-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Abies amabilis",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325658-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Genus-conditioned conifer structure and shared needle artwork are approximations; local canopy composition is unverified."
+        ]
+      }
+    },
+    "pilot": null,
+    "regional": {
+      "schemaVersion": 1,
+      "version": "bounded-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:conifer-bc",
+        "name": "British Columbia coastal conifer forests · bounded automatic",
+        "family": "conifer",
+        "biome": 5,
+        "eco": 349,
+        "lat": 53.00538420850012,
+        "lon": -127.17099170961274,
+        "area": "BRC"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "940153432",
+      "eligibleTreeCandidates": [
+        {
+          "scientificName": "Picea sitchensis",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:676986-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Picea laxa",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195881-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Pinus ponderosa",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:307165-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Populus tremuloides",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:208337-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Abies amabilis",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325658-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        }
+      ],
+      "renderedTreeIdentity": "regional-candidate-architecture",
+      "limitations": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Genus-conditioned conifer structure and shared needle artwork are approximations; local canopy composition is unverified."
+      ]
+    },
+    "automatic": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "selected",
+      "code": "supported-regional-transfer",
+      "explanation": "Regional candidate and architecture checks passed; the matching shared forest recipe is selected.",
+      "ruleId": "conifer-bc",
+      "distanceKm": 19.525215445652847,
+      "confidence": "regional-range-candidate",
+      "recipe": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:conifer-bc",
+          "name": "British Columbia coastal conifer forests · bounded automatic",
+          "family": "conifer",
+          "biome": 5,
+          "eco": 349,
+          "lat": 53.00538420850012,
+          "lon": -127.17099170961274,
+          "area": "BRC"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "940153432",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Picea sitchensis",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:676986-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Picea laxa",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195881-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Pinus ponderosa",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:307165-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Populus tremuloides",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:208337-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Abies amabilis",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325658-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Genus-conditioned conifer structure and shared needle artwork are approximations; local canopy composition is unverified."
+        ]
+      }
+    },
+    "mode": "automatic",
+    "checkpoint": null,
+    "vegetationCoverage": "adapter-generated",
+    "individualInspection": false,
+    "referenceLocation": null,
+    "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+    "limits": [
+      "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+      "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+      "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+      "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+      "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+      "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+      "Genus-conditioned conifer structure and shared needle artwork are approximations; local canopy composition is unverified."
+    ],
+    "notices": [
+      "Automatic selection: Regional candidate and architecture checks passed; the matching shared forest recipe is selected."
+    ]
+  },
+  "wave": {
+    "id": "boreal",
+    "biome": 6,
+    "version": "global-expansion-prototype-1",
+    "plan": {
+      "id": "boreal",
+      "biome": 6,
+      "seed": "940153432",
+      "phase": 5.091126653654713,
+      "relief": 0.65,
+      "camera": {
+        "position": [
+          0,
+          1.9596763206180334,
+          34
+        ],
+        "target": [
+          0,
+          3.2056416384630433,
+          -30
+        ]
+      },
+      "inspection": {
+        "position": [
+          62,
+          38,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ]
+      },
+      "eye": [
+        0,
+        1.9596763206180334,
+        34
+      ],
+      "target": [
+        0,
+        3.2056416384630433,
+        -30
+      ]
+    },
+    "presentation": {
+      "foliageAtmosphere": {
+        "near": 95,
+        "far": 420,
+        "strength": 0.55,
+        "color": "#9aafa6"
+      }
+    },
+    "trees": 48,
+    "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+    "layers": {
+      "season": "independent reference state, unresolved",
+      "weather": "clear visual study",
+      "timeOfDay": "warm directional reference state"
+    }
+  },
+  "exposure": 1.12
+}

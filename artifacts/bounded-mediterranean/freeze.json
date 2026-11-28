@@ -1,0 +1,14 @@
+{
+  "at": "2026-11-28T15:05:50.169Z",
+  "holdoutSeed": "715903",
+  "files": [
+    {
+      "path": "src/lib/forest/bounded-resolver.ts",
+      "sha256": "847b481dca8b1f54c34ad07b2ad7712602e6d3cda9e8a6aa2dece486ffb4695e"
+    },
+    {
+      "path": "src/lib/forest/bounded-resolver-policy.json",
+      "sha256": "83c26bdb563b40007e669cf5647369a80024295b22909ceeea2cc70fa7a546eb"
+    }
+  ]
+}

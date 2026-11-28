@@ -4,6 +4,10 @@ Status: **experimental, opt-in, artistically unreviewed**. This milestone select
 
 Subsequent scope: the [prairie extension](BOUNDED-PRAIRIE.md) adds three bounded areas, bringing the current policy to twelve. The original nine-area evidence below remains preserved.
 
+The [Mediterranean extension](BOUNDED-MEDITERRANEAN.md) brings the local policy to fifteen; that extension is unpublished and awaits review. The live preview retains twelve rules.
+
+Subsequent completion: [all remaining families](BOUNDED-COMPLETION.md) bring the policy to 42 rules across 14 existing families. Earlier publication counts above describe their historical checkpoints; the completion release includes Mediterranean and retains experimental status.
+
 ## Use
 
 Open a map location, expand **Approved reference scenes → Bounded automatic resolver**, and choose **Bounded automatic · experimental**. The versioned URL flag is `autoEnvironment=bounded-auto-v1`. Back-to-map navigation and seed edits retain the opt-in. Choosing an explicit reference or study takes priority.

@@ -1,0 +1,3 @@
+const fs=require('fs'),crypto=require('crypto');
+const paths=['src/lib/forest/bounded-resolver.ts','src/lib/forest/bounded-resolver-policy.json'];fs.writeFileSync(__dirname+'/freeze.json',JSON.stringify({at:new Date().toISOString(),holdoutSeed:'715903',files:paths.map(path=>({path,sha256:crypto.createHash('sha256').update(fs.readFileSync(path)).digest('hex')}))},null,2));
+const script=fs.readFileSync('artifacts/bounded-prairie/capture.cjs','utf8').replace('const root=__dirname;',"const root=__dirname+'/prairie';").replace("rows=JSON.parse(fs.readFileSync(root+'/before.json'))","rows=require('../bounded-prairie/before.json')");fs.writeFileSync(__dirname+'/previous-prairie-capture.cjs',script);

@@ -1,0 +1,291 @@
+{
+  "id": "dryforest-costa-rica",
+  "family": "dryforest",
+  "query": "lat=10.69&lon=-85.49&habitat=forest&seed=29&density=24&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+  "errors": [],
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          0,
+          1.7,
+          34
+        ],
+        "target": [
+          0,
+          2.3,
+          -55
+        ],
+        "fov": 47,
+        "far": 2500
+      },
+      "calls": 137,
+      "triangles": 3060844,
+      "textures": 12,
+      "mattes": []
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          62,
+          40,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ],
+        "fov": 47,
+        "far": 2500
+      },
+      "calls": 137,
+      "triangles": 3060844,
+      "textures": 12,
+      "mattes": []
+    }
+  ],
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": null,
+    "selectedScene": null,
+    "route": {
+      "kind": "wave",
+      "adapter": "dryforest",
+      "sceneId": null,
+      "variant": "original",
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:dryforest-costa-rica",
+          "name": "Central American dry forests · bounded automatic",
+          "family": "dryforest",
+          "biome": 2,
+          "eco": 527,
+          "lat": 10.69,
+          "lon": -85.49,
+          "area": "COS"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "2532087798",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Ceiba pentandra",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1166232-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "unnamed-seasonal-growth-forms",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Trees are explicitly unnamed seasonal growth forms. The accepted Guanacaste/gumbo-limbo identities, flowering and Costa Rica matte are withheld."
+        ]
+      }
+    },
+    "pilot": null,
+    "regional": {
+      "schemaVersion": 1,
+      "version": "bounded-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:dryforest-costa-rica",
+        "name": "Central American dry forests · bounded automatic",
+        "family": "dryforest",
+        "biome": 2,
+        "eco": 527,
+        "lat": 10.69,
+        "lon": -85.49,
+        "area": "COS"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "2532087798",
+      "eligibleTreeCandidates": [
+        {
+          "scientificName": "Ceiba pentandra",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1166232-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        }
+      ],
+      "renderedTreeIdentity": "unnamed-seasonal-growth-forms",
+      "limitations": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Trees are explicitly unnamed seasonal growth forms. The accepted Guanacaste/gumbo-limbo identities, flowering and Costa Rica matte are withheld."
+      ]
+    },
+    "automatic": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "selected",
+      "code": "supported-regional-transfer",
+      "explanation": "Source classification and regional gates support this existing adapter. Named candidates and explicitly unnamed functional forms are distinguished; local habitat, terrain and abundance remain unverified.",
+      "ruleId": "dryforest-costa-rica",
+      "distanceKm": 22.09875798293618,
+      "confidence": "biome-context-only",
+      "recipe": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:dryforest-costa-rica",
+          "name": "Central American dry forests · bounded automatic",
+          "family": "dryforest",
+          "biome": 2,
+          "eco": 527,
+          "lat": 10.69,
+          "lon": -85.49,
+          "area": "COS"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "2532087798",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Ceiba pentandra",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1166232-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "unnamed-seasonal-growth-forms",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Trees are explicitly unnamed seasonal growth forms. The accepted Guanacaste/gumbo-limbo identities, flowering and Costa Rica matte are withheld."
+        ]
+      }
+    },
+    "mode": "automatic",
+    "checkpoint": null,
+    "vegetationCoverage": "adapter-generated",
+    "individualInspection": false,
+    "referenceLocation": null,
+    "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+    "limits": [
+      "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+      "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+      "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+      "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+      "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+      "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+      "Trees are explicitly unnamed seasonal growth forms. The accepted Guanacaste/gumbo-limbo identities, flowering and Costa Rica matte are withheld."
+    ],
+    "notices": [
+      "Automatic selection: Source classification and regional gates support this existing adapter. Named candidates and explicitly unnamed functional forms are distinguished; local habitat, terrain and abundance remain unverified."
+    ]
+  },
+  "dryForest": {
+    "seed": "2532087798",
+    "region": "Central American dry forests · bounded automatic",
+    "ecology": {
+      "trees": [],
+      "renderedGrowthForms": [
+        "Unnamed spreading seasonal broadleaf",
+        "Unnamed irregular open-crowned broadleaf"
+      ],
+      "eligibleCatalogueCandidates": [
+        {
+          "scientificName": "Ceiba pentandra",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1166232-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        }
+      ],
+      "flowering": "Withheld: no verified local flowering phenology"
+    },
+    "limits": [
+      "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+      "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+      "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+      "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+      "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+      "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+      "Trees are explicitly unnamed seasonal growth forms. The accepted Guanacaste/gumbo-limbo identities, flowering and Costa Rica matte are withheld."
+    ],
+    "approval": "experimental-unreviewed"
+  },
+  "wave": {
+    "id": "temperate",
+    "biome": 2,
+    "version": "global-expansion-prototype-1",
+    "plan": {
+      "id": "temperate",
+      "biome": 2,
+      "seed": "2532087798",
+      "phase": 3.5469320087323575,
+      "relief": 1.5,
+      "camera": {
+        "position": [
+          0,
+          1.7,
+          34
+        ],
+        "target": [
+          0,
+          2.3,
+          -55
+        ]
+      },
+      "inspection": {
+        "position": [
+          62,
+          38,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ]
+      },
+      "eye": [
+        0,
+        1.7,
+        34
+      ],
+      "target": [
+        0,
+        2.3,
+        -55
+      ]
+    },
+    "presentation": {
+      "foliageAtmosphere": {
+        "near": 95,
+        "far": 420,
+        "strength": 0.55,
+        "color": "#c4b7a1"
+      }
+    },
+    "trees": 0,
+    "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+    "layers": {
+      "season": "independent reference state, unresolved",
+      "weather": "clear visual study",
+      "timeOfDay": "warm directional reference state"
+    }
+  },
+  "exposure": 1.12
+}

@@ -1,0 +1,242 @@
+{
+  "id": "tropicalpine-himalaya",
+  "family": "tropicalpine",
+  "query": "lat=33.847498776500174&lon=73.9593963929189&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+  "errors": [],
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          0,
+          1.5907862928537442,
+          34
+        ],
+        "target": [
+          0,
+          3.2082214086526597,
+          -55
+        ],
+        "fov": 47,
+        "far": 2500
+      },
+      "calls": 10,
+      "triangles": 764452,
+      "textures": 7,
+      "mattes": []
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          62,
+          40,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ],
+        "fov": 47,
+        "far": 2500
+      },
+      "calls": 10,
+      "triangles": 764452,
+      "textures": 7,
+      "mattes": []
+    }
+  ],
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": null,
+    "selectedScene": null,
+    "route": {
+      "kind": "wave",
+      "adapter": "tropicalpine",
+      "sceneId": null,
+      "variant": "original",
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:tropicalpine-himalaya",
+          "name": "Himalayan subtropical pine forests · bounded automatic",
+          "family": "tropicalpine",
+          "biome": 3,
+          "eco": 302,
+          "lat": 33.847498776500174,
+          "lon": 73.9593963929189,
+          "area": "WHM"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "171799541",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "unnamed-conifer-growth-forms",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Eligible local pines are used only when source-backed; otherwise the tree architecture is explicitly an unnamed conifer growth form. No Guatemalan species are imported."
+        ]
+      }
+    },
+    "pilot": null,
+    "regional": {
+      "schemaVersion": 1,
+      "version": "bounded-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:tropicalpine-himalaya",
+        "name": "Himalayan subtropical pine forests · bounded automatic",
+        "family": "tropicalpine",
+        "biome": 3,
+        "eco": 302,
+        "lat": 33.847498776500174,
+        "lon": 73.9593963929189,
+        "area": "WHM"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "171799541",
+      "eligibleTreeCandidates": [],
+      "renderedTreeIdentity": "unnamed-conifer-growth-forms",
+      "limitations": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Eligible local pines are used only when source-backed; otherwise the tree architecture is explicitly an unnamed conifer growth form. No Guatemalan species are imported."
+      ]
+    },
+    "automatic": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "selected",
+      "code": "supported-regional-transfer",
+      "explanation": "Source classification and regional gates support this existing adapter. Named candidates and explicitly unnamed functional forms are distinguished; local habitat, terrain and abundance remain unverified.",
+      "ruleId": "tropicalpine-himalaya",
+      "distanceKm": 20.954871184248905,
+      "confidence": "biome-context-only",
+      "recipe": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:tropicalpine-himalaya",
+          "name": "Himalayan subtropical pine forests · bounded automatic",
+          "family": "tropicalpine",
+          "biome": 3,
+          "eco": 302,
+          "lat": 33.847498776500174,
+          "lon": 73.9593963929189,
+          "area": "WHM"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "171799541",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "unnamed-conifer-growth-forms",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Eligible local pines are used only when source-backed; otherwise the tree architecture is explicitly an unnamed conifer growth form. No Guatemalan species are imported."
+        ]
+      }
+    },
+    "mode": "automatic",
+    "checkpoint": null,
+    "vegetationCoverage": "adapter-generated",
+    "individualInspection": false,
+    "referenceLocation": null,
+    "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+    "limits": [
+      "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+      "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+      "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+      "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+      "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+      "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+      "Eligible local pines are used only when source-backed; otherwise the tree architecture is explicitly an unnamed conifer growth form. No Guatemalan species are imported."
+    ],
+    "notices": [
+      "Automatic selection: Source classification and regional gates support this existing adapter. Named candidates and explicitly unnamed functional forms are distinguished; local habitat, terrain and abundance remain unverified."
+    ]
+  },
+  "wave": {
+    "id": "boreal",
+    "biome": 3,
+    "version": "global-expansion-prototype-1",
+    "plan": {
+      "id": "boreal",
+      "biome": 3,
+      "seed": "171799541",
+      "phase": 2.820541311689876,
+      "relief": 0.65,
+      "camera": {
+        "position": [
+          0,
+          1.5907862928537442,
+          34
+        ],
+        "target": [
+          0,
+          3.2082214086526597,
+          -55
+        ]
+      },
+      "inspection": {
+        "position": [
+          62,
+          38,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ]
+      },
+      "eye": [
+        0,
+        1.5907862928537442,
+        34
+      ],
+      "target": [
+        0,
+        3.2082214086526597,
+        -55
+      ]
+    },
+    "presentation": {
+      "foliageAtmosphere": {
+        "near": 95,
+        "far": 420,
+        "strength": 0.55,
+        "color": "#92aaa7"
+      }
+    },
+    "trees": 48,
+    "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+    "layers": {
+      "season": "independent reference state, unresolved",
+      "weather": "clear visual study",
+      "timeOfDay": "warm directional reference state"
+    }
+  },
+  "transfer": {
+    "family": "tropicalpine",
+    "sourceBiome": 3,
+    "treeIdentity": "unnamed-conifer-growth-forms",
+    "limits": "Existing geometry/needle/forest-floor representations are approximations; no geographically conditioned foreign matte, no verified local cover or tree dimensions"
+  },
+  "exposure": 1.12
+}

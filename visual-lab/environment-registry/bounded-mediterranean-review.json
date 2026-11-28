@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "experiment": "bounded-auto-v1-mediterranean-extension",
+  "status": "experimentally-supported-routing-art-unreviewed",
+  "loaded": ["AGENTS.md", ".agents/skills/prototype-fast/SKILL.md", "docs/visual-quality-workflow.md", "visual-lab/art-direction-policy.json", "visual-lab/environment-registry/COMPLETION.md", "visual-lab/environment-registry/BOUNDED-PRAIRIE.md"],
+  "visionAvailable": true,
+  "reviewer": "implementing-agent",
+  "independentReview": false,
+  "humanApproval": null,
+  "hypothesis": "The existing oak adapter can transfer under actual regional candidate and drawable-source gates without widening the location-conditioned matte envelope.",
+  "intervention": "routing gates; no renderer, geometry, material, camera or lighting change",
+  "evidenceRoot": "artifacts/bounded-mediterranean/",
+  "evidence": ["before.json", "after.json", "comparison-hero-sheet.png", "comparison-inspection-sheet.png", "freeze.json", "holdout/report.json", "validation.json", "tests.log", "typecheck.log", "lint.log"],
+  "developmentSeed": "29",
+  "holdout": {"seed": "715903", "region": "Italy", "sourceFrozenFirst": true, "tunedAfter": false},
+  "correctionRounds": 0,
+  "observations": [
+    {"severity": "major", "finding": "Withholding the foreign matte leaves shallow, sparsely articulated distance."},
+    {"severity": "major", "finding": "Shared garrigue/path and shrub treatment is not regional geological or botanical fidelity."},
+    {"severity": "minor", "finding": "Coarse foliage, grass alpha and pale rock response remain inherited limitations."}
+  ],
+  "decision": "retain unpublished bounded prototype; require human review before artistic promotion",
+  "rules": [
+    {"principle": "Require actual regional oak evidence and a drawable source matching the adapter scaffold.", "status": "experimentally-supported", "scope": "existing Mediterranean adapter"},
+    {"principle": "A broader recipe envelope does not widen a location-conditioned asset envelope.", "status": "experimentally-supported", "scope": "Hérault matte"},
+    {"principle": "A working regional transfer establishes local geology or plant-community fidelity.", "status": "rejected", "reason": "Terrain remains synthetic and nonwoody regional data is missing."}
+  ],
+  "validation": {"targetedTestsPassed": 79, "typescript": "passed", "targetedEslint": "passed", "protectedViewsPixelIdentical": 10, "fullBuildRun": false, "fullSuiteRun": false, "mobileDeviceTested": false},
+  "performance": {"heroCalls": 16, "heroTrianglesRange": [1821640, 1822036], "holdoutTriangles": 1822036, "frameTimeMeasured": false, "textureBytesMeasured": false, "alphaOverdrawMeasured": false},
+  "publication": {"committed": false, "pushed": false, "deployed": false, "globallyPromoted": false}
+}

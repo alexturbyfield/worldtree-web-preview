@@ -1,0 +1,43 @@
+{
+  "at": "2026-11-28T15:18:44.598Z",
+  "holdoutSeed": "826519",
+  "scope": "One previously unrendered seed per remaining family, first audited new coordinate in each family",
+  "files": [
+    {
+      "path": "src/lib/forest/bounded-resolver.ts",
+      "sha256": "4c78b04ac9352670b1512e05f33c384f13997a6ad10f805cb6db2a079b3ae9bd"
+    },
+    {
+      "path": "src/lib/forest/bounded-resolver-policy.json",
+      "sha256": "463bb9e7136fc1b0de590473ab2d9f209c1b9f26651173ffb0b9e365dcfb357c"
+    },
+    {
+      "path": "src/lib/forest/environment-registry.ts",
+      "sha256": "4cfe91b52cc498817b9ad64547d8edd92fd8fa65656e30b1d62a6c64bc971748"
+    },
+    {
+      "path": "src/lib/forest/wave1.ts",
+      "sha256": "05152d95903b542baef5847e725568358d89036a484eb3b58b050c162bfaec83"
+    },
+    {
+      "path": "src/lib/forest/wave1-rebuild.ts",
+      "sha256": "d42f1f96aed4eebbd341cb8a5ce7e64403e72deccadab155279d0ad518fe45d0"
+    },
+    {
+      "path": "src/lib/forest/tropical-dry-forest.ts",
+      "sha256": "f88d29fd96c0e748ae9dfa3c50980c6447ab0aa693713a6945a39ea35e505332"
+    },
+    {
+      "path": "src/lib/forest/andean-puna.ts",
+      "sha256": "d8349d4135389977b68c51c619ad4b419a3c036e5073f000fefcd8298a448b56"
+    },
+    {
+      "path": "src/lib/forest/wave1-depth-texture.ts",
+      "sha256": "3f6d57a0ef369f15b479bcb6e2fe6e59248abb907f893799429dad580c99694e"
+    },
+    {
+      "path": "src/components/EnvironmentReferencePanel.tsx",
+      "sha256": "4c2a550fabd7cfa7100f0f6867ebb6841b9a436926d1aa1103cd7a18cba553f0"
+    }
+  ]
+}

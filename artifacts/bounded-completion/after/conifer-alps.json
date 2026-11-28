@@ -1,0 +1,344 @@
+{
+  "id": "conifer-alps",
+  "family": "conifer",
+  "query": "lat=46.25422194250015&lon=10.729839209495617&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+  "errors": [],
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          0,
+          1.6544672708601202,
+          34
+        ],
+        "target": [
+          0,
+          3.3071201423741106,
+          -30
+        ],
+        "fov": 47,
+        "far": 2500
+      },
+      "calls": 14,
+      "triangles": 654312,
+      "textures": 9,
+      "mattes": []
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          62,
+          40,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ],
+        "fov": 47,
+        "far": 2500
+      },
+      "calls": 14,
+      "triangles": 654312,
+      "textures": 9,
+      "mattes": []
+    }
+  ],
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": null,
+    "selectedScene": null,
+    "route": {
+      "kind": "wave",
+      "adapter": "conifer",
+      "sceneId": null,
+      "variant": "original",
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:conifer-alps",
+          "name": "Alps conifer and mixed forests · bounded automatic",
+          "family": "conifer",
+          "biome": 5,
+          "eco": 689,
+          "lat": 46.25422194250015,
+          "lon": 10.729839209495617,
+          "area": "ITA"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "4183100133",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Pinus pinea",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263221-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Picea abies",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262609-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Pinus sylvestris",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263353-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Abies alba",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60468511-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Betula pubescens",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295185-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Genus-conditioned conifer structure and shared needle artwork are approximations; local canopy composition is unverified."
+        ]
+      }
+    },
+    "pilot": null,
+    "regional": {
+      "schemaVersion": 1,
+      "version": "bounded-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:conifer-alps",
+        "name": "Alps conifer and mixed forests · bounded automatic",
+        "family": "conifer",
+        "biome": 5,
+        "eco": 689,
+        "lat": 46.25422194250015,
+        "lon": 10.729839209495617,
+        "area": "ITA"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "4183100133",
+      "eligibleTreeCandidates": [
+        {
+          "scientificName": "Pinus pinea",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263221-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Picea abies",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262609-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Pinus sylvestris",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263353-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Abies alba",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60468511-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Betula pubescens",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295185-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        }
+      ],
+      "renderedTreeIdentity": "regional-candidate-architecture",
+      "limitations": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Genus-conditioned conifer structure and shared needle artwork are approximations; local canopy composition is unverified."
+      ]
+    },
+    "automatic": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "selected",
+      "code": "supported-regional-transfer",
+      "explanation": "Regional candidate and architecture checks passed; the matching shared forest recipe is selected.",
+      "ruleId": "conifer-alps",
+      "distanceKm": 20.047476396495675,
+      "confidence": "regional-range-candidate",
+      "recipe": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:conifer-alps",
+          "name": "Alps conifer and mixed forests · bounded automatic",
+          "family": "conifer",
+          "biome": 5,
+          "eco": 689,
+          "lat": 46.25422194250015,
+          "lon": 10.729839209495617,
+          "area": "ITA"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "4183100133",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Pinus pinea",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263221-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Picea abies",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262609-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Pinus sylvestris",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263353-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Abies alba",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60468511-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Betula pubescens",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295185-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Genus-conditioned conifer structure and shared needle artwork are approximations; local canopy composition is unverified."
+        ]
+      }
+    },
+    "mode": "automatic",
+    "checkpoint": null,
+    "vegetationCoverage": "adapter-generated",
+    "individualInspection": false,
+    "referenceLocation": null,
+    "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+    "limits": [
+      "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+      "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+      "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+      "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+      "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+      "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+      "Genus-conditioned conifer structure and shared needle artwork are approximations; local canopy composition is unverified."
+    ],
+    "notices": [
+      "Automatic selection: Regional candidate and architecture checks passed; the matching shared forest recipe is selected."
+    ]
+  },
+  "wave": {
+    "id": "boreal",
+    "biome": 6,
+    "version": "global-expansion-prototype-1",
+    "plan": {
+      "id": "boreal",
+      "biome": 6,
+      "seed": "4183100133",
+      "phase": 6.113365582352121,
+      "relief": 0.65,
+      "camera": {
+        "position": [
+          0,
+          1.6544672708601202,
+          34
+        ],
+        "target": [
+          0,
+          3.3071201423741106,
+          -30
+        ]
+      },
+      "inspection": {
+        "position": [
+          62,
+          38,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ]
+      },
+      "eye": [
+        0,
+        1.6544672708601202,
+        34
+      ],
+      "target": [
+        0,
+        3.3071201423741106,
+        -30
+      ]
+    },
+    "presentation": {
+      "foliageAtmosphere": {
+        "near": 95,
+        "far": 420,
+        "strength": 0.55,
+        "color": "#9aafa6"
+      }
+    },
+    "trees": 48,
+    "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+    "layers": {
+      "season": "independent reference state, unresolved",
+      "weather": "clear visual study",
+      "timeOfDay": "warm directional reference state"
+    }
+  },
+  "exposure": 1.12
+}

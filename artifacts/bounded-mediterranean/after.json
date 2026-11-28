@@ -1,0 +1,495 @@
+[
+  {
+    "id": "france",
+    "lat": 43.85,
+    "lon": 3.75,
+    "query": "lat=43.85&lon=3.75&habitat=forest&seed=29&density=36&structure=mediterranean-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 799,
+      "ECO_NAME": "Northeast Spain and Southern France Mediterranean forests",
+      "BIOME_NUM": 12,
+      "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub",
+      "REALM": "Palearctic",
+      "COLOR_BIO": "#FE0000",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "FRA",
+      "name": "France"
+    },
+    "palette": [
+      {
+        "scientificName": "Picea abies",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262609-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Buxus sempervirens",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:340317-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Fagus sylvatica",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:305836-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Ostrya carpinifolia",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295664-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Juglans hispanica",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:20002602-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Pinus sylvestris",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263353-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Pinus pinea",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263221-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Quercus suber",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "× Arsorbus thuringiaca",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77354226-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Betula pendula",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Laburnum alpinum",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:501425-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Quercus ilex",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296290-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      }
+    ],
+    "drawableNames": [
+      "Pinus pinea",
+      "Juglans hispanica",
+      "Fagus sylvatica",
+      "× Arsorbus thuringiaca",
+      "Quercus suber",
+      "Laburnum alpinum",
+      "Buxus sempervirens",
+      "Betula pendula",
+      "Pinus sylvestris",
+      "Picea abies",
+      "Quercus ilex"
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "selected",
+      "code": "supported-regional-transfer",
+      "explanation": "Regional candidate and architecture checks passed; the matching shared forest recipe is selected.",
+      "ruleId": "mediterranean-france",
+      "distanceKm": 19.879536124052922,
+      "confidence": "regional-range-candidate",
+      "recipe": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:mediterranean-france",
+          "name": "Northeast Spain and Southern France Mediterranean forests · bounded automatic",
+          "family": "mediterranean",
+          "biome": 12,
+          "eco": 799,
+          "lat": 43.85,
+          "lon": 3.75,
+          "area": "FRA"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "3115726100",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Quercus suber",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Quercus ilex",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296290-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+          "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+        ]
+      }
+    }
+  },
+  {
+    "id": "portugal",
+    "lat": 38.5,
+    "lon": -8.4,
+    "query": "lat=38.5&lon=-8.4&habitat=forest&seed=29&density=36&structure=mediterranean-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 805,
+      "ECO_NAME": "Southwest Iberian Mediterranean sclerophyllous and mixed forests",
+      "BIOME_NUM": 12,
+      "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub",
+      "REALM": "Palearctic",
+      "COLOR_BIO": "#FE0000",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "POR",
+      "name": "Portugal"
+    },
+    "palette": [
+      {
+        "scientificName": "Rhus coriaria",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:70477-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Buxus sempervirens",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:340317-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Quercus ilex",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296290-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Pinus pinea",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263221-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Quercus suber",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Erica scoparia",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:329579-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Quercus robur",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:304293-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Betula pubescens",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295185-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Betula pendula",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      }
+    ],
+    "drawableNames": [
+      "Betula pendula",
+      "Quercus robur",
+      "Quercus suber",
+      "Quercus ilex",
+      "Erica scoparia",
+      "Betula pubescens",
+      "Buxus sempervirens",
+      "Pinus pinea",
+      "Rhus coriaria"
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "selected",
+      "code": "supported-regional-transfer",
+      "explanation": "Regional candidate and architecture checks passed; the matching shared forest recipe is selected.",
+      "ruleId": "mediterranean-portugal",
+      "distanceKm": 18.485973587827484,
+      "confidence": "regional-range-candidate",
+      "recipe": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:mediterranean-portugal",
+          "name": "Southwest Iberian Mediterranean sclerophyllous and mixed forests · bounded automatic",
+          "family": "mediterranean",
+          "biome": 12,
+          "eco": 805,
+          "lat": 38.5,
+          "lon": -8.4,
+          "area": "POR"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "1381076262",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Quercus ilex",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296290-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Quercus suber",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+          "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+        ]
+      }
+    }
+  },
+  {
+    "id": "italy",
+    "lat": 42.8,
+    "lon": 12.1,
+    "query": "lat=42.8&lon=12.1&habitat=forest&seed=29&density=36&structure=mediterranean-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 795,
+      "ECO_NAME": "Italian sclerophyllous and semi-deciduous forests",
+      "BIOME_NUM": 12,
+      "BIOME_NAME": "Mediterranean Forests, Woodlands & Scrub",
+      "REALM": "Palearctic",
+      "COLOR_BIO": "#FE0000",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "ITA",
+      "name": "Italy"
+    },
+    "palette": [
+      {
+        "scientificName": "Laburnum alpinum",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:501425-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Betula pendula",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295174-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Ostrya carpinifolia",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295664-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Picea abies",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262609-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Buxus sempervirens",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:340317-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Paliurus spina-christi",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:717707-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Pinus pinea",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263221-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Cormus domestica",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:722386-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Quercus suber",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Juglans hispanica",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:20002602-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Quercus ilex",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296290-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      },
+      {
+        "scientificName": "Fagus sylvatica",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:305836-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ]
+      }
+    ],
+    "drawableNames": [
+      "Pinus pinea",
+      "Buxus sempervirens",
+      "Ostrya carpinifolia",
+      "Quercus suber",
+      "Cormus domestica",
+      "Quercus ilex",
+      "Betula pendula",
+      "Juglans hispanica",
+      "Paliurus spina-christi",
+      "Laburnum alpinum",
+      "Fagus sylvatica"
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "selected",
+      "code": "supported-regional-transfer",
+      "explanation": "Regional candidate and architecture checks passed; the matching shared forest recipe is selected.",
+      "ruleId": "mediterranean-italy",
+      "distanceKm": 25.25341846331931,
+      "confidence": "regional-range-candidate",
+      "recipe": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:mediterranean-italy",
+          "name": "Italian sclerophyllous and semi-deciduous forests · bounded automatic",
+          "family": "mediterranean",
+          "biome": 12,
+          "eco": 795,
+          "lat": 42.8,
+          "lon": 12.1,
+          "area": "ITA"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "2602788041",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Quercus suber",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Quercus ilex",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296290-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+          "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+        ]
+      }
+    }
+  }
+]

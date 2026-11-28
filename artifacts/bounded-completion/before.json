@@ -1,0 +1,1752 @@
+[
+  {
+    "id": "dryforest-costa-rica",
+    "family": "dryforest",
+    "lat": 10.69,
+    "lon": -85.49,
+    "query": "lat=10.69&lon=-85.49&habitat=forest&seed=29&density=24&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 527,
+      "ECO_NAME": "Central American dry forests",
+      "BIOME_NUM": 2,
+      "BIOME_NAME": "Tropical & Subtropical Dry Broadleaf Forests",
+      "REALM": "Neotropic",
+      "COLOR_BIO": "#CCCD65",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "COS",
+      "name": "Costa Rica"
+    },
+    "palette": [
+      {
+        "scientificName": "Ceiba pentandra",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1166232-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "kapok",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      }
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "dryforest-nicaragua",
+    "family": "dryforest",
+    "lat": 12.56,
+    "lon": -86.28,
+    "query": "lat=12.56&lon=-86.28&habitat=forest&seed=29&density=24&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 527,
+      "ECO_NAME": "Central American dry forests",
+      "BIOME_NUM": 2,
+      "BIOME_NAME": "Tropical & Subtropical Dry Broadleaf Forests",
+      "REALM": "Neotropic",
+      "COLOR_BIO": "#CCCD65",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "NIC",
+      "name": "Nicaragua"
+    },
+    "palette": [
+      {
+        "scientificName": "Ceiba pentandra",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1166232-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "kapok",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      }
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "dryforest-mexico",
+    "family": "dryforest",
+    "lat": 19.66,
+    "lon": -104.78,
+    "query": "lat=19.66&lon=-104.78&habitat=forest&seed=29&density=24&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 534,
+      "ECO_NAME": "Jalisco dry forests",
+      "BIOME_NUM": 2,
+      "BIOME_NAME": "Tropical & Subtropical Dry Broadleaf Forests",
+      "REALM": "Neotropic",
+      "COLOR_BIO": "#CCCD65",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "MXS",
+      "name": "Mexico Southwest"
+    },
+    "palette": [
+      {
+        "scientificName": "Ceiba pentandra",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1166232-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "kapok",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      },
+      {
+        "scientificName": "Brongniartia papyracea",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77221605-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Calliandra longipedicellata",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:994702-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      }
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "mangrove-florida",
+    "family": "mangrove",
+    "lat": 25.2,
+    "lon": -80.66000000000001,
+    "query": "lat=25.2&lon=-80.66000000000001&habitat=coastal&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 612,
+      "ECO_NAME": "Bahamian-Antillean mangroves",
+      "BIOME_NUM": 14,
+      "BIOME_NAME": "Mangroves",
+      "REALM": "Neotropic",
+      "COLOR_BIO": "#FE01C4",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "FLA",
+      "name": "Florida"
+    },
+    "palette": [
+      {
+        "scientificName": "Rhizophora mangle",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30061148-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "red-mangrove",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      }
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "mangrove-gabon",
+    "family": "mangrove",
+    "lat": -0.04864028999997572,
+    "lon": 9.57893832629247,
+    "query": "lat=-0.04864028999997572&lon=9.57893832629247&habitat=coastal&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 111,
+      "ECO_NAME": "Central African mangroves",
+      "BIOME_NUM": 14,
+      "BIOME_NAME": "Mangroves",
+      "REALM": "Afrotropic",
+      "COLOR_BIO": "#FE01C4",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "GAB",
+      "name": "Gabon"
+    },
+    "palette": [
+      {
+        "scientificName": "Rhizophora mangle",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30061148-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "red-mangrove",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      }
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "mangrove-sundarbans",
+    "family": "mangrove",
+    "lat": 22.320026979000122,
+    "lon": 89.23163382745804,
+    "query": "lat=22.320026979000122&lon=89.23163382745804&habitat=coastal&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 323,
+      "ECO_NAME": "Sundarbans mangroves",
+      "BIOME_NUM": 14,
+      "BIOME_NAME": "Mangroves",
+      "REALM": "Indomalayan",
+      "COLOR_BIO": "#FE01C4",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "BAN",
+      "name": "Bangladesh"
+    },
+    "palette": [
+      {
+        "scientificName": "Avicennia marina",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:861130-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "avicennia",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      }
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "rainforest-amazon",
+    "family": "rainforest",
+    "lat": -3.24,
+    "lon": -60.18,
+    "query": "lat=-3.24&lon=-60.18&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 473,
+      "ECO_NAME": "Japurá-Solimões-Negro moist forests",
+      "BIOME_NUM": 1,
+      "BIOME_NAME": "Tropical & Subtropical Moist Broadleaf Forests",
+      "REALM": "Neotropic",
+      "COLOR_BIO": "#38A700",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "BZN",
+      "name": "Brazil North"
+    },
+    "palette": [
+      {
+        "scientificName": "Swietenia macrophylla",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:246905-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "mahogany",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      },
+      {
+        "scientificName": "Hevea brasiliensis",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:349913-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "rubber",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      },
+      {
+        "scientificName": "Swartzia lanata",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77128829-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Euterpe precatoria",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:666949-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "acai",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      },
+      {
+        "scientificName": "Cecropia peltata",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:850956-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "cecropia",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      },
+      {
+        "scientificName": "Rhizophora mangle",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30061148-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "red-mangrove",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      },
+      {
+        "scientificName": "Theobroma cacao",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:320783-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "cacao",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      },
+      {
+        "scientificName": "Bertholletia excelsa",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:591270-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      }
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "rainforest-congo",
+    "family": "rainforest",
+    "lat": -0.5729600919999279,
+    "lon": 10.656357117199981,
+    "query": "lat=-0.5729600919999279&lon=10.656357117199981&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 5,
+      "ECO_NAME": "Congolian coastal forests",
+      "BIOME_NUM": 1,
+      "BIOME_NAME": "Tropical & Subtropical Moist Broadleaf Forests",
+      "REALM": "Afrotropic",
+      "COLOR_BIO": "#38A700",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "GAB",
+      "name": "Gabon"
+    },
+    "palette": [
+      {
+        "scientificName": "Rhizophora mangle",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30061148-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "red-mangrove",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      },
+      {
+        "scientificName": "Gilbertiodendron dewevrei",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:496537-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Microdesmis afrodecandra",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:938094-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Entandrophragma cylindricum",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:578406-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      }
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "rainforest-borneo",
+    "family": "rainforest",
+    "lat": 1.6525973095000699,
+    "lon": 112.94353468527072,
+    "query": "lat=1.6525973095000699&lon=112.94353468527072&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 219,
+      "ECO_NAME": "Borneo lowland rain forests",
+      "BIOME_NUM": 1,
+      "BIOME_NAME": "Tropical & Subtropical Moist Broadleaf Forests",
+      "REALM": "Indomalayan",
+      "COLOR_BIO": "#38A700",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "BOR",
+      "name": "Borneo"
+    },
+    "palette": [
+      {
+        "scientificName": "Sindora beccariana",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:518586-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Koompassia excelsa",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:501262-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Rubroshorea leprosula",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77298395-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Xanthophyllum nigricans",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:871235-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Dryobalanops aromatica",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:320807-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Eusideroxylon zwageri",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:464565-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Stemonurus grandifolius",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:608433-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Avicennia marina",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:861130-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "avicennia",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      },
+      {
+        "scientificName": "Madhuca montana",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:787518-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Dipterocarpus grandiflorus",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:320683-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "dipterocarp-grandiflorus",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      }
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "tropicalpine-guatemala",
+    "family": "tropicalpine",
+    "lat": 14.667672,
+    "lon": -89.31579699999999,
+    "query": "lat=14.667672&lon=-89.31579699999999&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 553,
+      "ECO_NAME": "Central American pine-oak forests",
+      "BIOME_NUM": 3,
+      "BIOME_NAME": "Tropical & Subtropical Coniferous Forests",
+      "REALM": "Neotropic",
+      "COLOR_BIO": "#88CE66",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "GUA",
+      "name": "Guatemala"
+    },
+    "palette": [
+      {
+        "scientificName": "Ceiba pentandra",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1166232-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "kapok",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      }
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "tropicalpine-cuba",
+    "family": "tropicalpine",
+    "lat": 22.59424454550015,
+    "lon": -84.06066863974115,
+    "query": "lat=22.59424454550015&lon=-84.06066863974115&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 554,
+      "ECO_NAME": "Cuban pine forests",
+      "BIOME_NUM": 3,
+      "BIOME_NAME": "Tropical & Subtropical Coniferous Forests",
+      "REALM": "Neotropic",
+      "COLOR_BIO": "#88CE66",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "CUB",
+      "name": "Cuba"
+    },
+    "palette": [
+      {
+        "scientificName": "Ceiba pentandra",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1166232-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "kapok",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      }
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "tropicalpine-himalaya",
+    "family": "tropicalpine",
+    "lat": 33.847498776500174,
+    "lon": 73.9593963929189,
+    "query": "lat=33.847498776500174&lon=73.9593963929189&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 302,
+      "ECO_NAME": "Himalayan subtropical pine forests",
+      "BIOME_NUM": 3,
+      "BIOME_NAME": "Tropical & Subtropical Coniferous Forests",
+      "REALM": "Indomalayan",
+      "COLOR_BIO": "#88CE66",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "WHM",
+      "name": "West Himalaya"
+    },
+    "palette": [
+      {
+        "scientificName": "Pistacia atlantica",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:70236-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Populus euphratica",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:776672-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Lagerstroemia indica",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:553576-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Shorea robusta",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:321425-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      }
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "conifer-puget",
+    "family": "conifer",
+    "lat": 47.7662,
+    "lon": -122.21209999999999,
+    "query": "lat=47.7662&lon=-122.21209999999999&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 364,
+      "ECO_NAME": "Puget lowland forests",
+      "BIOME_NUM": 5,
+      "BIOME_NAME": "Temperate Conifer Forests",
+      "REALM": "Nearctic",
+      "COLOR_BIO": "#458970",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "WAS",
+      "name": "Washington"
+    },
+    "palette": [
+      {
+        "scientificName": "Purshia tridentata",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:730458-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Acer macrophyllum",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:317376-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "maple",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      },
+      {
+        "scientificName": "Frangula purshiana",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30426867-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Physocarpus capitatus",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195615-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Pinus ponderosa",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:307165-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "ponderosa",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      },
+      {
+        "scientificName": "Abies amabilis",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325658-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Oemleria cerasiformis",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:172648-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Populus tremuloides",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:208337-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "aspen",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      },
+      {
+        "scientificName": "Tsuga heterophylla",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:260297-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Pseudotsuga menziesii",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:677141-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "douglas-v1",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      },
+      {
+        "scientificName": "Picea sitchensis",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:676986-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Thuja plicata",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60443333-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "cedar",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      }
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "conifer-alps",
+    "family": "conifer",
+    "lat": 46.25422194250015,
+    "lon": 10.729839209495617,
+    "query": "lat=46.25422194250015&lon=10.729839209495617&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 689,
+      "ECO_NAME": "Alps conifer and mixed forests",
+      "BIOME_NUM": 5,
+      "BIOME_NAME": "Temperate Conifer Forests",
+      "REALM": "Palearctic",
+      "COLOR_BIO": "#458970",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "ITA",
+      "name": "Italy"
+    },
+    "palette": [
+      {
+        "scientificName": "Pinus pinea",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263221-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "pine",
+          "fallback": true,
+          "reason": "Visual archetype fallback (central-leader-conifer); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Cormus domestica",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:722386-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Picea abies",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:262609-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "spruce",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      },
+      {
+        "scientificName": "Pinus sylvestris",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:263353-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "pine",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      },
+      {
+        "scientificName": "Laburnum alpinum",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:501425-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Juglans hispanica",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:20002602-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Salix ionica",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:1020084-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Abies alba",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60468511-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Cotinus coggygria",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:69498-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Buxus sempervirens",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:340317-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Betula pubescens",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:295185-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Quercus robur",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:304293-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      }
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "conifer-bc",
+    "family": "conifer",
+    "lat": 53.00538420850012,
+    "lon": -127.17099170961274,
+    "query": "lat=53.00538420850012&lon=-127.17099170961274&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 349,
+      "ECO_NAME": "British Columbia coastal conifer forests",
+      "BIOME_NUM": 5,
+      "BIOME_NAME": "Temperate Conifer Forests",
+      "REALM": "Nearctic",
+      "COLOR_BIO": "#458970",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "BRC",
+      "name": "British Columbia"
+    },
+    "palette": [
+      {
+        "scientificName": "Picea sitchensis",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:676986-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Thuja plicata",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:60443333-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "cedar",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      },
+      {
+        "scientificName": "Picea laxa",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195881-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Pinus ponderosa",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:307165-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "ponderosa",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      },
+      {
+        "scientificName": "Populus tremuloides",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:208337-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "aspen",
+          "fallback": false,
+          "reason": "Species design preset; dimensions are artistic, not measured traits."
+        }
+      },
+      {
+        "scientificName": "Frangula purshiana",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30426867-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Purshia tridentata",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:730458-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Abies amabilis",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:325658-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "spruce",
+          "rendererPresetId": "douglas-v1",
+          "fallback": true,
+          "reason": "Conifer visual fallback using the approved chunky-bough Douglas-fir V1 template; not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Physocarpus capitatus",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:195615-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Oemleria cerasiformis",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:172648-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Elaeagnus commutata",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:315523-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      {
+        "scientificName": "Ribes bracteosum",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30289786-2",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      }
+    ],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "savanna-tanzania",
+    "family": "savanna",
+    "lat": -2.1399999999999997,
+    "lon": 35.32,
+    "query": "lat=-2.1399999999999997&lon=35.32&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 57,
+      "ECO_NAME": "Southern Acacia-Commiphora bushlands and thickets",
+      "BIOME_NUM": 7,
+      "BIOME_NAME": "Tropical & Subtropical Grasslands, Savannas & Shrublands",
+      "REALM": "Afrotropic",
+      "COLOR_BIO": "#FEAA01",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "TAN",
+      "name": "Tanzania"
+    },
+    "palette": [],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "savanna-cerrado",
+    "family": "savanna",
+    "lat": -14.964225762999941,
+    "lon": -53.44781811810714,
+    "query": "lat=-14.964225762999941&lon=-53.44781811810714&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 567,
+      "ECO_NAME": "Cerrado",
+      "BIOME_NUM": 7,
+      "BIOME_NAME": "Tropical & Subtropical Grasslands, Savannas & Shrublands",
+      "REALM": "Neotropic",
+      "COLOR_BIO": "#FEAA01",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "BZC",
+      "name": "Brazil West-Central"
+    },
+    "palette": [],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "savanna-arnhem",
+    "family": "savanna",
+    "lat": -12.688173361499903,
+    "lon": 133.53901648916127,
+    "query": "lat=-12.688173361499903&lon=133.53901648916127&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 181,
+      "ECO_NAME": "Arnhem Land tropical savanna",
+      "BIOME_NUM": 7,
+      "BIOME_NAME": "Tropical & Subtropical Grasslands, Savannas & Shrublands",
+      "REALM": "Australasia",
+      "COLOR_BIO": "#FEAA01",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "NTA",
+      "name": "Northern Territory"
+    },
+    "palette": [],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "flooded-everglades",
+    "family": "flooded",
+    "lat": 26.36995741900012,
+    "lon": -80.81838259249979,
+    "query": "lat=26.36995741900012&lon=-80.81838259249979&habitat=wetland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 581,
+      "ECO_NAME": "Everglades flooded grasslands",
+      "BIOME_NUM": 9,
+      "BIOME_NAME": "Flooded Grasslands & Savannas",
+      "REALM": "Neotropic",
+      "COLOR_BIO": "#BEE7FF",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "FLA",
+      "name": "Florida"
+    },
+    "palette": [],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "flooded-pantanal",
+    "family": "flooded",
+    "lat": -18.599949358999904,
+    "lon": -56.27052109683886,
+    "query": "lat=-18.599949358999904&lon=-56.27052109683886&habitat=wetland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 584,
+      "ECO_NAME": "Pantanal",
+      "BIOME_NUM": 9,
+      "BIOME_NAME": "Flooded Grasslands & Savannas",
+      "REALM": "Neotropic",
+      "COLOR_BIO": "#BEE7FF",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "BZC",
+      "name": "Brazil West-Central"
+    },
+    "palette": [],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "flooded-niger",
+    "family": "flooded",
+    "lat": 15.377014018000043,
+    "lon": -4.165552269107671,
+    "query": "lat=15.377014018000043&lon=-4.165552269107671&habitat=wetland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 71,
+      "ECO_NAME": "Inner Niger Delta flooded savanna",
+      "BIOME_NUM": 9,
+      "BIOME_NAME": "Flooded Grasslands & Savannas",
+      "REALM": "Afrotropic",
+      "COLOR_BIO": "#BEE7FF",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "MLI",
+      "name": "Mali"
+    },
+    "palette": [],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "montane-peru",
+    "family": "montane",
+    "lat": -9.72,
+    "lon": -77.07,
+    "query": "lat=-9.72&lon=-77.07&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 589,
+      "ECO_NAME": "Central Andean wet puna",
+      "BIOME_NUM": 10,
+      "BIOME_NAME": "Montane Grasslands & Shrublands",
+      "REALM": "Neotropic",
+      "COLOR_BIO": "#D6C39D",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "PER",
+      "name": "Peru"
+    },
+    "palette": [],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "montane-ethiopia",
+    "family": "montane",
+    "lat": 11.089166666500086,
+    "lon": 39.0758333335001,
+    "query": "lat=11.089166666500086&lon=39.0758333335001&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 80,
+      "ECO_NAME": "Ethiopian montane moorlands",
+      "BIOME_NUM": 10,
+      "BIOME_NAME": "Montane Grasslands & Shrublands",
+      "REALM": "Afrotropic",
+      "COLOR_BIO": "#D6C39D",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "ETH",
+      "name": "Ethiopia"
+    },
+    "palette": [],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "montane-altai",
+    "family": "montane",
+    "lat": 49.81422753150014,
+    "lon": 87.46323418135184,
+    "query": "lat=49.81422753150014&lon=87.46323418135184&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 749,
+      "ECO_NAME": "Altai alpine meadow and tundra",
+      "BIOME_NUM": 10,
+      "BIOME_NAME": "Montane Grasslands & Shrublands",
+      "REALM": "Palearctic",
+      "COLOR_BIO": "#D6C39D",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "ALT",
+      "name": "Altay"
+    },
+    "palette": [],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "desert-mojave",
+    "family": "desert",
+    "lat": 34.16,
+    "lon": -116.03,
+    "query": "lat=34.16&lon=-116.03&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 433,
+      "ECO_NAME": "Mojave desert",
+      "BIOME_NUM": 13,
+      "BIOME_NAME": "Deserts & Xeric Shrublands",
+      "REALM": "Nearctic",
+      "COLOR_BIO": "#CC6767",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "CAL",
+      "name": "California"
+    },
+    "palette": [],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "desert-atacama",
+    "family": "desert",
+    "lat": -22.199061640499902,
+    "lon": -69.21837508798245,
+    "query": "lat=-22.199061640499902&lon=-69.21837508798245&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 598,
+      "ECO_NAME": "Atacama desert",
+      "BIOME_NUM": 13,
+      "BIOME_NAME": "Deserts & Xeric Shrublands",
+      "REALM": "Neotropic",
+      "COLOR_BIO": "#CC6767",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "CLN",
+      "name": "Chile North"
+    },
+    "palette": [],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  },
+  {
+    "id": "desert-namib",
+    "family": "desert",
+    "lat": -23.816386401999946,
+    "lon": 15.19421681101925,
+    "query": "lat=-23.816386401999946&lon=15.19421681101925&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "ecoregion": {
+      "ECO_ID": 103,
+      "ECO_NAME": "Namib Desert",
+      "BIOME_NUM": 13,
+      "BIOME_NAME": "Deserts & Xeric Shrublands",
+      "REALM": "Afrotropic",
+      "COLOR_BIO": "#CC6767",
+      "LICENSE": "CC-BY 4.0"
+    },
+    "botanicalArea": {
+      "code": "NAM",
+      "name": "Namibia"
+    },
+    "palette": [],
+    "decision": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    }
+  }
+]

@@ -1,0 +1,46 @@
+{
+  "origin": "http://localhost:3001",
+  "checks": [
+    {
+      "name": "picker offers exactly 42 regions",
+      "pass": true
+    },
+    {
+      "name": "desert-namib selects automatic route",
+      "pass": true
+    },
+    {
+      "name": "desert-namib preserves intended habitat and removes manual selectors",
+      "pass": true
+    },
+    {
+      "name": "mangrove-florida selects automatic route",
+      "pass": true
+    },
+    {
+      "name": "mangrove-florida preserves intended habitat and removes manual selectors",
+      "pass": true
+    },
+    {
+      "name": "flooded-everglades selects automatic route",
+      "pass": true
+    },
+    {
+      "name": "flooded-everglades preserves intended habitat and removes manual selectors",
+      "pass": true
+    },
+    {
+      "name": "touch target at least 44px",
+      "pass": true
+    },
+    {
+      "name": "no horizontal overflow",
+      "pass": true
+    },
+    {
+      "name": "unsupported ocean keeps an explained fallback",
+      "pass": true
+    }
+  ],
+  "errors": []
+}

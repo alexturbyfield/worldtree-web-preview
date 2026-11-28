@@ -1,0 +1,3 @@
+const fs=require('fs'),crypto=require('crypto');
+const files=['src/lib/forest/bounded-resolver.ts','src/lib/forest/bounded-resolver-policy.json','src/lib/forest/environment-registry.ts','src/lib/forest/wave1.ts','src/lib/forest/wave1-rebuild.ts','src/lib/forest/tropical-dry-forest.ts','src/lib/forest/andean-puna.ts','src/lib/forest/wave1-depth-texture.ts','src/components/EnvironmentReferencePanel.tsx'];
+fs.writeFileSync(__dirname+'/freeze.json',JSON.stringify({at:new Date().toISOString(),holdoutSeed:'826519',scope:'One previously unrendered seed per remaining family, first audited new coordinate in each family',files:files.map(path=>({path,sha256:crypto.createHash('sha256').update(fs.readFileSync(path)).digest('hex')}))},null,2));

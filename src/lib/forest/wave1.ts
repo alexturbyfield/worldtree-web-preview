@@ -19,9 +19,15 @@ export function wave1Study(recipe:SceneRecipe,search:string,route:EnvironmentRou
  const regional=route.regional??route.pilot;
  const transfer=regional?regionalPilotStudy(regional):undefined;
  const original=transfer??(regional?.site.family==='savanna'?prairieStudy:regional?.site.family==='montane'?andeanStudy:undefined)??[desertStudy,mangroveStudy,floodedStudy,borealStudy,temperateStudy,tundraStudy,prairieStudy,mediterraneanStudy,tropicalDryStudy,andeanStudy,tropicalPineStudy].find(s=>s.id===route.adapter);
- const study=original&&route.variant==='rebuild'?rebuiltStudy(original.id as 'desert'|'mangrove'|'flooded',original.biome):original;
+ const presentation=route.regional?regional?.site.family==='flooded'?'flooded-finish':regional&&['mangrove','desert'].includes(regional.site.family)?'fidelity':undefined:undefined;
+ const study=original&&route.variant==='rebuild'?rebuiltStudy(original.id as 'desert'|'mangrove'|'flooded',original.biome,presentation):original;
  if(!study||!regional)return study;
- return {...study,compose:(r:SceneRecipe)=>study.compose({...r,seed:regional.effectiveSeed}),mount:(...args:Parameters<typeof study.mount>)=>{
+ return {...study,compose:(r:SceneRecipe)=>{
+  let trees=r.trees;
+  if(route.regional&&['savanna','flooded','montane','desert'].includes(regional.site.family))trees=[];
+  else if(route.regional&&['conifer','rainforest','mangrove','tropicalpine'].includes(regional.site.family)){const eligible=new Set(regional.eligibleTreeCandidates.map(t=>t.scientificName));trees=trees.filter(t=>t.species.scientificName&&eligible.has(t.species.scientificName));}
+  return study.compose({...r,trees,seed:regional.effectiveSeed});
+ },mount:(...args:Parameters<typeof study.mount>)=>{
   const dispose=study.mount(...args);if(route.pilot)args[0].userData.geographicPilot=route.pilot;else args[0].userData.regionalRecipe=regional;return dispose;
  }};
 }

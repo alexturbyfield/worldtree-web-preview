@@ -1,0 +1,84 @@
+{
+  "id": "rainforest-congo",
+  "family": "rainforest",
+  "query": "lat=-0.5729600919999279&lon=10.656357117199981&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+  "errors": [],
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          0,
+          1.8348752717844115,
+          34
+        ],
+        "target": [
+          0,
+          5.9764869196253665,
+          -55
+        ],
+        "fov": 47,
+        "far": 350
+      },
+      "calls": 5,
+      "triangles": 313136,
+      "textures": 6,
+      "mattes": []
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          62,
+          40,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ],
+        "fov": 47,
+        "far": 350
+      },
+      "calls": 5,
+      "triangles": 313136,
+      "textures": 6,
+      "mattes": []
+    }
+  ],
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": null,
+    "selectedScene": null,
+    "route": {
+      "kind": "generic",
+      "adapter": "generic",
+      "sceneId": null
+    },
+    "pilot": null,
+    "regional": null,
+    "automatic": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    },
+    "mode": "generic",
+    "checkpoint": null,
+    "vegetationCoverage": "canonical",
+    "individualInspection": true,
+    "referenceLocation": null,
+    "evidence": "Existing geographic/ecological fallback; no reference-scene approval is inferred.",
+    "limits": [],
+    "notices": [
+      "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+    ]
+  },
+  "exposure": 1.12
+}

@@ -1,0 +1,72 @@
+{
+  "checks": [
+    {
+      "name": "27 new points and nine frozen-seed checks rendered successfully",
+      "pass": true
+    },
+    {
+      "name": "all routes selected automatically",
+      "pass": true
+    },
+    {
+      "name": "30 protected captures are pixel and geometry identical",
+      "pass": true
+    },
+    {
+      "name": "sources remained frozen through holdouts",
+      "pass": true
+    },
+    {
+      "name": "dry forest withholds named trees, flowering and regional matte",
+      "pass": true
+    },
+    {
+      "name": "montane transfers withhold Andean trees and rosettes",
+      "pass": true
+    },
+    {
+      "name": "savanna does not export Oklahoma artwork or named woody plants",
+      "pass": true
+    },
+    {
+      "name": "desert foreign distance artwork hidden",
+      "pass": true
+    },
+    {
+      "name": "browser picker, mobile layout and ocean fallback pass",
+      "pass": true
+    }
+  ],
+  "development": {
+    "calls": [
+      10,
+      137
+    ],
+    "triangles": [
+      652184,
+      5630862
+    ],
+    "textureCounts": [
+      7,
+      19
+    ]
+  },
+  "holdout": {
+    "calls": [
+      10,
+      137
+    ],
+    "triangles": [
+      663952,
+      3060862
+    ],
+    "textureCounts": [
+      7,
+      18
+    ]
+  },
+  "mobileDeviceTested": false,
+  "frameTimeMeasured": false,
+  "alphaOverdrawMeasured": false,
+  "textureBytesMeasured": false
+}

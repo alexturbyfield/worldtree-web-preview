@@ -41,7 +41,7 @@ export function resolveEnvironmentSelection(r:EnvironmentContext,search:string):
  let route=legacyRoute(r,q),automatic=resolveBoundedEnvironment(r,search);
  const pilotResult=resolveGeographicPilot(r,search);
  if(q.has('geographicPilot')){route=pilotResult.pilot?{kind:'wave',adapter:pilotResult.pilot.site.family,sceneId:null,variant:['mangrove','desert','flooded'].includes(pilotResult.pilot.site.family)?'rebuild':'original',pilot:pilotResult.pilot}:geographicRoute(r);if(pilotResult.reason)notices.push(pilotResult.reason);}
- if(automatic?.recipe)route={kind:'wave',adapter:automatic.recipe.site.family,sceneId:null,variant:'original',regional:automatic.recipe};
+ if(automatic?.recipe)route={kind:'wave',adapter:automatic.recipe.site.family,sceneId:null,variant:['mangrove','desert','flooded'].includes(automatic.recipe.site.family)?'rebuild':'original',regional:automatic.recipe};
  if(requested&&!reference){notices.push('Unknown reference scene. Showing the existing geographic fallback.');route=geographicRoute(r);}
  else if(reference&&!environmentScopeMatches(reference,r)){notices.push('This reference scene is outside its supported geographic scope. Showing the existing geographic fallback.');route=geographicRoute(r);}
  else if(reference&&route.sceneId!==reference.id)notices.push('The URL selects a different adapter from the requested reference. Its checkpoint is not active.');

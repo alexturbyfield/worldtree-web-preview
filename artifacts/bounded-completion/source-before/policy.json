@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "version": "bounded-auto-v1",
+  "status": "experimental-unreviewed",
+  "maxTrialDistanceKm": 100,
+  "coordinateTileDegrees": 0.25,
+  "rules": [
+    {"trialId":"woodland-europe","realm":"Palearctic"},
+    {"trialId":"woodland-appalachia","realm":"Nearctic"},
+    {"trialId":"woodland-japan","realm":"Palearctic"},
+    {"trialId":"boreal-finland","realm":"Palearctic"},
+    {"trialId":"boreal-canada","realm":"Nearctic"},
+    {"trialId":"boreal-siberia","realm":"Palearctic"},
+    {"trialId":"tundra-alaska","realm":"Nearctic"},
+    {"trialId":"tundra-chukchi","realm":"Palearctic"},
+    {"trialId":"tundra-polar","realm":"Palearctic"},
+    {"trialId":"prairie-oklahoma","realm":"Nearctic"},
+    {"trialId":"prairie-pampas","realm":"Neotropic"},
+    {"trialId":"prairie-mongolia","realm":"Palearctic"},
+    {"trialId":"mediterranean-france","realm":"Palearctic"},
+    {"trialId":"mediterranean-portugal","realm":"Palearctic"},
+    {"trialId":"mediterranean-italy","realm":"Palearctic"}
+  ],
+  "limits": [
+    "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+    "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+    "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+    "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured."
+  ]
+}

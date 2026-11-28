@@ -1,0 +1,434 @@
+{
+  "id": "rainforest-borneo",
+  "family": "rainforest",
+  "query": "lat=1.6525973095000699&lon=112.94353468527072&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+  "errors": [],
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          0,
+          1.6036911779965826,
+          34
+        ],
+        "target": [
+          0,
+          5.893730944491375,
+          -55
+        ],
+        "fov": 47,
+        "far": 2500
+      },
+      "calls": 13,
+      "triangles": 1070184,
+      "textures": 11,
+      "mattes": []
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          62,
+          40,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ],
+        "fov": 47,
+        "far": 2500
+      },
+      "calls": 13,
+      "triangles": 1070184,
+      "textures": 11,
+      "mattes": []
+    }
+  ],
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": null,
+    "selectedScene": null,
+    "route": {
+      "kind": "wave",
+      "adapter": "rainforest",
+      "sceneId": null,
+      "variant": "original",
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:rainforest-borneo",
+          "name": "Borneo lowland rain forests · bounded automatic",
+          "family": "rainforest",
+          "biome": 1,
+          "eco": 219,
+          "lat": 1.6525973095000699,
+          "lon": 112.94353468527072,
+          "area": "BOR"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "773527424",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Sindora beccariana",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:518586-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Koompassia excelsa",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:501262-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Rubroshorea leprosula",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77298395-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Xanthophyllum nigricans",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:871235-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Dryobalanops aromatica",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:320807-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Eusideroxylon zwageri",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:464565-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Stemonurus grandifolius",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:608433-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Madhuca montana",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:787518-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Dipterocarpus grandiflorus",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:320683-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Regional candidates use shared architecture approximations; no Amazon species list or foreign regional matte is imported."
+        ]
+      }
+    },
+    "pilot": null,
+    "regional": {
+      "schemaVersion": 1,
+      "version": "bounded-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:rainforest-borneo",
+        "name": "Borneo lowland rain forests · bounded automatic",
+        "family": "rainforest",
+        "biome": 1,
+        "eco": 219,
+        "lat": 1.6525973095000699,
+        "lon": 112.94353468527072,
+        "area": "BOR"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "773527424",
+      "eligibleTreeCandidates": [
+        {
+          "scientificName": "Sindora beccariana",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:518586-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Koompassia excelsa",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:501262-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Rubroshorea leprosula",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77298395-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Xanthophyllum nigricans",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:871235-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Dryobalanops aromatica",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:320807-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Eusideroxylon zwageri",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:464565-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Stemonurus grandifolius",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:608433-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Madhuca montana",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:787518-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        },
+        {
+          "scientificName": "Dipterocarpus grandiflorus",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:320683-1",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        }
+      ],
+      "renderedTreeIdentity": "regional-candidate-architecture",
+      "limitations": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Regional candidates use shared architecture approximations; no Amazon species list or foreign regional matte is imported."
+      ]
+    },
+    "automatic": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "selected",
+      "code": "supported-regional-transfer",
+      "explanation": "Regional candidate and architecture checks passed; the matching shared forest recipe is selected.",
+      "ruleId": "rainforest-borneo",
+      "distanceKm": 22.23596765045969,
+      "confidence": "regional-range-candidate",
+      "recipe": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:rainforest-borneo",
+          "name": "Borneo lowland rain forests · bounded automatic",
+          "family": "rainforest",
+          "biome": 1,
+          "eco": 219,
+          "lat": 1.6525973095000699,
+          "lon": 112.94353468527072,
+          "area": "BOR"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "773527424",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Sindora beccariana",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:518586-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Koompassia excelsa",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:501262-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Rubroshorea leprosula",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:77298395-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Xanthophyllum nigricans",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:871235-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Dryobalanops aromatica",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:320807-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Eusideroxylon zwageri",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:464565-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Stemonurus grandifolius",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:608433-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Madhuca montana",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:787518-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Dipterocarpus grandiflorus",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:320683-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Regional candidates use shared architecture approximations; no Amazon species list or foreign regional matte is imported."
+        ]
+      }
+    },
+    "mode": "automatic",
+    "checkpoint": null,
+    "vegetationCoverage": "adapter-generated",
+    "individualInspection": false,
+    "referenceLocation": null,
+    "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+    "limits": [
+      "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+      "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+      "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+      "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+      "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+      "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+      "Regional candidates use shared architecture approximations; no Amazon species list or foreign regional matte is imported."
+    ],
+    "notices": [
+      "Automatic selection: Regional candidate and architecture checks passed; the matching shared forest recipe is selected."
+    ]
+  },
+  "wave": {
+    "id": "temperate",
+    "biome": 1,
+    "version": "global-expansion-prototype-1",
+    "plan": {
+      "id": "temperate",
+      "biome": 1,
+      "seed": "773527424",
+      "phase": 2.4968239508081385,
+      "relief": 0.65,
+      "camera": {
+        "position": [
+          0,
+          1.6036911779965826,
+          34
+        ],
+        "target": [
+          0,
+          5.893730944491375,
+          -55
+        ]
+      },
+      "inspection": {
+        "position": [
+          62,
+          38,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ]
+      },
+      "eye": [
+        0,
+        1.6036911779965826,
+        34
+      ],
+      "target": [
+        0,
+        5.893730944491375,
+        -55
+      ]
+    },
+    "presentation": {
+      "foliageAtmosphere": {
+        "near": 95,
+        "far": 420,
+        "strength": 0.55,
+        "color": "#829f8a"
+      }
+    },
+    "trees": 48,
+    "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+    "layers": {
+      "season": "independent reference state, unresolved",
+      "weather": "clear visual study",
+      "timeOfDay": "warm directional reference state"
+    }
+  },
+  "transfer": {
+    "family": "rainforest",
+    "sourceBiome": 1,
+    "treeIdentity": "regional-candidate-architecture",
+    "limits": "Existing geometry/needle/forest-floor representations are approximations; no geographically conditioned foreign matte, no verified local cover or tree dimensions"
+  },
+  "exposure": 1.12
+}

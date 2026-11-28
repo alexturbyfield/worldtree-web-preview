@@ -1,0 +1,914 @@
+[
+  {
+    "id": "france",
+    "query": "lat=43.85&lon=3.75&habitat=forest&seed=29&density=36&structure=mediterranean-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            16
+          ],
+          "target": [
+            0,
+            -6.225925925926,
+            -44
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 16,
+        "triangles": 1821640,
+        "textures": 11
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            40,
+            32,
+            48
+          ],
+          "target": [
+            0,
+            -5,
+            -45
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 16,
+        "triangles": 1821640,
+        "textures": 11
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "mediterranean",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:mediterranean-france",
+            "name": "Northeast Spain and Southern France Mediterranean forests · bounded automatic",
+            "family": "mediterranean",
+            "biome": 12,
+            "eco": 799,
+            "lat": 43.85,
+            "lon": 3.75,
+            "area": "FRA"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "3115726100",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Quercus suber",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Quercus ilex",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296290-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+            "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:mediterranean-france",
+          "name": "Northeast Spain and Southern France Mediterranean forests · bounded automatic",
+          "family": "mediterranean",
+          "biome": 12,
+          "eco": 799,
+          "lat": 43.85,
+          "lon": 3.75,
+          "area": "FRA"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "3115726100",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Quercus suber",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Quercus ilex",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296290-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+          "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Regional candidate and architecture checks passed; the matching shared forest recipe is selected.",
+        "ruleId": "mediterranean-france",
+        "distanceKm": 19.879536124052922,
+        "confidence": "regional-range-candidate",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:mediterranean-france",
+            "name": "Northeast Spain and Southern France Mediterranean forests · bounded automatic",
+            "family": "mediterranean",
+            "biome": 12,
+            "eco": 799,
+            "lat": 43.85,
+            "lon": 3.75,
+            "area": "FRA"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "3115726100",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Quercus suber",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Quercus ilex",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296290-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+            "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+        "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+      ],
+      "notices": [
+        "Automatic selection: Regional candidate and architecture checks passed; the matching shared forest recipe is selected."
+      ]
+    },
+    "withheld": [
+      {
+        "id": "herault-garrigue-v1",
+        "reason": "Location-conditioned reference asset outside its geographic pilot envelope"
+      }
+    ],
+    "landscape": {
+      "checkpoint": 1,
+      "revision": 2,
+      "seed": "3115726100",
+      "reference": "visual-lab/mediterranean/references",
+      "camera": {
+        "position": [
+          0,
+          1.7,
+          16
+        ],
+        "target": [
+          0,
+          -6.225925925926,
+          -44
+        ]
+      },
+      "mask": {
+        "source": "corrected camera-space dirt reference",
+        "projection": "Frozen reference camera baked to world-space field",
+        "bounds": {
+          "x": -120,
+          "z": -240,
+          "width": 240,
+          "depth": 280
+        },
+        "resolution": 768
+      },
+      "instances": {
+        "grass": 5200,
+        "shrubs": 720,
+        "rocks": 107,
+        "trees": 11
+      },
+      "ecology": "Regional source Quercus ilex candidates; unnamed dry/silver woody forms, no locally verified species inferred",
+      "terrain": "Synthetic descending garrigue with limestone-compatible shoulders; no DEM",
+      "layers": {
+        "season": "reference leaf-on",
+        "timeOfDay": "warm low directional reference state",
+        "weather": "clear"
+      },
+      "approval": "pending human review"
+    },
+    "cork": {
+      "species": {
+        "id": "wcvp:175312",
+        "scientificName": "Quercus suber",
+        "commonName": "Cork oak",
+        "confidence": "regional",
+        "evidenceLevel": "documented_regional_range",
+        "origin": "Documented native botanical country; local presence unverified",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      "sourceSeed": "1498618003",
+      "position": [
+        -6.237455019471236,
+        -1.5418124133645699,
+        7.114647347759456
+      ],
+      "designHeight": 7.275945514169724,
+      "segments": 588,
+      "sprays": 900,
+      "textures": [
+        "bark-v1.webp",
+        "leaves-v1.webp"
+      ],
+      "status": "experimental hero; no local occurrence or substrate suitability verified",
+      "inspection": "Orbit/elevated views supported; separate hero is not yet connected to the per-tree click inspector"
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "portugal",
+    "query": "lat=38.5&lon=-8.4&habitat=forest&seed=29&density=36&structure=mediterranean-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            16
+          ],
+          "target": [
+            0,
+            -6.225925925926,
+            -44
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 16,
+        "triangles": 1822036,
+        "textures": 11
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            40,
+            32,
+            48
+          ],
+          "target": [
+            0,
+            -5,
+            -45
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 16,
+        "triangles": 1822036,
+        "textures": 11
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "mediterranean",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:mediterranean-portugal",
+            "name": "Southwest Iberian Mediterranean sclerophyllous and mixed forests · bounded automatic",
+            "family": "mediterranean",
+            "biome": 12,
+            "eco": 805,
+            "lat": 38.5,
+            "lon": -8.4,
+            "area": "POR"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "1381076262",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Quercus ilex",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296290-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Quercus suber",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+            "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:mediterranean-portugal",
+          "name": "Southwest Iberian Mediterranean sclerophyllous and mixed forests · bounded automatic",
+          "family": "mediterranean",
+          "biome": 12,
+          "eco": 805,
+          "lat": 38.5,
+          "lon": -8.4,
+          "area": "POR"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "1381076262",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Quercus ilex",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296290-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Quercus suber",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+          "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Regional candidate and architecture checks passed; the matching shared forest recipe is selected.",
+        "ruleId": "mediterranean-portugal",
+        "distanceKm": 18.485973587827484,
+        "confidence": "regional-range-candidate",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:mediterranean-portugal",
+            "name": "Southwest Iberian Mediterranean sclerophyllous and mixed forests · bounded automatic",
+            "family": "mediterranean",
+            "biome": 12,
+            "eco": 805,
+            "lat": 38.5,
+            "lon": -8.4,
+            "area": "POR"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "1381076262",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Quercus ilex",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296290-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Quercus suber",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+            "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+        "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+      ],
+      "notices": [
+        "Automatic selection: Regional candidate and architecture checks passed; the matching shared forest recipe is selected."
+      ]
+    },
+    "withheld": [
+      {
+        "id": "herault-garrigue-v1",
+        "reason": "Location-conditioned reference asset outside its geographic pilot envelope"
+      }
+    ],
+    "landscape": {
+      "checkpoint": 1,
+      "revision": 2,
+      "seed": "1381076262",
+      "reference": "visual-lab/mediterranean/references",
+      "camera": {
+        "position": [
+          0,
+          1.7,
+          16
+        ],
+        "target": [
+          0,
+          -6.225925925926,
+          -44
+        ]
+      },
+      "mask": {
+        "source": "corrected camera-space dirt reference",
+        "projection": "Frozen reference camera baked to world-space field",
+        "bounds": {
+          "x": -120,
+          "z": -240,
+          "width": 240,
+          "depth": 280
+        },
+        "resolution": 768
+      },
+      "instances": {
+        "grass": 5200,
+        "shrubs": 720,
+        "rocks": 108,
+        "trees": 11
+      },
+      "ecology": "Regional source Quercus ilex candidates; unnamed dry/silver woody forms, no locally verified species inferred",
+      "terrain": "Synthetic descending garrigue with limestone-compatible shoulders; no DEM",
+      "layers": {
+        "season": "reference leaf-on",
+        "timeOfDay": "warm low directional reference state",
+        "weather": "clear"
+      },
+      "approval": "pending human review"
+    },
+    "cork": {
+      "species": {
+        "id": "wcvp:175312",
+        "scientificName": "Quercus suber",
+        "commonName": "Cork oak",
+        "confidence": "regional",
+        "evidenceLevel": "documented_regional_range",
+        "origin": "Documented native botanical country; local presence unverified",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      "sourceSeed": "3458187700",
+      "position": [
+        -6.30280822373461,
+        -0.9544962716448282,
+        7.145862089237198
+      ],
+      "designHeight": 7.287036006883123,
+      "segments": 588,
+      "sprays": 900,
+      "textures": [
+        "bark-v1.webp",
+        "leaves-v1.webp"
+      ],
+      "status": "experimental hero; no local occurrence or substrate suitability verified",
+      "inspection": "Orbit/elevated views supported; separate hero is not yet connected to the per-tree click inspector"
+    },
+    "exposure": 1.12
+  },
+  {
+    "id": "italy",
+    "query": "lat=42.8&lon=12.1&habitat=forest&seed=29&density=36&structure=mediterranean-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "errors": [],
+    "views": [
+      {
+        "view": "hero",
+        "camera": {
+          "position": [
+            0,
+            1.7,
+            16
+          ],
+          "target": [
+            0,
+            -6.225925925926,
+            -44
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 16,
+        "triangles": 1822036,
+        "textures": 11
+      },
+      {
+        "view": "inspection",
+        "camera": {
+          "position": [
+            40,
+            32,
+            48
+          ],
+          "target": [
+            0,
+            -5,
+            -45
+          ],
+          "fov": 47,
+          "far": 2500
+        },
+        "calls": 16,
+        "triangles": 1822036,
+        "textures": 11
+      }
+    ],
+    "selection": {
+      "schemaVersion": 1,
+      "requestedReference": null,
+      "selectedScene": null,
+      "route": {
+        "kind": "wave",
+        "adapter": "mediterranean",
+        "sceneId": null,
+        "variant": "original",
+        "regional": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:mediterranean-italy",
+            "name": "Italian sclerophyllous and semi-deciduous forests · bounded automatic",
+            "family": "mediterranean",
+            "biome": 12,
+            "eco": 795,
+            "lat": 42.8,
+            "lon": 12.1,
+            "area": "ITA"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "2602788041",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Quercus suber",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Quercus ilex",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296290-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+            "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+          ]
+        }
+      },
+      "pilot": null,
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:mediterranean-italy",
+          "name": "Italian sclerophyllous and semi-deciduous forests · bounded automatic",
+          "family": "mediterranean",
+          "biome": 12,
+          "eco": 795,
+          "lat": 42.8,
+          "lon": 12.1,
+          "area": "ITA"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "2602788041",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Quercus suber",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          },
+          {
+            "scientificName": "Quercus ilex",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296290-1",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+          "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+        ]
+      },
+      "automatic": {
+        "policyVersion": "bounded-auto-v1",
+        "requestedVersion": "bounded-auto-v1",
+        "status": "selected",
+        "code": "supported-regional-transfer",
+        "explanation": "Regional candidate and architecture checks passed; the matching shared forest recipe is selected.",
+        "ruleId": "mediterranean-italy",
+        "distanceKm": 25.25341846331931,
+        "confidence": "regional-range-candidate",
+        "recipe": {
+          "schemaVersion": 1,
+          "version": "bounded-auto-v1",
+          "status": "experimental-unreviewed",
+          "site": {
+            "id": "auto:mediterranean-italy",
+            "name": "Italian sclerophyllous and semi-deciduous forests · bounded automatic",
+            "family": "mediterranean",
+            "biome": 12,
+            "eco": 795,
+            "lat": 42.8,
+            "lon": 12.1,
+            "area": "ITA"
+          },
+          "inputSeed": "29",
+          "effectiveSeed": "2602788041",
+          "eligibleTreeCandidates": [
+            {
+              "scientificName": "Quercus suber",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            },
+            {
+              "scientificName": "Quercus ilex",
+              "sources": [
+                "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296290-1",
+                "https://doi.org/10.34885/egs6-cp24"
+              ]
+            }
+          ],
+          "renderedTreeIdentity": "regional-candidate-architecture",
+          "limitations": [
+            "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+            "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+            "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+            "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+            "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+            "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+            "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+            "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+          ]
+        }
+      },
+      "mode": "automatic",
+      "checkpoint": null,
+      "vegetationCoverage": "adapter-generated",
+      "individualInspection": false,
+      "referenceLocation": null,
+      "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+      "limits": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Only source-backed Quercus ilex/suber candidates feed the existing oak composition. Shrubs and ground cover are unnamed functional forms; limestone terrain and habitat fields remain synthetic.",
+        "The Hérault matte is withheld outside its existing 0.08-degree source-location envelope. No local topography, lithology or coast is inferred from this shared garrigue recipe."
+      ],
+      "notices": [
+        "Automatic selection: Regional candidate and architecture checks passed; the matching shared forest recipe is selected."
+      ]
+    },
+    "withheld": [
+      {
+        "id": "herault-garrigue-v1",
+        "reason": "Location-conditioned reference asset outside its geographic pilot envelope"
+      }
+    ],
+    "landscape": {
+      "checkpoint": 1,
+      "revision": 2,
+      "seed": "2602788041",
+      "reference": "visual-lab/mediterranean/references",
+      "camera": {
+        "position": [
+          0,
+          1.7,
+          16
+        ],
+        "target": [
+          0,
+          -6.225925925926,
+          -44
+        ]
+      },
+      "mask": {
+        "source": "corrected camera-space dirt reference",
+        "projection": "Frozen reference camera baked to world-space field",
+        "bounds": {
+          "x": -120,
+          "z": -240,
+          "width": 240,
+          "depth": 280
+        },
+        "resolution": 768
+      },
+      "instances": {
+        "grass": 5200,
+        "shrubs": 720,
+        "rocks": 108,
+        "trees": 11
+      },
+      "ecology": "Regional source Quercus ilex candidates; unnamed dry/silver woody forms, no locally verified species inferred",
+      "terrain": "Synthetic descending garrigue with limestone-compatible shoulders; no DEM",
+      "layers": {
+        "season": "reference leaf-on",
+        "timeOfDay": "warm low directional reference state",
+        "weather": "clear"
+      },
+      "approval": "pending human review"
+    },
+    "cork": {
+      "species": {
+        "id": "wcvp:175312",
+        "scientificName": "Quercus suber",
+        "commonName": "Cork oak",
+        "confidence": "regional",
+        "evidenceLevel": "documented_regional_range",
+        "origin": "Documented native botanical country; local presence unverified",
+        "sources": [
+          "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:296785-1",
+          "https://doi.org/10.34885/egs6-cp24"
+        ],
+        "visual": {
+          "presetId": "oak",
+          "fallback": true,
+          "reason": "Visual archetype fallback (spreading-broadleaf); not a species-specific reconstruction."
+        }
+      },
+      "sourceSeed": "4206617800",
+      "position": [
+        -6.210399143956602,
+        -1.933636373899048,
+        6.912199656479061
+      ],
+      "designHeight": 7.379065740557975,
+      "segments": 588,
+      "sprays": 900,
+      "textures": [
+        "bark-v1.webp",
+        "leaves-v1.webp"
+      ],
+      "status": "experimental hero; no local occurrence or substrate suitability verified",
+      "inspection": "Orbit/elevated views supported; separate hero is not yet connected to the per-tree click inspector"
+    },
+    "exposure": 1.12
+  }
+]

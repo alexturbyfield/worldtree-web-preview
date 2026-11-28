@@ -1,0 +1,100 @@
+{
+  "id": "savanna-tanzania",
+  "family": "savanna",
+  "query": "lat=-2.1399999999999997&lon=35.32&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+  "errors": [],
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          0,
+          1.7,
+          34
+        ],
+        "target": [
+          0,
+          27,
+          -190
+        ],
+        "fov": 47,
+        "far": 350
+      },
+      "calls": 2,
+      "triangles": 2060,
+      "textures": 3,
+      "mattes": []
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          62,
+          40,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ],
+        "fov": 47,
+        "far": 350
+      },
+      "calls": 2,
+      "triangles": 2060,
+      "textures": 3,
+      "mattes": []
+    }
+  ],
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": null,
+    "selectedScene": {
+      "id": "savanna",
+      "name": "East African savanna",
+      "version": "accepted-v1"
+    },
+    "route": {
+      "kind": "profile",
+      "adapter": "savanna",
+      "sceneId": "savanna"
+    },
+    "pilot": null,
+    "regional": null,
+    "automatic": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "fallback",
+      "code": "outside-rollout",
+      "explanation": "No bounded rule applies; retaining the existing geographic fallback.",
+      "ruleId": null,
+      "distanceKm": null,
+      "confidence": "not-established",
+      "recipe": null
+    },
+    "mode": "geographic",
+    "checkpoint": {
+      "id": "savanna-accepted-v1",
+      "approvalRecord": "visual-lab/feedback/all-developed-regions-approved.json",
+      "exactSettings": false
+    },
+    "vegetationCoverage": "mixed",
+    "individualInspection": true,
+    "referenceLocation": {
+      "lat": -2.3,
+      "lon": 35.2
+    },
+    "evidence": "Regional candidates and/or unnamed growth forms; selected-point occurrence is not established.",
+    "limits": [
+      "Artistic approval applies to retained regional checkpoints, not global ecoregion coverage.",
+      "Synthetic terrain and materials are not measured land cover.",
+      "Reference lighting and matte camera envelopes remain adapter-specific.",
+      "Mobile performance and unreviewed variations are not approved."
+    ],
+    "notices": [
+      "Automatic selection: No bounded rule applies; retaining the existing geographic fallback."
+    ]
+  },
+  "exposure": 1.12
+}

@@ -5,18 +5,174 @@
   "maxTrialDistanceKm": 100,
   "coordinateTileDegrees": 0.25,
   "rules": [
-    {"trialId":"woodland-europe","realm":"Palearctic"},
-    {"trialId":"woodland-appalachia","realm":"Nearctic"},
-    {"trialId":"woodland-japan","realm":"Palearctic"},
-    {"trialId":"boreal-finland","realm":"Palearctic"},
-    {"trialId":"boreal-canada","realm":"Nearctic"},
-    {"trialId":"boreal-siberia","realm":"Palearctic"},
-    {"trialId":"tundra-alaska","realm":"Nearctic"},
-    {"trialId":"tundra-chukchi","realm":"Palearctic"},
-    {"trialId":"tundra-polar","realm":"Palearctic"},
-    {"trialId":"prairie-oklahoma","realm":"Nearctic"},
-    {"trialId":"prairie-pampas","realm":"Neotropic"},
-    {"trialId":"prairie-mongolia","realm":"Palearctic"}
+    {
+      "trialId": "woodland-europe",
+      "realm": "Palearctic"
+    },
+    {
+      "trialId": "woodland-appalachia",
+      "realm": "Nearctic"
+    },
+    {
+      "trialId": "woodland-japan",
+      "realm": "Palearctic"
+    },
+    {
+      "trialId": "boreal-finland",
+      "realm": "Palearctic"
+    },
+    {
+      "trialId": "boreal-canada",
+      "realm": "Nearctic"
+    },
+    {
+      "trialId": "boreal-siberia",
+      "realm": "Palearctic"
+    },
+    {
+      "trialId": "tundra-alaska",
+      "realm": "Nearctic"
+    },
+    {
+      "trialId": "tundra-chukchi",
+      "realm": "Palearctic"
+    },
+    {
+      "trialId": "tundra-polar",
+      "realm": "Palearctic"
+    },
+    {
+      "trialId": "prairie-oklahoma",
+      "realm": "Nearctic"
+    },
+    {
+      "trialId": "prairie-pampas",
+      "realm": "Neotropic"
+    },
+    {
+      "trialId": "prairie-mongolia",
+      "realm": "Palearctic"
+    },
+    {
+      "trialId": "mediterranean-france",
+      "realm": "Palearctic"
+    },
+    {
+      "trialId": "mediterranean-portugal",
+      "realm": "Palearctic"
+    },
+    {
+      "trialId": "mediterranean-italy",
+      "realm": "Palearctic"
+    },
+    {
+      "trialId": "dryforest-costa-rica",
+      "realm": "Neotropic"
+    },
+    {
+      "trialId": "dryforest-nicaragua",
+      "realm": "Neotropic"
+    },
+    {
+      "trialId": "dryforest-mexico",
+      "realm": "Neotropic"
+    },
+    {
+      "trialId": "mangrove-florida",
+      "realm": "Neotropic"
+    },
+    {
+      "trialId": "mangrove-gabon",
+      "realm": "Afrotropic"
+    },
+    {
+      "trialId": "mangrove-sundarbans",
+      "realm": "Indomalayan"
+    },
+    {
+      "trialId": "rainforest-amazon",
+      "realm": "Neotropic"
+    },
+    {
+      "trialId": "rainforest-congo",
+      "realm": "Afrotropic"
+    },
+    {
+      "trialId": "rainforest-borneo",
+      "realm": "Indomalayan"
+    },
+    {
+      "trialId": "tropicalpine-guatemala",
+      "realm": "Neotropic"
+    },
+    {
+      "trialId": "tropicalpine-cuba",
+      "realm": "Neotropic"
+    },
+    {
+      "trialId": "tropicalpine-himalaya",
+      "realm": "Indomalayan"
+    },
+    {
+      "trialId": "conifer-puget",
+      "realm": "Nearctic"
+    },
+    {
+      "trialId": "conifer-alps",
+      "realm": "Palearctic"
+    },
+    {
+      "trialId": "conifer-bc",
+      "realm": "Nearctic"
+    },
+    {
+      "trialId": "savanna-tanzania",
+      "realm": "Afrotropic"
+    },
+    {
+      "trialId": "savanna-cerrado",
+      "realm": "Neotropic"
+    },
+    {
+      "trialId": "savanna-arnhem",
+      "realm": "Australasia"
+    },
+    {
+      "trialId": "flooded-everglades",
+      "realm": "Neotropic"
+    },
+    {
+      "trialId": "flooded-pantanal",
+      "realm": "Neotropic"
+    },
+    {
+      "trialId": "flooded-niger",
+      "realm": "Afrotropic"
+    },
+    {
+      "trialId": "montane-peru",
+      "realm": "Neotropic"
+    },
+    {
+      "trialId": "montane-ethiopia",
+      "realm": "Afrotropic"
+    },
+    {
+      "trialId": "montane-altai",
+      "realm": "Palearctic"
+    },
+    {
+      "trialId": "desert-mojave",
+      "realm": "Nearctic"
+    },
+    {
+      "trialId": "desert-atacama",
+      "realm": "Neotropic"
+    },
+    {
+      "trialId": "desert-namib",
+      "realm": "Afrotropic"
+    }
   ],
   "limits": [
     "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",

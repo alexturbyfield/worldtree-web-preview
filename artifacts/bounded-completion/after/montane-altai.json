@@ -1,0 +1,263 @@
+{
+  "id": "montane-altai",
+  "family": "montane",
+  "query": "lat=49.81422753150014&lon=87.46323418135184&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+  "errors": [],
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          0,
+          1.7,
+          34
+        ],
+        "target": [
+          3,
+          -12,
+          -150
+        ],
+        "fov": 47,
+        "far": 2500
+      },
+      "calls": 10,
+      "triangles": 2133040,
+      "textures": 14,
+      "mattes": []
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          62,
+          40,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ],
+        "fov": 47,
+        "far": 2500
+      },
+      "calls": 10,
+      "triangles": 2133040,
+      "textures": 14,
+      "mattes": []
+    }
+  ],
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": null,
+    "selectedScene": null,
+    "route": {
+      "kind": "wave",
+      "adapter": "montane",
+      "sceneId": null,
+      "variant": "original",
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:montane-altai",
+          "name": "Altai alpine meadow and tundra · bounded automatic",
+          "family": "montane",
+          "biome": 10,
+          "eco": 749,
+          "lat": 49.81422753150014,
+          "lon": 87.46323418135184,
+          "area": "ALT"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "2694838783",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "none",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+        ]
+      }
+    },
+    "pilot": null,
+    "regional": {
+      "schemaVersion": 1,
+      "version": "bounded-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:montane-altai",
+        "name": "Altai alpine meadow and tundra · bounded automatic",
+        "family": "montane",
+        "biome": 10,
+        "eco": 749,
+        "lat": 49.81422753150014,
+        "lon": 87.46323418135184,
+        "area": "ALT"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "2694838783",
+      "eligibleTreeCandidates": [],
+      "renderedTreeIdentity": "none",
+      "limitations": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+      ]
+    },
+    "automatic": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "selected",
+      "code": "supported-regional-transfer",
+      "explanation": "Source classification and regional gates support this existing adapter. Named candidates and explicitly unnamed functional forms are distinguished; local habitat, terrain and abundance remain unverified.",
+      "ruleId": "montane-altai",
+      "distanceKm": 19.771303962381253,
+      "confidence": "biome-context-only",
+      "recipe": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:montane-altai",
+          "name": "Altai alpine meadow and tundra · bounded automatic",
+          "family": "montane",
+          "biome": 10,
+          "eco": 749,
+          "lat": 49.81422753150014,
+          "lon": 87.46323418135184,
+          "area": "ALT"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "2694838783",
+        "eligibleTreeCandidates": [],
+        "renderedTreeIdentity": "none",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+        ]
+      }
+    },
+    "mode": "automatic",
+    "checkpoint": null,
+    "vegetationCoverage": "adapter-generated",
+    "individualInspection": false,
+    "referenceLocation": null,
+    "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+    "limits": [
+      "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+      "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+      "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+      "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+      "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+      "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+      "Ground cover is an unnamed functional-form transfer. Regional trees are withheld; terrain, rock, soil and hydrology are synthetic, not measured."
+    ],
+    "notices": [
+      "Automatic selection: Source classification and regional gates support this existing adapter. Named candidates and explicitly unnamed functional forms are distinguished; local habitat, terrain and abundance remain unverified."
+    ]
+  },
+  "andean": {
+    "seed": "2694838783",
+    "region": "Altai alpine meadow and tundra",
+    "ecology": {
+      "system": "Montane functional-form transfer; no named Andean plants imported",
+      "trees": "withheld",
+      "rosettes": "withheld",
+      "lowCover": "Unnamed tussocks, cushions and low shrubs"
+    },
+    "instances": {
+      "grass": [
+        1700,
+        4300
+      ],
+      "rocks": 360,
+      "cushions": 550,
+      "rosettes": 0,
+      "trees": 0
+    },
+    "approval": "experimental-unreviewed"
+  },
+  "wave": {
+    "id": "andean",
+    "biome": 10,
+    "version": "global-expansion-prototype-1",
+    "plan": {
+      "id": "andean",
+      "biome": 10,
+      "seed": "2694838783",
+      "phase": 6.239475209449997,
+      "relief": 1,
+      "camera": {
+        "position": [
+          0,
+          1.7,
+          34
+        ],
+        "target": [
+          3,
+          -12,
+          -150
+        ]
+      },
+      "inspection": {
+        "position": [
+          62,
+          38,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ]
+      },
+      "eye": [
+        0,
+        1.7,
+        34
+      ],
+      "target": [
+        3,
+        -12,
+        -150
+      ]
+    },
+    "presentation": {
+      "foliageAtmosphere": {
+        "near": 95,
+        "far": 420,
+        "strength": 0.55,
+        "color": "#9cabbc"
+      }
+    },
+    "trees": 0,
+    "ecology": "Regional catalogue candidates or explicit functional forms; local occurrence unverified",
+    "layers": {
+      "season": "independent reference state, unresolved",
+      "weather": "clear visual study",
+      "timeOfDay": "warm directional reference state"
+    }
+  },
+  "withheld": [
+    {
+      "id": "cordillera-blanca-puna-v1",
+      "reason": "Location-conditioned reference asset outside its geographic pilot envelope"
+    }
+  ],
+  "exposure": 1.12
+}

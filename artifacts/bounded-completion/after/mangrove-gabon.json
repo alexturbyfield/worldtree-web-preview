@@ -1,0 +1,241 @@
+{
+  "id": "mangrove-gabon",
+  "family": "mangrove",
+  "query": "lat=-0.04864028999997572&lon=9.57893832629247&habitat=coastal&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+  "errors": [],
+  "views": [
+    {
+      "view": "hero",
+      "camera": {
+        "position": [
+          -90,
+          2.2758045313371698,
+          27
+        ],
+        "target": [
+          -139.49747468305833,
+          1.3758045313371698,
+          -22.497474683058314
+        ],
+        "fov": 47,
+        "far": 2500
+      },
+      "calls": 20,
+      "triangles": 2516866,
+      "textures": 14,
+      "mattes": []
+    },
+    {
+      "view": "inspection",
+      "camera": {
+        "position": [
+          62,
+          40,
+          76
+        ],
+        "target": [
+          0,
+          2,
+          -24
+        ],
+        "fov": 47,
+        "far": 2500
+      },
+      "calls": 20,
+      "triangles": 2516866,
+      "textures": 14,
+      "mattes": []
+    }
+  ],
+  "selection": {
+    "schemaVersion": 1,
+    "requestedReference": null,
+    "selectedScene": null,
+    "route": {
+      "kind": "wave",
+      "adapter": "mangrove",
+      "sceneId": null,
+      "variant": "rebuild",
+      "regional": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:mangrove-gabon",
+          "name": "Central African mangroves · bounded automatic",
+          "family": "mangrove",
+          "biome": 14,
+          "eco": 111,
+          "lat": -0.04864028999997572,
+          "lon": 9.57893832629247,
+          "area": "GAB"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "1610946640",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Rhizophora mangle",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30061148-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Country-native supported mangrove root profiles only. Tide, salinity and shoreline are unmeasured; water color remains environment-derived."
+        ]
+      }
+    },
+    "pilot": null,
+    "regional": {
+      "schemaVersion": 1,
+      "version": "bounded-auto-v1",
+      "status": "experimental-unreviewed",
+      "site": {
+        "id": "auto:mangrove-gabon",
+        "name": "Central African mangroves · bounded automatic",
+        "family": "mangrove",
+        "biome": 14,
+        "eco": 111,
+        "lat": -0.04864028999997572,
+        "lon": 9.57893832629247,
+        "area": "GAB"
+      },
+      "inputSeed": "29",
+      "effectiveSeed": "1610946640",
+      "eligibleTreeCandidates": [
+        {
+          "scientificName": "Rhizophora mangle",
+          "sources": [
+            "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30061148-2",
+            "https://doi.org/10.34885/egs6-cp24"
+          ]
+        }
+      ],
+      "renderedTreeIdentity": "regional-candidate-architecture",
+      "limitations": [
+        "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+        "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+        "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+        "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+        "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+        "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+        "Country-native supported mangrove root profiles only. Tide, salinity and shoreline are unmeasured; water color remains environment-derived."
+      ]
+    },
+    "automatic": {
+      "policyVersion": "bounded-auto-v1",
+      "requestedVersion": "bounded-auto-v1",
+      "status": "selected",
+      "code": "supported-regional-transfer",
+      "explanation": "Regional candidate and architecture checks passed; the matching shared forest recipe is selected.",
+      "ruleId": "mangrove-gabon",
+      "distanceKm": 22.238982447808105,
+      "confidence": "regional-range-candidate",
+      "recipe": {
+        "schemaVersion": 1,
+        "version": "bounded-auto-v1",
+        "status": "experimental-unreviewed",
+        "site": {
+          "id": "auto:mangrove-gabon",
+          "name": "Central African mangroves · bounded automatic",
+          "family": "mangrove",
+          "biome": 14,
+          "eco": 111,
+          "lat": -0.04864028999997572,
+          "lon": 9.57893832629247,
+          "area": "GAB"
+        },
+        "inputSeed": "29",
+        "effectiveSeed": "1610946640",
+        "eligibleTreeCandidates": [
+          {
+            "scientificName": "Rhizophora mangle",
+            "sources": [
+              "https://powo.science.kew.org/taxon/urn:lsid:ipni.org:names:30061148-2",
+              "https://doi.org/10.34885/egs6-cp24"
+            ]
+          }
+        ],
+        "renderedTreeIdentity": "regional-candidate-architecture",
+        "limitations": [
+          "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+          "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+          "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+          "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+          "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+          "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+          "Country-native supported mangrove root profiles only. Tide, salinity and shoreline are unmeasured; water color remains environment-derived."
+        ]
+      }
+    },
+    "mode": "automatic",
+    "checkpoint": null,
+    "vegetationCoverage": "adapter-generated",
+    "individualInspection": false,
+    "referenceLocation": null,
+    "evidence": "Bounded automatic recipe: regional candidates or unnamed low cover; no point-occurrence or artistic approval.",
+    "limits": [
+      "Only the explicitly listed trial-supported ecoregion, realm and botanical-country intersections are enabled.",
+      "The 100 km envelope is an engineering rollout limit, not a habitat boundary or evidence of local occurrence.",
+      "Coordinates select deterministic encounter variations, not continuous georeferenced terrain tiles.",
+      "Terrain, soil, moisture, vegetation abundance and device performance remain unmeasured.",
+      "Country-native candidates are not verified at this point. Tree anatomy and unnamed low-cover forms remain approximations.",
+      "The selected encounter remains artistically unreviewed; reference lighting is not inferred local weather or time of day.",
+      "Country-native supported mangrove root profiles only. Tide, salinity and shoreline are unmeasured; water color remains environment-derived."
+    ],
+    "notices": [
+      "Automatic selection: Regional candidate and architecture checks passed; the matching shared forest recipe is selected."
+    ]
+  },
+  "wave": {
+    "id": "mangrove",
+    "biome": 14,
+    "version": "connected-field-detail-1",
+    "presentation": {
+      "foliageAtmosphere": {
+        "near": 120,
+        "far": 650,
+        "strength": 0.5,
+        "color": "#72978b"
+      }
+    },
+    "plan": {
+      "biome": "mangrove",
+      "seed": "1610946640",
+      "eye": [
+        -90,
+        2.2758045313371698,
+        27
+      ],
+      "target": [
+        -139.49747468305833,
+        1.3758045313371698,
+        -22.497474683058314
+      ],
+      "heading": 5.497787143782138,
+      "stagingClearance": 0.2923284987980178
+    },
+    "trees": 95,
+    "instances": [],
+    "ecology": "Named source candidates retained; any unnamed wooded margin is a conditional growth-form study, never point occurrence.",
+    "layers": {
+      "season": "unresolved",
+      "weather": "clear study",
+      "timeOfDay": "warm directional study"
+    },
+    "water": "Analytic sediment transmission, not screen-space refraction; static wind-conditioned ripples, no fluid simulation.",
+    "depthSampling": {
+      "farMetresPerTexel": 8.59375,
+      "nearMetresPerTexel": 0.625
+    }
+  },
+  "exposure": 1.12
+}

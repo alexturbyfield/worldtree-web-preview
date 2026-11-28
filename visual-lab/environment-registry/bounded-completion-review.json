@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "experiment": "bounded-auto-v1-remaining-families",
+  "status": "experimentally-supported-routing-art-unreviewed",
+  "scope": {"newFamilies": 9, "newRegionalRules": 27, "totalFamilies": 14, "totalRules": 42, "worldwideRouting": false},
+  "loaded": ["AGENTS.md", ".agents/skills/prototype-fast/SKILL.md", "docs/visual-quality-workflow.md", "visual-lab/art-direction-policy.json", "visual-lab/environment-registry/COMPLETION.md", "visual-lab/environment-registry/BOUNDED-MEDITERRANEAN.md", "Vercel deployments-cicd skill", "local Next.js use-search-params guide"],
+  "humanFeedback": [{"quote": "Perfect. This is a good direction. Finish the rest", "scope": "direction and authorization to complete the bounded expansion", "doesNotApprove": "every generated coordinate, final regional fidelity or mobile performance"}],
+  "hypothesis": "The remaining existing family adapters can be dispatched under explicit geographic, habitat, candidate and drawable-source gates while preserving reference output and preventing foreign identity/asset export.",
+  "intervention": "resolver, adapter guard integration and automatic-preview selector; no new geometry, material, ecological catalogue or water optics",
+  "visionAvailable": true,
+  "reviewer": "implementing-agent",
+  "independentReview": false,
+  "newArtisticApproval": null,
+  "developmentSeed": "29",
+  "holdoutSeed": "826519",
+  "sourceFrozenBeforeHoldout": true,
+  "correctionRounds": 0,
+  "evidenceRoot": "artifacts/bounded-completion/",
+  "evidence": ["before.json", "after.json", "after/report.json", "holdout/report.json", "freeze.json", "validation.json", "protected/parity.json", "ui-validation.json", "tests.log", "typecheck.log", "lint.log", "ui-lint.log", "test-lint.log"],
+  "observations": [
+    {"severity": "major", "finding": "Named species, phenology and regional matte restrictions must inspect resolved automatic metadata, not only manual query selectors."},
+    {"severity": "major", "finding": "Finite forest stands, repetitive vegetation, generic distant terrain and missing woody communities remain visible in transfers."},
+    {"severity": "major", "finding": "Sundarbans submits about 5.6 million triangles; mobile performance is not established."},
+    {"severity": "minor", "finding": "Fixed matched adapter camera poses put some old generic fallback geometry outside the frustum; comparison reports disclose this."}
+  ],
+  "decision": "retain bounded experimental routing and publish isolated preview; do not promote worldwide or assign artistic approval",
+  "rules": [
+    {"principle": "Every supported family remains behind an explicit regional whitelist and missing-evidence fallback.", "status": "experimentally-supported", "scope": "42 regional envelopes"},
+    {"principle": "Retained adapter finishes can be passed declaratively without conflicting explicit URL overrides.", "status": "experimentally-supported", "scope": "desert, mangrove and flooded grassland"},
+    {"principle": "Automatic metadata must preserve manual trial identity, phenology and asset restrictions.", "status": "experimentally-supported", "scope": "dry forest, montane and desert"},
+    {"principle": "Representative routing coverage establishes global artistic or ecological fidelity.", "status": "rejected", "reason": "Regional flora, land cover, terrain, distance artwork and device evidence remain incomplete."}
+  ],
+  "validation": {"targetedTestsPassed": 108, "developmentScenes": 27, "developmentViews": 54, "holdoutScenes": 9, "holdoutViews": 18, "protectedViewsPixelIdentical": 30, "typescript": "passed", "targetedEslint": "passed", "fullSuiteRun": false},
+  "performance": {"developmentCallRange": [10, 137], "developmentTriangleRange": [652184, 5630862], "textureCountRange": [7, 19], "mobileDeviceTested": false, "frameTimeMeasured": false, "alphaOverdrawMeasured": false, "textureBytesMeasured": false},
+  "publication": {"environment": "isolated-preview", "productionPromotion": false, "globalPromotion": false, "evidence": "artifacts/bounded-completion/publication.json"}
+}

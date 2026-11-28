@@ -23,16 +23,18 @@ function rootIntrudes(t:SceneTree,position:[number,number,number],rotation:numbe
  return false;
 }
 
-function compose(recipe:SceneRecipe,biome:FieldBiome):SceneRecipe{
- const plan=fieldPlan(biome,recipe.seed),r=randomSource(recipe.seed+'|field-canopy'),trees:SceneTree[]=[],canopyVariation=biome==='mangrove'&&typeof location!=='undefined'&&['variation','fidelity'].includes(new URLSearchParams(location.search).get('artPass')||'');
+type RegionalPass='fidelity'|'flooded-finish';
+function compose(recipe:SceneRecipe,biome:FieldBiome,presentation?:RegionalPass):SceneRecipe{
+ const pass=presentation??(typeof location!=='undefined'?new URLSearchParams(location.search).get('artPass'):'');
+ const plan=fieldPlan(biome,recipe.seed),r=randomSource(recipe.seed+'|field-canopy'),trees:SceneTree[]=[],canopyVariation=biome==='mangrove'&&typeof location!=='undefined'&&['variation','fidelity'].includes(pass||'');
  const eligible=recipe.trees.filter(t=>biome==='mangrove'?['red-mangrove','avicennia','stilt-mangrove'].includes(t.model.presetId):true);
  if(biome!=='desert'&&eligible.length){for(let attempt=0;attempt<16000&&trees.length<(biome==='mangrove'?95:24);attempt++){
   const near=trees.length<(biome==='mangrove'?38:5),x=plan.eye[0]+(r()-.5)*(near?85:650),z=plan.eye[2]+(r()-.5)*(near?85:650),f=landscapeField(biome,recipe.seed,x,z);
   const q=cameraSpace(plan,x,z);if(q.forward>0&&q.forward<35&&Math.abs(q.side)<7+q.forward*.12)continue;
   if(characterSpace(plan,x,z)||Math.hypot(x-plan.eye[0],z-plan.eye[2])<11||f.woody<.45||f.height<.03)continue;
   if(trees.some(t=>Math.hypot(t.position[0]-x,t.position[2]-z)<(near?5.2:14)))continue;
-  const original=eligible[trees.length%eligible.length],t=biome==='flooded'&&typeof location!=='undefined'&&new URLSearchParams(location.search).get('artPass')==='flooded-finish'?finishFloodedTree(original,near):original,rotation=r()*Math.PI*2,position:[number,number,number]=[x,f.height-.05,z];if(rootIntrudes(t,position,rotation,plan))continue;
-  const studio=!near&&t.studio&&!(biome==='flooded'&&typeof location!=='undefined'&&new URLSearchParams(location.search).get('artPass')==='flooded-finish')?{...t.studio,fronds:t.studio.fronds.filter((_,i)=>i%(canopyVariation?8:12)===0).map(f=>({...f,width:f.width*3,length:f.length*2.5}))}:biome==='mangrove'&&t.studio?{...t.studio,fronds:t.studio.fronds.map(f=>({...f,width:f.width*(canopyVariation?1.4:1.1),length:f.length*(canopyVariation?1.24:1.06)}))}:t.studio;trees.push({...t,studio,model:near?t.model:{...t.model,segments:t.model.segments.filter(s=>s.depth<=((biome==='flooded'&&typeof location!=='undefined'&&new URLSearchParams(location.search).get('artPass')==='flooded-finish')?2:1))},id:t.id+'-field-'+trees.length,position,rotation});
+  const original=eligible[trees.length%eligible.length],t=biome==='flooded'&&typeof location!=='undefined'&&pass==='flooded-finish'?finishFloodedTree(original,near):original,rotation=r()*Math.PI*2,position:[number,number,number]=[x,f.height-.05,z];if(rootIntrudes(t,position,rotation,plan))continue;
+  const studio=!near&&t.studio&&!(biome==='flooded'&&typeof location!=='undefined'&&pass==='flooded-finish')?{...t.studio,fronds:t.studio.fronds.filter((_,i)=>i%(canopyVariation?8:12)===0).map(f=>({...f,width:f.width*3,length:f.length*2.5}))}:biome==='mangrove'&&t.studio?{...t.studio,fronds:t.studio.fronds.map(f=>({...f,width:f.width*(canopyVariation?1.4:1.1),length:f.length*(canopyVariation?1.24:1.06)}))}:t.studio;trees.push({...t,studio,model:near?t.model:{...t.model,segments:t.model.segments.filter(s=>s.depth<=((biome==='flooded'&&typeof location!=='undefined'&&pass==='flooded-finish')?2:1))},id:t.id+'-field-'+trees.length,position,rotation});
  }}
  return {...recipe,trees:biome==='desert'?recipe.trees:trees,purpose:'visual_laboratory',distribution:'Connected synthetic habitat field. Reused source individuals are presentation occurrences, not population observations.',limitations:[...recipe.limitations,'Field heights/moisture and camera selection are artistic synthetic inputs, not measured terrain or local habitat. Conditional unnamed wetland canopy is not verified botanical data.']};
 }
@@ -46,8 +48,9 @@ function fracturedBlock(variant:number){
   const wear=.025*Math.sin(x*15+variant)*Math.sin(z*12+y*9);p.setXYZ(i,x+wear,y+wear*.4,z+wear);
  }g.computeVertexNormals();return weatherRockGeometry(g,variant);
 }
-function mount(scene:T.Scene,recipe:SceneRecipe,biome:FieldBiome,sun:T.DirectionalLight,fill:T.DirectionalLight){
- const plan=fieldPlan(biome,recipe.seed),floodedFinish=biome==='flooded'&&new URLSearchParams(location.search).get('artPass')==='flooded-finish',fidelity=floodedFinish||new URLSearchParams(location.search).get('artPass')==='fidelity',variation=fidelity||new URLSearchParams(location.search).get('artPass')==='variation',depthPass=variation||new URLSearchParams(location.search).get('artPass')==='depth',decisive=depthPass||new URLSearchParams(location.search).get('artPass')==='decisive',field=(x:number,z:number)=>{const f=landscapeField(biome,recipe.seed,x,z);return decisive&&biome==='desert'?{...f,height:f.height+desertRelief(recipe.seed,x,z)-desertRelief(recipe.seed,plan.eye[0],plan.eye[2])}:f;},rand=randomSource(recipe.seed+'|field-dressing'),o=new T.Object3D(),textures:T.Texture[]=[],split=decisive||new URLSearchParams(location.search).get('artPass')==='split';
+function mount(scene:T.Scene,recipe:SceneRecipe,biome:FieldBiome,sun:T.DirectionalLight,fill:T.DirectionalLight,presentation?:RegionalPass){
+ const pass=presentation??new URLSearchParams(location.search).get('artPass');
+ const plan=fieldPlan(biome,recipe.seed),floodedFinish=biome==='flooded'&&pass==='flooded-finish',fidelity=floodedFinish||pass==='fidelity',variation=fidelity||pass==='variation',depthPass=variation||pass==='depth',decisive=depthPass||pass==='decisive',field=(x:number,z:number)=>{const f=landscapeField(biome,recipe.seed,x,z);return decisive&&biome==='desert'?{...f,height:f.height+desertRelief(recipe.seed,x,z)-desertRelief(recipe.seed,plan.eye[0],plan.eye[2])}:f;},rand=randomSource(recipe.seed+'|field-dressing'),o=new T.Object3D(),textures:T.Texture[]=[],split=decisive||pass==='split';
  for(const child of scene.children)if(child instanceof T.Mesh&&['PlaneGeometry','BoxGeometry'].includes(child.geometry.type))child.visible=false;
  scene.userData.labAssetsReady=false;let pendingAssets=(floodedFinish?1:0)+(biome==='mangrove'||(biome==='desert'&&decisive)?2:1)+(fidelity&&biome==='desert'?1:0)+(depthPass?(biome==='desert'?3:2):0);const assetLoaded=()=>{scene.userData.labAssetsReady=--pendingAssets===0;scene.userData.artRevision=(scene.userData.artRevision??0)+1;};const skyMap=new T.TextureLoader().load('/assets/puget-v1/sky-matte-v1.webp',assetLoaded,undefined,()=>{assetLoaded();scene.userData.wave1AssetError='sky unavailable';});skyMap.colorSpace=T.SRGBColorSpace;textures.push(skyMap);
  const skyMaterial=new T.MeshBasicMaterial({map:skyMap,side:T.BackSide,depthWrite:false,fog:false,toneMapped:false});skyMaterial.onBeforeCompile=shader=>{shader.fragmentShader=shader.fragmentShader.replace('#include <map_fragment>',`#ifdef USE_MAP
@@ -108,7 +111,7 @@ function mount(scene:T.Scene,recipe:SceneRecipe,biome:FieldBiome,sun:T.Direction
  const disposeFinish=floodedFinish?installFloodedFinish(scene,plan,assetLoaded):()=>{};
  return()=>{disposeFinish();disposeDepth();disposeDetail();disposeImpostors();textures.forEach(t=>t.dispose());optics?.dispose();};
 }
-export function rebuiltStudy(biome:FieldBiome,number:number){return{id:biome,biome:number,compose:(r:SceneRecipe)=>compose(r,biome),camera:(r:SceneRecipe)=>{const p=fieldPlan(biome,r.seed);return{position:p.eye,target:p.target};},mount:(s:T.Scene,r:SceneRecipe,sun:T.DirectionalLight,fill:T.DirectionalLight)=>mount(s,r,biome,sun,fill)};}
+export function rebuiltStudy(biome:FieldBiome,number:number,presentation?:RegionalPass){return{id:biome,biome:number,compose:(r:SceneRecipe)=>compose(r,biome,presentation),camera:(r:SceneRecipe)=>{const p=fieldPlan(biome,r.seed);return{position:p.eye,target:p.target};},mount:(s:T.Scene,r:SceneRecipe,sun:T.DirectionalLight,fill:T.DirectionalLight)=>mount(s,r,biome,sun,fill,presentation)};}
 
 
 
