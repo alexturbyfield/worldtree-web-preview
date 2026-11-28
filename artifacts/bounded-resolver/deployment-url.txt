@@ -1,0 +1,40 @@
+{
+  "status": "ok",
+  "deployment": {
+    "id": "dpl_6GtGumWZJ5kNG5Sazb6Ujo7q2M1K",
+    "url": "https://worldtree-web-preview-8uv9ii0t8-alex-turbyfield.vercel.app",
+    "productionUrl": null,
+    "inspectorUrl": "https://vercel.com/alex-turbyfield/worldtree-web-preview/6GtGumWZJ5kNG5Sazb6Ujo7q2M1K",
+    "readyState": "READY",
+    "target": null,
+    "environment": "preview",
+    "deploymentApiUrl": "https://api.vercel.com/v13/deployments/dpl_6GtGumWZJ5kNG5Sazb6Ujo7q2M1K",
+    "buildMachine": {
+      "cores": 4,
+      "memory": 8192,
+      "machine": "standard",
+      "selectionType": "elastic",
+      "selectionSource": "elastic-algorithm"
+    },
+    "deploymentProtection": []
+  },
+  "message": "Deployment worldtree-web-preview-8uv9ii0t8-alex-turbyfield.vercel.app ready.",
+  "next": [
+    {
+      "command": "vercel git connect",
+      "when": "Automatically deploy changes on every push"
+    },
+    {
+      "command": "vercel curl https://worldtree-web-preview-8uv9ii0t8-alex-turbyfield.vercel.app",
+      "when": "Verify deployment, including when Deployment Protection is enabled"
+    },
+    {
+      "command": "vercel inspect worldtree-web-preview-8uv9ii0t8-alex-turbyfield.vercel.app",
+      "when": "Inspect deployment"
+    },
+    {
+      "command": "vercel deploy --prod",
+      "when": "Promote to production"
+    }
+  ]
+}

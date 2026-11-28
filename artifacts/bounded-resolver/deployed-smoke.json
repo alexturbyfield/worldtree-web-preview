@@ -1,0 +1,34 @@
+[
+  {
+    "id": "woodland",
+    "url": "https://worldtree-web-preview-8uv9ii0t8-alex-turbyfield.vercel.app/explore?lat=50.7&lon=10.8&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "http": 200,
+    "state": "Automatic recipe · unreviewed\n\nRegional candidate and architecture checks passed; the matching shared forest recipe is selected.\n\nWestern European broadleaf forests · bounded automatic · regional range candidate\n\nRule: woodland-europe · 30.7 km from trial\n\nNative-country ranges are candidate evidence, not point occurrence. Terrain, atmosphere and device performance are unverified.",
+    "errors": [],
+    "pass": true
+  },
+  {
+    "id": "boreal",
+    "url": "https://worldtree-web-preview-8uv9ii0t8-alex-turbyfield.vercel.app/explore?lat=66.8&lon=26.2&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "http": 200,
+    "state": "Automatic recipe · unreviewed\n\nRegional candidate and architecture checks passed; the matching shared forest recipe is selected.\n\nScandinavian and Russian taiga · bounded automatic · regional range candidate\n\nRule: boreal-finland · 34.5 km from trial\n\nNative-country ranges are candidate evidence, not point occurrence. Terrain, atmosphere and device performance are unverified.",
+    "errors": [],
+    "pass": true
+  },
+  {
+    "id": "tundra",
+    "url": "https://worldtree-web-preview-8uv9ii0t8-alex-turbyfield.vercel.app/explore?lat=70.3&lon=-155.2&habitat=grassland&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "http": 200,
+    "state": "Automatic recipe · unreviewed\n\nSource tundra classification supports a treeless low-cover study; no named local flora are asserted.\n\nArctic coastal tundra · bounded automatic · biome context only\n\nRule: tundra-alaska · 18.6 km from trial\n\nNative-country ranges are candidate evidence, not point occurrence. Terrain, atmosphere and device performance are unverified.",
+    "errors": [],
+    "pass": true
+  },
+  {
+    "id": "unsupported",
+    "url": "https://worldtree-web-preview-8uv9ii0t8-alex-turbyfield.vercel.app/explore?lat=0&lon=-140&habitat=forest&seed=29&density=36&structure=grove-1&appearance=garden&wind=0&mode=painterly&autoEnvironment=bounded-auto-v1",
+    "http": 200,
+    "state": "fallback\n\nNo supported terrestrial ecological context; no regional recipe is inferred.\n\nNative-country ranges are candidate evidence, not point occurrence. Terrain, atmosphere and device performance are unverified.",
+    "errors": [],
+    "pass": true
+  }
+]
