@@ -1,5 +1,7 @@
 # Worldwide biome art encounters
 
+**Live:** [worldtree-web-preview.vercel.app](https://worldtree-web-preview.vercel.app). Production source `bd21c2c` was built and tested at its deployment URL before promotion. The main-domain map/camera/search/fallback checks passed afterward, and the refreshed service-worker cache was verified over HTTP. [Release record](../../artifacts/global-release/publication.json), [public browser evidence](../../artifacts/global-release/ui-deployed.json).
+
 The user authorized worldwide encounter delivery: “Can we release the rest of the world? I want the art encounter view for that area to be the view you get when you click on a location.” This authorizes default map navigation and a production release. It does not assign artistic approval or verified local ecology to every generated scene.
 
 ## Behavior

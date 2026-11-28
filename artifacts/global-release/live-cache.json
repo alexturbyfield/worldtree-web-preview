@@ -1,0 +1,5 @@
+{
+  "status": 200,
+  "cacheControl": "public, max-age=0, must-revalidate",
+  "newCacheVersion": true
+}

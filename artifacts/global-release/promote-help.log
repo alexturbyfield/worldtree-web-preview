@@ -1,0 +1,16 @@
+▲ vercel promote <deployment> [options]
+Promote an existing Deployment to current
+
+Commands:
+  status [project]  Show the status of any current pending promotions
+
+Options:
+  --json            Output as JSON
+  --timeout <TIME>  Time to wait for promotion completion (default: 3m)
+  -y, --yes         Skip the confirmation prompt when linking a Project
+
+Global Options: See `vercel --help`
+
+Examples:
+  Promote a Deployment using ID or URL
+    vercel promote <DEPLOYMENT>
